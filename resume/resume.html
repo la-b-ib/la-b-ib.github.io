@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labib Bin Shahed - Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #5d6d7e;
+            --accent: #3498db;
+            --accent-light: #5dade2;
+            --background: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-light: #7f8c8d;
+            --border: #e0e0e0;
+        }
+        @page {
+            size: A4;
+            margin: 1.5cm;
+        }
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            line-height: 1.5;
+            color: var(--primary);
+            background-color: var(--background);
+            padding: 1.5rem;
+            max-width: 21cm;
+            margin: 0 auto;
+            font-size: 10pt;
+        }
+        h1, h2 {
+            font-weight: 700;
+            margin: 0;
+            color: var(--primary);
+        }
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.3rem;
+            color: var(--accent);
+        }
+        h2 {
+            font-size: 1.3rem;
+            padding-bottom: 0.3rem;
+            margin: 1rem 0 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border-bottom: 4px solid var(--accent-light); /* Thicker bar separator */
+        }
+        ul {
+            padding-left: 1.2rem;
+            margin: 0.5rem 0;
+        }
+        li {
+            margin-bottom: 0.4rem;
+            display: flex;
+            gap: 0.4rem;
+        }
+        .header {
+            margin-bottom: 1.2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px dashed var(--border); /* Thicker dashed separator */
+        }
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 0.3rem 0.6rem;
+            background-color: rgba(52, 152, 219, 0.1);
+            border-radius: 4px;
+            border: 1px solid rgba(52, 152, 219, 0.2);
+        }
+        .material-icons {
+            font-size: 0.9rem;
+            color: var(--accent);
+        }
+        .section {
+            margin-bottom: 1.2rem;
+            background-color: var(--card-bg);
+            padding: 1rem;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            page-break-inside: avoid;
+            border-left: 4px solid var(--accent); /* Thicker left border */
+        }
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        .item {
+            margin-bottom: 1rem;
+        }
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.3rem;
+        }
+        .item-title {
+            font-weight: 600;
+            color: var(--primary);
+        }
+        .item-subtitle {
+            font-weight: 500;
+            font-style: italic;
+            margin: 0.3rem 0;
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+        .date-location {
+            color: var(--text-light);
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            background-color: rgba(52, 152, 219, 0.1);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+        }
+        .tech-stack {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-style: italic;
+        }
+        li .material-icons {
+            color: var(--accent-light);
+        }
+        .skill-category {
+            margin-bottom: 0.5rem;
+        }
+        .skill-category .item-title {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            margin-bottom: 0.3rem;
+            color: var(--accent);
+        }
+        @media print {
+            body {
+                padding: 0;
+                background-color: white;
+            }
+            .section {
+                box-shadow: none;
+                border: 1px solid var(--border);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Labib Bin Shahed</h1>
+        <div class="contact-info">
+            <span><span class="material-icons">phone</span>(+880) 1303719968</span>
+            <span><span class="material-icons">email</span>labib.bin.shahed@g.bracu.ac.bd</span>
+            <span><span class="material-icons">public</span>la-b-ib.github.io</span>
+            <span><span class="material-icons">link</span>LinkedIn: la-b-ib</span>
+        </div>
+    </header>
+
+    <section class="section">
+        <h2><span class="material-icons">school</span>Education</h2>
+        <div class="item">
+            <div class="item-header">
+                <span class="item-title">BRAC University</span>
+                <span class="date-location"><span class="material-icons">calendar_today</span>Jan 2022 - Present | <span class="material-icons">location_on</span>Bangladesh</span>
+            </div>
+            <div class="item-subtitle"><span class="material-icons">workspaces</span>Bachelor of Computer Science and Engineering</div>
+            <div><span class="material-icons">star</span>CGPA: 3.33/4.00</div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2><span class="material-icons">code</span>Skills</h2>
+        <div class="two-column">
+            <div>
+                <div class="skill-category">
+                    <div class="item-title"><span class="material-icons">terminal</span>Languages</div>
+                    <ul>
+                        <li><span class="material-icons">chevron_right</span>Python, Java, C, C++</li>
+                        <li><span class="material-icons">chevron_right</span>HTML, CSS, JavaScript</li>
+                        <li><span class="material-icons">chevron_right</span>SQL</li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <div class="skill-category">
+                    <div class="item-title"><span class="material-icons">api</span>Frameworks & Libraries</div>
+                    <ul>
+                        <li><span class="material-icons">chevron_right</span>Django, Flask, Node.js</li>
+                        <li><span class="material-icons">chevron_right</span>TensorFlow, PyTorch, Keras</li>
+                        <li><span class="material-icons">chevron_right</span>Pandas, NumPy, OpenCV</li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <div class="skill-category">
+                    <div class="item-title"><span class="material-icons">build</span>Tools & Platforms</div>
+                    <ul>
+                        <li><span class="material-icons">chevron_right</span>Git, Jira, Docker</li>
+                        <li><span class="material-icons">chevron_right</span>AWS, GCP, Heroku</li>
+                        <li><span class="material-icons">chevron_right</span>Jupyter Notebook</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2><span class="material-icons">work</span>Experience</h2>
+        <div class="item">
+            <div class="item-header">
+                <span class="item-title">IEEE Computer Society Bangladesh Chapter Secretariat</span>
+                <span class="date-location"><span class="material-icons">calendar_today</span>Jan 2025 - Present</span>
+            </div>
+            <div class="item-subtitle"><span class="material-icons">badge</span>President</div>
+            <ul>
+                <li><span class="material-icons">chevron_right</span>Lead the IEEE Computer Society Bangladesh Chapter Secretariat in advancing computer science education and research</li>
+                <li><span class="material-icons">chevron_right</span>Oversee flagship events and initiatives, fostering collaboration among students, researchers, and industry leaders</li>
+                <li><span class="material-icons">chevron_right</span>Manage a team of volunteers to drive content development and member engagement</li>
+                <li><span class="material-icons">chevron_right</span>Develop partnerships with academic and professional stakeholders</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <div class="item-header">
+                <span class="item-title">Tachyon</span>
+                <span class="date-location"><span class="material-icons">calendar_today</span>May 2023 - May 2024</span>
+            </div>
+            <div class="item-subtitle"><span class="material-icons">edit</span>Science Content Writer</div>
+            <ul>
+                <li><span class="material-icons">chevron_right</span>Researched scientific papers and created educational materials to make science accessible</li>
+                <li><span class="material-icons">chevron_right</span>Collaborated with editorial team to bridge the gap between research and public understanding</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <div class="item-header">
+                <span class="item-title">BRACU Express</span>
+                <span class="date-location"><span class="material-icons">calendar_today</span>April 2023 - January 2025</span>
+            </div>
+            <div class="item-subtitle"><span class="material-icons">article</span>Journalist</div>
+            <ul>
+                <li><span class="material-icons">chevron_right</span>Authored and published original articles on topics such as air pollution, mental health awareness, and educational reform, engaging a university audience through BRACU Express, the student-run publication.</li>
+                <li><span class="material-icons">chevron_right</span>Conducted primary research and interviews with students and experts, delivering well-sourced, thought-provoking content under tight deadlines.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2><span class="material-icons">folder</span>Projects</h2>
+        <div class="item">
+            <div class="item-header">
+                <span class="item-title">Dusk Probe</span>
+                <span class="date-location"><span class="material-icons">calendar_today</span>Nov 2024 - Apr 2025</span>
+            </div>
+            <div class="tech-stack"><span class="material-icons">settings</span>Python, Django, GCP (Pub/Sub, Dataflow, BigQuery)</div>
+            <ul>
+                <li><span class="material-icons">chevron_right</span>Professional-grade vulnerability scanner with quantum encryption and AI-powered detection. Combines traditional web testing with blockchain audits and protocol-level fuzzing.</li>
+                <li><span class="material-icons">chevron_right</span>Performs over 200 security tests, including XSS, SQL injection, LFI, HTTP/2, Web3, and WebSockets vulnerabilities. It uses quantum encryption (AES-256-GCM, SHA3-256, FIPS 140-3 compliant), employs ML-based anomaly detection with 99.2% accuracy, supports Kubernetes deployment for 100+ node clusters, integrates MITRE ATT&CK and STIX/TAXII 2.1 threat intelligence, and generates SARIF, PDF, and HTML reports with risk scoring.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2><span class="material-icons">military_tech</span>Achievements</h2>
+        <ul>
+            <li><span class="material-icons">emoji_events</span>Appointed as an IEEE PES Day 2024 Ambassador (ID: PESDAY24-217) under the theme "Empowering Electric Mobility Innovation," advocating for sustainable transportation and clean energy solutions globally. (2024)</li>
+        </ul>
+    </section>
+</body>
+</html>
