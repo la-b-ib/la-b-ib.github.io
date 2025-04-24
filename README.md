@@ -258,7 +258,14 @@ We welcome contributions of all kinds! To maintain a high-quality codebase, plea
   gtag('config', 'UA-XXXXXXXXX-X');
 </script>
 ```
-```
+
+## Contact
+
+- **Developer**: Labib Bin Shahed
+- **Email**: [labib-x@protonmail.com](mailto:labib-x@protonmail.com)  
+- **GitHub**: [github.com/la-b-ib](https://github.com/la-b-ib)
+
+---
 
 ## License
 
