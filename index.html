@@ -31,105 +31,19 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <style>
-    /* Light Mode Styles */
-    .mode-toggle {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      z-index: 9999;
-      background: rgba(0,0,0,0.7);
-      border-radius: 20px;
-      padding: 5px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .lite-mode .mode-toggle {
-      background: rgba(255,255,255,0.7);
-    }
-
-    .mode-toggle i {
-      font-size: 24px;
-      color: #fff;
-      padding: 5px;
-    }
-
-    .lite-mode .mode-toggle i {
-      color: #000;
-    }
-
-    .lite-mode {
-      background-color: #f8f9fa;
-      color: #343a40;
-    }
-
-    .lite-mode .header-tops {
-      background-color: #ffffff;
-      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    .lite-mode h1,
-    .lite-mode h2,
-    .lite-mode h3,
-    .lite-mode h4,
-    .lite-mode h5,
-    .lite-mode h6 {
-      color: #2c3e50;
-    }
-
-    .lite-mode .social-links a {
-      color: #2c3e50;
-    }
-
-    .lite-mode .nav-menu ul li a {
-      color: #2c3e50;
-    }
-
-    .lite-mode .icon-box {
-      background-color: #ffffff;
-      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    .lite-mode [style*="color:#fff"],
-    .lite-mode [style*="color: white;"],
-    .lite-mode [style*="color:#fff;"] {
-      color: #2c3e50 !important;
-    }
-
-    .lite-mode .email-link {
-      color: #2c3e50 !important;
-    }
-
-    .lite-mode .portfolio-info h4 {
-      color: #2c3e50 !important;
-    }
-
-    .lite-mode .contact .info-box {
-      background-color: #ffffff;
-    }
-
-    .lite-mode .interests .icon-box {
-      background-color: #ffffff;
-    }
-  </style>
-
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169007209-3"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
+
     gtag('config', 'UA-169007209-3');
   </script>
+
 </head>
-
 <body>
-  <!-- Mode Toggle -->
-  <div class="mode-toggle" id="modeToggle">
-    <i class="ri-contrast-2-line" id="modeIcon"></i>
-  </div>
-
+  
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5BB8W2X"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -830,29 +744,7 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/venobox/venobox.min.js"></script>
   <script src="assets/vendor/typed.js/typed.min.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-  <!-- Mode Toggle Script -->
-  <script>
-    const modeToggle = document.getElementById('modeToggle');
-    const body = document.body;
-
-    function toggleMode() {
-      body.classList.toggle('lite-mode');
-      localStorage.setItem('theme', body.classList.contains('lite-mode') ? 'lite' : 'dark');
-    }
-
-    // Load saved theme
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'lite') {
-      body.classList.add('lite-mode');
-    }
-
-    modeToggle.addEventListener('click', toggleMode);
-
-    // Typing Effect
+  <script type="text/javascript">
     var typed = new Typed('.typing',{
       strings: ["<b>Coder</b>", "<b>Developer</b>", "<b>AI Enthusiast</b>", "<b>Researcher</b>" ],
       loop: true,
@@ -860,5 +752,9 @@
       backSpeed: 65
     });
   </script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
 </html>
