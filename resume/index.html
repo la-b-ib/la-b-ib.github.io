@@ -90,12 +90,11 @@
             gap: 30px;
         }
         .header {
-            background: var(--card-bg);
+            background: transparent;
             border-radius: 16px;
             padding: 30px;
             box-shadow: 0 0 12px rgba(21, 206, 73, 0.3);
-            border: var(--glass-border);
-            backdrop-filter: blur(16px);
+            border: 2px solid var(--secondary);
             display: flex;
             align-items: center;
             gap: 20px;
@@ -120,6 +119,12 @@
             gap: 30px;
             overflow-x: hidden;
             padding-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+        .main-content.stacked {
+            display: flex;
+            flex-direction: column;
+            grid-template-columns: none;
         }
         .main-content::-webkit-scrollbar {
             height: 8px;
@@ -132,6 +137,11 @@
             background: var(--secondary);
             border-radius: 4px;
         }
+        @media (min-width: 768px) {
+            .main-content.grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
         .section {
             border-radius: 16px;
             background: var(--section-bg);
@@ -142,21 +152,8 @@
             backdrop-filter: blur(16px);
             position: relative;
             min-width: 300px;
-        }
-        .section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: var(--secondary);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: var(--transition);
-        }
-        .section:hover::before {
-            transform: scaleX(1);
+            border-top: 3px solid var(--secondary);
+            transition: transform 0.3s ease, opacity 0.3s ease;
         }
         .section h2 {
             display: flex;
@@ -363,13 +360,12 @@
             font-size: 24px;
         }
         .card {
-            background: var(--card-default-bg);
+            background: transparent;
             border-radius: 12px;
             padding: 20px;
             margin-bottom: 20px;
             box-shadow: var(--shadow);
-            border: var(--glass-border);
-            backdrop-filter: blur(16px);
+            border: 2px solid var(--secondary);
         }
         .card:hover {
             box-shadow: 0 0 12px rgba(21, 206, 73, 0.3);
@@ -653,9 +649,6 @@
             .settings-panel, .side-menu {
                 display: none;
             }
-            .section::before {
-                display: none;
-            }
         }
     </style>
 </head>
@@ -702,9 +695,9 @@
             <div class="menu-item">
                 <label><span class="material-icons">view_quilt</span> Card Style</label>
                 <select id="cardStyleSelect" onchange="changeCardStyle(this.value)" aria-label="Select Card Style">
+                    <option value="bordered" selected>Bordered</option>
                     <option value="glass">Glass</option>
                     <option value="solid">Solid</option>
-                    <option value="bordered">Bordered</option>
                 </select>
             </div>
             <div class="menu-item">
@@ -984,7 +977,7 @@
                         <a href="https://www.linkedin.com/in/la-b-ib/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
                         <a href="https://la-b-ib.github.io/"><img src="https://img.shields.io/badge/Website-0A5C78?style=for-the-badge&logo=internet-explorer&logoColor=white" alt="Portfolio"></a>
                         <a href="https://x.com/la_b_ib_"><img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=twitter&logoColor=white" alt="X"></a>
-                        <a href="https://orcid.org/0009-0007-4656-8709"><img src="https://img.shields.io/badge/ORCID-A6CE39?style=for-the-badge&logo=orcid&logoColor=white" alt="ORCID"></a>
+                        <a href="https://orcid.org/0009-0007-4656-8709"><img src="https://img.shields.io/badge/ORCID-A6CE39?style=for-the-badge&logo=orcid&logoColor=white" alt="ORiddi"></a>
                         <a href="https://www.researchgate.net/profile/Labib-Bin-Shahed"><img src="https://img.shields.io/badge/ResearchGate-00CCBB?style=for-the-badge&logo=researchgate&logoColor=white" alt="ResearchGate"></a>
                         <a href="https://scholar.google.com/citations?hl=en&user=xg04A5kAAAAJ"><img src="https://img.shields.io/badge/Google_Scholar-4285F4?style=for-the-badge&logo=google-scholar&logoColor=white" alt="Google Scholar"></a>
                         <a href="https://ieeexplore.ieee.org/author/398407024257618"><img src="https://img.shields.io/badge/IEEE_Xplore-00629B?style=for-the-badge&logo=ieee&logoColor=white" alt="IEEE Xplore"></a>
@@ -1069,10 +1062,22 @@
             const cards = document.querySelectorAll('.card, .header');
             const settingsElements = document.querySelectorAll('.control-bar, .side-menu');
             cards.forEach(card => {
-                card.style.background = style === 'glass' ? 'var(--card-bg)' : style === 'solid' ? '#000e1b' : 'transparent';
-                card.style.border = style === 'bordered' ? '2px solid #15ce49' : 'var(--glass-border)';
-                card.style.backdropFilter = style === 'glass' ? 'blur(16px)' : 'none';
-                card.style.webkitBackdropFilter = style === 'glass' ? 'blur(16px)' : 'none';
+                if (style === 'glass') {
+                    card.style.background = 'linear-gradient(135deg, rgba(8, 33, 58, 0.7), rgba(30, 37, 41, 0.7))';
+                    card.style.border = 'var(--glass-border)';
+                    card.style.backdropFilter = 'blur(20px)';
+                    card.style.webkitBackdropFilter = 'blur(20px)';
+                } else if (style === 'solid') {
+                    card.style.background = '#000e1b';
+                    card.style.border = 'var(--glass-border)';
+                    card.style.backdropFilter = 'none';
+                    card.style.webkitBackdropFilter = 'none';
+                } else if (style === 'bordered') {
+                    card.style.background = 'transparent';
+                    card.style.border = '2px solid var(--secondary)';
+                    card.style.backdropFilter = 'none';
+                    card.style.webkitBackdropFilter = 'none';
+                }
             });
             settingsElements.forEach(el => {
                 el.style.background = el.classList.contains('side-menu') ? 'linear-gradient(to bottom, rgba(30, 37, 41, 0.8), rgba(8, 33, 58, 0.9))' : 'var(--translucent)';
@@ -1090,12 +1095,42 @@
             document.getElementById('shadowIntensityValue').textContent = intensity;
         }
 
-        // Section Layout Change
+        // Optimized Section Layout Change
         function changeSectionLayout(layout) {
             const mainContent = document.querySelector('.main-content');
-            mainContent.style.display = layout === 'grid' ? 'grid' : 'flex';
-            mainContent.style.flexDirection = layout === 'stacked' ? 'column' : 'row';
+            const sections = document.querySelectorAll('.section');
+            
+            // Remove existing layout classes
+            mainContent.classList.remove('grid', 'stacked');
+            
+            if (layout === 'grid') {
+                mainContent.classList.add('grid');
+                mainContent.style.display = 'grid';
+                mainContent.style.gridTemplateColumns = '1fr';
+                mainContent.style.flexDirection = '';
+                sections.forEach(section => {
+                    section.style.opacity = '0';
+                    setTimeout(() => {
+                        section.style.opacity = '1';
+                        section.style.transform = 'translateY(0)';
+                    }, 100);
+                });
+            } else if (layout === 'stacked') {
+                mainContent.classList.add('stacked');
+                mainContent.style.display = 'flex';
+                mainContent.style.flexDirection = 'column';
+                mainContent.style.gridTemplateColumns = '';
+                sections.forEach(section => {
+                    section.style.opacity = '0';
+                    setTimeout(() => {
+                        section.style.opacity = '1';
+                        section.style.transform = 'translateY(0)';
+                    }, 100);
+                });
+            }
+            
             localStorage.setItem('sectionLayout', layout);
+            document.getElementById('sectionLayoutSelect').value = layout;
         }
 
         // Section Visibility Toggle
@@ -1157,7 +1192,7 @@
             changeHeadlineColor('#15ce49');
             changeIconColor('#15ce49');
             changeAnimationSpeed(0.4);
-            changeCardStyle('glass');
+            changeCardStyle('bordered');
             changeShadowIntensity(0.15);
             changeSectionLayout('grid');
             toggleSectionVisibility('all');
@@ -1166,7 +1201,7 @@
             document.getElementById('headlineColorPicker').value = '#15ce49';
             document.getElementById('iconColorPicker').value = '#15ce49';
             document.getElementById('animationSpeedSelect').value = '0.4';
-            document.getElementById('cardStyleSelect').value = 'glass';
+            document.getElementById('cardStyleSelect').value = 'bordered';
             document.getElementById('shadowIntensitySlider').value = 0.15;
             document.getElementById('sectionLayoutSelect').value = 'grid';
             document.getElementById('sectionVisibilitySelect').value = 'all';
@@ -1195,7 +1230,7 @@
             const savedHeadlineColor = localStorage.getItem('headlineColor') || '#15ce49';
             const savedIconColor = localStorage.getItem('iconColor') || '#15ce49';
             const savedAnimationSpeed = localStorage.getItem('animationSpeed') || 0.4;
-            const savedCardStyle = localStorage.getItem('cardStyle') || 'glass';
+            const savedCardStyle = localStorage.getItem('cardStyle') || 'bordered';
             const savedShadowIntensity = localStorage.getItem('shadowIntensity') || 0.15;
             const savedSectionLayout = localStorage.getItem('sectionLayout') || 'grid';
             const savedSectionVisibility = localStorage.getItem('sectionVisibility') || 'all';
