@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <script>
-  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-5BB8W2X');
-  </script>
-  <link rel="icon" type="image/png" href="/favicon.png">
+  })(window,document,'script','dataLayer','GTM-5BB8W2X');</script>
+  <!-- End Google Tag Manager -->
+  <link rel="icon" type="image/png" href="/favicon.png"/>
+  <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <title>AURIX</title>
+
+  <title>Personal Portfolio</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169007209-3"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -34,919 +40,223 @@
 
     gtag('config', 'UA-169007209-3');
   </script>
-  <style>
-  /* Scoped Resume Styles */
-  .resume-section {
-    --primary: #007aff;
-    --secondary: #15ce49;
-    --accent: #15ce49;
-    --icon-color: #15ce49;
-    --bg: #000e1b;
-    --card-bg: #000e1b;
-    --card-hover-bg: #052e5f;
-    --card-default-bg: rgba(8, 33, 58, 0.55);
-    --section-bg: rgba(8, 33, 58, 0.55);
-    --text: #e0e0e0;
-    --border: rgba(255, 255, 255, 0.2);
-    --shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-    --translucent: rgba(30, 37, 41, 0.6);
-    --glass-border: 1px solid rgba(255, 255, 255, 0.3);
-    --font-size: 16px;
-    --transition: transform 0.4s ease;
-  }
 
-  .resume-section * {
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-  }
-
-  .resume-section body {
-    font-family: 'Source Sans Pro', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    font-size: var(--font-size);
-    overflow-x: hidden;
-    font-weight: 500;
-    min-width: 320px;
-  }
-
-  .resume-section h1, .resume-section h2, .resume-section h3, .resume-section h4 {
-    font-weight: 700;
-    color: var(--secondary);
-    letter-spacing: 0.5px;
-  }
-
-  .resume-section .container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 20px 12px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .resume-section .header {
-    background: var(--card-bg);
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 0 12px rgba(21, 206, 73, 0.3);
-    border: var(--glass-border);
-    backdrop-filter: blur(16px);
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    position: relative;
-  }
-
-  .resume-section .header .profile-pic {
-    width: 120px;
-    height: 120px;
-    border-radius: 8px;
-    object-fit: cover;
-    border: var(--glass-border);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-
-  .resume-section .header .profile-info {
-    flex: 1;
-  }
-
-  .resume-section .header h1 {
-    font-size: 2.6rem;
-    margin-bottom: 4px;
-    background: linear-gradient(to right, var(--primary), var(--accent));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-
-  .resume-section .header p {
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 1.5;
-    opacity: 0.9;
-  }
-
-  .resume-section .main-content {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    overflow-x: hidden;
-    padding-bottom: 10px;
-  }
-
-  .resume-section .main-content::-webkit-scrollbar {
-    height: 8px;
-  }
-
-  .resume-section .main-content::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
-  }
-
-  .resume-section .main-content::-webkit-scrollbar-thumb {
-    background: var(--secondary);
-    border-radius: 4px;
-  }
-
-  .resume-section .section {
-    border-radius: 12px;
-    background: var(--section-bg);
-    padding: 20px;
-    margin-bottom: 15px;
-    box-shadow: var(--shadow);
-    border: var(--glass-border);
-    backdrop-filter: blur(16px);
-    position: relative;
-    min-width: 300px;
-  }
-
-  .resume-section .section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: var(--secondary);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: var(--transition);
-  }
-
-  .resume-section .section:hover::before {
-    transform: scaleX(1);
-  }
-
-  .resume-section .section h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    letter-spacing: 0.5px;
-    font-weight: 600;
-  }
-
-  .resume-section .section h2 .material-icons {
-    margin-right: 6px;
-    color: var(--icon-color);
-    font-size: 24px;
-  }
-
-  .resume-section .badge-button, .resume-section .collab-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 6px 12px;
-    border-radius: 8px;
-    font-size: 0.95rem;
-    font-weight: 700;
-    color: #fff;
-    text-decoration: none;
-    min-height: 44px;
-    min-width: 120px;
-    border: none;
-    cursor: pointer;
-    margin: 4px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.25);
-    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
-    transition: transform 0.2s ease, background-color 0.3s ease;
-    box-sizing: border-box;
-  }
-
-  .resume-section .badge-button:hover, .resume-section .collab-button:hover {
-    transform: scale(1.03);
-  }
-
-  .resume-section .badge-button:focus-visible, .resume-section .collab-button:focus-visible {
-    outline: 3px solid var(--accent);
-    outline-offset: 2px;
-  }
-
-  .resume-section .btn-blue { background-color: #3b82f6; }
-  .resume-section .btn-blue:hover { background-color: #1d4ed8; }
-  .resume-section .btn-teal { background-color: #2dd4bf; }
-  .resume-section .btn-teal:hover { background-color: #14b8a6; }
-  .resume-section .btn-violet { background-color: #8b5cf6; }
-  .resume-section .btn-violet:hover { background-color: #6d28d9; }
-  .resume-section .btn-red { background-color: #b91c1c; }
-  .resume-section .btn-red:hover { background-color: #991b1b; }
-  .resume-section .btn-purple { background-color: #a855f7; }
-  .resume-section .btn-purple:hover { background-color: #9333ea; }
-  .resume-section .btn-indigo { background-color: #6366f1; }
-  .resume-section .btn-indigo:hover { background-color: #4f46e5; }
-  .resume-section .btn-green { background-color: #34d399; }
-  .resume-section .btn-green:hover { background-color: #10b981; }
-  .resume-section .btn-orange { background-color: #f97316; }
-  .resume-section .btn-orange:hover { background-color: #ea580c; }
-
-  .resume-section .vibrant-button-box {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    padding: 8px;
-    border: none;
-    background: rgba(8, 33, 58, 0.55);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-    border-radius: 8px;
-  }
-
-  .resume-section .vibrant-button-box.certifications-box .badge-button,
-  .resume-section .vibrant-button-box.frameworks-box .badge-button {
-    flex: 1 1 auto;
-    text-align: center;
-    min-width: 120px;
-    margin: 4px;
-    min-height: 44px;
-  }
-
-  .resume-section .vibrant-button-box.actions-box .badge-button,
-  .resume-section .vibrant-button-box.actions-box .close-btn {
-    width: 100%;
-    max-width: 200px;
-    margin: 4px auto;
-    text-align: center;
-    min-width: 120px;
-    min-height: 44px;
-  }
-
-  .resume-section .vibrant-button-box::-webkit-scrollbar {
-    height: 6px;
-  }
-
-  .resume-section .vibrant-button-box::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 3px;
-  }
-
-  .resume-section .vibrant-button-box::-webkit-scrollbar-thumb {
-    background: var(--secondary);
-    border-radius: 3px;
-  }
-
-  .resume-section .side-menu .vibrant-button-box {
-    display: flex;
-    flex-direction: column;
-    overflow-x: hidden;
-    white-space: normal;
-  }
-
-  .resume-section .card {
-    background: var(--card-default-bg);
-    border-radius: 10px;
-    padding: 15px;
-    margin-bottom: 15px;
-    box-shadow: var(--shadow);
-    border: var(--glass-border);
-    backdrop-filter: blur(16px);
-  }
-
-  .resume-section .card:hover {
-    box-shadow: 0 0 12px rgba(21, 206, 73, 0.3);
-  }
-
-  .resume-section .project-card {
-    border-radius: 10px;
-    padding: 15px;
-    margin-bottom: 15px;
-    box-shadow: var(--shadow);
-    border: var(--glass-border);
-    background: var(--card-bg);
-  }
-
-  .resume-section .stats-container {
-    display: flex;
-    justify-content: center;
-    padding: 6px;
-  }
-
-  .resume-section .stats-container img {
-    max-width: 100%;
-    max-height: 160px;
-    object-fit: contain;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-
-  .resume-section .experience-item {
-    position: relative;
-    padding-left: 20px;
-    margin-bottom: 10px;
-  }
-
-  .resume-section .experience-item h3 {
-    font-size: 1.3rem;
-    margin-bottom: 4px;
-  }
-
-  .resume-section .experience-item h4 {
-    font-size: 0.95rem;
-    opacity: 0.85;
-    margin-bottom: 6px;
-  }
-
-  .resume-section .experience-item p, .resume-section .experience-item li {
-    font-size: 0.95rem;
-    font-weight: 500;
-    margin-bottom: 4px;
-    opacity: 0.95;
-  }
-
-  .resume-section .settings-panel {
-    position: fixed;
-    top: 8px;
-    right: 8px;
-    z-index: 1000;
-  }
-
-  .resume-section .control-bar {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    background: var(--translucent);
-    border-radius: 8px;
-    padding: 4px 6px;
-    box-shadow: var(--shadow);
-    border: var(--glass-border);
-    backdrop-filter: blur(16px);
-  }
-
-  .resume-section .control-bar input {
-    background: transparent;
-    border: none;
-    color: var(--text);
-    font-size: 0.95rem;
-    width: 140px;
-    outline: none;
-    font-weight: 500;
-  }
-
-  .resume-section .control-bar input::placeholder {
-    color: var(--text);
-    opacity: 0.6;
-    font-weight: 500;
-  }
-
-  .resume-section .control-bar .material-icons {
-    color: var(--icon-color);
-    cursor: pointer;
-    font-size: 18px;
-  }
-
-  .resume-section .side-menu {
-    position: fixed;
-    top: 0;
-    right: -320px;
-    width: 320px;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(30, 37, 41, 0.6), rgba(8, 33, 58, 0.7));
-    border-left: var(--glass-border);
-    box-shadow: var(--shadow);
-    backdrop-filter: blur(16px);
-    padding: 20px 12px;
-    transition: right 0.3s ease;
-    z-index: 2000;
-    overflow-y: auto;
-  }
-
-  .resume-section .side-menu.active {
-    right: 0;
-  }
-
-  .resume-section .side-menu h3 {
-    font-size: 1.3rem;
-    color: var(--primary);
-    margin-bottom: 12px;
-    margin-left: 8px;
-  }
-
-  .resume-section .side-menu .menu-item {
-    margin-bottom: 12px;
-    padding: 10px;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-  }
-
-  .resume-section .side-menu .menu-item:hover {
-    background: rgba(8, 33, 58, 0.6);
-  }
-
-  .resume-section .side-menu .menu-item label {
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: var(--text);
-    margin-bottom: 4px;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-  }
-
-  .resume-section .side-menu .menu-item label .material-icons {
-    color: var(--icon-color);
-    font-size: 14px;
-  }
-
-  .resume-section .side-menu select, .resume-section .side-menu input {
-    width: 100%;
-    padding: 6px;
-    border-radius: 6px;
-    background: var(--card-bg);
-    border: var(--glass-border);
-    color: var(--text);
-    font-size: 0.95rem;
-    font-weight: 500;
-  }
-
-  .resume-section .side-menu select:focus, .resume-section .side-menu input:focus {
-    outline: 3px solid var(--primary);
-  }
-
-  .resume-section .side-menu .menu-group {
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 12px;
-    margin-bottom: 12px;
-  }
-
-  .resume-section .side-menu .close-btn {
-    display: block;
-    margin: 0 auto;
-    background: #9b2c2c;
-    color: #fff;
-    padding: 6px 12px;
-    border-radius: 8px;
-    text-align: center;
-    cursor: pointer;
-    font-weight: 700;
-    font-size: 0.95rem;
-    min-height: 44px;
-    width: 100%;
-    max-width: 200px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.25);
-    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
-    transition: transform 0.2s ease, background-color 0.3s ease;
-  }
-
-  .resume-section .side-menu .close-btn:hover {
-    background: #7f1d1d;
-    transform: scale(1.03);
-  }
-
-  @media (max-width: 768px) {
-    .resume-section body {
-        min-width: 320px;
-    }
-    .resume-section {
-        --font-size: 15px;
-    }
-    .resume-section .container {
-        padding: 10px;
-        gap: 15px;
-    }
-    .resume-section .header {
-        flex-direction: column;
-        text-align: center;
-        padding: 15px;
-        gap: 10px;
-    }
-    .resume-section .header .profile-pic {
-        width: 100px;
-        height: 100px;
-    }
-    .resume-section .header h1 {
-        font-size: 2.2rem;
-    }
-    .resume-section .header p {
-        font-size: 0.95rem;
-    }
-    .resume-section .main-content {
-        overflow-x: hidden;
-    }
-    .resume-section .section {
-        padding: 12px;
-        margin-bottom: 12px;
-    }
-    .resume-section .section h2 {
-        font-size: 1.3rem;
-    }
-    .resume-section .vibrant-button-box.certifications-box .badge-button,
-    .resume-section .vibrant-button-box.frameworks-box .badge-button {
-        flex: 1 1 calc(50% - 12px);
-        font-size: 0.9rem;
-        padding: 6px 12px;
-        min-width: 120px;
-        margin: 4px;
-        min-height: 44px;
-    }
-    .resume-section .vibrant-button-box.actions-box .badge-button,
-    .resume-section .vibrant-button-box.actions-box .close-btn {
-        font-size: 0.9rem;
-        padding: 6px 12px;
-        max-width: 200px;
-        min-height: 44px;
-    }
-    .resume-section .stats-container {
-        flex-direction: column;
-    }
-    .resume-section .settings-panel {
-        right: 6px;
-        top: 6px;
-    }
-    .resume-section .control-bar input {
-        width: 100px;
-        font-size: 0.9rem;
-    }
-    .resume-section .control-bar .material-icons {
-        font-size: 16px;
-    }
-    .resume-section .side-menu {
-        width: 260px;
-        right: -260px;
-        padding: 16px 12px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .resume-section {
-        --font-size: 14px;
-    }
-    .resume-section .container {
-        padding: 6px;
-        gap: 12px;
-    }
-    .resume-section .header {
-        padding: 12px;
-    }
-    .resume-section .header .profile-pic {
-        width: 90px;
-        height: 90px;
-    }
-    .resume-section .header h1 {
-        font-size: 1.6rem;
-    }
-    .resume-section .header p {
-        font-size: 0.9rem;
-    }
-    .resume-section .main-content {
-        overflow-x: hidden;
-    }
-    .resume-section .section {
-        padding: 10px;
-        margin-bottom: 10px;
-    }
-    .resume-section .section h2 {
-        font-size: 1.1rem;
-    }
-    .resume-section .section h2 .material-icons {
-        font-size: 20px;
-    }
-    .resume-section .card {
-        padding: 10px;
-        margin-bottom: 10px;
-    }
-    .resume-section .experience-item h3 {
-        font-size: 1.1rem;
-    }
-    .resume-section .experience-item h4 {
-        font-size: 0.9rem;
-    }
-    .resume-section .experience-item p, .resume-section .experience-item li {
-        font-size: 0.9rem;
-    }
-    .resume-section .vibrant-button-box.certifications-box .badge-button,
-    .resume-section .vibrant-button-box.frameworks-box .badge-button {
-        flex: 1 1 100%;
-        font-size: 0.85rem;
-        padding: 6px 10px;
-        min-width: 120px;
-        margin: 4px;
-        min-height: 44px;
-    }
-    .resume-section .badge-button, .resume-section .collab-button {
-        font-size: 0.85rem;
-        padding: 6px 10px;
-        min-height: 44px;
-        min-width: 120px;
-    }
-    .resume-section .vibrant-button-box.actions-box .badge-button,
-    .resume-section .vibrant-button-box.actions-box .close-btn {
-        font-size: 0.85rem;
-        padding: 6px 12px;
-        max-width: 200px;
-        min-height: 44px;
-    }
-    .resume-section .control-bar input {
-        width: 80px;
-        font-size: 0.9rem;
-    }
-    .resume-section .control-bar .material-icons {
-        font-size: 16px;
-    }
-    .resume-section .side-menu {
-        width: 220px;
-        right: -220px;
-        padding: 16px 12px;
-    }
-    .resume-section .side-menu h3 {
-        font-size: 1.1rem;
-    }
-    .resume-section .side-menu .menu-item label {
-        font-size: 0.9rem;
-    }
-    .resume-section .side-menu select, .resume-section .side-menu input {
-        font-size: 0.9rem;
-        padding: 4px;
-    }
-    .resume-section .stats-container img {
-        max-height: 140px;
-    }
-  }
-
-  @media print {
-    .resume-section {
-        background: #fff;
-        color: #000;
-        min-width: auto;
-        font-size: 10px;
-        line-height: 1.4;
-        padding: 0;
-        margin: 0;
-        width: 210mm;
-        height: 297mm;
-    }
-    .resume-section .container {
-        max-width: 190mm;
-        padding: 5mm;
-        gap: 5px;
-    }
-    .resume-section .header {
-        flex-direction: column;
-        padding: 5mm;
-        margin-bottom: 5mm;
-        box-shadow: none;
-        border: none;
-        backdrop-filter: none;
-    }
-    .resume-section .header .profile-pic {
-        width: 40mm;
-        height: 40mm;
-    }
-    .resume-section .header h1 {
-        font-size: 1.6rem;
-        background: none;
-        color: #000;
-    }
-    .resume-section .header p {
-        font-size: 0.8rem;
-    }
-    .resume-section .main-content {
-        gap: 5px;
-        overflow-x: hidden;
-    }
-    .resume-section .section {
-        padding: 3mm;
-        margin-bottom: 3mm;
-        box-shadow: none;
-        border: none;
-        backdrop-filter: none;
-        background: none;
-    }
-    .resume-section .section h2 {
-        font-size: 0.9rem;
-        border-bottom: 1px solid #000;
-        margin-bottom: 2mm;
-    }
-    .resume-section .section h2 .material-icons {
-        display: none;
-    }
-    .resume-section .card, .resume-section .project-card {
-        padding: 2mm;
-        margin-bottom: 2mm;
-        box-shadow: none;
-        border: none;
-        backdrop-filter: none;
-        background: none;
-    }
-    .resume-section .experience-item {
-        padding-left: 0;
-    }
-    .resume-section .experience-item h3 {
-        font-size: 0.85rem;
-    }
-    .resume-section .experience-item h4 {
-        font-size: 0.75rem;
-    }
-    .resume-section .experience-item p, .resume-section .experience-item li {
-        font-size: 0.65rem;
-    }
-    .resume-section .vibrant-button-box {
-        border: 1px solid #000;
-        background: none;
-        box-shadow: none;
-        overflow-x: hidden;
-    }
-    .resume-section .badge-button, .resume-section .collab-button {
-        height: 10px;
-        margin: 1mm;
-        background: none;
-        color: #000;
-        border: 1px solid #000;
-        box-shadow: none;
-        text-shadow: none;
-    }
-    .resume-section .stats-container img {
-        display: none;
-    }
-    .resume-section .vibrant-button-box a:not(:first-child) {
-        display: none;
-    }
-    .resume-section .settings-panel, .resume-section .side-menu {
-        display: none;
-    }
-    .resume-section .section::before {
-        display: none;
-    }
-  }
-  </style>
 </head>
 <body>
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5BB8W2X" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5BB8W2X"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- ======= Header ======= -->
   <header id="header" class="header-tops">
+
     <div class="container">
+
       <h1><a href="index.html">Labib Bin Shahed</a></h1>
-      <h2 style="color:#fff">I'm</h2>
+      <h2 style="color:#fff">I'm <span class="typing" style="color:#12D640"></span></h2>
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active">
-            <a href="#header"><span><b>Home</b></span></a>
+          <li class="active"><a href="#header"> <span><b>Home</b></span></a></li>
+          <li><a href="#about"><span><b>About</b></span></a></li>
+          <li><a href="#education"> <span><b>Education</b></span></a></li>
+          <li><a href="#experience"> <span><b>Experience</b></span></a></li>
+          <li><a href="#portfolio"> <span><b>Projects</b></span></a></li>
+          <li><a href="#skills"> <span><b>Skills</b></span></a></li>
+          <li><iframe src="RESUME.HTML" width="100%" height="600" style="border:none;"></iframe>
           </li>
-          <li>
-            <a href="#about"><span><b>About</b></span></a>
-          </li>
-          <li>
-            <a href="#education"><span><b>Education</b></span></a>
-          </li>
-          <li>
-            <a href="#experience"><span><b>Experience</b></span></a>
-          </li>
-          <li>
-            <a href="#portfolio"><span><b>Projects</b></span></a>
-          </li>
-          <li>
-            <a href="#skills"><span><b>Skills</b></span></a>
-          </li>
-          <li>
-            <a href="#skills"><span><b>Resume</b></span></a>
-          </li>
-          <li>
-            <a href="#contacts"><span><b>Contact</b></span></a>
-          </li>
+          <li><a href="#contacts"> <span><b>Contact</b></span></a></li>
+
         </ul>
-      </nav>
+      </nav><!-- .nav-menu -->
+
       <div class="social-links">
-        <a href="https://www.linkedin.com/in/la-b-ib/" target="_blank" class="linkedin"></a> <a href="https://github.com/la-b-ib" target="_blank" class="github"></a> <a href="mailto:labib.45x@gmail.com?subject=Inquiry%20from%20Website&amp;body=Hello%20Labib,%0D%0A%0D%0AI%20have%20a%20question!" target="_blank" class="google"></a>
+          <a href="https://www.linkedin.com/in/la-b-ib/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://github.com/la-b-ib" target="_blank" class="github"><i class="bx bxl-github"></i></a>
+          <a href="mailto:labib.45x@gmail.com?subject=Inquiry%20from%20Website&body=Hello%20Labib,%0D%0A%0D%0AI%20have%20a%20question!" target="_blank" class="google"><i class="bx bxl-google"></i></a>
       </div>
+
     </div>
-  </header>
+  </header><!-- End Header -->
+
+  <!-- ======= About Section ======= -->
   <section id="about" class="about">
+
+    <!-- ======= About Me ======= -->
     <div class="about-me container">
+
       <div class="section-title">
         <h2><b>About</b></h2>
       </div>
+
       <div class="row">
-        <div class="col-lg-4" data-aos="fade-right"><img src="assets/img/profile.jpeg" class="img-fluid" alt="profile"></div>
+        <div class="col-lg-4" data-aos="fade-right">
+          <img src="assets/img/profile.jpeg" class="img-fluid" alt="">
+        </div>
         <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-          <p>Focused and enthusiastic developer with a keen interest in software development and artificial intelligence. By comprehensive exposure to the underlying concepts and applying them vividly to various projects, my love for these domains came into being. I am a passionate individual who thrives to build and apply algorithms to solve real-world industry problems.</p>
+
+          <p>Focused and enthusiastic developer with a keen interest in software development and artificial intelligence. By comprehensive exposure
+            to the underlying concepts and applying them vividly to various projects, my love for these domains came into being.
+            I am a passionate individual who thrives to build and apply algorithms to solve real-world industry problems.
+          </p>
+
           <div class="row">
             <div class="col-lg-6">
               <ul>
-                <li><strong>Birthday:</strong> 18th January 2003</li>
-                <li><strong>Phone:</strong> +1 480-400-800</li>
+                <li><i class="icofont-rounded-right"></i> <strong>Birthday:</strong> 18th January 2003</li>
+                <li><i class="icofont-rounded-right"></i> <strong>Phone:</strong> +1 480-400-800</li>
               </ul>
             </div>
             <div class="col-lg-6">
               <ul>
-                <li><strong>Home Town:</strong> Jessore, Bangladesh</li>
-                <li>
-                  <strong>Email:</strong> <a href="mailto:labib.45x@gmail.com?subject=Inquiry%20from%20Website&amp;body=Hello%20Labib,%0D%0A%0D%0AI%20have%20a%20question!" class="email-link">labib.45x@gmail.com</a>
-                </li>
+                <li><i class="icofont-rounded-right"></i> <strong>Home Town: </strong>Jessore, Bangladesh</li>
+                <li><i class="icofont-rounded-right"></i> <strong>Email: </strong><a href="mailto:labib.45x@gmail.com?subject=Inquiry%20from%20Website&body=Hello%20Labib,%0D%0A%0D%0AI%20have%20a%20question!" class="email-link">labib.45x@gmail.com</a></p></li>
               </ul>
             </div>
           </div>
+          
           <h4 style="color: white;"><b>Research Contributions</b></h4>
+
           <ul>
             <li style="color: white;">
-              <strong>Title:</strong> <a href="https://doi.org/10.1109/ICEIC64972.2025.10879668" target="_blank" style="color: white;">Blockchain in Project Management for Information Security, Transparency and Accountability</a>
+              <i class="icofont-rounded-right"></i> 
+              <strong>Title:</strong> 
+              <a href="https://doi.org/10.1109/ICEIC64972.2025.10879668" target="_blank" style="color: white;">Blockchain in Project Management for Information Security, Transparency and Accountability</a>
             </li>
+            
             <div class="row">
               <div class="col-lg-6">
                 <ul>
-                  <li>
-                    <strong>DOI:</strong> <a href="https://doi.org/10.1109/ICEIC64972.2025.10879668" target="_blank">10.1109/ICEIC64972.2025.10879668</a>
-                  </li>
-                  <li><strong>Published in:</strong> 2025 International Conference on Electronics, Information, and Communication (ICEIC)</li>
+                  <li><strong>DOI: </strong><a href="https://doi.org/10.1109/ICEIC64972.2025.10879668" target="_blank">10.1109/ICEIC64972.2025.10879668</a></li>
+                  <li><strong>Published in: </strong>2025 International Conference on Electronics, Information, and Communication (ICEIC)</li>
                 </ul>
               </div>
               <div class="col-lg-6">
                 <ul>
-                  <li><strong>Conference Location:</strong> Osaka, Japan</li>
-                  <li><strong>Electronic ISBN:</strong> 979-8-3315-1075-6</li>
-                  <li><strong>Electronic ISSN:</strong> 2767-7699</li>
-                  <li><strong>Date of Conference:</strong> 19-22 January 2025</li>
+                  <li><strong>Conference Location: </strong>Osaka, Japan</li>
+                  <li><strong>Electronic ISBN: </strong>979-8-3315-1075-6</li>
+                  <li><strong>Electronic ISSN: </strong>2767-7699</li>
+                  <li><strong>Date of Conference: </strong>19-22 January 2025</li>
                 </ul>
               </div>
             </div>
           </ul>
+
           <ul>
             <li style="color: white;">
-              <strong>Title:</strong> <a href="https://doi.org/10.1109/ICRPSET64863.2024.10955896" target="_blank" style="color: white;">Crop Prediction Using Machine Learning and IoT: A Comparative Analysis of Algorithms</a>
+              <i class="icofont-rounded-right"></i> 
+              <strong>Title:</strong> 
+              <a href="https://doi.org/10.1109/ICRPSET64863.2024.10955896" target="_blank" style="color: white;">Crop Prediction Using Machine Learning and IoT: A Comparative Analysis of Algorithms</a>
             </li>
+            
             <div class="row">
               <div class="col-lg-6">
                 <ul>
-                  <li>
-                    <strong>DOI:</strong> <a href="https://doi.org/10.1109/ICRPSET64863.2024.10955896" target="_blank">10.1109/ICRPSET64863.2024.10955896</a>
-                  </li>
-                  <li><strong>Published in:</strong> 2024 International Conference on Recent Progresses in Science, Engineering and Technology (ICRPSET)</li>
+                  <li><strong>DOI: </strong><a href="https://doi.org/10.1109/ICRPSET64863.2024.10955896" target="_blank">10.1109/ICRPSET64863.2024.10955896</a></li>
+                  <li><strong>Published in: </strong>2024 International Conference on Recent Progresses in Science, Engineering and Technology (ICRPSET)</li>
                 </ul>
               </div>
               <div class="col-lg-6">
                 <ul>
-                  <li><strong>Conference Location:</strong> Rajshahi, Bangladesh</li>
-                  <li><strong>Electronic ISBN:</strong> 979-8-3315-0947-7</li>
-                  <li><strong>PoD ISBN:</strong> 979-8-3315-0948-4</li>
-                  <li><strong>Date of Conference:</strong> 07-08 December 2024</li>
+                  <li><strong>Conference Location: </strong>Rajshahi, Bangladesh</li>
+                  <li><strong>Electronic ISBN: </strong>979-8-3315-0947-7</li>
+                  <li><strong>PoD ISBN: </strong>979-8-3315-0948-4</li>
+                  <li><strong>Date of Conference: </strong>07-08 December 2024</li>
                 </ul>
               </div>
             </div>
           </ul>
+
           <ul>
             <div class="row">
               <div class="col-lg-6">
                 <ul>
-                  <li>
-                    <h4><b>ORCiD</b></h4>
-                  </li>
-                  <li>
-                    <a id="cy-effective-orcid-url" class="underline" href="https://orcid.org/0009-0007-4656-8709" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align: top"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width: 1em; margin-inline-start: 0.5em" alt="ORCID iD icon"> https://orcid.org/0009-0007-4656-8709</a>
-                  </li>
+                  <li><h4><b>ORCiD</b></h4></li>
+                  <li><a
+                    id="cy-effective-orcid-url"
+                    class="underline"
+                     href="https://orcid.org/0009-0007-4656-8709"
+                     target="orcid.widget"
+                     rel="me noopener noreferrer"
+                     style="vertical-align: top">
+                     <img
+                        src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
+                        style="width: 1em; margin-inline-start: 0.5em"
+                        alt="ORCID iD icon"/>
+                      https://orcid.org/0009-0007-4656-8709
+                    </a>
+                        </div>
+                      </div></li>
                 </ul>
               </div>
-            </div>
           </ul>
-        </div>
-      </div>
-      <div class="interests container">
-        <div class="section-title">
-          <h2>Interests</h2>
-        </div>
-        <div class="row">
-          <div class="col-lg-3 col-md-4">
-            <div class="icon-box">
-              <h3>Software Development</h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-            <div class="icon-box">
-              <h3>Machine Learning</h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-            <div class="icon-box">
-              <h3>Computer Vision</h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
-            <div class="icon-box">
-              <h3>Natural Language Processing</h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box">
-              <h3>Software Engineering</h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box">
-              <h3>Visualization</h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box">
-              <h3>Algorithms</h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box">
-              <h3>Image Processing</h3>
-            </div>
-          </div>
-        </div>
-      </div>
+
     </div>
-  </section>
+    
+    <!-- End About Me -->
+    <!-- ======= Interests ======= -->
+    <div class="interests container">
+
+      <div class="section-title">
+        <h2>Interests</h2>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3 col-md-4">
+          <div class="icon-box">
+            <i class="ri-global-line" style="color: #ffbb2c;"></i>
+            <h3>Software Development</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+          <div class="icon-box">
+            <i class="ri-database-2-line" style="color: #5578ff;"></i>
+            <h3>Machine Learning</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+          <div class="icon-box">
+            <i class="ri-camera-3-line" style="color: #e80368;"></i>
+            <h3>Computer Vision</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
+          <div class="icon-box">
+            <i class="ri-english-input" style="color: #1c7d32;"></i>
+            <h3>Natural Language Processing</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="ri-code-s-slash-fill" style="color: #28a745;"></i>
+            <h3>Software Engineering</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="ri-bar-chart-box-line" style="color: #f1081f;"></i>
+            <h3>Visualization</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="ri-file-list-3-line" style="color: #47aeff;"></i>
+            <h3>Algorithms</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="ri-image-line" style="color: #ffc107;"></i>
+            <h3>Image Processing</h3>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- End Interests -->
+  </section><!-- End About Section -->
+  <!-- ======= Education Section ======= -->
+
   <section id="education" class="services">
     <div class="container">
       <div class="section-title">
@@ -954,225 +264,265 @@
       </div>
       <div class="row">
         <div class="col-lg-12" data-aos="fade-up" style="display: inline-block;">
-          <div class="col-md-4 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="padding:0px 0px;padding-bottom: 5px;display: inline-block;">
-            <img src="assets/img/education/bu.png" class="img-fluid" alt="bu">
-            <p style="text-align:left;color:#fff;padding: 5px 10px;"><b>B.Sc in Computer Science and Engineering</b></p>
-            <h6 style="text-align:left;padding: 0px 10px;"><b>January 2022 - Present</b></h6>
-            <h6 style="text-align:left;color:#fff;padding: 0px 10px;"><b>Relevant Coursework</b></h6>
-            <ul style="list-style-type: none;text-align:left;color:#fff;">
-              <li>Cloud Computing, ML & DL</li>
-              <li>Database Management Systems</li>
-              <li>Algorithms & Optimization</li>
-            </ul>
+
+            <div class="col-md-4 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="padding:0px 0px;padding-bottom: 5px;display: inline-block;">
+              <img src="assets/img/education/bu.png" class="img-fluid" alt="">
+              <!-- <h4 style="text-align:left;"><a href="https://www.bracu.ac.bd/" target="_blank" style="color:#12d640">BRAC University</a><br> </h4> -->
+              <p style="text-align:left;color:#fff;padding: 5px 10px;"><b>B.Sc in Computer Science and Engineering</b></p>
+              <h6 style="text-align:left;padding: 0px 10px;"><b>January 2022 - Present</b></h6>
+              <h6 style="text-align:left;color:#fff;padding: 0px 10px;"><b>Relevant Coursework</b></h6>
+              <ul style="list-style-type: none;text-align:left;color:#fff;">
+                <li><i class="icofont-rounded-right"></i>Cloud Computing, ML & DL</li>
+                <li><i class="icofont-rounded-right"></i>Database Management Systems</li>
+                <li><i class="icofont-rounded-right"></i>Algorithms &amp; Optimization</li>
+                               
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+
     <div class="portfolio">
-      <div class="container">
-        <div class="section-title">
-          <h2><b>Certification</b></h2>
-        </div>
-        <div class="row portfolio-container" style="position: relative; height: 437.75px;">
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app" style="position: absolute; left: 0px; top: 0px;">
-            <div class="portfolio-wrap">
-              <img src="assets/img/certification/tw.jpg" class="img-fluid" alt="tw">
-              <div class="portfolio-info">
-                <h4>Programmable Messaging and Voice</h4>
-                <div class="portfolio-links">
-                  <a href="https://www.linkedin.com/learning/certificates/759119dcc46bdb4e63fb82dc49ed0ad4288a97d9031dd360fdb0686f65b0b398" target="_blank" title="Certificate"></a>
-                </div>
+    <div class="container">
+      <div class="section-title">
+        <h2><b>Certification</b></h2>
+      </div>
+
+      <div class="row portfolio-container" style="position: relative; height: 437.75px;">
+         <div class="col-lg-4 col-md-6 portfolio-item filter-app" style="position: absolute; left: 0px; top: 0px;">
+          <div class="portfolio-wrap">
+            <img src="assets/img/certification/tw.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Programmable Messaging and Voice</h4>
+              <div class="portfolio-links">
+                <a href="https://www.linkedin.com/learning/certificates/759119dcc46bdb4e63fb82dc49ed0ad4288a97d9031dd360fdb0686f65b0b398" target="_blank" title="Certificate"><i class="bx bx-link"></i></a>
               </div>
             </div>
+           </div>
           </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app" style="position: absolute; left: 370px; top: 0px;">
-            <div class="portfolio-wrap">
-              <img src="assets/img/certification/pmi.jpg" class="img-fluid" alt="pmi">
-              <div class="portfolio-info">
-                <h4>Cybersecurity Foundations</h4>
-                <div class="portfolio-links">
-                  <a href="https://www.linkedin.com/learning/certificates/fe897b3437597f8b933ad2501b5de695916b026e0c841509df9545ecd7d83b0b?trk=share_certificate" target="_blank" title="Certificate"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app" style="position: absolute; left: 740px; top: 0px;">
-            <div class="portfolio-wrap">
-              <img src="assets/img/certification/gh.jpg" class="img-fluid" alt="gh">
-              <div class="portfolio-info">
-                <h4>Career Essentials</h4>
-                <div class="portfolio-links">
-                  <a href="https://www.linkedin.com/learning/certificates/e9fda53e1d56f77f2f78acaefd5fd9c9dfd3dce255ebd20be4d1cd3290629784" target="_blank" title="Certificate"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-project" style="position: absolute; left: 0px; top: 218.875px;">
-            <div class="portfolio-wrap">
-              <img src="assets/img/certification/ms.jpg" class="img-fluid" alt="ms">
-              <div class="portfolio-info">
-                <h4>Career Essentials in Cybersecurity</h4>
-                <div class="portfolio-links">
-                  <a href="https://www.linkedin.com/learning/certificates/73e313f844327f6f6a86a0984c7c45ee6b9eee1a3e283db48bb370d908b57dec" target="_blank" title="Certificate"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-project" style="position: absolute; left: 370px; top: 218.875px;">
-            <div class="portfolio-wrap">
-              <img src="assets/img/certification/lt.jpg" class="img-fluid" alt="lt">
-              <div class="portfolio-info">
-                <h4>Test Automation</h4>
-                <div class="portfolio-links">
-                  <a href="https://www.linkedin.com/learning/certificates/243b5362e2fc213ce658d04d6c21856b9ab9628a3e81b375927773cd8618fd49" target="_blank" title="Certificate"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-project" style="position: absolute; left: 370px; top: 218.875px;">
-            <div class="portfolio-wrap">
-              <img src="assets/img/certification/li.jpg" class="img-fluid" alt="li">
-              <div class="portfolio-info">
-                <h4>NumPy MatPlotlib and Linear Algebra</h4>
-                <div class="portfolio-links">
-                  <a href="https://www.linkedin.com/learning/certificates/246ffec626263c5d4a8bea2c310bcc0cd836100f89d7e87c605082f43004b053" target="_blank" title="Certificate"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-project" style="position: absolute; left: 370px; top: 218.875px;">
-            <div class="portfolio-wrap">
-              <img src="assets/img/certification/shrm.jpg" class="img-fluid" alt="shrm">
-              <div class="portfolio-info">
-                <h4>Neuroscience for Effective L&amp;D</h4>
-                <div class="portfolio-links">
-                  <a href="https://www.linkedin.com/learning/certificates/3719feeef2b7f6b1134ce2fb8887cad2d531b509b194f9ab82204ad2581b1cf3?trk=share_certificate" target="_blank" title="Certificate"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-project" style="position: absolute; left: 370px; top: 218.875px;">
-            <div class="portfolio-wrap">
-              <img src="assets/img/certification/hr.jpg" class="img-fluid" alt="hr">
-              <div class="portfolio-info">
-                <h4>Neuroscience for Effective L&amp;D</h4>
-                <div class="portfolio-links">
-                  <a href="https://www.linkedin.com/learning/certificates/125c8879c94519f1a707ee5691ac5a6e5b5ca44002c3f532900f608765a2d2fa?trk=share_certificate" target="_blank" title="Certificate"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-project" style="position: absolute; left: 370px; top: 218.875px;">
-            <div class="portfolio-wrap">
-              <img src="assets/img/certification/bp.jpg" class="img-fluid" alt="bp">
-              <div class="portfolio-info">
-                <h4>Robotic Process Automation</h4>
-                <div class="portfolio-links">
-                  <a href="https://www.linkedin.com/learning/certificates/6f99e870b41beae081989894b502a48e94af71cf8806e54a994cad682d092c5f" target="_blank" title="Certificate"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-project" style="position: absolute; left: 370px; top: 218.875px;">
-            <div class="portfolio-wrap">
-              <img src="assets/img/certification/pd.jpg" class="img-fluid" alt="pd">
-              <div class="portfolio-info">
-                <h4>PES DAY 2024 Ambassador Certificate</h4>
-                <div class="portfolio-links">
-                  <a href="https://drive.google.com/file/d/1TtB9GEhgxRlTVQ5Ha-w9MWNBN6oXl2Jb/view?usp=sharing" target="_blank" title="Certificate"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-project" style="position: absolute; left: 370px; top: 218.875px;">
-            <div class="portfolio-wrap">
-              <img src="assets/img/certification/icpe.jpg" class="img-fluid" alt="icpe">
-              <div class="portfolio-info">
-                <h4>Conference on Energy & Power Engineering</h4>
-                <div class="portfolio-links">
-                  <a href="https://drive.google.com/file/d/17SxPVFYELRmTnL-ottL5zVR29rsvGYBD/view" target="_blank" title="Certificate"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-project" style="position: absolute; left: 740px; top: 218.875px;">
-            <div class="portfolio-wrap">
-              <img src="assets/img/certification/nasba.jpg" class="img-fluid" alt="nasba">
-              <div class="portfolio-info">
-                <h4>Cybersecurity Terminology</h4>
-                <div class="portfolio-links">
-                  <a href="https://www.linkedin.com/learning/certificates/e72b6f3475683106b11f92cc054a1f8d514ed33b6b8e6974f5b22d6f28ac2bdd?trk=share_certificat" target="_blank" title="Certificate"></a>
-                </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app" style="position: absolute; left: 370px; top: 0px;">
+          <div class="portfolio-wrap">
+            <img src="assets/img/certification/pmi.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Cybersecurity Foundations</h4>
+              <div class="portfolio-links">
+                <a href="https://www.linkedin.com/learning/certificates/fe897b3437597f8b933ad2501b5de695916b026e0c841509df9545ecd7d83b0b?trk=share_certificate" target="_blank" title="Certificate"><i class="bx bx-link"></i></a>
               </div>
             </div>
           </div>
         </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app" style="position: absolute; left: 740px; top: 0px;">
+          <div class="portfolio-wrap">
+            <img src="assets/img/certification/gh.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Career Essentials</h4>
+              <div class="portfolio-links">
+                <a href="https://www.linkedin.com/learning/certificates/e9fda53e1d56f77f2f78acaefd5fd9c9dfd3dce255ebd20be4d1cd3290629784" target="_blank" title="Certificate"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-project" style="position: absolute; left: 0px; top: 218.875px;">
+          <div class="portfolio-wrap">
+            <img src="assets/img/certification/ms.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Career Essentials in Cybersecurity</h4>
+              <div class="portfolio-links">
+                <a href="https://www.linkedin.com/learning/certificates/73e313f844327f6f6a86a0984c7c45ee6b9eee1a3e283db48bb370d908b57dec" target="_blank" title="Certificate"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-project" style="position: absolute; left: 370px; top: 218.875px;">
+          <div class="portfolio-wrap">
+            <img src="assets/img/certification/lt.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Test Automation</h4>
+              <div class="portfolio-links">
+                <a href="https://www.linkedin.com/learning/certificates/243b5362e2fc213ce658d04d6c21856b9ab9628a3e81b375927773cd8618fd49" target="_blank" title="Certificate"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-project" style="position: absolute; left: 370px; top: 218.875px;">
+          <div class="portfolio-wrap">
+            <img src="assets/img/certification/li.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>NumPy MatPlotlib and Linear Algebra</h4>
+              <div class="portfolio-links">
+                <a href="https://www.linkedin.com/learning/certificates/246ffec626263c5d4a8bea2c310bcc0cd836100f89d7e87c605082f43004b053" target="_blank" title="Certificate"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-project" style="position: absolute; left: 370px; top: 218.875px;">
+          <div class="portfolio-wrap">
+            <img src="assets/img/certification/shrm.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Neuroscience for Effective L&D</h4>
+              <div class="portfolio-links">
+                <a href="https://www.linkedin.com/learning/certificates/3719feeef2b7f6b1134ce2fb8887cad2d531b509b194f9ab82204ad2581b1cf3?trk=share_certificate" target="_blank" title="Certificate"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-project" style="position: absolute; left: 370px; top: 218.875px;">
+          <div class="portfolio-wrap">
+            <img src="assets/img/certification/hr.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Neuroscience for Effective L&D</h4>
+              <div class="portfolio-links">
+                <a href="https://www.linkedin.com/learning/certificates/125c8879c94519f1a707ee5691ac5a6e5b5ca44002c3f532900f608765a2d2fa?trk=share_certificate" target="_blank" title="Certificate"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-project" style="position: absolute; left: 370px; top: 218.875px;">
+          <div class="portfolio-wrap">
+            <img src="assets/img/certification/bp.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Robotic Process Automation</h4>
+              <div class="portfolio-links">
+                <a href="https://www.linkedin.com/learning/certificates/6f99e870b41beae081989894b502a48e94af71cf8806e54a994cad682d092c5f" target="_blank" title="Certificate"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-project" style="position: absolute; left: 370px; top: 218.875px;">
+          <div class="portfolio-wrap">
+            <img src="assets/img/certification/pd.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>PES DAY 2024 Ambassador Certificate</h4>
+              <div class="portfolio-links">
+                <a href="https://drive.google.com/file/d/1TtB9GEhgxRlTVQ5Ha-w9MWNBN6oXl2Jb/view?usp=sharing" target="_blank" title="Certificate"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-project" style="position: absolute; left: 370px; top: 218.875px;">
+          <div class="portfolio-wrap">
+            <img src="assets/img/certification/icpe.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Conference on Energy & Power Engineering</h4>
+              <div class="portfolio-links">
+                <a href="https://drive.google.com/file/d/17SxPVFYELRmTnL-ottL5zVR29rsvGYBD/view" target="_blank" title="Certificate"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-project" style="position: absolute; left: 740px; top: 218.875px;">
+          <div class="portfolio-wrap">
+            <img src="assets/img/certification/nasba.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Cybersecurity Terminology</h4>
+              <div class="portfolio-links">
+                <a href="https://www.linkedin.com/learning/certificates/e72b6f3475683106b11f92cc054a1f8d514ed33b6b8e6974f5b22d6f28ac2bdd?trk=share_certificat" target="_blank" title="Certificate"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
+    </div>
+
   </section>
+  <!-- End Education Section -->
+  <!-- Start Experience Section -->
+
   <section id="experience" class="services">
     <div class="container">
       <div class="section-title">
         <h2><b>Experience</b></h2>
       </div>
+
       <div class="row">
-        <div class="col-lg-12" data-aos="fade-up">
-          <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <h4 style="text-align:left;"><a href="https://ieeecsbdc.org/about-secretariat" style="color:#12d640"><b>IEEE Computer Society Bangladesh Chapter Secretariat</b></a><br></h4>
-            <p style="text-align:left;color:#fff"><b>January 2025 - Present</b></p>
-            <p style="text-align:left;color:#fff"><b>President</b></p>
-            <ul style="list-style-type: none; text-align:left;">
-              <li>Shape the Chapter’s vision and set strategic goals that align with IEEE CS BDC Ex-Com directives.</li>
-              <li>Design, host, and measure impactful events to elevate computer science education and innovation.</li>
-              <li>Build strong partnerships with academics, industry leaders, and professional networks.</li>
-              <li>Manage resources, fund operations responsibly, and prioritize sustainability and branding.</li>
-              <li>Create pathways for skill-building, career growth, and recognition for members.</li>
-            </ul>
-          </div>
-          <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <h4 style="text-align:left;"><a href="https://bracuexpress.com/" style="color:#12d640"><b>BRACU Express</b></a><br></h4>
-            <p style="text-align:left;color:#fff"><b>April 2023 - January 2025</b></p>
-            <p style="text-align:left;color:#fff"><b>Journalist</b></p>
-            <ul style="list-style-type: none; text-align:left;">
-              <li>Led deep-dive research and expert interviews, delivering content that’s both insightful and deadline-driven.</li>
-              <li>Boosted audience engagement by crafting visually striking multimedia elements, including photos and sleek graphic designs.</li>
-              <li>Build strong partnerships with academics, industry leaders, and professional networks.</li>
-              <li>Created and published standout articles on trending topics capturing the attention of university readers via BRACU Express.</li>
-              <li>Partnered with the editorial team to finesse drafts, ensuring a steady stream of polished, buzzworthy publications—explore my <a href="https://bracuexpress.com/author/labib/" target="_blank"><b>portfolio</b></a> at BRACU Express.
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <h4 style="text-align:left;"><a href="https://www.facebook.com/TachyonTs" style="color:#12d640"><b>Tachyon</b></a><br></h4>
-            <p style="text-align:left;color:#fff"><b>April 2023 - January 2025</b></p>
-            <p style="text-align:left;color:#fff"><b>Journalist</b></p>
-            <ul style="list-style-type: none; text-align:left;">
-              <li>Analyzed scientific papers independently while partnering with editors to develop educational content aligned with Tachyon's goal of connecting research with public understanding.</li>
-              <li>Built expertise in science communication, research techniques, and content development while helping expand public interest in STEM topics.</li>
-              <li>Created engaging articles breaking down complex scientific ideas into accessible content on physics advances and environmental science.</li>
-              <li>Remotely contributed to Tachyon from Dhaka as a Science Content Writer (ID: 202301003), aiding this nonprofit's mission to boost science literacy and critical thinking in Bangladesh.</li>
-            </ul>
-          </div>
-          <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <h4 style="text-align:left;"><a href="https://ieee-pes.org/about-pes/pes-day/" style="color:#12d640"><b>IEEE PES Day</b></a><br></h4>
-            <p style="text-align:left;color:#fff"><b>February 2024 - May 2024</b></p>
-            <p style="text-align:left;color:#fff"><b>Ambassador</b></p>
-            <ul style="list-style-type: none; text-align:left;">
-              <li>Selected as IEEE PES Day 2024 Ambassador (ID: PESDAY24-217) to champion "Empowering Electric Mobility Innovation," promoting green transport solutions worldwide.</li>
-              <li>Networked with 700+ global ambassadors, building leadership skills and cross-cultural connections while advancing IEEE PES goals for energy innovation.​​​​​​​​​​​​​​​​</li>
-              <li>Led a key webinar "Future Trends in Electric Mobility: Challenges and Opportunities" on April 23, 2024, partnering with IEEE Power & Energy Society BRACU Chapter and featuring speakers from Team Crack Platoon and SAE teams from RUET.</li>
-              <li>Boosted awareness about sustainable mobility through digital and community initiatives during the global IEEE PES Day events (April 22–24, 2024).</li>
-            </ul>
+          <div class="col-lg-12" data-aos="fade-up">
+              
+            <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+                <h4 style="text-align:left;"><a href="https://ieeecsbdc.org/about-secretariat" style="color:#12d640"><b>IEEE Computer Society Bangladesh Chapter Secretariat</b></a><br> </h4>
+                <p style="text-align:left;color:#fff"><b>January 2025 - Present</b></p>
+                <p style="text-align:left;color:#fff"><b>President</b></p>
+                
+                <ul style="list-style-type: none; text-align:left;">
+                  <li><i class="icofont-rounded-right"></i>Shape the Chapter’s vision and set strategic goals that align with IEEE CS BDC Ex-Com directives.</li>
+                  <li><i class="icofont-rounded-right"></i>Design, host, and measure impactful events to elevate computer science education and innovation.</li>
+                  <li><i class="icofont-rounded-right"></i>Build strong partnerships with academics, industry leaders, and professional networks.</li>
+                  <li><i class="icofont-rounded-right"></i>Manage resources, fund operations responsibly, and prioritize sustainability and branding.</li>
+                  <li><i class="icofont-rounded-right"></i>Create pathways for skill-building, career growth, and recognition for members.</li>
+                </ul>
+              </div>
+
+              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+                <h4 style="text-align:left;"><a href="https://bracuexpress.com/" style="color:#12d640"><b>BRACU Express</b></a><br> </h4>
+                <p style="text-align:left;color:#fff"><b>April 2023 - January 2025</b></p>
+                <p style="text-align:left;color:#fff"><b>Journalist</b></p>
+                
+                <ul style="list-style-type: none; text-align:left;">
+                  <li><i class="icofont-rounded-right"></i>Led deep-dive research and expert interviews, delivering content that’s both insightful and deadline-driven.</li>
+                  <li><i class="icofont-rounded-right"></i>Boosted audience engagement by crafting visually striking multimedia elements, including photos and sleek graphic designs.</li>
+                  <li><i class="icofont-rounded-right"></i>Build strong partnerships with academics, industry leaders, and professional networks.</li>
+                  <li><i class="icofont-rounded-right"></i>Created and published standout articles on trending topics capturing the attention of university readers via BRACU Express.</li>
+                  <li><i class="icofont-rounded-right"></i>Partnered with the editorial team to finesse drafts, ensuring a steady stream of polished, buzzworthy publications—explore my <a href="https://bracuexpress.com/author/labib/" target="_blank"><b>portfolio</b></a> at BRACU Express.</li>
+                </ul>
+
+              </div>
+
+              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+                <h4 style="text-align:left;"><a href="https://www.facebook.com/TachyonTs" style="color:#12d640"><b>Tachyon</b></a><br> </h4>
+                <p style="text-align:left;color:#fff"><b>April 2023 - January 2025</b></p>
+                <p style="text-align:left;color:#fff"><b>Journalist</b></p>
+                
+                <ul style="list-style-type: none; text-align:left;">
+                  <li><i class="icofont-rounded-right"></i>Analyzed scientific papers independently while partnering with editors to develop educational content aligned with Tachyon's goal of connecting research with public understanding.</li>
+                  <li><i class="icofont-rounded-right"></i>Built expertise in science communication, research techniques, and content development while helping expand public interest in STEM topics.</li>
+                  <li><i class="icofont-rounded-right"></i>Created engaging articles breaking down complex scientific ideas into accessible content on physics advances and environmental science.</li>
+                  <li><i class="icofont-rounded-right"></i>Remotely contributed to Tachyon from Dhaka as a Science Content Writer (ID: 202301003), aiding this nonprofit's mission to boost science literacy and critical thinking in Bangladesh.</li>
+                 
+                </ul>
+
+              </div>
+
+              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+                <h4 style="text-align:left;"><a href="https://ieee-pes.org/about-pes/pes-day/" style="color:#12d640"><b>IEEE PES Day</b></a><br> </h4>
+                <p style="text-align:left;color:#fff"><b>February 2024 - May 2024</b></p>
+                <p style="text-align:left;color:#fff"><b>Ambassador</b></p>
+                
+                <ul style="list-style-type: none; text-align:left;">
+                  <li><i class="icofont-rounded-right"></i>Selected as IEEE PES Day 2024 Ambassador (ID: PESDAY24-217) to champion "Empowering Electric Mobility Innovation," promoting green transport solutions worldwide.</li>
+                  <li><i class="icofont-rounded-right"></i>Networked with 700+ global ambassadors, building leadership skills and cross-cultural connections while advancing IEEE PES goals for energy innovation.​​​​​​​​​​​​​​​​</li>
+                  <li><i class="icofont-rounded-right"></i>Led a key webinar "Future Trends in Electric Mobility: Challenges and Opportunities" on April 23, 2024, partnering with IEEE Power & Energy Society BRACU Chapter and featuring speakers from Team Crack Platoon and SAE teams from RUET.</li>
+                  <li><i class="icofont-rounded-right"></i>Boosted awareness about sustainable mobility through digital and community initiatives during the global IEEE PES Day events (April 22–24, 2024).</li>
+                 
+                </ul>
+
+              </div>
+
           </div>
         </div>
-      </div>
     </div>
   </section>
+  <!-- End Experience Section -->
+  <!-- Start Project Section -->
+
   <section id="portfolio" class="portfolio">
     <div class="container">
+
       <div class="section-title">
         <h2><b>Projects</b></h2>
       </div>
+
       <div class="row">
         <div class="col-lg-12 d-flex justify-content-center">
           <ul id="portfolio-flters">
@@ -1182,89 +532,93 @@
           </ul>
         </div>
       </div>
+
       <div class="row portfolio-container">
+
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <center>
-            <h4><b>MoodScope</b></h4>
-          </center>
+          <center><h4><b>MoodScope</b></h4></center>
           <div class="portfolio-wrap">
-            <img src="assets/img/project/MoodScope.jpg" class="img-fluid" alt="MoodScope">
+            <img src="assets/img/project/MoodScope.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
+              
               <div class="portfolio-links">
-                <a href="projects/MoodScope.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"></a>
+                <a href="projects/MoodScope.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
               </div>
             </div>
           </div>
         </div>
+
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <center>
-            <h4><b>CostNest</b></h4>
-          </center>
+          <center><h4><b>CostNest</b></h4></center>
           <div class="portfolio-wrap">
-            <img src="assets/img/project/CostNest.jpeg" class="img-fluid" alt="CostNest">
+            <img src="assets/img/project/CostNest.jpeg" class="img-fluid" alt="">
             <div class="portfolio-info">
+              
               <div class="portfolio-links">
-                <a href="projects/CostNest.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"></a>
+                <a href="projects/CostNest.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
               </div>
             </div>
           </div>
         </div>
+        
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <center>
-            <h4><b>LeafByte</b></h4>
-          </center>
+          <center><h4><b>LeafByte</b></h4></center>
           <div class="portfolio-wrap">
-            <img src="assets/img/project/LeafByte.jpg" class="img-fluid" alt="LeafByte">
+            <img src="assets/img/project/LeafByte.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
+              
               <div class="portfolio-links">
-                <a href="projects/LeafByte.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"></a>
+                <a href="projects/LeafByte.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
               </div>
             </div>
           </div>
         </div>
+       
         <div class="col-lg-4 col-md-6 portfolio-item filter-project">
-          <center>
-            <h4><b>VitaSort</b></h4>
-          </center>
+          <!-- <br> -->
+          <center><h4><b>VitaSort</b></h4></center>
           <div class="portfolio-wrap">
-            <img src="assets/img/project/VitaSort.jpg" class="img-fluid" alt="VitaSort">
+            <img src="assets/img/project/VitaSort.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4><b>VitaSort</b></h4>
               <div class="portfolio-links">
-                <a href="projects/VitaSort.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"></a>
+                <a href="projects/VitaSort.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
               </div>
             </div>
           </div>
         </div>
+
         <div class="col-lg-4 col-md-6 portfolio-item filter-project">
-          <center>
-            <h4><b>LitGrid</b></h4>
-          </center>
+          <center><h4><b>LitGrid</b></h4></center>
           <div class="portfolio-wrap">
-            <img src="assets/img/project/LitGrid.jpg" class="img-fluid" alt="LitGrid">
+            <img src="assets/img/project/LitGrid.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <div class="portfolio-links">
-                <a href="projects/LitGrid.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"></a>
+                <a href="projects/LitGrid.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
               </div>
             </div>
           </div>
-        </div>
+        </div>        
+        
         <div class="col-lg-4 col-md-6 portfolio-item filter-project">
-          <center>
-            <h4><b>DuskProbe</b></h4>
-          </center>
+          <!-- <br> -->
+          <center><h4><b>DuskProbe</b></h4></center>
           <div class="portfolio-wrap">
-            <img src="assets/img/project/DuskProbe.jpg" class="img-fluid" alt="DuskProbe">
+            <img src="assets/img/project/DuskProbe.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <div class="portfolio-links">
-                <a href="projects/DuskProbe.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"></a>
+                <a href="projects/DuskProbe.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
               </div>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
+  <!-- End Project Section -->
+  <!-- Start Skills Section -->
+
   <section id="skills" class="services">
     <div class="container">
       <div class="section-title">
@@ -1274,20 +628,45 @@
         <div class="col-lg-12" data-aos="fade-up">
           <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="background:#fff">
             <h4 style="text-align:left;color:#09203a">Languages and Databases</h4>
-            <p style="text-align:left;"><img src="https://www.vectorlogo.zone/logos/python/python-horizontal.svg" alt="vectorlogo.zone" height="50" width="150"> <img src="https://www.vectorlogo.zone/logos/java/java-horizontal.svg" alt="vectorlogo.zone" height="50" width="120"> <img src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-ar21.svg" alt="vectorlogo.zone"> <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="upload.wikimedia.org" height="60" width="90"> <img src="https://www.vectorlogo.zone/logos/mysql/mysql-horizontal.svg" alt="vectorlogo.zone" height="70" width="130"> <img src="https://www.vectorlogo.zone/logos/postgresql/postgresql-horizontal.svg" alt="vectorlogo.zone" height="50" width="190"></p>
+                <p style="text-align:left;">
+                  <img src="https://www.vectorlogo.zone/logos/python/python-horizontal.svg" alt="vectorlogo.zone" height="50" width="150">
+                  <img src="https://www.vectorlogo.zone/logos/java/java-horizontal.svg" alt="vectorlogo.zone" height="50" width="120">
+                  <img src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-ar21.svg" alt="vectorlogo.zone">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="upload.wikimedia.org" height="60" width="90">
+                  <img src="https://www.vectorlogo.zone/logos/mysql/mysql-horizontal.svg" alt="vectorlogo.zone" height="70" width="130">
+                  <img src="https://www.vectorlogo.zone/logos/postgresql/postgresql-horizontal.svg" alt="vectorlogo.zone" height="50" width="190">
+
+                </p>
+            </div>
+            <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="lefade-up" data-aos-delay="100" style="background:#fff">
+              <h4 style="text-align:left;color:#09203a">Frameworks</h4>
+                <p style="text-align:left;">
+                  <img src="https://www.vectorlogo.zone/logos/djangoproject/djangoproject-ar21.svg" alt="vectorlogo.zone">
+                  <img src="https://www.vectorlogo.zone/logos/nodejs/nodejs-horizontal.svg" alt="vectorlogo.zone">
+                  <img src="https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-ar21.svg" alt="vectorlogo.zone">
+                  <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-ar21.svg" alt="vectorlogo.zone">
+                  <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-ar21.svg" alt="vectorlogo.zone">
+                  <img src="https://www.vectorlogo.zone/logos/opencv/opencv-ar21.svg" alt="vectorlogo.zone">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="upload.wikimedia.org" width="90" height="70">
+              </p>
           </div>
           <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="lefade-up" data-aos-delay="100" style="background:#fff">
-            <h4 style="text-align:left;color:#09203a">Frameworks</h4>
-            <p style="text-align:left;"><img src="https://www.vectorlogo.zone/logos/djangoproject/djangoproject-ar21.svg" alt="vectorlogo.zone"> <img src="https://www.vectorlogo.zone/logos/nodejs/nodejs-horizontal.svg" alt="vectorlogo.zone"> <img src="https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-ar21.svg" alt="vectorlogo.zone"> <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-ar21.svg" alt="vectorlogo.zone"> <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-ar21.svg" alt="vectorlogo.zone"> <img src="https://www.vectorlogo.zone/logos/opencv/opencv-ar21.svg" alt="vectorlogo.zone"> <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="upload.wikimedia.org" width="90" height="70"></p>
-          </div>
-          <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="lefade-up" data-aos-delay="100" style="background:#fff">
-            <h4 style="text-align:left;color:#09203a">Tools</h4>
-            <p style="text-align:left;"><img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-ar21.svg" alt="vectorlogo.zone"> <img src="https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-ar21.svg" alt="vectorlogo.zone"> <img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-ar21.svg" alt="vectorlogo.zone"> <img src="https://www.vectorlogo.zone/logos/heroku/heroku-ar21.svg" alt="vectorlogo.zone"> <img src="https://www.vectorlogo.zone/logos/jupyter/jupyter-ar21.svg" alt="vectorlogo.zone"></p>
+              <h4 style="text-align:left;color:#09203a">Tools</h4>
+                <p style="text-align:left;">
+                  <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-ar21.svg" alt="vectorlogo.zone">
+                  <img src="https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-ar21.svg" alt="vectorlogo.zone">
+                  <img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-ar21.svg" alt="vectorlogo.zone">
+                  <img src="https://www.vectorlogo.zone/logos/heroku/heroku-ar21.svg" alt="vectorlogo.zone">
+                  <img src="https://www.vectorlogo.zone/logos/jupyter/jupyter-ar21.svg" alt="vectorlogo.zone">
+              </p>
           </div>
         </div>
       </div>
     </div>
   </section>
+  <!-- End Skills Section -->
+  <!-- Start Links section -->
+
   <section id="links" class="services">
     <div class="container">
       <div class="section-title">
@@ -1295,590 +674,88 @@
       </div>
       <div class="row">
         <div class="col-md-3 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-          <a href="https://drive.google.com/file/d/155WaKgoQctZrFN7UDNOmzXAYAUnCXmWr/view?usp=sharing" target="_blank">
-          <div class="icon"></div></a>
+          <a href="https://drive.google.com/file/d/155WaKgoQctZrFN7UDNOmzXAYAUnCXmWr/view?usp=sharing" target="_blank"><div class="icon"><i class="icofont-page"></i></div></a>
           <h4 class="title"><a href="https://drive.google.com/file/d/155WaKgoQctZrFN7UDNOmzXAYAUnCXmWr/view?usp=sharing" target="_blank">Resume</a></h4>
           <p class="description" style="color:#fff;">The link contains downloadable resume</p>
         </div>
       </div>
     </div>
-  </section>
-  <section id="resume" class="resume">
-    <div class="resume-section">
-      <div class="settings-panel">
-        <div class="control-bar">
-          <span class="material-icons" onclick="resumeToggleSearch()" aria-label="Toggle Search">search</span> <input type="text" id="resumeSearchInput" placeholder="Search Resume..." style="display: none;" aria-label="Search Resume"> <span class="material-icons" onclick="resumeToggleMenu()" aria-label="Toggle Settings Menu">settings</span>
-        </div>
-      </div>
-      <div class="side-menu" id="resumeSideMenu">
-        <h3>Customize Resume</h3>
-        <div class="menu-group">
-          <h4 class="text-sm font-semibold text-primary mb-2 ml-2">Appearance</h4>
-          <div class="menu-item">
-            <label><span class="material-icons">color_lens</span> Accent Color</label> <input type="color" id="resumeAccentColorPicker" value="#15ce49" onchange="resumeChangeAccentColor(this.value)" aria-label="Select Accent Color">
-          </div>
-          <div class="menu-item">
-            <label><span class="material-icons">palette</span> Headline Color</label> <input type="color" id="resumeHeadlineColorPicker" value="#15ce49" onchange="resumeChangeHeadlineColor(this.value)" aria-label="Select Headline Color">
-          </div>
-          <div class="menu-item">
-            <label><span class="material-icons">star</span> Icon Color</label> <input type="color" id="resumeIconColorPicker" value="#15ce49" onchange="resumeChangeIconColor(this.value)" aria-label="Select Icon Color">
-          </div>
-        </div>
-        <div class="menu-group">
-          <h4 class="text-sm font-semibold text-primary mb-2 ml-2">Layout</h4>
-          <div class="menu-item">
-            <label><span class="material-icons">format_size</span> Text Size</label> <input type="range" id="resumeFontSizeSlider" min="12" max="24" step="1" value="16" oninput="resumeChangeFontSize(this.value)" aria-label="Adjust Text Size"> <span id="resumeFontSizeValue">16px</span>
-          </div>
-          <div class="menu-item">
-            <label><span class="material-icons">shadow</span> Shadow Intensity</label> <input type="range" id="resumeShadowIntensitySlider" min="0.05" max="0.3" step="0.01" value="0.15" oninput="resumeChangeShadowIntensity(this.value)" aria-label="Adjust Shadow Intensity"> <span id="resumeShadowIntensityValue">0.15</span>
-          </div>
-          <div class="menu-item">
-            <label><span class="material-icons">view_quilt</span> Card Style</label> <select id="resumeCardStyleSelect" onchange="resumeChangeCardStyle(this.value)" aria-label="Select Card Style">
-              <option value="glass">
-                Glass
-              </option>
-              <option value="solid">
-                Solid
-              </option>
-              <option value="bordered">
-                Bordered
-              </option>
-            </select>
-          </div>
-          <div class="menu-item">
-            <label><span class="material-icons">view_module</span> Section Layout</label> <select id="resumeSectionLayoutSelect" onchange="resumeChangeSectionLayout(this.value)" aria-label="Select Section Layout">
-              <option value="grid">
-                Grid
-              </option>
-              <option value="stacked">
-                Stacked
-              </option>
-            </select>
-          </div>
-          <div class="menu-item">
-            <label><span class="material-icons">visibility</span> Section Visibility</label> <select id="resumeSectionVisibilitySelect" onchange="resumeToggleSectionVisibility(this.value)" aria-label="Select Section Visibility">
-              <option value="all">
-                Show All
-              </option>
-              <option value="summary">
-                Professional Summary
-              </option>
-              <option value="education">
-                Education
-              </option>
-              <option value="experience">
-                Professional Experience
-              </option>
-              <option value="skills">
-                Technical Skills
-              </option>
-              <option value="certifications">
-                Certifications
-              </option>
-              <option value="github">
-                GitHub Contributions
-              </option>
-              <option value="research">
-                Research Publications
-              </option>
-              <option value="projects">
-                Open Source Projects
-              </option>
-              <option value="collaborations">
-                Collaborations
-              </option>
-            </select>
-          </div>
-        </div>
-        <div class="menu-group">
-          <h4 class="text-sm font-semibold text-primary mb-2 ml-2">Animation</h4>
-          <div class="menu-item">
-            <label><span class="material-icons">animation</span> Animation Speed</label> <select id="resumeAnimationSpeedSelect" onchange="resumeChangeAnimationSpeed(this.value)" aria-label="Select Animation Speed">
-              <option value="0.4">
-                Normal
-              </option>
-              <option value="0.6">
-                Slow
-              </option>
-              <option value="0.2">
-                Fast
-              </option>
-              <option value="0">
-                None
-              </option>
-            </select>
-          </div>
-        </div>
-        <div class="menu-group">
-          <h4 class="text-sm font-semibold text-primary mb-2 ml-2">Actions</h4>
-          <div class="menu-item">
-            <label><span class="material-icons">settings_applications</span> Actions</label>
-            <div class="vibrant-button-box actions-box">
-              <button onclick="window.print()" class="badge-button" aria-label="Print Resume">Print</button> <button onclick="resumeDownloadPDF()" class="badge-button" aria-label="Download Resume">Download</button> <button onclick="resumeScrollToTop()" class="badge-button" aria-label="Scroll to Top">Scroll</button> <button onclick="resumeResetSettings()" class="badge-button" aria-label="Reset Settings">Reset</button> <button class="close-btn" onclick="resumeToggleMenu()" aria-label="Close Settings Menu">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <header class="header">
-          <img src="labib.png" alt="Profile Picture of Labib Bin Shahed" class="profile-pic" loading="lazy">
-          <div class="profile-info">
-            <h1>Labib Bin Shahed</h1>
-            <p>CS & Engineering Student @ BRACU | ML, NLP, Blockchain Researcher | IEEE CSBDC Secretariat President 2025 | Open Source Contributor | Seeking Global AI & Sustainability Collaborations</p>
-          </div>
-        </header>
-        <main class="main-content" tabindex="0">
-          <section class="section" data-section="summary" role="region" aria-labelledby="summary-heading">
-            <h2 id="summary-heading"><span class="material-icons">person</span> Professional Summary</h2>
-            <div class="card">
-              <p>Innovative Computer Science and Engineering student with expertise in machine learning, NLP, blockchain, and IoT. Leading IEEE Computer Society Bangladesh Chapter as Secretariat President in 2025, driving impactful initiatives and fostering innovation. Passionate about open-source contributions and peer-reviewed research, committed to developing scalable, secure, and sustainable AI-driven solutions for global impact.</p>
-            </div>
-          </section>
-          <section class="section" data-section="education" role="region" aria-labelledby="education-heading">
-            <h2 id="education-heading"><span class="material-icons">school</span> Education</h2>
-            <div class="card">
-              <h4>BRAC University | January 2022 - Present</h4>
-              <h3>B.Sc in Computer Science and Engineering</h3>
-              <p><strong>Relevant Coursework:</strong> Cloud Computing, Machine Learning & Deep Learning, Database Management Systems, Algorithms & Optimization</p>
-            </div>
-          </section>
-          <section class="section" data-section="experience" role="region" aria-labelledby="experience-heading">
-            <h2 id="experience-heading"><span class="material-icons">work</span> Professional Experience</h2>
-            <div class="card experience-item">
-              <h3>IEEE Computer Society Bangladesh Chapter Secretariat</h3>
-              <h4>President | January 2025 - Present</h4>
-              <ul class="list-disc pl-5 text-sm">
-                <li>Define and execute strategic vision aligned with IEEE CS BDC Ex-Com directives.</li>
-                <li>Orchestrate high-impact events to advance computer science education and innovation.</li>
-                <li>Foster partnerships with academia, industry, and professional networks.</li>
-                <li>Oversee resource allocation, funding, and sustainability strategies for enhanced branding.</li>
-                <li>Develop programs for member skill development, career growth, and recognition.</li>
-              </ul>
-            </div>
-            <div class="card experience-item">
-              <h3>BRACU Express</h3>
-              <h4>Journalist | April 2023 - January 2025</h4>
-              <ul class="list-disc pl-5 text-sm">
-                <li>Conducted in-depth research and interviews for compelling, deadline-driven content.</li>
-                <li>Enhanced engagement with multimedia, including photography and graphic design.</li>
-                <li>Built strategic partnerships with academics, industry experts, and communities.</li>
-                <li>Authored high-impact articles on trending university topics for BRACU Express.</li>
-                <li>Collaborated with editors to refine drafts, ensuring consistent, high-quality publications.</li>
-              </ul>
-            </div>
-            <div class="card experience-item">
-              <h3>Tachyon</h3>
-              <h4>Journalist | April 2023 - January 2025</h4>
-              <ul class="list-disc pl-5 text-sm">
-                <li>Analyzed scientific papers to create accessible educational content for Tachyon’s mission.</li>
-                <li>Developed expertise in science communication to boost STEM engagement.</li>
-                <li>Produced articles simplifying complex concepts in physics and environmental science.</li>
-                <li>Contributed remotely as Science Content Writer (ID: 202301003), advancing science literacy.</li>
-              </ul>
-            </div>
-            <div class="card experience-item">
-              <h3>IEEE PES Day</h3>
-              <h4>Ambassador | February 2024 - May 2024</h4>
-              <ul class="list-disc pl-5 text-sm">
-                <li>Selected as IEEE PES Day 2024 Ambassador (ID: PESDAY24-217) for "Empowering Electric Mobility Innovation."</li>
-                <li>Connected with 700+ global ambassadors to enhance leadership and collaboration.</li>
-                <li>Led webinar on "Future Trends in Electric Mobility" on April 23, 2024, with IEEE PES BRACU Chapter.</li>
-                <li>Promoted sustainable mobility via digital and community initiatives during IEEE PES Day (April 22–24, 2024).</li>
-              </ul>
-            </div>
-          </section>
-          <section class="section" data-section="skills" role="region" aria-labelledby="skills-heading">
-            <h2 id="skills-heading"><span class="material-icons">code</span> Technical Skills</h2>
-            <div class="grid-4">
-              <div class="card">
-                <h3 class="font-semibold text-base mb-2">Languages & Databases</h3>
-                <div class="vibrant-button-box">
-                  <a href="https://www.python.org" class="badge-button" aria-label="Visit Python Website">Python</a> <a href="https://www.java.com" class="badge-button" aria-label="Visit Java Website">Java</a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" class="badge-button" aria-label="Visit JavaScript Documentation">JavaScript</a> <a href="https://www.typescriptlang.org" class="badge-button" aria-label="Visit TypeScript Website">TypeScript</a> <a href="https://learn.microsoft.com/en-us/dotnet/csharp/" class="badge-button" aria-label="Visit C# Documentation">C#</a> <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" class="badge-button" aria-label="Visit HTML5 Documentation">HTML5</a> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" class="badge-button" aria-label="Visit CSS3 Documentation">CSS3</a> <a href="https://www.mysql.com" class="badge-button" aria-label="Visit MySQL Website">MySQL</a> <a href="https://www.postgresql.org" class="badge-button" aria-label="Visit PostgreSQL Website">PostgreSQL</a>
-                </div>
-              </div>
-              <div class="card">
-                <h3 class="font-semibold text-base mb-2">Frameworks & Libraries</h3>
-                <div class="vibrant-button-box frameworks-box">
-                  <a href="https://www.djangoproject.com" class="badge-button" aria-label="Visit Django Website">DjangoTOML</a> <a href="https://nodejs.org" class="badge-button" aria-label="Visit Node.js Website">Node.js</a> <a href="https://reactjs.org" class="badge-button" aria-label="Visit React Website">React</a> <a href="https://angular.io" class="badge-button" aria-label="Visit Angular Website">Angular</a> <a href="https://learn.microsoft.com/en-us/aspnet/core/" class="badge-button" aria-label="Visit ASP.NET Core Documentation">ASP.NET Core</a> <a href="https://flutter.dev" class="badge-button" aria-label="Visit Flutter Website">Flutter</a>
-                </div>
-                <div class="vibrant-button-box frameworks-box">
-                  <a href="https://developer.apple.com/swiftui/" class="badge-button" aria-label="Visit SwiftUI Documentation">SwiftUI</a> <a href="https://getbootstrap.com" class="badge-button" aria-label="Visit Bootstrap Website">Bootstrap</a> <a href="https://www.tensorflow.org" class="badge-button" aria-label="Visit TensorFlow Website">TensorFlow</a> <a href="https://pytorch.org" class="badge-button" aria-label="Visit PyTorch Website">PyTorch</a> <a href="https://opencv.org" class="badge-button" aria-label="Visit OpenCV Website">OpenCV</a> <a href="https://scikit-learn.org" class="badge-button" aria-label="Visit Scikit-Learn Website">Scikit-Learn</a>
-                </div>
-              </div>
-              <div class="card">
-                <h3 class="font-semibold text-base mb-2">Tools</h3>
-                <div class="vibrant-button-box">
-                  <a href="https://git-scm.com" class="badge-button" aria-label="Visit Git Website">Git</a> <a href="https://www.npmjs.com" class="badge-button" aria-label="Visit npm Website">npm</a> <a href="https://aws.amazon.com" class="badge-button" aria-label="Visit AWS Website">AWS</a> <a href="https://cloud.google.com" class="badge-button" aria-label="Visit Google Cloud Website">Google Cloud</a> <a href="https://www.heroku.com" class="badge-button" aria-label="Visit Heroku Website">Heroku</a> <a href="https://jupyter.org" class="badge-button" aria-label="Visit Jupyter Website">Jupyter</a>
-                </div>
-              </div>
-              <div class="card">
-                <h3 class="font-semibold text-base mb-2">Operating Systems</h3>
-                <div class="vibrant-button-box">
-                  <a href="https://ubuntu.com" class="badge-button" aria-label="Visit Ubuntu Website">Ubuntu</a> <a href="https://www.redhat.com" class="badge-button" aria-label="Visit RedHat Website">RedHat</a> <a href="https://www.apple.com/macos/" class="badge-button" aria-label="Visit macOS Website">macOS</a> <a href="https://www.freebsd.org" class="badge-button" aria-label="Visit FreeBSD Website">FreeBSD</a>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="section" data-section="certifications" role="region" aria-labelledby="certifications-heading">
-            <h2 id="certifications-heading"><span class="material-icons">verified</span> Certifications</h2>
-            <div class="vibrant-button-box certifications-box">
-              <a href="https://www.linkedin.com/learning/certificates/759119dcc46bdb4e63fb82dc49ed0ad4288a97d9031dd360fdb0686f65b0b398" class="badge-button" aria-label="View Twilio Certification">Twilio</a> <a href="https://www.linkedin.com/learning/certificates/fe897b3437597f8b933ad2501b5de695916b026e0c841509df9545ecd7d83b0b" class="badge-button" aria-label="View PMI Certification">PMI</a> <a href="https://www.linkedin.com/learning/certificates/e9fda53e1d56f77f2f78acaefd5fd9c9dfd3dce255ebd20be4d1cd3290629784" class="badge-button" aria-label="View GitHub Certification">GitHub</a> <a href="https://www.linkedin.com/learning/certificates/73e313f844327f6f6a86a0984c7c45ee6b9eee1a3e283db48bb370d908b57dec" class="badge-button" aria-label="View Microsoft Certification">Microsoft</a> <a href="https://www.linkedin.com/learning/certificates/243b5362e2fc213ce658d04d6c21856b9ab9628a3e81b375927773cd8618fd49" class="badge-button" aria-label="View LambdaTest Certification">LambdaTest</a> <a href="https://www.linkedin.com/learning/certificates/246ffec626263c5d4a8bea2c310bcc0cd836100f89d7e87c605082f43004b053" class="badge-button" aria-label="View LinkedIn Certification">LinkedIn</a>
-            </div>
-            <div class="vibrant-button-box certifications-box">
-              <a href="https://www.linkedin.com/learning/certificates/3719feeef2b7f6b1134ce2fb8887cad2d531b509b194f9ab82204ad2581b1cf3" class="badge-button" aria-label="View SHRM Certification">SHRM</a> <a href="https://www.linkedin.com/learning/certificates/125c8879c94519f1a707ee5691ac5a6e5b5ca44002c3f532900f608765a2d2fa" class="badge-button" aria-label="View HRCI Certification">HRCI</a> <a href="https://www.linkedin.com/learning/certificates/6f99e870b41beae081989894b502a48e94af71cf8806e54a994cad682d092c5f" class="badge-button" aria-label="View Blue Prism Certification">Blue Prism</a> <a href="https://drive.google.com/file/d/1TtB9GEhgxRlTVQ5Ha-w9MWNBN6oXl2Jb/view" class="badge-button" aria-label="View IEEE Certification">IEEE</a> <a href="https://drive.google.com/file/d/17SxPVFYELRmTnL-ottL5zVR29rsvGYBD/view" class="badge-button" aria-label="View ICPE Certification">ICPE</a> <a href="https://www.linkedin.com/learning/certificates/e72b6f3475683106b11f92cc054a1f8d514ed33b6b8e6974f5b22d6f28ac2bdd" class="badge-button" aria-label="View NASBA Certification">NASBA</a>
-            </div>
-          </section>
-          <section class="section" data-section="github" role="region" aria-labelledby="github-heading">
-            <h2 id="github-heading"><span class="material-icons">insights</span> GitHub Contributions</h2>
-            <div class="stats-container"><img src="https://github-readme-activity-graph.vercel.app/graph?username=la-b-ib&amp;theme=minimal&amp;area=true&amp;hide_border=true&amp;height=200&amp;bg_color=00000000&amp;color=15ce49&amp;line=15ce49&amp;point=15ce49" alt="Activity Graph" class="w-full" loading="lazy"></div>
-          </section>
-          <section class="section" data-section="research" role="region" aria-labelledby="research-heading">
-            <h2 id="research-heading"><span class="material-icons">science</span> Research Publications</h2>
-            <div class="card">
-              <h3 class="font-semibold text-base mb-2">Blockchain in ProjectReloaded</h3>
-              <p>IEEE ICEIC 2025, Osaka | Ethereum-powered solution with Flutter and OCI</p>
-              <div class="vibrant-button-box">
-                <a href="https://doi.org/10.1109/ICEIC64972.2025.10879668" class="badge-button" aria-label="View DOI">DOI</a> <a href="https://iceic.org/2025/" class="badge-button" aria-label="Visit IEEE ICEIC 2025">IEEE ICEIC 2025</a> <a href="https://www.ethereum.org" class="badge-button" aria-label="Visit Ethereum Website">Ethereum</a> <a href="https://flutter.dev" class="badge-button" aria-label="Visit Flutter Website">Flutter + OCI</a>
-              </div>
-            </div>
-            <div class="card">
-              <h3 class="font-semibold text-base mb-2">Crop Prediction Using Machine Learning and IoT</h3>
-              <p>IEEE ICRPSET 2024, Rajshahi | Precision Agriculture with IoT and ML</p>
-              <div class="vibrant-button-box">
-                <a href="https://doi.org/10.1109/ICRPSET64863.2024.10955896" class="badge-button" aria-label="View DOI">DOI</a> <a href="https://ieeexplore.ieee.org/xpl/conhome/10955776/proceeding" class="badge-button" aria-label="Visit IEEE ICRPSET 2024">IEEE ICRPSET 2024</a> <a href="https://aws.amazon.com/iot/" class="badge-button" aria-label="Visit AWS IoT Website">IoT + ML</a> <a href="https://en.wikipedia.org/wiki/Precision_agriculture" class="badge-button" aria-label="Learn about Precision Agriculture">Precision Agriculture</a> <a href="https://scikit-learn.org" class="badge-button" aria-label="Visit Scikit-Learn Website">RF + SVM</a> <a href="https://www.arduino.cc" class="badge-button" aria-label="Visit Arduino Website">Edge Deployed</a>
-              </div>
-            </div>
-          </section>
-          <section class="section" data-section="projects" role="region" aria-labelledby="projects-heading">
-            <h2 id="projects-heading"><span class="material-icons">code</span> Open Source Projects</h2>
-            <div class="vibrant-button-box">
-              <a href="https://github.com/la-b-ib/LeafByte" class="badge-button" aria-label="View LeafByte Project">LeafByte</a> <a href="https://github.com/la-b-ib/VitaSort" class="badge-button" aria-label="View VitaSort Project">VitaSort</a> <a href="https://github.com/la-b-ib/LitGrid" class="badge-button" aria-label="View LitGrid Project">LitGrid</a> <a href="https://github.com/la-b-ib/CostNest" class="badge-button" aria-label="View CostNest Project">CostNest</a> <a href="https://github.com/la-b-ib/DuskProbe" class="badge-button" aria-label="View DuskProbe Project">DuskProbe</a> <a href="https://github.com/la-b-ib/la-b-ib.github.io" class="badge-button" aria-label="View AURIX Project">AURIX</a> <a href="https://github.com/la-b-ib/MoodScope" class="badge-button" aria-label="View MoodScope Project">MoodScope</a>
-            </div>
-          </section>
-          <section class="section" data-section="collaborations" role="region" aria-labelledby="collaborations-heading">
-            <h2 id="collaborations-heading"><span class="material-icons">group</span> Collaborations</h2>
-            <div class="card text-left">
-              <p class="text-base font-semibold">Eager to build transformative global solutions?</p>
-              <p class="italic" style="color: var(--text); opacity: 0.8;">“Code with precision. Build with security. Scale with impact.”</p>
-              <div class="vibrant-button-box">
-                <a href="mailto:labib.45x@gmail.com" class="collab-button" aria-label="Send Email">Email</a> <a href="https://github.com/la-b-ib" class="collab-button" aria-label="Visit GitHub Profile">GitHub</a> <a href="https://www.linkedin.com/in/la-b-ib/" class="collab-button" aria-label="Visit LinkedIn Profile">LinkedIn</a>
-              </div>
-            </div>
-          </section>
-        </main>
-      </div>
-    </div>
-    <script>
-    // Resume-Specific JavaScript
-    (function() {
-    // Throttle Function
-    function resumeThrottle(func, limit) {
-        let lastFunc;
-        let lastRan;
-        return function() {
-            const context = this;
-            const args = arguments;
-            if (!lastRan) {
-                func.apply(context, args);
-                lastRan = Date.now();
-            } else {
-                clearTimeout(lastFunc);
-                lastFunc = setTimeout(function() {
-                    if ((Date.now() - lastRan) >= limit) {
-                        func.apply(context, args);
-                        lastRan = Date.now();
-                    }
-                }, limit - (Date.now() - lastRan));
-            }
-        };
-    }
+  </section> 
+  <!--End Links Section -->
+  <!-- Start Contact Section -->
 
-    // Toggle Search Input
-    function resumeToggleSearch() {
-        const searchInput = document.getElementById('resumeSearchInput');
-        searchInput.style.display = searchInput.style.display === 'none' ? 'block' : 'none';
-        if (searchInput.style.display === 'block') searchInput.focus();
-    }
-
-    // Toggle Side Menu
-    function resumeToggleMenu() {
-        const sideMenu = document.getElementById('resumeSideMenu');
-        sideMenu.classList.toggle('active');
-    }
-
-    // Font Size Change
-    function resumeChangeFontSize(size) {
-        document.querySelector('.resume-section').style.setProperty('--font-size', `${size}px`);
-        localStorage.setItem('resumeFontSize', size);
-        document.getElementById('resumeFontSizeValue').textContent = `${size}px`;
-    }
-
-    // Accent Color Change
-    function resumeChangeAccentColor(color) {
-        document.querySelector('.resume-section').style.setProperty('--accent', color);
-        localadina
-        localStorage.setItem('resumeAccentColor', color);
-        resumeUpdateGitHubStatsTheme();
-    }
-
-    // Headline Color Change
-    function resumeChangeHeadlineColor(color) {
-        document.querySelector('.resume-section').style.setProperty('--secondary', color);
-        localStorage.setItem('resumeHeadlineColor', color);
-        resumeUpdateGitHubStatsTheme();
-    }
-
-    // Icon Color Change
-    function resumeChangeIconColor(color) {
-        document.querySelector('.resume-section').style.setProperty('--icon-color', color);
-        localStorage.setItem('resumeIconColor', color);
-        resumeUpdateGitHubStatsTheme();
-    }
-
-    // Animation Speed Change
-    function resumeChangeAnimationSpeed(speed) {
-        document.querySelector('.resume-section').style.setProperty('--transition', `transform ${speed}s ease`);
-        localStorage.setItem('resumeAnimationSpeed', speed);
-    }
-
-    // Card Style Change
-    function resumeChangeCardStyle(style) {
-        const cards = document.querySelectorAll('.resume-section .card:not(.project-card), .resume-section .header');
-        const projectCards = document.querySelectorAll('.resume-section .project-card');
-        const settingsElements = document.querySelectorAll('.resume-section .control-bar, .resume-section .side-menu');
-        cards.forEach(card => {
-            card.style.background = style === 'glass' ? 'var(--card-bg)' : style === 'solid' ? '#000e1b' : 'transparent';
-            card.style.border = style === 'bordered' ? '2px solid #15ce49' : 'var(--glass-border)';
-            card.style.backdropFilter = style === 'glass' ? 'blur(16px)' : 'none';
-            card.style.webkitBackdropFilter = style === 'glass' ? 'blur(16px)' : 'none';
-        });
-        projectCards.forEach(card => {
-            card.style.background = 'var(--card-bg)';
-            card.style.border = 'none';
-            card.style.backdropFilter = 'none';
-            card.style.webkitBackdropFilter = 'none';
-        });
-        settingsElements.forEach(el => {
-            el.style.background = el.classList.contains('side-menu') ? 'linear-gradient(to bottom, rgba(30, 37, 41, 0.6), rgba(8, 33, 58, 0.7))' : 'var(--translucent)';
-            el.style.backdropFilter = 'blur(16px)';
-            el.style.webkitBackdropFilter = 'blur(16px)';
-            el.style.border = 'var(--glass-border)';
-        });
-        localStorage.setItem('resumeCardStyle', style);
-    }
-
-    // Shadow Intensity Change
-    function resumeChangeShadowIntensity(intensity) {
-        document.querySelector('.resume-section').style.setProperty('--shadow', `0 6px 20px rgba(0, 0, 0, ${intensity})`);
-        localStorage.setItem('resumeShadowIntensity', intensity);
-        document.getElementById('resumeShadowIntensityValue').textContent = intensity;
-    }
-
-    // Section Layout Change
-    function resumeChangeSectionLayout(layout) {
-        const mainContent = document.querySelector('.resume-section .main-content');
-        mainContent.style.display = layout === 'grid' ? 'grid' : 'flex    mainContent.style.flexDirection = layout === 'stacked' ? 'column' : 'row';
-    }
-
-    // Section Visibility Toggle
-    function resumeToggleSectionVisibility(section) {
-        const sections = document.querySelectorAll('.resume-section .section');
-        sections.forEach(s => {
-            s.style.display = section === 'all' || s.dataset.section === section ? 'block' : 'none';
-        });
-        localStorage.setItem('resumeSectionVisibility', section);
-    }
-
-    // Update GitHub Stats Theme
-    function resumeUpdateGitHubStatsTheme() {
-        const accentColor = getComputedStyle(document.querySelector('.resume-section')).getPropertyValue('--accent').trim();
-        const headlineColor = getComputedStyle(document.querySelector('.resume-section')).getPropertyValue('--secondary').trim();
-        const iconColor = getComputedStyle(document.querySelector('.resume-section')).getPropertyValue('--icon-color').trim();
-        const githubStatsImg = document.querySelector('.resume-section .stats-container img');
-        if (githubStatsImg) {
-            const url = new URL(githubStatsImg.src);
-            url.searchParams.set('color', iconColor.replace('#', ''));
-            url.searchParams.set('line', headlineColor.replace('#', ''));
-            url.searchParams.set('point', accentColor.replace('#', ''));
-            githubStatsImg.src = url.toString();
-        }
-    }
-
-    // Scroll to Top
-    function resumeScrollToTop() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    // Reset Settings
-    function resumeResetSettings() {
-        localStorage.clear();
-        resumeChangeFontSize(16);
-        resumeChangeAccentColor('#15ce49');
-        resumeChangeHeadlineColor('#15ce49');
-        resumeChangeIconColor('#15ce49');
-        resumeChangeAnimationSpeed(0.4);
-        resumeChangeCardStyle('glass');
-        resumeChangeShadowIntensity(0.15);
-        resumeChangeSectionLayout('grid');
-        resumeToggleSectionVisibility('all');
-        document.getElementById('resumeFontSizeSlider').value = 16;
-        document.getElementById('resumeAccentColorPicker').value = '#15ce49';
-        document.getElementById('resumeHeadlineColorPicker').value = '#15ce49';
-        document.getElementById('resumeIconColorPicker').value = '#15ce49';
-        document.getElementById('resumeAnimationSpeedSelect').value = '0.4';
-        document.getElementById('resumeCardStyleSelect').value = 'glass';
-        document.getElementById('resumeShadowIntensitySlider').value = 0.15;
-        document.getElementById('resumeSectionLayoutSelect').value = 'grid';
-        document.getElementById('resumeSectionVisibilitySelect').value = 'all';
-    }
-
-    // Download PDF (Placeholder)
-    function resumeDownloadPDF() {
-        alert('PDF download functionality is not fully implemented in this demo.');
-        window.print();
-    }
-
-    // Assign Button Colors in a Loop
-    function resumeAssignButtonColorsInLoop() {
-        const colors = ['btn-blue', 'btn-teal', 'btn-violet', 'btn-red', 'btn-purple', 'btn-indigo', 'btn-green', 'btn-orange'];
-        document.querySelectorAll('.resume-section .vibrant-button-box').forEach(box => {
-            const buttons = box.querySelectorAll('.badge-button, .collab-button, .close-btn');
-            let previousColor = null;
-            let colorIndex = 0;
-            buttons.forEach(button => {
-                if (button.classList.contains('close-btn')) return;
-                let currentColor = colors[colorIndex % colors.length];
-                while (currentColor === previousColor && buttons.length > 1) {
-                    colorIndex++;
-                    currentColor = colors[colorIndex % colors.length];
-                }
-                button.classList.add(currentColor);
-                previousColor = currentColor;
-                colorIndex++;
-            });
-        });
-    }
-
-    // Search Functionality
-    const searchInput = document.getElementById('resumeSearchInput');
-    searchInput.addEventListener('input', resumeThrottle(function(e) {
-        const searchTerm = e.target.value.toLowerCase();
-        const sections = document.querySelectorAll('.resume-section .section');
-        sections.forEach(section => {
-            const content = section.textContent.toLowerCase();
-            section.style.display = content.includes(searchTerm) || searchTerm === '' ? 'block' : 'none';
-        });
-    }, 300));
-
-    // Load Saved Settings
-    window.addEventListener('load', function() {
-        const savedFontSize = localStorage.getItem('resumeFontSize') || 16;
-        const savedAccentColor = localStorage.getItem('resumeAccentColor') || '#15ce49';
-        const savedHeadlineColor = localStorage.getItem('resumeHeadlineColor') || '#15ce49';
-        const savedIconColor = localStorage.getItem('resumeIconColor') || '#15ce49';
-        const savedAnimationSpeed = localStorage.getItem('resumeAnimationSpeed') || 0.4;
-        const savedCardStyle = localStorage.getItem('resumeCardStyle') || 'glass';
-        const savedShadowIntensity = localStorage.getItem('resumeShadowIntensity') || 0.15;
-        const savedSectionLayout = localStorage.getItem('resumeSectionLayout') || 'grid';
-        const savedSectionVisibility = localStorage.getItem('resumeSectionVisibility') || 'all';
-        resumeChangeFontSize(savedFontSize);
-        resumeChangeAccentColor(savedAccentColor);
-        resumeChangeHeadlineColor(savedHeadlineColor);
-        resumeChangeIconColor(savedIconColor);
-        resumeChangeAnimationSpeed(savedAnimationSpeed);
-        resumeChangeCardStyle(savedCardStyle);
-        resumeChangeShadowIntensity(savedShadowIntensity);
-        resumeChangeSectionLayout(savedSectionLayout);
-        resumeToggleSectionVisibility(savedSectionVisibility);
-        document.getElementById('resumeFontSizeSlider').value = savedFontSize;
-        document.getElementById('resumeAccentColorPicker').value = savedAccentColor;
-        document.getElementById('resumeHeadlineColorPicker').value = savedHeadlineColor;
-        document.getElementById('resumeIconColorPicker').value = savedIconColor;
-        document.getElementById('resumeAnimationSpeedSelect').value = savedAnimationSpeed;
-        document.getElementById('resumeCardStyleSelect').value = savedCardStyle;
-        document.getElementById('resumeShadowIntensitySlider').value = savedShadowIntensity;
-        document.getElementById('resumeSectionLayoutSelect').value = savedSectionLayout;
-        document.getElementById('resumeSectionVisibilitySelect').value = savedSectionVisibility;
-        resumeAssignButtonColorsInLoop();
-    });
-
-    // Expose functions to global scope (optional, for onclick attributes)
-    window.resumeToggleSearch = resumeToggleSearch;
-    window.resumeToggleMenu = resumeToggleMenu;
-    window.resumeChangeFontSize = resumeChangeFontSize;
-    window.resumeChangeAccentColor = resumeChangeAccentColor;
-    window.resumeChangeHeadlineColor = resumeChangeHeadlineColor;
-    window.resumeChangeIconColor = resumeChangeIconColor;
-    window.resumeChangeAnimationSpeed = resumeChangeAnimationSpeed;
-    window.resumeChangeCardStyle = resumeChangeCardStyle;
-    window.resumeChangeShadowIntensity = resumeChangeShadowIntensity;
-    window.resumeChangeSectionLayout = resumeChangeSectionLayout;
-    window.resumeToggleSectionVisibility = resumeToggleSectionVisibility;
-    window.resumeScrollToTop = resumeScrollToTop;
-    window.resumeResetSettings = resumeResetSettings;
-    window.resumeDownloadPDF = resumeDownloadPDF;
-    })();
-    </script>
-  </section>
   <section id="contacts" class="contact">
     <div class="container">
+
       <div class="section-title">
         <h2><b>Contact</b></h2>
       </div>
       <p><b>I’m hyped to crush it on AI, cybersecurity, sustainability, and career-shaping projects! Slide into my DMs, and let’s spark game-changing, community-driven solutions that light up the world!</b></p>
+
       <div class="row mt-2">
+
         <div class="col-md-6 d-flex align-items-stretch">
           <div class="info-box">
+            <i class="bx bx-map"></i>
             <h3><b>Address</b></h3>
             <p><b>To obtain address, email me first</b></p>
           </div>
         </div>
+
         <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
           <div class="info-box">
+            <i class="bx bx-share-alt"></i>
             <h3><b>Social Profiles</b></h3>
             <div class="social-links">
-              <a href="https://www.linkedin.com/in/la-b-ib/" target="_blank" class="linkedin"></a> <a href="https://github.com/la-b-ib" target="_blank" class="github"></a> <a href="mailto:labib.45x@gmail.com?subject=Inquiry%20from%20Website&amp;body=Hello%20Labib,%0D%0A%0D%0AI%20have%20a%20question!" target="_blank" class="google"></a>
+              <a href="https://www.linkedin.com/in/la-b-ib/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              <a href="https://github.com/la-b-ib" target="_blank" class="github"><i class="bx bxl-github"></i></a>
+              <a href="mailto:labib.45x@gmail.com?subject=Inquiry%20from%20Website&body=Hello%20Labib,%0D%0A%0D%0AI%20have%20a%20question!" target="_blank" class="google"><i class="bx bxl-google"></i></a>
             </div>
           </div>
         </div>
         <div class="col-md-6 mt-4 d-flex align-items-stretch">
           <div class="info-box">
+            <i class="bx bx-envelope"></i>
             <h3><b>Email</b></h3>
-            <p><a href="mailto:labib.45x@gmail.com?subject=Inquiry%20from%20Website&amp;body=Hello%20Labib,%0D%0A%0D%0AI%20have%20a%20question!" style="color: white;"><b>labib.45x@gmail.com</b></a></p>
-            <p><a href="mailto:labib-x@protonmail.com?subject=Inquiry%20from%20Website&amp;body=Hello%20Labib,%0D%0A%0D%0AI%20have%20a%20question!" style="color: white;"><b>labib-x@protonmail.com</b></a></p>
+            <p><a href="mailto:labib.45x@gmail.com?subject=Inquiry%20from%20Website&body=Hello%20Labib,%0D%0A%0D%0AI%20have%20a%20question!" style="color: white;"><b>labib.45x@gmail.com</b></a></p>
+            <p><a href="mailto:labib-x@protonmail.com?subject=Inquiry%20from%20Website&body=Hello%20Labib,%0D%0A%0D%0AI%20have%20a%20question!" style="color: white;"><b>labib-x@protonmail.com</b></a></p>
           </div>
         </div>
         <div class="col-md-6 mt-4 d-flex align-items-stretch">
           <div class="info-box">
+            <i class="bx bx-phone-call"></i>
             <h3><b>Contact</b></h3>
             <p><b>+1 480-400-800</b></p>
           </div>
         </div>
       </div>
+      <!-- <div id="sfczmlqxr5caww28rswrt8849ghbekgnh3j" ></div><script type="text/javascript" src="https://counter1.stat.ovh/private/counter.js?c=zmlqxr5caww28rswrt8849ghbekgnh3j&down=async" async></script><noscript><a href="https://www.freecounterstat.com" title="free web counter"><img src="https://counter1.stat.ovh/private/freecounterstat.php?c=zmlqxr5caww28rswrt8849ghbekgnh3j" border="0" title="free web counter" alt="free web counter" style="visibility: none;"></a></noscript> -->
     </div>
   </section>
-  <script src="assets/vendor/jquery/jquery.min.js"></script> 
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
-  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script> 
-  <script src="assets/vendor/php-email-form/validate.js"></script> 
-  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script> 
-  <script src="assets/vendor/counterup/counterup.min.js"></script> 
-  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script> 
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script> 
-  <script src="assets/vendor/venobox/venobox.min.js"></script> 
-  <script src="assets/vendor/typed.js/typed.min.js"></script> 
+  <!-- End Contact Section -->
+  <!-- Vendor JS Files -->
+
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/counterup/counterup.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script type="text/javascript">
-
-
-
-
     var typed = new Typed('.typing',{
       strings: ["<b>Coder</b>", "<b>Developer</b>", "<b>AI Enthusiast</b>", "<b>Researcher</b>" ],
       loop: true,
       typeSpeed: 65,
       backSpeed: 65
     });
-  </script> 
+  </script>
+
+  <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
 </body>
 </html>
