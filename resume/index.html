@@ -84,7 +84,7 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 30px 20px;
+            padding: 30px 0;
             display: flex;
             flex-direction: column;
             gap: 30px;
@@ -122,15 +122,11 @@
             transition: all 0.3s ease;
         }
         .main-content::-webkit-scrollbar {
-            height: 8px;
+            display: none;
         }
-        .main-content::-webkit-scrollbar-track {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 4px;
-        }
-        .main-content::-webkit-scrollbar-thumb {
-            background: var(--secondary);
-            border-radius: 4px;
+        .main-content {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
         }
         .section {
             border-radius: 16px;
@@ -388,7 +384,7 @@
                 font-size: 0.875rem;
             }
             .container {
-                padding: 15px;
+                padding: 15px 0;
                 gap: 20px;
             }
             .header {
@@ -442,7 +438,7 @@
                 font-size: 0.875rem;
                 font-weight: 700;
             }
-            .side-menu .actions-box {
+            .side-menu .actions-boxlis {
                 grid-template-columns: repeat(4, 44px);
                 gap: 10px;
                 max-width: 216px;
@@ -477,7 +473,7 @@
                 font-size: 0.75rem;
             }
             .container {
-                padding: 10px;
+                padding: 10px 0;
                 gap: 15px;
             }
             .header {
@@ -563,7 +559,7 @@
             }
             .container {
                 max-width: 190mm;
-                padding: 5mm;
+                padding: 5mm 0;
                 gap: 5px;
             }
             .header {
@@ -884,7 +880,7 @@
                         <a href="https://www.linkedin.com/learning/certificates/6f99e870b41beae081989894b502a48e94af71cf8806e54a994cad682d092c5f"><img src="https://img.shields.io/badge/Blue_Prism-00A1E0?style=for-the-badge&logo=blue-prism&logoColor=white" alt="Blue Prism"></a>
                         <a href="https://drive.google.com/file/d/1TtB9GEhgxRlTVQ5Ha-w9MWNBN6oXl2Jb/view"><img src="https://img.shields.io/badge/IEEE-00629B?style=for-the-badge&logo=ieee&logoColor=white" alt="IEEE"></a>
                         <a href="https://drive.google.com/file/d/17SxPVFYELRmTnL-ottL5zVR29rsvGYBD/view"><img src="https://img.shields.io/badge/ICPE-34A853?style=for-the-badge&logo=google-drive&logoColor=white" alt="ICPE"></a>
-                        <a href="https://www.linkedin.com/learning/certificates/e72b6f3475683106b11f92cc054a1f8d514ed33b6b8e6974f5b22d6f28ac2bdd"><img src="https://img.shields.io/badge/NASBA-1E3A8A?style=for-the-badge&logo=nasba&logoColor=white" alt="NASBA"></a>
+                        <a href="https://www.linkedin.com/learning/certificates/e72b6f3475683106b11f92cc0541f8d514ed33b6b8e6974f5b22d6f28ac2bdd"><img src="https://img.shields.io/badge/NASBA-1E3A8A?style=for-the-badge&logo=nasba&logoColor=white" alt="NASBA"></a>
                     </div>
                 </div>
             </section>
@@ -1123,7 +1119,7 @@
                 const url = new URL(langsImg.src);
                 url.searchParams.set('title_color', headlineColor.replace('#', ''));
                 url.searchParams.set('text_color', 'e0e0e0');
-                url.searchParams.set('icon_color', iconColor.replace('#', '')); // Added missing icon_color
+                url.searchParams.set('icon_color', iconColor.replace('#', ''));
                 langsImg.src = url.toString();
             }
         }
