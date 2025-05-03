@@ -89,7 +89,7 @@
         .header {
             background: transparent;
             border-radius: 16px;
-            padding: 30px;
+            padding: 0;
             display: flex;
             align-items: center;
             gap: 20px;
@@ -213,10 +213,12 @@
         }
         .side-menu {
             position: fixed;
-            top: 0;
+            top: 50%;
+            transform: translateY(-50%);
             right: -300px;
             width: 300px;
-            height: 100%;
+            height: auto;
+            max-height: 80vh;
             background: #08213A;
             padding: 16px 12px;
             z-index: 2000;
@@ -396,7 +398,7 @@
             .header {
                 flex-direction: column;
                 text-align: center;
-                padding: 20px;
+                padding: 0;
                 gap: 15px;
             }
             .header .profile-pic {
@@ -428,6 +430,9 @@
                 width: 260px;
                 right: -260px;
                 padding: 12px 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                max-height: 80vh;
             }
             .side-menu h3 {
                 font-size: 1rem;
@@ -492,7 +497,7 @@
                 gap: 15px;
             }
             .header {
-                padding: 15px;
+                padding: 0;
             }
             .header .profile-pic {
                 max-width: 120px;
@@ -523,6 +528,9 @@
                 width: 220px;
                 right: -220px;
                 padding: 10px 8px;
+                top: 50%;
+                transform: translateY(-50%);
+                max-height: 80vh;
             }
             .side-menu h3 {
                 font-size: 0.875rem;
@@ -626,7 +634,7 @@
     <div class="container">
         <!-- Header -->
         <header class="header">
-            <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/labib.png" alt="Profile Picture of Labib Bin Shahed" class="profile-pic" loading="lazy">
+            <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/labib.png" alt="Profile Picture of Labib Bin Shahed" class="profile-pic" loading="lazy">
             <div class="profile-info">
                 <h1>Labib Bin Shahed</h1>
                 <p>CS & Engineering Student @ BRACU | ML, NLP, Blockchain Researcher | IEEE CSBDC Secretariat President 2025 | Open Source Contributor | Seeking Global AI & Sustainability Collaborations</p>
@@ -644,7 +652,7 @@
                         <a href="https://github.com/la-b-ib"><img src="https://komarev.com/ghpvc/?username=la-b-ib&label=Views&style=for-the-badge&color=2088FF" alt="Profile Views" height="25" width="auto"></a>
                     </div>
                     <div class="graph-container">
-                        <img src="https://github-readme-activity-graph.vercel.app/graph?username=la-b-ib&theme=transparent&area=true&hide Angled=true&hide_border=true&height=300&bg_color=000e1b&color=15ce49&line=4d8af0&point=ff7139&cache_seconds=3600" width="100%" alt="Activity Graph">
+                        <img src="https://github-readme-activity-graph.vercel.app/graph?username=la-b-ib&theme=transparent&area=true&hide_angle=true&hide_border=true&height=300&bg_color=000e1b&color=15ce49&line=4d8af0&point=ff7139&cache_seconds=3600" width="100%" alt="Activity Graph">
                     </div>
                 </div>
             </section>
@@ -660,7 +668,7 @@
             </section>
 
             <!-- Certifications -->
-            <section class="section" data-section="certifications" role="region" aria-labelledby="certifications-heading">
+            <section class="section" data-section="certifications" role rough="region" aria-labelledby="certifications-heading">
                 <h2 id="certifications-heading"><span class="material-icons">verified</span> Certifications</h2>
                 <div class="card">
                     <div class="badge-list">
@@ -747,7 +755,7 @@
                         <a href="https://git-scm.com/"><img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white&labelStyle=bold" alt="Git" height="25" width="auto"></a>
                         <a href="https://www.npmjs.com/"><img src="https://img.shields.io/badge/npm-CB3837?style:for-the-badge&logo=npm&logoColor=white&labelStyle=bold" alt="npm" height="25" width="auto"></a>
                         <a href="https://aws.amazon.com/"><img src="https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white&labelStyle=bold" alt="AWS" height="25" width="auto"></a>
-                        <a href="https://cloud.google.com/"><img src="https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white&labelStyle=bold" alt="Google Cloud" height="25" width="auto"></a>
+                        <a href="https://cloud.google.com/"><img src="https://img.shields.io/badge/Google_Cloud-4285F4?style:for-the-badge&logo=google-cloud&logoColor=white&labelStyle=bold" alt="Google Cloud" height="25" width="auto"></a>
                         <a href="https://www.heroku.com/"><img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white&labelStyle=bold" alt="Heroku" height="25" width="auto"></a>
                         <a href="https://jupyter.org/"><img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white&labelStyle=bold" alt="Jupyter" height="25" width="auto"></a>
                     </div>
@@ -773,8 +781,8 @@
                         <a href="https://github.com/la-b-ib/LitGrid"><img src="https://img.shields.io/badge/LitGrid-FFD43B?style:for-the-badge&logo=library&logoColor=black&labelStyle=bold" alt="LitGrid" height="25" width="auto"></a>
                         <a href="https://github.com/la-b-ib/CostNest"><img src="https://img.shields.io/badge/CostNest-7950F2?style:for-the-badge&logo=coin&logoColor=white&labelStyle=bold" alt="CostNest" height="25" width="auto"></a>
                         <a href="https://github.com/la-b-ib/DuskProbe"><img src="https://img.shields.io/badge/DuskProbe-212529?style=for-the-badge&logo=shield-check&logoColor=white&labelStyle=bold" alt="DuskProbe" height="25" width="auto"></a>
-                        <a href="https://github.com/la-b-ib/la-b-ib.github.io"><img src="https://img.shields.io/badge/AURIX-0D6EFD?style:for-the-badge&logo=internet-explorer&logoColor=white&labelStyle=bold" alt="AURIX" height="25" width="auto"></a>
-                        <a href="https://github.com/la-b-ib/MoodScope"><img src="https://img.shields.io/badge/MoodScope-FF0000?style:for-the-badge&logo=octopus&logoColor=white&labelStyle=bold" alt="MoodScope" height="25" width="auto"></a>
+                        <a href="https://github.com/la-b-ib/la-b-ib.github.io"><img src="https://img.shields.io/badge/AURIX-0D6EFD?style=for-the-badge&logo=internet-explorer&logoColor=white&labelStyle=bold" alt="AURIX" height="25" width="auto"></a>
+                        <a href="https://github.com/la-b-ib/MoodScope"><img src="https://img.shields.io/badge/MoodScope-FF0000?style=for-the-badge&logo=octopus&logoColor=white&labelStyle=bold" alt="MoodScope" height="25" width="auto"></a>
                     </div>
                 </div>
             </section>
