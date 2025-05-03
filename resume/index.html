@@ -28,15 +28,10 @@
             --section-bg: rgba(8, 33, 58, 0.55);
             --text: #e0e0e0;
             --border: rgba(255, 255, 255, 0.2);
-            --shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-            --translucent: rgba(30, 37, 41, 0.6);
-            --glass-border: 1px solid rgba(255, 255, 255, 0.3);
             --font-size: 19.5px;
-            --transition: transform 0.4s ease;
         }
         * {
             box-sizing: border-box;
-            scroll-behavior: smooth;
         }
         body {
             font-family: 'Source Sans Pro', sans-serif;
@@ -47,7 +42,7 @@
             line-height: 1.7;
             font-size: var(--font-size);
             font-weight: 700;
-            overflow-x: hidden;
+            overflow: hidden;
             min-width: 320px;
         }
         h1 {
@@ -88,13 +83,13 @@
             display: flex;
             flex-direction: column;
             gap: 30px;
+            max-height: 100vh;
+            overflow: hidden;
         }
         .header {
             background: transparent;
             border-radius: 16px;
             padding: 30px;
-            box-shadow: 0 0 12px rgba(21, 206, 73, 0.3);
-            border: 2px solid var(--secondary);
             display: flex;
             align-items: center;
             gap: 20px;
@@ -107,8 +102,6 @@
             aspect-ratio: 1/1;
             border-radius: 12px;
             object-fit: cover;
-            border: 2px solid var(--secondary);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
         .header .profile-info {
             flex: 1;
@@ -117,29 +110,25 @@
             display: flex;
             flex-direction: column;
             gap: 30px;
+            overflow-y: auto;
             overflow-x: hidden;
             padding-bottom: 20px;
-            transition: all 0.3s ease;
+            max-height: 100vh;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
         }
         .main-content::-webkit-scrollbar {
             display: none;
-        }
-        .main-content {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
         }
         .section {
             border-radius: 16px;
             background: var(--section-bg);
             padding: 25px;
             margin-bottom: 20px;
-            box-shadow: var(--shadow);
             border: var(--glass-border);
-            backdrop-filter: blur(16px);
             position: relative;
             min-width: 300px;
             border-top: 3px solid var(--secondary);
-            transition: transform 0.3s ease, opacity 0.3s ease;
         }
         .section h2 {
             display: flex;
@@ -151,40 +140,52 @@
             color: var(--icon-color);
             font-size: 24px;
         }
-        .badge-container {
+        .graph-container {
             display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            padding: 10px;
-            border-radius: 10px;
-            background: rgba(8, 33, 58, 0.55);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            justify-content: center;
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(8, 33, 58, 0.55), rgba(8, 33, 58, 0.75));
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             overflow: hidden;
         }
-        .badge-container img {
-            height: 32px;
+        .graph-container img {
+            height: 300px;
+            width: 100%;
             border-radius: 4px;
+        }
+        .badge-list {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: flex-start;
+        }
+        .badge-list img {
+            height: 25px !important;
+            width: auto;
+            vertical-align: middle;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
             transition: transform 0.2s ease;
         }
-        .badge-container img:hover {
+        .badge-list img:hover {
             transform: scale(1.05);
         }
         .settings-panel {
             position: fixed;
-            top: 12px;
-            right: 12px;
+            top: 0;
+            right: 0;
             z-index: 1000;
         }
         .control-bar {
             display: flex;
             align-items: center;
             gap: 8px;
-            background: var(--translucent);
-            border-radius: 10px;
-            padding: 6px 8px;
-            box-shadow: var(--shadow);
-            border: var(--glass-border);
-            backdrop-filter: blur(16px);
+            background: rgba(30, 37, 41, 0.95);
+            border-radius: 12px;
+            padding: 8px 10px;
         }
         .control-bar input {
             background: transparent;
@@ -194,6 +195,8 @@
             width: 160px;
             outline: none;
             font-weight: 700;
+            padding: 4px 8px;
+            border-radius: 6px;
         }
         .control-bar input::placeholder {
             color: var(--text);
@@ -204,22 +207,23 @@
             color: var(--icon-color);
             cursor: pointer;
             font-size: 20px;
+            border: none;
+            border-radius: 6px;
+            padding: 2px;
         }
         .side-menu {
             position: fixed;
             top: 0;
-            right: -320px;
-            width: 320px;
+            right: -300px;
+            width: 300px;
             height: 100%;
-            background: linear-gradient(to bottom, rgba(30, 37, 41, 0.8), rgba(8, 33, 58, 0.9));
-            border-left: var(--glass-border);
-            box-shadow: var(--shadow);
-            backdrop-filter: blur(16px);
-            padding: 24px 16px;
-            transition: right 0.3s ease;
+            background: #08213A;
+            padding: 16px 12px;
             z-index: 2000;
             overflow-y: auto;
-            color: var(--text);
+            color: var(--accent);
+            border-radius: 16px 0 0 16px;
+            border: none;
         }
         .side-menu.active {
             right: 0;
@@ -227,92 +231,89 @@
         .side-menu h3 {
             font-size: 1.125rem;
             font-weight: 700;
-            color: var(--text);
-            margin-bottom: 16px;
+            color: var(--accent);
+            margin-bottom: 12px;
             margin-left: 8px;
+            letter-spacing: 0.5px;
         }
         .side-menu h4 {
             font-size: 0.875rem;
             font-weight: 700;
-            color: var(--text);
-            margin-bottom: 8px;
+            color: var(--accent);
+            margin-bottom: 6px;
             margin-left: 8px;
+            opacity: 0.9;
         }
         .side-menu .menu-item {
-            margin-bottom: 16px;
-            padding: 12px;
-            border-radius: 10px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-        .side-menu .menu-item:hover {
-            background: rgba(8, 33, 58, 0.8);
-            transform: translateX(4px);
+            margin-bottom: 12px;
+            padding: 8px;
+            border-radius: 8px;
         }
         .side-menu .menu-item label {
-            font-size: 0.9375rem;
+            font-size: 0.875rem;
             font-weight: 700;
-            color: var(--text);
+            color: var(--accent);
             margin-bottom: 4px;
             display: flex;
             align-items: center;
             gap: 4px;
         }
         .side-menu .menu-item label .material-icons {
-            color: var(--icon-color);
-            font-size: 14px;
+            color: var(--accent);
+            font-size: 28px;
         }
-        .side-menu select, .side-menu input {
+        .side-menu select {
             width: 100%;
-            padding: 8px;
+            padding: 6px;
             border-radius: 6px;
-            background: var(--card-bg);
-            border: var(--glass-border);
-            color: var(--text);
-            font-size: 0.9375rem;
+            background: rgba(40, 40, 48, 0.8);
+            border: 1px solid var(--secondary);
+            color: var(--accent);
+            font-size: 0.875rem;
             font-weight: 700;
         }
-        .side-menu select:focus, .side-menu input:focus {
-            outline: 3px solid var(--primary);
+        .side-menu select:focus {
+            outline: none;
+        }
+        #textSizeSelect {
+            display: none;
+        }
+        #textSizeSelect.text-size-select-visible {
+            display: block;
         }
         .side-menu .menu-item span {
-            font-size: 0.9375rem;
+            font-size: 0.875rem;
             font-weight: 700;
-            color: var(--text);
+            color: var(--accent);
         }
         .side-menu .menu-group {
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 16px;
-            margin-bottom: 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 12px;
+            margin-bottom: 12px;
         }
         .side-menu .actions-box {
             display: grid;
-            grid-template-columns: repeat(4, 48px);
-            gap: 12px;
+            grid-template-columns: repeat(5, 40px);
+            gap: 8px;
             justify-content: start;
             align-content: center;
-            padding: 10px;
+            padding: 8px;
             overflow: hidden;
             max-width: 240px;
         }
         .action-btn {
-            width: 48px;
-            height: 48px;
-            min-width: 48px;
-            min-height: 48px;
+            width: 40px;
+            height: 40px;
+            min-width: 40px;
+            min-height: 40px;
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 8px;
             color: #fff;
             cursor: pointer;
-            transition: transform 0.2s ease, filter 0.2s ease;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
             text-decoration: none;
             box-sizing: border-box;
-        }
-        .action-btn:hover {
-            transform: scale(1.05);
-            filter: brightness(1.1);
         }
         .download-btn {
             background: #34A853;
@@ -320,53 +321,51 @@
         .download-btn::before {
             content: 'download';
             font-family: 'Material Icons';
-            font-size: 24px;
+            font-size: 20px;
         }
-        .reset-btn {
-            background: #EA4335;
+        .text-size-btn {
+            background: #4285F4;
         }
-        .reset-btn::before {
-            content: 'refresh';
+        .text-size-btn::before {
+            content: 'edit_note';
             font-family: 'Material Icons';
-            font-size: 24px;
+            font-size: 20px;
         }
         .scroll-btn {
-            background: #FBBC05;
+            background: #7950F2;
         }
         .scroll-btn::before {
-            content: 'arrow_upward';
+            content: 'arrow_circle_up';
             font-family: 'Material Icons';
-            font-size: 24px;
+            font-size: 20px;
+        }
+        .reset-btn {
+            background: #FF6200;
+        }
+        .reset-btn::before {
+            content: 'sync';
+            font-family: 'Material Icons';
+            font-size: 20px;
         }
         .close-btn {
-            background: #4285F4;
+            background: #8B0000;
         }
         .close-btn::before {
             content: 'close';
             font-family: 'Material Icons';
-            font-size: 24px;
+            font-size: 20px;
         }
         .card {
             background: transparent;
             border-radius: 12px;
             padding: 20px;
             margin-bottom: 20px;
-            box-shadow: var(--shadow);
             border: 2px solid var(--secondary);
-        }
-        .card:hover {
-            box-shadow: 0 0 12px rgba(21, 206, 73, 0.3);
         }
         .experience-item {
             position: relative;
             padding-left: 20px;
             margin-bottom: 12px;
-        }
-        .badge-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 10px;
         }
         @media (max-width: 768px) {
             body {
@@ -411,8 +410,11 @@
                 font-size: 20px;
             }
             .settings-panel {
-                right: 8px;
-                top: 8px;
+                right: 0;
+                top: 0;
+            }
+            .control-bar {
+                padding: 6px 8px;
             }
             .control-bar input {
                 width: 120px;
@@ -423,9 +425,9 @@
                 font-size: 18px;
             }
             .side-menu {
-                width: 280px;
-                right: -280px;
-                padding: 20px 12px;
+                width: 260px;
+                right: -260px;
+                padding: 12px 10px;
             }
             .side-menu h3 {
                 font-size: 1rem;
@@ -434,30 +436,36 @@
                 font-size: 0.75rem;
             }
             .side-menu .menu-item label {
-                font-size: 0.875rem;
+                font-size: 0.75rem;
                 font-weight: 700;
             }
-            .side-menu select, .side-menu input {
-                font-size: 0.875rem;
+            .side-menu .menu-item label .material-icons {
+                font-size: 24px;
+            }
+            .side-menu select {
+                font-size: 0.75rem;
                 font-weight: 700;
             }
             .side-menu .menu-item span {
-                font-size: 0.875rem;
+                font-size: 0.75rem;
                 font-weight: 700;
             }
             .side-menu .actions-box {
-                grid-template-columns: repeat(4, 44px);
-                gap: 10px;
-                max-width: 216px;
+                grid-template-columns: repeat(5, 36px);
+                gap: 6px;
+                max-width: 210px;
             }
             .action-btn {
-                width: 44px;
-                height: 44px;
-                min-width: 44px;
-                min-height: 44px;
+                width: 36px;
+                height: 36px;
+                min-width: 36px;
+                min-height: 36px;
             }
             .action-btn::before {
-                font-size: 20px;
+                font-size: 18px;
+            }
+            .graph-container img {
+                height: 250px;
             }
         }
         @media (max-width: 480px) {
@@ -500,6 +508,9 @@
                 padding: 12px;
                 margin-bottom: 12px;
             }
+            .control-bar {
+                padding: 4px 6px;
+            }
             .control-bar input {
                 width: 100px;
                 font-size: 0.625rem;
@@ -509,141 +520,47 @@
                 font-size: 16px;
             }
             .side-menu {
-                width: 240px;
-                right: -240px;
-                padding: 16px 12px;
+                width: 220px;
+                right: -220px;
+                padding: 10px 8px;
             }
             .side-menu h3 {
-                font-size: 0.9375rem;
+                font-size: 0.875rem;
             }
             .side-menu h4 {
                 font-size: 0.6875rem;
             }
             .side-menu .menu-item label {
-                font-size: 0.75rem;
+                font-size: 0.6875rem;
                 font-weight: 700;
             }
-            .side-menu select, .side-menu input {
-                font-size: 0.75rem;
+            .side-menu .menu-item label .material-icons {
+                font-size: 22px;
+            }
+            .side-menu select {
+                font-size: 0.6875rem;
                 font-weight: 700;
             }
             .side-menu .menu-item span {
-                font-size: 0.75rem;
+                font-size: 0.6875rem;
                 font-weight: 700;
             }
             .side-menu .actions-box {
-                grid-template-columns: repeat(4, 40px);
-                gap: 8px;
-                max-width: 192px;
-                flex-wrap: wrap;
+                grid-template-columns: repeat(5, 32px);
+                gap: 6px;
+                max-width: 190px;
             }
             .action-btn {
-                width: 40px;
-                height: 40px;
-                min-width: 40px;
-                min-height: 40px;
+                width: 32px;
+                height: 32px;
+                min-width: 32px;
+                min-height: 32px;
             }
             .action-btn::before {
-                font-size: 18px;
+                font-size: 16px;
             }
-        }
-        @media print {
-            @page {
-                size: A4;
-                margin: 10mm;
-            }
-            body {
-                background: #fff;
-                color: #000;
-                min-width: auto;
-                font-size: 10px;
-                line-height: 1.4;
-                padding: 0;
-                margin: 0;
-                width: 210mm;
-                height: 297mm;
-                font-weight: 700;
-            }
-            .container {
-                max-width: 190mm;
-                padding: 5mm 0;
-                gap: 5px;
-            }
-            .header {
-                flex-direction: column;
-                padding: 5mm;
-                margin-bottom: 5mm;
-                box-shadow: none;
-                border: none;
-                backdrop-filter: none;
-            }
-            .header .profile-pic {
-                max-width: 30mm;
-                border: 1px solid #000;
-            }
-            .header h1 {
-                font-size: 1.6rem;
-                color: #000;
-            }
-            .header p {
-                font-size: 0.8rem;
-            }
-            .main-content {
-                gap: 5px;
-                overflow-x: hidden;
-                display: flex;
-                flex-direction: column;
-            }
-            .section {
-                padding: 3mm;
-                margin-bottom: 3mm;
-                box-shadow: none;
-                border: none;
-                backdrop-filter: none;
-                background: none;
-            }
-            .section h2 {
-                font-size: 0.9rem;
-                border-bottom: 1px solid #000;
-                margin-bottom: 2mm;
-            }
-            .section h2 .material-icons {
-                display: none;
-            }
-            .card {
-                padding: 2mm;
-                margin-bottom: 2mm;
-                box-shadow: none;
-                border: none;
-                backdrop-filter: none;
-                background: none;
-            }
-            .experience-item {
-                padding-left: 0;
-            }
-            .experience-item h3 {
-                font-size: 0.85rem;
-            }
-            .experience-item h4 {
-                font-size: 0.75rem;
-            }
-            .experience-item p, .experience-item li {
-                font-size: 0.7rem;
-            }
-            .badge-container {
-                border: 1px solid #000;
-                background: none;
-                box-shadow: none;
-                overflow-x: hidden;
-            }
-            .badge-container img {
-                height: 10px;
-            }
-            .badge-container img:not(:first-child) {
-                display: none;
-            }
-            .settings-panel, .side-menu {
-                display: none;
+            .graph-container img {
+                height: 200px;
             }
         }
     </style>
@@ -652,9 +569,9 @@
     <!-- Settings Panel -->
     <div class="settings-panel">
         <div class="control-bar">
-            <span class="material-icons" onclick="toggleSearch()" aria-label="Toggle Search">search</span>
-            <input type="text" id="searchInput" placeholder="Search Resume..." style="display: none;" aria-label="Search Resume">
-            <span class="material-icons" onclick="toggleMenu()" aria-label="Toggle Settings Menu">settings</span>
+            <span class="material-icons" aria-label="Search">schema</span>
+            <input type="text" id="searchInput" placeholder="Search Resume..." aria-label="Search Resume">
+            <span class="material-icons" onclick="toggleMenu()" aria-label="Toggle Settings Menu">gamepad</span>
         </div>
     </div>
 
@@ -662,34 +579,9 @@
     <div class="side-menu" id="sideMenu">
         <h3>Customize Resume</h3>
         <div class="menu-group">
-            <h4>Appearance</h4>
-            <div class="menu-item">
-                <label><span class="material-icons">color_lens</span> Accent Color</label>
-                <input type="color" id="accentColorPicker" value="#15ce49" onchange="changeAccentColor(this.value)" aria-label="Select Accent Color">
-            </div>
-            <div class="menu-item">
-                <label><span class="material-icons">palette</span> Headline Color</label>
-                <input type="color" id="headlineColorPicker" value="#15ce49" onchange="changeHeadlineColor(this.value)" aria-label="Select Headline Color">
-            </div>
-            <div class="menu-item">
-                <label><span class="material-icons">star</span> Icon Color</label>
-                <input type="color" id="iconColorPicker" value="#15ce49" onchange="changeIconColor(this.value)" aria-label="Select Icon Color">
-            </div>
-        </div>
-        <div class="menu-group">
             <h4>Layout</h4>
             <div class="menu-item">
-                <label><span class="material-icons">format_size</span> Text Size</label>
-                <input type="range" id="fontSizeSlider" min="12" max="24" step="1" value="19.5" oninput="changeFontSize(this.value)" aria-label="Adjust Text Size">
-                <span id="fontSizeValue">19.5px</span>
-            </div>
-            <div class="menu-item">
-                <label><span class="material-icons">shadow</span> Shadow Intensity</label>
-                <input type="range" id="shadowIntensitySlider" min="0.05" max="0.3" step="0.01" value="0.15" oninput="changeShadowIntensity(this.value)" aria-label="Adjust Shadow Intensity">
-                <span id="shadowIntensityValue">0.15</span>
-            </div>
-            <div class="menu-item">
-                <label><span class="material-icons">view_quilt</span> Card Style</label>
+                <label><span class="material-icons">list_alt</span> Card Style</label>
                 <select id="cardStyleSelect" onchange="changeCardStyle(this.value)" aria-label="Select Card Style">
                     <option value="bordered" selected>Bordered</option>
                     <option value="glass">Glass</option>
@@ -697,43 +589,36 @@
                 </select>
             </div>
             <div class="menu-item">
-                <label><span class="material-icons">visibility</span> Section Visibility</label>
+                <label><span class="material-icons">grid_view</span> Section Visibility</label>
                 <select id="sectionVisibilitySelect" onchange="toggleSectionVisibility(this.value)" aria-label="Select Section Visibility">
                     <option value="all">Show All</option>
-                    <option value="summary">Professional Summary</option>
+                    <option value="github">GitHub Contributions</option>
                     <option value="education">Education</option>
                     <option value="experience">Professional Experience</option>
                     <option value="skills">Technical Skills</option>
                     <option value="certifications">Certifications</option>
-                    <option value="github">GitHub Contributions</option>
                     <option value="research">Research Publications</option>
                     <option value="projects">Open Source Projects</option>
                     <option value="collaborations">Collaborations</option>
                 </select>
             </div>
-        </div>
-        <div class="menu-group">
-            <h4>Animation</h4>
             <div class="menu-item">
-                <label><span class="material-icons">animation</span> Animation Speed</label>
-                <select id="animationSpeedSelect" onchange="changeAnimationSpeed(this.value)" aria-label="Select Animation Speed">
-                    <option value="0.4">Normal</option>
-                    <option value="0.6">Slow</option>
-                    <option value="0.2">Fast</option>
-                    <option value="0">None</option>
+                <label><span class="material-icons">edit_note</span> Text Size</label>
+                <select id="textSizeSelect" onchange="changeFontSize(this.value)" aria-label="Select Text Size">
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large" selected>Large</option>
+                    <option value="Extra Large">Extra Large</option>
                 </select>
             </div>
         </div>
-        <div class="menu-group">
-            <h4>Actions</h4>
-            <div class="menu-item">
-                <label><span class="material-icons">settings_applications</span> Actions</label>
-                <div class="badge-container actions-box">
-                    <a href="https://drive.google.com/drive/folders/16fpvnxDVW_A6hbeYY5xGB2aEIVtMqqeU?usp=sharing" class="action-btn download-btn" aria-label="Download Resume"></a>
-                    <button onclick="resetSettings()" class="action-btn reset-btn" aria-label="Reset Settings"></button>
-                    <button onclick="scrollToTop()" class="action-btn scroll-btn" aria-label="Scroll to Top"></button>
-                    <button onclick="toggleMenu()" class="action-btn close-btn" aria-label="Close Settings Menu"></button>
-                </div>
+        <div class="menu-item">
+            <div class="badge-container actions-box">
+                <a href="https://drive.google.com/file/d/1TtB9GEhgxRlTVQ5Ha-w9MWNBN6oXl2Jb/view" class="action-btn download-btn" aria-label="Download Resume"></a>
+                <button onclick="toggleTextSizeDropdown()" class="action-btn text-size-btn" aria-label="Toggle Text Size Dropdown"></button>
+                <button onclick="scrollToTop()" class="action-btn scroll-btn" aria-label="Scroll to Top"></button>
+                <button onclick="resetSettings()" class="action-btn reset-btn" aria-label="Reset Settings"></button>
+                <button onclick="toggleMenu()" class="action-btn close-btn" aria-label="Close Settings Menu"></button>
             </div>
         </div>
     </div>
@@ -750,11 +635,17 @@
 
         <!-- Main Content -->
         <main class="main-content" tabindex="0">
-            <!-- Professional Summary -->
-            <section class="section" data-section="summary" role="region" aria-labelledby="summary-heading">
-                <h2 id="summary-heading"><span class="material-icons">person</span> Professional Summary</h2>
+            <!-- GitHub Contributions -->
+            <section class="section" data-section="github" role="region" aria-labelledby="github-heading">
+                <h2 id="github-heading"><span class="material-icons">insights</span> GitHub Contributions</h2>
                 <div class="card">
-                    <p>Innovative Computer Science and Engineering student with expertise in machine learning, NLP, blockchain, and IoT. Leading IEEE Computer Society Bangladesh Chapter as Secretariat President in 2025, driving impactful initiatives and fostering innovation. Passionate about open-source contributions and peer-reviewed research, committed to developing scalable, secure, and sustainable AI-driven solutions for global impact.</p>
+                    <div class="badge-list">
+                        <a href="https://octoprofile.vercel.app/user?id=la-b-ib"><img src="https://img.shields.io/badge/OctoProfile-Visit-2088FF?style=for-the-badge&logo=github" alt="OctoProfile" height="25" width="auto"></a>
+                        <a href="https://github.com/la-b-ib"><img src="https://komarev.com/ghpvc/?username=la-b-ib&label=Views&style=for-the-badge&color=2088FF" alt="Profile Views" height="25" width="auto"></a>
+                    </div>
+                    <div class="graph-container">
+                        <img src="https://github-readme-activity-graph.vercel.app/graph?username=la-b-ib&theme=transparent&area=true&hide Angled=true&hide_border=true&height=300&bg_color=000e1b&color=15ce49&line=4d8af0&point=ff7139&cache_seconds=3600" width="100%" alt="Activity Graph">
+                    </div>
                 </div>
             </section>
 
@@ -768,9 +659,129 @@
                 </div>
             </section>
 
-            <!-- Experience -->
+            <!-- Certifications -->
+            <section class="section" data-section="certifications" role="region" aria-labelledby="certifications-heading">
+                <h2 id="certifications-heading"><span class="material-icons">verified</span> Certifications</h2>
+                <div class="card">
+                    <div class="badge-list">
+                        <a href="https://www.linkedin.com/learning/certificates/759119dcc46bdb4e63fb82dc49ed0ad4288a97d9031dd360fdb0686f65b0b398"><img src="https://img.shields.io/badge/Twilio-F22F46?style=for-the-badge&logo=twilio&logoColor=white&labelStyle=bold" alt="Twilio" height="25" width="auto"></a>
+                        <a href="https://www.linkedin.com/learning/certificates/fe897b3437597f8b933ad2501b5de695916b026e0c841509df9545ecd7d83b0b"><img src="https://img.shields.io/badge/PMI-8C1D40?style=for-the-badge&logo=project-management-institute&logoColor=white&labelStyle=bold" alt="PMI" height="25" width="auto"></a>
+                        <a href="https://www.linkedin.com/learning/certificates/e9fda53e1d56f77f2f78acaefd5fd9c9dfd3dce255ebd20be4d1cd3290629784"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white&labelStyle=bold" alt="GitHub" height="25" width="auto"></a>
+                        <a href="https://www.linkedin.com/learning/certificates/73e313f844327f6f6a86a0984c7c45ee6b9eee1a3e283db48bb370d908b57dec"><img src="https://img.shields.io/badge/Microsoft-0078D4?style=for-the-badge&logo=microsoft&logoColor=white&labelStyle=bold" alt="Microsoft" height="25" width="auto"></a>
+                        <a href="https://www.linkedin.com/learning/certificates/243b5362e2fc213ce658d04d6c21856b9ab9628a3e81b375927773cd8618fd49"><img src="https://img.shields.io/badge/LambdaTest-FF8C00?style=for-the-badge&logo=testing-library&logoColor=white&labelStyle=bold" alt="LambdaTest" height="25" width="auto"></a>
+                        <a href="https://www.linkedin.com/learning/certificates/246ffec626263c5d4a8bea2c310bcc0cd836100f89d7e87c605082f43004b053"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelStyle=bold" alt="LinkedIn" height="25" width="auto"></a>
+                        <a href="https://www.linkedin.com/learning/certificates/3719feeef2b7f6b1134ce2fb8887cad2d531b509b194f9ab82204ad2581b1cf3"><img src="https://img.shields.io/badge/SHRM-0083BE?style=for-the-badge&logo=shrm&logoColor=white&labelStyle=bold" alt="SHRM" height="25" width="auto"></a>
+                        <a href="https://www.linkedin.com/learning/certificates/125c8879c94519f1a707ee5691ac5a6e5b5ca44002c3f532900f608765a2d2fa"><img src="https://img.shields.io/badge/HRCI-FF6D00?style=for-the-badge&logo=hrci&logoColor=white&labelStyle=bold" alt="HRCI" height="25" width="auto"></a>
+                        <a href="https://www.linkedin.com/learning/certificates/6f99e870b41beae081989894b502a48e94af71cf8806e54a994cad682d092c5f"><img src="https://img.shields.io/badge/Blue_Prism-00A1E0?style=for-the-badge&logo=blue-prism&logoColor=white&labelStyle=bold" alt="Blue Prism" height="25" width="auto"></a>
+                        <a href="https://drive.google.com/file/d/1TtB9GEhgxRlTVQ5Ha-w9MWNBN6oXl2Jb/view"><img src="https://img.shields.io/badge/IEEE-00629B?style=for-the-badge&logo=ieee&logoColor=white&labelStyle=bold" alt="IEEE" height="25" width="auto"></a>
+                        <a href="https://drive.google.com/file/d/17SxPVFYELRmTnL-ottL5zVR29rsvGYBD/view"><img src="https://img.shields.io/badge/ICPE-34A853?style=for-the-badge&logo=google-drive&logoColor=white&labelStyle=bold" alt="ICPE" height="25" width="auto"></a>
+                        <a href="https://www.linkedin.com/learning/certificates/e72b6f3475683106b11f92cc054a1f8d514ed33b6b8e6974f5b22d6f28ac2bdd"><img src="https://img.shields.io/badge/NASBA-1E3A8A?style=for-the-badge&logo=nasba&logoColor=white&labelStyle=bold" alt="NASBA" height="25" width="auto"></a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Research Publications -->
+            <section class="section" data-section="research" role="region" aria-labelledby="research-heading">
+                <h2 id="research-heading"><span class="material-icons">science</span> Research Publications</h2>
+                <div class="card">
+                    <h3>Blockchain in Project Management</h3>
+                    <p>IEEE ICEIC 2025, Osaka | Ethereum-powered solution with Flutter and OCI</p>
+                    <div class="badge-list">
+                        <a href="https://doi.org/10.1109/ICEIC64972.2025.10879668"><img src="https://img.shields.io/badge/DOI-10.1109%2FICEIC64972.2025.10879668-orange?style=for-the-badge&labelStyle=bold" alt="DOI" height="25" width="auto"></a>
+                        <a href="https://iceic.org/2025/"><img src="https://img.shields.io/badge/IEEE_ICEIC_2025,_Osaka-0A77B1?style=for-the-badge&logo=ieee&logoColor=white&labelStyle=bold" alt="IEEE ICEIC 2025, Osaka" height="25" width="auto"></a>
+                        <a href="https://www.ethereum.org/"><img src="https://img.shields.io/badge/Ethereum_powered_solution-4B0082?style=for-the-badge&logo=ethereum&logoColor=white&labelStyle=bold" alt="Powered Solution" height="25" width="auto"></a>
+                        <a href="https://flutter.dev/"><img src="https://img.shields.io/badge/Flutter_+_OCI-FF5722?style=for-the-badge&logo=flutter&logoColor=white&labelStyle=bold" alt="Flutter + OCI" height="25" width="auto"></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Crop Prediction Using Machine Learning and IoT</h3>
+                    <p>IEEE ICRPSET 2024, Rajshahi | Precision Agriculture with IoT and ML</p>
+                    <div class="badge-list">
+                        <a href="https://doi.org/10.1109/ICRPSET64863.2024.10955896"><img src="https://img.shields.io/badge/DOI-10.1109%2FICRPSET64863.2024.10955896-orange?style=for-the-badge&labelStyle=bold" alt="DOI" height="25" width="auto"></a>
+                        <a href="https://ieeexplore.ieee.org/xpl/conhome/10955776/proceeding"><img src="https://img.shields.io/badge/IEEE_ICRPSET_2024,_Rajshahi-0A77B1?style=for-the-badge&logo=ieee&logoColor=white&labelStyle=bold" alt="ICRPSET 24" height="25" width="auto"></a>
+                        <a href="https://aws.amazon.com/iot/"><img src="https://img.shields.io/badge/IoT_+_Machine_Learning-4B0082?style=for-the-badge&logo=aws-iot&logoColor=white&labelStyle=bold" alt="Tech Stack" height="25" width="auto"></a>
+                        <a href="https://en.wikipedia.org/wiki/Precision_agriculture"><img src="https://img.shields.io/badge/Precision_Agriculture-FF5722?style=for-the-badge&logo=leaf&logoColor=white&labelStyle=bold" alt="Agriculture" height="25" width="auto"></a>
+                        <a href="https://scikit-learn.org/"><img src="https://img.shields.io/badge/Random_Forest_+_SVM-0088CC?style=for-the-badge&logo=scikit-learn&logoColor=white&labelStyle=bold" alt="Algorithms" height="25" width="auto"></a>
+                        <a href="https://www.arduino.cc/"><img src="https://img.shields.io/badge/Edge_Deployed-FF8800?style=for-the-badge&logo=arduino&logoColor=white&labelStyle=bold" alt="Deployment" height="25" width="auto"></a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technical Skills -->
+            <section class="section" data-section="skills" role="region" aria-labelledby="skills-heading">
+                <h2 id="skills-heading"><span class="material-icons">terminal</span> Technical Skills</h2>
+                <div class="card">
+                    <h3>Languages & Databases</h3>
+                    <div class="badge-list">
+                        <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white&labelStyle=bold" alt="Python" height="25" width="auto"></a>
+                        <a href="https://www.java.com/"><img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white&labelStyle=bold" alt="Java" height="25" width="auto"></a>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black&labelStyle=bold" alt="JavaScript" height="25" width="auto"></a>
+                        <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white&labelStyle=bold" alt="TypeScript" height="25" width="auto"></a>
+                        <a href="https://docs.microsoft.com/en-us/dotnet/csharp/"><img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white&labelStyle=bold" alt="C#" height="25" width="auto"></a>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white&labelStyle=bold" alt="HTML5" height="25" width="auto"></a>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white&labelStyle=bold" alt="CSS3" height="25" width="auto"></a>
+                        <a href="https://www.mysql.com/"><img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=no-white&labelStyle=bold" alt="MySQL" height="25" width="auto"></a>
+                        <a href="https://www.postgresql.org/"><img src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white&labelStyle=bold" alt="PostgreSQL" height="25" width="auto"></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Frameworks & Libraries</h3>
+                    <div class="badge-list">
+                        <a href="https://www.djangoproject.com/"><img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white&labelStyle=bold" alt="Django" height="25" width="auto"></a>
+                        <a href="https://nodejs.org/"><img src="https://img.shields.io/badge/Node.js-43853D?(style=for-the-badge&logo=node.js&logoColor=white&labelStyle=bold" alt="Node.js" height="25" width="auto"></a>
+                        <a href="https://reactjs.org/"><img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black&labelStyle=bold" alt="React" height="25" width="auto"></a>
+                        <a href="https://angular.io/"><img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white&labelStyle=bold" alt="Angular" height="25" width="auto"></a>
+                        <a href="https://dotnet.microsoft.com/apps/aspnet"><img src="https://img.shields.io/badge/ASP.NET_Core-512BD4?style=for-the-badge&logo=.net&logoColor=white&labelStyle=bold" alt="ASP.NET Core" height="25" width="auto"></a>
+                        <a href="https://flutter.dev/"><img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white&labelStyle=bold" alt="Flutter" height="25" width="auto"></a>
+                        <a href="https://developer.apple.com/xcode/swiftui/"><img src="https://img.shields.io/badge/SwiftUI-F05138?style=for-the-badge&logo=swift&logoColor=white&labelStyle=bold" alt="SwiftUI" height="25" width="auto"></a>
+                        <a href="https://getbootstrap.com/"><img src="https://img.shields.io/badge/Bootstrap-7952B3?style:for-the-badge&logo=bootstrap&logoColor=white&labelStyle=bold" alt="Bootstrap" height="25" width="auto"></a>
+                        <a href="https://www.tensorflow.org/"><img src="https://img.shields.io/badge/TensorFlow-FF6F00?style:for-the-badge&logo=tensorflow&logoColor=white&labelStyle=bold" alt="TensorFlow" height="25" width="auto"></a>
+                        <a href="https://pytorch.org/"><img src="https://img.shields.io/badge/PyTorch-EE4C2C?style:for-the-badge&logo=pytorch&logoColor=white&labelStyle=bold" alt="PyTorch" height="25" width="auto"></a>
+                        <a href="https://opencv.org/"><img src="https://img.shields.io/badge/OpenCV-5C3EE8?style:for-the-badge&logo=opencv&logoColor=white&labelStyle=bold" alt="OpenCV" height="25" width="auto"></a>
+                        <a href="https://scikit-learn.org/"><img src="https://img.shields.io/badge/Scikit_Learn-F7931E?style:for-the-badge&logo=scikit-learn&logoColor=white&labelStyle=bold" alt="Scikit-Learn" height="25" width="auto"></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Tools</h3>
+                    <div class="badge-list">
+                        <a href="https://git-scm.com/"><img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white&labelStyle=bold" alt="Git" height="25" width="auto"></a>
+                        <a href="https://www.npmjs.com/"><img src="https://img.shields.io/badge/npm-CB3837?style:for-the-badge&logo=npm&logoColor=white&labelStyle=bold" alt="npm" height="25" width="auto"></a>
+                        <a href="https://aws.amazon.com/"><img src="https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white&labelStyle=bold" alt="AWS" height="25" width="auto"></a>
+                        <a href="https://cloud.google.com/"><img src="https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white&labelStyle=bold" alt="Google Cloud" height="25" width="auto"></a>
+                        <a href="https://www.heroku.com/"><img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white&labelStyle=bold" alt="Heroku" height="25" width="auto"></a>
+                        <a href="https://jupyter.org/"><img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white&labelStyle=bold" alt="Jupyter" height="25" width="auto"></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Operating Systems</h3>
+                    <div class="badge-list">
+                        <a href="https://ubuntu.com/"><img src="https://img.shields.io/badge/Ubuntu-E95420?style:for-the-badge&logo=ubuntu&logoColor=white&labelStyle=bold" alt="Ubuntu" height="25" width="auto"></a>
+                        <a href="https://www.redhat.com/"><img src="https://img.shields.io/badge/Red_Hat-EE0000?style:for-the-badge&logo=redhat&logoColor=white&labelStyle=bold" alt="RedHat" height="25" width="auto"></a>
+                        <a href="https://www.apple.com/macos/"><img src="https://img.shields.io/badge/macOS-000000?style:for-the-badge&logo=apple&logoColor=white&labelStyle=bold" alt="macOS" height="25" width="auto"></a>
+                        <a href="https://www.freebsd.org/"><img src="https://img.shields.io/badge/FreeBSD-AB2B28?style:for-the-badge&logo=freebsd&logoColor=white&labelStyle=bold" alt="FreeBSD" height="25" width="auto"></a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Open Source Projects -->
+            <section class="section" data-section="projects" role="region" aria-labelledby="projects-heading">
+                <h2 id="projects-heading"><span class="material-icons">terminal</span> Open Source Projects</h2>
+                <div class="card">
+                    <div class="badge-list">
+                        <a href="https://github.com/la-b-ib/LeafByte"><img src="https://img.shields.io/badge/LeafByte-006400?style=for-the-badge&logo=leaf&logoColor=white&labelStyle=bold" alt="LeafByte" height="25" width="auto"></a>
+                        <a href="https://github.com/la-b-ib/VitaSort"><img src="https://img.shields.io/badge/VitaSort-FF6B6B?style:for-the-badge&logo=notebook&logoColor=white&labelStyle=bold" alt="VitaSort" height="25" width="auto"></a>
+                        <a href="https://github.com/la-b-ib/LitGrid"><img src="https://img.shields.io/badge/LitGrid-FFD43B?style:for-the-badge&logo=library&logoColor=black&labelStyle=bold" alt="LitGrid" height="25" width="auto"></a>
+                        <a href="https://github.com/la-b-ib/CostNest"><img src="https://img.shields.io/badge/CostNest-7950F2?style:for-the-badge&logo=coin&logoColor=white&labelStyle=bold" alt="CostNest" height="25" width="auto"></a>
+                        <a href="https://github.com/la-b-ib/DuskProbe"><img src="https://img.shields.io/badge/DuskProbe-212529?style=for-the-badge&logo=shield-check&logoColor=white&labelStyle=bold" alt="DuskProbe" height="25" width="auto"></a>
+                        <a href="https://github.com/la-b-ib/la-b-ib.github.io"><img src="https://img.shields.io/badge/AURIX-0D6EFD?style:for-the-badge&logo=internet-explorer&logoColor=white&labelStyle=bold" alt="AURIX" height="25" width="auto"></a>
+                        <a href="https://github.com/la-b-ib/MoodScope"><img src="https://img.shields.io/badge/MoodScope-FF0000?style:for-the-badge&logo=octopus&logoColor=white&labelStyle=bold" alt="MoodScope" height="25" width="auto"></a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Professional Experience -->
             <section class="section" data-section="experience" role="region" aria-labelledby="experience-heading">
-                <h2 id="experience-heading"><span class="material-icons">work</span> Professional Experience</h2>
+                <h2 id="experience-heading"><span class="material-icons">person_add</span> Professional Experience</h2>
                 <div class="card experience-item">
                     <h3>IEEE Computer Society Bangladesh Chapter Secretariat</h3>
                     <h4>President | January 2025 - Present</h4>
@@ -815,166 +826,22 @@
                 </div>
             </section>
 
-            <!-- Technical Skills -->
-            <section class="section" data-section="skills" role="region" aria-labelledby="skills-heading">
-                <h2 id="skills-heading"><span class="material-icons">code</span> Technical Skills</h2>
-                <div class="card">
-                    <h3>Languages & Databases</h3>
-                    <div class="badge-row">
-                        <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"></a>
-                        <a href="https://www.java.com/"><img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" alt="Java"></a>
-                        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"></a>
-                        <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"></a>
-                        <a href="https://docs.microsoft.com/en-us/dotnet/csharp/"><img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white" alt="C#"></a>
-                    
-                        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"></a>
-                        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"></a>
-                        <a href="https://www.mysql.com/"><img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=no-white" alt="MySQL"></a>
-                        <a href="https://www.postgresql.org/"><img src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL"></a>
-                    </div>
-                </div>
-                <div class="card">
-                    <h3>Frameworks & Libraries</h3>
-                    <div class="badge-row">
-                        <a href="https://www.djangoproject.com/"><img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" alt="Django"></a>
-                        <a href="https://nodejs.org/"><img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js"></a>
-                        <a href="https://reactjs.org/"><img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React"></a>
-                        <a href="https://angular.io/"><img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular"></a>
-                        <a href="https://dotnet.microsoft.com/apps/aspnet"><img src="https://img.shields.io/badge/ASP.NET_Core-512BD4?style=for-the-badge&logo=.net&logoColor=white" alt="ASP.NET Core"></a>
-                        <a href="https://flutter.dev/"><img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter"></a>
-                    
-                        <a href="https://developer.apple.com/xcode/swiftui/"><img src="https://img.shields.io/badge/SwiftUI-F05138?style=for-the-badge&logo=swift&logoColor=white" alt="SwiftUI"></a>
-                        <a href="https://getbootstrap.com/"><img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap"></a>
-                        <a href="https://www.tensorflow.org/"><img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow"></a>
-                        <a href="https://pytorch.org/"><img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch"></a>
-                        <a href="https://opencv.org/"><img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white" alt="OpenCV"></a>
-                        <a href="https://scikit-learn.org/"><img src="https://img.shields.io/badge/Scikit_Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Scikit-Learn"></a>
-                    </div>
-                </div>
-                <div class="card">
-                    <h3>Tools</h3>
-                    <div class="badge-row">
-                        <a href="https://git-scm.com/"><img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git"></a>
-                        <a href="https://www.npmjs.com/"><img src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white" alt="npm"></a>
-                        <a href="https://aws.amazon.com/"><img src="https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS"></a>
-                        <a href="https://cloud.google.com/"><img src="https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white" alt="Google Cloud"></a>
-                        <a href="https://www.heroku.com/"><img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white" alt="Heroku"></a>
-                        <a href="https://jupyter.org/"><img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white" alt="Jupyter"></a>
-                    </div>
-                </div>
-                <div class="card">
-                    <h3>Operating Systems</h3>
-                    <div class="badge-row">
-                        <a href="https://ubuntu.com/"><img src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" alt="Ubuntu"></a>
-                        <a href="https://www.redhat.com/"><img src="https://img.shields.io/badge/Red_Hat-EE0000?style=for-the-badge&logo=redhat&logoColor=white" alt="RedHat"></a>
-                        <a href="https://www.apple.com/macos/"><img src="https://img.shields.io/badge/macOS-000000?style=for-the-badge&logo=apple&logoColor=white" alt="macOS"></a>
-                        <a href="https://www.freebsd.org/"><img src="https://img.shields.io/badge/FreeBSD-AB2B28?style=for-the-badge&logo=freebsd&logoColor=white" alt="FreeBSD"></a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Certifications -->
-            <section class="section" data-section="certifications" role="region" aria-labelledby="certifications-heading">
-                <h2 id="certifications-heading"><span class="material-icons">verified</span> Certifications</h2>
-                <div class="card">
-                    <div class="badge-row">
-                        <a href="https://www.linkedin.com/learning/certificates/759119dcc46bdb4e63fb82dc49ed0ad4288a97d9031dd360fdb0686f65b0b398"><img src="https://img.shields.io/badge/Twilio-F22F46?style=for-the-badge&logo=twilio&logoColor=white" alt="Twilio"></a>
-                        <a href="https://www.linkedin.com/learning/certificates/fe897b3437597f8b933ad2501b5de695916b026e0c841509df9545ecd7d83b0b"><img src="https://img.shields.io/badge/PMI-8C1D40?style=for-the-badge&logo=project-management-institute&logoColor=white" alt="PMI"></a>
-                        <a href="https://www.linkedin.com/learning/certificates/e9fda53e1d56f77f2f78acaefd5fd9c9dfd3dce255ebd20be4d1cd3290629784"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
-                        <a href="https://www.linkedin.com/learning/certificates/73e313f844327f6f6a86a0984c7c45ee6b9eee1a3e283db48bb370d908b57dec"><img src="https://img.shields.io/badge/Microsoft-0078D4?style=for-the-badge&logo=microsoft&logoColor=white" alt="Microsoft"></a>
-                        <a href="https://www.linkedin.com/learning/certificates/243b5362e2fc213ce658d04d6c21856b9ab9628a3e81b375927773cd8618fd49"><img src="https://img.shields.io/badge/LambdaTest-FF8C00?style=for-the-badge&logo=testing-library&logoColor=white" alt="LambdaTest"></a>
-                        <a href="https://www.linkedin.com/learning/certificates/246ffec626263c5d4a8bea2c310bcc0cd836100f89d7e87c605082f43004b053"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-                    
-                        <a href="https://www.linkedin.com/learning/certificates/3719feeef2b7f6b1134ce2fb8887cad2d531b509b194f9ab82204ad2581b1cf3"><img src="https://img.shields.io/badge/SHRM-0083BE?style=for-the-badge&logo=shrm&logoColor=white" alt="SHRM"></a>
-                        <a href="https://www.linkedin.com/learning/certificates/125c8879c94519f1a707ee5691ac5a6e5b5ca44002c3f532900f608765a2d2fa"><img src="https://img.shields.io/badge/HRCI-FF6D00?style=for-the-badge&logo=hrci&logoColor=white" alt="HRCI"></a>
-                        <a href="https://www.linkedin.com/learning/certificates/6f99e870b41beae081989894b502a48e94af71cf8806e54a994cad682d092c5f"><img src="https://img.shields.io/badge/Blue_Prism-00A1E0?style=for-the-badge&logo=blue-prism&logoColor=white" alt="Blue Prism"></a>
-                        <a href="https://drive.google.com/file/d/1TtB9GEhgxRlTVQ5Ha-w9MWNBN6oXl2Jb/view"><img src="https://img.shields.io/badge/IEEE-00629B?style=for-the-badge&logo=ieee&logoColor=white" alt="IEEE"></a>
-                        <a href="https://drive.google.com/file/d/17SxPVFYELRmTnL-ottL5zVR29rsvGYBD/view"><img src="https://img.shields.io/badge/ICPE-34A853?style=for-the-badge&logo=google-drive&logoColor=white" alt="ICPE"></a>
-                        <a href="https://www.linkedin.com/learning/certificates/e72b6f3475683106b11f92cc0541f8d514ed33b6b8e6974f5b22d6f28ac2bdd"><img src="https://img.shields.io/badge/NASBA-1E3A8A?style=for-the-badge&logo=nasba&logoColor=white" alt="NASBA"></a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- GitHub Contributions -->
-            <section class="section" data-section="github" role="region" aria-labelledby="github-heading">
-                <h2 id="github-heading"><span class="material-icons">insights</span> GitHub Contributions</h2>
-                <div class="card">
-                    <div class="badge-container" style="margin-bottom: 10px;">
-                        <a href="https://octoprofile.vercel.app/user?id=la-b-ib"><img src="https://img.shields.io/badge/OctoProfile-Visit-2088FF?style=for-the-badge&logo=github" alt="OctoProfile"></a>
-                        <a href="https://github.com/la-b-ib"><img src="https://komarev.com/ghpvc/?username=la-b-ib&label=Views&style=for-the-badge&color=2088FF" alt="Profile Views"></a>
-                    </div>
-                    <div class="badge-container" style="flex-wrap: wrap; gap: 10px; align-items: center;">
-                        <img src="https://github-readme-stats.vercel.app/api?username=la-b-ib&show_icons=true&hide_border=true&theme=transparent&count_private=true&line_height=18&custom_title=STATS&bg_color=00000000&title_color=15ce49&text_color=e0e0e0&icon_color=15ce49" style="height: 120px; max-width: 100%;" alt="Stats" loading="lazy">
-                        <img src="https://streak-stats.demolab.com?user=la-b-ib&theme=transparent&hide_border=true&background=00000000&dates=15ce49&fire=FF7139&stroke=15ce49" style="height: 120px; max-width: 100%;" alt="Streak" loading="lazy">
-                        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=la-b-ib&layout=compact&hide_border=true&bg_color=00000000&title_color=15ce49&text_color=e0e0e0&langs_count=4&hide=html,css,scss" style="height: 120px; max-width: 100%;" alt="Languages" loading="lazy">
-                    </div>
-                    <div style="display: flex; justify-content: center; margin: 10px 0;">
-                        <img src="https://github-readme-activity-graph.vercel.app/graph?username=la-b-ib&theme=minimal&area=true&hide_border=true&height=192&bg_color=00000000&color=15ce49&line=15ce49&point=15ce49" style="width: 100%; max-width: 100%;" alt="Activity Graph" loading="lazy">
-                    </div>
-                </div>
-            </section>
-
-            <!-- Research Publications -->
-            <section class="section" data-section="research" role="region" aria-labelledby="research-heading">
-                <h2 id="research-heading"><span class="material-icons">science</span> Research Publications</h2>
-                <div class="card">
-                    <h3>Blockchain in Project Management</h3>
-                    <p>IEEE ICEIC 2025, Osaka | Ethereum-powered solution with Flutter and OCI</p>
-                    <div class="badge-container">
-                        <a href="https://doi.org/10.1109/ICEIC64972.2025.10879668"><img src="https://img.shields.io/badge/DOI-10.1109%2FICEIC64972.2025.10879668-orange?style=for-the-badge" alt="DOI"></a>
-                        <a href="https://iceic.org/2025/"><img src="https://img.shields.io/badge/IEEE_ICEIC_2025,_Osaka-0A77B1?style=for-the-badge&logo=ieee&logoColor=white" alt="IEEE ICEIC 2025, Osaka"></a>
-                        <a href="https://www.ethereum.org/"><img src="https://img.shields.io/badge/Ethereum_powered_solution-4B0082?style=for-the-badge&logo=ethereum&logoColor=white" alt="Powered Solution"></a>
-                        <a href="https://flutter.dev/"><img src="https://img.shields.io/badge/Flutter_+_OCI-FF5722?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter + OCI"></a>
-                    </div>
-                </div>
-                <div class="card">
-                    <h3>Crop Prediction Using Machine Learning and IoT</h3>
-                    <p>IEEE ICRPSET 2024, Rajshahi | Precision Agriculture with IoT and ML</p>
-                    <div class="badge-container">
-                        <a href="https://doi.org/10.1109/ICRPSET64863.2024.10955896"><img src="https://img.shields.io/badge/DOI-10.1109%2FICRPSET64863.2024.10955896-orange?style=for-the-badge" alt="DOI"></a>
-                        <a href="https://ieeexplore.ieee.org/xpl/conhome/10955776/proceeding"><img src="https://img.shields.io/badge/IEEE_ICRPSET_2024,_Rajshahi-0A77B1?style=for-the-badge&logo=ieee&logoColor=white" alt="ICRPSET 24"></a>
-                        <a href="https://aws.amazon.com/iot/"><img src="https://img.shields.io/badge/IoT_+_Machine_Learning-4B0082?style=for-the-badge&logo=aws-iot&logoColor=white" alt="Tech Stack"></a>
-                        <a href="https://en.wikipedia.org/wiki/Precision_agriculture"><img src="https://img.shields.io/badge/Precision_Agriculture-FF5722?style=for-the-badge&logo=leaf&logoColor=white" alt="Agriculture"></a>
-                        <a href="https://scikit-learn.org/"><img src="https://img.shields.io/badge/Random_Forest_+_SVM-0088CC?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Algorithms"></a>
-                        <a href="https://www.arduino.cc/"><img src="https://img.shields.io/badge/Edge_Deployed-FF8800?style=for-the-badge&logo=arduino&logoColor=white" alt="Deployment"></a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Open Source Projects -->
-            <section class="section" data-section="projects" role="region" aria-labelledby="projects-heading">
-                <h2 id="projects-heading"><span class="material-icons">code</span> Open Source Projects</h2>
-                <div class="card">
-                    <div class="badge-row">
-                        <a href="https://github.com/la-b-ib/LeafByte"><img src="https://img.shields.io/badge/LeafByte-4DC71F?style=for-the-badge&logo=leaf&logoColor=white" alt="LeafByte"></a>
-                        <a href="https://github.com/la-b-ib/VitaSort"><img src="https://img.shields.io/badge/VitaSort-FF6B6B?style=for-the-badge&logo=notebook&logoColor=white" alt="VitaSort"></a>
-                        <a href="https://github.com/la-b-ib/LitGrid"><img src="https://img.shields.io/badge/LitGrid-FFD43B?style=for-the-badge&logo=library&logoColor=black" alt="LitGrid"></a>
-                        <a href="https://github.com/la-b-ib/CostNest"><img src="https://img.shields.io/badge/CostNest-7950F2?style=for-the-badge&logo=coin&logoColor=white" alt="CostNest"></a>
-                    
-                        <a href="https://github.com/la-b-ib/DuskProbe"><img src="https://img.shields.io/badge/DuskProbe-212529?style=for-the-badge&logo=shield-check&logoColor=white" alt="DuskProbe"></a>
-                        <a href="https://github.com/la-b-ib/la-b-ib.github.io"><img src="https://img.shields.io/badge/AURIX-0D6EFD?style=for-the-badge&logo=internet-explorer&logoColor=white" alt="AURIX"></a>
-                        <a href="https://github.com/la-b-ib/MoodScope"><img src="https://img.shields.io/badge/MoodScope-FF0000?style=for-the-badge&logo=octopus&logoColor=white" alt="MoodScope"></a>
-                    </div>
-                </div>
-            </section>
-
             <!-- Collaborations -->
             <section class="section" data-section="collaborations" role="region" aria-labelledby="collaborations-heading">
                 <h2 id="collaborations-heading"><span class="material-icons">group</span> Collaborations</h2>
                 <div class="card text-left">
                     <p>Let’s build solutions that make a difference, globally!</p>
                     <p class="bold" style="color: var(--text); opacity: 1;">“Code smart. Build secure. Scale global.”</p>
-                    <div class="badge-row">
-                        <a href="mailto:labib.45x@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
-                        <a href="https://github.com/la-b-ib"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
-                        <a href="https://www.linkedin.com/in/la-b-ib/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-                        <a href="https://la-b-ib.github.io/"><img src="https://img.shields.io/badge/Website-0A5C78?style=for-the-badge&logo=internet-explorer&logoColor=white" alt="Portfolio"></a>
-                        <a href="https://x.com/la_b_ib_"><img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=twitter&logoColor=white" alt="X"></a>
-                    
-                        <a href="https://orcid.org/0009-0007-4656-8709"><img src="https://img.shields.io/badge/ORCID-A6CE39?style=for-the-badge&logo=orcid&logoColor=white" alt="ORCID"></a>
-                        <a href="https://www.researchgate.net/profile/Labib-Bin-Shahed"><img src="https://img.shields.io/badge/ResearchGate-00CCBB?style=for-the-badge&logo=researchgate&logoColor=white" alt="ResearchGate"></a>
-                        <a href="https://scholar.google.com/citations?hl=en&user=xg04A5kAAAAJ"><img src="https://img.shields.io/badge/Google_Scholar-4285F4?style=for-the-badge&logo=google-scholar&logoColor=white" alt="Google Scholar"></a>
-                        <a href="https://ieeexplore.ieee.org/author/398407024257618"><img src="https://img.shields.io/badge/IEEE_Xplore-00629B?style=for-the-badge&logo=ieee&logoColor=white" alt="IEEE Xplore"></a>
+                    <div class="badge-list">
+                        <a href="mailto:labib.45x@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style:for-the-badge&logo=gmail&logoColor=white&labelStyle=bold" alt="Email" height="25" width="auto"></a>
+                        <a href="https://github.com/la-b-ib"><img src="https://img.shields.io/badge/GitHub-181717?style:for-the-badge&logo=github&logoColor=white&labelStyle=bold" alt="GitHub" height="25" width="auto"></a>
+                        <a href="https://www.linkedin.com/in/la-b-ib/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style:for-the-badge&logo=linkedin&logoColor=white&labelStyle=bold" alt="LinkedIn" height="25" width="auto"></a>
+                        <a href="https://la-b-ib.github.io/"><img src="https://img.shields.io/badge/Website-0A5C78?style:for-the-badge&logo=internet-explorer&logoColor=white&labelStyle=bold" alt="Portfolio" height="25" width="auto"></a>
+                        <a href="https://x.com/la_b_ib_"><img src="https://img.shields.io/badge/X-1DA1F2?style:for-the-badge&logo=twitter&logoColor=white&labelStyle=bold" alt="X" height="25" width="auto"></a>
+                        <a href="https://orcid.org/0009-0007-4656-8709"><img src="https://img.shields.io/badge/ORCID-A6CE39?style:for-the-badge&logo=orcid&logoColor=white&labelStyle=bold" alt="ORCID" height="25" width="auto"></a>
+                        <a href="https://www.researchgate.net/profile/Labib-Bin-Shahed"><img src="https://img.shields.io/badge/ResearchGate-006400?style:for-the-badge&logo=researchgate&logoColor=white&labelStyle=bold" alt="ResearchGate" height="25" width="auto"></a>
+                        <a href="https://scholar.google.com/citations?hl=en&user=xg04A5kAAAAJ"><img src="https://img.shields.io/badge/Google_Scholar-4285F4?style:for-the-badge&logo=google-scholar&logoColor=white&labelStyle=bold" alt="Google Scholar" height="25" width="auto"></a>
+                        <a href="https://ieeexplore.ieee.org/author/398407024257618"><img src="https://img.shields.io/badge/IEEE_Xplore-00629B?style:for-the-badge&logo=ieee&logoColor=white&labelStyle=bold" alt="IEEE Xplore" height="25" width="auto"></a>
                     </div>
                 </div>
             </section>
@@ -1004,51 +871,43 @@
             };
         }
 
-        // Toggle Search Input
-        function toggleSearch() {
-            const searchInput = document.getElementById('searchInput');
-            searchInput.style.display = searchInput.style.display === 'none' ? 'block' : 'none';
-            if (searchInput.style.display === 'block') searchInput.focus();
-        }
-
         // Toggle Side Menu
         function toggleMenu() {
             const sideMenu = document.getElementById('sideMenu');
-            sideMenu.classList.toggle('active');
+            if (sideMenu) {
+                sideMenu.classList.toggle('active');
+            }
+        }
+
+        // Toggle Text Size Dropdown
+        function toggleTextSizeDropdown() {
+            const textSizeSelect = document.getElementById('textSizeSelect');
+            if (textSizeSelect) {
+                textSizeSelect.classList.toggle('text-size-select-visible');
+            }
         }
 
         // Font Size Change
         function changeFontSize(size) {
-            document.documentElement.style.setProperty('--font-size', `${size}px`);
+            let fontSize;
+            switch (size) {
+                case 'Small':
+                    fontSize = 14;
+                    break;
+                case 'Medium':
+                    fontSize = 16;
+                    break;
+                case 'Large':
+                    fontSize = 19.5;
+                    break;
+                case 'Extra Large':
+                    fontSize = 22;
+                    break;
+                default:
+                    fontSize = 19.5;
+            }
+            document.documentElement.style.setProperty('--font-size', `${fontSize}px`);
             localStorage.setItem('fontSize', size);
-            document.getElementById('fontSizeValue').textContent = `${size}px`;
-        }
-
-        // Accent Color Change
-        function changeAccentColor(color) {
-            document.documentElement.style.setProperty('--accent', color);
-            localStorage.setItem('accentColor', color);
-            updateGitHubStatsTheme();
-        }
-
-        // Headline Color Change
-        function changeHeadlineColor(color) {
-            document.documentElement.style.setProperty('--secondary', color);
-            localStorage.setItem('headlineColor', color);
-            updateGitHubStatsTheme();
-        }
-
-        // Icon Color Change
-        function changeIconColor(color) {
-            document.documentElement.style.setProperty('--icon-color', color);
-            localStorage.setItem('iconColor', color);
-            updateGitHubStatsTheme();
-        }
-
-        // Animation Speed Change
-        function changeAnimationSpeed(speed) {
-            document.documentElement.style.setProperty('--transition', `transform ${speed}s ease`);
-            localStorage.setItem('animationSpeed', speed);
         }
 
         // Card Style Change
@@ -1058,35 +917,28 @@
             cards.forEach(card => {
                 if (style === 'glass') {
                     card.style.background = 'linear-gradient(135deg, rgba(8, 33, 58, 0.7), rgba(30, 37, 41, 0.7))';
-                    card.style.border = 'var(--glass-border)';
+                    card.style.border = '1px solid rgba(255, 255, 255, 0.3)';
                     card.style.backdropFilter = 'blur(20px)';
                     card.style.webkitBackdropFilter = 'blur(20px)';
                 } else if (style === 'solid') {
                     card.style.background = '#000e1b';
-                    card.style.border = 'var(--glass-border)';
+                    card.style.border = '1px solid rgba(255, 255, 255, 0.3)';
                     card.style.backdropFilter = 'none';
                     card.style.webkitBackdropFilter = 'none';
                 } else if (style === 'bordered') {
                     card.style.background = 'transparent';
-                    card.style.border = '2px solid var(--secondary)';
+                    card.style.border = card.classList.contains('header') ? 'none' : '2px solid var(--secondary)';
                     card.style.backdropFilter = 'none';
                     card.style.webkitBackdropFilter = 'none';
                 }
             });
             settingsElements.forEach(el => {
-                el.style.background = el.classList.contains('side-menu') ? 'linear-gradient(to bottom, rgba(30, 37, 41, 0.8), rgba(8, 33, 58, 0.9))' : 'var(--translucent)';
-                el.style.backdropFilter = 'blur(16px)';
-                el.style.webkitBackdropFilter = 'blur(16px)';
-                el.style.border = 'var(--glass-border)';
+                el.style.background = el.classList.contains('side-menu') ? '#08213A' : 'rgba(30, 37, 41, 0.95)';
+                el.style.backdropFilter = el.classList.contains('side-menu') ? 'none' : 'blur(20px)';
+                el.style.webkitBackdropFilter = el.classList.contains('side-menu') ? 'none' : 'blur(20px)';
+                el.style.border = 'none';
             });
             localStorage.setItem('cardStyle', style);
-        }
-
-        // Shadow Intensity Change
-        function changeShadowIntensity(intensity) {
-            document.documentElement.style.setProperty('--shadow', `0 6px 20px rgba(0, 0, 0, ${intensity})`);
-            localStorage.setItem('shadowIntensity', intensity);
-            document.getElementById('shadowIntensityValue').textContent = intensity;
         }
 
         // Section Visibility Toggle
@@ -1098,111 +950,59 @@
             localStorage.setItem('sectionVisibility', section);
         }
 
-        // Update GitHub Stats Theme
-        function updateGitHubStatsTheme() {
-            const accentColor = getComputedStyle(document.documentElement).getPropertyValue('--accent').trim();
-            const headlineColor = getComputedStyle(document.documentElement).getPropertyValue('--secondary').trim();
-            const iconColor = getComputedStyle(document.documentElement).getPropertyValue('--icon-color').trim();
-            const githubStatsImg = document.querySelector('img[alt="Activity Graph"]');
-            if (githubStatsImg) {
-                const url = new URL(githubStatsImg.src);
-                url.searchParams.set('color', iconColor.replace('#', ''));
-                url.searchParams.set('line', headlineColor.replace('#', ''));
-                url.searchParams.set('point', accentColor.replace('#', ''));
-                githubStatsImg.src = url.toString();
-            }
-            const statsImg = document.querySelector('img[alt="Stats"]');
-            if (statsImg) {
-                const url = new URL(statsImg.src);
-                url.searchParams.set('title_color', headlineColor.replace('#', ''));
-                url.searchParams.set('text_color', 'e0e0e0');
-                url.searchParams.set('icon_color', iconColor.replace('#', ''));
-                statsImg.src = url.toString();
-            }
-            const streakImg = document.querySelector('img[alt="Streak"]');
-            if (streakImg) {
-                const url = new URL(streakImg.src);
-                url.searchParams.set('dates', headlineColor.replace('#', ''));
-                url.searchParams.set('stroke', iconColor.replace('#', ''));
-                streakImg.src = url.toString();
-            }
-            const langsImg = document.querySelector('img[alt="Languages"]');
-            if (langsImg) {
-                const url = new URL(langsImg.src);
-                url.searchParams.set('title_color', headlineColor.replace('#', ''));
-                url.searchParams.set('text_color', 'e0e0e0');
-                url.searchParams.set('icon_color', iconColor.replace('#', ''));
-                langsImg.src = url.toString();
-            }
-        }
-
         // Scroll to Top
         function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            const mainContent = document.querySelector('.main-content');
+            if (mainContent) {
+                mainContent.scrollTo({ top: 0 });
+            }
         }
 
         // Reset Settings
         function resetSettings() {
             localStorage.clear();
-            changeFontSize(19.5);
-            changeAccentColor('#15ce49');
-            changeHeadlineColor('#15ce49');
-            changeIconColor('#15ce49');
-            changeAnimationSpeed(0.4);
+            changeFontSize('Large');
             changeCardStyle('bordered');
-            changeShadowIntensity(0.15);
             toggleSectionVisibility('all');
-            document.getElementById('fontSizeSlider').value = 19.5;
-            document.getElementById('accentColorPicker').value = '#15ce49';
-            document.getElementById('headlineColorPicker').value = '#15ce49';
-            document.getElementById('iconColorPicker').value = '#15ce49';
-            document.getElementById('animationSpeedSelect').value = '0.4';
-            document.getElementById('cardStyleSelect').value = 'bordered';
-            document.getElementById('shadowIntensitySlider').value = 0.15;
-            document.getElementById('sectionVisibilitySelect').value = 'all';
+            const cardStyleSelect = document.getElementById('cardStyleSelect');
+            const sectionVisibilitySelect = document.getElementById('sectionVisibilitySelect');
+            const textSizeSelect = document.getElementById('textSizeSelect');
+            if (cardStyleSelect) cardStyleSelect.value = 'bordered';
+            if (sectionVisibilitySelect) sectionVisibilitySelect.value = 'all';
+            if (textSizeSelect) {
+                textSizeSelect.value = 'Large';
+                textSizeSelect.classList.remove('text-size-select-visible');
+            }
         }
 
-        // Search Functionality
-        const searchInput = document.getElementById('searchInput');
-        searchInput.addEventListener('input', throttle(function() {
-            const query = this.value.toLowerCase().trim();
-            const sections = document.querySelectorAll('.section');
-            sections.forEach(section => {
-                const textContent = section.textContent.toLowerCase();
-                section.style.display = query === '' || textContent.includes(query) ? 'block' : 'none';
-            });
-        }, 300));
+        // Initialize on DOMContentLoaded
+        document.addEventListener('DOMContentLoaded', () => {
+            // Search Functionality
+            const searchInput = document.getElementById('searchInput');
+            if (searchInput) {
+                searchInput.addEventListener('input', throttle(function() {
+                    const query = this.value.toLowerCase().trim();
+                    const sections = document.querySelectorAll('.section');
+                    sections.forEach(section => {
+                        const textContent = section.textContent.toLowerCase();
+                        section.style.display = query === '' || textContent.includes(query) ? 'block' : 'none';
+                    });
+                }, 300));
+            }
 
-        // Load Saved Settings
-        window.addEventListener('load', () => {
-            const savedFontSize = localStorage.getItem('fontSize') || 19.5;
-            const savedAccentColor = localStorage.getItem('accentColor') || '#15ce49';
-            const savedHeadlineColor = localStorage.getItem('headlineColor') || '#15ce49';
-            const savedIconColor = localStorage.getItem('iconColor') || '#15ce49';
-            const savedAnimationSpeed = localStorage.getItem('animationSpeed') || 0.4;
+            // Load Saved Settings
+            const savedFontSize = localStorage.getItem('fontSize') || 'Large';
             const savedCardStyle = localStorage.getItem('cardStyle') || 'bordered';
-            const savedShadowIntensity = localStorage.getItem('shadowIntensity') || 0.15;
             const savedSectionVisibility = localStorage.getItem('sectionVisibility') || 'all';
-
             changeFontSize(savedFontSize);
-            changeAccentColor(savedAccentColor);
-            changeHeadlineColor(savedHeadlineColor);
-            changeIconColor(savedIconColor);
-            changeAnimationSpeed(savedAnimationSpeed);
             changeCardStyle(savedCardStyle);
-            changeShadowIntensity(savedShadowIntensity);
             toggleSectionVisibility(savedSectionVisibility);
-
-            document.getElementById('fontSizeSlider').value = savedFontSize;
-            document.getElementById('accentColorPicker').value = savedAccentColor;
-            document.getElementById('headlineColorPicker').value = savedHeadlineColor;
-            document.getElementById('iconColorPicker').value = savedIconColor;
-            document.getElementById('animationSpeedSelect').value = savedAnimationSpeed;
-            document.getElementById('cardStyleSelect').value = savedCardStyle;
-            document.getElementById('shadowIntensitySlider').value = savedShadowIntensity;
-            document.getElementById('sectionVisibilitySelect').value = savedSectionVisibility;
-            document.getElementById('fontSizeValue').textContent = `${savedFontSize}px`;
-            document.getElementById('shadowIntensityValue').textContent = savedShadowIntensity;
+            const cardStyleSelect = document.getElementById('cardStyleSelect');
+            const sectionVisibilitySelect = document.getElementById('sectionVisibilitySelect');
+            const textSizeSelect = document.getElementById('textSizeSelect');
+            if (cardStyleSelect) cardStyleSelect.value = savedCardStyle;
+            if (sectionVisibilitySelect) sectionVisibilitySelect.value = savedSectionVisibility;
+            if (textSizeSelect) textSizeSelect.value = savedFontSize;
         });
     </script>
 </body>
