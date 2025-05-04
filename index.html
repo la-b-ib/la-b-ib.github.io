@@ -688,373 +688,21 @@
   <!--End Links Section -->
 
 <!-- Start Resume Section -->
+  
 
 <section id="resume" class="resume">
-    <!-- Settings Panel -->
-    <div class="settings-panel">
-        <div class="control-bar">
-            <span class="material-icons" aria-label="Search">schema</span>
-            <input type="text" id="searchInput" placeholder="Search Resume..." aria-label="Search Resume">
-            <span class="material-icons" onclick="toggleMenu()" aria-label="Toggle Settings Menu">gamepad</span>
-        </div>
-    </div>
-
-    <!-- Side Menu -->
-    <div class="side-menu" id="sideMenu">
-        <h3>Customize Resume</h3>
-        <div class="menu-group">
-            <h4>Layout</h4>
-            <div class="menu-item">
-                <label><span class="material-icons">list_alt</span> Card Style</label>
-                <select id="cardStyleSelect" onchange="changeCardStyle(this.value)" aria-label="Select Card Style">
-                    <option value="default" selected>Default</option>
-                    <option value="grid">Grid</option>
-                </select>
-            </div>
-            <div class="menu-item">
-                <label><span class="material-icons">grid_view</span> Section Visibility</label>
-                <select id="sectionVisibilitySelect" onchange="toggleSectionVisibility(this.value)" aria-label="Select Section Visibility">
-                    <option value="all">Show All</option>
-                    <option value="github">GitHub Contributions</option>
-                    <option value="education">Education</option>
-                    <option value="experience">Professional Experience</option>
-                    <option value="skills">Technical Skills</option>
-                    <option value="certifications">Certifications</option>
-                    <option value="research">Research Publications</option>
-                    <option value="collaborations">Collaborations</option>
-                </select>
-            </div>
-            <div class="menu-item">
-                <label><span class="material-icons">edit_note</span> Text Size</label>
-                <select id="textSizeSelect" onchange="changeFontSize(this.value)" aria-label="Select Text Size">
-                    <option value="Small">Small</option>
-                    <option value="Medium">Medium</option>
-                    <option value="Large" selected>Large</option>
-                    <option value="Extra Large">Extra Large</option>
-                </select>
-            </div>
-        </div>
-        <div class="menu-item">
-            <div class="badge-container actions-box">
-                <a href="https://drive.google.com/file/d/1TtB9GEhgxRlTVQ5Ha-w9MWNBN6oXl2Jb/view" class="action-btn download-btn" aria-label="Download Resume"></a>
-                <button onclick="toggleTextSizeDropdown()" class="action-btn text-size-btn" aria-label="Toggle Text Size Dropdown"></button>
-                <button onclick="scrollToTop()" class="action-btn scroll-btn" aria-label="Scroll to Top"></button>
-                <button onclick="resetSettings()" class="action-btn reset-btn" aria-label="Reset Settings"></button>
-                <button onclick="toggleMenu()" class="action-btn close-btn" aria-label="Close Settings Menu"></button>
-            </div>
-        </div>
-    </div>
-
     <div class="container">
-        <style>
-            .settings-panel {
-                position: fixed;
-                top: 0;
-                right: 0;
-                z-index: 1000;
-            }
-            .control-bar {
-                display: flex;
-                align-items: center;
-                gap: 6px;
-                background: rgba(30, 37, 41, 0.95);
-                border-radius: 10px;
-                padding: 6px 8px;
-            }
-            .control-bar input {
-                background: transparent;
-                border: none;
-                color: #fff;
-                font-size: 0.75rem;
-                width: 140px;
-                outline: none;
-                font-weight: 700;
-                padding: 3px 6px;
-                border-radius: 5px;
-            }
-            .control-bar input::placeholder {
-                color: #fff;
-                opacity: 0.6;
-                font-weight: 700;
-            }
-            .control-bar .material-icons {
-                color: #15ce49;
-                cursor: pointer;
-                font-size: 18px;
-                border: none;
-                border-radius: 5px;
-                padding: 2px;
-            }
-            .side-menu {
-                position: fixed;
-                top: 50%;
-                transform: translateY(-50%);
-                right: -280px;
-                width: 280px;
-                height: auto;
-                max-height: 80vh;
-                background: #08213A;
-                padding: 12px 10px;
-                z-index: 2000;
-                overflow-y: auto;
-                color: #15ce49;
-                border-radius: 0;
-                border: none;
-                transition: right 0.3s ease;
-            }
-            .side-menu.active {
-                right: 0;
-            }
-            .side-menu h3 {
-                font-size: 17.0625px;
-                font-weight: 700;
-                color: #15ce49;
-                margin-bottom: 25px;
-                margin-left: 6px;
-                letter-spacing: 0.5px;
-            }
-            .side-menu h4 {
-                font-size: 14.625px;
-                font-weight: 700;
-                color: #15ce49;
-                margin-bottom: 5px;
-                margin-left: 6px;
-                opacity: 0.9;
-            }
-            .side-menu .menu-item {
-                margin-bottom: 25px;
-                padding: 6px;
-                border-radius: 6px;
-            }
-            .side-menu .menu-item label {
-                font-size: 14.625px;
-                font-weight: 700;
-                color: #15ce49;
-                margin-bottom: 3px;
-                display: flex;
-                align-items: center;
-                gap: 3px;
-            }
-            .side-menu .menu-item label .material-icons {
-                color: #15ce49;
-                font-size: 24px;
-            }
-            .side-menu select {
-                width: 100%;
-                padding: 5px;
-                border-radius: 5px;
-                background: rgba(40, 40, 48, 0.8);
-                border: 1px solid #15ce49;
-                color: #15ce49;
-                font-size: 14.625px;
-                font-weight: 700;
-            }
-            .side-menu select:focus {
-                outline: none;
-            }
-            .side-menu #textSizeSelect {
-                display: none;
-            }
-            .side-menu #textSizeSelect.text-size-select-visible {
-                display: block;
-            }
-            .side-menu .menu-item span {
-                font-size: 14.625px;
-                font-weight: 700;
-                color: #15ce49;
-            }
-            .side-menu .menu-group {
-                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-                padding-bottom: 10px;
-                margin-bottom: 25px;
-            }
-            .side-menu .actions-box {
-                display: grid;
-                grid-template-columns: repeat(5, 36px);
-                gap: 6px;
-                justify-content: start;
-                align-content: center;
-                padding: 6px;
-                overflow: hidden;
-                max-width: 220px;
-            }
-            .side-menu .action-btn {
-                width: 36px;
-                height: 36px;
-                min-width: 36px;
-                min-height: 36px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border-radius: 6px;
-                color: #fff;
-                cursor: pointer;
-                text-decoration: none;
-                box-sizing: border-box;
-            }
-            .side-menu .download-btn, .side-menu .download-btn:hover, .side-menu .download-btn:active, .side-menu .download-btn:visited {
-                background: #34A853;
-            }
-            .side-menu .download-btn::before {
-                content: 'download';
-                font-family: 'Material Icons';
-                font-size: 18px;
-            }
-            .side-menu .text-size-btn {
-                background: #4285F4;
-            }
-            .side-menu .text-size-btn::before {
-                content: 'edit_note';
-                font-family: 'Material Icons';
-                font-size: 18px;
-            }
-            .side-menu .scroll-btn {
-                background: #7950F2;
-            }
-            .side-menu .scroll-btn::before {
-                content: 'arrow_circle_up';
-                font-family: 'Material Icons';
-                font-size: 18px;
-            }
-            .side-menu .reset-btn {
-                background: #FF6200;
-            }
-            .side-menu .reset-btn::before {
-                content: 'sync';
-                font-family: 'Material Icons';
-                font-size: 18px;
-            }
-            .side-menu .close-btn {
-                background: #8B0000;
-            }
-            .side-menu .close-btn::before {
-                content: 'close';
-                font-family: 'Material Icons';
-                font-size: 18px;
-            }
-            @media (max-width: 768px) {
-                .control-bar {
-                    padding: 5px 6px;
-                }
-                .control-bar input {
-                    width: 120px;
-                    font-size: 0.625rem;
-                    font-weight: 700;
-                }
-                .control-bar .material-icons {
-                    font-size: 16px;
-                }
-                .side-menu {
-                    width: 240px;
-                    right: -240px;
-                    padding: 10px 8px;
-                    max-height: 80vh;
-                    border-radius: 0;
-                }
-                .side-menu h3 {
-                    font-size: 14.875px;
-                }
-                .side-menu h4 {
-                    font-size: 12.75px;
-                }
-                .side-menu .menu-item label {
-                    font-size: 12.75px;
-                    font-weight: 700;
-                }
-                .side-menu .menu-item label .material-icons {
-                    font-size: 22px;
-                }
-                .side-menu select {
-                    font-size: 12.75px;
-                    font-weight: 700;
-                }
-                .side-menu .menu-item span {
-                    font-size: 12.75px;
-                    font-weight: 700;
-                }
-                .side-menu .actions-box {
-                    grid-template-columns: repeat(5, 32px);
-                    gap: 5px;
-                    max-width: 190px;
-                }
-                .side-menu .action-btn {
-                    width: 32px;
-                    height: 32px;
-                    min-width: 32px;
-                    min-height: 32px;
-                }
-                .side-menu .action-btn::before {
-                    font-size: 16px;
-                }
-            }
-            @media (max-width: 480px) {
-                .control-bar {
-                    padding: 4px 5px;
-                }
-                .control-bar input {
-                    width: 100px;
-                    font-size: 0.5rem;
-                    font-weight: 700;
-                }
-                .control-bar .material-icons {
-                    font-size: 14px;
-                }
-                .side-menu {
-                    width: 200px;
-                    right: -200px;
-                    padding: 8px 6px;
-                    max-height: 80vh;
-                    border-radius: 0;
-                }
-                .side-menu h3 {
-                    font-size: 12.0833px;
-                }
-                .side-menu h4 {
-                    font-size: 9.6667px;
-                }
-                .side-menu .menu-item label {
-                    font-size: 9.6667px;
-                    font-weight: 700;
-                }
-                .side-menu .menu-item label .material-icons {
-                    font-size: 20px;
-                }
-                .side-menu select {
-                    font-size: 9.6667px;
-                    font-weight: 700;
-                }
-                .side-menu .menu-item span {
-                    font-size: 9.6667px;
-                    font-weight: 700;
-                }
-                .side-menu .actions-box {
-                    grid-template-columns: repeat(5, 28px);
-                    gap: 4px;
-                    max-width: 160px;
-                }
-                .side-menu .action-btn {
-                    width: 28px;
-                    height: 28px;
-                    min-width: 28px;
-                    min-height: 28px;
-                }
-                .side-menu .action-btn::before {
-                    font-size: 14px;
-                }
-            }
-        </style>
-
         <!-- Header -->
         <div class="section-title">
             <h2><b>Resume</b></h2>
         </div>
-        <div class="row mt-2">
+        <div class="row">
             <div class="col-md-12 d-flex align-items-stretch">
                 <div class="info-box">
                     <i class="bx bx-user"></i>
                     <h3><b>Labib Bin Shahed</b></h3>
                     <p><b>CS & Engineering Student @ BRACU | ML, NLP, Blockchain Researcher | IEEE CSBDC Secretariat President 2025 | Open Source Contributor | Seeking Global AI & Sustainability Collaborations</b></p>
-                    <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/labib.png" alt="Profile Picture of Labib Bin Shahed" class="profile-pic" style="width: 115px; height: 115px; object-fit: cover; border-radius: 0; margin-top: 25px;" loading="lazy">
+                    <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/labib.png" alt="Profile Picture of Labib Bin Shahed" class="profile-pic" loading="lazy">
                 </div>
             </div>
         </div>
@@ -1063,7 +711,7 @@
         <div class="section-title">
             <h2><b>GitHub Contributions</b></h2>
         </div>
-        <div class="row mt-2">
+        <div class="row">
             <div class="col-md-12 d-flex align-items-stretch">
                 <div class="info-box">
                     <i class="bx bx-stats"></i>
@@ -1073,24 +721,8 @@
                         <a href="https://github.com/la-b-ib"><img src="https://komarev.com/ghpvc/?username=la-b-ib&label=Views&style=for-the-badge&color=2088FF" alt="Profile Views"></a>
                     </div>
                     <div class="graph-container">
-                        <img src="https://github-readme-activity-graph.vercel.app/graph?username=la-b-ib&theme=transparent&area=true&hide_angle=true&hide_border=true&height=250&bg_color=000e1b&color=15ce49&line=4d8af0&point=ff7139&cache_seconds=3600" alt="Activity Graph" style="width: 100%;">
+                        <img src="https://github-readme-activity-graph.vercel.app/graph?username=la-b-ib&theme=transparent&area=true&hide_angle=true&hide_border=true&height=250&bg_color=000e1b&color=15ce49&line=4d8af0&point=ff7139&cache_seconds=3600" alt="Activity Graph">
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Education -->
-        <div class="section-title">
-            <h2><b>Education</b></h2>
-        </div>
-        <div class="row mt-2">
-            <div class="col-md-6 mt-4 d-flex align-items-stretch">
-                <div class="info-box">
-                    <i class="bx bx-school"></i>
-                    <h3><b>BRAC University</b></h3>
-                    <h4><b>January 2022 - Present</b></h4>
-                    <p><b>B.Sc in Computer Science and Engineering</b></p>
-                    <p><b>Relevant Coursework: Cloud Computing, Machine Learning & Deep Learning, Database Management Systems, Algorithms & Optimization</b></p>
                 </div>
             </div>
         </div>
@@ -1099,24 +731,24 @@
         <div class="section-title">
             <h2><b>Certifications</b></h2>
         </div>
-        <div class="row mt-2">
+        <div class="row">
             <div class="col-md-12 d-flex align-items-stretch">
                 <div class="info-box">
                     <i class="bx bx-award"></i>
                     <h3><b>Certifications</b></h3>
                     <div class="badge-list">
-                        <a href="https://www.linkedin.com/learning/certificates/759119dcc46bdb4e63fb82dc49ed0ad4288a97d9031dd360fdb0686f65b0b398"><img src="https://img.shields.io/badge/Twilio-F22F46?style=for-the-badge&logo=twilio&logoColor=white&labelStyle=bold" alt="Twilio"></a>
-                        <a href="https://www.linkedin.com/learning/certificates/fe897b3437597f8b933ad2501b5de695916b026e0c841509df9545ecd7d83b0b"><img src="https://img.shields.io/badge/PMI-8C1D40?style=for-the-badge&logo=project-management-institute&logoColor=white&labelStyle=bold" alt="PMI"></a>
-                        <a href="https://www.linkedin.com/learning/certificates/e9fda53e1d56f77f2f78acaefd5fd9c9dfd3dce255ebd20be4d1cd3290629784"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white&labelStyle=bold" alt="GitHub"></a>
-                        <a href="https://www.linkedin.com/learning/certificates/73e313f844327f6f6a86a0984c7c45ee6b9eee1a3e283db48bb370d908b57dec"><img src="https://img.shields.io/badge/Microsoft-0078D4?style=for-the-badge&logo=microsoft&logoColor=white&labelStyle=bold" alt="Microsoft"></a>
-                        <a href="https://www.linkedin.com/learning/certificates/243b5362e2fc213ce658d04d6c21856b9ab9628a3e81b375927773cd8618fd49"><img src="https://img.shields.io/badge/LambdaTest-FF8C00?style=for-the-badge&logo=testing-library&logoColor=white&labelStyle=bold" alt="LambdaTest"></a>
-                        <a href="https://www.linkedin.com/learning/certificates/246ffec626263c5d4a8bea2c310bcc0cd836100f89d7e87c605082f43004b053"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelStyle=bold" alt="LinkedIn"></a>
-                        <a href="https://www.linkedin.com/learning/certificates/3719feeef2b7f6b1134ce2fb8887cad2d531b509b194f9ab82204ad2581b1cf3"><img src="https://img.shields.io/badge/SHRM-0083BE?style=for-the-badge&logo=shrm&logoColor=white&labelStyle=bold" alt="SHRM"></a>
-                        <a href="https://www.linkedin.com/learning/certificates/125c8879c94519f1a707ee5691ac5a6e5b5ca44002c3f532900f608765a2d2fa"><img src="https://img.shields.io/badge/HRCI-FF6D00?style=for-the-badge&logo=hrci&logoColor=white&labelStyle=bold" alt="HRCI"></a>
-                        <a href="https://www.linkedin.com/learning/certificates/6f99e870b41beae081989894b502a48e94af71cf8806e54a994cad682d092c5f"><img src="https://img.shields.io/badge/Blue_Prism-00A1E0?style=for-the-badge&logo=blue-prism&logoColor=white&labelStyle=bold" alt="Blue Prism"></a>
-                        <a href="https://drive.google.com/file/d/1TtB9GEhgxRlTVQ5Ha-w9MWNBN6oXl2Jb/view"><img src="https://img.shields.io/badge/IEEE-00629B?style=for-the-badge&logo=ieee&logoColor=white&labelStyle=bold" alt="IEEE"></a>
-                        <a href="https://drive.google.com/file/d/17SxPVFYELRmTnL-ottL5zVR29rsvGYBD/view"><img src="https://img.shields.io/badge/ICPE-34A853?style=for-the-badge&logo=google-drive&logoColor=white&labelStyle=bold" alt="ICPE"></a>
-                        <a href="https://www.linkedin.com/learning/certificates/e72b6f3475683106b11f92cc054a1f8d514ed33b6b8e6974f5b22d6f28ac2bdd"><img src="https://img.shields.io/badge/NASBA-1E3A8A?style=for-the-badge&logo=nasba&logoColor=white&labelStyle=bold" alt="NASBA"></a>
+                        <a href="https://www.linkedin.com/learning/certificates/759119dcc46bdb4e63fb82dc49ed0ad4288a97d9031dd360fdb0686f65b0b398"><img src="https://img.shields.io/badge/Twilio-F22F46?style=for-the-badge&logo=twilio&logoColor=white" alt="Twilio"></a>
+                        <a href="https://www.linkedin.com/learning/certificates/fe897b3437597f8b933ad2501b5de695916b026e0c841509df9545ecd7d83b0b"><img src="https://img.shields.io/badge/PMI-8C1D40?style=for-the-badge&logo=project-management-institute&logoColor=white" alt="PMI"></a>
+                        <a href="https://www.linkedin.com/learning/certificates/e9fda53e1d56f77f2f78acaefd5fd9c9dfd3dce255ebd20be4d1cd3290629784"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
+                        <a href="https://www.linkedin.com/learning/certificates/73e313f844327f6f6a86a0984c7c45ee6b9eee1a3e283db48bb370d908b57dec"><img src="https://img.shields.io/badge/Microsoft-0078D4?style=for-the-badge&logo=microsoft&logoColor=white" alt="Microsoft"></a>
+                        <a href="https://www.linkedin.com/learning/certificates/243b5362e2fc213ce658d04d6c21856b9ab9628a3e81b375927773cd8618fd49"><img src="https://img.shields.io/badge/LambdaTest-FF8C00?style=for-the-badge&logo=testing-library&logoColor=white" alt="LambdaTest"></a>
+                        <a href="https://www.linkedin.com/learning/certificates/246ffec626263c5d4a8bea2c310bcc0cd836100f89d7e87c605082f43004b053"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+                        <a href="https://www.linkedin.com/learning/certificates/3719feeef2b7f6b1134ce2fb8887cad2d531b509b194f9ab82204ad2581b1cf3"><img src="https://img.shields.io/badge/SHRM-0083BE?style=for-the-badge&logo=shrm&logoColor=white" alt="SHRM"></a>
+                        <a href="https://www.linkedin.com/learning/certificates/125c8879c94519f1a707ee5691ac5a6e5b5ca44002c3f532900f608765a2d2fa"><img src="https://img.shields.io/badge/HRCI-FF6D00?style=for-the-badge&logo=hrci&logoColor=white" alt="HRCI"></a>
+                        <a href="https://www.linkedin.com/learning/certificates/6f99e870b41beae081989894b502a48e94af71cf8806e54a994cad682d092c5f"><img src="https://img.shields.io/badge/Blue_Prism-00A1E0?style=for-the-badge&logo=blue-prism&logoColor=white" alt="Blue Prism"></a>
+                        <a href="https://drive.google.com/file/d/1TtB9GEhgxRlTVQ5Ha-w9MWNBN6oXl2Jb/view"><img src="https://img.shields.io/badge/IEEE-00629B?style=for-the-badge&logo=ieee&logoColor=white" alt="IEEE"></a>
+                        <a href="https://drive.google.com/file/d/17SxPVFYELRmTnL-ottL5zVR29rsvGYBD/view"><img src="https://img.shields.io/badge/ICPE-34A853?style=for-the-badge&logo=google-drive&logoColor=white" alt="ICPE"></a>
+                        <a href="https://www.linkedin.com/learning/certificates/e72b6f3475683106b11f92cc054a1f8d514ed33b6b8e6974f5b22d6f28ac2bdd"><img src="https://img.shields.io/badge/NASBA-1E3A8A?style=for-the-badge&logo=nasba&logoColor=white" alt="NASBA"></a>
                     </div>
                 </div>
             </div>
@@ -1126,32 +758,32 @@
         <div class="section-title">
             <h2><b>Research Publications</b></h2>
         </div>
-        <div class="row mt-2">
-            <div class="col-md-6 mt-4 d-flex align-items-stretch">
+        <div class="row">
+            <div class="col-md-6 d-flex align-items-stretch">
                 <div class="info-box">
                     <i class="bx bx-book"></i>
                     <h3><b>Blockchain in Project Management</b></h3>
                     <p><b>IEEE ICEIC 2025, Osaka | Ethereum-powered solution with Flutter and OCI</b></p>
                     <div class="badge-list">
-                        <a href="https://doi.org/10.1109/ICEIC64972.2025.10879668"><img src="https://img.shields.io/badge/DOI-10.1109%2FICEIC64972.2025.10879668-orange?style=for-the-badge&labelStyle=bold" alt="DOI"></a>
-                        <a href="https://iceic.org/2025/"><img src="https://img.shields.io/badge/IEEE_ICEIC_2025,_Osaka-0A77B1?style=for-the-badge&logo=ieee&logoColor=white&labelStyle=bold" alt="IEEE ICEIC 2025, Osaka"></a>
-                        <a href="https://www.ethereum.org/"><img src="https://img.shields.io/badge/Ethereum_powered_solution-4B0082?style=for-the-badge&logo=ethereum&logoColor=white&labelStyle=bold" alt="Powered Solution"></a>
-                        <a href="https://flutter.dev/"><img src="https://img.shields.io/badge/Flutter_+_OCI-FF5722?style=for-the-badge&logo=flutter&logoColor=white&labelStyle=bold" alt="Flutter + OCI"></a>
+                        <a href="https://doi.org/10.1109/ICEIC64972.2025.10879668"><img src="https://img.shields.io/badge/DOI-10.1109%2FICEIC64972.2025.10879668-orange?style=for-the-badge" alt="DOI"></a>
+                        <a href="https://iceic.org/2025/"><img src="https://img.shields.io/badge/IEEE_ICEIC_2025,_Osaka-0A77B1?style=for-the-badge&logo=ieee&logoColor=white" alt="IEEE ICEIC 2025, Osaka"></a>
+                        <a href="https://www.ethereum.org/"><img src="https://img.shields.io/badge/Ethereum_powered_solution-4B0082?style=for-the-badge&logo=ethereum&logoColor=white" alt="Powered Solution"></a>
+                        <a href="https://flutter.dev/"><img src="https://img.shields.io/badge/Flushter_+_OCI-FF5722?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter + OCI"></a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 mt-4 d-flex align-items-stretch">
+            <div class="col-md-6 d-flex align-items-stretch">
                 <div class="info-box">
                     <i class="bx bx-book"></i>
                     <h3><b>Crop Prediction Using Machine Learning and IoT</b></h3>
                     <p><b>IEEE ICRPSET 2024, Rajshahi | Precision Agriculture with IoT and ML</b></p>
                     <div class="badge-list">
-                        <a href="https://doi.org/10.1109/ICRPSET64863.2024.10955896"><img src="https://img.shields.io/badge/DOI-10.1109%2FICRPSET64863.2024.10955896-orange?style=for-the-badge&labelStyle=bold" alt="DOI"></a>
-                        <a href="https://ieeexplore.ieee.org/xpl/conhome/10955776/proceeding"><img src="https://img.shields.io/badge/IEEE_ICRPSET_2024,_Rajshahi-0A77B1?style=for-the-badge&logo=ieee&logoColor=white&labelStyle=bold" alt="ICRPSET 24"></a>
-                        <a href="https://aws.amazon.com/iot/"><img src="https://img.shields.io/badge/IoT_+_Machine_Learning-4B0082?style=for-the-badge&logo=aws-iot&logoColor=white&labelStyle=bold" alt="Tech Stack"></a>
-                        <a href="https://en.wikipedia.org/wiki/Precision_agriculture"><img src="https://img.shields.io/badge/Precision_Agriculture-FF5722?style=for-the-badge&logo=leaf&logoColor=white&labelStyle=bold" alt="Agriculture"></a>
-                        <a href="https://scikit-learn.org/"><img src="https://img.shields.io/badge/Random_Forest_+_SVM-0088CC?style=for-the-badge&logo=scikit-learn&logoColor=white&labelStyle=bold" alt="Algorithms"></a>
-                        <a href="https://www.arduino.cc/"><img src="https://img.shields.io/badge/Edge_Deployed-FF8800?style=for-the-badge&logo=arduino&logoColor=white&labelStyle=bold" alt="Deployment"></a>
+                        <a href="https://doi.org/10.1109/ICRPSET64863.2024.10955896"><img src="https://img.shields.io/badge/DOI-10.1109%2FICRPSET64863.2024.10955896-orange?style=for-the-badge" alt="DOI"></a>
+                        <a href="https://ieeexplore.ieee.org/xpl/conhome/10955776/proceeding"><img src="https://img.shields.io/badge/IEEE_ICRPSET_2024,_Rajshahi-0A77B1?style=for-the-badge&logo=ieee&logoColor=white" alt="ICRPSET 24"></a>
+                        <a href="https://aws.amazon.com/iot/"><img src="https://img.shields.io/badge/IoT_+_Machine_Learning-4B0082?style=for-the-badge&logo=aws-iot&logoColor=white" alt="Tech Stack"></a>
+                        <a href="https://en.wikipedia.org/wiki/Precision_agriculture"><img src="https://img.shields.io/badge/Precision_Agriculture-FF5722?style=for-the-badge&logo=leaf&logoColor=white" alt="Agriculture"></a>
+                        <a href="https://scikit-learn.org/"><img src="https://img.shields.io/badge/Random_Forest_+_SVM-0088CC?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Algorithms"></a>
+                        <a href="https://www.arduino.cc/"><img src="https://img.shields.io/badge/Edge_Deployed-FF8800?style=for-the-badge&logo=arduino&logoColor=white" alt="Deployment"></a>
                     </div>
                 </div>
             </div>
@@ -1161,128 +793,67 @@
         <div class="section-title">
             <h2><b>Technical Skills</b></h2>
         </div>
-        <div class="row mt-2">
-            <div class="col-md-6 mt-4 d-flex align-items-stretch">
+        <div class="row">
+            <div class="col-md-6 d-flex align-items-stretch">
                 <div class="info-box">
                     <i class="bx bx-code-alt"></i>
                     <h3><b>Languages & Databases</b></h3>
                     <div class="badge-list">
-                        <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white&labelStyle=bold" alt="Python"></a>
-                        <a href="https://www.java.com/"><img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white&labelStyle=bold" alt="Java"></a>
-                        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black&labelStyle=bold" alt="JavaScript"></a>
-                        <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-3178C6?style.for-the-badge&logo=typescript&logoColor=white&labelStyle=bold" alt="TypeScript"></a>
-                        <a href="https://docs.microsoft.com/en-us/dotnet/csharp/"><img src="https://img.shields.io/badge/C%23-239120?style.for-the-badge&logo=c-sharp&logoColor=white&labelStyle=bold" alt="C#"></a>
-                        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"><img src="https://img.shields.io/badge/HTML5-E34F26?style.for-the-badge&logo=html5&logoColor=white&labelStyle=bold" alt="HTML5"></a>
-                        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img src="https://img.shields.io/badge/CSS ^^3-1572B6?style.for-the-badge&logo=css3&logoColor=white&labelStyle=bold" alt="CSS3"></a>
-                        <a href="https://www.mysql.com/"><img src="https://img.shields.io/badge/MySQL-4479A1?style.for-the-badge&logo=mysql&logoColor=no-white Ascendancywhite&labelStyle=bold" alt="MySQL"></a>
-                        <a href="https://www.postgresql.org/"><img src="https://img.shields.io/badge/PostgreSQL-336791?style.for-the-badge&logo=postgresql&logoColor=white&labelStyle=bold" alt="PostgreSQL"></a>
+                        <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"></a>
+                        <a href="https://www.java.com/"><img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" alt="Java"></a>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"></a>
+                        <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-3178C6?style.for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"></a>
+                        <a href="https://docs.microsoft.com/en-us/dotnet/csharp/"><img src="https://img.shields.io/badge/C%23-239120?style.for-the-badge&logo=c-sharp&logoColor=white" alt="C#"></a>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"></a>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"></a>
+                        <a href="https://www.mysql.com/"><img src="https://img.shields.io/badge/MySQL-4479A1?style.for-the-badge&logo=mysql&logoColor=white" alt="MySQL"></a>
+                        <a href="https://www.postgresql.org/"><img src="https://img.shields.io/badge/PostgreSQL-336791?style.for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL"></a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 mt-4 d-flex align-items-stretch">
+            <div class="col-md-6 d-flex align-items-stretch">
                 <div class="info-box">
                     <i class="bx bx-code-alt"></i>
                     <h3><b>Frameworks, Libraries, Tools & Operating Systems</b></h3>
                     <div class="badge-list">
-                        <a href="https://www.djangoproject.com/"><img src="https://img.shields.io/badge/Django-092E20?style.for-the-badge&logo=django&logoColor=white&labelStyle=bold" alt="Django"></a>
-                        <a href="https://nodejs.org/"><img src="https://img.shields.io/badge/Node.js-43853D?(style.for-the-badge&logo=node.js&logoColor=white&labelStyle=bold" alt="Node.js"></a>
-                        <a href="https://reactjs.org/"><img src="https://img.shields.io/badge/React-61DAFB?style.for-the-badge&logo=react&logoColor=black&labelStyle=bold" alt="React"></a>
-                        <a href="https://angular.io/"><img src="https://img.shields.io/badge/Angular-DD0031?style.for-the-badge&logo=angular&logoColor=white&labelStyle=bold" alt="Angular"></a>
-                        <a href="https://dotnet.microsoft.com/apps/aspnet"><img src="https://img.shields.io/badge/ASP.NET_Core-512BD4?style.for-the-badge&logo=.net&logoColor=white&labelStyle=bold" alt="ASP.NET Core"></a>
-                        <a href="https://flutter.dev/"><img src="https://img.shields.io/badge/Flutter-02569B?style.for-the-badge&logo=flutter&logoColor=white&labelStyle=bold" alt="Flutter"></a>
-                        <a href="https://developer.apple.com/xcode/swiftui/"><img src="https://img.shields.io/badge/SwiftUI-F05138?style.for-the-badge&logo=swift&logoColor=white&labelStyle=bold" alt="SwiftUI"></a>
-                        <a href="https://getbootstrap.com/"><img src="https://img.shields.io/badge/Bootstrap-7952B3?style.for-the-badge&logo=bootstrap&logoColor=white&labelStyle=bold" alt="Bootstrap"></a>
-                        <a href="https://www.tensorflow.org/"><img src="https://img.shields.io/badge/TensorFlow-FF6F00?style.for-the-badge&logo=tensorflow&logoColor=white&labelStyle=bold" alt="TensorFlow"></a>
-                        <a href="https://pytorch.org/"><img src="https://img.shields.io/badge/PyTorch-EE4C2C?style.for-the-badge&logo=pytorch&logoColor=white&labelStyle=bold" alt="PyTorch"></a>
-                        <a href="https://opencv.org/"><img src="https://img.shields.io/badge/OpenCV-5C3EE8?style.for-the-badge&logo=opencv&logoColor=white&labelStyle=bold" alt="OpenCV"></a>
-                        <a href="https://scikit-learn.org/"><img src="https://img.shields.io/badge/Scikit_Learn-F7931E?style.for-the-badge&logo=scikit-learn&logoColor=white&labelStyle=bold" alt="Scikit-Learn"></a>
-                        <a href="https://git-scm.com/"><img src="https://img.shields.io/badge/Git-F05032?style.for-the-badge&logo=git&logoColor=white&labelStyle=bold" alt="Git"></a>
-                        <a href="https://www.npmjs.com/"><img src="https://img.shields.io/badge/npm-CB3837?style.for-the-badge&logo=npm&logoColor=white&labelStyle=bold" alt="npm"></a>
-                        <a href="https://aws.amazon.com/"><img src="https://img.shields.io/badge/AWS-FF9900?style.for-the-badge&logo=amazon-aws&logoColor=white&labelStyle=bold" alt="AWS"></a>
-                        <a href="https://cloud.google.com/"><img src="https://img.shields.io/badge/Google_Cloud-4285F4?style.for-the-badge&logo=google-cloud&logoColor=white&labelStyle=bold" alt="Google Cloud"></a>
-                        <a href="https://www.heroku.com/"><img src="https://img.shields.io/badge/Heroku-430098?style.for-the-badge&logo=heroku&logoColor=white&labelStyle=bold" alt="Heroku"></a>
-                        <a href="https://jupyter.org/"><img src="https://img.shields.io/badge/Jupyter-F37626?style.for-the-badge&logo=jupyter&logoColor=white&labelStyle=bold" alt="Jupyter"></a>
-                        <a href="https://ubuntu.com/"><img src="https://img.shields.io/badge/Ubuntu-E95420?style.for-the-badge&logo=ubuntu&logoColor=white&labelStyle=bold" alt="Ubuntu"></a>
-                        <a href="https://www.redhat.com/"><img src="https://img.shields.io/badge/Red_Hat-EE0000?style.for-the-badge&logo=redhat&logoColor=white&labelStyle=bold" alt="RedHat"></a>
-                        <a href="https://www.apple.com/macos/"><img src="https://img.shields.io/badge/macOS-000000?style.for-the-badge&logo=apple&logoColor=white&labelStyle=bold" alt="macOS"></a>
-                        <a href="https://www.freebsd.org/"><img src="https://img.shields.io/badge/FreeBSD-AB2B28?style.for-the-badge&logo=freebsd&logoColor=white&labelStyle=bold" alt="FreeBSD"></a>
+                        <a href="https://www.djangoproject.com/"><img src="https://img.shields.io/badge/Django-092E20?style.for-the-badge&logo=django&logoColor=white" alt="Django"></a>
+                        <a href="https://nodejs.org/"><img src="https://img.shields.io/badge/Node.js-43853D?style.for-the-badge&logo=node.js&logoColor=white" alt="Node.js"></a>
+                        <a href="https://reactjs.org/"><img src="https://img.shields.io/badge/React-61DAFB?style.for-the-badge&logo=react&logoColor=black" alt="React"></a>
+                        <a href="https://angular.io/"><img src="https://img.shields.io/badge/Angular-DD0031?style.for-the-badge&logo=angular&logoColor=white" alt="Angular"></a>
+                        <a href="https://dotnet.microsoft.com/apps/aspnet"><img src="https://img.shields.io/badge/ASP.NET_Core-512BD4?style.for-the-badge&logo=.net&logoColor=white" alt="ASP.NET Core"></a>
+                        <a href="https://flutter.dev/"><img src="https://img.shields.io/badge/Flutter-02569B?style.for-the-badge&logo=flutter&logoColor=white" alt="Flutter"></a>
+                        <a href="https://developer.apple.com/xcode/swiftui/"><img src="https://img.shields.io/badge/SwiftUI-F05138?style.for-the-badge&logo=swift&logoColor=white" alt="SwiftUI"></a>
+                        <a href="https://getbootstrap.com/"><img src="https://img.shields.io/badge/Bootstrap-7952B3?style.for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap"></a>
+                        <a href="https://www.tensorflow.org/"><img src="https://img.shields.io/badge/TensorFlow-FF6F00?style.for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow"></a>
+                        <a href="https://pytorch.org/"><img src="https://img.shields.io/badge/PyTorch-EE4C2C?style.for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch"></a>
+                        <a href="https://opencv.org/"><img src="https://img.shields.io/badge/OpenCV-5C3EE8?style.for-the-badge&logo=opencv&logoColor=white" alt="OpenCV"></a>
+                        <a href="https://scikit-learn.org/"><img src="https://img.shields.io/badge/Scikit_Learn-F7931E?style.for-the-badge&logo=scikit-learn&logoColor=white" alt="Scikit-Learn"></a>
+                        <a href="https://git-scm.com/"><img src="https://img.shields.io/badge/Git-F05032?style.for-the-badge&logo=git&logoColor=white" alt="Git"></a>
+                        <a href="https://www.npmjs.com/"><img src="https://img.shields.io/badge/npm-CB3837?style.for-the-badge&logo=npm&logoColor=white" alt="npm"></a>
+                        <a href="https://aws.amazon.com/"><img src="https://img.shields.io/badge/AWS-FF9900?style.for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS"></a>
+                        <a href="https://cloud.google.com/"><img src="https://img.shields.io/badge/Google_Cloud-4285F4?style.for-the-badge&logo=google-cloud&logoColor=white" alt="Google Cloud"></a>
+                        <a href="https://www.heroku.com/"><img src="https://img.shields.io/badge/Heroku-430098?style.for-the-badge&logo=heroku&logoColor=white" alt="Heroku"></a>
+                        <a href="https://jupyter.org/"><img src="https://img.shields.io/badge/Jupyter-F37626?style.for-the-badge&logo=jupyter&logoColor=white" alt="Jupyter"></a>
+                        <a href="https://ubuntu.com/"><img src="https://img.shields.io/badge/Ubuntu-E95420?style.for-the-badge&logo=ubuntu&logoColor=white" alt="Ubuntu"></a>
+                        <a href="https://www.redhat.com/"><img src="https://img.shields.io/badge/Red_Hat-EE0000?style.for-the-badge&logo=redhat&logoColor=white" alt="RedHat"></a>
+                        <a href="https://www.apple.com/macos/"><img src="https://img.shields.io/badge/macOS-000000?style.for-the-badge&logo=apple&logoColor=white" alt="macOS"></a>
+                        <a href="https://www.freebsd.org/"><img src="https://img.shields.io/badge/FreeBSD-AB2B28?style.for-the-badge&logo=freebsd&logoColor=white" alt="FreeBSD"></a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 mt-4 d-flex align-items-stretch">
+            <div class="col-md-6 d-flex align-items-stretch">
                 <div class="info-box">
                     <i class="bx bx-code-alt"></i>
                     <h3><b>Open Source Projects</b></h3>
                     <div class="badge-list">
-                        <a href="https://github.com/la-b-ib/LeafByte"><img src="https://img.shields.io/badge/LeafByte-006400?style.for-the-badge&logo=leaf&logoColor=white&labelStyle=bold" alt="LeafByte"></a>
-                        <a href="https://github.com/la-b-ib/VitaSort"><img src="https://img.shields.io/badge/VitaSort-FF6B6B?style.for-the-badge&logo=notebook&logoColor=white&labelStyle=bold" alt="VitaSort"></a>
-                        <a href="https://github.com/la-b-ib/LitGrid"><img src="https://img.shields.io/badge/LitGrid-FFD43B?style.for-the-badge&logo=library&logoColor=black&labelStyle=bold" alt="LitGrid"></a>
-                        <a href="https://github.com/la-b-ib/CostNest"><img src="https://img.shields.io/badge/CostNest-7950F2?style.for-the-badge&logo=coin&logoColor=white&labelStyle=bold" alt="CostNest"></a>
-                        <a href="https://github.com/la-b-ib/DuskProbe"><img src="https://img.shields.io/badge/DuskProbe-212529?style.for-the-badge&logo=shield-check&logoColor=white&labelStyle=bold" alt="DuskProbe"></a>
-                        <a href="https://github.com/la-b-ib/la-b-ib.github.io"><img src="https://img.shields.io/badge/AURIX-0D6EFD?style.for-the-badge&logo=internet-explorer&logoColor=white&labelStyle=bold" alt="AURIX"></a>
-                        <a href="https://github.com/la-b-ib/MoodScope"><img src="https://img.shields.io/badge/MoodScope-FF0000?style.for-the-badge&logo=octopus&logoColor=white&labelStyle=bold" alt="MoodScope"></a>
+                        <a href="https://github.com/la-b-ib/LeafByte"><img src="https://img.shields.io/badge/LeafByte-006400?style.for-the-badge&logo=leaf&logoColor=white" alt="LeafByte"></a>
+                        <a href="https://github.com/la-b-ib/VitaSort"><img src="https://img.shields.io/badge/VitaSort-FF6B6B?style.for-the-badge&logo=notebook&logoColor=white" alt="VitaSort"></a>
+                        <a href="https://github.com/la-b-ib/LitGrid"><img src="https://img.shields.io/badge/LitGrid-FFD43B?style.for-the-badge&logo=library&logoColor=black" alt="LitGrid"></a>
+                        <a href="https://github.com/la-b-ib/CostNest"><img src="https://img.shields.io/badge/CostNest-7950F2?style.for-the-badge&logo=coin&logoColor=white" alt="CostNest"></a>
+                        <a href="https://github.com/la-b-ib/DuskProbe"><img src="https://img.shields.io/badge/DuskProbe-212529?style.for-the-badge&logo=shield-check&logoColor=white" alt="DuskProbe"></a>
+                        <a href="https://github.com/la-b-ib/la-b-ib.github.io"><img src="https://img.shields.io/badge/AURIX-0D6EFD?style.for-the-badge&logo=internet-explorer&logoColor=white" alt="AURIX"></a>
+                        <a href="https://github.com/la-b-ib/MoodScope"><img src="https://img.shields.io/badge/MoodScope-FF0000?style.for-the-badge&logo=octopus&logoColor=white" alt="MoodScope"></a>
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Professional Experience -->
-        <div class="section-title">
-            <h2><b>Professional Experience</b></h2>
-        </div>
-        <div class="row mt-2">
-            <div class="col-md-6 mt-4 d-flex align-items-stretch">
-                <div class="info-box">
-                    <i class="bx bx-briefcase"></i>
-                    <h3><b>IEEE Computer Society Bangladesh Chapter Secretariat</b></h3>
-                    <h4><b>President | January 2025 - Present</b></h4>
-                    <ul style="list-style-type: none; padding-left: 0;">
-                        <li><b><i class="icofont-rounded-right"></i> Define and execute strategic vision aligned with IEEE CS BDC Ex-Com directives.</b></li>
-                        <li><b><i class="icofont-rounded-right"></i> Orchestrate high-impact events to advance computer science education and innovation.</b></li>
-                        <li><b><i class="icofont-rounded-right"></i> Foster partnerships with academia, industry, and professional networks.</b></li>
-                        <li><b><i class="icofont-rounded-right"></i> Oversee resource allocation, funding, and sustainability strategies for enhanced branding.</b></li>
-                        <li><b><i class="icofont-rounded-right"></i> Develop programs for member skill development, career growth, and recognition.</b></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-6 mt-4 d-flex align-items-stretch">
-                <div class="info-box">
-                    <i class="bx bx-briefcase"></i>
-                    <h3><b>BRACU Express</b></h3>
-                    <h4><b>Journalist | April 2023 - January 2025</b></h4>
-                    <ul style="list-style-type: none; padding-left: 0;">
-                        <li><b><i class="icofont-rounded-right"></i> Conducted in-depth research and interviews for compelling, deadline-driven content.</b></li>
-                        <li><b><i class="icofont-rounded-right"></i> Enhanced engagement with multimedia, including photography and graphic design.</b></li>
-                        <li><b><i class="icofont-rounded-right"></i> Built strategic partnerships with academics, industry experts, and communities.</b></li>
-                        <li><b><i class="icofont-rounded-right"></i> Authored high-impact articles on trending university topics for BRACU Express.</b></li>
-                        <li><b><i class="icofont-rounded-right"></i> Collaborated with editors to refine drafts, ensuring consistent, high-quality publications.</b></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-6 mt-4 d-flex align-items-stretch">
-                <div class="info-box">
-                    <i class="bx bx-briefcase"></i>
-                    <h3><b>Tachyon</b></h3>
-                    <h4><b>Journalist | April 2023 - January 2025</b></h4>
-                    <ul style="list-style-type: none; padding-left: 0;">
-                        <li><b><i class="icofont-rounded-right"></i> Analyzed scientific papers to create accessible educational content for Tachyon’s mission.</b></li>
-                        <li><b><i class="icofont-rounded-right"></i> Developed expertise in science communication to boost STEM engagement.</b></li>
-                        <li><b><i class="icofont-rounded-right"></i> Produced articles simplifying complex concepts in physics and environmental science.</b></li>
-                        <li><b><i class="icofont-rounded-right"></i> Contributed remotely as Science Content Writer (ID: 202 locating301003), advancing science literacy.</b></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-6 mt-4 d-flex align-items-stretch">
-                <div class="info-box">
-                    <i class="bx bx-briefcase"></i>
-                    <h3><b>IEEE PES Day</b></h3>
-                    <h4><b>Ambassador | February 2024 - May 2024</b></h4>
-                    <ul style="list-style-type: none; padding-left: 0;">
-                        <li><b><i class="icofont-rounded-right"></i> Selected as IEEE PES Day 2024 Ambassador (ID: PESDAY24-217) for "Empowering Electric Mobility Innovation."</b></li>
-                        <li><b><i class="icofont-rounded-right"></i> Connected with 700+ global ambassadors to enhance leadership and collaboration.</b></li>
-                        <li><b><i class="icofont-rounded-right"></i> Led webinar on "Future Trends in Electric Mobility" on April 23, 2024, with IEEE PES BRACU Chapter.</b></li>
-                        <li><b><i class="icofont-rounded-right"></i> Promoted sustainable mobility via digital and community initiatives during IEEE PES Day (April 22–24, 2024).</b></li>
-                    </ul>
                 </div>
             </div>
         </div>
@@ -1291,7 +862,7 @@
         <div class="section-title">
             <h2><b>Collaborations</b></h2>
         </div>
-        <div class="row mt-2">
+        <div class="row">
             <div class="col-md-12 d-flex align-items-stretch">
                 <div class="info-box">
                     <i class="bx bx-group"></i>
@@ -1299,173 +870,24 @@
                     <p><b>Let’s build solutions that make a difference, globally!</b></p>
                     <p><b>“Code smart. Build secure. Scale global.”</b></p>
                     <div class="badge-list">
-                        <a href="mailto:labib.45x@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style.for-the-badge&logo=gmail&logoColor=white&labelStyle=bold" alt="Email"></a>
-                        <a href="https://github.com/la-b-ib"><img src="https://img.shields.io/badge/GitHub-181717?style.for-the-badge&logo=github&logoColor=white&labelStyle=bold" alt="GitHub"></a>
-                        <a href="https://www.linkedin.com/in/la-b-ib/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style.for-the-badge&logo=linkedin&logoColor=white&labelStyle=bold" alt="LinkedIn"></a>
-                        <a href="https://la-b-ib.github.io/"><img src="https://img.shields.io/badge/Website-0A5C78?style.for-the-badge&logo=internet-explorer&logoColor=white&labelStyle=bold" alt="Portfolio"></a>
-                        <a href="https://x.com/la_b_ib_"><img src="https://img.shields.io/badge/X-1DA1F2?style.for-the-badge&logo=twitter&logoColor=white&labelStyle=bold" alt="X"></a>
-                        <a href="https://orcid.org/0009-0007-4656-8709"><img src="https://img.shields.io/badge/ORCID-A6CE39?style.for-the-badge&logo=orcid&logoColor=white&labelStyle=bold" alt="ORCID"></a>
-                        <a href="https://www.researchgate.net/profile/Labib-Bin-Shahed"><img src="https://img.shields.io/badge/ResearchGate-006400?style.for-the-badge&logo=researchgate&logoColor=white&labelStyle=bold" alt="ResearchGate"></a>
-                        <a href="https://scholar.google.com/citations?hl=en&user=xg04A5kAAAAJ"><img src="https://img.shields.io/badge/Google_Scholar-4285F4?style.for-the-badge&logo=google-scholar&logoColor=white&labelStyle=bold" alt="Google Scholar"></a>
-                        <a href="https://ieeexplore.ieee.org/author/398407024257618"><img src="https://img.shields.io/badge/IEEE_Xplore-00629B?style.for-the-badge&logo=ieee&logoColor=white&labelStyle=bold" alt="IEEE Xplore"></a>
+                        <a href="mailto:labib.45x@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style.for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
+                        <a href="https://github.com/la-b-ib"><img src="https://img.shields.io/badge/GitHub-181717?style.for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
+                        <a href="https://www.linkedin.com/in/la-b-ib/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style.for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+                        <a href="https://la-b-ib.github.io/"><img src="https://img.shields.io/badge/Website-0A5C78?style.for-the-badge&logo=internet-explorer&logoColor=white" alt="Portfolio"></a>
+                        <a href="https://x.com/la_b_ib_"><img src="https://img.shields.io/badge/X-1DA1F2?style.for-the-badge&logo=twitter&logoColor=white" alt="X"></a>
+                        <a href="https://orcid.org/0009-0007-4656-8709"><img src="https://img.shields.io/badge/ORCID-A6CE39?style.for-the-badge&logo=orcid&logoColor=white" alt="ORCID"></a>
+                        <a href="https://www.researchgate.net/profile/Labib-Bin-Shahed"><img src="https://img.shields.io/badge/ResearchGate-006400?style.for-the-badge&logo=researchgate&logoColor=white" alt="ResearchGate"></a>
+                        <a href="https://scholar.google.com/citations?hl=en&user=xg04A5kAAAAJ"><img src="https://img.shields.io/badge/Google_Scholar-4285F4?style.for-the-badge&logo=google-scholar&logoColor=white" alt="Google Scholar"></a>
+                        <a href="https://ieeexplore.ieee.org/author/398407024257618"><img src="https://img.shields.io/badge/IEEE_Xplore-00629B?style.for-the-badge&logo=ieee&logoColor=white" alt="IEEE Xplore"></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <script>
-        // Throttle Function
-        function throttle(func, limit) {
-            let lastFunc;
-            let lastRan;
-            return function() {
-                const context = this;
-                const args = arguments;
-                if (!lastRan) {
-                    func.apply(context, args);
-                    lastRan = Date.now();
-                } else {
-                    clearTimeout(lastFunc);
-                    lastFunc = setTimeout(function() {
-                        if ((Date.now() - lastRan) >= limit) {
-                            func.apply(context, args);
-                            lastRan = Date.now();
-                        }
-                    }, limit - (Date.now() - lastRan));
-                }
-            };
-        }
-
-        // Toggle Side Menu
-        function toggleMenu() {
-            const sideMenu = document.getElementById('sideMenu');
-            if (sideMenu) {
-                sideMenu.classList.toggle('active');
-            }
-        }
-
-        // Toggle Text Size Dropdown
-        function toggleTextSizeDropdown() {
-            const textSizeSelect = document.getElementById('textSizeSelect');
-            if (textSizeSelect) {
-                textSizeSelect.classList.toggle('text-size-select-visible');
-            }
-        }
-
-        // Font Size Change
-        function changeFontSize(size) {
-            let fontSize;
-            switch (size) {
-                case 'Small':
-                    fontSize = 14.5;
-                    break;
-                case 'Medium':
-                    fontSize = 17;
-                    break;
-                case 'Large':
-                    fontSize = 19.5;
-                    break;
-                case 'Extra Large':
-                    fontSize = 21.5;
-                    break;
-                default:
-                    fontSize = 19.5;
-            }
-            document.documentElement.style.setProperty('--font-size', `${fontSize}px`);
-            localStorage.setItem('fontSize', size);
-        }
-
-        // Card Style Change
-        function changeCardStyle(style) {
-            const sections = document.querySelectorAll('.section');
-            sections.forEach(section => {
-                section.classList.remove('grid-view');
-                section.style.display = 'block';
-            });
-            const infoBoxes = document.querySelectorAll('.info-box');
-            infoBoxes.forEach(box => {
-                box.style.background = 'rgba(8, 33, 58, 0.55)';
-                box.style.border = 'none';
-                box.style.padding = '20px';
-                box.style.margin = '0';
-            });
-            if (style === 'grid') {
-                sections.forEach(section => {
-                    const boxCount = section.querySelectorAll('.info-box').length;
-                    if (boxCount > 1) {
-                        section.classList.add('grid-view');
-                        section.style.display = 'block';
-                    }
-                });
-            }
-            localStorage.setItem('cardStyle', style);
-        }
-
-        // Section Visibility Toggle
-        function toggleSectionVisibility(section) {
-            const sections = document.querySelectorAll('.section');
-            sections.forEach(sec => {
-                if (section === 'all' || sec.getAttribute('data-section') === section) {
-                    sec.style.display = 'block';
-                } else {
-                    sec.style.display = 'none';
-                }
-            });
-            localStorage.setItem('sectionVisibility', section);
-        }
-
-        // Scroll to Top
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-
-        // Reset Settings
-        function resetSettings() {
-            localStorage.removeItem('fontSize');
-            localStorage.removeItem('cardStyle');
-            localStorage.removeItem('sectionVisibility');
-            document.documentElement.style.setProperty('--font-size', '19.5px');
-            document.getElementById('textSizeSelect').value = 'Large';
-            document.getElementById('cardStyleSelect').value = 'default';
-            document.getElementById('sectionVisibilitySelect').value = 'all';
-            changeCardStyle('default');
-            toggleSectionVisibility('all');
-        }
-
-        // Search Functionality
-        const searchInput = document.getElementById('searchInput');
-        if (searchInput) {
-            searchInput.addEventListener('input', throttle(function() {
-                const searchTerm = searchInput.value.toLowerCase();
-                const sections = document.querySelectorAll('.section');
-                sections.forEach(section => {
-                    const content = section.textContent.toLowerCase();
-                    section.style.display = content.includes(searchTerm) ? 'block' : 'none';
-                });
-            }, 300));
-        }
-
-        // Initialize Settings
-        document.addEventListener('DOMContentLoaded', () => {
-            const savedFontSize = localStorage.getItem('fontSize') || 'Large';
-            const savedCardStyle = localStorage.getItem('cardStyle') || 'default';
-            const savedSectionVisibility = localStorage.getItem('sectionVisibility') || 'all';
-
-            changeFontSize(savedFontSize);
-            document.getElementById('textSizeSelect').value = savedFontSize;
-
-            changeCardStyle(savedCardStyle);
-            document.getElementById('cardStyleSelect').value = savedCardStyle;
-
-            toggleSectionVisibility(savedSectionVisibility);
-            document.getElementById('sectionVisibilitySelect').value = savedSectionVisibility;
-        });
-    </script>
 </section>
+
+  
+
 <!-- End Resume Section -->
   <!-- Start Contact Section -->
 
