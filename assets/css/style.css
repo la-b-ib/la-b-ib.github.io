@@ -1087,4 +1087,36 @@ body {
       transform: translateX(-50%);
     }
   }
+ 
+    /*--------------------------------------------------------------
+
+/* Fix portfolio item background */
+.portfolio .portfolio-wrap {
+    background: transparent !important; /* Remove white/gray overlay */
+}
+
+.portfolio .portfolio-wrap::before {
+    background: rgb(0, 0, 0) !important; /* Darken hover overlay */
+}
+/* Prevent white flashes on scroll */
+html, body {
+    background: #010e1b !important; /* Force dark background */
+    overscroll-behavior-y: contain; /* Disable iOS pull-to-refresh */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling */
+}
+
+/* Fix for iOS/Safari rendering */
+body::before {
+    height: 100% !important;
+    z-index: -1 !important;
+}
+
+/* Disable tap highlights */
+a, button, .portfolio-wrap {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+
+
   
