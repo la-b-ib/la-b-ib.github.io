@@ -1,4 +1,9 @@
-
+/**
+* Template Name: Personal - v2.1.0
+* Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
 
 /*--------------------------------------------------------------
 # General
@@ -183,80 +188,78 @@ body {
   
     /* Mobile Navigation */
 
-    /* Mobile Navigation Toggle - Keep existing JS behavior */
+  /* ===== Ultra-Optimized Mobile Navigation ===== */
+/* Toggle Button - Minimalist */
 .mobile-nav-toggle {
     position: fixed;
-    right: 15px;
-    top: 15px;
+    right: 12px;
+    top: 12px;
     z-index: 9998;
+    background: 0;
     border: 0;
-    background: #1c7d32; /* Solid green background */
-    font-size: 24px;
-    color: white;
-    width: 44px;
-    height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 0; /* No rounded corners */
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
   }
   
-  /* Mobile Navigation Menu - Solid with no borders */
+  .mobile-nav-toggle i {
+    color: #fff;
+    font-size: 24px;
+    display: block;
+    line-height: 1;
+  }
+  
+  /* Navigation Panel - Performance Optimized */
   .mobile-nav {
     position: fixed;
-    top: 55px; /* Matches your existing offset */
-    right: 0;
-    bottom: 0;
+    top: 0;
     left: 0;
+    width: 100vw;
+    height: 100vh;
     z-index: 9999;
-    background: #010e1b; /* Solid dark background */
-    overflow-y: auto;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease;
-    padding: 0; /* No padding */
+    background: #010e1b;
+    overflow: hidden auto;
+    transform: translateY(-100%);
+    will-change: transform;
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    overscroll-behavior: contain;
   }
   
   .mobile-nav-active .mobile-nav {
-    opacity: 1;
-    visibility: visible;
+    transform: translateY(0);
   }
   
-  /* Navigation Items - Clean list styling */
-  .mobile-nav * {
+  /* Navigation Items - GPU Optimized */
+  .mobile-nav ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2px;
+    padding: 60px 16px 16px;
     margin: 0;
-    padding: 0;
     list-style: none;
   }
   
   .mobile-nav a {
-    display: block;
-    color: white;
-    padding: 15px 20px;
-    font-weight: 500;
+    color: #fff;
+    padding: 14px 16px;
+    font: 500 16px/1.5 "Poppins", sans-serif;
     text-decoration: none;
-    border-bottom: 0; /* No borders */
+    display: block;
+    transform: translateZ(0);
   }
   
-  .mobile-nav a:hover, 
-  .mobile-nav .active > a {
+  .mobile-nav a:active {
     color: #12d640;
-    background: rgba(28, 125, 50, 0.1); /* Subtle hover state */
   }
   
-  /* Overlay - Removed since we're not using transparency */
-  .mobile-nav-overly {
-    display: none;
+  /* Remove all decorative elements */
+  .mobile-nav-overly,
+  .mobile-nav *:before,
+  .mobile-nav *:after {
+    display: none !important;
   }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 480px) {
-    .mobile-nav a {
-      padding: 12px 15px;
-      font-size: 16px;
-    }
-  }
-  
   /* Header Top */
   #header.header-top {
     height: 90px;
