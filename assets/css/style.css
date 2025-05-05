@@ -1096,7 +1096,7 @@ body {
 }
 
 .portfolio .portfolio-wrap::before {
-    background: rgb(0, 0, 0) !important; /* Darken hover overlay */
+    background: rgba(0, 0, 0, 0.803) !important; /* Darken hover overlay */
 }
 /* Prevent white flashes on scroll */
 html, body {
