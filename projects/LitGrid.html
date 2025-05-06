@@ -1,8 +1,9 @@
-<html lang="en"><head>
+<html lang="en">
+<head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title><b>LitGrid</b></title>
+  <title>LitGrid</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
@@ -24,6 +25,46 @@
   <!-- Template Main CSS File -->
   <link href="../assets/css/style.css" rel="stylesheet">
 
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    .portfolio-info {
+      padding: 0;
+    }
+    .portfolio-info h2 {
+      color: #12d640;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    .portfolio-info p {
+      font-weight: bold;
+      text-align: justify;
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+    .tech-stack {
+      font-weight: bold;
+    }
+    .project-link {
+      font-weight: bold;
+      color: #12d640;
+      text-decoration: none;
+    }
+    .project-link:hover {
+      text-decoration: underline;
+    }
+    
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      .portfolio-info {
+        padding: 0 5px;
+      }
+      .portfolio-info h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
 </head>
 
 <body data-gr-c-s-loaded="true">
@@ -31,29 +72,27 @@
   <main id="main">
     <div id="portfolio-details" class="portfolio-details">
       <div class="container">
-
         <div class="row">
-
           <div class="col-lg-12 portfolio-info">
-            <br>
-            <h2 style="color:#12d640"><b>LitGrid</b></h2>
+            <h2>LitGrid</h2>
+            <p>
+              <strong>Tech Stack</strong>: <span class="tech-stack">Google Apps Script, HTML5, Materialize CSS</span>
+            </p>
+            <p>
+              <strong>Github URL</strong>: <a href="https://github.com/la-b-ib/LitGrid" target="_blank" class="project-link">Project Link</a>
+            </p>
 
-            <ul style="list-style-type: none;">
-              <li><i class="icofont-rounded-right"></i><strong>Tech Stack</strong> : Google Apps Script, HTML5, Materialize CSS</li>
-              <li><i class="icofont-rounded-right"></i><strong>Github URL</strong> : <a href="https://github.com/la-b-ib/LitGrid" target="_blank"><b>Project Link</b></a></li>
-            </ul>
-
-            <p>LitGrid is a sleek, cloud-based library management system powered by Google Sheets and Apps Script, offering small to medium libraries a free, intuitive way to track books, members, and loans. With Material Design UI, it handles check-ins/outs, automatic fines, and real-time reporting—all synced via Google Sheets. Manage inventory, search titles, track overdue items, and generate analytics without complex software. Its Google-integrated authentication ensures secure access, while custom dialogs and responsive layouts streamline operations. Perfect for schools, nonprofits, or book clubs, LitGrid digitizes workflows with zero cost, running entirely in your browser. Just log in with a Google Account and transform your library management instantly.
+            <p>
+              LitGrid is a sleek, cloud-based library management system powered by Google Sheets and Apps Script, offering small to medium libraries a free, intuitive way to track books, members, and loans. With Material Design UI, it handles check-ins/outs, automatic fines, and real-time reporting—all synced via Google Sheets. Manage inventory, search titles, track overdue items, and generate analytics without complex software. Its Google-integrated authentication ensures secure access, while custom dialogs and responsive layouts streamline operations. Perfect for schools, nonprofits, or book clubs, LitGrid digitizes workflows with zero cost, running entirely in your browser. Just log in with a Google Account and transform your library management instantly.
             </p>
           </div>
-
         </div>
-
       </div>
     </div><!-- End Portfolio Details -->
   </main><!-- End #main -->
 
-  <script async="" src="//www.google-analytics.com/analytics.js"></script><script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script async="" src="//www.google-analytics.com/analytics.js"></script>
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
   <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
   <script src="../assets/vendor/php-email-form/validate.js"></script>
@@ -66,7 +105,17 @@
   <!-- Template Main JS File -->
   <script src="../assets/js/main.js"></script>
 
-  <script>if( window.self == window.top ) { (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-55234356-4', 'auto'); ga('send', 'pageview'); } </script>
-
+  <script>
+    if(window.self == window.top) { 
+      (function(i,s,o,g,r,a,m){
+        i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ 
+          (i[r].q=i[r].q||[]).push(arguments)
+        },i[r].l=1*new Date();a=s.createElement(o), 
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) 
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); 
+      ga('create', 'UA-55234356-4', 'auto'); 
+      ga('send', 'pageview'); 
+    }
+  </script>
 </body>
 </html>
