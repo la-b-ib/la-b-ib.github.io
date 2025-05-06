@@ -1115,6 +1115,45 @@ body::before {
 a, button, .portfolio-wrap {
     -webkit-tap-highlight-color: transparent;
 }
+/* Fix for venobox iframe container */
+.vbox-overlay {
+    background: rgba(1, 14, 27, 0.95) !important; /* Dark overlay */
+}
+
+.vbox-container {
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+.vbox-content {
+    background: transparent !important;
+    border: none !important;
+}
+
+.venobox iframe {
+    background: #010e1b !important; /* Match your dark theme */
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Remove any white backgrounds from portfolio items */
+.portfolio .portfolio-wrap::before {
+    background: rgba(1, 14, 27, 0.8) !important; /* Dark overlay instead of white */
+}
+
+.portfolio .portfolio-info {
+    background: transparent !important;
+}
+
+/* Prevent white flashes during transitions */
+.vbox-overlay, .vbox-container {
+    transition: none !important;
+    animation: none !important;
+}
+
+
 
 
 
