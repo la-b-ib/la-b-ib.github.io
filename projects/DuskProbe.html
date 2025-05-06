@@ -1,4 +1,5 @@
-<html lang="en"><head>
+<html lang="en">
+<head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
@@ -24,6 +25,46 @@
   <!-- Template Main CSS File -->
   <link href="../assets/css/style.css" rel="stylesheet">
 
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    .portfolio-info {
+      padding: 0;
+    }
+    .portfolio-info h2 {
+      color: #12d640;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    .portfolio-info p {
+      font-weight: bold;
+      text-align: justify;
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+    .tech-stack {
+      font-weight: bold;
+    }
+    .project-link {
+      font-weight: bold;
+      color: #12d640;
+      text-decoration: none;
+    }
+    .project-link:hover {
+      text-decoration: underline;
+    }
+    
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      .portfolio-info {
+        padding: 0 5px;
+      }
+      .portfolio-info h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
 </head>
 
 <body data-gr-c-s-loaded="true">
@@ -31,31 +72,27 @@
   <main id="main">
     <div id="portfolio-details" class="portfolio-details">
       <div class="container">
-
         <div class="row">
-
           <div class="col-lg-12 portfolio-info">
-            <br>
-            <h2 style="color:#12d640"><b>DuskProbe</b></h2>
-
-            <ul style="list-style-type: none;">
-              <li><i class="icofont-rounded-right"></i><strong>Tech Stack</strong> : aiohttp, Keras, Pandas, TensorFlow, spaCy, web3.py, AES-NI, Kubernetes, SQLmap, WPScan</li>
-              <li><i class="icofont-rounded-right"></i><strong>Github URL</strong> : <a href="https://github.com/la-b-ib/DuskProbe" target="_blank"><b>Project Link</b></a></li>
-            </ul>
+            <h2>DuskProbe</h2>
+            <p>
+              <strong>Tech Stack</strong>: <span class="tech-stack">aiohttp, Keras, Pandas, TensorFlow, spaCy, web3.py, AES-NI, Kubernetes, SQLmap, WPScan</span>
+            </p>
+            <p>
+              <strong>Github URL</strong>: <a href="https://github.com/la-b-ib/DuskProbe" target="_blank" class="project-link">Project Link</a>
+            </p>
 
             <p>
-              DuskProbe is a professional-grade web vulnerability scanner combining quantum encryption (AES-256-GCM + SHA3-256) with advanced detection techniques. It performs 200+ security tests—including XSS, SQLi, LFI, and Web3 audits—leveraging ML-assisted anomaly detection for high accuracy. Engineered for performance, it handles 1M URLs/day at 50,000 RPM/node with just 3ms latency, deployable across Kubernetes clusters. Integrated with MITRE ATT&CK and STIX/TAXII 2.1 threat intelligence, it delivers actionable SARIF, PDF, and HTML reports with risk scoring. Optimized for efficiency, it reduces scan times by 90% and false positives by 94%, making it ideal for pentesting, compliance, and CI/CD pipelines. Built with zero unsafe dependencies and full branch coverage, DuskProbe offers enterprise-grade security scanning without AI over-reliance.            
+              DuskProbe is a professional-grade web vulnerability scanner combining quantum encryption (AES-256-GCM + SHA3-256) with advanced detection techniques. It performs 200+ security tests—including XSS, SQLi, LFI, and Web3 audits—leveraging ML-assisted anomaly detection for high accuracy. Engineered for performance, it handles 1M URLs/day at 50,000 RPM/node with just 3ms latency, deployable across Kubernetes clusters. Integrated with MITRE ATT&CK and STIX/TAXII 2.1 threat intelligence, it delivers actionable SARIF, PDF, and HTML reports with risk scoring. Optimized for efficiency, it reduces scan times by 90% and false positives by 94%, making it ideal for pentesting, compliance, and CI/CD pipelines. Built with zero unsafe dependencies and full branch coverage, DuskProbe offers enterprise-grade security scanning without AI over-reliance.
             </p>
-            
           </div>
-
         </div>
-
       </div>
     </div><!-- End Portfolio Details -->
   </main><!-- End #main -->
 
-  <script async="" src="//www.google-analytics.com/analytics.js"></script><script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script async="" src="//www.google-analytics.com/analytics.js"></script>
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
   <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
   <script src="../assets/vendor/php-email-form/validate.js"></script>
@@ -67,6 +104,17 @@
 
   <script src="../assets/js/main.js"></script>
 
-  <script>if( window.self == window.top ) { (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-55234356-4', 'auto'); ga('send', 'pageview'); } </script>
+  <script>
+    if(window.self == window.top) { 
+      (function(i,s,o,g,r,a,m){
+        i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ 
+          (i[r].q=i[r].q||[]).push(arguments)
+        },i[r].l=1*new Date();a=s.createElement(o), 
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) 
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); 
+      ga('create', 'UA-55234356-4', 'auto'); 
+      ga('send', 'pageview'); 
+    }
+  </script>
 </body>
 </html>
