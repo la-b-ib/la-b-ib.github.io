@@ -1,9 +1,3 @@
-/**
-* Template Name: Personal - v2.1.0
-* Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 !(function($) {
   "use strict";
 
@@ -44,12 +38,11 @@
         }
 
         return false;
-
       }
     }
   });
 
-  // Activate/show sections on load with hash links
+  // Activate/show sections
   if (window.location.hash) {
     var initial_nav = window.location.hash;
     if ($(initial_nav).length) {
@@ -92,13 +85,13 @@
     $(".mobile-nav, .mobile-nav-toggle").hide();
   }
 
-  // jQuery counterUp
+  // CounterUp
   $('[data-toggle="counter-up"]').counterUp({
     delay: 10,
     time: 1000
   });
 
-  // Skills section
+  // Skills
   $('.skills-content').waypoint(function() {
     $('.progress .progress-bar').each(function() {
       $(this).css("width", $(this).attr("aria-valuenow") + '%');
@@ -107,25 +100,19 @@
     offset: '80%'
   });
 
-  // Testimonials carousel (uses the Owl Carousel library)
+  // Testimonials carousel
   $(".testimonials-carousel").owlCarousel({
     autoplay: true,
     dots: true,
     loop: true,
     responsive: {
-      0: {
-        items: 1
-      },
-      768: {
-        items: 2
-      },
-      900: {
-        items: 3
-      }
+      0: { items: 1 },
+      768: { items: 2 },
+      900: { items: 3 }
     }
   });
 
-  // Porfolio isotope and filter
+  // Portfolio isotope
   $(window).on('load', function() {
     var portfolioIsotope = $('.portfolio-container').isotope({
       itemSelector: '.portfolio-item',
@@ -135,38 +122,42 @@
     $('#portfolio-flters li').on('click', function() {
       $("#portfolio-flters li").removeClass('filter-active');
       $(this).addClass('filter-active');
-
-      portfolioIsotope.isotope({
-        filter: $(this).data('filter')
-      });
+      portfolioIsotope.isotope({ filter: $(this).data('filter') });
     });
-
   });
 
-  // Initiate venobox with dark theme settings
-$(document).ready(function() {
-  $('.venobox').venobox({
-    bgcolor: '#010e1b', // Match your dark background color
-    border: 'none',
-    framewidth: '90%', // Responsive width (90% of viewport)
-    frameheight: '90vh', // 90% of viewport height
-    numeratio: true, // Show image counter
-    infinigall: true, // Infinite gallery navigation
-    spinner: 'wave', // Loading spinner style
-    spinColor: '#12d640', // Spinner color matching your theme
-    overlayColor: 'rgba(1, 14, 27, 0.95)', // Dark overlay
-    closeBackground: '#12d640', // Close button background
-    closeColor: '#fff', // Close button color
-    css: {
-      'background-color': '#010e1b', // Force dark background
-      'box-shadow': 'none' // Remove any shadow
-    },
-    onOpen: function() {
-      // Additional dark theme adjustments when opening
-      $('.vbox-overlay').css('background', 'rgba(1, 14, 27, 0.95)');
-      $('.vbox-container').css('background', 'transparent');
-    }
+  // Venobox initialization with dark theme and no close button background
+  $(document).ready(function() {
+    $('.venobox').venobox({
+      bgcolor: '#010e1b',
+      border: 'none',
+      framewidth: '90%',
+      frameheight: '90vh',
+      numeratio: true,
+      infinigall: true,
+      spinner: 'wave',
+      spinColor: '#12d640',
+      overlayColor: 'rgba(1, 14, 27, 0.95)',
+      closeBackground: 'transparent', // No background
+      closeColor: '#12d640', // Only colored X
+      closeX: '×', // Simple X character
+      css: {
+        'background-color': '#010e1b',
+        'box-shadow': 'none'
+      },
+      onOpen: function() {
+        // Additional close button styling
+        $('.vbox-close').css({
+          'background': 'transparent',
+          'border': 'none',
+          'box-shadow': 'none',
+          'width': 'auto',
+          'height': 'auto',
+          'line-height': '1',
+          'font-size': '28px'
+        });
+      }
+    });
   });
-});
 
 })(jQuery);
