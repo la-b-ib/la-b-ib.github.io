@@ -143,9 +143,30 @@
 
   });
 
-  // Initiate venobox (lightbox feature used in portofilo)
-  $(document).ready(function() {
-    $('.venobox').venobox();
+  // Initiate venobox with dark theme settings
+$(document).ready(function() {
+  $('.venobox').venobox({
+    bgcolor: '#010e1b', // Match your dark background color
+    border: 'none',
+    framewidth: '90%', // Responsive width (90% of viewport)
+    frameheight: '90vh', // 90% of viewport height
+    numeratio: true, // Show image counter
+    infinigall: true, // Infinite gallery navigation
+    spinner: 'wave', // Loading spinner style
+    spinColor: '#12d640', // Spinner color matching your theme
+    overlayColor: 'rgba(1, 14, 27, 0.95)', // Dark overlay
+    closeBackground: '#12d640', // Close button background
+    closeColor: '#fff', // Close button color
+    css: {
+      'background-color': '#010e1b', // Force dark background
+      'box-shadow': 'none' // Remove any shadow
+    },
+    onOpen: function() {
+      // Additional dark theme adjustments when opening
+      $('.vbox-overlay').css('background', 'rgba(1, 14, 27, 0.95)');
+      $('.vbox-container').css('background', 'transparent');
+    }
   });
+});
 
 })(jQuery);
