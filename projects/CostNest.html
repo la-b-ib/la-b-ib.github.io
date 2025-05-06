@@ -1,11 +1,11 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">
-  <meta content="CostNest - Chrome Extension for Expense Tracking" name="description">
-  <meta content="CostNest, Chrome Extension, Expense Tracking, Budgeting, Material Design" name="keywords">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>CostNest</title>
+  <title>VitaSort</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
 
   <!-- Favicons -->
   <link href="../assets/img/favicon.png" rel="icon">
@@ -26,152 +26,64 @@
   <link href="../assets/css/style.css" rel="stylesheet">
 
   <style>
-    /* Force Dark Background and No Scrollbars */
-    html, body {
-      background-color: #010e1b !important;
-      color: #fff !important;
-      margin: 0;
-      padding: 0;
-      overflow: hidden; /* Prevent scrollbars when iframed */
-      height: 100%;
-      width: 100%;
+    body {
+      font-family: 'Poppins', sans-serif;
     }
-
-    /* Ensure content fits within viewport */
-    #main {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 1rem;
-    }
-
-    /* List Flush Styling */
-    .portfolio-info .list-flush {
-      padding-left: 0;
-      margin: 0.5rem 0;
-      list-style: none;
-    }
-
-    .portfolio-info .list-flush-item {
-      padding: 0.25rem 0;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-      display: flex;
-      align-items: center;
-    }
-
-    .portfolio-info .list-flush-item:last-child {
-      border-bottom: none;
-    }
-
-    /* Content Styling */
     .portfolio-info {
-      text-align: justify;
-      color: #fff !important;
-      max-width: 1200px;
-      margin: 0 auto;
+      padding: 0;
     }
-
     .portfolio-info h2 {
       color: #12d640;
-      margin-bottom: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 15px;
     }
-
     .portfolio-info p {
-      margin-bottom: 0;
-      line-height: 1.6;
+      font-weight: bold;
       text-align: justify;
+      margin-bottom: 15px;
+      line-height: 1.6;
     }
-
-    .portfolio-info a {
-      text-decoration: none;
-      color: #12d640 !important;
-      transition: color 0.3s ease;
+    .tech-stack {
+      font-weight: bold;
     }
-
-    .portfolio-info a:hover {
-      color: #0fa832 !important;
-    }
-
-    .portfolio-info i.icofont-rounded-right {
-      margin-right: 0.3rem;
+    .project-link {
+      font-weight: bold;
       color: #12d640;
+      text-decoration: none;
     }
-
-    /* Iframe No Scrollbar */
-    iframe {
-      scrollbar-width: none; /* Firefox */
-      -ms-overflow-style: none; /* IE and Edge */
+    .project-link:hover {
+      text-decoration: underline;
     }
-
-    iframe::-webkit-scrollbar {
-      display: none; /* Chrome, Safari, Opera */
-    }
-
-    /* Responsive Adjustments */
-    @media (max-width: 992px) {
-      .portfolio-info .list-flush {
-        margin: 0.4rem 0;
-      }
-
-      #main {
-        padding: 1.5rem;
-      }
-    }
-
+    
+    /* Mobile responsiveness */
     @media (max-width: 768px) {
-      #main {
-        padding: 1rem;
-      }
-    }
-
-    @media (max-width: 576px) {
-      .portfolio-info .list-flush {
-        margin: 0.3rem 0;
-      }
-
-      #main {
-        padding: 0.75rem;
-      }
-    }
-
-    /* Optimize for tablet */
-    @media (min-width: 769px) and (max-width: 992px) {
       .portfolio-info {
-        padding: 0 1.5rem;
+        padding: 0 5px;
       }
-    }
-
-    /* Smooth transitions for dynamic resizing */
-    .portfolio-info,
-    .portfolio-info h2,
-    .portfolio-info p,
-    .portfolio-info .list-flush-item {
-      transition: padding 0.3s ease;
+      .portfolio-info h2 {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
 
-<body>
-  <!-- ======= Portfolio Details ======= -->
+<body data-gr-c-s-loaded="true">
+
   <main id="main">
     <div id="portfolio-details" class="portfolio-details">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 portfolio-info">
-            <h2><strong>CostNest</strong></h2>
-            <ul class="list-flush">
-              <li class="list-flush-item">
-                <i class="icofont-rounded-right"></i>
-                <strong>Tech Stack</strong>: HTML5, CSS3, JavaScript (ES6+), Materialize CSS, Material Icons, Chrome Manifest V3, Chrome.storage API
-              </li>
-              <li class="list-flush-item">
-                <i class="icofont-rounded-right"></i>
-                <strong>Github URL</strong>: <a href="https://github.com/la-b-ib/CostNest" target="_blank">Project Link</a>
-              </li>
-            </ul>
+            <h2>CostNest</h2>
             <p>
-              <strong>CostNest is an advanced Chrome extension designed to track and analyze online shopping expenses in real time. It features a secure PIN lock system and an auto-lock mechanism to safeguard user data and privacy. The extension offers dynamic data visualization with interactive pie and line charts, providing clear insights into spending trends and monthly budgeting. Integrated filtering, sorting, and in-place editing make managing expenses effortless, while backup/restore and CSV export features ensure data portability. With a modern, responsive Material Design interface, CostNest delivers an intuitive and optimized user experience.</strong>
+              <strong>Tech Stack</strong>: <span class="tech-stack">HTML5, CSS3, JavaScript (ES6+), Materialize CSS, Material Icons, Chrome Manifest V3, Chrome.storage API</span>
+            </p>
+            <p>
+              <strong>Github URL</strong>: <a href="https://github.com/la-b-ib/CostNest" target="_blank" class="project-link">Project Link</a>
+            </p>
+
+            <p>
+              CostNest is an advanced Chrome extension designed to track and analyze online shopping expenses in real time. It features a secure PIN lock system and an auto-lock mechanism to safeguard user data and privacy. The extension offers dynamic data visualization with interactive pie and line charts, providing clear insights into spending trends and monthly budgeting. Integrated filtering, sorting, and in-place editing make managing expenses effortless, while backup/restore and CSV export features ensure data portability. With a modern, responsive Material Design interface, CostNest delivers an intuitive and optimized user experience.
             </p>
           </div>
         </div>
@@ -179,8 +91,8 @@
     </div><!-- End Portfolio Details -->
   </main><!-- End #main -->
 
-  <!-- Vendor JS Files -->
-  <script src="../assets/vendor/jquery/jquery.min.js"></script>
+  <script async="" src="//www.google-analytics.com/analytics.js"></script>
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
   <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
   <script src="../assets/vendor/php-email-form/validate.js"></script>
@@ -193,13 +105,17 @@
   <!-- Template Main JS File -->
   <script src="../assets/js/main.js"></script>
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-55234356-4"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-55234356-4');
+    if(window.self == window.top) { 
+      (function(i,s,o,g,r,a,m){
+        i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ 
+          (i[r].q=i[r].q||[]).push(arguments)
+        },i[r].l=1*new Date();a=s.createElement(o), 
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) 
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); 
+      ga('create', 'UA-55234356-4', 'auto'); 
+      ga('send', 'pageview'); 
+    }
   </script>
 </body>
 </html>
