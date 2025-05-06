@@ -1,8 +1,9 @@
-<html lang="en"><head>
+<html lang="en">
+<head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title><b>CostNest</b></title>
+  <title><strong>CostNest</strong></title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
@@ -24,6 +25,78 @@
   <!-- Template Main CSS File -->
   <link href="../assets/css/style.css" rel="stylesheet">
 
+  <style>
+    /* Force Dark Background */
+    body {
+      background-color: #010e1b !important;
+      color: #fff !important;
+      font-weight: bold;
+    }
+    
+    /* List Flush Styling */
+    .portfolio-info .list-flush {
+      padding-left: 0;
+      margin: 0.5rem 0;
+    }
+    
+    .portfolio-info .list-flush-item {
+      padding: 0.25rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .portfolio-info .list-flush-item:last-child {
+      border-bottom: none;
+    }
+    
+    /* Content Styling */
+    .portfolio-info {
+      text-align: justify;
+      color: #fff !important;
+    }
+    
+    .portfolio-info p {
+      margin-bottom: 0;
+      line-height: 1.6;
+    }
+    
+    .portfolio-info a {
+      font-weight: bold;
+      text-decoration: none;
+      color: #12d640 !important;
+    }
+    
+    .portfolio-info i.icofont-rounded-right {
+      margin-right: 0.3rem;
+      color: #12d640;
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .portfolio-info h2 {
+        font-size: 1.5rem;
+      }
+      
+      .portfolio-info .list-flush-item, 
+      .portfolio-info p {
+        font-size: 0.95rem;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .portfolio-info h2 {
+        font-size: 1.3rem;
+      }
+      
+      .portfolio-info .list-flush-item, 
+      .portfolio-info p {
+        font-size: 0.9rem;
+      }
+      
+      .portfolio-info .list-flush {
+        margin: 0.3rem 0;
+      }
+    }
+  </style>
 </head>
 
 <body data-gr-c-s-loaded="true">
@@ -32,30 +105,33 @@
   <main id="main">
     <div id="portfolio-details" class="portfolio-details">
       <div class="container">
-
         <div class="row">
-
           <div class="col-lg-12 portfolio-info">
             <br>
-            <h2 style="color:#12d640"><b>CostNest</b></h2>
-            <ul style="list-style-type: none;">
-              <li><i class="icofont-rounded-right"></i><strong>Tech Stack</strong> : HTML5, CSS3, JavaScript (ES6+), Materialize CSS, Material Icons, Chrome Manifest V3, Chrome.storage API</li>
-              <li><i class="icofont-rounded-right"></i><strong>Github URL</strong> : <a href="https://github.com/la-b-ib/CostNest" target="_blank"><b>Project Link</b></a></li>
+            <h2 style="color:#12d640"><strong>CostNest</strong></h2>
+            <ul class="list-flush">
+              <li class="list-flush-item">
+                <i class="icofont-rounded-right"></i>
+                <strong>Tech Stack</strong>: HTML5, CSS3, JavaScript (ES6+), Materialize CSS, Material Icons, Chrome Manifest V3, Chrome.storage API
+              </li>
+              <li class="list-flush-item">
+                <i class="icofont-rounded-right"></i>
+                <strong>Github URL</strong>: <a href="https://github.com/la-b-ib/CostNest" target="_blank">Project Link</a>
+              </li>
             </ul>
 
             <p>
-              CostNest is an advanced Chrome extension designed to track and analyze online shopping expenses in real time. It features a secure PIN lock system and an auto-lock mechanism to safeguard user data and privacy. The extension offers dynamic data visualization with interactive pie and line charts, providing clear insights into spending trends and monthly budgeting. Integrated filtering, sorting, and in-place editing make managing expenses effortless, while backup/restore and CSV export features ensure data portability. With a modern, responsive Material Design interface, CostNest delivers an intuitive and optimized user experience.
+              <strong>CostNest is an advanced Chrome extension designed to track and analyze online shopping expenses in real time. It features a secure PIN lock system and an auto-lock mechanism to safeguard user data and privacy. The extension offers dynamic data visualization with interactive pie and line charts, providing clear insights into spending trends and monthly budgeting. Integrated filtering, sorting, and in-place editing make managing expenses effortless, while backup/restore and CSV export features ensure data portability. With a modern, responsive Material Design interface, CostNest delivers an intuitive and optimized user experience.</strong>
             </p>
           </div>
-
         </div>
-
       </div>
     </div><!-- End Portfolio Details -->
   </main><!-- End #main -->
 
- <!-- Vendor JS Files -->
-  <script async="" src="//www.google-analytics.com/analytics.js"></script><script src="assets/vendor/jquery/jquery.min.js"></script>
+  <!-- Vendor JS Files -->
+  <script async="" src="//www.google-analytics.com/analytics.js"></script>
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
   <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
   <script src="../assets/vendor/php-email-form/validate.js"></script>
@@ -68,7 +144,20 @@
   <!-- Template Main JS File -->
   <script src="../assets/js/main.js"></script>
 
-  <script>if( window.self == window.top ) { (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-55234356-4', 'auto'); ga('send', 'pageview'); } </script>
-
+  <script>
+    if(window.self == window.top) { 
+      (function(i,s,o,g,r,a,m){
+        i['GoogleAnalyticsObject']=r;
+        i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},
+        i[r].l=1*new Date();
+        a=s.createElement(o), m=s.getElementsByTagName(o)[0];
+        a.async=1;
+        a.src=g;
+        m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); 
+      ga('create', 'UA-55234356-4', 'auto'); 
+      ga('send', 'pageview'); 
+    }
+  </script>
 </body>
 </html>
