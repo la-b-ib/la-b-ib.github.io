@@ -1,10 +1,8 @@
-/**
-* Template Name: Personal - v2.1.0
-* Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
+/*--------------------------------------------------------------
+# Material Icons
+--------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -1153,7 +1151,68 @@ a, button, .portfolio-wrap {
     animation: none !important;
 }
 
+/* ... your existing CSS ... */
 
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Hide default close button on mobile */
+.vbox-close {
+    display: none !important;
+}
+
+/*--------------------------------------------------------------
+# End of Styles
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Venobox Mobile Close Button
+--------------------------------------------------------------*/
+/* Custom gamepad close button for mobile */
+.custom-close-btn {
+    display: none; /* Hidden by default */
+}
+
+@media (max-width: 768px) {
+    .custom-close-btn {
+        display: block;
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        color: red !important;
+        background: transparent !important;
+        border: none !important;
+        font-size: 32px !important;
+        cursor: pointer;
+        z-index: 999999;
+        padding: 5px;
+        animation: pulse 1.5s infinite;
+        text-shadow: 0 0 5px rgba(255,0,0,0.7);
+    }
+    
+    .custom-close-btn i {
+        font-size: inherit !important;
+        color: inherit !important;
+    }
+    
+    .custom-close-btn:hover {
+        transform: scale(1.1);
+        transition: all 0.3s;
+    }
+    
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+    }
+    
+    /* Hide default close button on mobile */
+    .vbox-close {
+        display: none !important;
+    }
+}
 
 
 
