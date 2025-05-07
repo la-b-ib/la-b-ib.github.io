@@ -1304,12 +1304,9 @@
             flex: 0 0 auto;
             width: 33.333333%;
         }
-        #blogs .section-title {
-            margin-bottom: 25px;
-        }
     }
     
-    /* Mobile view: 3 boxes in 3 rows */
+    /* Mobile view: 3 boxes in 3 rows, centered with 25px left and right padding */
     @media (max-width: 768px) {
         #blogs .icon-box {
             padding: 20px;
@@ -1318,9 +1315,10 @@
             flex: 0 0 100%;
             width: 100%;
             margin-bottom: 20px;
-        }
-        #blogs .section-title {
-            margin-bottom: 25px;
+            padding-left: 25px;
+            padding-right: 25px;
+            display: flex;
+            justify-content: center;
         }
     }
 </style>
