@@ -1225,7 +1225,7 @@
       </div>
       <div class="row">
         <!-- BRACU Express -->
-        <div class="col-lg-4 col-md-6 col-12 mt-4 icon-box" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
           <a href="https://bracuexpress.com/author/labib/" target="_blank">
             <div class="icon"><i class="icofont-book"></i></div>
           </a>
@@ -1234,7 +1234,7 @@
         </div>
   
         <!-- DEV Community -->
-        <div class="col-lg-4 col-md-6 col-12 mt-4 icon-box" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
           <a href="https://dev.to/la-b-ib" target="_blank">
             <div class="icon"><i class="icofont-book"></i></div>
           </a>
@@ -1243,7 +1243,7 @@
         </div>
   
         <!-- Newsletter -->
-        <div class="col-lg-4 col-md-6 col-12 mt-4 icon-box" data-aos="fade-up" data-aos-delay="300">
+        <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
           <a href="https://www.linkedin.com/newsletters/tech-talk-7325845368900894722/" target="_blank">
             <div class="icon"><i class="icofont-book"></i></div>
           </a>
@@ -1252,14 +1252,20 @@
         </div>
       </div>
     </div>
-  </section>
-  
-  <style>
+</section>
+
+<style>
     /* Blog Section Styling */
     #blogs .container {
-      padding: 0 15px;
-      max-width: 1140px;
+      padding: 0;
+      max-width: calc(1140px - 50px); /* Reducing 25px from both sides */
       margin: 0 auto;
+    }
+    
+    #blogs .row {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -10px; /* Reduced from -15px */
     }
     
     #blogs .icon-box {
@@ -1292,39 +1298,39 @@
       font-weight: bold;
     }
     
-    /* Responsive Layout */
+    /* Column spacing */
+    .col-lg-4, .col-md-6 {
+      padding: 0 10px; /* Reduced from 15px */
+    }
+    
+    /* Desktop - 3 columns */
     @media (min-width: 992px) {
-      #blogs .row {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0 -15px;
-      }
-      #blogs .col-lg-4 {
+      .col-lg-4 {
         flex: 0 0 33.333333%;
         max-width: 33.333333%;
-        padding: 0 15px;
       }
     }
     
+    /* Tablet - 2 columns */
     @media (min-width: 768px) and (max-width: 991px) {
-      #blogs .col-md-6 {
+      .col-md-6 {
         flex: 0 0 50%;
         max-width: 50%;
-        padding: 0 15px;
       }
     }
     
+    /* Mobile - 1 column */
     @media (max-width: 767px) {
-      #blogs .col-12 {
+      #blogs .container {
+        padding: 0 10px; /* Reduced side spacing for mobile */
+      }
+      .col-md-6 {
         flex: 0 0 100%;
         max-width: 100%;
-        padding: 0 15px;
-      }
-      #blogs .icon-box {
-        margin: 10px 0;
       }
     }
-  </style>
+</style>
+
   <!-- End Blogs Section -->
   <!-- Start Contact Section -->
 
