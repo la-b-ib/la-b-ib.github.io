@@ -63,63 +63,101 @@
     });
   
     // Add icons to each mobile menu item
+  
+
+
     $mobile_nav.find('a').each(function() {
       var $this = $(this);
       var href = $this.attr('href') || '';
       
-      // Ultra-reliable icon mapping
+      // Ultra-reliable icon mapping with multiple fallbacks
       var iconMap = {
-        '#header': 'home',
-        '#about': 'person',
-        '#education': 'school',
-        '#certification': 'verified',
-        '#research': 'science',
-        '#experience': 'work_history',
-        '#projects': 'web',             // Most reliable projects icon for iOS
-        '#skills': 'build',             // More visible than psychology
-        '#blogs': 'article',            // Alternative: 'rss_feed'
-        '#contact': 'email'             // More reliable than contact_mail
+        '#header': {main: 'home', fallback: '🏠'},
+        '#about': {main: 'person', fallback: '👤'},
+        '#education': {main: 'school', fallback: '🏫'}, 
+        '#certification': {main: 'verified', fallback: '✅'},
+        '#research': {main: 'science', fallback: '🔬'},
+        '#experience': {main: 'work_history', fallback: '💼'},
+        '#projects': {main: 'code', fallback: '💻', emoji: '🖥️'}, // Multiple fallbacks
+        '#skills': {main: 'build', fallback: '🛠️'},
+        '#blogs': {main: 'article', fallback: '📰'},
+        '#contact': {main: 'email', fallback: '✉️'}
       };
     
-      // Find icon with fallback
-      var icon = Object.keys(iconMap).find(function(key) {
-        return href.includes(key);
-      }) ? iconMap[Object.keys(iconMap).find(function(key) {
-        return href.includes(key);
-      })] : '';
-    
-      // Create absolutely reliable icon element
-      if (icon) {
-        var $icon = $('<i>', {
-          class: 'material-icons mobile-menu-icon',
-          'aria-hidden': 'true',       // Accessibility improvement
-          text: icon,
-          css: {
-            'font-family': 'Material Icons !important',
-            'font-size': '25px !important',
-            'min-width': '25px !important',
-            'height': '25px !important',
-            'line-height': '25px !important',
-            'margin-right': '15px !important',
-            'color': '#0dcd3c !important',
-            'display': 'inline-flex !important',
-            'align-items': 'center !important',
-            'justify-content': 'center !important',
-            'font-feature-settings': "'liga' !important",
-            '-webkit-font-smoothing': 'antialiased !important',
-            'text-rendering': 'optimizeLegibility !important'
+      // Find matching icon
+      var iconData = Object.entries(iconMap).find(([key]) => href.includes(key))?.[1] || {};
+      
+      if (iconData.main) {
+        // Create primary icon element
+        var $iconContainer = $('<span>').addClass('mobile-menu-icon-container')
+          .css({
+            'display': 'inline-flex',
+            'align-items': 'center',
+            'justify-content': 'center',
+            'width': '25px',
+            'height': '25px',
+            'margin-right': '15px'
+          });
+        
+        // 1. Material Icon (primary)
+        var $materialIcon = $('<i>').addClass('material-icons mobile-menu-icon')
+          .text(iconData.main)
+          .css({
+            'font-family': 'Material Icons',
+            'font-size': '25px',
+            'color': '#0dcd3c',
+            'display': 'inline-flex',
+            'position': 'absolute'
+          });
+        
+        // 2. Text Fallback (secondary)
+        var $textFallback = $('<span>').addClass('icon-fallback-text')
+          .text(iconData.fallback)
+          .css({
+            'font-size': '20px',
+            'color': '#0dcd3c',
+            'display': 'none',
+            'position': 'absolute'
+          });
+        
+        // 3. Emoji Fallback (tertiary - for projects)
+        var $emojiFallback = $('<span>').addClass('icon-fallback-emoji');
+        if (href.includes('#projects')) {
+          $emojiFallback.text(iconData.emoji || iconData.fallback)
+            .css({
+              'font-size': '20px',
+              'display': 'none',
+              'position': 'absolute'
+            });
+        }
+        
+        // Add all layers to container
+        $iconContainer.append($materialIcon, $textFallback);
+        if (href.includes('#projects')) $iconContainer.append($emojiFallback);
+        
+        // Verify icon rendering after 1 second
+        setTimeout(() => {
+          // Check if Material Icon rendered correctly
+          var materialIconWidth = $materialIcon.width();
+          if (materialIconWidth === 0 || materialIconWidth === undefined) {
+            $materialIcon.hide();
+            if (href.includes('#projects') && $emojiFallback.length) {
+              $emojiFallback.show();
+            } else {
+              $textFallback.show();
+            }
           }
-        });
-    
-        // iOS specific fix
+        }, 1000);
+        
+        $this.prepend($iconContainer);
+        
+        // iOS-specific fixes
         if (navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform)) {
-          $icon.css({
+          $materialIcon.css({
             '-webkit-text-stroke': '0.45px transparent',
             'text-shadow': '0 0 0 #0dcd3c'
           });
         }
-    
-        $this.prepend($icon);
       }
     });
     // Append mobile navigation to body
