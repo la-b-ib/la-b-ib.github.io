@@ -1225,35 +1225,29 @@
         </div>
         <div class="row">
             <!-- BRACU Express -->
-            <div class="col-lg-4 col-md-6 col-12">
+            <div class="col-lg-4 col-md-6 col-12 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
                 <div class="icon-box">
-                    <a href="https://bracuexpress.com/author/labib/" target="_blank">
-                        <div class="icon"><i class="icofont-book"></i></div>
-                    </a>
-                    <h4 class="title"><a href="https://bracuexpress.com/author/labib/" target="_blank"><b>BRACU Express</b></a></h4>
-                    <p class="description"><b>NEWS & STORIES</b></p>
+                    <div class="icon"><i class="icofont-book"></i></div>
+                    <h4 class="title"><a href="https://bracuexpress.com/author/labib/" target="_blank">BRACU Express</a></h4>
+                    <p class="description">NEWS & STORIES</p>
                 </div>
             </div>
 
             <!-- DEV Community -->
-            <div class="col-lg-4 col-md-6 col-12">
+            <div class="col-lg-4 col-md-6 col-12 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
                 <div class="icon-box">
-                    <a href="https://dev.to/la-b-ib" target="_blank">
-                        <div class="icon"><i class="icofont-book"></i></div>
-                    </a>
-                    <h4 class="title"><a href="https://dev.to/la-b-ib" target="_blank"><b>DEV Community</b></a></h4>
-                    <p class="description"><b>BLOGS</b></p>
+                    <div class="icon"><i class="icofont-book"></i></div>
+                    <h4 class="title"><a href="https://dev.to/la-b-ib" target="_blank">DEV Community</a></h4>
+                    <p class="description">BLOGS</p>
                 </div>
             </div>
 
             <!-- Newsletter -->
-            <div class="col-lg-4 col-md-6 col-12">
+            <div class="col-lg-4 col-md-6 col-12 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
                 <div class="icon-box">
-                    <a href="https://www.linkedin.com/newsletters/tech-talk-7325845368900894722/" target="_blank">
-                        <div class="icon"><i class="icofont-book"></i></div>
-                    </a>
-                    <h4 class="title"><a href="https://www.linkedin.com/newsletters/tech-talk-7325845368900894722/" target="_blank"><b>NEWSLETTER</b></a></h4>
-                    <p class="description"><b>Tech Talk</b></p>
+                    <div class="icon"><i class="icofont-book"></i></div>
+                    <h4 class="title"><a href="https://www.linkedin.com/newsletters/tech-talk-7325845368900894722/" target="_blank">NEWSLETTER</a></h4>
+                    <p class="description">Tech Talk</p>
                 </div>
             </div>
         </div>
@@ -1261,37 +1255,23 @@
 </section>
 
 <style>
-    /* Blog Section Styling - Only affects the boxes */
-    #blogs .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 15px;
-    }
-    
-    #blogs .row {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0 -15px;
-    }
-    
-    #blogs .col-lg-4,
-    #blogs .col-md-6,
-    #blogs .col-12 {
-        padding: 0 15px;
-        box-sizing: border-box;
-    }
-    
+    /* Blog Section Styling */
     #blogs .icon-box {
         text-align: center;
-        padding: 30px 20px;
+        padding: 30px;
         background: rgba(255, 255, 255, 0.05);
         border-radius: 8px;
+        transition: all 0.3s ease-in-out;
         height: 100%;
-        margin-bottom: 30px;
+    }
+    
+    #blogs .icon-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     }
     
     #blogs .icon {
-        margin-bottom: 15px;
+        margin-bottom: 20px;
     }
     
     #blogs .icon i {
@@ -1304,38 +1284,26 @@
         text-decoration: none;
         font-weight: bold;
         font-size: 18px;
+        transition: color 0.3s;
+    }
+    
+    #blogs .title a:hover {
+        color: #10cf3e;
     }
     
     #blogs .description {
         color: #ffffff;
-        margin-top: 10px;
-        font-weight: bold;
+        margin-top: 15px;
         font-size: 14px;
     }
     
     /* Responsive adjustments */
-    @media (min-width: 992px) {
-        #blogs .col-lg-4 {
-            flex: 0 0 33.333%;
-            max-width: 33.333%;
-        }
-    }
-    
-    @media (min-width: 768px) and (max-width: 991px) {
-        #blogs .col-md-6 {
-            flex: 0 0 50%;
-            max-width: 50%;
-        }
-    }
-    
-    @media (max-width: 767px) {
-        #blogs .col-12 {
-            flex: 0 0 100%;
-            max-width: 100%;
+    @media (max-width: 768px) {
+        #blogs .icon-box {
+            padding: 20px;
         }
     }
 </style>
-
 
 
   <!-- End Blogs Section -->
