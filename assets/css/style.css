@@ -251,6 +251,51 @@ h1, h2, h3, h4, h5, h6 {
 .mobile-nav *:after {
     display: none !important;
 }
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Desktop Navigation */
+/* ... existing desktop nav styles ... */
+
+/* Mobile Navigation */
+/* ... existing mobile nav styles ... */
+
+/* Mobile Navigation Icons */
+.mobile-nav a .material-icons.mobile-menu-icon {
+    font-size: 25px;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    vertical-align: middle;
+    margin-right: 15px;
+    color: #0dcd3c;
+    transition: all 0.3s ease;
+  }
+  
+  .mobile-nav a:hover .material-icons.mobile-menu-icon,
+  .mobile-nav .active a .material-icons.mobile-menu-icon {
+    color: #0dcd3c;
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  
+  .mobile-nav a .material-icons.mobile-menu-icon {
+    opacity: 0.8;
+  }
+  
+  .mobile-nav a {
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+  }
+  
+  .nav-menu a .material-icons {
+    display: none;
+  }
+  
+  /* Header Top */
+
 
 /* Header Top */
 #header.header-top {
