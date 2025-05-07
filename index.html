@@ -1309,7 +1309,7 @@
         }
     }
     
-    /* Mobile view: 3 boxes in 3 rows */
+    /* Mobile view: 3 boxes in 3 rows, centered with full screen width */
     @media (max-width: 768px) {
         #blogs .icon-box {
             padding: 20px;
@@ -1318,6 +1318,11 @@
             flex: 0 0 100%;
             width: 100%;
             margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        #blogs .icon-box {
+            width: 100%;
         }
         #blogs .section-title {
             margin-bottom: 25px;
