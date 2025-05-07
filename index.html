@@ -1225,7 +1225,7 @@
       </div>
       <div class="row">
         <!-- BRACU Express -->
-        <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-lg-4 col-md-6 col-12 icon-box">
           <a href="https://bracuexpress.com/author/labib/" target="_blank">
             <div class="icon"><i class="icofont-book"></i></div>
           </a>
@@ -1234,7 +1234,7 @@
         </div>
   
         <!-- DEV Community -->
-        <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-lg-4 col-md-6 col-12 icon-box">
           <a href="https://dev.to/la-b-ib" target="_blank">
             <div class="icon"><i class="icofont-book"></i></div>
           </a>
@@ -1243,7 +1243,7 @@
         </div>
   
         <!-- Newsletter -->
-        <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+        <div class="col-lg-4 col-md-6 col-12 icon-box">
           <a href="https://www.linkedin.com/newsletters/tech-talk-7325845368900894722/" target="_blank">
             <div class="icon"><i class="icofont-book"></i></div>
           </a>
@@ -1257,28 +1257,36 @@
 <style>
     /* Blog Section Styling */
     #blogs .container {
-      padding: 0;
-      max-width: calc(1140px - 50px); /* Reducing 25px from both sides */
+      padding: 0 25px;
+      max-width: 1200px;
       margin: 0 auto;
+    }
+    
+    #blogs .section-title h2 {
+      color: #ffffff;
+      font-size: 32px;
+      margin-bottom: 30px;
+      text-align: center;
     }
     
     #blogs .row {
       display: flex;
       flex-wrap: wrap;
-      margin: 0 -10px; /* Reduced from -15px */
+      margin: 0 -15px;
     }
     
     #blogs .icon-box {
       text-align: center;
-      padding: 20px;
-      height: 100%;
+      padding: 30px 20px;
       background: rgba(255, 255, 255, 0.05);
       border-radius: 8px;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
+      width: 100%;
+      box-sizing: border-box;
     }
     
     #blogs .icon {
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
     
     #blogs .icon i {
@@ -1290,43 +1298,48 @@
       color: #ffffff;
       text-decoration: none;
       font-weight: bold;
+      font-size: 18px;
     }
     
     #blogs .description {
       color: #ffffff;
-      margin-top: 10px;
+      margin-top: 15px;
       font-weight: bold;
-    }
-    
-    /* Column spacing */
-    .col-lg-4, .col-md-6 {
-      padding: 0 10px; /* Reduced from 15px */
+      font-size: 14px;
     }
     
     /* Desktop - 3 columns */
     @media (min-width: 992px) {
-      .col-lg-4 {
-        flex: 0 0 33.333333%;
-        max-width: 33.333333%;
+      #blogs .col-lg-4 {
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+        padding: 0 15px;
       }
     }
     
     /* Tablet - 2 columns */
     @media (min-width: 768px) and (max-width: 991px) {
-      .col-md-6 {
+      #blogs .col-md-6 {
         flex: 0 0 50%;
         max-width: 50%;
+        padding: 0 15px;
       }
     }
     
-    /* Mobile - 1 column */
+    /* Mobile - 1 column with reduced side spacing */
     @media (max-width: 767px) {
       #blogs .container {
-        padding: 0 10px; /* Reduced side spacing for mobile */
+        padding: 0 25px;
       }
-      .col-md-6 {
+      
+      #blogs .col-12 {
         flex: 0 0 100%;
         max-width: 100%;
+        padding: 0;
+      }
+      
+      #blogs .icon-box {
+        margin: 0 0 25px 0;
       }
     }
 </style>
