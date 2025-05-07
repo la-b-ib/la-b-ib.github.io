@@ -262,11 +262,14 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Mobile Navigation Icons */
 /* Mobile Navigation Icons */
+/* Mobile Navigation Item Styling */
 .mobile-nav a {
     display: flex;
     padding: 14px 20px;
+    align-items: center; /* Ensures vertical alignment of icon with text */
 }
 
+/* Mobile Navigation Icons - Base Styling */
 .mobile-nav a .material-icons.mobile-menu-icon {
     font-family: 'Material Icons';
     font-size: 25px;
@@ -274,13 +277,22 @@ h1, h2, h3, h4, h5, h6 {
     height: 25px;
     margin-right: 15px;
     color: #0dcd3c;
+    display: inline-flex;
+    align-items: center;
+    font-feature-settings: 'liga'; /* Better icon rendering */
 }
 
-/* Active state */
+/* Active State */
 .mobile-nav .active a .material-icons.mobile-menu-icon {
     color: #0dcd3c;
 }
 
+/* Specific Icon Fixes */
+.mobile-nav a[href*="#projects"] .material-icons.mobile-menu-icon,
+.mobile-nav a[href*="#skills"] .material-icons.mobile-menu-icon,
+.mobile-nav a[href*="#blogs"] .material-icons.mobile-menu-icon {
+    opacity: 1 !important;
+}
   
   /* Header Top */
 
