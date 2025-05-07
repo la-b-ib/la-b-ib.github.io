@@ -57,109 +57,147 @@
   }
 
   // Mobile Navigation
-  if ($('.nav-menu').length) {
-    var $mobile_nav = $('.nav-menu').clone().prop({
-      class: 'mobile-nav d-lg-none'
-    });
-  
-    // Add icons to each mobile menu item
-  
+  // Mobile Navigation
+if ($('.nav-menu').length) {
+  var $mobile_nav = $('.nav-menu').clone().prop({
+    class: 'mobile-nav d-lg-none'
+  });
 
+  $mobile_nav.find('a').each(function() {
+    var $this = $(this);
+    var href = $this.attr('href') || '';
 
-    $mobile_nav.find('a').each(function() {
-      var $this = $(this);
-      var href = $this.attr('href') || '';
-      
-      // Ultra-reliable icon mapping with multiple fallbacks
-      var iconMap = {
-        '#header': {main: 'home', fallback: '🏠'},
-        '#about': {main: 'person', fallback: '👤'},
-        '#education': {main: 'school', fallback: '🏫'}, 
-        '#certification': {main: 'verified', fallback: '✅'},
-        '#research': {main: 'science', fallback: '🔬'},
-        '#experience': {main: 'work_history', fallback: '💼'},
-        '#projects': {main: 'code', fallback: '💻', emoji: '🖥️'}, // Multiple fallbacks
-        '#skills': {main: 'build', fallback: '🛠️'},
-        '#blogs': {main: 'article', fallback: '📰'},
-        '#contact': {main: 'email', fallback: '✉️'}
-      };
-    
-      // Find matching icon
-      var iconData = Object.entries(iconMap).find(([key]) => href.includes(key))?.[1] || {};
-      
-      if (iconData.main) {
-        // Create primary icon element
-        var $iconContainer = $('<span>').addClass('mobile-menu-icon-container')
-          .css({
-            'display': 'inline-flex',
-            'align-items': 'center',
-            'justify-content': 'center',
-            'width': '25px',
-            'height': '25px',
-            'margin-right': '15px'
-          });
-        
-        // 1. Material Icon (primary)
-        var $materialIcon = $('<i>').addClass('material-icons mobile-menu-icon')
-          .text(iconData.main)
-          .css({
-            'font-family': 'Material Icons',
-            'font-size': '25px',
-            'color': '#0dcd3c',
-            'display': 'inline-flex',
-            'position': 'absolute'
-          });
-        
-        // 2. Text Fallback (secondary)
-        var $textFallback = $('<span>').addClass('icon-fallback-text')
-          .text(iconData.fallback)
-          .css({
-            'font-size': '20px',
-            'color': '#0dcd3c',
-            'display': 'none',
-            'position': 'absolute'
-          });
-        
-        // 3. Emoji Fallback (tertiary - for projects)
-        var $emojiFallback = $('<span>').addClass('icon-fallback-emoji');
-        if (href.includes('#projects')) {
-          $emojiFallback.text(iconData.emoji || iconData.fallback)
-            .css({
-              'font-size': '20px',
-              'display': 'none',
-              'position': 'absolute'
-            });
-        }
-        
-        // Add all layers to container
+    // Ultra-reliable icon mapping with multiple fallbacks
+    var iconMap = {
+      '#header': { main: 'home', fallback: '🏠' },
+      '#about': { main: 'person', fallback: '👤' },
+      '#education': { main: 'school', fallback: '🏫' },
+      '#certification': { main: 'verified', fallback: '✅' },
+      '#research': { main: 'science', fallback: '🔬' },
+      '#experience': { main: 'work_history', fallback: '💼' },
+      '#portfolio': { type: 'image', src: 'https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/sidemenu-mobileview/skull.png', fallback: '💻' }, // Use image for Projects
+      '#skills': { main: 'build', fallback: '🛠️' },
+      '#blogs': { main: 'article', fallback: '📰' },
+      '#contacts': { main: 'email', fallback: '✉️' } // Updated to #contacts to match HTML
+    };
+
+    // Find matching icon
+    var iconData = Object.entries(iconMap).find(([key]) => href.includes(key))?.[1] || {};
+
+    if (iconData.main || iconData.type === 'image') {
+      // Create icon container
+      var $iconContainer = $('<span>').addClass('mobile-menu-icon-container').css({
+        'display': 'inline-flex',
+        'align-items': 'center',
+        'justify-content': 'center',
+        'width': '25px',
+        'height': '25px',
+        'margin-right': '15px'
+      });
+
+      if (iconData.type === 'image') {
+        // Image-based icon for Projects
+        var $imageIcon = $('<img>').addClass('mobile-menu-icon mobile-menu-image-icon').attr({
+          src: iconData.src,
+          alt: 'Projects Icon'
+        }).css({
+          'width': '25px',
+          'height': '25px',
+          'object-fit': 'contain',
+          'display': 'inline-flex',
+          'position': 'absolute'
+        });
+
+        // Fallback text
+        var $textFallback = $('<span>').addClass('icon-fallback-text').text(iconData.fallback).css({
+          'font-size': '20px',
+          'color': '#0dcd3c',
+          'display': 'none',
+          'position': 'absolute'
+        });
+
+        $iconContainer.append($imageIcon, $textFallback);
+
+        // Verify image loaded after 1 second
+        setTimeout(() => {
+          var img = new Image();
+          img.src = iconData.src;
+          img.onload = () => {
+            // Image loaded successfully
+            $imageIcon.show();
+          };
+          img.onerror = () => {
+            // Image failed to load
+            $imageIcon.hide();
+            $textFallback.show();
+          };
+        }, 1000);
+      } else {
+        // Material Icon for other items
+        var $materialIcon = $('<i>').addClass('material-icons mobile-menu-icon').text(iconData.main).css({
+          'font-family': 'Material Icons',
+          'font-size': '25px',
+          'color': '#0dcd3c',
+          'display': 'inline-flex',
+          'position': 'absolute'
+        });
+
+        var $textFallback = $('<span>').addClass('icon-fallback-text').text(iconData.fallback).css({
+          'font-size': '20px',
+          'color': '#0dcd3c',
+          'display': 'none',
+          'position': 'absolute'
+        });
+
         $iconContainer.append($materialIcon, $textFallback);
-        if (href.includes('#projects')) $iconContainer.append($emojiFallback);
-        
+
         // Verify icon rendering after 1 second
         setTimeout(() => {
-          // Check if Material Icon rendered correctly
           var materialIconWidth = $materialIcon.width();
           if (materialIconWidth === 0 || materialIconWidth === undefined) {
             $materialIcon.hide();
-            if (href.includes('#projects') && $emojiFallback.length) {
-              $emojiFallback.show();
-            } else {
-              $textFallback.show();
-            }
+            $textFallback.show();
           }
         }, 1000);
-        
-        $this.prepend($iconContainer);
-        
-        // iOS-specific fixes
-        if (navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform)) {
+      }
+
+      // iOS-specific fixes
+      if (navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform)) {
+        if (iconData.type !== 'image') {
           $materialIcon.css({
             '-webkit-text-stroke': '0.45px transparent',
             'text-shadow': '0 0 0 #0dcd3c'
           });
         }
       }
-    });
+
+      $this.prepend($iconContainer);
+    }
+  });
+
+  $('body').append($mobile_nav);
+  $('body').prepend('<button type="button" class="mobile-nav-toggle d-lg-none"><i class="icofont-navigation-menu"></i></button>');
+  $('body').append('<div class="mobile-nav-overly"></div>');
+
+  $(document).on('click', '.mobile-nav-toggle', function(e) {
+    $('body').toggleClass('mobile-nav-active');
+    $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
+    $('.mobile-nav-overly').toggle();
+  });
+
+  $(document).click(function(e) {
+    var container = $(".mobile-nav, .mobile-nav-toggle");
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+      if ($('body').hasClass('mobile-nav-active')) {
+        $('body').removeClass('mobile-nav-active');
+        $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
+        $('.mobile-nav-overly').fadeOut();
+      }
+    }
+  });
+} else if ($(".mobile-nav, .mobile-nav-toggle").length) {
+  $(".mobile-nav, .mobile-nav-toggle").hide();
+}
     // Append mobile navigation to body
   
     $('body').append($mobile_nav);
