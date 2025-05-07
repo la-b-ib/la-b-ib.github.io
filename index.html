@@ -609,6 +609,19 @@
                         </ul>
                     </div>
                 </div>
+
+                <!-- Research Profiles Section -->
+                <div class="research-profiles">
+                    <h4 style="color: #10cf3e; font-weight: 900; margin-top: 30px; margin-bottom: 15px;">Research Profiles</h4>
+                    <div class="research-badges">
+                        <a href="https://orcid.org/0009-0007-4656-8709"><img src="https://img.shields.io/badge/ORCID-eb2f06?style=for-the-badge&logo=orcid&logoColor=white" alt="ORCID" style="height:25px;"></a>
+                        <a href="https://www.researchgate.net/profile/Labib-Bin-Shahed"><img src="https://img.shields.io/badge/ResearchGate-006266?style=for-the-badge&logo=researchgate&logoColor=white" alt="ResearchGate" style="height:25px;"></a>
+                        <a href="https://scholar.google.com/citations?hl=en&user=xg04A5kAAAAJ"><img src="https://img.shields.io/badge/Scholar-70a1ff?style=for-the-badge&logo=google-scholar&logoColor=white" alt="Google Scholar" style="height:25px;"></a>
+                        <a href="https://ieeexplore.ieee.org/author/398407024257618"><img src="https://img.shields.io/badge/Xplore-273c75?style=for-the-badge&logo=ieee&logoColor=white" alt="IEEE Xplore" style="height:25px;"></a>
+                        <a href="#"><img src="https://img.shields.io/badge/Semantic-ff793f?style=for-the-badge&logo=semanticscholar&logoColor=white" alt="Semantic Scholar" style="height:25px;"></a>
+                        <a href="#"><img src="https://img.shields.io/badge/Mendeley-9D1620?style=for-the-badge&logo=mendeley&logoColor=white" alt="Mendeley" style="height:25px;"></a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -635,6 +648,25 @@
   .research-item ul {
     margin-bottom: 0;
   }
+
+  .research-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .research-badges a {
+    display: inline-block;
+    margin-right: 8px;
+    margin-bottom: 8px;
+  }
+
+  .research-badges img {
+    height: 25px;
+    width: auto;
+  }
   
   /* Responsive adjustments */
   @media (max-width: 768px) {
@@ -649,9 +681,28 @@
     .research-item .row > div:last-child {
       margin-bottom: 0;
     }
+
+    .research-badges {
+      justify-content: center;
+    }
+
+    .research-badges a {
+      margin-right: 6px;
+      margin-bottom: 6px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .research-badges {
+      gap: 6px;
+    }
+
+    .research-badges a {
+      margin-right: 4px;
+      margin-bottom: 4px;
+    }
   }
 </style>
-
 
 <!-- End Research Section -->
 
