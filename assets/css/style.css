@@ -263,23 +263,26 @@ h1, h2, h3, h4, h5, h6 {
 /* Mobile Navigation Icons */
 /* Mobile Navigation Icons */
 /* Mobile Navigation Item Styling */
+/* Mobile Navigation Item Container */
 .mobile-nav a {
     display: flex;
     padding: 14px 20px;
-    align-items: center; /* Ensures vertical alignment of icon with text */
+    align-items: center;
 }
 
-/* Mobile Navigation Icons - Base Styling */
+/* Base Icon Styling - Applies to ALL icons */
 .mobile-nav a .material-icons.mobile-menu-icon {
     font-family: 'Material Icons';
     font-size: 25px;
-    width: 25px;
+    min-width: 25px; /* Prevents icon shrinking */
     height: 25px;
     margin-right: 15px;
     color: #0dcd3c;
     display: inline-flex;
     align-items: center;
-    font-feature-settings: 'liga'; /* Better icon rendering */
+    justify-content: center;
+    font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
 }
 
 /* Active State */
@@ -287,13 +290,17 @@ h1, h2, h3, h4, h5, h6 {
     color: #0dcd3c;
 }
 
-/* Specific Icon Fixes */
-.mobile-nav a[href*="#projects"] .material-icons.mobile-menu-icon,
-.mobile-nav a[href*="#skills"] .material-icons.mobile-menu-icon,
-.mobile-nav a[href*="#blogs"] .material-icons.mobile-menu-icon {
-    opacity: 1 !important;
-}
-  
+/* Specific Icon Enforcement */
+.mobile-nav a[href*="#header"] .material-icons.mobile-menu-icon::before { content: "home"; }
+.mobile-nav a[href*="#about"] .material-icons.mobile-menu-icon::before { content: "person"; }
+.mobile-nav a[href*="#education"] .material-icons.mobile-menu-icon::before { content: "school"; }
+.mobile-nav a[href*="#certification"] .material-icons.mobile-menu-icon::before { content: "verified"; }
+.mobile-nav a[href*="#research"] .material-icons.mobile-menu-icon::before { content: "science"; }
+.mobile-nav a[href*="#experience"] .material-icons.mobile-menu-icon::before { content: "work_history"; }
+.mobile-nav a[href*="#projects"] .material-icons.mobile-menu-icon::before { content: "code"; }
+.mobile-nav a[href*="#skills"] .material-icons.mobile-menu-icon::before { content: "psychology"; }
+.mobile-nav a[href*="#blogs"] .material-icons.mobile-menu-icon::before { content: "article"; }
+.mobile-nav a[href*="#contact"] .material-icons.mobile-menu-icon::before { content: "contact_mail"; }
   /* Header Top */
 
 
