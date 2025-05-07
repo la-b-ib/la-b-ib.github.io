@@ -53,7 +53,7 @@
   <!-- End Google Tag Manager (noscript) -->
 
   <!-- ======= Header ======= -->
-  <header id="header" class="header-tops" style="width: auto;">
+  <header id="header" class="header-tops">
     <div class="container">
       <h1><a href="index.html">Labib Bin Shahed</a></h1>
       <h2 style="color:#fff">I'm <span class="typing" style="color:#12D640"></span></h2>
@@ -81,10 +81,22 @@
 </header>
 
 <style>
-.header-tops {
-    width: auto;
+/* Override Bootstrap container for desktop view */
+@media (min-width: 992px) {
+  #header.header-tops {
+    width: auto !important;
+    max-width: none !important;
+  }
+  
+  #header.header-tops > .container {
+    width: auto !important;
+    max-width: none !important;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
-/* Your existing navigation menu styles */
+
+/* Your existing navigation menu styles - unchanged */
 .nav-menu {
     margin-top: 35px;
 }
