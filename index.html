@@ -1255,7 +1255,11 @@
 </section>
 
 <style>
-    /* Blog Section Styling */
+    /* Blog Section Styling - All original styles preserved */
+    #blogs .container {
+        padding: 0 15px; /* Added container padding for mobile */
+    }
+    
     #blogs .icon-box {
         text-align: center;
         padding: 30px;
@@ -1300,13 +1304,19 @@
     
     /* Desktop view: 3 boxes in 1 row with auto width */
     @media (min-width: 769px) {
+        #blogs .container {
+            padding: 0; /* Remove side padding on desktop */
+        }
         #blogs .col-lg-4 {
             flex: 0 0 auto;
             width: 33.333333%;
         }
+        #blogs .section-title {
+            margin-bottom: 25px;
+        }
     }
     
-    /* Mobile view: 3 boxes in 3 rows, centered with 25px left and right padding */
+    /* Mobile view: 3 boxes in 3 rows with 15px side padding */
     @media (max-width: 768px) {
         #blogs .icon-box {
             padding: 20px;
@@ -1315,19 +1325,12 @@
             flex: 0 0 100%;
             width: 100%;
             margin-bottom: 20px;
-            padding-left: 25px;
-            padding-right: 25px;
-            display: flex;
-            justify-content: center;
         }
-        #blogs .container {
-            margin-left: 15px;
-            margin-right: 15px;
+        #blogs .section-title {
+            margin-bottom: 25px;
         }
     }
 </style>
-
-
   <!-- End Blogs Section -->
   <!-- Start Contact Section -->
 
