@@ -255,34 +255,82 @@ h1, h2, h3, h4, h5, h6 {
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Desktop Navigation */
-/* ... existing desktop nav styles ... */
-
-/* Mobile Navigation */
-/* Mobile Navigation Image Icon */
-.mobile-nav a .mobile-menu-image-icon {
-    width: 25px !important;
-    height: 25px !important;
-    object-fit: contain !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
+/* MATERIAL ICONS FONT LOADING */
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: 
+      local('Material Icons'),
+      local('MaterialIcons-Regular'),
+      url(https://fonts.gstatic.com/s/materialicons/v140/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
   }
   
-  /* Ensure image icon aligns properly */
-  .mobile-nav a .mobile-menu-icon-container {
-    position: relative;
-    display: inline-flex !important;
+  /* MOBILE NAVIGATION ICONS */
+  .mobile-nav a {
+    display: flex !important;
     align-items: center !important;
-    justify-content: center !important;
-    width: 25px !important;
-    height: 25px !important;
+    padding: 14px 20px !important;
+    position: relative !important;
+  }
+  
+  .mobile-nav a .material-icons.mobile-menu-icon {
+    /* Font Properties */
+    font-family: 'Material Icons' !important;
+    font-size: 24px !important;
+    font-weight: normal !important;
+    font-style: normal !important;
+    
+    /* Sizing & Spacing */
+    min-width: 24px !important;
+    width: 24px !important;
+    height: 24px !important;
+    line-height: 1 !important;
     margin-right: 15px !important;
+    flex-shrink: 0 !important;
+    
+    /* Color & Display */
+    color: #0dcd3c !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    
+    /* Rendering Optimizations */
+    -webkit-font-smoothing: antialiased !important;
+    text-rendering: optimizeLegibility !important;
   }
   
-  /* Active state for image icon */
-  .mobile-nav .active a .mobile-menu-image-icon {
-    opacity: 1 !important;
+  /* iOS SPECIFIC FIXES */
+  @supports (-webkit-touch-callout: none) {
+    .mobile-nav a .material-icons.mobile-menu-icon {
+      -webkit-text-stroke: 0.45px #0dcd3c !important;
+      text-shadow: 0 0 0.5px rgba(13, 205, 60, 0.7) !important;
+    }
+  }
+  
+  /* ICON CONTENT - FIXED TO MATCH YOUR HTML (#portfolio instead of #projects) */
+  .mobile-nav a[href*="#header"] .material-icons.mobile-menu-icon::before { content: "home"; }
+  .mobile-nav a[href*="#about"] .material-icons.mobile-menu-icon::before { content: "person"; }
+  .mobile-nav a[href*="#education"] .material-icons.mobile-menu-icon::before { content: "school"; }
+  .mobile-nav a[href*="#certification"] .material-icons.mobile-menu-icon::before { content: "verified"; }
+  .mobile-nav a[href*="#research"] .material-icons.mobile-menu-icon::before { content: "science"; }
+  .mobile-nav a[href*="#experience"] .material-icons.mobile-menu-icon::before { content: "work_history"; }
+  .mobile-nav a[href*="#portfolio"] .material-icons.mobile-menu-icon::before { content: "code"; } /* Fixed from #projects to #portfolio */
+  .mobile-nav a[href*="#skills"] .material-icons.mobile-menu-icon::before { content: "build"; }
+  .mobile-nav a[href*="#blogs"] .material-icons.mobile-menu-icon::before { content: "article"; }
+  .mobile-nav a[href*="#contact"] .material-icons.mobile-menu-icon::before { content: "email"; }
+  
+  /* ACTIVE STATE */
+  .mobile-nav .active a .material-icons.mobile-menu-icon {
+    color: #0dcd3c !important;
     transform: scale(1.05) !important;
+  }
+  
+  /* FALLBACK FOR WHEN ICONS DON'T LOAD */
+  .mobile-nav a i.mobile-menu-icon:empty:before {
+    content: attr(data-fallback);
+    font-family: initial !important;
+    font-size: 20px;
   }
   /* Header Top */
 
