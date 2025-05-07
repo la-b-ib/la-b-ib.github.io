@@ -1220,127 +1220,123 @@
 
 <section id="blogs" class="services">
     <div class="container">
-      <div class="section-title">
-        <h2><b>Blogs</b></h2>
-      </div>
-      <div class="row">
-        <!-- BRACU Express -->
-        <div class="col-lg-4 col-md-6 col-12 icon-box">
-          <a href="https://bracuexpress.com/author/labib/" target="_blank">
-            <div class="icon"><i class="icofont-book"></i></div>
-          </a>
-          <h4 class="title"><a href="https://bracuexpress.com/author/labib/" target="_blank"><b>BRACU Express</b></a></h4>
-          <p class="description"><b>NEWS & STORIES</b></p>
+        <div class="section-title">
+            <h2><b>Blogs</b></h2>
         </div>
-  
-        <!-- DEV Community -->
-        <div class="col-lg-4 col-md-6 col-12 icon-box">
-          <a href="https://dev.to/la-b-ib" target="_blank">
-            <div class="icon"><i class="icofont-book"></i></div>
-          </a>
-          <h4 class="title"><a href="https://dev.to/la-b-ib" target="_blank"><b>DEV Community</b></a></h4>
-          <p class="description"><b>BLOGS</b></p>
+        <div class="row">
+            <!-- BRACU Express -->
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="icon-box">
+                    <a href="https://bracuexpress.com/author/labib/" target="_blank">
+                        <div class="icon"><i class="icofont-book"></i></div>
+                    </a>
+                    <h4 class="title"><a href="https://bracuexpress.com/author/labib/" target="_blank"><b>BRACU Express</b></a></h4>
+                    <p class="description"><b>NEWS & STORIES</b></p>
+                </div>
+            </div>
+
+            <!-- DEV Community -->
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="icon-box">
+                    <a href="https://dev.to/la-b-ib" target="_blank">
+                        <div class="icon"><i class="icofont-book"></i></div>
+                    </a>
+                    <h4 class="title"><a href="https://dev.to/la-b-ib" target="_blank"><b>DEV Community</b></a></h4>
+                    <p class="description"><b>BLOGS</b></p>
+                </div>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="icon-box">
+                    <a href="https://www.linkedin.com/newsletters/tech-talk-7325845368900894722/" target="_blank">
+                        <div class="icon"><i class="icofont-book"></i></div>
+                    </a>
+                    <h4 class="title"><a href="https://www.linkedin.com/newsletters/tech-talk-7325845368900894722/" target="_blank"><b>NEWSLETTER</b></a></h4>
+                    <p class="description"><b>Tech Talk</b></p>
+                </div>
+            </div>
         </div>
-  
-        <!-- Newsletter -->
-        <div class="col-lg-4 col-md-6 col-12 icon-box">
-          <a href="https://www.linkedin.com/newsletters/tech-talk-7325845368900894722/" target="_blank">
-            <div class="icon"><i class="icofont-book"></i></div>
-          </a>
-          <h4 class="title"><a href="https://www.linkedin.com/newsletters/tech-talk-7325845368900894722/" target="_blank"><b>NEWSLETTER</b></a></h4>
-          <p class="description"><b>Tech Talk</b></p>
-        </div>
-      </div>
     </div>
 </section>
 
 <style>
     /* Blog Section Styling */
     #blogs .container {
-      padding: 0 25px;
-      max-width: 1200px;
-      margin: 0 auto;
+        padding: 0 25px;
+        max-width: 1200px;
+        margin: 0 auto;
     }
     
     #blogs .section-title h2 {
-      color: #ffffff;
-      font-size: 32px;
-      margin-bottom: 30px;
-      text-align: center;
+        color: #ffffff;
+        font-size: 32px;
+        margin-bottom: 30px;
+        text-align: center;
     }
     
     #blogs .row {
-      display: flex;
-      flex-wrap: wrap;
-      margin: 0 -15px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px; /* Added gap between boxes */
     }
     
     #blogs .icon-box {
-      text-align: center;
-      padding: 30px 20px;
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 8px;
-      margin-bottom: 30px;
-      width: 100%;
-      box-sizing: border-box;
+        text-align: center;
+        padding: 25px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        height: 100%;
+        box-sizing: border-box;
     }
     
     #blogs .icon {
-      margin-bottom: 20px;
+        margin-bottom: 15px;
     }
     
     #blogs .icon i {
-      color: #10cf3e;
-      font-size: 36px;
+        color: #10cf3e;
+        font-size: 36px;
     }
     
     #blogs .title a {
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 18px;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 18px;
     }
     
     #blogs .description {
-      color: #ffffff;
-      margin-top: 15px;
-      font-weight: bold;
-      font-size: 14px;
+        color: #ffffff;
+        margin-top: 10px;
+        font-weight: bold;
+        font-size: 14px;
     }
     
     /* Desktop - 3 columns */
     @media (min-width: 992px) {
-      #blogs .col-lg-4 {
-        flex: 0 0 33.333%;
-        max-width: 33.333%;
-        padding: 0 15px;
-      }
+        #blogs .col-lg-4 {
+            flex: 1 1 calc(33.333% - 20px);
+            min-width: 0;
+        }
     }
     
     /* Tablet - 2 columns */
     @media (min-width: 768px) and (max-width: 991px) {
-      #blogs .col-md-6 {
-        flex: 0 0 50%;
-        max-width: 50%;
-        padding: 0 15px;
-      }
+        #blogs .col-md-6 {
+            flex: 1 1 calc(50% - 20px);
+            min-width: 0;
+        }
     }
     
-    /* Mobile - 1 column with reduced side spacing */
+    /* Mobile - 1 column */
     @media (max-width: 767px) {
-      #blogs .container {
-        padding: 0 25px;
-      }
-      
-      #blogs .col-12 {
-        flex: 0 0 100%;
-        max-width: 100%;
-        padding: 0;
-      }
-      
-      #blogs .icon-box {
-        margin: 0 0 25px 0;
-      }
+        #blogs .col-12 {
+            flex: 1 1 100%;
+        }
+        #blogs .container {
+            padding: 0 25px;
+        }
     }
 </style>
 
