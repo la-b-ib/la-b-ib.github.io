@@ -688,6 +688,7 @@
 <!-- End Research Section -->
 
   <!-- Start Experience Section -->
+  
   <section id="experience" class="services">
     <div class="container">
       <div class="section-title">
@@ -828,27 +829,15 @@
       width: 100%;
       margin-bottom: 20px;
     }
-    
-    /* Re-enable Bootstrap grid if needed */
-    .row {
-      display: flex;
-      flex-wrap: wrap;
-      margin-right: -15px;
-      margin-left: -15px;
-    }
-    
-    .col-lg-12 {
-      position: relative;
-      width: 100%;
-      padding-right: 15px;
-      padding-left: 15px;
-    }
   }
   
   /* Mobile Optimizations (under 992px) */
   @media (max-width: 991px) {
     .experience-item {
-      padding: 18px 15px;
+      padding: 18px 0; /* Remove side padding */
+      background: none !important; /* Remove background on mobile */
+      border-radius: 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1); /* Add separator */
     }
     
     .experience-list li {
@@ -856,38 +845,39 @@
       line-height: 1.6;
     }
     
-    /* Remove all Bootstrap padding/margins */
-    .container {
-      padding-left: 15px;
-      padding-right: 15px;
-      max-width: 100%;
+    /* Better spacing for mobile */
+    .experience-container {
+      gap: 25px;
     }
     
-    /* Ensure text doesn't touch edges */
-    .experience-title, 
-    .experience-meta,
-    .experience-list {
-      padding-left: 0;
-      margin-left: 0;
-    }
-    
-    /* Better bullet point alignment */
+    /* Adjust bullet point alignment */
     .experience-list li i {
-      margin-right: 12px;
+      margin-right: 8px;
     }
   }
   
   /* Small mobile devices */
   @media (max-width: 480px) {
     .experience-item {
-      padding: 16px 12px;
+      padding: 16px 0;
     }
     
     .experience-list li {
-      margin-bottom: 16px;
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+    
+    .experience-title {
+      font-size: 1.1rem;
+    }
+    
+    .experience-meta {
+      font-size: 0.9rem;
     }
   }
 </style>
+
+
   <!-- End Experience Section -->
   <!-- Start Project Section -->
 
