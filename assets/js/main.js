@@ -68,16 +68,15 @@
       var icon = '';
       var href = $this.attr('href') || '';
       
-      // Set icons based on section
       if (href.includes('#header')) icon = 'home';
       else if (href.includes('#about')) icon = 'person';
       else if (href.includes('#education')) icon = 'school';
       else if (href.includes('#certification')) icon = 'verified';
       else if (href.includes('#research')) icon = 'science';
       else if (href.includes('#experience')) icon = 'work_history';
-      else if (href.includes('#projects')) icon = 'api';
-      else if (href.includes('#skills')) icon = 'skull';
-      else if (href.includes('#blogs')) icon = 'newsmode';
+      else if (href.includes('#projects')) icon = 'api';           // Fixed Projects icon
+      else if (href.includes('#skills')) icon = 'skull';     // Skills icon (change to 'skull' if preferred)
+      else if (href.includes('#blogs')) icon = 'article';         // Blogs icon
       else if (href.includes('#contact')) icon = 'contact_mail';
       
       if (icon) {
