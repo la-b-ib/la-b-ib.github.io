@@ -66,9 +66,8 @@
     $mobile_nav.find('a').each(function() {
       var $this = $(this);
       var href = $this.attr('href') || '';
-      var icon;
       
-      // Map each section to its icon
+      // Ultra-reliable icon mapping
       var iconMap = {
         '#header': 'home',
         '#about': 'person',
@@ -76,44 +75,53 @@
         '#certification': 'verified',
         '#research': 'science',
         '#experience': 'work_history',
-        '#projects': 'code',          // Most reliable projects icon
-        '#skills': 'psychology',      // Alternative: 'build' or 'engineering'
-        '#blogs': 'article',         // Alternative: 'rss_feed'
-        '#contact': 'contact_mail'
+        '#projects': 'web',             // Most reliable projects icon for iOS
+        '#skills': 'build',             // More visible than psychology
+        '#blogs': 'article',            // Alternative: 'rss_feed'
+        '#contact': 'email'             // More reliable than contact_mail
       };
-      
-      // Find matching icon
-      for (var key in iconMap) {
-        if (href.includes(key)) {
-          icon = iconMap[key];
-          break;
-        }
-      }
-      
-      // Create icon element with explicit styling
+    
+      // Find icon with fallback
+      var icon = Object.keys(iconMap).find(function(key) {
+        return href.includes(key);
+      }) ? iconMap[Object.keys(iconMap).find(function(key) {
+        return href.includes(key);
+      })] : '';
+    
+      // Create absolutely reliable icon element
       if (icon) {
         var $icon = $('<i>', {
           class: 'material-icons mobile-menu-icon',
+          'aria-hidden': 'true',       // Accessibility improvement
           text: icon,
           css: {
-            'font-family': 'Material Icons',
-            'font-size': '25px',
-            'width': '25px',
-            'height': '25px',
-            'margin-right': '15px',
-            'color': '#0dcd3c',
-            'display': 'inline-flex',
-            'align-items': 'center',
-            'justify-content': 'center',
-            'font-feature-settings': "'liga'",
-            '-webkit-font-smoothing': 'antialiased'
+            'font-family': 'Material Icons !important',
+            'font-size': '25px !important',
+            'min-width': '25px !important',
+            'height': '25px !important',
+            'line-height': '25px !important',
+            'margin-right': '15px !important',
+            'color': '#0dcd3c !important',
+            'display': 'inline-flex !important',
+            'align-items': 'center !important',
+            'justify-content': 'center !important',
+            'font-feature-settings': "'liga' !important",
+            '-webkit-font-smoothing': 'antialiased !important',
+            'text-rendering': 'optimizeLegibility !important'
           }
         });
-        
+    
+        // iOS specific fix
+        if (navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform)) {
+          $icon.css({
+            '-webkit-text-stroke': '0.45px transparent',
+            'text-shadow': '0 0 0 #0dcd3c'
+          });
+        }
+    
         $this.prepend($icon);
       }
     });
-
     // Append mobile navigation to body
   
     $('body').append($mobile_nav);
