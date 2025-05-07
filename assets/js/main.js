@@ -65,24 +65,56 @@
     // Add icons to each mobile menu item
     $mobile_nav.find('a').each(function() {
       var $this = $(this);
-      var icon = '';
       var href = $this.attr('href') || '';
+      var icon;
       
-      if (href.includes('#header')) icon = 'home';
-      else if (href.includes('#about')) icon = 'person';
-      else if (href.includes('#education')) icon = 'school';
-      else if (href.includes('#certification')) icon = 'verified';
-      else if (href.includes('#research')) icon = 'science';
-      else if (href.includes('#experience')) icon = 'work_history';
-      else if (href.includes('#projects')) icon = 'code';         // Changed to 'code' (more reliable)
-      else if (href.includes('#skills')) icon = 'psychology';    // Or 'build' if you prefer
-      else if (href.includes('#blogs')) icon = 'article';
-      else if (href.includes('#contact')) icon = 'contact_mail';
+      // Map each section to its icon
+      var iconMap = {
+        '#header': 'home',
+        '#about': 'person',
+        '#education': 'school',
+        '#certification': 'verified',
+        '#research': 'science',
+        '#experience': 'work_history',
+        '#projects': 'code',          // Most reliable projects icon
+        '#skills': 'psychology',      // Alternative: 'build' or 'engineering'
+        '#blogs': 'article',         // Alternative: 'rss_feed'
+        '#contact': 'contact_mail'
+      };
       
+      // Find matching icon
+      for (var key in iconMap) {
+        if (href.includes(key)) {
+          icon = iconMap[key];
+          break;
+        }
+      }
+      
+      // Create icon element with explicit styling
       if (icon) {
-        $this.prepend('<i class="material-icons mobile-menu-icon">' + icon + '</i> ');
+        var $icon = $('<i>', {
+          class: 'material-icons mobile-menu-icon',
+          text: icon,
+          css: {
+            'font-family': 'Material Icons',
+            'font-size': '25px',
+            'width': '25px',
+            'height': '25px',
+            'margin-right': '15px',
+            'color': '#0dcd3c',
+            'display': 'inline-flex',
+            'align-items': 'center',
+            'justify-content': 'center',
+            'font-feature-settings': "'liga'",
+            '-webkit-font-smoothing': 'antialiased'
+          }
+        });
+        
+        $this.prepend($icon);
       }
     });
+
+    // Append mobile navigation to body
   
     $('body').append($mobile_nav);
     $('body').prepend('<button type="button" class="mobile-nav-toggle d-lg-none"><i class="icofont-navigation-menu"></i></button>');
