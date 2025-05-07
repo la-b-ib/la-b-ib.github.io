@@ -1261,24 +1261,29 @@
 </section>
 
 <style>
-    /* Blog Section Styling */
+    /* Blog Section Styling - Minimal fixes only */
+    #blogs .section-title {
+        display: block !important; /* Ensure title is always visible */
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    #blogs .section-title h2 {
+        color: #ffffff !important; /* Ensure contrast */
+        display: block !important;
+    }
+    
+    /* Rest of your existing styles remain unchanged */
     #blogs .container {
         padding: 0 25px;
         max-width: 1200px;
         margin: 0 auto;
     }
     
-    #blogs .section-title h2 {
-        color: #ffffff;
-        font-size: 32px;
-        margin-bottom: 30px;
-        text-align: center;
-    }
-    
     #blogs .row {
         display: flex;
         flex-wrap: wrap;
-        gap: 20px; /* Added gap between boxes */
+        gap: 20px;
     }
     
     #blogs .icon-box {
@@ -1313,7 +1318,6 @@
         font-size: 14px;
     }
     
-    /* Desktop - 3 columns */
     @media (min-width: 992px) {
         #blogs .col-lg-4 {
             flex: 1 1 calc(33.333% - 20px);
@@ -1321,7 +1325,6 @@
         }
     }
     
-    /* Tablet - 2 columns */
     @media (min-width: 768px) and (max-width: 991px) {
         #blogs .col-md-6 {
             flex: 1 1 calc(50% - 20px);
@@ -1329,7 +1332,6 @@
         }
     }
     
-    /* Mobile - 1 column */
     @media (max-width: 767px) {
         #blogs .col-12 {
             flex: 1 1 100%;
@@ -1339,7 +1341,6 @@
         }
     }
 </style>
-
   <!-- End Blogs Section -->
   <!-- Start Contact Section -->
 
