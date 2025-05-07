@@ -55,15 +55,15 @@
   <!-- ======= Header ======= -->
   <header id="header" class="header-tops" style="width: auto;">
     <div class="container">
-      <h1 style="font-size: 1.6rem;"><a href="index.html">Labib Bin Shahed</a></h1>
+      <h1><a href="index.html">Labib Bin Shahed</a></h1>
       <h2 style="color:#fff">I'm <span class="typing" style="color:#12D640"></span></h2>
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li class="active"><a href="#header"> <span><b>Home</b></span></a></li>
           <li><a href="#about"><span><b>About</b></span></a></li>
           <li><a href="#education"> <span><b>Education</b></span></a></li>
-            <li><a href="#certification"> <span><b>Certification</b></span></a></li>
-            <li><a href="#research"> <span><b>Research</b></span></a></li>
+          <li><a href="#certification"> <span><b>Certification</b></span></a></li>
+          <li><a href="#research"> <span><b>Research</b></span></a></li>
           <li><a href="#experience"> <span><b>Experience</b></span></a></li>
           <li><a href="#portfolio"> <span><b>Projects</b></span></a></li>
           <li><a href="#skills"> <span><b>Skills</b></span></a></li>
@@ -79,6 +79,59 @@
       </div>
     </div>
 </header>
+
+<style>
+.header-tops {
+    width: auto;
+}
+/* Your existing navigation menu styles */
+.nav-menu {
+    margin-top: 35px;
+}
+
+.nav-menu ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-menu li + li {
+    margin-left: 30px;
+}
+
+.nav-menu a {
+    display: block;
+    position: relative;
+    color: #fff;
+    font-size: 19px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+.nav-menu a:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #9e7f25;
+    visibility: hidden;
+    width: 0px;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-menu a:hover:before, .nav-menu li:hover > a:before, .nav-menu .active > a:before {
+    visibility: visible;
+    width: 25px;
+}
+
+.nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
+    color: #12d640;
+    text-decoration: none;
+}
+</style>
 
 <!-- ======= About Section ======= -->
 
