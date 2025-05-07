@@ -1255,11 +1255,7 @@
 </section>
 
 <style>
-    /* Blog Section Styling - All original styles preserved */
-    #blogs .container {
-        padding: 0 15px; /* Added container padding for mobile */
-    }
-    
+    /* Blog Section Styling */
     #blogs .icon-box {
         text-align: center;
         padding: 30px;
@@ -1304,9 +1300,6 @@
     
     /* Desktop view: 3 boxes in 1 row with auto width */
     @media (min-width: 769px) {
-        #blogs .container {
-            padding: 0; /* Remove side padding on desktop */
-        }
         #blogs .col-lg-4 {
             flex: 0 0 auto;
             width: 33.333333%;
@@ -1316,7 +1309,7 @@
         }
     }
     
-    /* Mobile view: 3 boxes in 3 rows with 15px side padding */
+    /* Mobile view: 3 boxes in 3 rows */
     @media (max-width: 768px) {
         #blogs .icon-box {
             padding: 20px;
