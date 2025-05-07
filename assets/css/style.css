@@ -258,92 +258,31 @@ h1, h2, h3, h4, h5, h6 {
 /* ... existing desktop nav styles ... */
 
 /* Mobile Navigation */
-/* ... existing mobile nav styles ... */
-
-/* MATERIAL ICONS FONT LOADING - ABSOLUTE MUST */
-@font-face {
-    font-family: 'Material Icons';
-    font-style: normal;
-    font-weight: 400;
-    src: 
-      local('Material Icons'),
-      local('MaterialIcons-Regular'),
-      url(https://fonts.gstatic.com/s/materialicons/v140/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
-  }
-  
-  /* NUCLEAR-OPTION ICON STYLING - WILL WORK NO MATTER WHAT */
-  .mobile-nav a {
-    display: flex !important;
-    align-items: center !important;
-    padding: 14px 20px !important;
-    position: relative !important;
-  }
-  
-  .mobile-nav a .material-icons.mobile-menu-icon {
-    /* Font Properties */
-    font-family: 'Material Icons' !important;
-    font-size: 25px !important;
-    font-weight: normal !important;
-    font-style: normal !important;
-    font-variant: normal !important;
-    text-transform: none !important;
-    speak: none !important;
-    
-    /* Sizing & Spacing */
-    min-width: 25px !important;
+/* Mobile Navigation Image Icon */
+.mobile-nav a .mobile-menu-image-icon {
     width: 25px !important;
     height: 25px !important;
-    line-height: 25px !important;
-    margin-right: 15px !important;
-    
-    /* Color & Display */
-    color: #0dcd3c !important;
+    object-fit: contain !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    
-    /* Rendering Optimizations */
-    -webkit-font-smoothing: antialiased !important;
-    text-rendering: optimizeLegibility !important;
-    font-feature-settings: 'liga' !important;
-    -webkit-font-feature-settings: 'liga' !important;
   }
   
-  /* iOS SPECIFIC FIXES - CRUCIAL FOR IPHONE */
-  @supports (-webkit-touch-callout: none) {
-    .mobile-nav a .material-icons.mobile-menu-icon {
-      -webkit-text-stroke: 0.5px #0dcd3c !important;
-      text-shadow: 0 0 0.5px rgba(13, 205, 60, 0.5) !important;
-    }
+  /* Ensure image icon aligns properly */
+  .mobile-nav a .mobile-menu-icon-container {
+    position: relative;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 25px !important;
+    height: 25px !important;
+    margin-right: 15px !important;
   }
   
-  /* ICON CONTENT FORCING - DOUBLE PROTECTION */
-  .mobile-nav a[href*="#header"] .material-icons.mobile-menu-icon::before { content: "home" !important; }
-  .mobile-nav a[href*="#about"] .material-icons.mobile-menu-icon::before { content: "person" !important; }
-  .mobile-nav a[href*="#education"] .material-icons.mobile-menu-icon::before { content: "school" !important; }
-  .mobile-nav a[href*="#certification"] .material-icons.mobile-menu-icon::before { content: "verified" !important; }
-  .mobile-nav a[href*="#research"] .material-icons.mobile-menu-icon::before { content: "science" !important; }
-  .mobile-nav a[href*="#experience"] .material-icons.mobile-menu-icon::before { content: "work_history" !important; }
-  .mobile-nav a[href*="#projects"] .material-icons.mobile-menu-icon::before { content: "code" !important; }
-  .mobile-nav a[href*="#skills"] .material-icons.mobile-menu-icon::before { content: "build" !important; }
-  .mobile-nav a[href*="#blogs"] .material-icons.mobile-menu-icon::before { content: "article" !important; }
-  .mobile-nav a[href*="#contact"] .material-icons.mobile-menu-icon::before { content: "email" !important; }
-  
-  /* ACTIVE STATE */
-  .mobile-nav .active a .material-icons.mobile-menu-icon {
-    color: #0dcd3c !important;
+  /* Active state for image icon */
+  .mobile-nav .active a .mobile-menu-image-icon {
     opacity: 1 !important;
     transform: scale(1.05) !important;
-  }
-  
-  /* LAST RESORT FALLBACK - WILL SHOW SOMETHING */
-  .mobile-nav a::before {
-    content: "";
-    display: none;
-    width: 25px;
-    height: 25px;
-    margin-right: 15px;
-    background-color: #0dcd3c;
   }
   /* Header Top */
 
