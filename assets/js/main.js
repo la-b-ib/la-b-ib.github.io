@@ -73,10 +73,10 @@
       else if (href.includes('#about')) icon = 'person';
       else if (href.includes('#education')) icon = 'school';
       else if (href.includes('#certification')) icon = 'verified';
-      else if (href.includes('#research')) icon = 'experiment';
+      else if (href.includes('#research')) icon = 'science';
       else if (href.includes('#experience')) icon = 'work_history';
       else if (href.includes('#projects')) icon = 'api';
-      else if (href.includes('#skills')) icon = 'psychology';
+      else if (href.includes('#skills')) icon = 'skull';
       else if (href.includes('#blogs')) icon = 'newsmode';
       else if (href.includes('#contact')) icon = 'contact_mail';
       
