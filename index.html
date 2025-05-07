@@ -1220,7 +1220,7 @@
 
 <section id="blogs" class="services">
     <div class="container">
-        <div class="section-title">
+        <div class="section-title" style="margin-bottom: 25px;">
             <h2><b>Blogs</b></h2>
         </div>
         <div class="row">
@@ -1228,8 +1228,8 @@
             <div class="col-lg-4 col-md-6 col-12 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
                 <div class="icon-box">
                     <div class="icon"><i class="icofont-book"></i></div>
-                    <h4 class="title"><a href="https://bracuexpress.com/author/labib/" target="_blank">BRACU Express</a></h4>
-                    <p class="description">NEWS & STORIES</p>
+                    <h4 class="title"><a href="https://bracuexpress.com/author/labib/" target="_blank"><b>BRACU Express</b></a></h4>
+                    <p class="description"><b>NEWS & STORIES</b></p>
                 </div>
             </div>
 
@@ -1237,8 +1237,8 @@
             <div class="col-lg-4 col-md-6 col-12 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
                 <div class="icon-box">
                     <div class="icon"><i class="icofont-book"></i></div>
-                    <h4 class="title"><a href="https://dev.to/la-b-ib" target="_blank">DEV Community</a></h4>
-                    <p class="description">BLOGS</p>
+                    <h4 class="title"><a href="https://dev.to/la-b-ib" target="_blank"><b>DEV Community</b></a></h4>
+                    <p class="description"><b>BLOGS</b></p>
                 </div>
             </div>
 
@@ -1246,8 +1246,8 @@
             <div class="col-lg-4 col-md-6 col-12 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
                 <div class="icon-box">
                     <div class="icon"><i class="icofont-book"></i></div>
-                    <h4 class="title"><a href="https://www.linkedin.com/newsletters/tech-talk-7325845368900894722/" target="_blank">NEWSLETTER</a></h4>
-                    <p class="description">Tech Talk</p>
+                    <h4 class="title"><a href="https://www.linkedin.com/newsletters/tech-talk-7325845368900894722/" target="_blank"><b>NEWSLETTER</b></a></h4>
+                    <p class="description"><b>Tech Talk</b></p>
                 </div>
             </div>
         </div>
@@ -1255,21 +1255,7 @@
 </section>
 
 <style>
-    /* Blog Section Styling - All original styles preserved */
-    #blogs .container {
-        width: 100%;
-        padding: 0 15px;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-    
-    #blogs .row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-    }
-    
+    /* Blog Section Styling */
     #blogs .icon-box {
         text-align: center;
         padding: 30px;
@@ -1277,7 +1263,6 @@
         border-radius: 8px;
         transition: all 0.3s ease-in-out;
         height: 100%;
-        width: 100%;
     }
     
     #blogs .icon-box:hover {
@@ -1310,29 +1295,32 @@
         color: #ffffff;
         margin-top: 15px;
         font-size: 14px;
+        font-weight: bold;
     }
     
-    /* Responsive adjustments - Only modified what's necessary */
-    @media (min-width: 992px) {
+    /* Desktop view: 3 boxes in 1 row with auto width */
+    @media (min-width: 769px) {
         #blogs .col-lg-4 {
-            flex: 1 1 300px;
-            max-width: 100%;
+            flex: 0 0 auto;
+            width: 33.333333%;
+        }
+        #blogs .section-title {
+            margin-bottom: 25px;
         }
     }
     
-    @media (min-width: 768px) and (max-width: 991px) {
-        #blogs .col-md-6 {
-            flex: 1 1 350px;
-            max-width: 100%;
-        }
-    }
-    
-    @media (max-width: 767px) {
-        #blogs .col-12 {
-            flex: 1 1 100%;
-        }
+    /* Mobile view: 3 boxes in 3 rows */
+    @media (max-width: 768px) {
         #blogs .icon-box {
-            padding: 25px 20px;
+            padding: 20px;
+        }
+        #blogs .col-lg-4 {
+            flex: 0 0 100%;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        #blogs .section-title {
+            margin-bottom: 25px;
         }
     }
 </style>
