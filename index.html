@@ -1225,7 +1225,7 @@
       </div>
       <div class="row">
         <!-- BRACU Express -->
-        <div class="col-md-4 col-12 mt-4 icon-box" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-lg-4 col-md-6 col-12 mt-4 icon-box" data-aos="fade-up" data-aos-delay="100">
           <a href="https://bracuexpress.com/author/labib/" target="_blank">
             <div class="icon"><i class="icofont-book"></i></div>
           </a>
@@ -1234,7 +1234,7 @@
         </div>
   
         <!-- DEV Community -->
-        <div class="col-md-4 col-12 mt-4 icon-box" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-lg-4 col-md-6 col-12 mt-4 icon-box" data-aos="fade-up" data-aos-delay="200">
           <a href="https://dev.to/la-b-ib" target="_blank">
             <div class="icon"><i class="icofont-book"></i></div>
           </a>
@@ -1242,12 +1242,12 @@
           <p class="description"><b>BLOGS</b></p>
         </div>
   
-        <!-- LinkedIn Newsletter -->
-        <div class="col-md-4 col-12 mt-4 icon-box" data-aos="fade-up" data-aos-delay="300">
+        <!-- Newsletter -->
+        <div class="col-lg-4 col-md-6 col-12 mt-4 icon-box" data-aos="fade-up" data-aos-delay="300">
           <a href="https://www.linkedin.com/newsletters/tech-talk-7325845368900894722/" target="_blank">
             <div class="icon"><i class="icofont-book"></i></div>
           </a>
-          <h4 class="title"><a href="https://www.linkedin.com/newsletters/tech-talk-7325845368900894722/" target="_blank"><b>LinkedIn NEWSLETTER</b></a></h4>
+          <h4 class="title"><a href="https://www.linkedin.com/newsletters/tech-talk-7325845368900894722/" target="_blank"><b>NEWSLETTER</b></a></h4>
           <p class="description"><b>Tech Talk</b></p>
         </div>
       </div>
@@ -1256,10 +1256,18 @@
   
   <style>
     /* Blog Section Styling */
+    #blogs .container {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+    
     #blogs .icon-box {
       text-align: center;
       padding: 20px;
       height: 100%;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      margin-bottom: 20px;
     }
     
     #blogs .icon {
@@ -1284,21 +1292,23 @@
     }
     
     /* Responsive Layout */
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       #blogs .row {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        margin-left: -15px;
+        margin-right: -15px;
       }
-      #blogs .col-md-4 {
-        flex: 0 0 33.333333%;
-        max-width: 33.333333%;
+      #blogs .col-lg-4 {
+        padding-left: 15px;
+        padding-right: 15px;
       }
     }
     
-    @media (max-width: 767px) {
-      #blogs .col-12 {
-        margin-bottom: 20px;
+    @media (max-width: 991px) {
+      #blogs .col-md-6 {
+        padding-left: 15px;
+        padding-right: 15px;
       }
     }
   </style>
