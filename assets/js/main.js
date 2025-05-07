@@ -61,6 +61,30 @@
     var $mobile_nav = $('.nav-menu').clone().prop({
       class: 'mobile-nav d-lg-none'
     });
+  
+    // Add icons to each mobile menu item
+    $mobile_nav.find('a').each(function() {
+      var $this = $(this);
+      var icon = '';
+      var href = $this.attr('href') || '';
+      
+      // Set icons based on section
+      if (href.includes('#header')) icon = 'home';
+      else if (href.includes('#about')) icon = 'person';
+      else if (href.includes('#education')) icon = 'school';
+      else if (href.includes('#certification')) icon = 'verified';
+      else if (href.includes('#research')) icon = 'experiment';
+      else if (href.includes('#experience')) icon = 'work_history';
+      else if (href.includes('#projects')) icon = 'api';
+      else if (href.includes('#skills')) icon = 'psychology';
+      else if (href.includes('#blogs')) icon = 'newsmode';
+      else if (href.includes('#contact')) icon = 'contact_mail';
+      
+      if (icon) {
+        $this.prepend('<i class="material-icons mobile-menu-icon">' + icon + '</i> ');
+      }
+    });
+  
     $('body').append($mobile_nav);
     $('body').prepend('<button type="button" class="mobile-nav-toggle d-lg-none"><i class="icofont-navigation-menu"></i></button>');
     $('body').append('<div class="mobile-nav-overly"></div>');
