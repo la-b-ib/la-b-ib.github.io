@@ -1261,38 +1261,50 @@
 </section>
 
 <style>
-    /* Blog Section Styling - Minimal fixes only */
+    /* Blog Section Styling */
+    #blogs {
+        padding: 60px 0;
+        position: relative;
+    }
+    
+    #blogs .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    
     #blogs .section-title {
-        display: block !important; /* Ensure title is always visible */
-        visibility: visible !important;
-        opacity: 1 !important;
+        text-align: center;
+        padding-bottom: 30px;
     }
     
     #blogs .section-title h2 {
-        color: #ffffff !important; /* Ensure contrast */
-        display: block !important;
-    }
-    
-    /* Rest of your existing styles remain unchanged */
-    #blogs .container {
-        padding: 0 25px;
-        max-width: 1200px;
-        margin: 0 auto;
+        color: #ffffff;
+        font-size: 32px;
+        margin: 0;
     }
     
     #blogs .row {
         display: flex;
         flex-wrap: wrap;
-        gap: 20px;
+        margin: 0 -15px;
+    }
+    
+    #blogs .col-lg-4,
+    #blogs .col-md-6,
+    #blogs .col-12 {
+        padding: 0 15px;
+        box-sizing: border-box;
     }
     
     #blogs .icon-box {
         text-align: center;
-        padding: 25px;
+        padding: 30px 20px;
         background: rgba(255, 255, 255, 0.05);
         border-radius: 8px;
+        transition: all 0.3s ease;
         height: 100%;
-        box-sizing: border-box;
+        margin-bottom: 30px;
     }
     
     #blogs .icon {
@@ -1309,6 +1321,11 @@
         text-decoration: none;
         font-weight: bold;
         font-size: 18px;
+        transition: color 0.3s;
+    }
+    
+    #blogs .title a:hover {
+        color: #10cf3e;
     }
     
     #blogs .description {
@@ -1318,26 +1335,25 @@
         font-size: 14px;
     }
     
+    /* Responsive adjustments */
     @media (min-width: 992px) {
         #blogs .col-lg-4 {
-            flex: 1 1 calc(33.333% - 20px);
-            min-width: 0;
+            flex: 0 0 33.333%;
+            max-width: 33.333%;
         }
     }
     
     @media (min-width: 768px) and (max-width: 991px) {
         #blogs .col-md-6 {
-            flex: 1 1 calc(50% - 20px);
-            min-width: 0;
+            flex: 0 0 50%;
+            max-width: 50%;
         }
     }
     
     @media (max-width: 767px) {
         #blogs .col-12 {
-            flex: 1 1 100%;
-        }
-        #blogs .container {
-            padding: 0 25px;
+            flex: 0 0 100%;
+            max-width: 100%;
         }
     }
 </style>
