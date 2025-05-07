@@ -74,9 +74,9 @@
       else if (href.includes('#certification')) icon = 'verified';
       else if (href.includes('#research')) icon = 'science';
       else if (href.includes('#experience')) icon = 'work_history';
-      else if (href.includes('#projects')) icon = 'api';           // Fixed Projects icon
-      else if (href.includes('#skills')) icon = 'skull';     // Skills icon (change to 'skull' if preferred)
-      else if (href.includes('#blogs')) icon = 'article';         // Blogs icon
+      else if (href.includes('#projects')) icon = 'code';         // Changed to 'code' (more reliable)
+      else if (href.includes('#skills')) icon = 'psychology';    // Or 'build' if you prefer
+      else if (href.includes('#blogs')) icon = 'article';
       else if (href.includes('#contact')) icon = 'contact_mail';
       
       if (icon) {
