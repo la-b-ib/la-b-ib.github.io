@@ -364,7 +364,7 @@
         <div class="portfolio">
             <div class="container">
               <div class="section-title">
-                <h2>Certification</h2>
+                <h2><b>Certification</b></h2>
               </div>
           
               <div class="row portfolio-container">
@@ -692,11 +692,14 @@
       justify-content: flex-start;
     }
 
-    .doi-badge,
-    .profile-badge {
-      height: auto;
+    .doi-badge {
+      height: 24px; /* Fixed height for DOI badge in mobile */
       width: auto;
-      max-height: none;
+    }
+
+    .profile-badge {
+      height: auto; /* Auto height for profile badges in mobile */
+      width: auto;
     }
   }
 
