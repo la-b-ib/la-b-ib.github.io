@@ -315,9 +315,9 @@ h1, h2, h3, h4, h5, h6 {
   .mobile-nav a[href*="#certification"] .material-icons.mobile-menu-icon::before { content: "verified"; }
   .mobile-nav a[href*="#research"] .material-icons.mobile-menu-icon::before { content: "science"; }
   .mobile-nav a[href*="#experience"] .material-icons.mobile-menu-icon::before { content: "work_history"; }
-  .mobile-nav a[href*="#portfolio"] .material-icons.mobile-menu-icon::before { content: "code"; } /* Fixed from #projects to #portfolio */
-  .mobile-nav a[href*="#skills"] .material-icons.mobile-menu-icon::before { content: "build"; }
-  .mobile-nav a[href*="#blogs"] .material-icons.mobile-menu-icon::before { content: "article"; }
+  .mobile-nav a[href*="#portfolio"] .material-icons.mobile-menu-icon::before { content: "api"; } /* Fixed from #projects to #portfolio */
+  .mobile-nav a[href*="#skills"] .material-icons.mobile-menu-icon::before { content: "skull"; }
+  .mobile-nav a[href*="#blogs"] .material-icons.mobile-menu-icon::before { content: "newsmode"; }
   .mobile-nav a[href*="#contact"] .material-icons.mobile-menu-icon::before { content: "email"; }
   
   /* ACTIVE STATE */
