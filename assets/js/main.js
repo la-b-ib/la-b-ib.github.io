@@ -69,7 +69,7 @@
     
     var iconMap = {
       '#header': {main: 'home', fallback: '🏠'},
-      '#about': {main: 'person', fallback: '👤'},
+      '#about': {main: 'diversity_2', fallback: '👤'},
       '#education': {main: 'school', fallback: '🏫'}, 
       '#certification': {main: 'verified', fallback: '✅'},
       '#research': {main: 'science', fallback: '🔬'},
@@ -77,7 +77,7 @@
       '#portfolio': {main: 'api', fallback: '💻'},  // Note: using #portfolio to match your HTML
       '#skills': {main: 'schema', fallback: '🛠️'},
       '#blogs': {main: 'auto_stories', fallback: '📰'},
-      '#contact': {main: 'email', fallback: '✉️'}
+      '#contact': {main: 'contact_mail', fallback: '✉️'}
     };
   
     var iconData = Object.entries(iconMap).find(([key]) => href.includes(key))?.[1] || {};
