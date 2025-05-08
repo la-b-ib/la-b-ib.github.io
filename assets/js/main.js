@@ -75,8 +75,8 @@
       '#research': {main: 'science', fallback: '🔬'},
       '#experience': {main: 'work_history', fallback: '💼'},
       '#portfolio': {main: 'api', fallback: '💻'},  // Note: using #portfolio to match your HTML
-      '#skills': {main: 'skull', fallback: '🛠️'},
-      '#blogs': {main: 'newsmode', fallback: '📰'},
+      '#skills': {main: 'schema', fallback: '🛠️'},
+      '#blogs': {main: 'auto_stories', fallback: '📰'},
       '#contact': {main: 'email', fallback: '✉️'}
     };
   
