@@ -69,7 +69,7 @@
     
     var iconMap = {
       '#header': {main: 'home', fallback: '🏠'},
-      '#about': {main: 'diversity_2', fallback: '👤'},
+      '#about': {main: 'skull', fallback: '👤'},
       '#education': {main: 'school', fallback: '🏫'}, 
       '#certification': {main: 'verified', fallback: '✅'},
       '#research': {main: 'science', fallback: '🔬'},
