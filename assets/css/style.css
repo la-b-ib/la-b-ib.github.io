@@ -2,6 +2,7 @@
 # Material Icons
 --------------------------------------------------------------*/
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -10,6 +11,7 @@ body {
     color: #fff;
     position: relative;
     background: transparent;
+}
 
 body::before {
     content: "";
@@ -20,6 +22,7 @@ body::before {
     right: 0;
     top: 0;
     height: 100vh;
+    z-index: -1;
 }
 
 @media (min-width: 1024px) {
@@ -45,7 +48,7 @@ h1, h2, h3, h4, h5, h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-    transition: ease-in-out 0s;
+    transition: ease-in-out 0.3s;
     position: relative;
     height: 100vh;
     display: flex;
@@ -55,12 +58,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header * {
-    transition: ease-in-out 0s;
+    transition: ease-in-out 0.3s;
 }
 
 #header h1 {
     font-size: 48px;
-    margin-top: 0px;
+    margin-top: 0;
     padding: 0;
     line-height: 1;
     font-weight: 700;
@@ -168,16 +171,19 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     background-color: #9e7f25;
     visibility: hidden;
-    width: 0px;
-    transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out;
 }
 
-.nav-menu a:hover:before, .nav-menu li:hover > a:before, .nav-menu .active > a:before {
+.nav-menu a:hover:before, 
+.nav-menu li:hover > a:before, 
+.nav-menu .active > a:before {
     visibility: visible;
     width: 25px;
 }
 
-.nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
+.nav-menu a:hover, 
+.nav-menu .active > a, 
+.nav-menu li:hover > a {
     color: #12d640;
     text-decoration: none;
 }
@@ -245,15 +251,6 @@ h1, h2, h3, h4, h5, h6 {
     color: #12d640;
 }
 
-.mobile-nav-overly,
-.mobile-nav *:before,
-.mobile-nav *:after {
-    display: none !important;
-}
-/*--------------------------------------------------------------
-# Navigation Menu
---------------------------------------------------------------*/
-/* Desktop Navigation */
 /* MATERIAL ICONS FONT LOADING */
 @font-face {
     font-family: 'Material Icons';
@@ -263,76 +260,67 @@ h1, h2, h3, h4, h5, h6 {
       local('Material Icons'),
       local('MaterialIcons-Regular'),
       url(https://fonts.gstatic.com/s/materialicons/v140/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
-  }
+}
   
-  /* MOBILE NAVIGATION ICONS */
-  .mobile-nav a {
+/* MOBILE NAVIGATION ICONS */
+.mobile-nav a {
     display: flex !important;
     align-items: center !important;
     padding: 14px 20px !important;
     position: relative !important;
-  }
+}
   
-  .mobile-nav a .material-icons.mobile-menu-icon {
-    /* Font Properties */
+.mobile-nav a .material-icons.mobile-menu-icon {
     font-family: 'Material Icons' !important;
     font-size: 24px !important;
     font-weight: normal !important;
     font-style: normal !important;
-    
-    /* Sizing & Spacing */
     min-width: 24px !important;
     width: 24px !important;
     height: 24px !important;
     line-height: 1 !important;
     margin-right: 15px !important;
     flex-shrink: 0 !important;
-    
-    /* Color & Display */
     color: #0dcd3c !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    
-    /* Rendering Optimizations */
     -webkit-font-smoothing: antialiased !important;
     text-rendering: optimizeLegibility !important;
-  }
+}
   
-  /* iOS SPECIFIC FIXES */
-  @supports (-webkit-touch-callout: none) {
+/* iOS SPECIFIC FIXES */
+@supports (-webkit-touch-callout: none) {
     .mobile-nav a .material-icons.mobile-menu-icon {
       -webkit-text-stroke: 0.45px #0dcd3c !important;
       text-shadow: 0 0 0.5px rgba(13, 205, 60, 0.7) !important;
     }
-  }
+}
   
-  /* ICON CONTENT - FIXED TO MATCH YOUR HTML (#portfolio instead of #projects) */
-  .mobile-nav a[href*="#header"] .material-icons.mobile-menu-icon::before { content: "home"; }
-  .mobile-nav a[href*="#about"] .material-icons.mobile-menu-icon::before { content: "group_add"; }
-  .mobile-nav a[href*="#education"] .material-icons.mobile-menu-icon::before { content: "school"; }
-  .mobile-nav a[href*="#certification"] .material-icons.mobile-menu-icon::before { content: "verified"; }
-  .mobile-nav a[href*="#research"] .material-icons.mobile-menu-icon::before { content: "science"; }
-  .mobile-nav a[href*="#experience"] .material-icons.mobile-menu-icon::before { content: "work_history"; }
-  .mobile-nav a[href*="#portfolio"] .material-icons.mobile-menu-icon::before { content: "api"; } /* Fixed from #projects to #portfolio */
-  .mobile-nav a[href*="#skills"] .material-icons.mobile-menu-icon::before { content: "schema"; }
-  .mobile-nav a[href*="#blogs"] .material-icons.mobile-menu-icon::before { content: "auto_stories"; }
-  .mobile-nav a[href*="#contact"] .material-icons.mobile-menu-icon::before { content: "contact_mail"; }
+/* ICON CONTENT */
+.mobile-nav a[href*="#header"] .material-icons.mobile-menu-icon::before { content: "home"; }
+.mobile-nav a[href*="#about"] .material-icons.mobile-menu-icon::before { content: "group_add"; }
+.mobile-nav a[href*="#education"] .material-icons.mobile-menu-icon::before { content: "school"; }
+.mobile-nav a[href*="#certification"] .material-icons.mobile-menu-icon::before { content: "verified"; }
+.mobile-nav a[href*="#research"] .material-icons.mobile-menu-icon::before { content: "science"; }
+.mobile-nav a[href*="#experience"] .material-icons.mobile-menu-icon::before { content: "work_history"; }
+.mobile-nav a[href*="#portfolio"] .material-icons.mobile-menu-icon::before { content: "api"; }
+.mobile-nav a[href*="#skills"] .material-icons.mobile-menu-icon::before { content: "schema"; }
+.mobile-nav a[href*="#blogs"] .material-icons.mobile-menu-icon::before { content: "auto_stories"; }
+.mobile-nav a[href*="#contact"] .material-icons.mobile-menu-icon::before { content: "contact_mail"; }
   
-  /* ACTIVE STATE */
-  .mobile-nav .active a .material-icons.mobile-menu-icon {
+/* ACTIVE STATE */
+.mobile-nav .active a .material-icons.mobile-menu-icon {
     color: #0dcd3c !important;
     transform: scale(1.05) !important;
-  }
+}
   
-  /* FALLBACK FOR WHEN ICONS DON'T LOAD */
-  .mobile-nav a i.mobile-menu-icon:empty:before {
+/* FALLBACK FOR WHEN ICONS DON'T LOAD */
+.mobile-nav a i.mobile-menu-icon:empty:before {
     content: attr(data-fallback);
     font-family: initial !important;
     font-size: 20px;
-  }
-  /* Header Top */
-
+}
 
 /* Header Top */
 #header.header-top {
@@ -344,7 +332,8 @@ h1, h2, h3, h4, h5, h6 {
     background: #09203a;
 }
 
-#header.header-top .social-links, #header.header-top h2 {
+#header.header-top .social-links, 
+#header.header-top h2 {
     display: none;
 }
 
@@ -388,7 +377,7 @@ section.section-show {
     top: 70px;
     bottom: auto;
     opacity: 1;
-    padding-bottom: 0px;
+    padding-bottom: 0;
 }
 
 section .container {
@@ -600,7 +589,8 @@ section .container {
     margin: 0 0 0 45px;
 }
 
-.testimonials .testimonial-item .quote-icon-left, .testimonials .testimonial-item .quote-icon-right {
+.testimonials .testimonial-item .quote-icon-left, 
+.testimonials .testimonial-item .quote-icon-right {
     color: rgba(255, 255, 255, 0.25);
     font-size: 26px;
 }
@@ -629,7 +619,8 @@ section .container {
     z-index: 1;
 }
 
-.testimonials .owl-nav, .testimonials .owl-dots {
+.testimonials .owl-nav, 
+.testimonials .owl-dots {
     margin-top: 5px;
     text-align: center;
 }
@@ -722,7 +713,7 @@ section .container {
     background: #09203a;
     padding: 40px 40px;
     transition: all ease-in-out 0.3s;
-    margin: 10px
+    margin: 10px;
 }
 
 .services .icon-box .icon {
@@ -790,7 +781,8 @@ section .container {
     background: #35e888;
 }
 
-.services .icon-box:hover h4 a, .services .icon-box:hover p {
+.services .icon-box:hover h4 a, 
+.services .icon-box:hover p {
     color: #12d640;
 }
 
@@ -825,7 +817,8 @@ section .container {
     border-radius: 4px;
 }
 
-.portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
+.portfolio #portfolio-flters li:hover, 
+.portfolio #portfolio-flters li.filter-active {
     background: #1c7d32;
 }
 
@@ -1051,11 +1044,11 @@ section .container {
     margin: 0 10px -6px 0;
     border: 3px solid #1c7d32;
     border-top-color: #eee;
-    -webkit-animation: animate-loading 1s linear infinite;
     animation: animate-loading 1s linear infinite;
 }
 
-.contact .php-email-form input, .contact .php-email-form textarea {
+.contact .php-email-form input, 
+.contact .php-email-form textarea {
     border-radius: 0;
     box-shadow: none;
     font-size: 14px;
@@ -1065,31 +1058,13 @@ section .container {
     color: #fff;
 }
 
-.contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
-    background-color立刻: rgba(255, 255, 255, 0.11);
+.contact .php-email-form input:focus, 
+.contact .php-email-form textarea:focus {
+    background-color: rgba(255, 255, 255, 0.11);
 }
 
-.contact .php-email-form input::-webkit-input-placeholder, .contact .php-email-form textarea::-webkit-input-placeholder {
-    color: rgba(255, 255, 255, 0.3);
-    opacity: 1;
-}
-
-.contact .php-email-form input::-moz-placeholder, .contact .php-email-form textarea::-moz-placeholder {
-    color: rgba(255, 255, 255, 0.3);
-    opacity: 1;
-}
-
-.contact .php-email-form input:-ms-input-placeholder, .contact .php-email-form textarea:-ms-input-placeholder {
-    color: rgba(255, 255, 255, 0.3);
-    opacity: 1;
-}
-
-.contact .php-email-form input::-ms-input-placeholder, .contact .php-email-form textarea::-ms-input-placeholder {
-    color: rgba(255, 255, 255, 0.3);
-    opacity: 1;
-}
-
-.contact .php-email-form input::placeholder, .contact .php-email-form textarea::placeholder {
+.contact .php-email-form input::placeholder, 
+.contact .php-email-form textarea::placeholder {
     color: rgba(255, 255, 255, 0.3);
     opacity: 1;
 }
@@ -1113,15 +1088,6 @@ section .container {
 
 .contact .php-email-form button[type="submit"]:hover {
     background: #15bb62;
-}
-
-@-webkit-keyframes animate-loading {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
 }
 
 @keyframes animate-loading {
@@ -1175,7 +1141,6 @@ section .container {
 html, body {
     background: #010e1b !important;
     overscroll-behavior-y: contain;
-    -webkit-overflow-scrolling: touch;
 }
 
 /* Fix for iOS/Safari rendering */
@@ -1221,27 +1186,14 @@ a, button, .portfolio-wrap {
     background: transparent !important;
 }
 
-/* Prevent white flashes during transitions */
-.vbox-overlay, .vbox-container {
-    transition: none !important;
-    animation: none !important;
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
-}
-
-/* Custom Venobox Controls */
 /* Custom Venobox Controls */
 .vbox-close.custom-gamepad-close {
     width: 24px !important;
     height: 24px !important;
-    color: #ff0000 !important; /* Pure red */
+    color: #ff0000 !important;
     background: transparent !important;
     border: none !important;
-    font-size: 24px !important; /* Matches icon size */
+    font-size: 24px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -1272,7 +1224,6 @@ a, button, .portfolio-wrap {
 }
 
 /* Mobile Overrides */
-/* Mobile Overrides */
 @media (max-width: 768px) {
     .vbox-close.custom-gamepad-close {
         width: 24px !important;
@@ -1289,7 +1240,6 @@ a, button, .portfolio-wrap {
         bottom: 10px !important;
         top: auto !important;
     }
-}
     
     .vbox-prev {
         left: 10px !important;
@@ -1301,27 +1251,23 @@ a, button, .portfolio-wrap {
         left: auto !important;
     }
 }
-/*--------------------------------------------------------------
-# Venobox Fallback Styles
---------------------------------------------------------------*/
-/* Fallback for when Material Icons don't load */
+
+/* Venobox Fallback Styles */
 .vbox-close.custom-gamepad-close i.material-icons {
     font-family: 'Material Icons', sans-serif !important;
-    /* Fallback content - will only show if Material Icons fail */
     position: relative;
 }
 
 .vbox-close.custom-gamepad-close i.material-icons:before {
-    content: "🎮"; /* Gamepad emoji fallback */
-    display: none; /* Hidden by default */
+    content: "🎮";
+    display: none;
     font-family: sans-serif !important;
 }
 
-/* Fallback trigger - when Material Icons font fails */
 @font-face {
     font-family: 'Material Icons Fallback';
     src: local("Arial");
-    unicode-range: U+0; /* Trick to always force fallback */
+    unicode-range: U+0;
 }
 
 .vbox-close.custom-gamepad-close i.material-icons {
