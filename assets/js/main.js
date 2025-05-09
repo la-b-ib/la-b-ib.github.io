@@ -180,17 +180,35 @@
         spinColor: '#12d640',
         overlayColor: 'rgba(1, 14, 27, 0.95)',
         closeBackground: 'transparent',
-        closeColor: '#A62C2C', // Changed to red color
-        navColor: '#0CBA3A', // Added for navigation buttons
+        closeColor: '#FF0000', // Pure red color
+        navColor: '#0CBA3A',
         css: {
           'background-color': '#010e1b',
           'box-shadow': 'none'
         },
         onOpen: function() {
-          // Modify existing close button instead of removing it
+          // Create close button with gamepad icon
           var $closeBtn = $('.vbox-close');
           $closeBtn.html('<i class="material-icons">gamepad</i>');
           $closeBtn.addClass('custom-gamepad-close');
+          
+          // Font fallback detection
+          setTimeout(function() {
+            var $icon = $closeBtn.find('i.material-icons');
+            // Create test element to check if font loaded
+            var testSpan = $('<span class="material-icons" style="visibility: hidden; position: absolute;">text_format</span>');
+            $('body').append(testSpan);
+            
+            if (testSpan.width() === 0 || $icon.css('font-family').indexOf('Material Icons') === -1) {
+              $icon.addClass('font-fallback')
+                   .html('🎮') // Gamepad emoji fallback
+                   .css({
+                     'font-family': 'sans-serif',
+                     'line-height': '24px'
+                   });
+            }
+            testSpan.remove();
+          }, 100);
           
           // Style navigation buttons
           $('.vbox-prev, .vbox-next').addClass('vbox-nav');
@@ -202,13 +220,15 @@
             $closeBtn.css({
               'top': '10px',
               'right': '10px',
-              'font-size': '25px',
-              'color': '#A62C2C'
+              'font-size': '24px',
+              'width': '24px',
+              'height': '24px',
+              'color': '#FF0000'
             });
             
             $('.vbox-prev, .vbox-next').css({
-              'width': '30px',
-              'height': '30px',
+              'width': '24px',
+              'height': '24px',
               'bottom': '10px',
               'top': 'auto'
             });
