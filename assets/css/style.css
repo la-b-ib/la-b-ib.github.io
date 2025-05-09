@@ -1234,67 +1234,60 @@ a, button, .portfolio-wrap {
     100% { transform: scale(1); }
 }
 
-/* Fix Google Material Close Button */
-.vbox-close {
-    display: block !important;
-    position: fixed;
-    top: 15px;
-    right: 15px;
+/* Custom Close and Navigation Buttons */
+.vbox-close.custom-gamepad-close {
+    width: 25px !important;
+    height: 25px !important;
+    color: #A62C2C !important;
     background: transparent !important;
     border: none !important;
-    font-size: 32px !important;
-    color: #fff !important;
-    cursor: pointer;
-    z-index: 10000;
-    padding: 5px;
-    transition: all 0.3s;
+    font-size: 25px !important;
+    right: 15px !important;
+    top: 15px !important;
 }
 
-.vbox-close:hover {
-    color: #12d640 !important;
-    transform: scale(1.1);
+.vbox-nav {
+    width: 25px !important;
+    height: 25px !important;
+    background: #0CBA3A !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: white !important;
+    font-size: 14px !important;
 }
 
-.vbox-close i {
-    font-family: 'Material Icons';
-    font-size: inherit !important;
-    color: inherit !important;
+.vbox-prev {
+    left: 15px !important;
 }
 
-/* Custom gamepad close button for mobile */
-.custom-close-btn {
-    display: none;
+.vbox-next {
+    right: 15px !important;
 }
 
+/* Mobile Overrides */
 @media (max-width: 768px) {
-    .custom-close-btn {
-        display: block;
-        position: fixed;
-        top: 15px;
-        right: 15px;
-        color: red !important;
-        background: transparent !important;
-        border: none !important;
-        font-size: 32px !important;
-        cursor: pointer;
+    .vbox-close.custom-gamepad-close {
+        display: block !important;
         z-index: 999999;
-        padding: 5px;
-        animation: pulse 1.5s infinite;
-        text-shadow: 0 0 5px rgba(255,0,0,0.7);
+        position: fixed;
+        top: 10px !important;
+        right: 10px !important;
     }
     
-    .custom-close-btn i {
-        font-family: 'Material Icons';
-        font-size: inherit !important;
-        color: inherit !important;
+    .vbox-nav {
+        width: 30px !important;
+        height: 30px !important;
+        bottom: 10px !important;
+        top: auto !important;
     }
     
-    .custom-close-btn:hover {
-        transform: scale(1.1);
-        transition: all 0.3s;
+    .vbox-prev {
+        left: 10px !important;
     }
     
-    .vbox-close {
-        display: none !important;
+    .vbox-next {
+        right: 10px !important;
     }
 }
