@@ -168,7 +168,7 @@
     });
   
      // Modified Venobox initialization with custom mobile close button
-    $(document).ready(function() {
+     $(document).ready(function() {
       $('.venobox').venobox({
         bgcolor: '#010e1b',
         border: 'none',
@@ -180,58 +180,47 @@
         spinColor: '#12d640',
         overlayColor: 'rgba(1, 14, 27, 0.95)',
         closeBackground: 'transparent',
-        closeColor: '#12d640',
+        closeColor: '#A62C2C', // Changed to red color
+        navColor: '#0CBA3A', // Added for navigation buttons
         css: {
           'background-color': '#010e1b',
           'box-shadow': 'none'
         },
         onOpen: function() {
-          // Remove default close button
-          $('.vbox-close').remove();
+          // Modify existing close button instead of removing it
+          var $closeBtn = $('.vbox-close');
+          $closeBtn.html('<i class="material-icons">gamepad</i>');
+          $closeBtn.addClass('custom-gamepad-close');
           
-          // Create custom close button with gamepad icon
-          var closeBtn = $('<button class="custom-close-btn"><i class="material-icons">gamepad</i></button>');
+          // Style navigation buttons
+          $('.vbox-prev, .vbox-next').addClass('vbox-nav');
+          $('.vbox-prev').html('<i class="material-icons">skip_previous</i>');
+          $('.vbox-next').html('<i class="material-icons">skip_next</i>');
           
-          // Position differently for mobile/desktop
+          // Mobile-specific adjustments
           if ($(window).width() <= 768) {
-            closeBtn.css({
-              'position': 'fixed',
-              'top': '15px',
-              'right': '15px',
-              'color': 'red',
-              'background': 'transparent',
-              'border': 'none',
-              'font-size': '32px',
-              'cursor': 'pointer',
-              'z-index': '999999',
-              'padding': '5px',
-              'border-radius': '50%'
+            $closeBtn.css({
+              'top': '10px',
+              'right': '10px',
+              'font-size': '25px',
+              'color': '#A62C2C'
             });
-          } else {
-            closeBtn.css({
-              'position': 'fixed',
-              'top': '20px',
-              'right': '20px',
-              'color': '#12d640',
-              'background': 'transparent',
-              'border': 'none',
-              'font-size': '28px',
-              'cursor': 'pointer',
-              'z-index': '999999'
+            
+            $('.vbox-prev, .vbox-next').css({
+              'width': '30px',
+              'height': '30px',
+              'bottom': '10px',
+              'top': 'auto'
             });
+            
+            $('.vbox-prev').css('left', '10px');
+            $('.vbox-next').css('right', '10px');
           }
-          
-          // Add to DOM
-          $('body').append(closeBtn);
-          
-          // Click handler
-          closeBtn.on('click', function() {
-            $('.venobox').venobox('close');
-            $(this).remove();
-          });
         },
         onClose: function() {
-          $('.custom-close-btn').remove();
+          // Clean up classes we added
+          $('.vbox-close').removeClass('custom-gamepad-close');
+          $('.vbox-prev, .vbox-next').removeClass('vbox-nav');
         }
       });
     });
