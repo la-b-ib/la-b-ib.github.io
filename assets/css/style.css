@@ -1234,7 +1234,7 @@ a, button, .portfolio-wrap {
     100% { transform: scale(1); }
 }
 
-/* Custom Close and Navigation Buttons */
+/* Custom Venobox Controls */
 .vbox-close.custom-gamepad-close {
     width: 25px !important;
     height: 25px !important;
@@ -1242,8 +1242,12 @@ a, button, .portfolio-wrap {
     background: transparent !important;
     border: none !important;
     font-size: 25px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
     right: 15px !important;
     top: 15px !important;
+    z-index: 999999 !important;
 }
 
 .vbox-nav {
@@ -1256,6 +1260,7 @@ a, button, .portfolio-wrap {
     justify-content: center !important;
     color: white !important;
     font-size: 14px !important;
+    z-index: 999999 !important;
 }
 
 .vbox-prev {
@@ -1269,11 +1274,9 @@ a, button, .portfolio-wrap {
 /* Mobile Overrides */
 @media (max-width: 768px) {
     .vbox-close.custom-gamepad-close {
-        display: block !important;
-        z-index: 999999;
-        position: fixed;
         top: 10px !important;
         right: 10px !important;
+        font-size: 30px !important;
     }
     
     .vbox-nav {
@@ -1285,9 +1288,11 @@ a, button, .portfolio-wrap {
     
     .vbox-prev {
         left: 10px !important;
+        right: auto !important;
     }
     
     .vbox-next {
         right: 10px !important;
+        left: auto !important;
     }
 }
