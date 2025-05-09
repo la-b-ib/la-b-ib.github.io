@@ -10,7 +10,6 @@ body {
     color: #fff;
     position: relative;
     background: transparent;
-}
 
 body::before {
     content: "";
@@ -1235,13 +1234,14 @@ a, button, .portfolio-wrap {
 }
 
 /* Custom Venobox Controls */
+/* Custom Venobox Controls */
 .vbox-close.custom-gamepad-close {
-    width: 25px !important;
-    height: 25px !important;
-    color: #A62C2C !important;
+    width: 24px !important;
+    height: 24px !important;
+    color: #ff0000 !important; /* Pure red */
     background: transparent !important;
     border: none !important;
-    font-size: 25px !important;
+    font-size: 24px !important; /* Matches icon size */
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -1272,19 +1272,24 @@ a, button, .portfolio-wrap {
 }
 
 /* Mobile Overrides */
+/* Mobile Overrides */
 @media (max-width: 768px) {
     .vbox-close.custom-gamepad-close {
+        width: 24px !important;
+        height: 24px !important;
+        font-size: 24px !important;
         top: 10px !important;
         right: 10px !important;
-        font-size: 30px !important;
+        color: #ff0000 !important;
     }
     
     .vbox-nav {
-        width: 30px !important;
-        height: 30px !important;
+        width: 24px !important;
+        height: 24px !important;
         bottom: 10px !important;
         top: auto !important;
     }
+}
     
     .vbox-prev {
         left: 10px !important;
@@ -1295,4 +1300,34 @@ a, button, .portfolio-wrap {
         right: 10px !important;
         left: auto !important;
     }
+}
+/*--------------------------------------------------------------
+# Venobox Fallback Styles
+--------------------------------------------------------------*/
+/* Fallback for when Material Icons don't load */
+.vbox-close.custom-gamepad-close i.material-icons {
+    font-family: 'Material Icons', sans-serif !important;
+    /* Fallback content - will only show if Material Icons fail */
+    position: relative;
+}
+
+.vbox-close.custom-gamepad-close i.material-icons:before {
+    content: "🎮"; /* Gamepad emoji fallback */
+    display: none; /* Hidden by default */
+    font-family: sans-serif !important;
+}
+
+/* Fallback trigger - when Material Icons font fails */
+@font-face {
+    font-family: 'Material Icons Fallback';
+    src: local("Arial");
+    unicode-range: U+0; /* Trick to always force fallback */
+}
+
+.vbox-close.custom-gamepad-close i.material-icons {
+    font-family: 'Material Icons', 'Material Icons Fallback' !important;
+}
+
+.vbox-close.custom-gamepad-close i.material-icons.font-fallback:before {
+    display: inline !important;
 }
