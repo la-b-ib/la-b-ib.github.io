@@ -272,11 +272,11 @@
     }
     
     .interest-heading {
-        font-size: 1.5rem; /* Larger for main heading */
+        font-size: 1.5rem;
     }
     
     .interest-title {
-        font-size: 1rem; /* Standard size for items */
+        font-size: 1rem;
     }
     
     .icon-box {
@@ -302,6 +302,14 @@
     </div>
   </div>
 
+  <!-- ======= GitHub Calendar ======= -->
+  <div class="contribution container">
+    <div class="contribution-container" style="margin-top: 25px;">
+      <div class="calendar">
+        Loading contribution data...
+      </div>
+    </div>
+  </div>
   
 </section>
 
@@ -317,6 +325,7 @@
     .contribution-badges img {
       height: 28px;
       width: auto;
+      border-radius: 6px;
     }
     
     .contribution-container {
@@ -330,6 +339,39 @@
       width: 100%;
       height: auto;
       display: block;
+    }
+    
+    /* Calendar specific styles */
+    .calendar {
+      width: 100%;
+      min-height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      background: #000f1a;
+    }
+    
+    /* GitHub Calendar text color override */
+    .calendar .contrib-number,
+    .calendar .text-muted {
+      color: white !important;
+      fill: white !important;
+    }
+    
+    .calendar .contrib-legend {
+      color: white !important;
+    }
+    
+    .calendar .day[data-level="0"] {
+      fill: #161b22 !important;
+    }
+    
+    /* Graph alignment */
+    .calendar svg {
+      width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
     }
     
     /* Interests Section */
@@ -350,10 +392,27 @@
         padding-top: 15px !important;
       }
       
-      /* Square graph for mobile */
-      .contribution-graph img {
+      /* Square view for mobile */
+      .contribution-graph img,
+      .calendar {
         height: 300px;
         object-fit: cover;
+      }
+      
+      /* GitHub Calendar mobile optimization */
+      .calendar svg {
+        width: 100% !important;
+        height: auto !important;
+      }
+      
+      .calendar .float-left.text-gray,
+      .calendar .float-right.text-gray {
+        font-size: 12px !important;
+      }
+      
+      /* Maintain 25px spacing on mobile */
+      .contribution-container {
+        margin-top: 25px !important;
       }
     }
     
@@ -362,7 +421,17 @@
       font-weight: bold !important;
     }
   </style>
- 
+
+  <!-- GitHub Calendar Script -->
+  <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css">
+  <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
+  <script>
+    GitHubCalendar(".calendar", "la-b-ib", { 
+      responsive: true,
+      tooltips: true,
+      global_stats: false
+    });
+  </script>
 <!-- ======= Education Section ======= -->
 <section id="education" class="services">
     <div class="container">
