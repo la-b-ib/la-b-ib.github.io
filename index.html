@@ -272,11 +272,11 @@
     }
     
     .interest-heading {
-        font-size: 1.5rem;
+        font-size: 1.5rem; /* Larger for main heading */
     }
     
     .interest-title {
-        font-size: 1rem;
+        font-size: 1rem; /* Standard size for items */
     }
     
     .icon-box {
@@ -286,6 +286,7 @@
   
   <!-- ======= Contribution ======= -->
   <div class="contribution container">
+
     <div class="section-title">
       <h2><b>Contribution</b></h2>
     </div>
@@ -301,118 +302,91 @@
     </div>
   </div>
 
-  <!-- ======= Optimized GitHub Calendar ======= -->
-  <div class="contribution container">
-    <div class="contribution-container" style="margin-top: 25px;">
-      <div class="calendar">
-        Loading contribution data...
-      </div>
-    </div>
-  </div>
+  
 </section>
 
 <style>
-  /* Contribution Section Styles */
-  .contribution-badges {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 15px;
-  }
-  
-  .contribution-badges img {
-    height: 28px;
-    width: auto;
-    border-radius: 6px;
-  }
-  
-  .contribution-container {
-    width: 100%;
-    margin: 0 auto;
-    background: #000f1a;
-    padding: 0;
-  }
-  
-  .contribution-graph img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  /* Calendar Optimization */
-  .calendar {
-    width: 100%;
-    min-height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    background: #000f1a;
-    overflow: hidden;
-  }
-  
-  .calendar svg {
-    width: 100% !important;
-    height: auto !important;
-    image-rendering: crisp-edges;
-    shape-rendering: crispEdges;
-  }
-  
-  /* Text color overrides */
-  .calendar .contrib-number,
-  .calendar .text-muted,
-  .calendar .contrib-legend {
-    color: white !important;
-    fill: white !important;
-  }
-  
-  .calendar .day[data-level="0"] {
-    fill: #161b22 !important;
-  }
-  
-  /* Mobile Optimization */
-  @media (max-width: 768px) {
-    .contribution-graph img,
-    .calendar {
-      height: 300px;
-      object-fit: contain;
+    /* General Styles */
+    .contribution-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 15px;
     }
     
-    .calendar svg {
-      transform: scale(1.05);
-      transform-origin: top left;
+    .contribution-badges img {
+      height: 28px;
+      width: auto;
     }
-  }
-</style>
-
-<!-- GitHub Calendar Script with Quality Enhancements -->
-<link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css">
-<script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    GitHubCalendar(".calendar", "la-b-ib", { 
-      responsive: true,
-      tooltips: true,
-      global_stats: false
-    });
     
-    // Quality enhancement
-    setTimeout(function() {
-      const calendar = document.querySelector('.calendar');
-      if (calendar) {
-        calendar.style.display = 'none';
-        calendar.offsetHeight; // Trigger reflow
-        calendar.style.display = 'flex';
-        
-        const svg = calendar.querySelector('svg');
-        if (svg) {
-          svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
-          svg.style.width = '100%';
-        }
+    .contribution-container {
+      width: 100%;
+      margin: 0 auto;
+      background: #000f1a;
+      padding: 0;
+    }
+    
+    .contribution-graph img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    /* Interests Section */
+    .icon-box {
+      height: auto;
+      padding: 15px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+    }
+    
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .col-lg-4, .col-lg-8 {
+        width: 100%;
       }
-    }, 500);
-  });
-</script>
+      .content {
+        padding-top: 15px !important;
+      }
+      
+      /* Square graph for mobile */
+      .contribution-graph img {
+        height: 300px;
+        object-fit: cover;
+      }
+    }
+    
+    /* Ensure all text is bold */
+    strong, b {
+      font-weight: bold !important;
+    }
+  </style>
+ 
+<!-- ======= Education Section ======= -->
+<section id="education" class="services">
+    <div class="container">
+        <div class="section-title">
+            <h2><b>Education</b></h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-12" data-aos="fade-up" style="display: inline-block;">
+                <div class="col-md-4 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="padding:0px 0px;padding-bottom: 5px;display: inline-block;">
+                    <img src="assets/img/education/bu.png" class="img-fluid" alt="">
+                    <p style="text-align:left;color:#fff;padding: 5px 10px;"><b>B.Sc in Computer Science and Engineering</b></p>
+                    <h6 style="text-align:left;padding: 0px 10px;"><b>January 2022 - Present</b></h6>
+                    <h6 style="text-align:left;color:#0dcd3c;padding: 0px 10px;"><b>Relevant Coursework</b></h6>
+                    <ul style="list-style-type: none;text-align:left;color:#fff;padding-left: 6px;">
+                        <li style="padding-left: 6px;"><i class="icofont-rounded-right"></i><b>Cloud Computing, ML & DL</b></li>
+                        <li style="padding-left: 6px;"><i class="icofont-rounded-right"></i><b>Database Management Systems</b></li>
+                        <li style="padding-left: 6px;"><i class="icofont-rounded-right"></i><b>Algorithms &amp; Optimization</b></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  
 <!-- End Education Section -->
 
     <!-- Start Certification Section -->
