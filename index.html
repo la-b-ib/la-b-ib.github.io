@@ -58,7 +58,157 @@
   <!-- End Google Tag Manager (noscript) -->
 
   <!-- ======= Header ======= -->
- <header id="header" class="header-tops">
+ <style>
+/* Base reset to prevent Bootstrap interference */
+#header.header-tops {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.9); /* Add background for readability */
+    padding: 15px 0;
+}
+
+/* Main content should start below the fixed header */
+main {
+    margin-top: 150px; /* Adjust this value based on your header height */
+}
+
+/* Container adjustments */
+#header.header-tops > .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header content */
+.header-content {
+    margin-bottom: 10px;
+}
+
+/* Navigation menu - fixed position */
+.nav-menu {
+    margin-top: 15px;
+}
+
+.nav-menu ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+.nav-menu li {
+    margin: 0 15px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu a {
+    position: relative;
+    color: #fff;
+    font-size: 19px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    padding: 0;
+}
+
+.nav-text {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 4px;
+}
+
+/* Underline effect */
+.nav-text::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #9e7f25;
+    transition: width 0.3s ease;
+}
+
+.nav-menu a:hover .nav-text::after,
+.nav-menu .active .nav-text::after {
+    width: 100%;
+}
+
+/* Color changes */
+.nav-menu a:hover,
+.nav-menu .active a {
+    color: #12d640;
+}
+
+/* Social links */
+.social-links {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+}
+
+/* About section and other sections */
+section {
+    padding: 80px 0;
+    position: relative;
+}
+
+/* Override Bootstrap's container behavior */
+.container {
+    max-width: 1200px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .nav-menu ul {
+        justify-content: center;
+    }
+    
+    .nav-menu li {
+        margin: 0 10px;
+    }
+    
+    main {
+        margin-top: 180px; /* Larger margin for wrapped nav */
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-menu a {
+        font-size: 16px;
+    }
+    
+    .header-content h1 {
+        font-size: 24px;
+    }
+    
+    .header-content h2 {
+        font-size: 18px;
+    }
+    
+    main {
+        margin-top: 200px; /* Even larger margin for mobile */
+    }
+}
+</style>
+
+<!-- Fixed Header -->
+<header id="header" class="header-tops">
     <div class="container">
         <div class="header-content">
             <h1><a href="index.html" style="margin-right: 25px;">Labib Bin Shahed</a></h1>
@@ -87,94 +237,6 @@
         </div>
     </div>
 </header>
-
-<style>
-/* Base styles */
-#header.header-tops {
-    position: relative;
-    width: 100%;
-}
-
-/* Container adjustments */
-@media (min-width: 992px) {
-    #header.header-tops > .container {
-        width: auto;
-        max-width: none;
-        padding-left: 30px;
-        padding-right: 30px;
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-/* Header content */
-.header-content {
-    margin-bottom: 10px;
-}
-
-/* Navigation menu - fixed to prevent shifting */
-.nav-menu {
-    margin-top: 35px;
-}
-
-.nav-menu ul {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.nav-menu li {
-    margin: 0 15px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-}
-
-.nav-menu a {
-    position: relative;
-    color: #fff;
-    font-size: 19px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    text-decoration: none;
-    padding: 0 0 6px 0;
-}
-
-.nav-text {
-    position: relative;
-    display: inline-block;
-    padding-bottom: 4px;
-}
-
-/* Underline effect - now properly contained */
-.nav-text::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #9e7f25;
-    transition: width 0.3s ease;
-}
-
-.nav-menu a:hover .nav-text::after,
-.nav-menu .active .nav-text::after {
-    width: 100%;
-}
-
-/* Color changes on hover/active */
-.nav-menu a:hover,
-.nav-menu .active a {
-    color: #12d640;
-}
-
-/* Social links */
-.social-links {
-    margin-top: 20px;
-}
-</style>
 <!-- ======= About Section ======= -->
 
 <section id="about" class="about">
