@@ -58,50 +58,61 @@
   <!-- End Google Tag Manager (noscript) -->
 
   <!-- ======= Header ======= -->
-  <header id="header" class="header-tops">
+ <header id="header" class="header-tops">
     <div class="container">
-      <h1><a href="index.html" style="margin-right: 25px;">Labib Bin Shahed</a></h1>
-      <h2 style="color:#fff">I'm <span class="typing" style="color:#12D640"></span></h2>
-      <nav class="nav-menu d-none d-lg-block">
-        <ul>
-          <li class="active"><a href="#header"><span><b>Home</b></span></a></li>
-          <li><a href="#about"><span><b>About</b></span></a></li>
-          <li><a href="#education"><span><b>Education</b></span></a></li>
-          <li><a href="#certification"><span><b>Certification</b></span></a></li>
-          <li><a href="#research"><span><b>Research</b></span></a></li>
-          <li><a href="#experience"><span><b>Experience</b></span></a></li>
-          <li><a href="#portfolio"><span><b>Projects</b></span></a></li>
-          <li><a href="#skills"><span><b>Skills</b></span></a></li>
-          <li><a href="#blogs"><span><b>Blogs</b></span></a></li>
-          <li><a href="#contacts"><span><b>Contact</b></span></a></li>
-        </ul>
-      </nav>
+        <div class="header-content">
+            <h1><a href="index.html" style="margin-right: 25px;">Labib Bin Shahed</a></h1>
+            <h2 style="color:#fff">I'm <span class="typing" style="color:#12D640"></span></h2>
+        </div>
+        
+        <nav class="nav-menu d-none d-lg-block">
+            <ul>
+                <li class="active"><a href="#header"><span class="nav-text"><b>Home</b></span></a></li>
+                <li><a href="#about"><span class="nav-text"><b>About</b></span></a></li>
+                <li><a href="#education"><span class="nav-text"><b>Education</b></span></a></li>
+                <li><a href="#certification"><span class="nav-text"><b>Certification</b></span></a></li>
+                <li><a href="#research"><span class="nav-text"><b>Research</b></span></a></li>
+                <li><a href="#experience"><span class="nav-text"><b>Experience</b></span></a></li>
+                <li><a href="#portfolio"><span class="nav-text"><b>Projects</b></span></a></li>
+                <li><a href="#skills"><span class="nav-text"><b>Skills</b></span></a></li>
+                <li><a href="#blogs"><span class="nav-text"><b>Blogs</b></span></a></li>
+                <li><a href="#contacts"><span class="nav-text"><b>Contact</b></span></a></li>
+            </ul>
+        </nav>
 
-      <div class="social-links">
-          <a href="https://www.linkedin.com/in/la-b-ib/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-          <a href="https://github.com/la-b-ib" target="_blank" class="github"><i class="bx bxl-github"></i></a>
-          <a href="mailto:labib.45x@gmail.com?subject=Inquiry%20from%20Website&body=Hello%20Labib,%0D%0A%0D%0AI%20have%20a%20question!" target="_blank" class="google"><i class="bx bxl-google"></i></a>
-      </div>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/la-b-ib/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            <a href="https://github.com/la-b-ib" target="_blank" class="github"><i class="bx bxl-github"></i></a>
+            <a href="mailto:labib.45x@gmail.com?subject=Inquiry%20from%20Website&body=Hello%20Labib,%0D%0A%0D%0AI%20have%20a%20question!" target="_blank" class="google"><i class="bx bxl-google"></i></a>
+        </div>
     </div>
 </header>
 
 <style>
-/* Override Bootstrap container for desktop view */
-@media (min-width: 992px) {
-  #header.header-tops {
-    width: auto !important;
-    max-width: none !important;
-  }
-  
-  #header.header-tops > .container {
-    width: auto !important;
-    max-width: none !important;
-    padding-left: 30px;
-    padding-right: 30px;
-  }
+/* Base styles */
+#header.header-tops {
+    position: relative;
+    width: 100%;
 }
 
-/* Fixed navigation menu styles */
+/* Container adjustments */
+@media (min-width: 992px) {
+    #header.header-tops > .container {
+        width: auto;
+        max-width: none;
+        padding-left: 30px;
+        padding-right: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Header content */
+.header-content {
+    margin-bottom: 10px;
+}
+
+/* Navigation menu - fixed to prevent shifting */
 .nav-menu {
     margin-top: 35px;
 }
@@ -113,26 +124,31 @@
     list-style: none;
 }
 
-.nav-menu li + li {
-    margin-left: 30px;
+.nav-menu li {
+    margin: 0 15px;
+    height: 30px;
+    display: flex;
+    align-items: center;
 }
 
 .nav-menu a {
-    display: block;
     position: relative;
     color: #fff;
     font-size: 19px;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
-    padding-bottom: 6px; /* Add padding to reserve space for underline */
+    text-decoration: none;
+    padding: 0 0 6px 0;
 }
 
-.nav-menu a span {
-    display: inline-block; /* Prevent text shifting */
+.nav-text {
     position: relative;
+    display: inline-block;
+    padding-bottom: 4px;
 }
 
-.nav-menu a:before {
+/* Underline effect - now properly contained */
+.nav-text::after {
     content: "";
     position: absolute;
     width: 0;
@@ -140,29 +156,23 @@
     bottom: 0;
     left: 0;
     background-color: #9e7f25;
-    visibility: hidden;
-    transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease;
 }
 
-.nav-menu a:hover:before, 
-.nav-menu li:hover > a:before, 
-.nav-menu .active > a:before {
-    visibility: visible;
-    width: 100%; /* Full width underline */
+.nav-menu a:hover .nav-text::after,
+.nav-menu .active .nav-text::after {
+    width: 100%;
 }
 
-.nav-menu a:hover, 
-.nav-menu .active > a, 
-.nav-menu li:hover > a {
+/* Color changes on hover/active */
+.nav-menu a:hover,
+.nav-menu .active a {
     color: #12d640;
-    text-decoration: none;
 }
 
-/* Ensure no layout shift */
-.nav-menu li {
-    height: 30px;
-    display: flex;
-    align-items: center;
+/* Social links */
+.social-links {
+    margin-top: 20px;
 }
 </style>
 <!-- ======= About Section ======= -->
