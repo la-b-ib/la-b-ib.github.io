@@ -58,8 +58,8 @@
   <!-- End Google Tag Manager (noscript) -->
 
   <!-- ======= Header ======= -->
- <style>
-/* Base reset to prevent Bootstrap interference */
+<style>
+/* Reset and Base Styles */
 #header.header-tops {
     position: fixed;
     top: 0;
@@ -67,33 +67,62 @@
     right: 0;
     width: 100%;
     z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.9); /* Add background for readability */
-    padding: 15px 0;
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 12px 0;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Main content should start below the fixed header */
+/* Main content starts below fixed header */
 main {
-    margin-top: 150px; /* Adjust this value based on your header height */
+    margin-top: 110px; /* Reduced for compact header */
 }
 
-/* Container adjustments */
+/* Optimized Container */
 #header.header-tops > .container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
 }
 
-/* Header content */
+/* Bold Header Content */
 .header-content {
-    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
 }
 
-/* Navigation menu - fixed position */
+.header-content h1,
+.header-content h2,
+.header-content a {
+    font-weight: 700 !important; /* Force bold */
+    margin: 0;
+}
+
+.header-content h1 {
+    font-size: 22px;
+    white-space: nowrap;
+}
+
+.header-content h2 {
+    font-size: 16px;
+    white-space: nowrap;
+    color: #fff;
+}
+
+/* Bold Single-Row Navigation */
 .nav-menu {
-    margin-top: 15px;
+    margin-top: 8px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Hide scrollbar */
+}
+
+.nav-menu::-webkit-scrollbar {
+    display: none;
 }
 
 .nav-menu ul {
@@ -101,140 +130,139 @@ main {
     margin: 0;
     padding: 0;
     list-style: none;
-    flex-wrap: wrap; /* Allow wrapping on small screens */
+    white-space: nowrap;
+    gap: 10px; /* Tighter spacing */
 }
 
 .nav-menu li {
-    margin: 0 15px;
-    height: 30px;
+    position: relative;
+    height: 26px; /* Reduced height */
     display: flex;
     align-items: center;
 }
 
+/* Bold Underline Animation */
 .nav-menu a {
-    position: relative;
     color: #fff;
-    font-size: 19px;
+    font-size: 15px;
     font-family: "Poppins", sans-serif;
-    font-weight: 400;
+    font-weight: 700 !important; /* Force bold */
     text-decoration: none;
-    padding: 0;
-}
-
-.nav-text {
+    padding: 4px 0;
     position: relative;
-    display: inline-block;
-    padding-bottom: 4px;
 }
 
-/* Underline effect */
-.nav-text::after {
-    content: "";
+.nav-menu a::after {
+    content: '';
     position: absolute;
     width: 0;
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #9e7f25;
-    transition: width 0.3s ease;
+    background-color: #12D640;
+    transition: width 0.2s ease;
 }
 
-.nav-menu a:hover .nav-text::after,
-.nav-menu .active .nav-text::after {
+.nav-menu a:hover::after,
+.nav-menu .active a::after {
     width: 100%;
 }
 
-/* Color changes */
 .nav-menu a:hover,
 .nav-menu .active a {
-    color: #12d640;
+    color: #12D640;
 }
 
-/* Social links */
+/* Bold Social Links */
 .social-links {
-    margin-top: 15px;
+    position: absolute;
+    right: 20px;
+    top: 12px;
     display: flex;
-    gap: 15px;
+    gap: 10px;
 }
 
-/* About section and other sections */
-section {
-    padding: 80px 0;
-    position: relative;
+.social-links a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700 !important; /* Force bold */
+    transition: color 0.15s;
 }
 
-/* Override Bootstrap's container behavior */
-.container {
-    max-width: 1200px;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+.social-links a:hover {
+    color: #12D640;
 }
 
-/* Responsive adjustments */
+/* Responsive Adjustments */
 @media (max-width: 992px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .social-links {
+        position: static;
+        margin-top: 8px;
+    }
+    
     .nav-menu ul {
-        justify-content: center;
-    }
-    
-    .nav-menu li {
-        margin: 0 10px;
-    }
-    
-    main {
-        margin-top: 180px; /* Larger margin for wrapped nav */
+        gap: 8px;
     }
 }
 
 @media (max-width: 768px) {
+    main {
+        margin-top: 140px;
+    }
+    
     .nav-menu a {
-        font-size: 16px;
+        font-size: 14px;
     }
     
     .header-content h1 {
-        font-size: 24px;
+        font-size: 20px;
     }
     
     .header-content h2 {
-        font-size: 18px;
+        font-size: 15px;
     }
     
-    main {
-        margin-top: 200px; /* Even larger margin for mobile */
+    .social-links a {
+        font-size: 15px;
     }
 }
 </style>
 
-<!-- Fixed Header -->
+<!-- Optimized Fixed Header with All Bold Text -->
 <header id="header" class="header-tops">
     <div class="container">
         <div class="header-content">
-            <h1><a href="index.html" style="margin-right: 25px;">Labib Bin Shahed</a></h1>
-            <h2 style="color:#fff">I'm <span class="typing" style="color:#12D640"></span></h2>
+            <div>
+                <h1><a href="index.html" style="font-weight:700">Labib Bin Shahed</a></h1>
+                <h2 style="font-weight:700">I'm <span class="typing" style="color:#12D640;font-weight:700"></span></h2>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/la-b-ib/" target="_blank" style="font-weight:700"><i class="bx bxl-linkedin"></i></a>
+                <a href="https://github.com/la-b-ib" target="_blank" style="font-weight:700"><i class="bx bxl-github"></i></a>
+                <a href="mailto:labib.45x@gmail.com" target="_blank" style="font-weight:700"><i class="bx bxl-google"></i></a>
+            </div>
         </div>
         
-        <nav class="nav-menu d-none d-lg-block">
+        <nav class="nav-menu">
             <ul>
-                <li class="active"><a href="#header"><span class="nav-text"><b>Home</b></span></a></li>
-                <li><a href="#about"><span class="nav-text"><b>About</b></span></a></li>
-                <li><a href="#education"><span class="nav-text"><b>Education</b></span></a></li>
-                <li><a href="#certification"><span class="nav-text"><b>Certification</b></span></a></li>
-                <li><a href="#research"><span class="nav-text"><b>Research</b></span></a></li>
-                <li><a href="#experience"><span class="nav-text"><b>Experience</b></span></a></li>
-                <li><a href="#portfolio"><span class="nav-text"><b>Projects</b></span></a></li>
-                <li><a href="#skills"><span class="nav-text"><b>Skills</b></span></a></li>
-                <li><a href="#blogs"><span class="nav-text"><b>Blogs</b></span></a></li>
-                <li><a href="#contacts"><span class="nav-text"><b>Contact</b></span></a></li>
+                <li class="active"><a href="#header" style="font-weight:700">Home</a></li>
+                <li><a href="#about" style="font-weight:700">About</a></li>
+                <li><a href="#education" style="font-weight:700">Education</a></li>
+                <li><a href="#certification" style="font-weight:700">Certification</a></li>
+                <li><a href="#research" style="font-weight:700">Research</a></li>
+                <li><a href="#experience" style="font-weight:700">Experience</a></li>
+                <li><a href="#portfolio" style="font-weight:700">Projects</a></li>
+                <li><a href="#skills" style="font-weight:700">Skills</a></li>
+                <li><a href="#blogs" style="font-weight:700">Blogs</a></li>
+                <li><a href="#contacts" style="font-weight:700">Contact</a></li>
             </ul>
         </nav>
-
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/la-b-ib/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-            <a href="https://github.com/la-b-ib" target="_blank" class="github"><i class="bx bxl-github"></i></a>
-            <a href="mailto:labib.45x@gmail.com?subject=Inquiry%20from%20Website&body=Hello%20Labib,%0D%0A%0D%0AI%20have%20a%20question!" target="_blank" class="google"><i class="bx bxl-google"></i></a>
-        </div>
     </div>
 </header>
 <!-- ======= About Section ======= -->
