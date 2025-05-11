@@ -58,71 +58,52 @@
   <!-- End Google Tag Manager (noscript) -->
 
   <!-- ======= Header ======= -->
+  <header id="header" class="header-tops">
+    <div class="container">
+      <h1><a href="index.html" style="margin-right: 25px;">Labib Bin Shahed</a></h1>
+      <h2 style="color:#fff">I'm <span class="typing" style="color:#12D640"></span></h2>
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="#header"> <span><b>Home</b></span></a></li>
+          <li><a href="#about"><span><b>About</b></span></a></li>
+          <li><a href="#education"> <span><b>Education</b></span></a></li>
+          <li><a href="#certification"> <span><b>Certification</b></span></a></li>
+          <li><a href="#research"> <span><b>Research</b></span></a></li>
+          <li><a href="#experience"> <span><b>Experience</b></span></a></li>
+          <li><a href="#portfolio"> <span><b>Projects</b></span></a></li>
+          <li><a href="#skills"> <span><b>Skills</b></span></a></li>
+          <li><a href="#blogs"> <span><b>Blogs</b></span></a></li>
+          <li><a href="#contacts"> <span><b>Contact</b></span></a></li>
+        </ul>
+      </nav>
+
+      <div class="social-links">
+          <a href="https://www.linkedin.com/in/la-b-ib/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://github.com/la-b-ib" target="_blank" class="github"><i class="bx bxl-github"></i></a>
+          <a href="mailto:labib.45x@gmail.com?subject=Inquiry%20from%20Website&body=Hello%20Labib,%0D%0A%0D%0AI%20have%20a%20question!" target="_blank" class="google"><i class="bx bxl-google"></i></a>
+      </div>
+    </div>
+</header>
+
 <style>
-/* Reset and Base Styles */
-#header.header-tops {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.95);
-    padding: 12px 0;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+/* Override Bootstrap container for desktop view */
+@media (min-width: 992px) {
+  #header.header-tops {
+    width: auto !important;
+    max-width: none !important;
+  }
+  
+  #header.header-tops > .container {
+    width: auto !important;
+    max-width: none !important;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 
-/* Main content starts below fixed header */
-main {
-    margin-top: 110px; /* Reduced for compact header */
-}
-
-/* Optimized Container */
-#header.header-tops > .container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Bold Header Content */
-.header-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 8px;
-}
-
-.header-content h1,
-.header-content h2,
-.header-content a {
-    font-weight: 700 !important; /* Force bold */
-    margin: 0;
-}
-
-.header-content h1 {
-    font-size: 22px;
-    white-space: nowrap;
-}
-
-.header-content h2 {
-    font-size: 16px;
-    white-space: nowrap;
-    color: #fff;
-}
-
-/* Bold Single-Row Navigation */
+/* Your existing navigation menu styles - unchanged */
 .nav-menu {
-    margin-top: 8px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none; /* Hide scrollbar */
-}
-
-.nav-menu::-webkit-scrollbar {
-    display: none;
+    margin-top: 35px;
 }
 
 .nav-menu ul {
@@ -130,141 +111,45 @@ main {
     margin: 0;
     padding: 0;
     list-style: none;
-    white-space: nowrap;
-    gap: 10px; /* Tighter spacing */
 }
 
-.nav-menu li {
-    position: relative;
-    height: 26px; /* Reduced height */
-    display: flex;
-    align-items: center;
+.nav-menu li + li {
+    margin-left: 30px;
 }
 
-/* Bold Underline Animation */
 .nav-menu a {
-    color: #fff;
-    font-size: 15px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 700 !important; /* Force bold */
-    text-decoration: none;
-    padding: 4px 0;
+    display: block;
     position: relative;
+    color: #fff;
+    font-size: 19px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
 }
 
-.nav-menu a::after {
-    content: '';
+.nav-menu a:before {
+    content: "";
     position: absolute;
     width: 0;
     height: 2px;
-    bottom: 0;
+    bottom: -4px;
     left: 0;
-    background-color: #12D640;
-    transition: width 0.2s ease;
+    background-color: #9e7f25;
+    visibility: hidden;
+    width: 0px;
+    transition: all 0.3s ease-in-out 0s;
 }
 
-.nav-menu a:hover::after,
-.nav-menu .active a::after {
-    width: 100%;
+.nav-menu a:hover:before, .nav-menu li:hover > a:before, .nav-menu .active > a:before {
+    visibility: visible;
+    width: 25px;
 }
 
-.nav-menu a:hover,
-.nav-menu .active a {
-    color: #12D640;
-}
-
-/* Bold Social Links */
-.social-links {
-    position: absolute;
-    right: 20px;
-    top: 12px;
-    display: flex;
-    gap: 10px;
-}
-
-.social-links a {
-    color: #fff;
-    font-size: 16px;
-    font-weight: 700 !important; /* Force bold */
-    transition: color 0.15s;
-}
-
-.social-links a:hover {
-    color: #12D640;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 992px) {
-    .header-content {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    .social-links {
-        position: static;
-        margin-top: 8px;
-    }
-    
-    .nav-menu ul {
-        gap: 8px;
-    }
-}
-
-@media (max-width: 768px) {
-    main {
-        margin-top: 140px;
-    }
-    
-    .nav-menu a {
-        font-size: 14px;
-    }
-    
-    .header-content h1 {
-        font-size: 20px;
-    }
-    
-    .header-content h2 {
-        font-size: 15px;
-    }
-    
-    .social-links a {
-        font-size: 15px;
-    }
+.nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
+    color: #12d640;
+    text-decoration: none;
 }
 </style>
 
-<!-- Optimized Fixed Header with All Bold Text -->
-<header id="header" class="header-tops">
-    <div class="container">
-        <div class="header-content">
-            <div>
-                <h1><a href="index.html" style="font-weight:700">Labib Bin Shahed</a></h1>
-                <h2 style="font-weight:700">I'm <span class="typing" style="color:#12D640;font-weight:700"></span></h2>
-            </div>
-            
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/la-b-ib/" target="_blank" style="font-weight:700"><i class="bx bxl-linkedin"></i></a>
-                <a href="https://github.com/la-b-ib" target="_blank" style="font-weight:700"><i class="bx bxl-github"></i></a>
-                <a href="mailto:labib.45x@gmail.com" target="_blank" style="font-weight:700"><i class="bx bxl-google"></i></a>
-            </div>
-        </div>
-        
-        <nav class="nav-menu">
-            <ul>
-                <li class="active"><a href="#header" style="font-weight:700">Home</a></li>
-                <li><a href="#about" style="font-weight:700">About</a></li>
-                <li><a href="#education" style="font-weight:700">Education</a></li>
-                <li><a href="#certification" style="font-weight:700">Certification</a></li>
-                <li><a href="#research" style="font-weight:700">Research</a></li>
-                <li><a href="#experience" style="font-weight:700">Experience</a></li>
-                <li><a href="#portfolio" style="font-weight:700">Projects</a></li>
-                <li><a href="#skills" style="font-weight:700">Skills</a></li>
-                <li><a href="#blogs" style="font-weight:700">Blogs</a></li>
-                <li><a href="#contacts" style="font-weight:700">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
 <!-- ======= About Section ======= -->
 
 <section id="about" class="about">
