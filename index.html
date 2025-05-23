@@ -398,48 +398,42 @@
     
     /* Mobile view adjustments (<= 768px) */
     @media (max-width: 768px) {
-        /* Set mobile background color */
         #education {
             background-color: #000f1a;
+            padding: 15px 0;
         }
         
-        /* Reduce container padding */
+        /* Remove container padding for cleaner mobile view */
         #education .container {
-            padding-left: 5px;
-            padding-right: 5px;
+            padding-left: 0;
+            padding-right: 0;
+            width: 100%;
+            max-width: 100%;
         }
         
-        /* Make university logo fill available width with matching padding */
-        .edu-pic {
-            width: calc(100% - 10px);
-            height: auto;
-            display: block;
-            margin-left: 5px;
-            margin-right: 5px;
-        }
-        
-        /* Make GIF fill available width with matching padding */
+        /* Synchronized image dimensions */
+        .edu-pic,
         .mobile-edu-gif {
-            display: block;
-            width: calc(100% - 10px);
+            width: 100%;
             height: auto;
-            margin: 15px 5px 0px 5px;
+            max-height: 200px; /* Synchronized height */
+            object-fit: contain;
+            display: block;
+            margin: 0 auto;
+            padding: 0 10px; /* Matched padding */
         }
         
-        /* Reset Bootstrap grid for mobile */
-        #education .row,
-        #education .col-lg-12,
+        /* Text adjustments for better mobile flow */
         #education .icon-box {
-            display: block !important;
+            padding: 0 10px !important;
             width: 100% !important;
-            max-width: 100% !important;
         }
-    }
-    
-    /* Hide GIF on desktop */
-    @media (min-width: 769px) {
-        .mobile-edu-gif {
-            display: none !important;
+        
+        /* Hide GIF on desktop */
+        @media (min-width: 769px) {
+            .mobile-edu-gif {
+                display: none !important;
+            }
         }
     }
 </style>
