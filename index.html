@@ -366,6 +366,7 @@
 <!-- ======= Education Section ======= -->
 
 <section id="education" class="services">
+    <!-- Original content remains untouched -->
     <div class="container">
         <div class="section-title">
             <h2><b>Education</b></h2>
@@ -396,36 +397,38 @@
 <style>
     /* Desktop styles remain completely unchanged */
     
-    /* Mobile view adjustments (<= 768px) */
+    /* Mobile view adjustments */
     @media (max-width: 768px) {
-        /* Remove all Bootstrap container styling */
-        #education .container,
-        #education .row,
-        #education .col-lg-12,
-        #education [class*="col-"] {
-            width: 100% !important;
-            padding: 0 !important;
-            margin: 0 !important;
-            max-width: 100% !important;
-            display: block !important;
+        #education {
+            background-color: #000f1a; /* Custom mobile background */
+            padding: 15px 0; /* Add some vertical spacing */
         }
         
-        /* Adjust images */
+        /* Custom mobile container */
+        #education .container {
+            width: 100%;
+            max-width: 100%;
+            padding: 0 10px; /* Slightly more padding than before */
+            margin: 0 auto;
+        }
+        
+        /* Images adjustment */
         .edu-pic,
         .mobile-edu-gif {
-            width: 100% !important;
-            height: auto;
+            width: 100%;
+            padding: 0;
+            margin: 0 auto;
             display: block;
-            padding: 0 5px;
-            box-sizing: border-box;
         }
         
-        /* Adjust text spacing */
+        /* Text content adjustment */
         #education .icon-box {
-            padding: 0 5px !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            width: 100% !important;
         }
         
-        /* Add slight bottom spacing */
+        /* Add spacing below content */
         .mobile-edu-gif {
             margin-top: 15px;
         }
@@ -438,7 +441,7 @@
         }
     }
 </style>
-  
+
 <!-- End Education Section -->
 
     <!-- Start Certification Section -->
