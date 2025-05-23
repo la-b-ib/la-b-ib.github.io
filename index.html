@@ -400,40 +400,39 @@
     @media (max-width: 768px) {
         #education {
             background-color: #000f1a;
-            padding: 15px 0;
         }
         
-        /* Remove container padding for cleaner mobile view */
-        #education .container {
-            padding-left: 0;
-            padding-right: 0;
-            width: 100%;
-            max-width: 100%;
-        }
-        
-        /* Synchronized image dimensions */
-        .edu-pic,
-        .mobile-edu-gif {
-            width: 100%;
-            height: auto;
-            max-height: 200px; /* Synchronized height */
-            object-fit: contain;
-            display: block;
-            margin: 0 auto;
-            padding: 0 10px; /* Matched padding */
-        }
-        
-        /* Text adjustments for better mobile flow */
+        /* Remove card/box styling */
         #education .icon-box {
-            padding: 0 10px !important;
+            background: transparent !important;
+            box-shadow: none !important;
+            border: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
             width: 100% !important;
         }
         
-        /* Hide GIF on desktop */
-        @media (min-width: 769px) {
-            .mobile-edu-gif {
-                display: none !important;
-            }
+        /* Adjust image padding */
+        .edu-pic {
+            width: 100%;
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+        
+        /* Mobile GIF styling */
+        .mobile-edu-gif {
+            display: block;
+            width: 100%;
+            padding: 0 10px;
+            box-sizing: border-box;
+            margin-top: 15px;
+        }
+    }
+    
+    /* Hide GIF on desktop */
+    @media (min-width: 769px) {
+        .mobile-edu-gif {
+            display: none;
         }
     }
 </style>
