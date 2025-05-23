@@ -398,25 +398,32 @@
     
     /* Mobile view adjustments (<= 768px) */
     @media (max-width: 768px) {
-        /* Make university logo fill available width */
-        .edu-pic {
-            width: 100%;
-            height: auto;
-            display: block;
+        /* Set mobile background color */
+        #education {
+            background-color: #000f1a;
         }
         
-        /* Make GIF fill available width with auto height */
+        /* Reduce container padding */
+        #education .container {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        
+        /* Make university logo fill available width with matching padding */
+        .edu-pic {
+            width: calc(100% - 10px);
+            height: auto;
+            display: block;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        
+        /* Make GIF fill available width with matching padding */
         .mobile-edu-gif {
             display: block;
-            width: 100%;
+            width: calc(100% - 10px);
             height: auto;
-            margin-top: 15px;
-        }
-        
-        /* Light mobile container adjustment */
-        #education .container {
-            padding-left: 10px;
-            padding-right: 10px;
+            margin: 15px 5px 0px 5px;
         }
         
         /* Reset Bootstrap grid for mobile */
