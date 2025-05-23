@@ -370,118 +370,66 @@
             <h2><b>Education</b></h2>
         </div>
         <div class="row">
-            <div class="col-lg-12 education-container" data-aos="fade-up">
-                <div class="education-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="education-logo">
-                        <img src="assets/img/education/bu.png" class="img-fluid" alt="University Logo" loading="lazy">
-                    </div>
-                    <div class="education-details">
-                        <p class="degree-title"><b>B.Sc in Computer Science and Engineering</b></p>
-                        <h6 class="education-period"><b>January 2022 - Present</b></h6>
-                        <h6 class="coursework-title"><b>Relevant Coursework</b></h6>
-                        <ul class="coursework-list">
-                            <li><i class="icofont-rounded-right"></i><b>Cloud Computing, ML & DL</b></li>
-                            <li><i class="icofont-rounded-right"></i><b>Database Management Systems</b></li>
-                            <li><i class="icofont-rounded-right"></i><b>Algorithms &amp; Optimization</b></li>
-                        </ul>
-                    </div>
+            <div class="col-lg-12" data-aos="fade-up" style="display: inline-block;">
+                <div class="col-md-4 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="padding:0px 0px;padding-bottom: 5px;display: inline-block;">
+                    <img src="assets/img/education/bu.png" class="img-fluid" alt="">
+                    <p style="text-align:left;color:#fff;padding: 5px 10px;"><b>B.Sc in Computer Science and Engineering</b></p>
+                    <h6 style="text-align:left;padding: 0px 10px;"><b>January 2022 - Present</b></h6>
+                    <h6 style="text-align:left;color:#0dcd3c;padding: 0px 10px;"><b>Relevant Coursework</b></h6>
+                    <ul style="list-style-type: none;text-align:left;color:#fff;padding-left: 6px;">
+                        <li style="padding-left: 6px;"><i class="icofont-rounded-right"></i><b>Cloud Computing, ML & DL</b></li>
+                        <li style="padding-left: 6px;"><i class="icofont-rounded-right"></i><b>Database Management Systems</b></li>
+                        <li style="padding-left: 6px;"><i class="icofont-rounded-right"></i><b>Algorithms &amp; Optimization</b></li>
+                    </ul>
                 </div>
                 <!-- Mobile-only GIF -->
-                <div class="education-gif-mobile">
-                    <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/GIF/edu.GIF" 
-                         alt="Education Animation" 
-                         loading="lazy"
-                         class="img-fluid">
-                </div>
+                <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/GIF/edu.GIF" 
+                     class="mobile-only-gif" 
+                     alt="Education animation">
             </div>
         </div>
     </div>
 </section>
 
 <style>
-    /* Default desktop styles */
-    .education-container {
-        display: inline-block;
-        width: 100%;
-    }
-    
-    .education-card {
-        padding: 0px 0px;
-        padding-bottom: 5px;
-        display: inline-block;
-        width: 100%;
-    }
-    
-    /* Hide GIF on desktop by default */
-    .education-gif-mobile {
-        display: none;
-    }
-    
-    /* Mobile responsive styles */
+    /* Reset Bootstrap for mobile view only */
     @media (max-width: 768px) {
-        .education-card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: 15px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            margin-bottom: 15px;
+        #education .container,
+        #education .row,
+        #education .col-lg-12,
+        #education .col-md-4 {
+            all: initial;
+            display: block !important;
+            width: 100% !important;
+            padding: 0 !important;
+            margin: 0 !important;
         }
         
-        .education-logo {
-            margin-bottom: 15px;
-            max-width: 100px;
+        /* Add 5px side padding as requested */
+        #education .icon-box {
+            padding-left: 5px !important;
+            padding-right: 5px !important;
         }
         
-        .education-details {
-            width: 100%;
-        }
-        
-        .degree-title, 
-        .education-period, 
-        .coursework-title {
-            text-align: center !important;
-            padding: 5px 0 !important;
-        }
-        
-        .coursework-list {
-            padding-left: 0;
-            text-align: center;
-        }
-        
-        .coursework-list li {
-            padding-left: 0;
-            margin-bottom: 8px;
-        }
-        
-        .coursework-list i {
-            margin-right: 5px;
-        }
-        
-        /* Show and style GIF only on mobile */
-        .education-gif-mobile {
+        /* Mobile GIF styling */
+        .mobile-only-gif {
             display: block;
-            max-width: 200px;
-            margin: 0 auto;
-            padding: 10px 0;
-        }
-        
-        .education-gif-mobile img {
-            border-radius: 8px;
-            width: 100%;
+            width: auto;
             height: auto;
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
         }
     }
     
-    /* Optimize GIF loading */
-    @media (max-width: 768px) and (prefers-reduced-motion: reduce) {
-        .education-gif-mobile {
+    /* Hide GIF on desktop */
+    @media (min-width: 769px) {
+        .mobile-only-gif {
             display: none !important;
         }
     }
 </style>
+  
 <!-- End Education Section -->
 
     <!-- Start Certification Section -->
