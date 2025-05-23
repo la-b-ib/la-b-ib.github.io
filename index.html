@@ -398,41 +398,35 @@
     
     /* Mobile view adjustments (<= 768px) */
     @media (max-width: 768px) {
-        #education {
-            background-color: #000f1a;
+        /* Reduced container padding */
+        #education .container {
+            padding-left: 5px;
+            padding-right: 5px;
         }
         
-        /* Remove card/box styling */
-        #education .icon-box {
-            background: transparent !important;
-            box-shadow: none !important;
-            border: none !important;
-            padding: 0 !important;
-            margin: 0 !important;
-            width: 100% !important;
-        }
-        
-        /* Adjust image padding */
+        /* Adjust university logo image padding */
         .edu-pic {
-            width: 100%;
-            padding: 0 10px;
-            box-sizing: border-box;
+            padding-left: 5px;
+            padding-right: 5px;
+            width: calc(100% - 10px);
+            margin: 0 auto;
+            display: block;
         }
         
-        /* Mobile GIF styling */
+        /* Adjust GIF padding */
         .mobile-edu-gif {
+            padding-left: 5px;
+            padding-right: 5px;
+            width: calc(100% - 10px);
+            margin: 15px auto 0;
             display: block;
-            width: 100%;
-            padding: 0 10px;
-            box-sizing: border-box;
-            margin-top: 15px;
         }
     }
     
     /* Hide GIF on desktop */
     @media (min-width: 769px) {
         .mobile-edu-gif {
-            display: none;
+            display: none !important;
         }
     }
 </style>
@@ -1551,3 +1545,4 @@
 
 </body>
 </html>
+
