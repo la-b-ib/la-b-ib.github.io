@@ -2,11 +2,18 @@
 # Material Icons
 --------------------------------------------------------------*/
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+/*--------------------------------------------------------------
+# Rajdhani Font Import
+--------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
 body {
     font-family: "Rajdhani", sans-serif;
+    font-weight: 400;
     color: #fff;
     position: relative;
     background: transparent;
@@ -39,9 +46,9 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Raleway", sans-serif;
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 700;
 }
-/*--------------------------------------------------------------
 
 /*--------------------------------------------------------------
 # Header
@@ -66,7 +73,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0;
     line-height: 1;
     font-weight: 700;
-    font-family: "Poppins", sans-serif;
+    font-family: "Rajdhani", sans-serif;
 }
 
 #header h1 a, #header h1 a:hover {
@@ -79,6 +86,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 24px;
     margin-top: 20px;
     color: #12d640;
+    font-family: "Rajdhani", sans-serif;
 }
 
 #header h2 span {
@@ -136,7 +144,6 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
-/* Desktop Navigation */
 .nav-menu {
     margin-top: 35px;
 }
@@ -157,8 +164,8 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     color: #fff;
     font-size: 19px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 500;
 }
 
 .nav-menu a:before {
@@ -237,7 +244,7 @@ h1, h2, h3, h4, h5, h6 {
 .mobile-nav a {
     color: #fff;
     padding: 14px 16px;
-    font: 500 16px/1.5 "Poppins", sans-serif;
+    font: 500 16px/1.5 "Rajdhani", sans-serif;
     text-decoration: none;
     display: block;
     transform: translateZ(0);
@@ -252,89 +259,71 @@ h1, h2, h3, h4, h5, h6 {
 .mobile-nav *:after {
     display: none !important;
 }
+
 /*--------------------------------------------------------------
-# Navigation Menu
+# Material Icons for Mobile Navigation
 --------------------------------------------------------------*/
-/* Desktop Navigation */
-/* MATERIAL ICONS FONT LOADING */
 @font-face {
     font-family: 'Material Icons';
     font-style: normal;
     font-weight: 400;
-    src: 
-      local('Material Icons'),
-      local('MaterialIcons-Regular'),
-      url(https://fonts.gstatic.com/s/materialicons/v140/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
-  }
-  
-  /* MOBILE NAVIGATION ICONS */
-  .mobile-nav a {
+    src: url(https://fonts.gstatic.com/s/materialicons/v140/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+}
+
+.mobile-nav a {
     display: flex !important;
     align-items: center !important;
     padding: 14px 20px !important;
     position: relative !important;
-  }
-  
-  .mobile-nav a .material-icons.mobile-menu-icon {
-    /* Font Properties */
+}
+
+.mobile-nav a .material-icons.mobile-menu-icon {
     font-family: 'Material Icons' !important;
     font-size: 24px !important;
     font-weight: normal !important;
     font-style: normal !important;
-    
-    /* Sizing & Spacing */
     min-width: 24px !important;
     width: 24px !important;
     height: 24px !important;
     line-height: 1 !important;
     margin-right: 15px !important;
     flex-shrink: 0 !important;
-    
-    /* Color & Display */
     color: #0dcd3c !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    
-    /* Rendering Optimizations */
     -webkit-font-smoothing: antialiased !important;
     text-rendering: optimizeLegibility !important;
-  }
-  
-  /* iOS SPECIFIC FIXES */
-  @supports (-webkit-touch-callout: none) {
+}
+
+@supports (-webkit-touch-callout: none) {
     .mobile-nav a .material-icons.mobile-menu-icon {
-      -webkit-text-stroke: 0.45px #0dcd3c !important;
-      text-shadow: 0 0 0.5px rgba(13, 205, 60, 0.7) !important;
+        -webkit-text-stroke: 0.45px #0dcd3c !important;
+        text-shadow: 0 0 0.5px rgba(13, 205, 60, 0.7) !important;
     }
-  }
-  
-  /* ICON CONTENT - FIXED TO MATCH YOUR HTML (#portfolio instead of #projects) */
-  .mobile-nav a[href*="#header"] .material-icons.mobile-menu-icon::before { content: "home"; }
-  .mobile-nav a[href*="#about"] .material-icons.mobile-menu-icon::before { content: "person"; }
-  .mobile-nav a[href*="#education"] .material-icons.mobile-menu-icon::before { content: "school"; }
-  .mobile-nav a[href*="#certification"] .material-icons.mobile-menu-icon::before { content: "verified"; }
-  .mobile-nav a[href*="#research"] .material-icons.mobile-menu-icon::before { content: "science"; }
-  .mobile-nav a[href*="#experience"] .material-icons.mobile-menu-icon::before { content: "work_history"; }
-  .mobile-nav a[href*="#portfolio"] .material-icons.mobile-menu-icon::before { content: "api"; } /* Fixed from #projects to #portfolio */
-  .mobile-nav a[href*="#skills"] .material-icons.mobile-menu-icon::before { content: "skull"; }
-  .mobile-nav a[href*="#blogs"] .material-icons.mobile-menu-icon::before { content: "newsmode"; }
-  .mobile-nav a[href*="#contact"] .material-icons.mobile-menu-icon::before { content: "email"; }
-  
-  /* ACTIVE STATE */
-  .mobile-nav .active a .material-icons.mobile-menu-icon {
+}
+
+.mobile-nav a[href*="#header"] .material-icons.mobile-menu-icon::before { content: "home"; }
+.mobile-nav a[href*="#about"] .material-icons.mobile-menu-icon::before { content: "person"; }
+.mobile-nav a[href*="#education"] .material-icons.mobile-menu-icon::before { content: "school"; }
+.mobile-nav a[href*="#certification"] .material-icons.mobile-menu-icon::before { content: "verified"; }
+.mobile-nav a[href*="#research"] .material-icons.mobile-menu-icon::before { content: "science"; }
+.mobile-nav a[href*="#experience"] .material-icons.mobile-menu-icon::before { content: "work_history"; }
+.mobile-nav a[href*="#portfolio"] .material-icons.mobile-menu-icon::before { content: "api"; }
+.mobile-nav a[href*="#skills"] .material-icons.mobile-menu-icon::before { content: "skull"; }
+.mobile-nav a[href*="#blogs"] .material-icons.mobile-menu-icon::before { content: "newsmode"; }
+.mobile-nav a[href*="#contact"] .material-icons.mobile-menu-icon::before { content: "email"; }
+
+.mobile-nav .active a .material-icons.mobile-menu-icon {
     color: #0dcd3c !important;
     transform: scale(1.05) !important;
-  }
-  
-  /* FALLBACK FOR WHEN ICONS DON'T LOAD */
-  .mobile-nav a i.mobile-menu-icon:empty:before {
+}
+
+.mobile-nav a i.mobile-menu-icon:empty:before {
     content: attr(data-fallback);
     font-family: initial !important;
     font-size: 20px;
-  }
-  /* Header Top */
-
+}
 
 /* Header Top */
 #header.header-top {
@@ -416,7 +405,7 @@ section .container {
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #dee2e6;
-    font-family: "Poppins", sans-serif;
+    font-family: "Rajdhani", sans-serif;
 }
 
 .section-title h2::after {
@@ -434,7 +423,7 @@ section .container {
     font-size: 36px;
     font-weight: 700;
     text-transform: uppercase;
-    font-family: "Poppins", sans-serif;
+    font-family: "Rajdhani", sans-serif;
     color: #fff;
 }
 
@@ -445,6 +434,7 @@ section .container {
     font-weight: 700;
     font-size: 26px;
     color: #1c7d32;
+    font-family: "Rajdhani", sans-serif;
 }
 
 .about-me .content ul {
@@ -454,6 +444,7 @@ section .container {
 
 .about-me .content ul li {
     padding-bottom: 10px;
+    font-family: "Rajdhani", sans-serif;
 }
 
 .about-me .content ul i {
@@ -464,6 +455,7 @@ section .container {
 
 .about-me .content p:last-child {
     margin-bottom: 0;
+    font-family: "Rajdhani", sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -503,7 +495,7 @@ section .container {
 .counts .count-box p {
     padding: 0;
     margin: 0;
-    font-family: "Raleway", sans-serif;
+    font-family: "Rajdhani", sans-serif;
     font-size: 14px;
 }
 
@@ -522,7 +514,7 @@ section .container {
     text-transform: uppercase;
     display: block;
     font-weight: 600;
-    font-family: "Poppins", sans-serif;
+    font-family: "Rajdhani", sans-serif;
     color: #fff;
 }
 
@@ -566,6 +558,7 @@ section .container {
     line-height: 1;
     font-size: 16px;
     color: #fff;
+    font-family: "Rajdhani", sans-serif;
 }
 
 .interests .icon-box:hover {
@@ -594,12 +587,14 @@ section .container {
     font-weight: bold;
     margin: 10px 0 5px 45px;
     color: #fff;
+    font-family: "Rajdhani", sans-serif;
 }
 
 .testimonials .testimonial-item h4 {
     font-size: 14px;
     color: #999;
     margin: 0 0 0 45px;
+    font-family: "Rajdhani", sans-serif;
 }
 
 .testimonials .testimonial-item .quote-icon-left, .testimonials .testimonial-item .quote-icon-right {
@@ -629,6 +624,7 @@ section .container {
     border-radius: 6px;
     position: relative;
     z-index: 1;
+    font-family: "Rajdhani", sans-serif;
 }
 
 .testimonials .owl-nav, .testimonials .owl-dots {
@@ -664,6 +660,7 @@ section .container {
     margin-top: 20px;
     margin-bottom: 20px;
     color: #fff;
+    font-family: "Rajdhani", sans-serif;
 }
 
 .resume .resume-item {
@@ -678,7 +675,7 @@ section .container {
     font-size: 18px;
     font-weight: 600;
     text-transform: uppercase;
-    font-family: "Poppins", sans-serif;
+    font-family: "Rajdhani", sans-serif;
     color: #1c7d32;
     margin-bottom: 10px;
 }
@@ -690,6 +687,7 @@ section .container {
     display: inline-block;
     font-weight: 600;
     margin-bottom: 10px;
+    font-family: "Rajdhani", sans-serif;
 }
 
 .resume .resume-item ul {
@@ -698,6 +696,7 @@ section .container {
 
 .resume .resume-item ul li {
     padding-bottom: 10px;
+    font-family: "Rajdhani", sans-serif;
 }
 
 .resume .resume-item:last-child {
@@ -763,6 +762,7 @@ section .container {
     font-weight: 700;
     margin-bottom: 15px;
     font-size: 24px;
+    font-family: "Rajdhani", sans-serif;
 }
 
 .services .icon-box h4 a {
@@ -773,6 +773,7 @@ section .container {
     line-height: 24px;
     font-size: 14px;
     margin-bottom: 0;
+    font-family: "Rajdhani", sans-serif;
 }
 
 .services .icon-box:hover {
@@ -825,6 +826,7 @@ section .container {
     margin: 0 3px 10px 3px;
     transition: all 0.3s ease-in-out;
     border-radius: 4px;
+    font-family: "Rajdhani", sans-serif;
 }
 
 .portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
@@ -905,6 +907,7 @@ section .container {
     font-size: 20px;
     color: #fff;
     font-weight: 600;
+    font-family: "Rajdhani", sans-serif;
 }
 
 .portfolio .portfolio-wrap .portfolio-info p {
@@ -913,6 +916,7 @@ section .container {
     text-transform: uppercase;
     padding: 0;
     margin: 0;
+    font-family: "Rajdhani", sans-serif;
 }
 
 .portfolio .portfolio-wrap .portfolio-links {
@@ -978,6 +982,7 @@ section .container {
     color: #28a745;
     font-weight: 700;
     margin: 10px 0 8px 68px;
+    font-family: "Rajdhani", sans-serif;
 }
 
 .contact .info-box p {
@@ -986,6 +991,7 @@ section .container {
     line-height: 24px;
     font-size: 14px;
     margin: 0 0 0 68px;
+    font-family: "Rajdhani", sans-serif;
 }
 
 .contact .info-box .social-links {
@@ -1065,10 +1071,11 @@ section .container {
     border: 0;
     transition: 0.3s;
     color: #fff;
+    font-family: "Rajdhani", sans-serif;
 }
 
 .contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
-    background-color立刻: rgba(255, 255, 255, 0.11);
+    background-color: rgba(255, 255, 255, 0.11);
 }
 
 .contact .php-email-form input::-webkit-input-placeholder, .contact .php-email-form textarea::-webkit-input-placeholder {
@@ -1111,6 +1118,7 @@ section .container {
     color: #fff;
     transition: 0.4s;
     border-radius: 4px;
+    font-family: "Rajdhani", sans-serif;
 }
 
 .contact .php-email-form button[type="submit"]:hover {
@@ -1145,6 +1153,7 @@ section .container {
     font-size: 13px;
     color: #fff;
     z-index: 1;
+    font-family: "Rajdhani", sans-serif;
 }
 
 .credits a {
