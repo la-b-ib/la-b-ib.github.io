@@ -6,7 +6,7 @@
 # General
 --------------------------------------------------------------*/
 body {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Continuum Bold", sans-serif;
     color: #fff;
     position: relative;
     background: transparent;
@@ -41,7 +41,18 @@ a:hover {
 h1, h2, h3, h4, h5, h6 {
     font-family: "Raleway", sans-serif;
 }
-
+/*--------------------------------------------------------------
+# Continuum Bold (Replace Open Sans)
+--------------------------------------------------------------*/
+@font-face {
+  font-family: 'Continuum Bold';
+  src: url('../font/contb.woff2') format('woff2'),
+       url('../font/contb.woff') format('woff'),
+       url('../font/contb.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap; /* Ensures text remains visible during load */
+}
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
