@@ -13,10 +13,12 @@
 --------------------------------------------------------------*/
 body {
     font-family: "Rajdhani", sans-serif;
-    font-weight: 400;
+    font-weight: 600;
     color: #fff;
     position: relative;
     background: transparent;
+    font-size: 18px;
+    line-height: 1.6;
 }
 
 body::before {
@@ -38,6 +40,8 @@ body::before {
 
 a {
     color: #12d640;
+    font-size: 18px;
+    font-weight: 600;
 }
 
 a:hover {
@@ -68,10 +72,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header h1 {
-    font-size: 48px;
+    font-size: 56px;
     margin-top: 0px;
     padding: 0;
-    line-height: 1;
+    line-height: 1.2;
     font-weight: 700;
     font-family: "Rajdhani", sans-serif;
 }
@@ -83,16 +87,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header h2 {
-    font-size: 24px;
+    font-size: 28px;
     margin-top: 20px;
     color: #12d640;
     font-family: "Rajdhani", sans-serif;
+    font-weight: 600;
 }
 
 #header h2 span {
     color: #ffc107;
     border-bottom: 2px solid #1c7d32;
     padding-bottom: 6px;
+    font-weight: 600;
 }
 
 #header img {
@@ -106,7 +112,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header .social-links a {
-    font-size: 16px;
+    font-size: 18px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -115,8 +121,9 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1;
     margin-right: 8px;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
+    font-weight: 600;
 }
 
 #header .social-links a:hover {
@@ -125,10 +132,10 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 992px) {
     #header h1 {
-        font-size: 36px;
+        font-size: 42px;
     }
     #header h2 {
-        font-size: 20px;
+        font-size: 24px;
         line-height: 30px;
     }
     #header .social-links {
@@ -163,9 +170,9 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     position: relative;
     color: #fff;
-    font-size: 19px;
+    font-size: 20px;
     font-family: "Rajdhani", sans-serif;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .nav-menu a:before {
@@ -199,8 +206,8 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 9998;
     background: 0;
     border: 0;
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     padding: 0;
     margin: 0;
     cursor: pointer;
@@ -208,7 +215,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .mobile-nav-toggle i {
     color: #fff;
-    font-size: 24px;
+    font-size: 28px;
     display: block;
     line-height: 1;
 }
@@ -243,8 +250,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .mobile-nav a {
     color: #fff;
-    padding: 14px 16px;
-    font: 500 16px/1.5 "Rajdhani", sans-serif;
+    padding: 16px 18px;
+    font: 600 18px/1.5 "Rajdhani", sans-serif;
     text-decoration: none;
     display: block;
     transform: translateZ(0);
@@ -273,20 +280,20 @@ h1, h2, h3, h4, h5, h6 {
 .mobile-nav a {
     display: flex !important;
     align-items: center !important;
-    padding: 14px 20px !important;
+    padding: 16px 22px !important;
     position: relative !important;
 }
 
 .mobile-nav a .material-icons.mobile-menu-icon {
     font-family: 'Material Icons' !important;
-    font-size: 24px !important;
+    font-size: 28px !important;
     font-weight: normal !important;
     font-style: normal !important;
-    min-width: 24px !important;
-    width: 24px !important;
-    height: 24px !important;
+    min-width: 28px !important;
+    width: 28px !important;
+    height: 28px !important;
     line-height: 1 !important;
-    margin-right: 15px !important;
+    margin-right: 18px !important;
     flex-shrink: 0 !important;
     color: #0dcd3c !important;
     display: inline-flex !important;
@@ -341,7 +348,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #header.header-top h1 {
     margin-right: auto;
-    font-size: 36px;
+    font-size: 42px;
 }
 
 #header.header-top .container {
@@ -355,10 +362,10 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
     #header.header-top {
-        height: 60px;
+        height: 70px;
     }
     #header.header-top h1 {
-        font-size: 26px;
+        font-size: 32px;
     }
 }
 
@@ -392,13 +399,13 @@ section .container {
         top: 120px;
     }
     section.section-show {
-        top: 80px;
+        top: 90px;
     }
 }
 
 .section-title h2 {
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 600;
     padding: 0;
     line-height: 1px;
     margin: 0 0 20px 0;
@@ -420,7 +427,7 @@ section .container {
 .section-title p {
     margin: 0;
     margin: -15px 0 15px 0;
-    font-size: 36px;
+    font-size: 40px;
     font-weight: 700;
     text-transform: uppercase;
     font-family: "Rajdhani", sans-serif;
@@ -432,9 +439,10 @@ section .container {
 --------------------------------------------------------------*/
 .about-me .content h3 {
     font-weight: 700;
-    font-size: 26px;
+    font-size: 30px;
     color: #1c7d32;
     font-family: "Rajdhani", sans-serif;
+    margin-bottom: 20px;
 }
 
 .about-me .content ul {
@@ -443,19 +451,24 @@ section .container {
 }
 
 .about-me .content ul li {
-    padding-bottom: 10px;
+    padding-bottom: 12px;
     font-family: "Rajdhani", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
 }
 
 .about-me .content ul i {
-    font-size: 20px;
-    padding-right: 2px;
+    font-size: 22px;
+    padding-right: 4px;
     color: #1c7d32;
 }
 
 .about-me .content p:last-child {
     margin-bottom: 0;
     font-family: "Rajdhani", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.8;
 }
 
 /*--------------------------------------------------------------
@@ -478,7 +491,7 @@ section .container {
     top: -25px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 24px;
+    font-size: 26px;
     background: rgba(255, 255, 255, 0.1);
     padding: 12px;
     color: #1c7d32;
@@ -486,9 +499,9 @@ section .container {
 }
 
 .counts .count-box span {
-    font-size: 36px;
+    font-size: 42px;
     display: block;
-    font-weight: 600;
+    font-weight: 700;
     color: #fff;
 }
 
@@ -496,7 +509,8 @@ section .container {
     padding: 0;
     margin: 0;
     font-family: "Rajdhani", sans-serif;
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 /*--------------------------------------------------------------
@@ -510,17 +524,19 @@ section .container {
 
 .skills .progress .skill {
     padding: 0;
-    margin: 0 0 6px 0;
+    margin: 0 0 8px 0;
     text-transform: uppercase;
     display: block;
-    font-weight: 600;
+    font-weight: 700;
     font-family: "Rajdhani", sans-serif;
     color: #fff;
+    font-size: 16px;
 }
 
 .skills .progress .skill .val {
     float: right;
     font-style: normal;
+    font-weight: 700;
 }
 
 .skills .progress-bar-wrap {
@@ -529,7 +545,7 @@ section .container {
 
 .skills .progress-bar {
     width: 1px;
-    height: 10px;
+    height: 12px;
     transition: .9s;
     background-color: #1c7d32;
 }
@@ -540,14 +556,14 @@ section .container {
 .interests .icon-box {
     display: flex;
     align-items: center;
-    padding: 20px;
+    padding: 22px;
     background: #09203a;
     transition: ease-in-out 0.3s;
 }
 
 .interests .icon-box i {
-    font-size: 32px;
-    padding-right: 10px;
+    font-size: 34px;
+    padding-right: 12px;
     line-height: 1;
 }
 
@@ -556,7 +572,7 @@ section .container {
     margin: 0;
     padding: 0;
     line-height: 1;
-    font-size: 16px;
+    font-size: 18px;
     color: #fff;
     font-family: "Rajdhani", sans-serif;
 }
@@ -574,7 +590,7 @@ section .container {
 }
 
 .testimonials .testimonial-item .testimonial-img {
-    width: 90px;
+    width: 100px;
     border-radius: 50%;
     margin: -40px 0 0 40px;
     position: relative;
@@ -583,48 +599,40 @@ section .container {
 }
 
 .testimonials .testimonial-item h3 {
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 20px;
+    font-weight: 700;
     margin: 10px 0 5px 45px;
     color: #fff;
     font-family: "Rajdhani", sans-serif;
 }
 
 .testimonials .testimonial-item h4 {
-    font-size: 14px;
+    font-size: 16px;
     color: #999;
     margin: 0 0 0 45px;
     font-family: "Rajdhani", sans-serif;
+    font-weight: 600;
 }
 
-.testimonials .testimonial-item .quote-icon-left, .testimonials .testimonial-item .quote-icon-right {
-    color: rgba(255, 255, 255, 0.25);
-    font-size: 26px;
-}
-
-.testimonials .testimonial-item .quote-icon-left {
-    display: inline-block;
-    left: -5px;
-    position: relative;
-}
-
+.testimonials .testimonial-item .quote-icon-left, 
 .testimonials .testimonial-item .quote-icon-right {
-    display: inline-block;
-    right: -5px;
-    position: relative;
-    top: 10px;
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 28px;
 }
 
 .testimonials .testimonial-item p {
     font-style: italic;
     margin: 0 15px 0 15px;
-    padding: 20px 20px 60px 20px;
+    padding: 22px 22px 60px 22px;
     background: rgba(255, 255, 255, 0.1);
     position: relative;
     border-radius: 6px;
     position: relative;
     z-index: 1;
     font-family: "Rajdhani", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.8;
 }
 
 .testimonials .owl-nav, .testimonials .owl-dots {
@@ -655,48 +663,51 @@ section .container {
 # Resume
 --------------------------------------------------------------*/
 .resume .resume-title {
-    font-size: 26px;
+    font-size: 30px;
     font-weight: 700;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     color: #fff;
     font-family: "Rajdhani", sans-serif;
 }
 
 .resume .resume-item {
-    padding: 0 0 20px 20px;
+    padding: 0 0 22px 22px;
     margin-top: -2px;
     border-left: 2px solid rgba(255, 255, 255, 0.2);
     position: relative;
 }
 
 .resume .resume-item h4 {
-    line-height: 18px;
-    font-size: 18px;
-    font-weight: 600;
+    line-height: 20px;
+    font-size: 20px;
+    font-weight: 700;
     text-transform: uppercase;
     font-family: "Rajdhani", sans-serif;
     color: #1c7d32;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .resume .resume-item h5 {
-    font-size: 16px;
+    font-size: 18px;
     background: rgba(255, 255, 255, 0.15);
-    padding: 5px 15px;
+    padding: 6px 16px;
     display: inline-block;
-    font-weight: 600;
-    margin-bottom: 10px;
+    font-weight: 700;
+    margin-bottom: 12px;
     font-family: "Rajdhani", sans-serif;
 }
 
 .resume .resume-item ul {
-    padding-left: 20px;
+    padding-left: 22px;
 }
 
 .resume .resume-item ul li {
-    padding-bottom: 10px;
+    padding-bottom: 12px;
     font-family: "Rajdhani", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
 .resume .resume-item:last-child {
@@ -721,47 +732,34 @@ section .container {
 .services .icon-box {
     text-align: center;
     background: #09203a;
-    padding: 40px 40px;
+    padding: 44px 40px;
     transition: all ease-in-out 0.3s;
-    margin: 10px
+    margin: 12px;
 }
 
 .services .icon-box .icon {
     margin: 0 auto;
-    width: 64px;
-    height: 64px;
+    width: 70px;
+    height: 70px;
     background: #1c7d32;
     border-radius: 5px;
     transition: all .3s ease-out 0s;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     transform-style: preserve-3d;
 }
 
 .services .icon-box .icon i {
     color: #fff;
-    font-size: 28px;
-}
-
-.services .icon-box .icon::before {
-    position: absolute;
-    content: '';
-    left: -8px;
-    top: -8px;
-    height: 100%;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 5px;
-    transition: all .3s ease-out 0s;
-    transform: translateZ(-1px);
+    font-size: 32px;
 }
 
 .services .icon-box h4 {
     font-weight: 700;
-    margin-bottom: 15px;
-    font-size: 24px;
+    margin-bottom: 18px;
+    font-size: 26px;
     font-family: "Rajdhani", sans-serif;
 }
 
@@ -770,10 +768,11 @@ section .container {
 }
 
 .services .icon-box p {
-    line-height: 24px;
-    font-size: 14px;
+    line-height: 1.8;
+    font-size: 16px;
     margin-bottom: 0;
     font-family: "Rajdhani", sans-serif;
+    font-weight: 600;
 }
 
 .services .icon-box:hover {
@@ -806,24 +805,24 @@ section .container {
 
 .portfolio #portfolio-flters {
     padding: 0;
-    margin: 0 auto 15px auto;
+    margin: 0 auto 20px auto;
     list-style: none;
     text-align: center;
     border-radius: 50px;
-    padding: 2px 15px;
+    padding: 4px 18px;
 }
 
 .portfolio #portfolio-flters li {
     cursor: pointer;
     display: inline-block;
-    padding: 8px 16px 10px 16px;
-    font-size: 14px;
-    font-weight: 600;
+    padding: 10px 18px 12px 18px;
+    font-size: 16px;
+    font-weight: 700;
     line-height: 1;
     text-transform: uppercase;
     color: #fff;
     background: rgba(255, 255, 255, 0.1);
-    margin: 0 3px 10px 3px;
+    margin: 0 4px 12px 4px;
     transition: all 0.3s ease-in-out;
     border-radius: 4px;
     font-family: "Rajdhani", sans-serif;
@@ -904,19 +903,20 @@ section .container {
 }
 
 .portfolio .portfolio-wrap .portfolio-info h4 {
-    font-size: 20px;
+    font-size: 24px;
     color: #fff;
-    font-weight: 600;
+    font-weight: 700;
     font-family: "Rajdhani", sans-serif;
 }
 
 .portfolio .portfolio-wrap .portfolio-info p {
     color: #ffffff;
-    font-size: 14px;
+    font-size: 16px;
     text-transform: uppercase;
     padding: 0;
     margin: 0;
     font-family: "Rajdhani", sans-serif;
+    font-weight: 600;
 }
 
 .portfolio .portfolio-wrap .portfolio-links {
@@ -963,25 +963,25 @@ section .container {
 --------------------------------------------------------------*/
 .contact .info-box {
     color: #444444;
-    padding: 20px;
+    padding: 24px;
     width: 100%;
     background: #09203a;
 }
 
 .contact .info-box i.bx {
-    font-size: 24px;
+    font-size: 26px;
     color: #dee2e6;
     border-radius: 50%;
-    padding: 14px;
+    padding: 16px;
     float: left;
     background: rgba(255, 255, 255, 0.1);
 }
 
 .contact .info-box h3 {
-    font-size: 20px;
+    font-size: 22px;
     color: #28a745;
     font-weight: 700;
-    margin: 10px 0 8px 68px;
+    margin: 12px 0 10px 72px;
     font-family: "Rajdhani", sans-serif;
 }
 
@@ -989,9 +989,10 @@ section .container {
     padding: 0;
     color: #fff;
     line-height: 24px;
-    font-size: 14px;
-    margin: 0 0 0 68px;
+    font-size: 16px;
+    margin: 0 0 0 72px;
     font-family: "Rajdhani", sans-serif;
+    font-weight: 600;
 }
 
 .contact .info-box .social-links {
@@ -1066,12 +1067,13 @@ section .container {
 .contact .php-email-form input, .contact .php-email-form textarea {
     border-radius: 0;
     box-shadow: none;
-    font-size: 14px;
+    font-size: 16px;
     background: rgba(255, 255, 255, 0.08);
     border: 0;
     transition: 0.3s;
     color: #fff;
     font-family: "Rajdhani", sans-serif;
+    font-weight: 600;
 }
 
 .contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
@@ -1114,11 +1116,13 @@ section .container {
 .contact .php-email-form button[type="submit"] {
     background: #1c7d32;
     border: 0;
-    padding: 10px 30px;
+    padding: 12px 36px;
     color: #fff;
     transition: 0.4s;
     border-radius: 4px;
     font-family: "Rajdhani", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
 }
 
 .contact .php-email-form button[type="submit"]:hover {
@@ -1306,5 +1310,39 @@ a, button, .portfolio-wrap {
     
     .vbox-close {
         display: none !important;
+    }
+
+    body {
+        font-size: 16px;
+    }
+    
+    #header h1 {
+        font-size: 36px;
+    }
+    
+    #header h2 {
+        font-size: 22px;
+    }
+    
+    .section-title p {
+        font-size: 32px;
+    }
+    
+    .nav-menu a {
+        font-size: 18px;
+    }
+    
+    .mobile-nav a {
+        font-size: 16px;
+        padding: 14px 16px;
+    }
+    
+    .services .icon-box {
+        padding: 30px 20px;
+    }
+    
+    .portfolio #portfolio-flters li {
+        font-size: 14px;
+        padding: 8px 16px;
     }
 }
