@@ -1360,8 +1360,8 @@
                 </div>
             </div>
 
-            <!-- DEV Community -->
-            <div class="col-lg-4 col-md-6 col-12 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <!-- DEV Community (Hidden on Mobile) -->
+            <div class="col-lg-4 col-md-6 col-12 d-flex align-items-stretch mobile-hide" data-aos="fade-up" data-aos-delay="200">
                 <div class="icon-box">
                     <div class="icon"><i class="icofont-book"></i></div>
                     <h4 class="title"><a href="https://dev.to/la-b-ib" target="_blank"><b>DEV Community</b></a></h4>
@@ -1377,11 +1377,6 @@
                     <p class="description"><b>Tech Talk</b></p>
                 </div>
             </div>
-        </div>
-        
-        <!-- Mobile-only GIF -->
-        <div class="mobile-gif-container">
-            <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/GIF/BLOG.GIF" alt="Blog GIF" class="mobile-only-gif">
         </div>
     </div>
 </section>
@@ -1436,59 +1431,42 @@
             flex: 0 0 auto;
             width: 33.333333%;
         }
-        
-        /* Hide mobile GIF on desktop */
-        .mobile-gif-container {
-            display: none;
+        .mobile-hide {
+            display: block !important;
         }
     }
     
-    /* Mobile view - full width single column with reduced padding */
+    /* Mobile view - 2 columns (BRACU + Newsletter), DEV hidden */
     @media (max-width: 991.98px) {
         #blogs .row {
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 15px;
+            padding: 0 8px; /* Reduced side padding */
         }
         
         #blogs .col-lg-4,
         #blogs .col-md-6,
         #blogs .col-12 {
-            flex: 0 0 100%;
-            width: 100%;
-            max-width: 100%;
-            padding: 0 10px;
+            flex: 0 0 calc(50% - 15px); /* 2 columns with gap */
+            max-width: calc(50% - 15px);
+            padding: 0;
         }
         
         #blogs .icon-box {
-            padding: 20px 15px;
+            padding: 20px 10px; /* Reduced padding */
         }
         
-        #blogs .section-title {
-            margin-bottom: 15px;
-        }
-        
-        /* Mobile GIF styling */
-        .mobile-gif-container {
-            margin-top: 20px;
-            text-align: center;
-            padding: 0 10px;
-        }
-        
-        .mobile-only-gif {
-            width: 100%;
-            max-width: 300px;
-            border-radius: 8px;
-            display: block;
-            margin: 0 auto;
+        .mobile-hide {
+            display: none !important; /* Hide DEV Community */
         }
     }
     
     /* Small mobile devices */
     @media (max-width: 575.98px) {
         #blogs .icon-box {
-            padding: 18px 12px;
+            padding: 15px 8px; /* Even more compact */
         }
         
         #blogs .title a {
@@ -1497,11 +1475,6 @@
         
         #blogs .description {
             font-size: 13px;
-            margin-top: 12px;
-        }
-        
-        .mobile-gif-container {
-            margin-top: 15px;
         }
     }
 </style>
