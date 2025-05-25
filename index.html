@@ -1350,22 +1350,22 @@
         <div class="section-title" style="margin-bottom: 25px;">
             <h2><b>Blogs</b></h2>
         </div>
-        <div class="blog-mobile-container">
+        <div class="row">
             <!-- BRACU Express -->
-            <div class="blog-mobile-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="icon"><i class="icofont-book"></i></div>
-                <div class="blog-mobile-content">
-                    <h4><a href="https://bracuexpress.com/author/labib/" target="_blank"><b>BRACU Express</b></a></h4>
-                    <p><b>NEWS & STORIES</b></p>
+            <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="100">
+                <div class="icon-box">
+                    <div class="icon"><i class="icofont-book"></i></div>
+                    <h4 class="title"><a href="https://bracuexpress.com/author/labib/" target="_blank"><b>BRACU Express</b></a></h4>
+                    <p class="description"><b>NEWS & STORIES</b></p>
                 </div>
             </div>
 
             <!-- Newsletter -->
-            <div class="blog-mobile-card" data-aos="fade-up" data-aos-delay="300">
-                <div class="icon"><i class="icofont-book"></i></div>
-                <div class="blog-mobile-content">
-                    <h4><a href="https://www.linkedin.com/newsletters/tech-talk-7325845368900894722/" target="_blank"><b>NEWSLETTER</b></a></h4>
-                    <p><b>Tech Talk</b></p>
+            <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon-box">
+                    <div class="icon"><i class="icofont-book"></i></div>
+                    <h4 class="title"><a href="https://www.linkedin.com/newsletters/tech-talk-7325845368900894722/" target="_blank"><b>NEWSLETTER</b></a></h4>
+                    <p class="description"><b>Tech Talk</b></p>
                 </div>
             </div>
         </div>
@@ -1373,100 +1373,95 @@
 </section>
 
 <style>
-/* ===== DESKTOP STYLES (remain unchanged) ===== */
-#blogs .icon-box {
-    text-align: center;
-    padding: 30px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
-    transition: all 0.3s ease-in-out;
-    height: 100%;
-}
-#blogs .icon-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-#blogs .icon {
-    margin-bottom: 20px;
-}
-#blogs .icon i {
-    color: #10cf3e;
-    font-size: 36px;
-}
-#blogs .title a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
-    transition: color 0.3s;
-}
-#blogs .title a:hover {
-    color: #10cf3e;
-}
-#blogs .description {
-    color: #ffffff;
-    margin-top: 15px;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-/* ===== MOBILE OVERRIDE ===== */
-@media (max-width: 991px) {
-    .blog-mobile-container {
-        padding: 0 5px;
-    }
-    
-    .blog-mobile-card {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        margin-bottom: 15px;
+    /* ===== COMMON STYLES (unchanged) ===== */
+    #blogs .icon-box {
+        text-align: center;
+        padding: 30px;
         background: rgba(255, 255, 255, 0.05);
         border-radius: 8px;
-        padding: 10px;
-        transition: all 0.3s ease;
+        transition: all 0.3s ease-in-out;
+        height: 100%;
     }
-    
-    .blog-mobile-card:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    #blogs .icon-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     }
-    
-    .blog-mobile-card .icon i {
-        font-size: 24px;
+    #blogs .icon {
+        margin-bottom: 20px;
+    }
+    #blogs .icon i {
+        color: #10cf3e;
+        font-size: 36px;
+    }
+    #blogs .title a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 18px;
+        transition: color 0.3s;
+    }
+    #blogs .title a:hover {
         color: #10cf3e;
     }
-    
-    .blog-mobile-content h4 a {
-        color: #fff;
-        font-size: 16px;
+    #blogs .description {
+        color: #ffffff;
+        margin-top: 15px;
+        font-size: 14px;
         font-weight: bold;
-        text-decoration: none;
     }
-    
-    .blog-mobile-content p {
-        color: #fff;
-        font-size: 13px;
-        margin-top: 5px;
-    }
-}
 
-/* Hide mobile elements on desktop */
-@media (min-width: 992px) {
-    .blog-mobile-container,
-    .blog-mobile-card,
-    .blog-mobile-content {
-        display: none;
+    /* ===== DESKTOP VIEW (completely unchanged) ===== */
+    @media (min-width: 992px) {
+        #blogs .col-lg-4 {
+            flex: 0 0 33.333333%;
+            width: 33.333333%;
+        }
+        #blogs .row {
+            justify-content: flex-start; /* Align left on desktop */
+        }
     }
-}
 
-/* Hide desktop elements on mobile */
-@media (max-width: 991px) {
-    #blogs .row,
-    #blogs .icon-box {
-        display: none;
+    /* ===== MOBILE VIEW (aligned left) ===== */
+    @media (max-width: 991px) {
+        #blogs .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start; /* Force left alignment */
+            margin-right: 0;
+            margin-left: 0;
+        }
+        
+        #blogs .col-lg-4,
+        #blogs .col-md-6,
+        #blogs .col-12 {
+            flex: 0 0 calc(50% - 10px);
+            max-width: calc(50% - 10px);
+            margin-right: 10px;
+            margin-bottom: 20px;
+            padding: 0;
+        }
+        
+        #blogs .icon-box {
+            padding: 20px 15px;
+            text-align: left; /* Left align content */
+        }
+        
+        #blogs .icon {
+            margin-left: 0;
+            margin-right: auto;
+        }
     }
-}
+
+    /* ===== SMALL MOBILE ===== */
+    @media (max-width: 575px) {
+        #blogs .col-lg-4,
+        #blogs .col-md-6,
+        #blogs .col-12 {
+            flex: 0 0 100%;
+            max-width: 100%;
+            margin-right: 0;
+        }
+    }
 </style>
   <!-- End Blogs Section -->
  <!-- Start Contact Section -->
