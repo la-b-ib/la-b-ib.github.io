@@ -3,17 +3,14 @@
 --------------------------------------------------------------*/
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 /*--------------------------------------------------------------
-# Source Sans Pro Font
---------------------------------------------------------------*/
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
-/*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
 body {
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: "Open Sans", sans-serif;
     color: #fff;
     position: relative;
     background: transparent;
+    font-size: 17px; /* Increased from default (typically 16px) */
 }
 
 body::before {
@@ -43,7 +40,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: "Raleway", sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -64,12 +61,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header h1 {
-    font-size: 52px;
+    font-size: 48px;
     margin-top: 0px;
     padding: 0;
     line-height: 1;
     font-weight: 700;
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 #header h1 a, #header h1 a:hover {
@@ -79,7 +76,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header h2 {
-    font-size: 26px;
+    font-size: 24px;
     margin-top: 20px;
     color: #12d640;
 }
@@ -101,7 +98,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header .social-links a {
-    font-size: 20px;
+    font-size: 16px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -110,8 +107,8 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1;
     margin-right: 8px;
     border-radius: 50%;
-    width: 46px;
-    height: 46px;
+    width: 40px;
+    height: 40px;
 }
 
 #header .social-links a:hover {
@@ -120,10 +117,10 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 992px) {
     #header h1 {
-        font-size: 40px;
+        font-size: 36px;
     }
     #header h2 {
-        font-size: 22px;
+        font-size: 20px;
         line-height: 30px;
     }
     #header .social-links {
@@ -159,9 +156,9 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     position: relative;
     color: #fff;
-    font-size: 20px;
-    font-family: "Source Sans Pro", sans-serif;
-    font-weight: 600;
+    font-size: 19px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
 }
 
 .nav-menu a:before {
@@ -195,8 +192,8 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 9998;
     background: 0;
     border: 0;
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
     padding: 0;
     margin: 0;
     cursor: pointer;
@@ -204,7 +201,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .mobile-nav-toggle i {
     color: #fff;
-    font-size: 26px;
+    font-size: 24px;
     display: block;
     line-height: 1;
 }
@@ -239,8 +236,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .mobile-nav a {
     color: #fff;
-    padding: 16px 18px;
-    font: 600 18px/1.5 "Source Sans Pro", sans-serif;
+    padding: 12px 16px; /* Reduced from 14px 16px */
+    font: 500 16px/1.5 "Poppins", sans-serif;
     text-decoration: none;
     display: block;
     transform: translateZ(0);
@@ -274,14 +271,14 @@ h1, h2, h3, h4, h5, h6 {
   .mobile-nav a {
     display: flex !important;
     align-items: center !important;
-    padding: 16px 22px !important;
+    padding: 12px 20px !important; /* Reduced from 14px 20px */
     position: relative !important;
   }
   
   .mobile-nav a .material-icons.mobile-menu-icon {
     /* Font Properties */
     font-family: 'Material Icons' !important;
-    font-size: 26px !important;
+    font-size: 26px !important; /* Increased from 24px */
     font-weight: normal !important;
     font-style: normal !important;
     
@@ -290,7 +287,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 26px !important;
     height: 26px !important;
     line-height: 1 !important;
-    margin-right: 16px !important;
+    margin-right: 15px !important;
     flex-shrink: 0 !important;
     
     /* Color & Display */
@@ -372,7 +369,7 @@ h1, h2, h3, h4, h5, h6 {
         height: 60px;
     }
     #header.header-top h1 {
-        font-size: 28px;
+        font-size: 26px;
     }
 }
 
@@ -383,7 +380,7 @@ section {
     overflow: hidden;
     position: absolute;
     width: 100%;
-    top: 140px;
+    top: 120px; /* Reduced from 140px */
     bottom: 100%;
     opacity: 0;
     z-index: 2;
@@ -403,7 +400,7 @@ section .container {
 
 @media (max-width: 768px) {
     section {
-        top: 120px;
+        top: 100px; /* Reduced from 120px */
     }
     section.section-show {
         top: 80px;
@@ -411,15 +408,15 @@ section .container {
 }
 
 .section-title h2 {
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 500;
     padding: 0;
     line-height: 1px;
-    margin: 0 0 20px 0;
+    margin: 0 0 15px 0; /* Reduced from 20px */
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #dee2e6;
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 .section-title h2::after {
@@ -433,11 +430,11 @@ section .container {
 
 .section-title p {
     margin: 0;
-    margin: -15px 0 15px 0;
-    font-size: 38px;
+    margin: -15px 0 10px 0; /* Reduced from 15px */
+    font-size: 36px;
     font-weight: 700;
     text-transform: uppercase;
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: "Poppins", sans-serif;
     color: #fff;
 }
 
@@ -460,7 +457,7 @@ section .container {
 }
 
 .about-me .content ul i {
-    font-size: 22px;
+    font-size: 20px;
     padding-right: 2px;
     color: #1c7d32;
 }
@@ -489,7 +486,7 @@ section .container {
     top: -25px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 26px;
+    font-size: 24px;
     background: rgba(255, 255, 255, 0.1);
     padding: 12px;
     color: #1c7d32;
@@ -497,7 +494,7 @@ section .container {
 }
 
 .counts .count-box span {
-    font-size: 38px;
+    font-size: 36px;
     display: block;
     font-weight: 600;
     color: #fff;
@@ -506,8 +503,8 @@ section .container {
 .counts .count-box p {
     padding: 0;
     margin: 0;
-    font-family: "Source Sans Pro", sans-serif;
-    font-size: 16px;
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
 }
 
 /*--------------------------------------------------------------
@@ -525,7 +522,7 @@ section .container {
     text-transform: uppercase;
     display: block;
     font-weight: 600;
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: "Poppins", sans-serif;
     color: #fff;
 }
 
@@ -563,11 +560,11 @@ section .container {
 }
 
 .interests .icon-box h3 {
-    font-weight: 600;
+    font-weight: 700;
     margin: 0;
     padding: 0;
     line-height: 1;
-    font-size: 17px;
+    font-size: 16px;
     color: #fff;
 }
 
@@ -593,14 +590,14 @@ section .container {
 }
 
 .testimonials .testimonial-item h3 {
-    font-size: 19px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: bold;
     margin: 10px 0 5px 45px;
     color: #fff;
 }
 
 .testimonials .testimonial-item h4 {
-    font-size: 15px;
+    font-size: 14px;
     color: #999;
     margin: 0 0 0 45px;
 }
@@ -678,16 +675,16 @@ section .container {
 
 .resume .resume-item h4 {
     line-height: 18px;
-    font-size: 19px;
+    font-size: 18px;
     font-weight: 600;
     text-transform: uppercase;
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: "Poppins", sans-serif;
     color: #1c7d32;
     margin-bottom: 10px;
 }
 
 .resume .resume-item h5 {
-    font-size: 17px;
+    font-size: 16px;
     background: rgba(255, 255, 255, 0.15);
     padding: 5px 15px;
     display: inline-block;
@@ -763,9 +760,9 @@ section .container {
 }
 
 .services .icon-box h4 {
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 15px;
-    font-size: 22px;
+    font-size: 24px;
 }
 
 .services .icon-box h4 a {
@@ -774,7 +771,7 @@ section .container {
 
 .services .icon-box p {
     line-height: 24px;
-    font-size: 15px;
+    font-size: 14px;
     margin-bottom: 0;
 }
 
@@ -818,8 +815,8 @@ section .container {
 .portfolio #portfolio-flters li {
     cursor: pointer;
     display: inline-block;
-    padding: 10px 16px;
-    font-size: 15px;
+    padding: 8px 16px 10px 16px;
+    font-size: 14px;
     font-weight: 600;
     line-height: 1;
     text-transform: uppercase;
@@ -905,14 +902,14 @@ section .container {
 }
 
 .portfolio .portfolio-wrap .portfolio-info h4 {
-    font-size: 22px;
+    font-size: 20px;
     color: #fff;
     font-weight: 600;
 }
 
 .portfolio .portfolio-wrap .portfolio-info p {
     color: #ffffff;
-    font-size: 15px;
+    font-size: 14px;
     text-transform: uppercase;
     padding: 0;
     margin: 0;
@@ -968,10 +965,10 @@ section .container {
 }
 
 .contact .info-box i.bx {
-    font-size: 26px;
+    font-size: 24px;
     color: #dee2e6;
     border-radius: 50%;
-    padding: 16px;
+    padding: 14px;
     float: left;
     background: rgba(255, 255, 255, 0.1);
 }
@@ -979,7 +976,7 @@ section .container {
 .contact .info-box h3 {
     font-size: 20px;
     color: #28a745;
-    font-weight: 600;
+    font-weight: 700;
     margin: 10px 0 8px 68px;
 }
 
@@ -987,7 +984,7 @@ section .container {
     padding: 0;
     color: #fff;
     line-height: 24px;
-    font-size: 15px;
+    font-size: 14px;
     margin: 0 0 0 68px;
 }
 
@@ -1063,7 +1060,7 @@ section .container {
 .contact .php-email-form input, .contact .php-email-form textarea {
     border-radius: 0;
     box-shadow: none;
-    font-size: 15px;
+    font-size: 14px;
     background: rgba(255, 255, 255, 0.08);
     border: 0;
     transition: 0.3s;
@@ -1230,6 +1227,12 @@ a, button, .portfolio-wrap {
 .vbox-overlay, .vbox-container {
     transition: none !important;
     animation: none !important;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
 
 /* Fix Google Material Close Button */
