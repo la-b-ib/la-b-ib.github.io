@@ -1345,242 +1345,126 @@
 
 <!-- Start Blogs Section -->
 
-<section id="blogs">
-    <!-- Desktop View -->
-    <div class="desktop-blogs">
-        <div class="container">
-            <div class="section-title" style="margin-bottom: 25px;">
-                <h2><b>Blogs</b></h2>
-            </div>
-            <div class="desktop-blog-grid">
-                <!-- BRACU Express -->
-                <div class="desktop-blog-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="icon-box">
-                        <div class="icon"><i class="icofont-book"></i></div>
-                        <h4 class="title"><a href="https://bracuexpress.com/author/labib/" target="_blank"><b>BRACU Express</b></a></h4>
-                        <p class="description"><b>NEWS & STORIES</b></p>
-                    </div>
-                </div>
-
-                <!-- DEV Community -->
-                <div class="desktop-blog-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="icon-box">
-                        <div class="icon"><i class="icofont-book"></i></div>
-                        <h4 class="title"><a href="https://dev.to/la-b-ib" target="_blank"><b>DEV Community</b></a></h4>
-                        <p class="description"><b>BLOGS</b></p>
-                    </div>
-                </div>
-
-                <!-- Newsletter -->
-                <div class="desktop-blog-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="icon-box">
-                        <div class="icon"><i class="icofont-book"></i></div>
-                        <h4 class="title"><a href="https://www.linkedin.com/newsletters/tech-talk-7325845368900894722/" target="_blank"><b>NEWSLETTER</b></a></h4>
-                        <p class="description"><b>Tech Talk</b></p>
-                    </div>
-                </div>
-            </div>
+<section id="blogs" class="services">
+    <div class="container">
+        <div class="section-title" style="margin-bottom: 25px;">
+            <h2><b>Blogs</b></h2>
         </div>
-    </div>
+        <div class="blog-mobile-container">
+            <!-- BRACU Express -->
+            <div class="blog-mobile-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="icon"><i class="icofont-book"></i></div>
+                <div class="blog-mobile-content">
+                    <h4><a href="https://bracuexpress.com/author/labib/" target="_blank"><b>BRACU Express</b></a></h4>
+                    <p><b>NEWS & STORIES</b></p>
+                </div>
+            </div>
 
-    <!-- Mobile View -->
-    <div class="mobile-blogs">
-        <div class="mobile-blogs-container">
-            <h2 class="mobile-section-title"><b>Blogs</b></h2>
-            
-            <div class="mobile-blog-list">
-                <!-- BRACU Express -->
-                <a href="https://bracuexpress.com/author/labib/" target="_blank" class="mobile-blog-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="mobile-blog-icon">
-                        <i class="icofont-book"></i>
-                    </div>
-                    <div class="mobile-blog-content">
-                        <h3><b>BRACU Express</b></h3>
-                        <p><b>NEWS & STORIES</b></p>
-                    </div>
-                    <i class="icofont-arrow-right mobile-arrow"></i>
-                </a>
-
-                <!-- Newsletter -->
-                <a href="https://www.linkedin.com/newsletters/tech-talk-7325845368900894722/" target="_blank" class="mobile-blog-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="mobile-blog-icon">
-                        <i class="icofont-book"></i>
-                    </div>
-                    <div class="mobile-blog-content">
-                        <h3><b>NEWSLETTER</b></h3>
-                        <p><b>Tech Talk</b></p>
-                    </div>
-                    <i class="icofont-arrow-right mobile-arrow"></i>
-                </a>
+            <!-- Newsletter -->
+            <div class="blog-mobile-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon"><i class="icofont-book"></i></div>
+                <div class="blog-mobile-content">
+                    <h4><a href="https://www.linkedin.com/newsletters/tech-talk-7325845368900894722/" target="_blank"><b>NEWSLETTER</b></a></h4>
+                    <p><b>Tech Talk</b></p>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
 <style>
-/* ===== GLOBAL STYLES ===== */
-#blogs {
-    position: relative;
-}
-.section-title h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #fff;
-    margin-bottom: 30px;
-}
-
-/* ===== DESKTOP STYLES ===== */
-.desktop-blog-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.desktop-blog-card {
-    transition: transform 0.3s ease;
-}
-
-.desktop-blog-card:hover {
-    transform: translateY(-5px);
-}
-
-.icon-box {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 12px;
+/* ===== DESKTOP STYLES (remain unchanged) ===== */
+#blogs .icon-box {
+    text-align: center;
     padding: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
     height: 100%;
-    border: 1px solid rgba(255, 255, 255, 0.03);
-    transition: all 0.3s ease;
 }
-
-.icon-box:hover {
-    background: rgba(255, 255, 255, 0.08);
+#blogs .icon-box:hover {
+    transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
-
-.icon {
+#blogs .icon {
     margin-bottom: 20px;
 }
-
-.icon i {
+#blogs .icon i {
     color: #10cf3e;
     font-size: 36px;
 }
-
-.icon-box h4 a {
-    color: #fff;
-    font-size: 1.25rem;
-    font-weight: 600;
+#blogs .title a {
+    color: #ffffff;
     text-decoration: none;
-    transition: color 0.2s ease;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
 }
-
-.icon-box h4 a:hover {
+#blogs .title a:hover {
     color: #10cf3e;
 }
-
-.icon-box p {
-    color: rgba(255, 255, 255, 0.8);
-    margin-top: 10px;
-    font-size: 0.9rem;
-    font-weight: 500;
+#blogs .description {
+    color: #ffffff;
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: bold;
 }
 
-/* ===== MOBILE STYLES ===== */
-.mobile-blogs-container {
-    padding: 0 12px;
-    max-width: 100%;
-}
-
-.mobile-section-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #fff;
-    margin-bottom: 20px;
-    padding-left: 8px;
-}
-
-.mobile-blog-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.mobile-blog-card {
-    display: flex;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.08);
-    border-radius: 12px;
-    padding: 16px;
-    text-decoration: none;
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.mobile-blog-card:hover {
-    background: rgba(255, 255, 255, 0.12);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.mobile-blog-icon {
-    margin-right: 12px;
-}
-
-.mobile-blog-icon i {
-    color: #10cf3e;
-    font-size: 24px;
-    width: 24px;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.mobile-blog-content h3 {
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 600;
-    margin: 0 0 4px 0;
-}
-
-.mobile-blog-content p {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 0.875rem;
-    margin: 0;
-    font-weight: 500;
-}
-
-.mobile-arrow {
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 16px;
-    margin-left: 8px;
-    transition: transform 0.2s ease;
-}
-
-.mobile-blog-card:hover .mobile-arrow {
-    color: #10cf3e;
-    transform: translateX(2px);
-}
-
-/* ===== RESPONSIVE VISIBILITY ===== */
+/* ===== MOBILE OVERRIDE ===== */
 @media (max-width: 991px) {
-    .desktop-blogs {
-        display: none;
+    .blog-mobile-container {
+        padding: 0 5px;
     }
-    .mobile-blogs {
-        display: block;
-        padding: 24px 0;
+    
+    .blog-mobile-card {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-bottom: 15px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        padding: 10px;
+        transition: all 0.3s ease;
+    }
+    
+    .blog-mobile-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .blog-mobile-card .icon i {
+        font-size: 24px;
+        color: #10cf3e;
+    }
+    
+    .blog-mobile-content h4 a {
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    
+    .blog-mobile-content p {
+        color: #fff;
+        font-size: 13px;
+        margin-top: 5px;
     }
 }
 
+/* Hide mobile elements on desktop */
 @media (min-width: 992px) {
-    .mobile-blogs {
+    .blog-mobile-container,
+    .blog-mobile-card,
+    .blog-mobile-content {
         display: none;
     }
-    .desktop-blogs {
-        display: block;
-        padding: 50px 0;
+}
+
+/* Hide desktop elements on mobile */
+@media (max-width: 991px) {
+    #blogs .row,
+    #blogs .icon-box {
+        display: none;
     }
 }
 </style>
