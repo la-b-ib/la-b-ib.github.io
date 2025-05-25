@@ -1350,9 +1350,9 @@
         <div class="section-title" style="margin-bottom: 25px;">
             <h2><b>Blogs</b></h2>
         </div>
-        <div class="row">
+        <div class="row blog-row">
             <!-- BRACU Express -->
-            <div class="col-lg-4 col-md-6 col-12 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-4 col-md-6 col-12 blog-col" data-aos="fade-up" data-aos-delay="100">
                 <div class="icon-box">
                     <div class="icon"><i class="icofont-book"></i></div>
                     <h4 class="title"><a href="https://bracuexpress.com/author/labib/" target="_blank"><b>BRACU Express</b></a></h4>
@@ -1360,17 +1360,8 @@
                 </div>
             </div>
 
-            <!-- DEV Community (Hidden on Mobile) -->
-            <div class="col-lg-4 col-md-6 col-12 d-flex align-items-stretch mobile-hide" data-aos="fade-up" data-aos-delay="200">
-                <div class="icon-box">
-                    <div class="icon"><i class="icofont-book"></i></div>
-                    <h4 class="title"><a href="https://dev.to/la-b-ib" target="_blank"><b>DEV Community</b></a></h4>
-                    <p class="description"><b>BLOGS</b></p>
-                </div>
-            </div>
-
             <!-- Newsletter -->
-            <div class="col-lg-4 col-md-6 col-12 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="col-lg-4 col-md-6 col-12 blog-col" data-aos="fade-up" data-aos-delay="300">
                 <div class="icon-box">
                     <div class="icon"><i class="icofont-book"></i></div>
                     <h4 class="title"><a href="https://www.linkedin.com/newsletters/tech-talk-7325845368900894722/" target="_blank"><b>NEWSLETTER</b></a></h4>
@@ -1382,7 +1373,7 @@
 </section>
 
 <style>
-    /* Blog Section Styling - Common styles */
+    /* Common styles for all devices */
     #blogs .icon-box {
         text-align: center;
         padding: 30px;
@@ -1424,55 +1415,56 @@
         font-size: 14px;
         font-weight: bold;
     }
-    
+
     /* Desktop view - 3 columns (unchanged) */
     @media (min-width: 992px) {
-        #blogs .col-lg-4 {
-            flex: 0 0 auto;
-            width: 33.333333%;
+        #blogs .blog-col {
+            flex: 0 0 33.333333%;
+            max-width: 33.333333%;
+            padding: 0 15px; /* Bootstrap default */
         }
-        .mobile-hide {
-            display: block !important;
-        }
-    }
-    
-    /* Mobile view - 2 columns (BRACU + Newsletter), DEV hidden */
-    @media (max-width: 991.98px) {
-        #blogs .row {
+        #blogs .blog-row {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-            padding: 0 8px; /* Reduced side padding */
-        }
-        
-        #blogs .col-lg-4,
-        #blogs .col-md-6,
-        #blogs .col-12 {
-            flex: 0 0 calc(50% - 15px); /* 2 columns with gap */
-            max-width: calc(50% - 15px);
-            padding: 0;
-        }
-        
-        #blogs .icon-box {
-            padding: 20px 10px; /* Reduced padding */
-        }
-        
-        .mobile-hide {
-            display: none !important; /* Hide DEV Community */
+            margin-right: -15px;
+            margin-left: -15px;
         }
     }
-    
-    /* Small mobile devices */
-    @media (max-width: 575.98px) {
-        #blogs .icon-box {
-            padding: 15px 8px; /* Even more compact */
+
+    /* Mobile view - custom 2 column layout */
+    @media (max-width: 991.98px) {
+        #blogs .blog-row {
+            display: flex;
+            flex-wrap: nowrap;
+            margin: 0 -5px; /* Edge-to-edge with 5px compensation */
+            width: calc(100% + 10px); /* Compensate for negative margin */
         }
         
+        #blogs .blog-col {
+            flex: 0 0 calc(50% - 5px); /* 2 columns with 5px gap */
+            max-width: calc(50% - 5px);
+            padding: 0 5px !important; /* Override Bootstrap */
+            margin-bottom: 0;
+        }
+        
+        #blogs .icon-box {
+            padding: 20px 10px; /* Reduced padding for mobile */
+        }
+        
+        /* Hide DEV Community in mobile */
+        #blogs .col-lg-4:nth-child(2) {
+            display: none;
+        }
+    }
+
+    /* Small mobile adjustments */
+    @media (max-width: 575.98px) {
+        #blogs .icon-box {
+            padding: 15px 8px !important;
+        }
         #blogs .title a {
             font-size: 16px;
         }
-        
         #blogs .description {
             font-size: 13px;
         }
