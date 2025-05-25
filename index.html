@@ -18,7 +18,7 @@
   <meta content="" name="keywords">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap">
 
@@ -57,7 +57,7 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <!-- ======= Header ====== -->
+  <!-- ======= Header ======= -->
   <header id="header" class="header-tops">
     <div class="container">
       <h1><a href="index.html" style="margin-right: 25px;">Labib Bin Shahed</a></h1>
@@ -1378,11 +1378,16 @@
                 </div>
             </div>
         </div>
+        
+        <!-- Mobile-only GIF -->
+        <div class="mobile-gif-container">
+            <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/GIF/BLOG.GIF" alt="Blog GIF" class="mobile-only-gif">
+        </div>
     </div>
 </section>
 
 <style>
-    /* Blog Section Styling */
+    /* Blog Section Styling - Common styles */
     #blogs .icon-box {
         text-align: center;
         padding: 30px;
@@ -1425,37 +1430,82 @@
         font-weight: bold;
     }
     
-    /* Desktop view: 3 boxes in 1 row with auto width */
-    @media (min-width: 769px) {
+    /* Desktop view - 3 columns (unchanged) */
+    @media (min-width: 992px) {
         #blogs .col-lg-4 {
             flex: 0 0 auto;
             width: 33.333333%;
         }
-        #blogs .section-title {
-            margin-bottom: 25px;
+        
+        /* Hide mobile GIF on desktop */
+        .mobile-gif-container {
+            display: none;
         }
     }
     
-    /* Mobile view: 3 boxes in 3 rows, centered with full screen width */
-    @media (max-width: 768px) {
-        #blogs .icon-box {
-            padding: 20px;
+    /* Mobile view - full width single column with reduced padding */
+    @media (max-width: 991.98px) {
+        #blogs .row {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
         }
-        #blogs .col-lg-4 {
+        
+        #blogs .col-lg-4,
+        #blogs .col-md-6,
+        #blogs .col-12 {
             flex: 0 0 100%;
             width: 100%;
-            margin-bottom: 20px;
-            display: flex;
-            justify-content: center;
+            max-width: 100%;
+            padding: 0 10px;
         }
+        
         #blogs .icon-box {
-            width: 100%;
+            padding: 20px 15px;
         }
+        
         #blogs .section-title {
-            margin-bottom: 25px;
+            margin-bottom: 15px;
+        }
+        
+        /* Mobile GIF styling */
+        .mobile-gif-container {
+            margin-top: 20px;
+            text-align: center;
+            padding: 0 10px;
+        }
+        
+        .mobile-only-gif {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 8px;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    
+    /* Small mobile devices */
+    @media (max-width: 575.98px) {
+        #blogs .icon-box {
+            padding: 18px 12px;
+        }
+        
+        #blogs .title a {
+            font-size: 16px;
+        }
+        
+        #blogs .description {
+            font-size: 13px;
+            margin-top: 12px;
+        }
+        
+        .mobile-gif-container {
+            margin-top: 15px;
         }
     }
 </style>
+
   <!-- End Blogs Section -->
  <!-- Start Contact Section -->
 <!-- Start Contact Section -->
