@@ -1416,18 +1416,19 @@
         font-weight: bold;
     }
 
-    /* Desktop view - 3 columns (unchanged) */
+    /* Desktop view - edge-to-edge with 2 boxes */
     @media (min-width: 992px) {
-        #blogs .blog-col {
-            flex: 0 0 33.333333%;
-            max-width: 33.333333%;
-            padding: 0 15px; /* Bootstrap default */
-        }
         #blogs .blog-row {
             display: flex;
             flex-wrap: wrap;
-            margin-right: -15px;
-            margin-left: -15px;
+            justify-content: space-between;
+            margin: 0;
+            width: 100%;
+        }
+        #blogs .blog-col {
+            flex: 0 0 calc(50% - 15px);
+            max-width: calc(50% - 15px);
+            padding: 0;
         }
     }
 
@@ -1436,24 +1437,18 @@
         #blogs .blog-row {
             display: flex;
             flex-wrap: nowrap;
-            margin: 0 -5px; /* Edge-to-edge with 5px compensation */
-            width: calc(100% + 10px); /* Compensate for negative margin */
+            margin: 0 -5px;
+            width: calc(100% + 10px);
         }
         
         #blogs .blog-col {
-            flex: 0 0 calc(50% - 5px); /* 2 columns with 5px gap */
+            flex: 1 0 calc(50% - 5px);
             max-width: calc(50% - 5px);
-            padding: 0 5px !important; /* Override Bootstrap */
-            margin-bottom: 0;
+            padding: 0 5px !important;
         }
         
         #blogs .icon-box {
-            padding: 20px 10px; /* Reduced padding for mobile */
-        }
-        
-        /* Hide DEV Community in mobile */
-        #blogs .col-lg-4:nth-child(2) {
-            display: none;
+            padding: 20px 10px;
         }
     }
 
@@ -1467,6 +1462,7 @@
         }
         #blogs .description {
             font-size: 13px;
+            margin-top: 10px;
         }
     }
 </style>
