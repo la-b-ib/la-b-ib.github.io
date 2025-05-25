@@ -1419,44 +1419,27 @@
         /* All other desktop styles remain untouched */
     }
 
-    /* ===== MOBILE VIEW (CUSTOM OVERRIDE) ===== */
+    /* ===== MOBILE VIEW (2 ROWS - STACKED VERTICALLY) ===== */
     @media (max-width: 991.98px) {
         #blogs .row {
-            /* Custom grid layout */
-            display: flex !important;
-            flex-wrap: wrap !important;
-            margin-left: -5px !important;
-            margin-right: -5px !important;
-            width: calc(100% + 10px) !important;
+            display: block !important;
         }
         
         #blogs .col-lg-4,
         #blogs .col-md-6,
         #blogs .col-12 {
-            /* Force 2 columns */
-            flex: 0 0 calc(50% - 10px) !important;
-            width: calc(50% - 10px) !important;
-            max-width: calc(50% - 10px) !important;
-            /* Spacing */
-            margin-left: 5px !important;
-            margin-right: 5px !important;
-            margin-bottom: 10px;
+            flex: 0 0 100% !important;
+            max-width: 100% !important;
+            margin-bottom: 15px;
             padding: 0 !important;
         }
         
         #blogs .icon-box {
-            /* Inner spacing */
-            padding: 20px 15px !important;
-        }
-    }
-
-    /* Extra small devices */
-    @media (max-width: 575.98px) {
-        #blogs .icon-box {
-            padding: 15px 10px !important;
+            padding: 30px !important; /* Maintain original padding */
         }
     }
 </style>
+
   <!-- End Blogs Section -->
  <!-- Start Contact Section -->
 <!-- Start Contact Section -->
