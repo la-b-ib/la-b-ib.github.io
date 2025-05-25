@@ -1345,27 +1345,27 @@
 
 <!-- Start Blogs Section -->
 
-<section id="blogs">
+<section id="blogs" class="services">
     <div class="container">
-        <div class="section-title">
-            <h2>Blogs</h2>
+        <div class="section-title" style="margin-bottom: 25px;">
+            <h2><b>Blogs</b></h2>
         </div>
-        <div class="blog-container">
+        <div class="row">
             <!-- BRACU Express -->
-            <div class="blog-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="100">
                 <div class="icon-box">
                     <div class="icon"><i class="icofont-book"></i></div>
-                    <h4><a href="https://bracuexpress.com/author/labib/" target="_blank">BRACU Express</a></h4>
-                    <p>NEWS & STORIES</p>
+                    <h4 class="title"><a href="https://bracuexpress.com/author/labib/" target="_blank"><b>BRACU Express</b></a></h4>
+                    <p class="description"><b>NEWS & STORIES</b></p>
                 </div>
             </div>
 
             <!-- Newsletter -->
-            <div class="blog-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="300">
                 <div class="icon-box">
                     <div class="icon"><i class="icofont-book"></i></div>
-                    <h4><a href="https://www.linkedin.com/newsletters/tech-talk-7325845368900894722/" target="_blank">NEWSLETTER</a></h4>
-                    <p>Tech Talk</p>
+                    <h4 class="title"><a href="https://www.linkedin.com/newsletters/tech-talk-7325845368900894722/" target="_blank"><b>NEWSLETTER</b></a></h4>
+                    <p class="description"><b>Tech Talk</b></p>
                 </div>
             </div>
         </div>
@@ -1373,98 +1373,89 @@
 </section>
 
 <style>
-/* ===== CORE STYLES ===== */
-#blogs .icon-box {
-    text-align: center;
-    padding: 30px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 100%;
-}
-
-#blogs .icon-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-#blogs .icon i {
-    color: #10cf3e;
-    font-size: 36px;
-    margin-bottom: 20px;
-    display: block;
-}
-
-#blogs h4 a {
-    color: #fff;
-    font-weight: 700;
-    transition: color 0.3s;
-}
-
-#blogs h4 a:hover {
-    color: #10cf3e;
-}
-
-#blogs p {
-    color: #fff;
-    font-weight: 700;
-    margin-top: 15px;
-}
-
-/* ===== DESKTOP (ORIGINAL LAYOUT) ===== */
-@media (min-width: 992px) {
-    .blog-container {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0 -15px;
-    }
-    
-    .blog-card {
-        flex: 0 0 33.333%;
-        max-width: 33.333%;
-        padding: 0 15px;
-    }
-}
-
-/* ===== MOBILE (CUSTOM LAYOUT) ===== */
-@media (max-width: 991px) {
-    .blog-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        padding: 0 5px;
-    }
-    
-    .blog-card {
-        width: 100% !important;
-        padding: 0 !important;
-        margin: 0 !important;
-    }
-    
+    /* ===== COMMON STYLES (unchanged) ===== */
     #blogs .icon-box {
-        padding: 20px 15px;
+        text-align: center;
+        padding: 30px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        transition: all 0.3s ease-in-out;
+        height: 100%;
     }
-}
-
-/* ===== MOBILE SMALL ===== */
-@media (max-width: 575px) {
-    #blogs .icon-box {
-        padding: 15px 10px;
+    #blogs .icon-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     }
-    
+    #blogs .icon {
+        margin-bottom: 20px;
+    }
     #blogs .icon i {
-        font-size: 32px;
-        margin-bottom: 15px;
+        color: #10cf3e;
+        font-size: 36px;
     }
-    
-    #blogs h4 a {
-        font-size: 16px;
+    #blogs .title a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 18px;
+        transition: color 0.3s;
     }
-    
-    #blogs p {
-        font-size: 13px;
+    #blogs .title a:hover {
+        color: #10cf3e;
     }
-}
+    #blogs .description {
+        color: #ffffff;
+        margin-top: 15px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    /* ===== DESKTOP VIEW (EXACTLY ORIGINAL) ===== */
+    @media (min-width: 992px) {
+        #blogs .col-lg-4 {
+            flex: 0 0 33.333333%;
+            width: 33.333333%;
+        }
+        /* All other desktop styles remain untouched */
+    }
+
+    /* ===== MOBILE VIEW (CUSTOM OVERRIDE) ===== */
+    @media (max-width: 991.98px) {
+        #blogs .row {
+            /* Custom grid layout */
+            display: flex !important;
+            flex-wrap: wrap !important;
+            margin-left: -5px !important;
+            margin-right: -5px !important;
+            width: calc(100% + 10px) !important;
+        }
+        
+        #blogs .col-lg-4,
+        #blogs .col-md-6,
+        #blogs .col-12 {
+            /* Force 2 columns */
+            flex: 0 0 calc(50% - 10px) !important;
+            width: calc(50% - 10px) !important;
+            max-width: calc(50% - 10px) !important;
+            /* Spacing */
+            margin-left: 5px !important;
+            margin-right: 5px !important;
+            margin-bottom: 10px;
+            padding: 0 !important;
+        }
+        
+        #blogs .icon-box {
+            /* Inner spacing */
+            padding: 20px 15px !important;
+        }
+    }
+
+    /* Extra small devices */
+    @media (max-width: 575.98px) {
+        #blogs .icon-box {
+            padding: 15px 10px !important;
+        }
+    }
 </style>
   <!-- End Blogs Section -->
  <!-- Start Contact Section -->
