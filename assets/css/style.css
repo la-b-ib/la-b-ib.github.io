@@ -3,15 +3,14 @@
 --------------------------------------------------------------*/
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 /*--------------------------------------------------------------
-# Rajdhani Font
+# Source Sans Pro Font
 --------------------------------------------------------------*/
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
 body {
-    font-family: "Rajdhani", sans-serif;
-    font-weight: 600;
+    font-family: "Source Sans Pro", sans-serif;
     color: #fff;
     position: relative;
     background: transparent;
@@ -36,7 +35,6 @@ body::before {
 
 a {
     color: #12d640;
-    font-weight: 600;
 }
 
 a:hover {
@@ -45,8 +43,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Rajdhani", sans-serif;
-    font-weight: 700;
+    font-family: "Source Sans Pro", sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -72,7 +69,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0;
     line-height: 1;
     font-weight: 700;
-    font-family: "Rajdhani", sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
 }
 
 #header h1 a, #header h1 a:hover {
@@ -82,10 +79,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header h2 {
-    font-size: 28px;
+    font-size: 26px;
     margin-top: 20px;
     color: #12d640;
-    font-weight: 600;
 }
 
 #header h2 span {
@@ -114,8 +110,8 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1;
     margin-right: 8px;
     border-radius: 50%;
-    width: 48px;
-    height: 48px;
+    width: 46px;
+    height: 46px;
 }
 
 #header .social-links a:hover {
@@ -124,10 +120,10 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 992px) {
     #header h1 {
-        font-size: 42px;
+        font-size: 40px;
     }
     #header h2 {
-        font-size: 24px;
+        font-size: 22px;
         line-height: 30px;
     }
     #header .social-links {
@@ -163,8 +159,8 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     position: relative;
     color: #fff;
-    font-size: 21px;
-    font-family: "Rajdhani", sans-serif;
+    font-size: 20px;
+    font-family: "Source Sans Pro", sans-serif;
     font-weight: 600;
 }
 
@@ -199,8 +195,8 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 9998;
     background: 0;
     border: 0;
-    width: 48px;
-    height: 48px;
+    width: 44px;
+    height: 44px;
     padding: 0;
     margin: 0;
     cursor: pointer;
@@ -208,7 +204,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .mobile-nav-toggle i {
     color: #fff;
-    font-size: 28px;
+    font-size: 26px;
     display: block;
     line-height: 1;
 }
@@ -243,8 +239,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .mobile-nav a {
     color: #fff;
-    padding: 16px 20px;
-    font: 600 18px/1.5 "Rajdhani", sans-serif;
+    padding: 16px 18px;
+    font: 600 18px/1.5 "Source Sans Pro", sans-serif;
     text-decoration: none;
     display: block;
     transform: translateZ(0);
@@ -278,23 +274,23 @@ h1, h2, h3, h4, h5, h6 {
   .mobile-nav a {
     display: flex !important;
     align-items: center !important;
-    padding: 16px 24px !important;
+    padding: 16px 22px !important;
     position: relative !important;
   }
   
   .mobile-nav a .material-icons.mobile-menu-icon {
     /* Font Properties */
     font-family: 'Material Icons' !important;
-    font-size: 28px !important;
+    font-size: 26px !important;
     font-weight: normal !important;
     font-style: normal !important;
     
     /* Sizing & Spacing */
-    min-width: 28px !important;
-    width: 28px !important;
-    height: 28px !important;
+    min-width: 26px !important;
+    width: 26px !important;
+    height: 26px !important;
     line-height: 1 !important;
-    margin-right: 18px !important;
+    margin-right: 16px !important;
     flex-shrink: 0 !important;
     
     /* Color & Display */
@@ -376,7 +372,7 @@ h1, h2, h3, h4, h5, h6 {
         height: 60px;
     }
     #header.header-top h1 {
-        font-size: 26px;
+        font-size: 28px;
     }
 }
 
@@ -423,7 +419,7 @@ section .container {
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #dee2e6;
-    font-family: "Rajdhani", sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
 }
 
 .section-title h2::after {
@@ -438,10 +434,10 @@ section .container {
 .section-title p {
     margin: 0;
     margin: -15px 0 15px 0;
-    font-size: 40px;
+    font-size: 38px;
     font-weight: 700;
     text-transform: uppercase;
-    font-family: "Rajdhani", sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
     color: #fff;
 }
 
@@ -450,7 +446,7 @@ section .container {
 --------------------------------------------------------------*/
 .about-me .content h3 {
     font-weight: 700;
-    font-size: 28px;
+    font-size: 26px;
     color: #1c7d32;
 }
 
@@ -493,7 +489,7 @@ section .container {
     top: -25px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 28px;
+    font-size: 26px;
     background: rgba(255, 255, 255, 0.1);
     padding: 12px;
     color: #1c7d32;
@@ -501,18 +497,17 @@ section .container {
 }
 
 .counts .count-box span {
-    font-size: 40px;
+    font-size: 38px;
     display: block;
-    font-weight: 700;
+    font-weight: 600;
     color: #fff;
 }
 
 .counts .count-box p {
     padding: 0;
     margin: 0;
-    font-family: "Rajdhani", sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
     font-size: 16px;
-    font-weight: 600;
 }
 
 /*--------------------------------------------------------------
@@ -529,8 +524,8 @@ section .container {
     margin: 0 0 6px 0;
     text-transform: uppercase;
     display: block;
-    font-weight: 700;
-    font-family: "Rajdhani", sans-serif;
+    font-weight: 600;
+    font-family: "Source Sans Pro", sans-serif;
     color: #fff;
 }
 
@@ -562,17 +557,17 @@ section .container {
 }
 
 .interests .icon-box i {
-    font-size: 36px;
+    font-size: 32px;
     padding-right: 10px;
     line-height: 1;
 }
 
 .interests .icon-box h3 {
-    font-weight: 700;
+    font-weight: 600;
     margin: 0;
     padding: 0;
     line-height: 1;
-    font-size: 18px;
+    font-size: 17px;
     color: #fff;
 }
 
@@ -598,21 +593,21 @@ section .container {
 }
 
 .testimonials .testimonial-item h3 {
-    font-size: 20px;
-    font-weight: 700;
+    font-size: 19px;
+    font-weight: 600;
     margin: 10px 0 5px 45px;
     color: #fff;
 }
 
 .testimonials .testimonial-item h4 {
-    font-size: 16px;
+    font-size: 15px;
     color: #999;
     margin: 0 0 0 45px;
 }
 
 .testimonials .testimonial-item .quote-icon-left, .testimonials .testimonial-item .quote-icon-right {
     color: rgba(255, 255, 255, 0.25);
-    font-size: 28px;
+    font-size: 26px;
 }
 
 .testimonials .testimonial-item .quote-icon-left {
@@ -667,7 +662,7 @@ section .container {
 # Resume
 --------------------------------------------------------------*/
 .resume .resume-title {
-    font-size: 28px;
+    font-size: 26px;
     font-weight: 700;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -682,17 +677,17 @@ section .container {
 }
 
 .resume .resume-item h4 {
-    line-height: 20px;
-    font-size: 20px;
-    font-weight: 700;
+    line-height: 18px;
+    font-size: 19px;
+    font-weight: 600;
     text-transform: uppercase;
-    font-family: "Rajdhani", sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
     color: #1c7d32;
     margin-bottom: 10px;
 }
 
 .resume .resume-item h5 {
-    font-size: 18px;
+    font-size: 17px;
     background: rgba(255, 255, 255, 0.15);
     padding: 5px 15px;
     display: inline-block;
@@ -737,8 +732,8 @@ section .container {
 
 .services .icon-box .icon {
     margin: 0 auto;
-    width: 70px;
-    height: 70px;
+    width: 64px;
+    height: 64px;
     background: #1c7d32;
     border-radius: 5px;
     transition: all .3s ease-out 0s;
@@ -751,7 +746,7 @@ section .container {
 
 .services .icon-box .icon i {
     color: #fff;
-    font-size: 32px;
+    font-size: 28px;
 }
 
 .services .icon-box .icon::before {
@@ -768,9 +763,9 @@ section .container {
 }
 
 .services .icon-box h4 {
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 15px;
-    font-size: 24px;
+    font-size: 22px;
 }
 
 .services .icon-box h4 a {
@@ -779,9 +774,8 @@ section .container {
 
 .services .icon-box p {
     line-height: 24px;
-    font-size: 16px;
+    font-size: 15px;
     margin-bottom: 0;
-    font-weight: 600;
 }
 
 .services .icon-box:hover {
@@ -824,8 +818,8 @@ section .container {
 .portfolio #portfolio-flters li {
     cursor: pointer;
     display: inline-block;
-    padding: 10px 18px;
-    font-size: 16px;
+    padding: 10px 16px;
+    font-size: 15px;
     font-weight: 600;
     line-height: 1;
     text-transform: uppercase;
@@ -911,18 +905,17 @@ section .container {
 }
 
 .portfolio .portfolio-wrap .portfolio-info h4 {
-    font-size: 24px;
+    font-size: 22px;
     color: #fff;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .portfolio .portfolio-wrap .portfolio-info p {
     color: #ffffff;
-    font-size: 16px;
+    font-size: 15px;
     text-transform: uppercase;
     padding: 0;
     margin: 0;
-    font-weight: 600;
 }
 
 .portfolio .portfolio-wrap .portfolio-links {
@@ -933,7 +926,7 @@ section .container {
 .portfolio .portfolio-wrap .portfolio-links a {
     color: #fff;
     margin: 0 2px;
-    font-size: 32px;
+    font-size: 28px;
     display: inline-block;
     transition: 0.3s;
 }
@@ -975,7 +968,7 @@ section .container {
 }
 
 .contact .info-box i.bx {
-    font-size: 28px;
+    font-size: 26px;
     color: #dee2e6;
     border-radius: 50%;
     padding: 16px;
@@ -984,9 +977,9 @@ section .container {
 }
 
 .contact .info-box h3 {
-    font-size: 22px;
+    font-size: 20px;
     color: #28a745;
-    font-weight: 700;
+    font-weight: 600;
     margin: 10px 0 8px 68px;
 }
 
@@ -994,9 +987,8 @@ section .container {
     padding: 0;
     color: #fff;
     line-height: 24px;
-    font-size: 16px;
+    font-size: 15px;
     margin: 0 0 0 68px;
-    font-weight: 600;
 }
 
 .contact .info-box .social-links {
@@ -1005,7 +997,7 @@ section .container {
 }
 
 .contact .info-box .social-links a {
-    font-size: 20px;
+    font-size: 18px;
     display: inline-block;
     color: #fff;
     line-height: 1;
@@ -1071,12 +1063,11 @@ section .container {
 .contact .php-email-form input, .contact .php-email-form textarea {
     border-radius: 0;
     box-shadow: none;
-    font-size: 16px;
+    font-size: 15px;
     background: rgba(255, 255, 255, 0.08);
     border: 0;
     transition: 0.3s;
     color: #fff;
-    font-weight: 600;
 }
 
 .contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
@@ -1119,12 +1110,10 @@ section .container {
 .contact .php-email-form button[type="submit"] {
     background: #1c7d32;
     border: 0;
-    padding: 12px 36px;
+    padding: 10px 30px;
     color: #fff;
     transition: 0.4s;
     border-radius: 4px;
-    font-weight: 600;
-    font-size: 16px;
 }
 
 .contact .php-email-form button[type="submit"]:hover {
@@ -1159,13 +1148,11 @@ section .container {
     font-size: 13px;
     color: #fff;
     z-index: 1;
-    font-weight: 600;
 }
 
 .credits a {
     color: #1c7d32;
     transition: 0.3s;
-    font-weight: 600;
 }
 
 .credits a:hover {
@@ -1245,12 +1232,6 @@ a, button, .portfolio-wrap {
     animation: none !important;
 }
 
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
-}
-
 /* Fix Google Material Close Button */
 .vbox-close {
     display: block !important;
@@ -1259,7 +1240,7 @@ a, button, .portfolio-wrap {
     right: 15px;
     background: transparent !important;
     border: none !important;
-    font-size: 36px !important;
+    font-size: 32px !important;
     color: #fff !important;
     cursor: pointer;
     z-index: 10000;
@@ -1292,7 +1273,7 @@ a, button, .portfolio-wrap {
         color: red !important;
         background: transparent !important;
         border: none !important;
-        font-size: 36px !important;
+        font-size: 32px !important;
         cursor: pointer;
         z-index: 999999;
         padding: 5px;
