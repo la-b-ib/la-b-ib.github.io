@@ -1416,50 +1416,34 @@
             flex: 0 0 33.333333%;
             width: 33.333333%;
         }
-        #blogs .row {
-            justify-content: flex-start; /* Align left on desktop */
-        }
     }
 
-    /* ===== MOBILE VIEW (aligned left) ===== */
+    /* ===== MOBILE VIEW (custom override) ===== */
     @media (max-width: 991px) {
         #blogs .row {
             display: flex;
             flex-wrap: wrap;
-            justify-content: flex-start; /* Force left alignment */
-            margin-right: 0;
-            margin-left: 0;
+            margin: 0 -5px; /* Compensate for column padding */
         }
         
         #blogs .col-lg-4,
         #blogs .col-md-6,
         #blogs .col-12 {
-            flex: 0 0 calc(50% - 10px);
+            flex: 0 0 calc(50% - 10px); /* 50% width minus gap */
             max-width: calc(50% - 10px);
-            margin-right: 10px;
-            margin-bottom: 20px;
-            padding: 0;
+            margin: 0 5px 10px; /* 5px sides, 10px bottom */
+            padding: 0 !important; /* Remove Bootstrap padding */
         }
         
         #blogs .icon-box {
-            padding: 20px 15px;
-            text-align: left; /* Left align content */
-        }
-        
-        #blogs .icon {
-            margin-left: 0;
-            margin-right: auto;
+            padding: 25px 20px; /* Slightly larger containers */
         }
     }
 
-    /* ===== SMALL MOBILE ===== */
+    /* ===== SMALL MOBILE ADJUSTMENT ===== */
     @media (max-width: 575px) {
-        #blogs .col-lg-4,
-        #blogs .col-md-6,
-        #blogs .col-12 {
-            flex: 0 0 100%;
-            max-width: 100%;
-            margin-right: 0;
+        #blogs .icon-box {
+            padding: 20px 15px;
         }
     }
 </style>
