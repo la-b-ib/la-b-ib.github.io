@@ -169,71 +169,106 @@
   
      // Modified Venobox initialization with custom mobile close button
     $(document).ready(function() {
-      $('.venobox').venobox({
-        bgcolor: '#010e1b',
-        border: 'none',
-        framewidth: '90%', 
-        frameheight: '90vh',
-        numeratio: true,
-        infinigall: true,
-        spinner: 'wave',
-        spinColor: '#12d640',
-        overlayColor: 'rgba(1, 14, 27, 0.95)',
-        closeBackground: 'transparent',
-        closeColor: '#12d640',
-        css: {
-          'background-color': '#010e1b',
-          'box-shadow': 'none'
-        },
-        onOpen: function() {
-          // Remove default close button
-          $('.vbox-close').remove();
-          
-          // Create custom close button with gamepad icon
-          var closeBtn = $('<button class="custom-close-btn"><i class="material-icons">gamepad</i></button>');
-          
-          // Position differently for mobile/desktop
-          if ($(window).width() <= 768) {
-            closeBtn.css({
-              'position': 'fixed',
-              'top': '15px',
-              'right': '15px',
-              'color': 'red',
-              'background': 'transparent',
-              'border': 'none',
-              'font-size': '32px',
-              'cursor': 'pointer',
-              'z-index': '999999',
-              'padding': '5px',
-              'border-radius': '50%'
-            });
-          } else {
-            closeBtn.css({
-              'position': 'fixed',
-              'top': '20px',
-              'right': '20px',
-              'color': '#12d640',
-              'background': 'transparent',
-              'border': 'none',
-              'font-size': '28px',
-              'cursor': 'pointer',
-              'z-index': '999999'
-            });
-          }
-          
-          // Add to DOM
-          $('body').append(closeBtn);
-          
-          // Click handler
-          closeBtn.on('click', function() {
-            $('.venobox').venobox('close');
-            $(this).remove();
-          });
-        },
-        onClose: function() {
-          $('.custom-close-btn').remove();
-        }
+  $('.venobox').venobox({
+    bgcolor: '#010e1b',
+    border: 'none',
+    framewidth: '90%', 
+    frameheight: '90vh',
+    numeratio: true,
+    infinigall: true,
+    spinner: 'wave',
+    spinColor: '#12d640',
+    overlayColor: 'rgba(1, 14, 27, 0.95)',
+    closeBackground: 'transparent',
+    closeColor: '#12d640',
+    css: {
+      'background-color': '#010e1b',
+      'box-shadow': 'none'
+    },
+    onOpen: function() {
+      // Remove default close button
+      $('.vbox-close').remove();
+      
+      // Create custom close button
+      var closeBtn = $('<button class="custom-close-btn"><i class="material-icons">close</i></button>');
+      
+      // Create navigation buttons
+      var prevBtn = $('<button class="custom-prev-btn"><i class="material-icons">chevron_left</i></button>');
+      var nextBtn = $('<button class="custom-next-btn"><i class="material-icons">chevron_right</i></button>');
+      
+      // Position and style buttons
+      closeBtn.css({
+        'position': 'fixed',
+        'top': '15px',
+        'right': '15px',
+        'color': '#ff4d4d',
+        'background': 'transparent',
+        'border': 'none',
+        'font-size': '32px',
+        'cursor': 'pointer',
+        'z-index': '999999',
+        'padding': '5px',
+        'border-radius': '50%',
+        'text-shadow': '0 0 5px rgba(255, 77, 77, 0.7)'
       });
-    });
+      
+      prevBtn.css({
+        'position': 'fixed',
+        'top': '50%',
+        'left': '15px',
+        'transform': 'translateY(-50%)',
+        'color': '#12d640',
+        'background': 'transparent',
+        'border': 'none',
+        'font-size': '32px',
+        'cursor': 'pointer',
+        'z-index': '999999',
+        'padding': '5px',
+        'border-radius': '50%',
+        'text-shadow': '0 0 5px rgba(18, 214, 64, 0.7)'
+      });
+      
+      nextBtn.css({
+        'position': 'fixed',
+        'top': '50%',
+        'right': '15px',
+        'transform': 'translateY(-50%)',
+        'color': '#12d640',
+        'background': 'transparent',
+        'border': 'none',
+        'font-size': '32px',
+        'cursor': 'pointer',
+        'z-index': '999999',
+        'padding': '5px',
+        'border-radius': '50%',
+        'text-shadow': '0 0 5px rgba(18, 214, 64, 0.7)'
+      });
+      
+      // Add to DOM
+      $('body').append(closeBtn);
+      $('body').append(prevBtn);
+      $('body').append(nextBtn);
+      
+      // Click handlers
+      closeBtn.on('click', function() {
+        $('.venobox').venobox('close');
+        $(this).remove();
+        prevBtn.remove();
+        nextBtn.remove();
+      });
+      
+      prevBtn.on('click', function() {
+        $('.venobox').venobox('prev');
+      });
+      
+      nextBtn.on('click', function() {
+        $('.venobox').venobox('next');
+      });
+    },
+    onClose: function() {
+      $('.custom-close-btn, .custom-prev-btn, .custom-next-btn').remove();
+    }
+  });
+});
   
   })(jQuery);
