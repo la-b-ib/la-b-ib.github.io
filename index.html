@@ -58,97 +58,157 @@
   <!-- End Google Tag Manager (noscript) -->
 
   <!-- ======= Header ======= -->
-  <header id="header" class="header-tops">
-    <div class="container">
-      <h1><a href="index.html" style="margin-right: 25px;">Labib Bin Shahed</a></h1>
-      <h2 style="color:#fff">I'm <span class="typing" style="color:#12D640"></span></h2>
-      <nav class="nav-menu d-none d-lg-block">
-        <ul>
-          <li class="active"><a href="#header"> <span><b>Home</b></span></a></li>
-          <li><a href="#about"><span><b>About</b></span></a></li>
-          <li><a href="#education"> <span><b>Education</b></span></a></li>
-          <li><a href="#certification"> <span><b>Certification</b></span></a></li>
-          <li><a href="#research"> <span><b>Research</b></span></a></li>
-          <li><a href="#experience"> <span><b>Experience</b></span></a></li>
-          <li><a href="#portfolio"> <span><b>Projects</b></span></a></li>
-          <li><a href="#skills"> <span><b>Skills</b></span></a></li>
-          <li><a href="#blogs"> <span><b>Blogs</b></span></a></li>
-          <li><a href="#contacts"> <span><b>Contact</b></span></a></li>
-        </ul>
-      </nav>
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labib Bin Shahed - Portfolio</title>
+    <!-- Assuming Bootstrap and Boxicons are included as implied by classes -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        /* Override Bootstrap container for desktop view */
+        @media (min-width: 992px) {
+            #header.header-tops {
+                width: auto !important;
+                max-width: none !important;
+            }
+            
+            #header.header-tops > .container {
+                width: auto !important;
+                max-width: none !important;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+        }
 
-      <div class="social-links">
-          <a href="https://www.linkedin.com/in/la-b-ib/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-          <a href="https://github.com/la-b-ib" target="_blank" class="github"><i class="bx bxl-github"></i></a>
-          <a href="mailto:labib.45x@gmail.com?subject=Inquiry%20from%20Website&body=Hello%20Labib,%0D%0A%0D%0AI%20have%20a%20question!" target="_blank" class="google"><i class="bx bxl-google"></i></a>
-      </div>
-    </div>
-</header>
+        /* Your existing navigation menu styles - unchanged */
+        .nav-menu {
+            margin-top: 35px;
+        }
 
-<style>
-/* Override Bootstrap container for desktop view */
-@media (min-width: 992px) {
-  #header.header-tops {
-    width: auto !important;
-    max-width: none !important;
-  }
-  
-  #header.header-tops > .container {
-    width: auto !important;
-    max-width: none !important;
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-}
+        .nav-menu ul {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
 
-/* Your existing navigation menu styles - unchanged */
-.nav-menu {
-    margin-top: 35px;
-}
+        .nav-menu li + li {
+            margin-left: 30px;
+        }
 
-.nav-menu ul {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
+        .nav-menu a {
+            display: block;
+            position: relative;
+            color: #fff;
+            font-size: 19px;
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+        }
 
-.nav-menu li + li {
-    margin-left: 30px;
-}
+        .nav-menu a:before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #9e7f25;
+            visibility: hidden;
+            width: 0px;
+            transition: all 0.3s ease-in-out 0s;
+        }
 
-.nav-menu a {
-    display: block;
-    position: relative;
-    color: #fff;
-    font-size: 19px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-}
+        .nav-menu a:hover:before, .nav-menu li:hover > a:before, .nav-menu .active > a:before {
+            visibility: visible;
+            width: 25px;
+        }
 
-.nav-menu a:before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -4px;
-    left: 0;
-    background-color: #9e7f25;
-    visibility: hidden;
-    width: 0px;
-    transition: all 0.3s ease-in-out 0s;
-}
+        .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
+            color: #12d640;
+            text-decoration: none;
+        }
 
-.nav-menu a:hover:before, .nav-menu li:hover > a:before, .nav-menu .active > a:before {
-    visibility: visible;
-    width: 25px;
-}
+        /* Ensure header is fixed if not already defined */
+        #header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: #000; /* Assuming a dark background based on white text */
+        }
 
-.nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
-    color: #12d640;
-    text-decoration: none;
-}
-</style>
+        /* Add padding to body to prevent content hiding under fixed header */
+        body {
+            padding-top: 120px; /* Adjust based on header height */
+        }
+    </style>
+</head>
+<body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="header-tops">
+        <div class="container">
+            <h1><a href="index.html" style="margin-right: 25px;">Labib Bin Shahed</a></h1>
+            <h2 style="color:#fff">I'm <span class="typing" style="color:#12D640"></span></h2>
+            <nav class="nav-menu d-none d-lg-block">
+                <ul>
+                    <li class="active"><a href="#header"><span><b>Home</b></span></a></li>
+                    <li><a href="#about"><span><b>About</b></span></a></li>
+                    <li><a href="#education"><span><b>Education</b></span></a></li>
+                    <li><a href="#certification"><span><b>Certification</b></span></a></li>
+                    <li><a href="#research"><span><b>Research</b></span></a></li>
+                    <li><a href="#experience"><span><b>Experience</b></span></a></li>
+                    <li><a href="#portfolio"><span><b>Projects</b></span></a></li>
+                    <li><a href="#skills"><span><b>Skills</b></span></a></li>
+                    <li><a href="#blogs"><span><b>Blogs</b></span></a></li>
+                    <li><a href="#contacts"><span><b>Contact</b></span></a></li>
+                </ul>
+            </nav>
+
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/la-b-ib/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                <a href="https://github.com/la-b-ib" target="_blank" class="github"><i class="bx bxl-github"></i></a>
+                <a href="mailto:labib.45x@gmail.com?subject=Inquiry%20from%20Website&body=Hello%20Labib,%0D%0A%0D%0AI%20have%20a%20question!" target="_blank" class="google"><i class="bx bxl-google"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Placeholder sections to simulate website structure -->
+    <section id="about" style="min-height: 100vh; padding: 20px;">About Section</section>
+    <section id="education" style="min-height: 100vh; padding: 20px;">Education Section</section>
+    <section id="certification" style="min-height: 100vh; padding: 20px;">Certification Section</section>
+    <section id="research" style="min-height: 100vh; padding: 20px;">Research Section</section>
+    <section id="experience" style="min-height: 100vh; padding: 20px;">Experience Section</section>
+    <section id="portfolio" style="min-height: 100vh; padding: 20px;">Projects Section</section>
+    <section id="skills" style="min-height: 100vh; padding: 20px;">Skills Section</section>
+    <section id="blogs" style="min-height: 100vh; padding: 20px;">Blogs Section</section>
+    <section id="contacts" style="min-height: 100vh; padding: 20px;">Contact Section</section>
+
+    <script>
+        // Fix section shifting by adjusting scroll position for fixed header
+        document.querySelectorAll('.nav-menu a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const headerHeight = document.querySelector('#header').offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+```
 
 <!-- ======= About Section ======= -->
 
