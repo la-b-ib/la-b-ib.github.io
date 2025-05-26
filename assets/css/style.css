@@ -48,11 +48,8 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 #header {
     transition: ease-in-out 0s;
-    position: fixed; /* Changed from relative to fixed */
-    top: 0; /* Ensure it stays at the top */
-    left: 0;
-    right: 0;
-    height: 100vh; /* Retains full viewport height; adjust if needed */
+    position: relative;
+    height: 100vh;
     display: flex;
     align-items: center;
     z-index: 997;
@@ -383,14 +380,14 @@ section {
     overflow: hidden;
     position: absolute;
     width: 100%;
-    top: 100vh; /* Matches header height; adjust if header height changes */
+    top: 120px; /* Reduced from 140px */
     bottom: 100%;
     opacity: 0;
     z-index: 2;
 }
 
 section.section-show {
-    top: 100vh; /* Matches header height; adjust if header height changes */
+    top: 70px;
     bottom: auto;
     opacity: 1;
     padding-bottom: 0px;
