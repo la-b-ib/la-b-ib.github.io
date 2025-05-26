@@ -383,14 +383,14 @@ section {
     overflow: hidden;
     position: absolute;
     width: 100%;
-    top: 120px; /* Reduced from 140px */
+    top: 100vh; /* Matches header height; adjust if header height changes */
     bottom: 100%;
     opacity: 0;
     z-index: 2;
 }
 
 section.section-show {
-    top: 70px;
+    top: 100vh; /* Matches header height; adjust if header height changes */
     bottom: auto;
     opacity: 1;
     padding-bottom: 0px;
