@@ -237,3 +237,22 @@
     });
   
   })(jQuery);
+
+// Add this at the bottom of your main.js file
+(function() {
+    // Force scrollbar to always be visible
+    function maintainScrollbar() {
+        document.documentElement.style.overflowY = 'scroll';
+    }
+    
+    // Run on load and resize
+    window.addEventListener('load', maintainScrollbar);
+    window.addEventListener('resize', maintainScrollbar);
+    
+    // Additional fix for section transitions
+    $(document).on('click', '.nav-menu a, .mobile-nav a', function() {
+        setTimeout(function() {
+            $('html').css('overflow-y', 'scroll');
+        }, 350);
+    });
+})();
