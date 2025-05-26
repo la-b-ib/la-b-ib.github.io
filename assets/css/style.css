@@ -1263,92 +1263,100 @@ a, button, .portfolio-wrap {
 }
 
 /* Custom gamepad close button for mobile */
-/* Custom gamepad close button for mobile */
+
 /* Custom buttons for Venobox in mobile view */
+/* Custom buttons for Venobox */
 .custom-close-btn,
 .custom-prev-btn,
 .custom-next-btn {
-    display: none;
+    display: block;
+    position: fixed;
+    background: transparent !important;
+    border: none !important;
+    cursor: pointer;
+    z-index: 10000;
+    padding: 8px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
 }
 
-@media (max-width: 768px) {
-    .custom-close-btn,
-    .custom-prev-btn,
-    .custom-next-btn {
-        display: block;
-        position: fixed;
-        background: transparent !important;
-        border: none !important;
-        cursor: pointer;
-        z-index: 10000;
-        padding: 8px;
-        border-radius: 50%;
-        transition: all 0.3s ease;
-    }
+.custom-close-btn {
+    top: 15px;
+    right: 15px;
+    color: #ff4d4d !important;
+    font-size: 32px !important;
+    animation: pulse 1.5s infinite;
+    text-shadow: 0 0 5px rgba(255, 77, 77, 0.7);
+}
 
-    .custom-close-btn {
-        top: 15px;
-        right: 15px;
-        color: #ff4d4d !important; /* Red for close button */
-        font-size: 32px !important;
-        animation: pulse 1.5s infinite;
-        text-shadow: 0 0 5px rgba(255, 77, 77, 0.7);
-    }
+.custom-prev-btn {
+    top: 50%;
+    left: 15px;
+    color: #12d640 !important;
+    font-size: 32px !important;
+    transform: translateY(-50%);
+    text-shadow: 0 0 5px rgba(18, 214, 64, 0.7);
+}
 
-    .custom-prev-btn {
-        top: 50%;
-        left: 15px;
-        color: #12d640 !important; /* Green for navigation arrows */
-        font-size: 32px !important;
-        transform: translateY(-50%);
-        text-shadow: 0 0 5px rgba(18, 214, 64, 0.7);
-    }
+.custom-next-btn {
+    top: 50%;
+    right: 15px;
+    color: #12d640 !important;
+    font-size: 32px !important;
+    transform: translateY(-50%);
+    text-shadow: 0 0 5px rgba(18, 214, 64, 0.7);
+}
 
-    .custom-next-btn {
-        top: 50%;
-        right: 15px;
-        color: #12d640 !important; /* Green for navigation arrows */
-        font-size: 32px !important;
-        transform: translateY(-50%);
-        text-shadow: 0 0 5px rgba(18, 214, 64, 0.7);
-    }
+.custom-close-btn i,
+.custom-prev-btn i,
+.custom-next-btn i {
+    font-family: 'Material Icons' !important;
+    font-size: inherit !important;
+    color: inherit !important;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
 
-    .custom-close-btn i,
-    .custom-prev-btn i,
-    .custom-next-btn i {
-        font-family: 'Material Icons' !important;
-        font-size: inherit !important;
-        color: inherit !important;
-        -webkit-font-smoothing: antialiased;
-        text-rendering: optimizeLegibility;
-    }
+.custom-close-btn:hover,
+.custom-prev-btn:hover,
+.custom-next-btn:hover {
+    transform: scale(1.1) translateY(-50%);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
+}
 
-    .custom-close-btn:hover,
-    .custom-prev-btn:hover,
-    .custom-next-btn:hover {
-        transform: scale(1.1) translateY(-50%); /* Maintain translateY for nav buttons */
-        text-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
-    }
+.custom-close-btn:hover {
+    transform: scale(1.1);
+}
 
-    .custom-close-btn:hover {
-        transform: scale(1.1); /* No translateY for close button */
-    }
+/* Ensure Material Icons are loaded */
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/materialicons/v140/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+}
 
-    /* Hide default Venobox buttons */
-    .vbox-close,
-    .vbox-prev,
-    .vbox-next {
-        display: none !important;
-    }
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
 
-    /* Ensure dark theme compatibility */
-    .vbox-overlay {
-        background: rgba(1, 14, 27, 0.95) !important;
-    }
-
-    .vbox-container {
-        background: transparent !important;
-    }
+/* Hide default Venobox buttons */
+.vbox-close,
+.vbox-prev,
+.vbox-next {
+    display: none !important;
 }
 
 /* Pulse animation for buttons */
@@ -1356,4 +1364,27 @@ a, button, .portfolio-wrap {
     0% { transform: scale(1); }
     50% { transform: scale(1.1); }
     100% { transform: scale(1); }
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+    .custom-close-btn,
+    .custom-prev-btn,
+    .custom-next-btn {
+        font-size: 28px !important;
+        padding: 6px;
+    }
+    
+    .custom-close-btn {
+        top: 10px;
+        right: 10px;
+    }
+    
+    .custom-prev-btn {
+        left: 10px;
+    }
+    
+    .custom-next-btn {
+        right: 10px;
+    }
 }
