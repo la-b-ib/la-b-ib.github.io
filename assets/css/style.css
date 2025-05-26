@@ -5,6 +5,49 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Scrollbar Fix
+--------------------------------------------------------------*/
+html {
+    overflow-y: scroll; /* Always show vertical scrollbar */
+    width: 100vw; /* Full viewport width */
+}
+
+body {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    width: 100%;
+}
+
+/* Prevent layout shift when scrollbar appears/disappears */
+body::before {
+    width: 100vw;
+}
+
+#header {
+    width: 100vw;
+}
+
+/* Fix for header-top specifically */
+#header.header-top {
+    width: 100vw;
+    padding-right: calc(100vw - 100%); /* Compensate for scrollbar width */
+}
+
+/* Ensure sections don't cause horizontal overflow */
+section {
+    width: 100vw;
+}
+
+/* Fix for mobile menu */
+.mobile-nav {
+    width: 100vw;
+}
+
+@media (max-width: 992px) {
+    #header.header-top {
+        padding-right: 0; /* Reset for mobile */
+    }
+}
 body {
     font-family: "Open Sans", sans-serif;
     color: #fff;
