@@ -15,21 +15,12 @@
           }
   
           if (hash == '#header') {
-            $('#header').removeClass('header-top');
-            $("section").removeClass('section-show');
-            return;
-          }
-  
-          if (!$('#header').hasClass('header-top')) {
-            $('#header').addClass('header-top');
-            setTimeout(function() {
-              $("section").removeClass('section-show');
-              $(hash).addClass('section-show');
-            }, 350);
-          } else {
-            $("section").removeClass('section-show');
-            $(hash).addClass('section-show');
-          }
+  $("section").removeClass('section-show');
+  return;
+}
+
+$("section").removeClass('section-show');
+$(hash).addClass('section-show');
   
           if ($('body').hasClass('mobile-nav-active')) {
             $('body').removeClass('mobile-nav-active');
