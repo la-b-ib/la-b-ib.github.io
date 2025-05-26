@@ -69,7 +69,7 @@
     
     var iconMap = {
       '#header': {main: 'home', fallback: '🏠'},
-      '#about': {main: 'group_add', fallback: '👤'},
+      '#about': {main: 'person', fallback: '👤'},
       '#education': {main: 'school', fallback: '🏫'}, 
       '#certification': {main: 'verified', fallback: '✅'},
       '#research': {main: 'science', fallback: '🔬'},
@@ -168,92 +168,72 @@
     });
   
      // Modified Venobox initialization with custom mobile close button
-   
-$(document).ready(function() {
-  $('.venobox').venobox({
-    bgcolor: '#010e1b', // Dark theme background
-    border: 'none',
-    framewidth: '90%',
-    frameheight: '90vh',
-    numeratio: true,
-    infinigall: true,
-    spinner: 'wave',
-    spinColor: '#12d640',
-    overlayColor: 'rgba(1, 14, 27, 0.95)', // Dark theme overlay
-    closeBackground: 'transparent',
-    closeColor: '#12d640',
-    arrowsColor: '#12d640', // Color for arrows
-    css: {
-      'background-color': '#010e1b',
-      'box-shadow': 'none'
-    },
-    onInit: function() {
-      // Remove default Venobox buttons to prevent overlap
-      $('.vbox-close, .vbox-prev, .vbox-next').remove();
-    },
-    onOpen: function() {
-      // Create custom buttons with Material Icons
-      var closeBtn = $('<button class="custom-close-btn"><i class="material-icons">close</i></button>');
-      var prevBtn = $('<button class="custom-prev-btn"><i class="material-icons">arrow_back</i></button>');
-      var nextBtn = $('<button class="custom-next-btn"><i class="material-icons">arrow_forward</i></button>');
-
-      // Append buttons to the Venobox overlay
-      $('.vbox-overlay').append(closeBtn, prevBtn, nextBtn);
-
-      // Click handlers
-      closeBtn.on('click', function() {
-        $('.venobox').venobox('close');
-        $('.custom-close-btn, .custom-prev-btn, .custom-next-btn').remove();
-      });
-      prevBtn.on('click', function() {
-        $('.venobox').venobox('prev');
-      });
-      nextBtn.on('click', function() {
-        $('.venobox').venobox('next');
-      });
-
-      // Fallback for Material Icons
-      setTimeout(() => {
-        $('.custom-close-btn i').each(function() {
-          if ($(this).width() === 0) {
-            $(this).replaceWith('✖');
+    $(document).ready(function() {
+      $('.venobox').venobox({
+        bgcolor: '#010e1b',
+        border: 'none',
+        framewidth: '90%', 
+        frameheight: '90vh',
+        numeratio: true,
+        infinigall: true,
+        spinner: 'wave',
+        spinColor: '#12d640',
+        overlayColor: 'rgba(1, 14, 27, 0.95)',
+        closeBackground: 'transparent',
+        closeColor: '#12d640',
+        css: {
+          'background-color': '#010e1b',
+          'box-shadow': 'none'
+        },
+        onOpen: function() {
+          // Remove default close button
+          $('.vbox-close').remove();
+          
+          // Create custom close button with gamepad icon
+          var closeBtn = $('<button class="custom-close-btn"><i class="material-icons">gamepad</i></button>');
+          
+          // Position differently for mobile/desktop
+          if ($(window).width() <= 768) {
+            closeBtn.css({
+              'position': 'fixed',
+              'top': '15px',
+              'right': '15px',
+              'color': 'red',
+              'background': 'transparent',
+              'border': 'none',
+              'font-size': '32px',
+              'cursor': 'pointer',
+              'z-index': '999999',
+              'padding': '5px',
+              'border-radius': '50%'
+            });
+          } else {
+            closeBtn.css({
+              'position': 'fixed',
+              'top': '20px',
+              'right': '20px',
+              'color': '#12d640',
+              'background': 'transparent',
+              'border': 'none',
+              'font-size': '28px',
+              'cursor': 'pointer',
+              'z-index': '999999'
+            });
           }
-        });
-        $('.custom-prev-btn i').each(function() {
-          if ($(this).width() === 0) {
-            $(this).replaceWith('←');
-          }
-        });
-        $('.custom-next-btn i').each(function() {
-          if ($(this).width() === 0) {
-            $(this).replaceWith('→');
-          }
-        });
-      }, 1000);
-    },
-    onClose: function() {
-      $('.custom-close-btn, .custom-prev-btn, .custom-next-btn').remove();
-    }
-  });
-});
+          
+          // Add to DOM
+          $('body').append(closeBtn);
+          
+          // Click handler
+          closeBtn.on('click', function() {
+            $('.venobox').venobox('close');
+            $(this).remove();
+          });
+        },
+        onClose: function() {
+          $('.custom-close-btn').remove();
+        }
+      });
+    });
   
   })(jQuery);
-
-// Add this at the bottom of your main.js file
-(function() {
-    // Force scrollbar to always be visible
-    function maintainScrollbar() {
-        document.documentElement.style.overflowY = 'scroll';
-    }
-    
-    // Run on load and resize
-    window.addEventListener('load', maintainScrollbar);
-    window.addEventListener('resize', maintainScrollbar);
-    
-    // Additional fix for section transitions
-    $(document).on('click', '.nav-menu a, .mobile-nav a', function() {
-        setTimeout(function() {
-            $('html').css('overflow-y', 'scroll');
-        }, 350);
-    });
-})();
