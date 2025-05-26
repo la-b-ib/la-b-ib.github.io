@@ -168,9 +168,10 @@
     });
   
      // Modified Venobox initialization with custom mobile close button
-    $(document).ready(function() {
+   
+$(document).ready(function() {
   $('.venobox').venobox({
-    bgcolor: '#010e1b',
+    bgcolor: '#010e1b', // Dark theme background
     border: 'none',
     framewidth: '90%',
     frameheight: '90vh',
@@ -178,119 +179,31 @@
     infinigall: true,
     spinner: 'wave',
     spinColor: '#12d640',
-    overlayColor: 'rgba(1, 14, 27, 0.95)',
+    overlayColor: 'rgba(1, 14, 27, 0.95)', // Dark theme overlay
     closeBackground: 'transparent',
     closeColor: '#12d640',
+    arrowsColor: '#12d640', // Color for arrows
     css: {
       'background-color': '#010e1b',
       'box-shadow': 'none'
     },
-    arrowsColor: '#12d640', // Custom color for arrows
+    onInit: function() {
+      // Remove default Venobox buttons to prevent overlap
+      $('.vbox-close, .vbox-prev, .vbox-next').remove();
+    },
     onOpen: function() {
-      // Remove default close button and navigation arrows
-      $('.vbox-close').remove();
-      $('.vbox-prev').remove();
-      $('.vbox-next').remove();
-
-      // Create custom close button with Material Icon
+      // Create custom buttons with Material Icons
       var closeBtn = $('<button class="custom-close-btn"><i class="material-icons">close</i></button>');
-
-      // Create custom navigation buttons with Material Icons
       var prevBtn = $('<button class="custom-prev-btn"><i class="material-icons">arrow_back</i></button>');
       var nextBtn = $('<button class="custom-next-btn"><i class="material-icons">arrow_forward</i></button>');
 
-      // Position buttons differently for mobile/desktop
-      if ($(window).width() <= 768) {
-        // Mobile view styles
-        closeBtn.css({
-          'position': 'fixed',
-          'top': '15px',
-          'right': '15px',
-          'color': 'red',
-          'background': 'transparent',
-          'border': 'none',
-          'font-size': '32px',
-          'cursor': 'pointer',
-          'z-index': '999999',
-          'padding': '5px',
-          'border-radius': '50%'
-        });
-        prevBtn.css({
-          'position': 'fixed',
-          'top': '50%',
-          'left': '15px',
-          'color': '#12d640',
-          'background': 'transparent',
-          'border': 'none',
-          'font-size': '32px',
-          'cursor': 'pointer',
-          'z-index': '999999',
-          'padding': '5px',
-          'transform': 'translateY(-50%)'
-        });
-        nextBtn.css({
-          'position': 'fixed',
-          'top': '50%',
-          'right': '15px',
-          'color': '#12d640',
-          'background': 'transparent',
-          'border': 'none',
-          'font-size': '32px',
-          'cursor': 'pointer',
-          'z-index': '999999',
-          'padding': '5px',
-          'transform': 'translateY(-50%)'
-        });
-      } else {
-        // Desktop view styles
-        closeBtn.css({
-          'position': 'fixed',
-          'top': '20px',
-          'right': '20px',
-          'color': '#12d640',
-          'background': 'transparent',
-          'border': 'none',
-          'font-size': '28px',
-          'cursor': 'pointer',
-          'z-index': '999999'
-        });
-        prevBtn.css({
-          'position': 'fixed',
-          'top': '50%',
-          'left': '20px',
-          'color': '#12d640',
-          'background': 'transparent',
-          'border': 'none',
-          'font-size': '28px',
-          'cursor': 'pointer',
-          'z-index': '999999',
-          'padding': '5px',
-          'transform': 'translateY(-50%)'
-        });
-        nextBtn.css({
-          'position': 'fixed',
-          'top': '50%',
-          'right': '20px',
-          'color': '#12d640',
-          'background': 'transparent',
-          'border': 'none',
-          'font-size': '28px',
-          'cursor': 'pointer',
-          'z-index': '999999',
-          'padding': '5px',
-          'transform': 'translateY(-50%)'
-        });
-      }
+      // Append buttons to the Venobox overlay
+      $('.vbox-overlay').append(closeBtn, prevBtn, nextBtn);
 
-      // Add buttons to DOM
-      $('body').append(closeBtn).append(prevBtn).append(nextBtn);
-
-      // Click handlers for buttons
+      // Click handlers
       closeBtn.on('click', function() {
         $('.venobox').venobox('close');
-        $(this).remove();
-        prevBtn.remove();
-        nextBtn.remove();
+        $('.custom-close-btn, .custom-prev-btn, .custom-next-btn').remove();
       });
       prevBtn.on('click', function() {
         $('.venobox').venobox('prev');
@@ -298,6 +211,25 @@
       nextBtn.on('click', function() {
         $('.venobox').venobox('next');
       });
+
+      // Fallback for Material Icons
+      setTimeout(() => {
+        $('.custom-close-btn i').each(function() {
+          if ($(this).width() === 0) {
+            $(this).replaceWith('✖');
+          }
+        });
+        $('.custom-prev-btn i').each(function() {
+          if ($(this).width() === 0) {
+            $(this).replaceWith('←');
+          }
+        });
+        $('.custom-next-btn i').each(function() {
+          if ($(this).width() === 0) {
+            $(this).replaceWith('→');
+          }
+        });
+      }, 1000);
     },
     onClose: function() {
       $('.custom-close-btn, .custom-prev-btn, .custom-next-btn').remove();
