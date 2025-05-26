@@ -58,98 +58,207 @@
   <!-- End Google Tag Manager (noscript) -->
 
   <!-- ======= Header ======= -->
-  <header id="header" class="header-tops">
-    <div class="container">
-      <h1><a href="index.html" style="margin-right: 25px;">Labib Bin Shahed</a></h1>
-      <h2 style="color:#fff">I'm <span class="typing" style="color:#12D640"></span></h2>
-      <nav class="nav-menu d-none d-lg-block">
-        <ul>
-          <li class="active"><a href="#header"> <span><b>Home</b></span></a></li>
-          <li><a href="#about"><span><b>About</b></span></a></li>
-          <li><a href="#education"> <span><b>Education</b></span></a></li>
-          <li><a href="#certification"> <span><b>Certification</b></span></a></li>
-          <li><a href="#research"> <span><b>Research</b></span></a></li>
-          <li><a href="#experience"> <span><b>Experience</b></span></a></li>
-          <li><a href="#portfolio"> <span><b>Projects</b></span></a></li>
-          <li><a href="#skills"> <span><b>Skills</b></span></a></li>
-          <li><a href="#blogs"> <span><b>Blogs</b></span></a></li>
-          <li><a href="#contacts"> <span><b>Contact</b></span></a></li>
-        </ul>
-      </nav>
+ <!-- ======= Header ======= -->
+<header id="header" class="header-tops">
+  <div class="container">
+    <div class="header-content">
+      <div class="header-text">
+        <h1><a href="index.html" style="margin-right: 25px;">Labib Bin Shahed</a></h1>
+        <h2 style="color:#fff">I'm <span class="typing" style="color:#12D640"></span></h2>
+      </div>
+      
+      <div class="header-right">
+        <nav class="nav-menu d-none d-lg-block">
+          <ul>
+            <li class="active"><a href="#header"> <span><b>Home</b></span></a></li>
+            <li><a href="#about"><span><b>About</b></span></a></li>
+            <li><a href="#education"> <span><b>Education</b></span></a></li>
+            <li><a href="#certification"> <span><b>Certification</b></span></a></li>
+            <li><a href="#research"> <span><b>Research</b></span></a></li>
+            <li><a href="#experience"> <span><b>Experience</b></span></a></li>
+            <li><a href="#portfolio"> <span><b>Projects</b></span></a></li>
+            <li><a href="#skills"> <span><b>Skills</b></span></a></li>
+            <li><a href="#blogs"> <span><b>Blogs</b></span></a></li>
+            <li><a href="#contacts"> <span><b>Contact</b></span></a></li>
+          </ul>
+        </nav>
 
-      <div class="social-links">
+        <div class="social-links">
           <a href="https://www.linkedin.com/in/la-b-ib/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
           <a href="https://github.com/la-b-ib" target="_blank" class="github"><i class="bx bxl-github"></i></a>
           <a href="mailto:labib.45x@gmail.com?subject=Inquiry%20from%20Website&body=Hello%20Labib,%0D%0A%0D%0AI%20have%20a%20question!" target="_blank" class="google"><i class="bx bxl-google"></i></a>
+        </div>
       </div>
     </div>
+  </div>
 </header>
 
 <style>
-/* Override Bootstrap container for desktop view */
-@media (min-width: 992px) {
-  #header.header-tops {
-    width: auto !important;
-    max-width: none !important;
-  }
-  
-  #header.header-tops > .container {
-    width: auto !important;
-    max-width: none !important;
-    padding-left: 30px;
-    padding-right: 30px;
-  }
+/* Reset and base styles */
+.header-tops {
+  position: relative;
+  width: 100%;
+  z-index: 999;
+  box-sizing: border-box;
 }
 
-/* Your existing navigation menu styles - unchanged */
+.header-tops .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.header-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.header-text {
+  flex: 1 0 auto;
+  min-width: 250px;
+  padding-right: 20px;
+}
+
+.header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+/* Navigation styles - now more robust */
 .nav-menu {
-    margin-top: 35px;
+  margin-top: 10px;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .nav-menu ul {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.nav-menu li {
+  flex: 0 0 auto;
 }
 
 .nav-menu li + li {
-    margin-left: 30px;
+  margin-left: 20px;
 }
 
 .nav-menu a {
-    display: block;
-    position: relative;
-    color: #fff;
-    font-size: 19px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
+  display: block;
+  position: relative;
+  color: #fff;
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  padding: 5px 0;
 }
 
 .nav-menu a:before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -4px;
-    left: 0;
-    background-color: #9e7f25;
-    visibility: hidden;
-    width: 0px;
-    transition: all 0.3s ease-in-out 0s;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #9e7f25;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
 }
 
-.nav-menu a:hover:before, .nav-menu li:hover > a:before, .nav-menu .active > a:before {
-    visibility: visible;
-    width: 25px;
+.nav-menu a:hover:before,
+.nav-menu .active > a:before,
+.nav-menu li:hover > a:before {
+  visibility: visible;
+  width: 25px;
 }
 
-.nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
-    color: #12d640;
-    text-decoration: none;
+.nav-menu a:hover,
+.nav-menu .active > a,
+.nav-menu li:hover > a {
+  color: #12d640;
+  text-decoration: none;
+}
+
+/* Social links */
+.social-links {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.social-links a {
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .header-text {
+    padding-right: 0;
+    margin-bottom: 15px;
+  }
+  
+  .header-right {
+    align-items: center;
+    width: 100%;
+  }
+  
+  .nav-menu {
+    margin-top: 15px;
+  }
+  
+  .nav-menu ul {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .nav-menu li + li {
+    margin-left: 15px;
+  }
+  
+  .social-links {
+    justify-content: center;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .nav-menu li + li {
+    margin-left: 10px;
+  }
+  
+  .nav-menu a {
+    font-size: 15px;
+  }
+  
+  .header-text h1 {
+    font-size: 24px;
+  }
+  
+  .header-text h2 {
+    font-size: 18px;
+  }
 }
 </style>
-
 <!-- ======= About Section ======= -->
 
 <section id="about" class="about">
