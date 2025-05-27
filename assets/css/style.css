@@ -5,16 +5,18 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-/* General */
+/* Force vertical scrollbar and hide it */
 html, body {
-    overflow-y: scroll; /* Force vertical scrollbar */
-    scrollbar-width: none; /* Hide scrollbar for Firefox */
-    -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+    overflow-y: scroll !important; /* Forces scrollbar always */
+    scrollbar-width: none; /* Firefox: hides scrollbar */
+    -ms-overflow-style: none; /* IE and Edge: hides scrollbar */
 }
 
+/* Chrome, Safari, Brave: hides scrollbar */
 html::-webkit-scrollbar, body::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for WebKit browsers */
+    display: none;
 }
+
 body {
     font-family: "Open Sans", sans-serif;
     color: #fff;
@@ -52,24 +54,7 @@ a:hover {
 h1, h2, h3, h4, h5, h6 {
     font-family: "Raleway", sans-serif;
 }
-/* Sections General */
-section {
-    overflow: hidden;
-    position: absolute;
-    width: 100%;
-    top: 120px;
-    bottom: 100%;
-    opacity: 0;
-    z-index: 2; /* Ensure below mobile-nav-overly and mobile-nav */
-}
 
-section.section-show {
-    top: 70px;
-    bottom: auto;
-    opacity: 1;
-    padding-bottom: 0px;
-    z-index: 2; /* Explicitly set to ensure visibility */
-}
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -212,31 +197,44 @@ section.section-show {
 }
 
 /* Mobile Navigation */
-/* Mobile Navigation */
+.mobile-nav-toggle {
+    position: fixed;
+    right: 12px;
+    top: 12px;
+    z-index: 9998;
+    background: 0;
+    border: 0;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.mobile-nav-toggle i {
+    color: #fff;
+    font-size: 24px;
+    display: block;
+    line-height: 1;
+}
+
 .mobile-nav {
     position: fixed;
     top: 0;
-    right: 0; /* Changed from left: 0 to right: 0 */
-    width: 65vw; /* Set to 65% of viewport width */
-    height: 100vh; /* Full viewport height */
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     z-index: 9999;
-    background: #010e1b; /* Keep existing background */
-    overflow-y: scroll; /* Force vertical scrollbar */
-    scrollbar-width: none; /* Hide scrollbar for Firefox */
-    -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
-    transform: translateX(100%); /* Start off-screen to the right */
+    background: #010e1b;
+    overflow: hidden auto;
+    transform: translateY(-100%);
     will-change: transform;
     transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     overscroll-behavior: contain;
 }
 
-/* Hide scrollbar for WebKit browsers (Chrome, Safari) */
-.mobile-nav::-webkit-scrollbar {
-    display: none;
-}
-
 .mobile-nav-active .mobile-nav {
-    transform: translateX(0); /* Slide in from the right */
+    transform: translateY(0);
 }
 
 .mobile-nav ul {
@@ -250,66 +248,22 @@ section.section-show {
 
 .mobile-nav a {
     color: #fff;
-    padding: 12px 20px !important;
+    padding: 12px 16px; /* Reduced from 14px 16px */
     font: 500 16px/1.5 "Poppins", sans-serif;
     text-decoration: none;
-    display: flex !important;
-    align-items: center !important;
-    position: relative !important;
+    display: block;
     transform: translateZ(0);
 }
 
 .mobile-nav a:active {
     color: #12d640;
 }
-/* Custom Close Button for Mobile Navigation */
-.mobile-nav-close {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    background: transparent;
-    border: none;
-    color: #ff4d4d; /* Red color for close button */
-    font-size: 32px;
-    cursor: pointer;
-    z-index: 10000;
-    padding: 5px;
-    border-radius: 50%;
-    transition: all 0.3s ease;
-}
 
-.mobile-nav-close i {
-    font-family: 'Material Icons';
-    font-size: inherit;
-    color: inherit;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
+.mobile-nav-overly,
+.mobile-nav *:before,
+.mobile-nav *:after {
+    display: none !important;
 }
-
-.mobile-nav-close:hover {
-    color: #ff7878;
-    transform: scale(1.1);
-}
-
-.mobile-nav-close:active {
-    transform: scale(0.95);
-}
-
-.mobile-nav-overly {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 35vw;
-    height: 100vh;
-    background: #010e1b; /* Solid color */
-    z-index: 9998;
-    display: none;
-}
-
-.mobile-nav-active .mobile-nav-overly {
-    display: block;
-}
-
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
