@@ -103,25 +103,41 @@
     }
   });
       $('body').append($mobile_nav);
-      $('body').prepend('<button type="button" class="mobile-nav-toggle d-lg-none"><i class="icofont-navigation-menu"></i></button>');
+      $('body').prepend('<button type="button" class="mobile-nav-toggle d-lg-none"><i class="material-icons">menu</i></button>');
       $('body').append('<div class="mobile-nav-overly"></div>');
   
       $(document).on('click', '.mobile-nav-toggle', function(e) {
-        $('body').toggleClass('mobile-nav-active');
-        $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
-        $('.mobile-nav-overly').toggle();
-      });
-  
-      $(document).click(function(e) {
-        var container = $(".mobile-nav, .mobile-nav-toggle");
-        if (!container.is(e.target) && container.has(e.target).length === 0) {
-          if ($('body').hasClass('mobile-nav-active')) {
+    $('body').toggleClass('mobile-nav-active');
+    $('.mobile-nav-toggle i').toggleClass('material-icons menu close');
+    $('.mobile-nav-overly').toggle();
+    if ($('body').hasClass('mobile-nav-active')) {
+        // Add custom close button
+        var closeBtn = $('<button type="button" class="mobile-nav-close"><i class="material-icons">close</i></button>');
+        $('.mobile-nav').prepend(closeBtn);
+    } else {
+        // Remove custom close button
+        $('.mobile-nav-close').remove();
+    }
+});
+
+$(document).on('click', '.mobile-nav-close', function(e) {
+    $('body').removeClass('mobile-nav-active');
+    $('.mobile-nav-toggle i').removeClass('close').addClass('menu');
+    $('.mobile-nav-overly').fadeOut();
+    $('.mobile-nav-close').remove();
+});
+
+$(document).on('click', function(e) {
+    var container = $('.mobile-nav, .mobile-nav-toggle, .mobile-nav-close');
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+        if ($('body').hasClass('mobile-nav-active')) {
             $('body').removeClass('mobile-nav-active');
-            $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
+            $('.mobile-nav-toggle i').removeClass('close').addClass('menu');
             $('.mobile-nav-overly').fadeOut();
-          }
+            $('.mobile-nav-close').remove();
         }
-      });
+    }
+});
     } else if ($(".mobile-nav, .mobile-nav-toggle").length) {
       $(".mobile-nav, .mobile-nav-toggle").hide();
     }
