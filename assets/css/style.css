@@ -1357,3 +1357,70 @@ a, button, .portfolio-wrap {
     50% { transform: scale(1.1); }
     100% { transform: scale(1); }
 }
+
+
+
+
+
+/*--------------------------------------------------------------
+# Scrollbar Solutions
+--------------------------------------------------------------*/
+/* Global scrollbar styling - hidden but functional */
+html {
+  overflow-y: scroll; /* Force scrollbar to prevent shifting */
+}
+
+body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome/Safari/Opera */
+}
+
+/* Section scroll handling */
+section {
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+section::-webkit-scrollbar {
+  display: none; /* Chrome/Safari/Opera */
+}
+
+/* Ensure proper scrolling container */
+.section-show {
+  height: calc(100vh - 70px);
+  overflow-y: auto;
+}
+
+/* Fix for header when scrolled */
+#header.header-top {
+  position: fixed;
+  width: 100%;
+  z-index: 9997;
+}
+
+/* Adjust section positioning to account for fixed header */
+section.section-show {
+  padding-top: 70px;
+  margin-top: 0;
+}
+
+/* Smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent flash of unstyled content */
+body.loaded {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+
+
