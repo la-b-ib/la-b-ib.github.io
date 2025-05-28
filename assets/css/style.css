@@ -1362,12 +1362,14 @@ a, button, .portfolio-wrap {
 
 
 
-/*--------------------------------------------------------------
-# Scrollbar Solutions
---------------------------------------------------------------*/
 /* Global scrollbar styling - hidden but functional */
 html {
   overflow-y: scroll; /* Force scrollbar to prevent shifting */
+  scrollbar-width: none; /* Firefox - hide scrollbar */
+  scroll-behavior: smooth; /* Smooth scrolling for all devices */
+  overscroll-behavior: contain; /* Prevent overscroll bounce for better control */
+  touch-action: pan-y; /* Optimize touch scrolling on mobile */
+  -webkit-overflow-scrolling: touch; /* Enable momentum scrolling on iOS */
 }
 
 body {
@@ -1384,10 +1386,27 @@ section {
   overflow-y: auto;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE/Edge */
+  overscroll-behavior: contain; /* Prevent overscroll bounce in sections */
+  touch-action: pan-y; /* Optimize touch scrolling on mobile */
+  -webkit-overflow-scrolling: touch; /* Enable momentum scrolling on iOS */
 }
 
 section::-webkit-scrollbar {
   display: none; /* Chrome/Safari/Opera */
+}
+
+/* Iframe scroll handling */
+iframe {
+  scrollbar-width: none !important; /* Firefox - force hide scrollbar */
+  -ms-overflow-style: none !important; /* IE/Edge - force hide scrollbar */
+  overflow: -moz-scrollbars-none !important; /* Legacy Firefox support */
+  overscroll-behavior: contain; /* Prevent overscroll bounce in iframes */
+  touch-action: pan-y; /* Optimize touch scrolling on mobile */
+  -webkit-overflow-scrolling: touch; /* Enable momentum scrolling on iOS */
+}
+
+iframe::-webkit-scrollbar {
+  display: none !important; /* Chrome/Safari/Opera - force hide scrollbar */
 }
 
 /* Ensure proper scrolling container */
@@ -1405,13 +1424,8 @@ section::-webkit-scrollbar {
 
 /* Adjust section positioning to account for fixed header */
 section.section-show {
-  padding-top: 70px;
+  padding-top: 15px;
   margin-top: 0;
-}
-
-/* Smooth scrolling behavior */
-html {
-  scroll-behavior: smooth;
 }
 
 /* Prevent flash of unstyled content */
@@ -1419,8 +1433,3 @@ body.loaded {
   visibility: visible;
   opacity: 1;
 }
-
-
-
-
-
