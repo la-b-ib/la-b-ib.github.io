@@ -284,9 +284,12 @@ h1, h2, h3, h4, h5, h6 {
   .mobile-nav a .material-icons.mobile-menu-icon {
     /* Font Properties */
     font-family: 'Material Icons' !important;
-    font-size: 26px !important; /* Increased from 24px */
+    font-size: 30px !important; /* Increased from 24px */
     font-weight: normal !important;
     font-style: normal !important;
+    color: #000000 !important; /* Pure black */
+}
+
     
     /* Sizing & Spacing */
     min-width: 26px !important;
