@@ -109,8 +109,8 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1;
     margin-right: 8px;
     border-radius: 30%;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
 }
 
 #header .social-links a:hover {
@@ -215,13 +215,17 @@ h1, h2, h3, h4, h5, h6 {
     width: 100vw;
     height: 100vh;
     z-index: 9999;
-    background: #010e1b;
+    background: rgba(255, 255, 255, 0.15); /* Soft transparency */
+    backdrop-filter: blur(10px); /* Glassmorphism blur */
+    -webkit-backdrop-filter: blur(10px); /* Ensure support on Safari */
     overflow: hidden auto;
     transform: translateY(-100%);
     will-change: transform;
     transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     overscroll-behavior: contain;
+    border-radius: 12px; /* Smooth rounded edges */
 }
+
 
 .mobile-nav-active .mobile-nav {
     transform: translateY(0);
@@ -246,7 +250,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav a:active {
-    color: #12d640;
+    color: #000000;
 }
 
 .mobile-nav-overly,
