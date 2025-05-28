@@ -7,7 +7,7 @@
 --------------------------------------------------------------*/
 body {
     font-family: "Open Sans", sans-serif;
-    color: #fff;
+    color: #000000;
     position: relative;
     background: transparent;
     font-size: 17px; /* Increased from default (typically 16px) */
@@ -16,13 +16,14 @@ body {
 body::before {
     content: "";
     position: fixed;
-    background: #000000;
+    background: #ffffff;
     background-size: cover;
     left: 0;
     right: 0;
     top: 0;
     height: 100vh;
 }
+
 
 @media (min-width: 1024px) {
     body::before {
@@ -31,11 +32,11 @@ body::before {
 }
 
 a {
-    color: #12d640;
+    color: #4285F4;
 }
 
 a:hover {
-    color: #12d640;
+    color: #4285F4;
     text-decoration: none;
 }
 
@@ -61,8 +62,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header h1 {
-    font-size: 48px;
+    font-size: 42px;
     margin-top: 0px;
+    margin-right: 15px;
     padding: 0;
     line-height: 1;
     font-weight: 700;
@@ -70,7 +72,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header h1 a, #header h1 a:hover {
-    color: #dee2e6;
+    color: #000000;
     line-height: 1;
     display: inline-block;
 }
@@ -78,13 +80,13 @@ h1, h2, h3, h4, h5, h6 {
 #header h2 {
     font-size: 24px;
     margin-top: 20px;
-    color: #12d640;
+    color: #240072;
 }
 
 #header h2 span {
     color: #ffc107;
-    border-bottom: 2px solid #1c7d32;
-    padding-bottom: 6px;
+    border-bottom: 6px solid #1c7d32;
+    padding-bottom: 5px;
 }
 
 #header img {
@@ -103,7 +105,7 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     align-items: center;
     background: rgba(255, 255, 255, 0.1);
-    color: #fff;
+    color: #000000;
     line-height: 1;
     margin-right: 8px;
     border-radius: 50%;
@@ -343,7 +345,18 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     top: 0;
     right: 0;
-    background: #09203a;
+    background: rgba(255, 255, 255, 0.2); /* Pure white with low opacity for glassmorphism */
+    backdrop-filter: blur(10px); /* Blur effect for frosted glass */
+    -webkit-backdrop-filter: blur(10px); /* Safari compatibility */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Subtle white border for depth */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for glassmorphism */
+}
+
+/* Fallback for browsers without backdrop-filter support */
+@supports not (backdrop-filter: blur(10px)) {
+    #header.header-top {
+        background: rgba(255, 255, 255, 0.5); /* Slightly more opaque fallback */
+    }
 }
 
 #header.header-top .social-links, #header.header-top h2 {
@@ -845,16 +858,19 @@ section .container {
 
 .portfolio .portfolio-wrap::before {
     content: "";
-    background: rgba(0, 0, 0, 0.803) !important;
+    background: rgba(255, 255, 255, 0.2) !important; /* Adjust transparency for glass effect */
     position: absolute;
     left: 30px;
     right: 30px;
     top: 30px;
     bottom: 30px;
+    backdrop-filter: blur(1px); /* Glassmorphism blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
     transition: all ease-in-out 0.3s;
     z-index: 2;
-    opacity: 0;
+    opacity: 1;
 }
+
 
 .portfolio .portfolio-wrap .portfolio-info {
     opacity: 0;
@@ -961,8 +977,14 @@ section .container {
     color: #444444;
     padding: 20px;
     width: 100%;
-    background: #09203a;
+    background: rgba(246, 248, 249, 1); /* Pure white with higher opacity for stronger white base */
+    backdrop-filter: blur(10px); /* 10px blur for frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari compatibility */
+    border: 10px solid rgba(246, 248, 249, 0.5); /* Slightly stronger white border for depth */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for glassmorphism */
+    border-radius: 8px; /* Slightly rounded corners */
 }
+
 
 .contact .info-box i.bx {
     font-size: 24px;
@@ -1170,15 +1192,29 @@ section .container {
 }
 
 .portfolio .portfolio-wrap::before {
-    background: rgba(0, 0, 0, 0.803) !important;
+    content: "";
+    background: rgba(246, 248, 249, 0) !important; /* Soft transparency for glass effect */
+    backdrop-filter: blur(0px); /* Glassmorphism blur */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    position: absolute;
+    inset: 0; /* Auto width and height */
+    transition: all ease-in-out 0.3s;
+    z-index: 2;
+    opacity: 1;
 }
+
 
 /* Prevent white flashes on scroll */
 html, body {
-    background: #010e1b !important;
+    background: #ffffff !important; /* Pure white background */
+    
     overscroll-behavior-y: contain;
     -webkit-overflow-scrolling: touch;
+    box-sizing: border-box; /* Ensures border fits within the layout */
 }
+
+
+
 
 /* Fix for iOS/Safari rendering */
 body::before {
@@ -1193,8 +1229,11 @@ a, button, .portfolio-wrap {
 
 /* Fix for venobox iframe container */
 .vbox-overlay {
-    background: rgba(1, 14, 27, 0.95) !important;
+    background: rgba(246, 248, 249, 0.3) !important; /* Soft transparency for glass effect */
+    backdrop-filter: blur(10px); /* Glassmorphism blur */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
 }
+
 
 .vbox-container {
     background: transparent !important;
@@ -1208,16 +1247,31 @@ a, button, .portfolio-wrap {
 }
 
 .venobox iframe {
-    background: #010e1b !important;
+    background: rgba(246, 248, 249, 0.3) !important; /* Soft transparency for glass effect */
+    backdrop-filter: blur(10px); /* Glassmorphism blur */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
     border: none !important;
     padding: 0 !important;
     margin: 0 !important;
 }
 
-/* Remove any white backgrounds from portfolio items */
+
 .portfolio .portfolio-wrap::before {
-    background: rgba(1, 14, 27, 0.8) !important;
+    content: "";
+    position: absolute;
+    inset: 0; /* Auto width and height */
+    
+    background: transparent !important; /* Fully transparent */
+    border: 15px solid #f6f8f9; /* Solid border */
+    border-radius: 0px; /* Rounded corners */
+
+    transition: all ease-in-out 0.3s;
+    z-index: 2;
+    opacity: 1;
 }
+
+
+
 
 .portfolio .portfolio-info {
     background: transparent !important;
@@ -1341,10 +1395,12 @@ a, button, .portfolio-wrap {
         display: none !important;
     }
 
-    /* Ensure dark theme compatibility */
-    .vbox-overlay {
-        background: rgba(1, 14, 27, 0.95) !important;
-    }
+   .vbox-overlay {
+    background: rgba(246, 248, 249, 0.3) !important; /* Soft transparency for glass effect */
+    backdrop-filter: blur(10px); /* Glassmorphism blur */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+}
+
 
     .vbox-container {
         background: transparent !important;
@@ -1357,6 +1413,8 @@ a, button, .portfolio-wrap {
     50% { transform: scale(1.1); }
     100% { transform: scale(1); }
 }
+
+
 
 
 
