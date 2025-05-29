@@ -370,71 +370,136 @@
 <!-- ======= Education Section ======= -->
 
 <section id="education" class="services">
-    <!-- Original content remains untouched -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
     <div class="container">
         <div class="section-title">
-            <h2><b>Education</b></h2>
+            <h2>Education</h2>
         </div>
-        <div class="row">
-            <div class="col-lg-12" data-aos="fade-up" style="display: inline-block;">
-                <div class="col-md-4 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="padding:0px 0px;padding-bottom: 5px;display: inline-block;">
-                    <img src="assets/img/education/bu.png" class="img-fluid edu-pic" alt="">
-                    <p style="text-align:left;color:#fff;padding: 5px 10px;"><b>B.Sc in Computer Science and Engineering</b></p>
-                    <h6 style="text-align:left;padding: 0px 10px;"><b>January 2022 - Present</b></h6>
-                    <h6 style="text-align:left;color:#0dcd3c;padding: 0px 10px;"><b>Relevant Coursework</b></h6>
-                    <ul style="list-style-type: none;text-align:left;color:#fff;padding-left: 6px;">
-                        <li style="padding-left: 6px;"><i class="icofont-rounded-right"></i><b>Cloud Computing, ML & DL</b></li>
-                        <li style="padding-left: 6px;"><i class="icofont-rounded-right"></i><b>Database Management Systems</b></li>
-                        <li style="padding-left: 6px;"><i class="icofont-rounded-right"></i><b>Algorithms &amp; Optimization</b></li>
+        
+        <div class="education-columns">
+            <div class="education-card">
+                <div class="education-header">
+                    <img src="assets/img/education/bu.png" class="edu-logo" alt="BU Logo">
+                    <div class="education-info">
+                        <h6>B.Sc in Computer Science and Engineering</h6>
+                        <h6 class="education-period">January 2022 - Present</h6>
+                    </div>
+                </div>
+                
+                <div class="education-details">
+                    <h6>RELEVANT COURSEWORK</h6>
+                    <ul class="course-list">
+                        <li><i class="fas fa-chevron-right"></i> Cloud Computing, ML & DL</li>
+                        <li><i class="fas fa-chevron-right"></i> Database Management Systems</li>
+                        <li><i class="fas fa-chevron-right"></i> Algorithms & Optimization</li>
                     </ul>
                 </div>
-                <!-- Mobile-only GIF -->
-                <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/GIF/edu.GIF" 
-                     class="mobile-edu-gif" 
-                     alt="Education animation"
-                     loading="lazy">
             </div>
         </div>
+        
+        <!-- Mobile-only GIF -->
+        <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/GIF/edu.GIF" 
+             class="mobile-edu-gif" 
+             alt="Education animation"
+             loading="lazy">
     </div>
 </section>
 
 <style>
-    /* Desktop styles remain completely unchanged */
+    /* Base Styles */
+    #education {
+        font-family: 'Source Sans Pro', sans-serif !important;
+        width: 100%;
+        padding: 0px 0;
+        background: #ffffff;
+        border: 15px solid #f6f9f8;
+        text-align: left !important; /* Force left alignment */
+    }
     
-    /* Mobile view adjustments */
+    /* Force all text to be bold */
+    #education * {
+        font-weight: 600 !important; /* Semi-bold */
+    }
+    
+    /* Make headings extra bold */
+    #education h2,
+    #education h6 {
+        font-weight: 700 !important; /* Bold */
+    }
+    
+    .education-columns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: flex-start !important; /* Force left alignment */
+    }
+    
+    .education-card {
+    width: calc(33.33% - 10px);
+    background: white;
+    border: 15px solid #f6f9f8;
+    text-align: left !important;
+    border-radius: 8px;
+}
+
+    
+    .education-header {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    text-align: left !important;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+    
+    .edu-logo {
+        width: 70px;
+        height: 70px;
+        object-fit: contain;
+        margin-right: 15px;
+        background: white;
+        padding: 5px;
+        border-radius: 8px;
+    }
+    
+    .education-info,
+    .education-details {
+        text-align: left !important;
+        padding: 5px;
+    }
+    
+    .education-info h6 {
+    margin: 2px 0 !important; /* Reduce vertical margin */
+    line-height: 1.2 !important; /* Tighten line height */
+    padding: 0 !important; /* Remove any padding */
+}
+    .course-list li {
+    padding: 2px 0 !important; /* Reduce vertical padding */
+    line-height: 1.2 !important; /* Tighten line height */
+    margin: 0 !important; /* Ensure no extra margin */
+}
+    
+    /* Mobile Styles */
     @media (max-width: 768px) {
-        #education {
-            background-color: #000f1a; /* Custom mobile background */
-            padding: 15px 0; /* Add some vertical spacing */
+        .education-columns {
+            flex-direction: column;
         }
         
-        /* Custom mobile container */
-        #education .container {
+        .education-card {
             width: 100%;
-            max-width: 100%;
-            padding: 0 10px; /* Slightly more padding than before */
-            margin: 0 auto;
+            margin-bottom: 15px;
         }
         
-        /* Images adjustment */
-        .edu-pic,
         .mobile-edu-gif {
-            width: 100%;
-            padding: 0;
-            margin: 0 auto;
+            width: 90%;
+            margin: 20px auto 0;
             display: block;
-        }
-        
-        /* Text content adjustment */
-        #education .icon-box {
-            padding: 0 !important;
-            margin: 0 !important;
-            width: 100% !important;
-        }
-        
-        /* Add spacing below content */
-        .mobile-edu-gif {
-            margin-top: 15px;
+            border-radius: 10px;
         }
     }
     
@@ -445,7 +510,6 @@
         }
     }
 </style>
-
 <!-- End Education Section -->
 
     <!-- Start Certification Section -->
@@ -1505,7 +1569,7 @@
         <div class="info-box">
           <a href="https://www.linkedin.com/in/la-b-ib/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
           <a href="https://github.com/la-b-ib" target="_blank" class="github"><i class="bx bxl-github"></i></a>
-          <a href="https://scholar.google.com/citations?user=xg04A5kAAAAJ&hl=en" target="_blank" class="google"><i class="bx bxl-google"></i></a>
+          
           <a href="mailto:labib.45x@gmail.com?subject=Inquiry%20from%20Website&body=Hello%20Labib,%0D%0A%0D%0AI%20have%20a%20question!" target="_blank" class="linkedin"><i class="bx bx-envelope"></i></a>
         </div>
       </div>
