@@ -84,8 +84,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header h2 span {
-    color: #ffc107;
-    border-bottom: 6px solid #1c7d32;
+    color:  #5eada4;
+    border-bottom: 6px solid #c23616 ;
     padding-bottom: 5px;
 }
 
@@ -569,9 +569,12 @@ section .container {
     display: flex;
     align-items: center;
     padding: 20px;
-    background: #09203a;
+    background: #ffffff;
+    border: 15px solid #f6f8f9;
+    border-radius: 10px; 
     transition: ease-in-out 0.3s;
 }
+
 
 .interests .icon-box i {
     font-size: 32px;
@@ -589,8 +592,12 @@ section .container {
 }
 
 .interests .icon-box:hover {
-    background: #042b56eb;
+    background: rgba(66, 132, 244, 0.2); /* 65% transparency */
+    
 }
+
+
+
 
 /*--------------------------------------------------------------
 # Testimonials
@@ -984,34 +991,32 @@ section .container {
     color: #444444;
     padding: 20px;
     width: 100%;
-    background: rgba(246, 248, 249, 1); /* Pure white with higher opacity for stronger white base */
-    backdrop-filter: blur(10px); /* 10px blur for frosted glass effect */
-    -webkit-backdrop-filter: blur(10px); /* Safari compatibility */
-    border: 10px solid rgba(246, 248, 249, 0.5); /* Slightly stronger white border for depth */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for glassmorphism */
+    background: #ffffff; /* Pure solid white */
+    border: 15px solid #f6f8f9; /* Matching solid border */
     border-radius: 8px; /* Slightly rounded corners */
 }
 
 
+
 .contact .info-box i.bx {
-    font-size: 24px;
-    color: #dee2e6;
-    border-radius: 50%;
+    font-size: 22px;
+    color: #ffffff;
+    border-radius: 30%;
     padding: 14px;
     float: left;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgb(0, 0, 0);
 }
 
 .contact .info-box h3 {
     font-size: 20px;
-    color: #28a745;
+    color: #4284F4;
     font-weight: 700;
     margin: 10px 0 8px 68px;
 }
 
 .contact .info-box p {
     padding: 0;
-    color: #fff;
+    color: #000000;
     line-height: 24px;
     font-size: 14px;
     margin: 0 0 0 68px;
