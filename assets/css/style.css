@@ -429,22 +429,22 @@ section .container {
 
 .section-title h2 {
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 700;
     padding: 0;
     line-height: 1px;
     margin: 0 0 15px 0; /* Reduced from 20px */
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #dee2e6;
+    color: #000000;
     font-family: "Poppins", sans-serif;
 }
 
 .section-title h2::after {
     content: "";
     width: 120px;
-    height: 1px;
+    height: 4px;
     display: inline-block;
-    background: #dee2e6;
+    background: #000000;
     margin: 4px 10px;
 }
 
@@ -577,7 +577,7 @@ section .container {
 
 
 .interests .icon-box i {
-    font-size: 32px;
+    font-size: 30px;
     padding-right: 10px;
     line-height: 1;
 }
