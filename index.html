@@ -271,15 +271,15 @@
 
   @media (max-width: 768px) {
     .row {
-        display: flex;
+        display: flex !important;
         flex-direction: column; /* Converts grid to single column */
-        align-items: center; /* Centers items */
+        align-items: left!important; /* Centers items */
     }
 
     .col-lg-3,
     .col-md-4,
     .col-6 {
-        width: 100%; /* Makes each item take full width */
+        width: 100% !important; /* Makes each item take full width */
     }
 
     .interest-heading {
