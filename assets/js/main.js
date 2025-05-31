@@ -188,42 +188,8 @@
             'box-shadow': 'none', /* No shadow */
             'border-radius': '0' /* No rounded corners */
         },
-        onOpen: function() {
-            $('.vbox-close').remove();
-            var closeBtn = $('<button class="custom-close-btn"><i class="material-icons">gamepad</i></button>');
-            if ($(window).width() <= 768) {
-                closeBtn.css({
-                    'position': 'fixed',
-                    'top': '15px',
-                    'right': '15px',
-                    'color': 'red',
-                    'background': 'transparent',
-                    'border': 'none',
-                    'font-size': '32px',
-                    'cursor': 'pointer',
-                    'z-index': '999999',
-                    'padding': '5px',
-                    'border-radius': '50%'
-                });
-            } else {
-                closeBtn.css({
-                    'position': 'fixed',
-                    'top': '20px',
-                    'right': '20px',
-                    'color': '#12d640',
-                    'background': 'transparent',
-                    'border': 'none',
-                    'font-size': '28px',
-                    'cursor': 'pointer',
-                    'z-index': '999999'
-                });
-            }
-            $('body').append(closeBtn);
-            closeBtn.on('click', function() {
-                $('.venobox').venobox('close');
-                $(this).remove();
-            });
-        },
+        
+        
         onClose: function() {
             $('.custom-close-btn').remove();
         }
