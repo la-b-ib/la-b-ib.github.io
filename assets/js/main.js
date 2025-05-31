@@ -169,75 +169,66 @@
   
      // Modified Venobox initialization with custom mobile close button
     $(document).ready(function() {
-      $('.venobox').venobox({
-    bgcolor: 'rgba(255, 255, 255, 0.2)', /* Semi-transparent white */
-    border: '1px solid rgba(255, 255, 255, 0.5)', /* Soft white border */
-    framewidth: '100%', 
-    frameheight: '90vh',
-    numeratio: true,
-    infinigall: true,
-    spinner: 'wave',
-    spinColor: '#4284F4', /* Adjusted for consistency */
-    overlayColor: 'rgba(255, 255, 255, 0.1)', /* Lighter glassmorphism effect */
-    closeBackground: 'transparent',
-    closeColor: '#4284F4',
-    css: {
-        'background-color': 'rgba(255, 255, 255, 0.2)', /* Glassmorphic background */
-        'backdrop-filter': 'blur(10px)', /* Glass effect */
-        'box-shadow': '0 4px 15px rgba(0, 0, 0, 0.1)', /* Subtle shadow */
-        'border-radius': '8px' /* Smooth rounded edges */
-    },
-
-
+    $('.venobox').venobox({
+        bgcolor: 'transparent', /* No background to avoid duplication */
+        border: 'none', /* Remove border */
+        framewidth: '100%', 
+        frameheight: '90vh',
+        numeratio: true,
+        infinigall: true,
+        spinner: 'wave',
+        spinColor: '#4284F4',
+        overlayColor: 'rgba(0, 0, 0, 0.3)', /* Match CSS .vbox-overlay */
+        closeBackground: 'transparent',
+        closeColor: '#4284F4',
+        css: {
+            'background-color': 'rgba(255, 255, 255, 0.2)', /* Glassmorphic background */
+            'backdrop-filter': 'blur(10px)', /* Glass effect */
+            '-webkit-backdrop-filter': 'blur(10px)', /* Safari support */
+            'box-shadow': 'none', /* No shadow */
+            'border-radius': '0' /* No rounded corners */
+        },
         onOpen: function() {
-          // Remove default close button
-          $('.vbox-close').remove();
-          
-          // Create custom close button with gamepad icon
-          var closeBtn = $('<button class="custom-close-btn"><i class="material-icons">gamepad</i></button>');
-          
-          // Position differently for mobile/desktop
-          if ($(window).width() <= 768) {
-            closeBtn.css({
-              'position': 'fixed',
-              'top': '15px',
-              'right': '15px',
-              'color': 'red',
-              'background': 'transparent',
-              'border': 'none',
-              'font-size': '32px',
-              'cursor': 'pointer',
-              'z-index': '999999',
-              'padding': '5px',
-              'border-radius': '50%'
+            $('.vbox-close').remove();
+            var closeBtn = $('<button class="custom-close-btn"><i class="material-icons">gamepad</i></button>');
+            if ($(window).width() <= 768) {
+                closeBtn.css({
+                    'position': 'fixed',
+                    'top': '15px',
+                    'right': '15px',
+                    'color': 'red',
+                    'background': 'transparent',
+                    'border': 'none',
+                    'font-size': '32px',
+                    'cursor': 'pointer',
+                    'z-index': '999999',
+                    'padding': '5px',
+                    'border-radius': '50%'
+                });
+            } else {
+                closeBtn.css({
+                    'position': 'fixed',
+                    'top': '20px',
+                    'right': '20px',
+                    'color': '#12d640',
+                    'background': 'transparent',
+                    'border': 'none',
+                    'font-size': '28px',
+                    'cursor': 'pointer',
+                    'z-index': '999999'
+                });
+            }
+            $('body').append(closeBtn);
+            closeBtn.on('click', function() {
+                $('.venobox').venobox('close');
+                $(this).remove();
             });
-          } else {
-            closeBtn.css({
-              'position': 'fixed',
-              'top': '20px',
-              'right': '20px',
-              'color': '#12d640',
-              'background': 'transparent',
-              'border': 'none',
-              'font-size': '28px',
-              'cursor': 'pointer',
-              'z-index': '999999'
-            });
-          }
-          
-          // Add to DOM
-          $('body').append(closeBtn);
-          
-          // Click handler
-          closeBtn.on('click', function() {
-            $('.venobox').venobox('close');
-            $(this).remove();
-          });
         },
         onClose: function() {
-          $('.custom-close-btn').remove();
+            $('.custom-close-btn').remove();
         }
-      });
+    });
+
     });
   
   })(jQuery);
