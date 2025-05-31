@@ -170,21 +170,25 @@
      // Modified Venobox initialization with custom mobile close button
     $(document).ready(function() {
       $('.venobox').venobox({
-        bgcolor: '#010e1b',
-        border: 'none',
-        framewidth: '90%', 
-        frameheight: '90vh',
-        numeratio: true,
-        infinigall: true,
-        spinner: 'wave',
-        spinColor: '#12d640',
-        overlayColor: 'rgba(1, 14, 27, 0.95)',
-        closeBackground: 'transparent',
-        closeColor: '#12d640',
-        css: {
-          'background-color': '#010e1b',
-          'box-shadow': 'none'
-        },
+    bgcolor: 'rgba(255, 255, 255, 0.2)', /* Semi-transparent white */
+    border: '1px solid rgba(255, 255, 255, 0.5)', /* Soft white border */
+    framewidth: '90%', 
+    frameheight: '90vh',
+    numeratio: true,
+    infinigall: true,
+    spinner: 'wave',
+    spinColor: '#4284F4', /* Adjusted for consistency */
+    overlayColor: 'rgba(255, 255, 255, 0.1)', /* Lighter glassmorphism effect */
+    closeBackground: 'transparent',
+    closeColor: '#4284F4',
+    css: {
+        'background-color': 'rgba(255, 255, 255, 0.2)', /* Glassmorphic background */
+        'backdrop-filter': 'blur(10px)', /* Glass effect */
+        'box-shadow': '0 4px 15px rgba(0, 0, 0, 0.1)', /* Subtle shadow */
+        'border-radius': '8px' /* Smooth rounded edges */
+    },
+
+
         onOpen: function() {
           // Remove default close button
           $('.vbox-close').remove();
