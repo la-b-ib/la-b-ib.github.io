@@ -168,8 +168,11 @@
     });
   
      // Modified Venobox initialization with custom mobile close button
+
+
     $(document).ready(function() {
-    $('.venobox').venobox({
+    // Store the Venobox instance for precise control
+    var vbInstance = $('.venobox').venobox({
         bgcolor: 'transparent', /* No background to avoid duplication */
         border: 'none', /* Remove border */
         framewidth: '100%', 
@@ -189,19 +192,24 @@
             'border-radius': '0' /* No rounded corners */
         },
         onOpen: function() {
+            // Remove default Venobox close button
             $('.vbox-close').remove();
-            var closeBtn = $('<button class="custom-close-btn"><i class="material-icons">gamepad</i></button>');
+            
+            // Create custom close button
+            var closeBtn = $('<button class="custom-close-btn"><i class="material-icons">close</i></button>');
+            
+            // Apply styles based on screen size
             if ($(window).width() <= 768) {
                 closeBtn.css({
                     'position': 'fixed',
                     'top': '15px',
                     'right': '15px',
-                    'color': 'red',
+                    'color': '#ff4d4d',
                     'background': 'transparent',
                     'border': 'none',
                     'font-size': '32px',
                     'cursor': 'pointer',
-                    'z-index': '999999',
+                    'z-index': '10000',
                     'padding': '5px',
                     'border-radius': '50%'
                 });
@@ -215,19 +223,30 @@
                     'border': 'none',
                     'font-size': '28px',
                     'cursor': 'pointer',
-                    'z-index': '999999'
+                    'z-index': '10000',
+                    'padding': '5px',
+                    'border-radius': '50%'
                 });
             }
+            
+            // Append button to body
             $('body').append(closeBtn);
+            
+            // Bind click event using the specific Venobox instance
             closeBtn.on('click', function() {
-                $('.venobox').venobox('close');
-                $(this).remove();
+                vbInstance.VBclose(); // Use the stored instance's close method
+                $(this).remove(); // Remove the custom button
             });
+            
+            // Optional: Debug to confirm button is added
+            console.log('Custom close button added:', closeBtn);
         },
         onClose: function() {
+            // Clean up custom button
             $('.custom-close-btn').remove();
         }
     });
+
 
     });
   
