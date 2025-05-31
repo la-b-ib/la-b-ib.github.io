@@ -1378,7 +1378,83 @@ a, button, .portfolio-wrap {
   display: block !important;
 }
 
+
+
+
+
+
+/* Custom styling for Venobox close, previous, and next buttons */
+/* Custom styling for Venobox close, previous, and next buttons */
+
+/* Custom Venobox Button Styling */
+.vbox-close, 
+.vbox-next, 
+.vbox-prev {
+  background: rgba(255, 255, 255, 0.2) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border-radius: 50% !important;
+  width: 40px !important;
+  height: 40px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: none !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.3s ease !important;
 }
+
+/* Button icons */
+.vbox-close:before, 
+.vbox-next:before, 
+.vbox-prev:before {
+  color: #4284F4 !important;
+  font-weight: 900 !important;
+  font-size: 8px !important;
+  text-shadow: none !important;
+}
+
+
+
+/* Position adjustments */
+.vbox-close {
+  top: 20px !important;
+  right: 20px !important;
+}
+
+.vbox-next, 
+.vbox-prev {
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+}
+
+.vbox-prev {
+  left: 20px !important;
+}
+
+.vbox-next {
+  right: 20px !important;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .vbox-close, 
+  .vbox-next, 
+  .vbox-prev {
+    width: 35px !important;
+    height: 35px !important;
+  }
+  
+  .vbox-close:before, 
+  .vbox-next:before, 
+  .vbox-prev:before {
+    font-size: 18px !important;
+  }
+}
+
+
+
+
 
 /* Pulse animation for buttons */
 @keyframes pulse {
