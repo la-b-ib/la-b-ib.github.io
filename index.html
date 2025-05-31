@@ -132,22 +132,24 @@
     content: "";
     position: absolute;
     width: 0;
-    height: 2px;
+    height: 5px;
     bottom: -4px;
     left: 0;
-    background-color: #9e7f25;
+    background: #000000; /* Soft blue transparency */
+   
     visibility: hidden;
     width: 0px;
-    transition: all 0.3s ease-in-out 0s;
+    transition: all 0.2s ease-in-out 0s;
+    border-radius: 2.5px;
 }
 
 .nav-menu a:hover:before, .nav-menu li:hover > a:before, .nav-menu .active > a:before {
     visibility: visible;
-    width: 25px;
+    width: 30px;
 }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
-    color: #12d640;
+    color: #006a4e;
     text-decoration: none;
 }
 </style>
