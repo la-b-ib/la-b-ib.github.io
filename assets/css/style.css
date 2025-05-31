@@ -872,21 +872,18 @@ section .container {
     position: relative;
     overflow: hidden;
     z-index: 1;
-    background:  rgba(255, 255, 255, 0.2)
-    backdrop-filter: blur(1px); /* Glassmorphism blur effect */
-    -webkit-backdrop-filter: blur(10px);
+    background: transparent
 }
 
 .portfolio .portfolio-wrap::before {
     content: "";
-    background: rgba(255, 255, 255, 0.2) !important; /* Adjust transparency for glass effect */
+    background: transparent !important; /* Adjust transparency for glass effect */
     position: absolute;
     left: 30px;
     right: 30px;
     top: 30px;
     bottom: 30px;
-    backdrop-filter: blur(1px); /* Glassmorphism blur effect */
-    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    
     transition: all ease-in-out 0.3s;
     z-index: 2;
     opacity: 1;
@@ -910,6 +907,7 @@ section .container {
     background: rgba(255, 255, 255, 0.2) !important;
     backdrop-filter: blur(10px); /* Glassmorphism blur effect */
     -webkit-backdrop-filter: blur(10px); /* Safari support */
+    
 }
 
 .portfolio .portfolio-wrap .portfolio-info::before {
@@ -1427,19 +1425,21 @@ a, button, .portfolio-wrap {
     }
 
    .vbox-overlay {
-    background: transparent !important; /* Soft transparency for glass effect */
-    
-}
+        background: rgba(0, 0, 0, 0.3) !important; /* Slightly dark overlay to enhance glassmorphism */
+        backdrop-filter: none !important; /* No blur on overlay */
+        -webkit-backdrop-filter: none !important;
+    }
 
 
    .vbox-container {
-    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
-    backdrop-filter: blur(10px); /* Glassmorphism blur effect */
-    -webkit-backdrop-filter: blur(10px); /* Ensures compatibility */
-    border: 1px solid rgba(255, 255, 255, 0.3); /* Soft white border */
-    border-radius: 10px; /* Smooth rounded corners */
-    padding: 20px;
-}
+        background: rgba(255, 255, 255, 0.2) !important; /* Match desktop .portfolio-info */
+        backdrop-filter: blur(10px) !important;
+        -webkit-backdrop-filter: blur(10px) !important;
+        border: none !important; /* Remove border to match desktop */
+        border-radius: 0 !important; /* Remove rounded corners */
+        padding: 0 !important; /* Remove padding */
+        box-shadow: none !important; /* Remove any shadow */
+    }
 
 }
 
