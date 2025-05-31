@@ -1309,7 +1309,7 @@ a, button, .portfolio-wrap {
 
 
 .portfolio .portfolio-info {
-    background: transparent !important;
+    background: #ffffff !important;
 }
 
 /* Prevent white flashes during transitions */
@@ -1352,13 +1352,7 @@ a, button, .portfolio-wrap {
 }
 
 /* Custom gamepad close button for mobile */
-/* Custom gamepad close button for mobile */
-/* Custom buttons for Venobox in mobile view */
-.custom-close-btn,
-.custom-prev-btn,
-.custom-next-btn {
-    display: none;
-}
+
 
 
 
