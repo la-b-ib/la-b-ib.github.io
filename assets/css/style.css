@@ -1431,9 +1431,8 @@ a, button, .portfolio-wrap {
     }
 
 .vbox-overlay {
-    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
-    backdrop-filter: blur(10px); /* Glassmorphism blur effect */
-    -webkit-backdrop-filter: blur(10px); /* Cross-browser support */
+    background:#ffffff; /* Semi-transparent white */
+    
 }
 
 
