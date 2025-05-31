@@ -877,16 +877,16 @@ section .container {
 
 .portfolio .portfolio-wrap::before {
     content: "";
-    background: transparent !important; /* Adjust transparency for glass effect */
     position: absolute;
-    left: 30px;
-    right: 30px;
-    top: 30px;
-    bottom: 30px;
-    
+    inset: 0;
+    background: transparent !important;
+    border: 15px solid #f6f8f9;
+    border-radius: 0;
     transition: all ease-in-out 0.3s;
     z-index: 2;
     opacity: 1;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
 }
 
 
@@ -905,9 +905,14 @@ section .container {
     justify-content: center;
     align-items: center;
     background: rgba(255, 255, 255, 0.2) !important;
-    backdrop-filter: blur(10px); /* Glassmorphism blur effect */
-    -webkit-backdrop-filter: blur(10px); /* Safari support */
-    
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+}
+
+@supports not (backdrop-filter: blur(10px)) {
+    .portfolio .portfolio-wrap .portfolio-info {
+        background: rgba(255, 255, 255, 0.5) !important;
+    }
 }
 
 .portfolio .portfolio-wrap .portfolio-info::before {
@@ -1258,9 +1263,9 @@ a, button, .portfolio-wrap {
 
 /* Fix for venobox iframe container */
 .vbox-overlay {
-    background: rgba(246, 248, 249, 0.3) !important; /* Soft transparency for glass effect */
-    backdrop-filter: blur(10px); /* Glassmorphism blur */
-    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
 }
 
 
@@ -1276,9 +1281,9 @@ a, button, .portfolio-wrap {
 }
 
 .venobox iframe {
-    background: rgba(246, 248, 249, 0.3) !important; /* Soft transparency for glass effect */
-    backdrop-filter: blur(10px); /* Glassmorphism blur */
-    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
     border: none !important;
     padding: 0 !important;
     margin: 0 !important;
@@ -1288,15 +1293,15 @@ a, button, .portfolio-wrap {
 .portfolio .portfolio-wrap::before {
     content: "";
     position: absolute;
-    inset: 0; /* Auto width and height */
-    
-    background: transparent !important; /* Fully transparent */
-    border: 15px solid #f6f8f9; /* Solid border */
-    border-radius: 0px; /* Rounded corners */
-
+    inset: 0;
+    background: transparent !important;
+    border: 15px solid #f6f8f9;
+    border-radius: 0;
     transition: all ease-in-out 0.3s;
     z-index: 2;
     opacity: 1;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
 }
 
 
@@ -1354,6 +1359,90 @@ a, button, .portfolio-wrap {
     display: none;
 }
 
+@media (max-width: 768px) {
+    .custom-close-btn,
+    .custom-prev-btn,
+    .custom-next-btn {
+        display: block;
+        position: fixed;
+        background: transparent !important;
+        border: none !important;
+        cursor: pointer;
+        z-index: 10000;
+        padding: 8px;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+    }
+
+    .custom-close-btn {
+        top: 15px;
+        right: 15px;
+        color: #ff4d4d !important; /* Red for close button */
+        font-size: 32px !important;
+        animation: pulse 1.5s infinite;
+        text-shadow: 0 0 5px rgba(255, 77, 77, 0.7);
+    }
+
+    .custom-prev-btn {
+        top: 50%;
+        left: 15px;
+        color: #12d640 !important; /* Green for navigation arrows */
+        font-size: 32px !important;
+        transform: translateY(-50%);
+        text-shadow: 0 0 5px rgba(18, 214, 64, 0.7);
+    }
+
+    .custom-next-btn {
+        top: 50%;
+        right: 15px;
+        color: #12d640 !important; /* Green for navigation arrows */
+        font-size: 32px !important;
+        transform: translateY(-50%);
+        text-shadow: 0 0 5px rgba(18, 214, 64, 0.7);
+    }
+
+    .custom-close-btn i,
+    .custom-prev-btn i,
+    .custom-next-btn i {
+        font-family: 'Material Icons' !important;
+        font-size: inherit !important;
+        color: inherit !important;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+    }
+
+    .custom-close-btn:hover,
+    .custom-prev-btn:hover,
+    .custom-next-btn:hover {
+        transform: scale(1.1) translateY(-50%); /* Maintain translateY for nav buttons */
+        text-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
+    }
+
+    .custom-close-btn:hover {
+        transform: scale(1.1); /* No translateY for close button */
+    }
+
+    /* Hide default Venobox buttons */
+    .vbox-close,
+    .vbox-prev,
+    .vbox-next {
+        display: none !important;
+    }
+
+.vbox-overlay {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+
+   .vbox-container {
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+}
 
 /* Pulse animation for buttons */
 @keyframes pulse {
