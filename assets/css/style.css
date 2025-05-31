@@ -922,8 +922,8 @@ section .container {
     position: absolute;
     top: 35px;
     left: 35px;
-    border-top: 5px solid #000000;
-    border-left: 5px solid #000000;
+    border-top: 5px solid #ffffff;
+    border-left: 5px solid #fffefe;
     transition: all 0.5s ease 0s;
     z-index: 9994;
     
@@ -937,8 +937,8 @@ section .container {
     position: absolute;
     bottom: 35px;
     right: 35px;
-    border-bottom: 5px solid #000000;
-    border-right: 5px solid #000000;
+    border-bottom: 5px solid #ffffff;
+    border-right: 5px solid #ffffff;
     transition: all 0.5s ease 0s;
     z-index: 9994;
 }
@@ -1447,15 +1447,22 @@ a, button, .portfolio-wrap {
 }
 
 
-
-
-
-/* Pulse animation for buttons */
 @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
+    0% { 
+        transform: scale(1); 
+        
+    }
+    50% { 
+        transform: scale(1.1); 
+        
+    }
+    100% { 
+        transform: scale(1); 
+        
+    }
 }
+
+
 
 
 
