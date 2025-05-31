@@ -872,7 +872,9 @@ section .container {
     position: relative;
     overflow: hidden;
     z-index: 1;
-    background: transparent !important;
+    background:  rgba(255, 255, 255, 0.2)
+    backdrop-filter: blur(1px); /* Glassmorphism blur effect */
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .portfolio .portfolio-wrap::before {
@@ -905,7 +907,9 @@ section .container {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: transparent !important;
+    background: rgba(255, 255, 255, 0.2) !important;
+    backdrop-filter: blur(10px); /* Glassmorphism blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
 }
 
 .portfolio .portfolio-wrap .portfolio-info::before {
@@ -938,7 +942,7 @@ section .container {
 
 .portfolio .portfolio-wrap .portfolio-info h4 {
     font-size: 20px;
-    color: #fff;
+    color: #000000;
     font-weight: 600;
 }
 
