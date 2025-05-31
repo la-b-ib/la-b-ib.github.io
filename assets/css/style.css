@@ -83,11 +83,16 @@ h1, h2, h3, h4, h5, h6 {
     color: #240072;
 }
 
+
+
+
+
 #header h2 span {
-    color:  #5eada4;
-    border-bottom: 6px solid #c23616 ;
+    color:  #000000;
+    border-bottom: 5px solid #000000 ;
     padding-bottom: 5px;
 }
+
 
 #header img {
     padding: 0;
@@ -114,7 +119,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header .social-links a:hover {
-    background: #4285F4;
+    background: #192a56;
 }
 
 @media (max-width: 992px) {
@@ -1328,7 +1333,7 @@ a, button, .portfolio-wrap {
 }
 
 .vbox-close:hover {
-    color: #12d640 !important;
+    color: #d61212 !important;
     transform: scale(1.1);
 }
 
@@ -1418,15 +1423,20 @@ a, button, .portfolio-wrap {
     }
 
    .vbox-overlay {
-    background: rgba(246, 248, 249, 0.3) !important; /* Soft transparency for glass effect */
-    backdrop-filter: blur(10px); /* Glassmorphism blur */
-    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    background: transparent !important; /* Soft transparency for glass effect */
+    
 }
 
 
-    .vbox-container {
-        background: transparent !important;
-    }
+   .vbox-container {
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Glassmorphism blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Ensures compatibility */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Soft white border */
+    border-radius: 10px; /* Smooth rounded corners */
+    padding: 20px;
+}
+
 }
 
 /* Pulse animation for buttons */
