@@ -172,7 +172,7 @@
       $('.venobox').venobox({
     bgcolor: 'rgba(255, 255, 255, 0.2)', /* Semi-transparent white */
     border: '1px solid rgba(255, 255, 255, 0.5)', /* Soft white border */
-    framewidth: '90%', 
+    framewidth: '100%', 
     frameheight: '90vh',
     numeratio: true,
     infinigall: true,
