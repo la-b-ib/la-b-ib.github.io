@@ -1352,12 +1352,14 @@ a, button, .portfolio-wrap {
 }
 
 /* Custom gamepad close button for mobile */
-/* Custom gamepad close button for mobile */
-/* Custom buttons for Venobox in mobile view */
+
+/* Ensure custom close button is always interactive */
 .custom-close-btn,
 .custom-prev-btn,
 .custom-next-btn {
     display: none;
+    outline: none !important; /* Prevent outline interference */
+    -webkit-tap-highlight-color: transparent !important; /* Disable tap highlight on mobile */
 }
 
 @media (max-width: 768px) {
@@ -1382,6 +1384,7 @@ a, button, .portfolio-wrap {
         font-size: 32px !important;
         animation: pulse 1.5s infinite;
         text-shadow: 0 0 5px rgba(255, 77, 77, 0.7);
+        pointer-events: auto !important; /* Ensure clickability */
     }
 
     .custom-prev-btn {
@@ -1391,6 +1394,7 @@ a, button, .portfolio-wrap {
         font-size: 32px !important;
         transform: translateY(-50%);
         text-shadow: 0 0 5px rgba(18, 214, 64, 0.7);
+        pointer-events: auto !important; /* Ensure clickability */
     }
 
     .custom-next-btn {
@@ -1400,6 +1404,7 @@ a, button, .portfolio-wrap {
         font-size: 32px !important;
         transform: translateY(-50%);
         text-shadow: 0 0 5px rgba(18, 214, 64, 0.7);
+        pointer-events: auto !important; /* Ensure clickability */
     }
 
     .custom-close-btn i,
@@ -1422,6 +1427,47 @@ a, button, .portfolio-wrap {
     .custom-close-btn:hover {
         transform: scale(1.1); /* No translateY for close button */
     }
+
+    /* Hide default Venobox buttons */
+    .vbox-close,
+    .vbox-prev,
+    .vbox-next {
+        display: none !important;
+    }
+}
+
+/* Ensure desktop visibility and interaction */
+@media (min-width: 769px) {
+    .custom-close-btn {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        color: #12d640 !important;
+        background: transparent !important;
+        border: none !important;
+        font-size: 28px !important;
+        cursor: pointer;
+        z-index: 10000;
+        padding: 5px;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        pointer-events: auto !important; /* Ensure clickability */
+    }
+
+    .custom-close-btn i {
+        font-family: 'Material Icons' !important;
+        font-size: inherit !important;
+        color: inherit !important;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+    }
+
+    .custom-close-btn:hover {
+        transform: scale(1.1);
+        text-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
+    }
+}
 
     /* Hide default Venobox buttons */
     .vbox-close,
