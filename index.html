@@ -751,6 +751,8 @@
 
 <!-- Start Research Section -->
 
+<!-- Start Research Section -->
+
 <section id="research" class="services">
     <div class="container">
         <div class="section-title">
@@ -765,8 +767,6 @@
   CONFERENCE PAPER
 </h5>
 
-
-                
 
                 <!-- First Paper -->
                 <p style="color: rgb(0, 0, 0); text-align: justify; margin-bottom: 15px; font-weight: bold;">
@@ -849,13 +849,10 @@
                 <!-- Research Profiles Section -->
                 <div class="research-profiles">
 
-
-
                   <h5 style="color: #000000; font-weight: 900;">
   <span class="material-icons" style="color: #000000; vertical-align: middle; font-size: 2em; margin-right: 0px;">cruelty_free</span>
   RESEARCH PROFILES
 </h5>
-
                     
                     <div class="research-badges">
                         <a href="https://orcid.org/0009-0007-4656-8709"><img src="https://img.shields.io/badge/ORCID-eb2f06?style=for-the-badge&logo=orcid&logoColor=white" alt="ORCID" class="profile-badge"></a>
@@ -868,6 +865,11 @@
                 </div>
             </div>
         </div>
+
+        <!-- Mobile-only Research Image -->
+        <div class="mobile-research-image" style="display: none;">
+            <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/research/research.jpg" alt="Research" style="width: 100%; height: auto; margin-top: 20px;">
+        </div>
     </div>
 </section>
 
@@ -878,13 +880,12 @@
     gap: 20px;
   }
   
-.research-item {
+  .research-item {
     background: #ffffff; /* Solid white background */
     border-radius: 8px;
     padding: 20px;
     border: 15px solid #f6f8f9; /* Adds a strong border */
-}
-
+  }
   
   .research-item p {
     text-align: justify;
@@ -926,36 +927,19 @@
       border-radius: 0;
       border: none; /* Removes the 15px border */
     }
-  }
-
     
-    .research-item .row > div {
-      margin-bottom: 15px;
-    }
-    
-    .research-item .row > div:last-child {
-      margin-bottom: 0;
-    }
-
-    .research-badges {
-      justify-content: flex-start;
-    }
-
-    .doi-badge {
-      height: 24px; /* Fixed height for DOI badge in mobile */
-      width: auto;
-    }
-
-    .profile-badge {
-      height: auto; /* Auto height for profile badges in mobile */
-      width: auto;
+    .mobile-research-image {
+      display: block !important;
+      padding: 0 15px; /* Default mobile padding */
     }
   }
 
-  @media (max-width: 480px) {
-    .research-badges {
-      gap: 6px;
-    }
+  .research-item .row > div {
+    margin-bottom: 15px;
+  }
+  
+  .research-item .row > div:last-child {
+    margin-bottom: 0;
   }
 
   /* Ensure all text is bold */
@@ -1387,6 +1371,7 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
   </section>
   <!-- End Project Section -->
   <!-- Start Skills Section -->
+   
 <!-- Start Skills Section -->
 <section id="skills" class="skills-section">
   <div class="container">
