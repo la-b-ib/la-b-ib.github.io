@@ -1191,7 +1191,6 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
     background: rgba(255, 255, 255, 0.05);
     border-radius: 8px;
     padding: 20px;
-    text-align: justify;
   }
   
   .experience-title {
@@ -1214,14 +1213,12 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
     list-style-type: none;
     padding: 0;
     margin: 0;
-    text-align: justify;
   }
 
   .experience-list li {
     margin-bottom: 12px;
     display: flex;
     align-items: flex-start;
-    text-align: justify;
     line-height: 1.5;
   }
   
@@ -1234,8 +1231,6 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
   
   .experience-list li span {
     display: inline;
-    text-align: justify;
-    text-align-last: left;
   }
   
   .experience-list li a {
@@ -1250,11 +1245,11 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
   /* Desktop - Use Bootstrap */
   @media (min-width: 992px) {
     .experience-container {
-      display: block; /* Maintains block-level behavior */
-      background: #ffffff; /* Solid white background */
-      padding: 20px; /* Adds spacing for content */
-      border-radius: 8px; /* Slightly rounded edges */
-      border: 15px solid #f6f8f9; /* Subtle border for definition */
+      display: block;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      border: 15px solid #f6f8f9;
     }
     
     .experience-item {
@@ -1331,17 +1326,24 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
       color: #333333;
       line-height: 1.5;
       font-size: 0.92rem;
-      text-align: justify;
     }
   }
   
   /* Mobile Optimizations (under 992px) */
   @media (max-width: 991px) {
+    /* Text justification for all text in mobile */
+    .experience-item,
+    .recommendation-content,
+    .experience-list li span {
+      text-align: justify;
+      text-align-last: left;
+    }
+    
     .experience-item {
-      padding: 18px 0; /* Remove side padding */
-      background: none !important; /* Remove background on mobile */
+      padding: 18px 0;
+      background: none !important;
       border-radius: 0;
-      border-bottom: 1px solid rgba(0,0,0,0.1); /* Add separator */
+      border-bottom: 1px solid rgba(0,0,0,0.1);
     }
     
     .experience-list li {
@@ -1349,23 +1351,20 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
       line-height: 1.6;
     }
     
-    /* Better spacing for mobile */
     .experience-container {
       gap: 25px;
     }
     
-    /* Adjust bullet point alignment */
     .experience-list li i {
       margin-right: 8px;
     }
     
-    /* Show mobile images */
     .mobile-experience-image,
     .mobile-experience-gif {
       display: block !important;
     }
     
-    /* Mobile Recommendation Styles - Make identical to experience */
+    /* Recommendation Mobile Styles - Specific changes only */
     .recommendation-container {
       display: flex;
       flex-direction: column;
@@ -1373,62 +1372,68 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
     }
     
     .recommendation-item {
-      background: none;
-      border-radius: 0;
-      padding: 18px 0;
-      border-bottom: 1px solid rgba(0,0,0,0.1);
-      box-shadow: none;
-      border: none;
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      border: 15px solid #f7f9f9;
     }
     
     .recommendation-header {
-      flex-direction: column;
-      align-items: flex-start;
+      display: flex;
+      align-items: center;
       margin-bottom: 15px;
     }
     
     .recommendation-photo {
-      width: 60px;
-      height: 60px;
-      margin-bottom: 10px;
+      width: 80px; /* Slightly bigger photo on mobile */
+      height: 80px;
+      border-radius: 10%;
+      object-fit: cover;
+      margin-right: 15px;
+    }
+    
+    .recommendation-info {
+      flex: 1;
     }
     
     .recommendation-name {
-      font-size: 1.1rem;
+      font-weight: 800;
+      margin: 0;
       color: #000000;
-      font-weight: 900;
+      font-size: 1rem;
     }
     
     .recommendation-title {
-      font-size: 0.9rem;
-      color: #4284F4;
-      margin: 5px 0;
+      color: #666666;
+      margin: 4px 0;
+      font-size: 0.75rem;
+      line-height: 1.4;
     }
     
     .linkedin-link {
-      font-size: 0.8rem;
-      padding: 3px 6px;
+      color: #ffffff !important;
+      text-decoration: none;
+      font-size: 0.75rem;
+      display: inline-flex;
+      align-items: left;
+      font-weight: 800;
+      background-color: #4284F4;
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+    
+    .linkedin-link i {
+      margin-right: 5px;
+      font-size: 0.9rem;
     }
     
     .recommendation-content {
-      font-size: 0.95rem;
-      color: #333;
-      line-height: 1.6;
-    }
-    
-    /* Add material icon before recommendation name */
-    .recommendation-name {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    
-    .recommendation-name::before {
-      content: "person";
-      font-family: 'Material Icons';
-      color: #000000;
-      font-size: 1.5em;
-      vertical-align: middle;
+      color: #333333;
+      line-height: 1.5;
+      font-size: 0.92rem;
+      text-align: justify;
+      text-align-last: left;
     }
   }
   
@@ -1452,16 +1457,8 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
     }
     
     .recommendation-photo {
-      width: 50px;
-      height: 50px;
-    }
-    
-    .recommendation-name {
-      font-size: 1rem;
-    }
-    
-    .recommendation-content {
-      font-size: 0.9rem;
+      width: 70px;
+      height: 70px;
     }
   }
 </style>
