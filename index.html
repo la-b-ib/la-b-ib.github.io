@@ -1136,6 +1136,82 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
 
       </div>
     </div>
+    
+    <div class="interests container">
+    <div class="section-title">
+      <h2 class="interest-heading"><b>Recommendation</b></h2>
+    </div>
+    
+    <div class="recommendation-container">
+    <!-- Recommendation 1 -->
+    <div class="recommendation-item">
+      <div class="recommendation-header">
+        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Jane Smith" class="recommendation-photo">
+        <div class="recommendation-info">
+          <h5 class="recommendation-name">Jane Smith</h5>
+          <p class="recommendation-title">Senior UI/UX Designer at TechCorp</p>
+          <a href="https://linkedin.com/in/janesmith" target="_blank" class="linkedin-link">
+            <i class="bi bi-linkedin"></i> View Profile
+          </a>
+        </div>
+      </div>
+      <div class="recommendation-content">
+        <p>"Labib's design work consistently exceeds expectations. His ability to translate complex requirements into intuitive interfaces is remarkable. He led our dashboard redesign that increased user engagement by 35%."</p>
+      </div>
+    </div>
+
+    <!-- Recommendation 2 -->
+    <div class="recommendation-item">
+      <div class="recommendation-header">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Johnson" class="recommendation-photo">
+        <div class="recommendation-info">
+          <h5 class="recommendation-name">Michael Johnson</h5>
+          <p class="recommendation-title">Editor-in-Chief at BRACU Express</p>
+          <a href="https://linkedin.com/in/michaeljohnson" target="_blank" class="linkedin-link">
+            <i class="bi bi-linkedin"></i> View Profile
+          </a>
+        </div>
+      </div>
+      <div class="recommendation-content">
+        <p>"During Labib's tenure at BRACU Express, he produced 15+ high-quality articles with meticulous research. His piece on AI in education became our most-read article of 2023 with 12K+ views."</p>
+      </div>
+    </div>
+
+    <!-- Recommendation 3 -->
+    <div class="recommendation-item">
+      <div class="recommendation-header">
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Sarah Williams" class="recommendation-photo">
+        <div class="recommendation-info">
+          <h5 class="recommendation-name">Sarah Williams</h5>
+          <p class="recommendation-title">Chair, IEEE CS Bangladesh</p>
+          <a href="https://linkedin.com/in/sarahwilliams" target="_blank" class="linkedin-link">
+            <i class="bi bi-linkedin"></i> View Profile
+          </a>
+        </div>
+      </div>
+      <div class="recommendation-content">
+        <p>"As President of our Chapter, Labib organized 8 successful events with 500+ total attendees. His leadership in our 'Future of Computing' webinar series brought international recognition to our chapter."</p>
+      </div>
+    </div>
+
+    <!-- Recommendation 4 -->
+    <div class="recommendation-item">
+      <div class="recommendation-header">
+        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="David Chen" class="recommendation-photo">
+        <div class="recommendation-info">
+          <h5 class="recommendation-name">David Chen</h5>
+          <p class="recommendation-title">Lead Scientist at Tachyon</p>
+          <a href="https://linkedin.com/in/davidchen" target="_blank" class="linkedin-link">
+            <i class="bi bi-linkedin"></i> View Profile
+          </a>
+        </div>
+      </div>
+      <div class="recommendation-content">
+        <p>"Labib has an exceptional talent for making complex scientific concepts accessible. His articles on quantum computing for our platform received praise from academic and industry readers alike."</p>
+      </div>
+
+
+
 </section>
 
 <style>
@@ -1276,6 +1352,105 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
       font-size: 0.9rem;
     }
   }
+
+
+
+
+/* Recommendation Section Styles */
+  .recommendation-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 20px;
+  }
+  
+  .recommendation-item {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    border: 15px solid #f7f9f9;
+    transition: transform 0.3s ease;
+  }
+  
+
+  
+  .recommendation-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .recommendation-photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 2px solid #eaeaea;
+  }
+  
+  .recommendation-info {
+    flex: 1;
+  }
+  
+  .recommendation-name {
+    font-weight: 800;
+    margin: 0;
+    color: #000000;
+    font-size: 1.1rem;
+  }
+  
+  .recommendation-title {
+    color: #666666;
+    margin: 4px 0;
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+  
+  .linkedin-link {
+    color: #4284F4 !important;
+    text-decoration: none;
+    font-size: 0.8rem;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 500;
+  }
+  
+  .linkedin-link i {
+    margin-right: 5px;
+    font-size: 0.9rem;
+  }
+  
+  .recommendation-content {
+    color: #333333;
+    line-height: 1.6;
+    font-size: 0.92rem;
+    text-align: left;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 992px) {
+    .recommendation-container {
+      grid-template-columns: 1fr;
+    }
+    
+    .recommendation-item {
+      padding: 18px;
+      border-width: 12px;
+    }
+    
+    .recommendation-photo {
+      width: 55px;
+      height: 55px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .recommendation-item {
+      border-width: 10px;
+    }
+  }  
 </style>
   <!-- End Experience Section -->
   <!-- Start Project Section -->
