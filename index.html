@@ -1372,12 +1372,12 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
     }
     
     .recommendation-item {
-      background: #ffffff;
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-      border: 15px solid #f7f9f9;
-    }
+    background: none !important; /* Remove background */
+    border: none !important; /* Remove border */
+    border-radius: 0; /* Remove border radius */
+    padding: 18px 0; /* Keep vertical padding, no left/right padding */
+    box-shadow: none !important; /* Remove shadow */
+  }
     
     .recommendation-header {
       display: flex;
@@ -1385,14 +1385,14 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
       margin-bottom: 15px;
     }
     
-    .recommendation-photo {
-      width: 80px; /* Slightly bigger photo on mobile */
-      height: 80px;
-      border-radius: 10%;
-      object-fit: cover;
-      margin-right: 15px;
-    }
-    
+     .recommendation-photo {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+    padding-left: 0; /* Remove left padding for photo */
+    padding-right: 0; /* Remove right padding for photo */
+  }
+  
     .recommendation-info {
       flex: 1;
     }
