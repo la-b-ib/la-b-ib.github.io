@@ -1718,6 +1718,24 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
         
       </div>
     </div>
+    
+  </div>
+   <div class="interests container">
+    <div class="section-title">
+      <h2 class="interest-heading"><b>Github</b></h2>
+    </div>
+    
+    <!-- GitHub Trophies Section - Fixed Version -->
+    <div class="github-trophies" style="background-color: white; padding: 20px; border-radius: 8px; margin-bottom: 30px;">
+      <!-- Single responsive image that works for all devices -->
+      <div class="row justify-content-center">
+        <div class="col-12 text-center">
+          <img src="https://github-profile-trophy.vercel.app/?username=la-b-ib&theme=flat&no-frame=true&no-bg=true&margin-w=15&margin-h=15" 
+               alt="GitHub Trophies" 
+               style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1773,6 +1791,18 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
       font-size: 1.2rem;
       margin-bottom: 12px;
     }
+    
+    /* GitHub Trophies mobile optimization */
+    .github-trophies {
+      padding: 15px 5px !important;
+      margin-left: -5px;
+      margin-right: -5px;
+      width: calc(100%-10px);
+    }
+    
+    .github-trophies img {
+      width: 100% !important;
+    }
   }
 
   /* Desktop Styles (keep Bootstrap defaults) */
@@ -1782,13 +1812,12 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
     }
     
     .skill-category {
-    background: #ffffff; /* Solid white */
-    padding: 20px;
-    border-radius: 8px;
-    border: 15px solid #f6f8f9; /* Border in the desired color */
-    margin-bottom: 20px;
-}
-
+      background: #ffffff; /* Solid white */
+      padding: 20px;
+      border-radius: 8px;
+      border: 15px solid #f6f8f9; /* Border in the desired color */
+      margin-bottom: 20px;
+    }
     
     .skill-icons {
       display: flex;
@@ -1809,6 +1838,31 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
       font-size: 1.3rem;
       margin-bottom: 15px;
     }
+    
+    
+.github-trophies {
+  width: 100%; /* Full width */
+  padding: 20px 0; /* Remove left/right padding */
+  margin: 0 auto; /* Centers content */
+  display: flex;
+  justify-content: space-evenly; /* Distributes trophies evenly */
+  flex-wrap: wrap; /* Allows wrapping */
+  border: 15px solid #f7f9f9; /* Adds border */
+}
+
+.github-trophies img {
+  flex: 1; /* Ensures even distribution */
+  max-width: calc(100% / 5 - 15px); /* Adjust dynamically */
+  min-width: 80px; /* Prevent excessive shrinking */
+}
+
+
+    
+
+.github-trophies .row {
+    width: 100%; /* Extend row to full width */
+  }
+
   }
 </style>
 <!-- End Skills Section -->
