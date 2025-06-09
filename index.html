@@ -1844,18 +1844,15 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
   
   .github-calendar {
         display: block; /* Show calendar on mobile */
-        background: transparent; /* Transparent background for parent */
+        background: transparent; /* Transparent background */
         padding: 20px 0;
         text-align: center;
-        margin: 20px 0;
+        margin: 0 auto 30px auto; /* Increased bottom margin */
         width: 100%;
+        max-width: 365px;
     }
     
-    .calendar-title {
-        margin-bottom: 15px;
-        color: #333;
-    }
-    
+
     .calendar-container {
         width: 100%;
         max-width: 365px;
@@ -1870,9 +1867,10 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
     .calendar-img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain; /* Changed to contain to avoid cropping */
         object-position: center;
     }
+    
 
   
 
