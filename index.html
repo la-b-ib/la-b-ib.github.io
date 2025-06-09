@@ -1843,39 +1843,36 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
 
   
   .github-calendar {
-    background: white;
-    padding: 20px;
-    text-align: center;
-    margin: 20px 0;
-    border-radius: 8px;
-  }
-.calendar-title {
-    margin-bottom: 15px;
-    color: #333;
-  }
-.calendar-container {
-    width: 100%; /* Flexible width */
-    max-width: 365px; /* Optional: limit maximum size */
-    aspect-ratio: 1/1; /* Ensures square shape */
-    background: white;
-    padding: 15px 10px;
-    border-radius: 0;
-    margin: 0 5px 15px 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    overflow: hidden;
-    position: relative;
-  }
-.calendar-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: right center;
-  }
-.calendar-caption {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #666;
-  }
+        display: block; /* Show calendar on mobile */
+        background: transparent; /* Transparent background for parent */
+        padding: 20px 0;
+        text-align: center;
+        margin: 20px 0;
+        width: 100%;
+    }
+    
+    .calendar-title {
+        margin-bottom: 15px;
+        color: #333;
+    }
+    
+    .calendar-container {
+        width: 100%;
+        max-width: 365px;
+        aspect-ratio: 1/1;
+        background: transparent; /* Transparent background */
+        padding: 10px;
+        margin: 0 auto; /* Center the container */
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .calendar-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
 
   
 
