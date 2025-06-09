@@ -1793,16 +1793,32 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
     }
     
     /* GitHub Trophies mobile optimization */
-    .github-trophies {
-      padding: 15px 5px !important;
-      margin-left: -5px;
-      margin-right: -5px;
-      width: calc(100%-10px);
-    }
     
-    .github-trophies img {
-      width: 100% !important;
-    }
+  .github-trophies {
+    background: white;
+    padding: 15px 10px !important;
+    border-radius: 0;
+    margin: 0 5px 15px 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: calc(100% - 10px);
+  }
+
+  .github-trophies img {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    justify-items: center;
+    width: 100% !important;
+    height: auto;
+  }
+
+  .github-trophies img[src*="github-profile-trophy"] {
+    width: 100%;
+    height: 80px; /* Increased size for trophies */
+    object-fit: contain;
+  }
+
+  
   }
 
   /* Desktop Styles (keep Bootstrap defaults) */
