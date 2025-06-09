@@ -1750,19 +1750,20 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
 
       </div>
     
-     <!-- GitHub Active Contributions Calendar -->
-    <div class="github-calendar">
-        <h3 class="calendar-title">GitHub Calender</h3>
-        
-        <!-- Calendar Container with Forced Recent View -->
-        <div class="calendar-container">
-            <img src="https://ghchart.rshah.org/la-b-ib?color=40c463&bgcolor=ffffff&v=2&latest=1" 
-                 alt="Recent GitHub Contributions"
-                 class="calendar-img">
-        </div>
-        
-        <p class="calendar-caption">Last 6 months of activity</p>
+     <!-- GitHub Calendar Section -->
+<div class="github-calendar">
+    <h5 class="calendar-title"><b>GitHub Calendar</b></h5>
+    <div class="calendar-container">
+        <img src="https://ghchart.rshah.org/la-b-ib?color=40c463&bgcolor=ffffff&v=2&latest=1" 
+             alt="Recent GitHub Contributions"
+             class="calendar-img"
+             loading="lazy" <!-- Enables lazy loading -->
+             onload="this.style.opacity = '1';"
+             onerror="this.src='https://ghchart.rshah.org/la-b-ib?color=40c463&bgcolor=ffffff&v=2'; this.style.opacity = '1';">
     </div>
+    <p class="calendar-caption">Last 6 months of activity</p>
+</div>
+    <!-- End GitHub Calendar Section -->
 
     
 
@@ -1770,6 +1771,42 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
 </section>
 
 <style>
+  /* Base Styles */
+
+  /* GitHub Calendar Styles */
+.github-calendar {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.calendar-container {
+    width: 100%; /* Flexible width */
+    max-width: 365px; /* Limit maximum size */
+    aspect-ratio: 1/1; /* Ensures square shape */
+    background: white;
+    padding: 15px 10px;
+    border-radius: 0;
+    margin: 0 5px 15px 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calendar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures the entire image is visible */
+    object-position: center;
+    opacity: 0; /* Start hidden for smooth loading */
+    transition: opacity 0.3s ease-in-out;
+}
+
+
   /* Mobile-First Styles (override Bootstrap only for mobile) */
   @media (max-width: 767.98px) {
     .skills-section .container {
@@ -1852,23 +1889,29 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
         max-width: 365px;
     }
     
-
     .calendar-container {
         width: 100%;
         max-width: 365px;
         aspect-ratio: 1/1;
-        background: transparent; /* Transparent background */
-        padding: 10px;
-        margin: 0 auto; /* Center the container */
+        background: white;
+        padding: 15px 10px;
+        border-radius: 0;
+        margin: 0 5px 15px 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         overflow: hidden;
         position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     
     .calendar-img {
         width: 100%;
         height: 100%;
-        object-fit: contain; /* Changed to contain to avoid cropping */
+        object-fit: contain; /* Ensures the entire image is visible */
         object-position: center;
+        opacity: 0; /* Start hidden for smooth loading */
+       
     }
     
 
