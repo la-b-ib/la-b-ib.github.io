@@ -1749,8 +1749,22 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
      alt="Contribution Graph">
 
       </div>
+    
+     <!-- GitHub Active Contributions Calendar -->
+    <div class="github-calendar">
+        <h3 class="calendar-title">GitHub Calender</h3>
+        
+        <!-- Calendar Container with Forced Recent View -->
+        <div class="calendar-container">
+            <img src="https://ghchart.rshah.org/la-b-ib?color=40c463&bgcolor=ffffff&v=2&latest=1" 
+                 alt="Recent GitHub Contributions"
+                 class="calendar-img">
+        </div>
+        
+        <p class="calendar-caption">Last 6 months of activity</p>
+    </div>
 
-
+    
 
   </div>
 </section>
@@ -1828,6 +1842,40 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
   }
 
   
+  .github-calendar {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    margin: 20px 0;
+    border-radius: 8px;
+  }
+.calendar-title {
+    margin-bottom: 15px;
+    color: #333;
+  }
+.calendar-container {
+    width: 100%; /* Flexible width */
+    max-width: 365px; /* Optional: limit maximum size */
+    aspect-ratio: 1/1; /* Ensures square shape */
+    background: white;
+    padding: 15px 10px;
+    border-radius: 0;
+    margin: 0 5px 15px 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+    position: relative;
+  }
+.calendar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right center;
+  }
+.calendar-caption {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+  }
 
   
 
@@ -1899,6 +1947,39 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
   }
 
   }
+  .github-calendar {
+    display: none; /* Hide calendar by default */
+  }
+
+  .github-calendar {
+            background: white;
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .calendar-title {
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .calendar-container {
+            width: 365px;
+            height: 365px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .calendar-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: right center;
+        }
+        .calendar-caption {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #666;
+        }
 </style>
 <!-- End Skills Section -->
 <!-- End Skills Section -->
@@ -2089,6 +2170,16 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
       backSpeed: 65
     });
   </script>
+
+  <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const img = document.querySelector('.github-calendar img');
+            img.onerror = function() {
+                this.src = 'https://github-readme-activity-graph.vercel.app/graph?username=la-b-ib&bg_color=ffffff&color=000000&line=40c463&point=000000&area=true&hide_border=true';
+                this.style.objectFit = 'contain';
+            };
+        });
+    </script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
