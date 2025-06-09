@@ -1797,25 +1797,27 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
   .github-trophies {
     background: white;
     padding: 15px 10px !important;
-    border-radius: 0;
+    border-radius: 0 !important;
     margin: 0 5px 15px 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     width: calc(100% - 10px);
+    overflow: hidden;
   }
 
-  .github-trophies img {
+  .github-trophies .row {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     justify-items: center;
-    width: 100% !important;
-    height: auto;
+    width: 100%;
   }
 
   .github-trophies img[src*="github-profile-trophy"] {
     width: 100%;
-    height: 80px; /* Increased size for trophies */
+    height: auto;
+    max-height: 160px; /* Adjust to fit 2 rows of trophies */
     object-fit: contain;
+    transform: scale(1.2); /* Slightly increase size for better visibility */
   }
 
   
