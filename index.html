@@ -1739,16 +1739,6 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
     </div>
     <!-- End GitHub Trophies Section -->
 
-    <!-- Contributions Chart Section -->
-    <div class="chart-container">
-        <div class="chart-wrapper">
-            <canvas id="contributionsChart"></canvas>
-        </div>
-    </div>
-
-
-
-    <!-- Contribution Graph Section -->
     <div class="contribution-container">
       <div class="contribution-badges">
         <a href="https://octoprofile.vercel.app/user?id=la-b-ib"><img src="https://img.shields.io/badge/OctoProfile-Visit-2088FF?style=for-the-badge&logo=github" alt="OctoProfile"></a>
@@ -1838,30 +1828,7 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
   }
 
   
-  .chart-container {
-            background: white;
-            padding: 10px 10px !important;
-            border-radius: 0 !important;
-            margin: 0 5px 15px 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            width: calc(100% - 10px);
-            overflow: hidden;
-            max-width: 90vw; /* Use viewport width for mobile */
-            max-height: 90vw; /* Ensure square shape with viewport units */
-        }
-        .chart-wrapper {
-            width: 100%;
-            aspect-ratio: 1 / 1; /* Maintain 1:1 aspect ratio */
-            position: relative;
-        }
-        canvas {
-            width: 100% !important;
-            height: 100% !important;
-        }
-        /* Ensure all chart text is bold */
-        .chart-container, .chart-container * {
-            font-weight: bold !important;
-        }
+
   
 
   
@@ -1905,11 +1872,7 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
     
 .github-trophies {
     display: none !important; /* Hide GitHub Trophies on desktop */
-  } 
-.chart-container {
-  display: none !important; /* Hide chart on desktop */
-}
-  
+  }   
   
   
 .github-trophies {
@@ -2127,137 +2090,8 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
     });
   </script>
 
-   <script>
-        // Register the data labels plugin
-        Chart.register(ChartDataLabels);
-
-        // Mock data for demonstration (weekly contributions for the past 12 months)
-        const weeks = Array.from({ length: 52 }, (_, i) => `Week ${i + 1}`);
-        const contributions = Array.from({ length: 52 }, () => Math.floor(Math.random() * 20)); // Random contributions (0-20)
-
-        const ctx = document.getElementById('contributionsChart').getContext('2d');
-        new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: weeks,
-                datasets: [{
-                    label: 'Contributions for la-b-ib',
-                    data: contributions,
-                    backgroundColor: '#4284f4', // Specified bar color
-                    borderColor: '#4284f4',
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                maintainAspectRatio: false, // Allow custom aspect ratio
-                scales: {
-                    x: {
-                        display: true,
-                        title: {
-                            display: true,
-                            text: 'Weeks (Past 52 Weeks)',
-                            font: {
-                                weight: 'bold',
-                                size: 12
-                            }
-                        },
-                        grid: {
-                            display: true,
-                            color: 'rgba(0, 0, 0, 0.1)'
-                        },
-                        ticks: {
-                            font: {
-                                weight: 'bold',
-                                size: 10
-                            },
-                            maxTicksLimit: 13, // Show every 4th week (52/4 ≈ 13)
-                            autoSkip: true
-                        }
-                    },
-                    y: {
-                        beginAtZero: true,
-                        title: {
-                            display: true,
-                            text: 'Contributions',
-                            font: {
-                                weight: 'bold',
-                                size: 12
-                            }
-                        },
-                        grid: {
-                            display: true,
-                            color: 'rgba(0, 0, 0, 0.1)'
-                        },
-                        ticks: {
-                            font: {
-                                weight: 'bold',
-                                size: 10
-                            },
-                            stepSize: 5
-                        }
-                    }
-                },
-                plugins: {
-                    legend: {
-                        display: true,
-                        position: 'top',
-                        labels: {
-                            font: {
-                                weight: 'bold',
-                                size: 12
-                            }
-                        }
-                    },
-                    title: {
-                        display: true,
-                        text: 'GitHub Contributions for la-b-ib',
-                        font: {
-                            weight: 'bold',
-                            size: 14
-                        }
-                    },
-                    tooltip: {
-                        enabled: true,
-                        callbacks: {
-                            label: function(context) {
-                                return `Contributions: ${context.raw} on ${context.label}`;
-                            }
-                        },
-                        titleFont: {
-                            weight: 'bold',
-                            size: 12
-                        },
-                        bodyFont: {
-                            weight: 'bold',
-                            size: 10
-                        }
-                    },
-                    datalabels: {
-                        anchor: 'end',
-                        align: 'top',
-                        font: {
-                            weight: 'bold',
-                            size: 8
-                        },
-                        formatter: (value) => value,
-                        display: function(context) {
-                            return context.dataset.data[context.dataIndex] > 0; // Show only non-zero labels
-                        }
-                    }
-                },
-                interaction: {
-                    mode: 'index',
-                    intersect: false
-                }
-            }
-        });
-    </script>
-
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
 
 </body>
 </html>
