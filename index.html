@@ -1720,9 +1720,12 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
     </div>
     
   </div>
-   <div class="interests container">
+   
+
+
+  <div class="interests container">
     <div class="section-title">
-      <h2 class="interest-heading"><b>Github</b></h2>
+      <h2 class="interest-heading"><b>Statistics</b></h2>
     </div>
     
     <!-- GitHub Trophies Section - Fixed Version -->
@@ -1743,11 +1746,11 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
 
     <!-- Mobile-only Stats GIF (hidden on desktop) -->
     <!-- Mobile-only Stats GIF (hidden on desktop) -->
-<div class="mobile-gif-container d-block d-md-none">
-  <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/GIF/stats.gif" 
+  <div class="mobile-gif-container d-block d-md-none">
+    <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/GIF/stats.gif" 
        alt="Stats GIF" 
        loading="lazy">
-</div>
+  </div>
 
 
     <!-- Contribution Graph Section -->
@@ -1762,13 +1765,109 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
      alt="Contribution Graph">
 
       </div>
-
-
-
+    </div>
   </div>
+  </div>
+   <div class="interests container">
+    <div class="section-title">
+      <h2 class="interest-heading"><b>programming </b></h2>
+    </div>
+     <div class="badge-container">
+        <!-- LeetCode Badge -->
+        <a href="https://leetcode.com/u/la-b-ib/" class="badge leetcode" target="_blank">
+            <img src="https://leetcode.com/static/images/LeetCode_logo_rvs.png" alt="LeetCode" class="badge-logo">
+            <span class="badge-text">LeetCode</span>
+        </a>
+        
+        <!-- HackerRank Badge -->
+        <a href="https://www.hackerrank.com/profile/la_b_ib" class="badge hackerrank" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/HackerRank_Icon-1000px.png" alt="HackerRank" class="badge-logo">
+            <span class="badge-text">HackerRank</span>
+        </a>
+        
+        <!-- CodersRank Badge -->
+        <a href="https://profile.codersrank.io/user/la-b-ib" class="badge codersrank" target="_blank">
+            <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/dev%20badge/crrnk.png" alt="CodersRank" class="badge-logo">
+            <span class="badge-text">CodersRank</span>
+        </a>
+        
+        <!-- GitHub Badge -->
+        <a href="https://github.com/la-b-ib" class="badge github" target="_blank">
+            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="badge-logo">
+            <span class="badge-text">GitHub</span>
+        </a>
+    </div>
+    
+
+
 </section>
 
 <style>
+
+ .badge-container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px; /* Controls space between badges */
+    justify-content: flex-start; /* Aligns badges to the left */
+    align-items: center; /* Maintains vertical alignment */
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+
+        
+  .badge {
+    display: flex;
+    align-items: center;
+    background-color: #f7f9f9;
+    border-radius: 6px;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #333;
+    border-left: 5px solid currentColor; /* Uses the text color for the left border */
+  }
+        
+        .badge-logo {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+        }
+        
+        .badge-text {
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        .leetcode {
+            color: #FFA116;
+        }
+        
+        .hackerrank {
+            color: #2EC866;
+        }
+        
+        .codersrank {
+            color: #67A4AC;
+        }
+        
+        .github {
+            color: #4078c0;
+        }
+
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .badge-container::-webkit-scrollbar {
+            display: none;
+        }
+        
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .badge-container {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+
+
+
+
   /* Mobile-First Styles (override Bootstrap only for mobile) */
   @media (max-width: 767.98px) {
     .skills-section .container {
