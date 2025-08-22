@@ -18,8 +18,10 @@
 
   <meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp">
   <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
+
   <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=()">
   <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  
 
 
   
@@ -73,7 +75,6 @@
     gtag('config', 'UA-169007209-3');
   </script>
 
-
   <script src="https://cdn.jsdelivr.net/npm/devtools-detect@latest/dist/devtools-detect.js"></script>
   <script>
     window.addEventListener('devtoolschange', function(e) {
@@ -85,6 +86,9 @@
       }
     });
   </script>
+
+  
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
@@ -218,48 +222,6 @@
     text-decoration: none;
 }
 </style>
-
-<script>
-  // Create overlay
-  const overlay = document.createElement('div');
-  overlay.className = 'screenshot-overlay';
-  overlay.innerHTML = '<p>Screenshot or recording detected. Content protected.</p>';
-  document.body.appendChild(overlay);
-
-  // Detect potential screenshot/recording actions
-  function obscureContent() {
-    document.body.classList.add('blur-content');
-    overlay.classList.add('active');
-    setTimeout(() => {
-      document.body.classList.remove('blur-content');
-      overlay.classList.remove('active');
-    }, 2000); // Show overlay for 2 seconds
-  }
-
-  // Trigger on window blur (e.g., Alt+Tab to screenshot tool)
-  window.addEventListener('blur', obscureContent);
-
-  // Detect common screenshot keys (PrintScreen, Alt+PrintScreen)
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'PrintScreen' || (e.altKey && e.key === 'PrintScreen')) {
-      obscureContent();
-      e.preventDefault(); // Try to block (works inconsistently)
-    }
-  });
-
-  // Optional: Detect rapid focus changes (common in recordings)
-  let focusCount = 0;
-  window.addEventListener('focus', () => {
-    focusCount++;
-    if (focusCount > 3) { // Arbitrary threshold for rapid switches
-      obscureContent();
-      focusCount = 0; // Reset
-    }
-    setTimeout(() => focusCount = 0, 5000); // Reset after 5s
-  });
-</script>
-
-
 
 
 <!-- ======= About Section ======= -->
@@ -2462,7 +2424,7 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
   // Initialize VenoBox with custom spinner and styling
   document.addEventListener('DOMContentLoaded', function () {
     $('.venobox').venobox({
-      bgcolor: 'transparent',
+      bgcolor: 'white',
       border: 'none',
       framewidth: '100%',
       frameheight: '90vh',
@@ -2539,31 +2501,41 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
 
 
   <script>
-  var minimalUserResponseInMiliseconds = 200; // Adjust threshold if needed (higher = more sensitive)
-  var tryCount = 0;
-  var maxTries = 5; // Optional: Limit reloads to prevent infinite loops
+  // Disable right-click context menu
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+    // Optional: Show a warning (customize or remove)
+    alert('Right-click is disabled for security reasons.');
+  });
 
-  function checkDevTools() {
-    var before = new Date().getTime();
-    debugger; // This pauses if DevTools is open
-    var after = new Date().getTime();
-
-    if (after - before > minimalUserResponseInMiliseconds) {
-      tryCount++;
-      if (tryCount > maxTries) {
-        document.body.innerHTML = '<h1>Developer Tools detected. Access denied.</h1>'; // Or redirect: window.location.href = '/blocked.html';
-        return;
-      }
-      // Reload page to "reset"
-      window.location.reload();
+  // Disable keyboard shortcuts for DevTools and source view
+  document.addEventListener('keydown', function(e) {
+    // F12
+    if (e.keyCode === 123) {
+      e.preventDefault();
+      return false;
     }
-
-    // Run check every 100ms
-    setTimeout(checkDevTools, 100);
-  }
-
-  // Start the check on load
-  window.addEventListener('load', checkDevTools);
+    // Ctrl+Shift+I (Inspect), Ctrl+Shift+J (Console), Ctrl+Shift+C (Elements)
+    if (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74 || e.keyCode === 67)) {
+      e.preventDefault();
+      return false;
+    }
+    // Ctrl+U (View Source)
+    if (e.ctrlKey && e.keyCode === 85) {
+      e.preventDefault();
+      return false;
+    }
+    // Mac equivalents: Cmd+Option+I/J/C/U
+    if (e.metaKey && e.altKey && (e.keyCode === 73 || e.keyCode === 74 || e.keyCode === 67 || e.keyCode === 85)) {
+      e.preventDefault();
+      return false;
+    }
+    // Optional: Block Ctrl+S (Save Page)
+    if (e.keyCode === 83 && (e.ctrlKey || (navigator.platform.match('Mac') && e.metaKey))) {
+      e.preventDefault();
+      return false;
+    }
+  });
 </script>
 
 
