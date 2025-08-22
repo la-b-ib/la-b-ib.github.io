@@ -1,3 +1,7 @@
+
+$(document).ready(function() {
+
+
 !(function($) {
     "use strict";
   
@@ -103,7 +107,7 @@
     }
   });
       $('body').append($mobile_nav);
-      $('body').prepend('<button type="button" class="mobile-nav-toggle d-lg-none"><i class="icofont-navigation-menu"></i></button>');
+      $('body').prepend('<button type="button" class="mobile-nav-toggle d-lg-none"><i class="material-icons" style="font-size: 30px; color: black;">drag_indicator</i></button>');
       $('body').append('<div class="mobile-nav-overly"></div>');
   
       $(document).on('click', '.mobile-nav-toggle', function(e) {
@@ -198,3 +202,5 @@
     });
   
   })(jQuery);
+
+});
