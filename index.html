@@ -692,12 +692,17 @@
                         tooltip.className = 'fallback-tooltip';
                         tooltip.textContent = this.getAttribute('data-tippy-content');
                         tooltip.style.position = 'absolute';
-                        tooltip.style.background = '#333';
-                        tooltip.style.color = '#fff';
-                        tooltip.style.padding = '5px 0';
+                        tooltip.style.background = 'transparent';              // Fully transparent background
+                        tooltip.style.backdropFilter = 'blur(10px)';           // Blurs background behind tooltip
+                        tooltip.style.webkitBackdropFilter = 'blur(10px)';     // Safari support
+
+                        tooltip.style.color = '#000';              // Black text
+                        tooltip.style.fontWeight = 'bold';
+
+                        tooltip.style.padding = '5px 5px'; 
                         tooltip.style.borderRadius = '4px';
                         tooltip.style.zIndex = '1000';
-                        tooltip.style.maxWidth = '200px';
+                        tooltip.style.width = 'auto';              // Width adjusts to content
                         
                         document.body.appendChild(tooltip);
                         
@@ -3075,5 +3080,6 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
-</body>
+
+
 </html>
