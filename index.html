@@ -101,7 +101,7 @@
   <!-- ======= Header ======= -->
   <header id="header" class="header-tops">
     <div class="container">
-      <h1><a href="index.html" style="margin-right: 1px;">Labib Bin Shahed</a></h1>
+      <h1><a href="index.html" style="margin-right: 15px;">Labib Bin Shahed</a></h1>
       <h2 style="color:#000000"><b>I'm</b> <span class="typing" style="color:#4285F4"></span></h2>
      <nav class="nav-menu d-none d-lg-block" style="color: #4285F4;">
     <ul>
@@ -506,9 +506,40 @@
                 <div class="card-header">
                     <img src="assets/img/education/bu.png" class="edu-logo" alt="BRAC University Logo">
                     <div class="education-info">
-                        <p><b>B.Sc in CSE</b></p>
-                        <p class="education-period">January 2022 - Present</p>
-                        <p class="education-location">BRAC University</p>
+                        
+                      <ul style="list-style: none; padding: 0; margin: 0;">
+  <li style="display: flex; align-items: center; gap: 5px; margin-bottom: 10px;">
+    <span class="material-icons" style="color: black; font-size: 1.5em; display: inline-flex; align-items: center; justify-content: center;">school</span>
+    <span style="display: flex; align-items: center;">
+      <b><span style="color: #4284F4;">Degree</span> : B.Sc in Computer Science and Engineering</b>
+    </span>
+  </li>
+
+  <li style="display: flex; align-items: center; gap: 5px; margin-bottom: 10px;">
+    <span class="material-icons" style="color: black; font-size: 1.5em; display: inline-flex; align-items: center; justify-content: center;">calendar_today</span>
+    <span style="display: flex; align-items: center;">
+      <b><span style="color: #4284F4;">Period</span> : January 2022 – Present</b>
+    </span>
+  </li>
+
+  <li style="display: flex; align-items: center; gap: 5px; margin-bottom: 10px;">
+    <span class="material-icons" style="color: black; font-size: 1.5em; display: inline-flex; align-items: center; justify-content: center;">location_on</span>
+    <span style="display: flex; align-items: center;">
+      <b><span style="color: #4284F4;">Institution</span> : BRAC University | Kha 224, Bir Uttam Rafiqul Islam Ave, Dhaka 1212</b>
+    </span>
+  </li>
+
+  <li style="display: flex; align-items: center; gap: 5px;">
+    <span class="material-icons" style="color: black; font-size: 1.5em; display: inline-flex; align-items: center; justify-content: center;">language</span>
+    <span style="display: flex; align-items: center;">
+      <b><span style="color: #4284F4;">Website</span> : 
+        <a href="https://www.bracu.ac.bd/" target="_blank" rel="noopener noreferrer" style="color: #0077cc; text-decoration: none;">https://www.bracu.ac.bd/</a>
+      </b>
+    </span>
+  </li>
+</ul>
+
+
                     </div>
                 </div>
                 <div class="card-body">
@@ -832,24 +863,12 @@
 </section>
 
 <style>
-/* Base Styles - Apple-inspired glassmorphism */
-.education-section {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 80px 0;
-}
-
 .container {
     max-width: 100%;
     margin: 0 auto;
     padding: 0 20px;
     box-sizing: border-box;
 }
-
-.section-title {
-  margin: 20px 0;
-}
-
 
 /* Make ALL text bold */
 h2, h3, h4, p, li, button, input, select, option {
@@ -893,7 +912,7 @@ h2, h3, h4, p, li, button, input, select, option {
     margin-right: 24px;
     background: #ffffff;
     padding: 8px;
-    border-radius: 12px;
+    border-radius: 100px;
 }
 
 .education-period,
@@ -1012,9 +1031,7 @@ mark {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .education-section {
-        padding: 32px 0; /* Reduced vertical padding for compact mobile view */
-    }
+    
     
     .container {
         width: 100%;
@@ -1037,12 +1054,15 @@ mark {
     }
 
     .edu-logo {
-        width: 60px; /* Slightly smaller logo for better fit */
-        height: 60px;
-        margin-right: 0;
-        margin-bottom: 8px;
-        border-radius: 8px; /* Tighter radius for modern aesthetic */
-    }
+    width: 100px; /* Slightly smaller logo for better fit */
+    height: 100px;
+    margin: 0 auto 8px auto; /* Center horizontally with bottom margin */
+    padding-top: 20px; /* Added top padding */
+    border: 4px solid transparent; /* Border width set, color effectively 'none' */
+    border-radius: 100px; /* Tighter radius for modern aesthetic */
+    display: block; /* Ensures margin auto centers the logo */
+}
+
 
     .card-body {
         padding: 12px 3px; /* Optimized horizontal padding */
