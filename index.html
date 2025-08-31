@@ -773,241 +773,302 @@
 </section>
 
 <style>
-    /* Base Styles - Apple-inspired glassmorphism */
-    .education-section {
-        width: 100%;
-        box-sizing: border-box;
-        padding: 80px 0;
-    }
+/* Base Styles - Apple-inspired glassmorphism */
+.education-section {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 80px 0;
+}
 
-    .container {
-        max-width: 100%;
-        margin: 0 auto;
-        padding: 0 20px;
-        box-sizing: border-box;
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
 
-    }
+.section-title {
+    margin-bottom: 20px;
+}
 
-    .section-title {
-        margin-bottom: 20px;
-    }
+/* Make ALL text bold */
+h2, h3, h4, p, li, button, input, select, option {
+    font-weight: bold !important;
+}
 
-    /* Make ALL text bold */
-    h2, h3, h4, p, li, button, input, select, option {
-        font-weight: bold !important;
-    }
+/* Grid Layout */
+.education-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    width: 100%;
+    box-sizing: border-box;
+}
 
-    /* Grid Layout */
-    .education-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 32px;
-        width: 100%;
-        box-sizing: border-box;
-    }
+/* Glassmorphism Card */
+.glass-card {
+    background: rgba(255, 255, 255, 0.6);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+}
 
-    /* Glassmorphism Card */
-    .glass-card {
-        background: rgba(255, 255, 255, 0.6);
-        -webkit-backdrop-filter: blur(20px);
-        backdrop-filter: blur(20px);
-        border: 1px solid rgba(255, 255, 255, 0.5);
-        border-radius: 20px;
-        overflow: hidden;
-        width: 100%;
-        box-sizing: border-box;
-    }
+.card-header {
+    display: flex;
+    align-items: center;
+    padding: 24px;
+    background: #F6F8F9; /* Solid color instead of gradient */
+    color: #333333; /* Dark text for better contrast */
+    box-sizing: border-box;
+}
 
-    .card-header {
-        display: flex;
-        align-items: center;
-        padding: 24px;
+.edu-logo {
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
+    margin-right: 24px;
+    background: #ffffff;
+    padding: 8px;
+    border-radius: 12px;
+}
 
-        background: #F6F8F9; /* Solid color instead of gradient */
-        color: #333333; /* Dark text for better contrast */
-        box-sizing: border-box;
-    }
+.education-period,
+.education-location {
+    margin: 4px 0;
+}
 
-    .edu-logo {
-        width: 130px;
-        height: 130px;
-        object-fit: contain;
-        margin-right: 24px;
-        background: #ffffff;
-        padding: 8px;
-        border-radius: 12px;
-    }
+.card-body {
+    padding: 24px;
+    box-sizing: border-box;
+}
 
-    .education-period,
-    .education-location {
-        margin: 4px 0;
-    }
-
-    .card-body {
-        padding: 24px;
-        box-sizing: border-box;
-    }
-
-    .info-list,
+.info-list,
 .course-list {
     list-style: none;
     padding: 0 0 0 3px; /* top right bottom left */
     margin: 0;
 }
 
+.info-list li,
+.course-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    color: #333333;
+    border-bottom: 5px solid rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
 
-    .info-list li,
-    .course-list li {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        padding: 12px 0;
-        color: #333333;
-        border-bottom: 5px solid rgba(0, 0, 0, 0.05);
-        cursor: pointer;
-    }
+.info-list li:last-child,
+.course-list li:last-child {
+    border-bottom: none;
+}
 
-    .info-list li:last-child,
-    .course-list li:last-child {
-        border-bottom: none;
-    }
+/* Search and Sort Container */
+.search-sort-container {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
 
-    .material-icons {
-        color: #4285F4;
-        flex-shrink: 0;
-        font-size: 25px !important; /* Set icon size to 25px */
-    }
+.search-input,
+.sort-select {
+    flex: 1;
+    padding: 12px;
+    border: 4px solid #4285F4;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
 
-    /* Search and Sort Container */
-    .search-sort-container {
-        display: flex;
-        gap: 16px;
-        margin-bottom: 20px;
-        width: 100%;
-        box-sizing: border-box;
-    }
+.search-input::placeholder {
+    color: #aaa;
+}
 
-    .search-input,
-    .sort-select {
-        flex: 1;
-        padding: 12px;
-        border: 4px solid #4285F4;
-        border-radius: 8px;
-        box-sizing: border-box;
-    }
+mark {
+    background: #0071e340;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
 
-    .search-input::placeholder {
-        color: #aaa;
-    }
-
-    mark {
-        background: #0071e340;
-        padding: 2px 4px;
-        border-radius: 4px;
-    }
-
-    /* Accordion Styles */
-    .accordion-item {
+/* Accordion Styles */
+.accordion-item {
     border: 5px solid rgba(0, 0, 0, 0.05); /* uniform border on all sides */
 }
 
+.accordion-header {
+    width: 100%;
+    padding: 16px 0 16px 5px;
+    background: none;
+    border: none;
+    color: #000000;
+    text-align: left;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    .accordion-header {
-        width: 100%;
-        padding: 16px 0 16px 5px;
-        background: none;
-        border: none;
-        color: #000000;
-        text-align: left;
-        cursor: pointer;
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+.accordion-header::after {
+    content: 'expand_more';
+    font-family: 'Material Icons';
+    color: #1d1d1f;
+    transition: transform 0.3s ease;
+}
 
-    .accordion-header::after {
-        content: 'expand_more';
-        font-family: 'Material Icons';
-        color: #1d1d1f;
-        transition: transform 0.3s ease;
-        
-    }
+.accordion-item.active .accordion-header::after {
+    transform: rotate(180deg);
+}
 
-    .accordion-item.active .accordion-header::after {
-        transform: rotate(180deg);
-    }
+.accordion-content {
+    padding: 0 0 16px 0;
+    display: none;
+}
 
-    .accordion-content {
-        padding: 0 0 16px 0;
-        display: none;
-    }
-
-    .accordion-item.active .accordion-content {
+.accordion-item.active .accordion-content {
     display: block;
     background-color: #ffffff; /* white background */
     color: #000000;            /* black text */
     font-weight: bold;         /* all text bold */
 }
 
+/* Course item focus/hover states */
+.course-list li:focus,
+.course-list li:active {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
 
-    /* Responsive */
-    @media (max-width: 768px) {
-        .education-section {
-            padding: 60px 0;
-        }
-        
-        .container {
-            padding: 0 5px; /* 5px padding from left and right edges */
-        }
-
-        .glass-card {
-            border-radius: 16px;
-        }
-
-        .card-header {
-            padding: 20px;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        .edu-logo {
-            width: 70px;
-            height: 70px;
-            margin-right: 0;
-            margin-bottom: 16px;
-        }
-
-        .card-body {
-            padding: 20px;
-        }
-
-        .info-list li,
-        .course-list li {
-            flex-direction: row;
-            align-items: center;
-        }
-
-        .search-sort-container {
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .search-input,
-        .sort-select {
-            width: 100%;
-        }
+/* Responsive */
+@media (max-width: 768px) {
+    .education-section {
+        padding: 32px 0; /* Reduced vertical padding for compact mobile view */
+    }
+    
+    .container {
+        width: 100%;
+        padding: 0 3px; /* 3px padding from left and right edges on mobile */
+        margin: 0; /* Remove margin to maximize screen usage */
+        box-sizing: border-box;
     }
 
-    @media (min-width: 1200px) {
-        .container {
-            max-width: 1400px;
-        }
-
-        .glass-card {
-            max-width: 100%;
-        }
+    .glass-card {
+        border-radius: 12px; /* Slightly smaller radius for modern look */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     }
+
+    .card-header {
+        padding: 12px 3px; /* Optimized horizontal padding */
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px; /* Improved spacing */
+        background: linear-gradient(180deg, #F6F8F9 0%, #E8ECEF 100%); /* Subtle gradient for modern feel */
+    }
+
+    .edu-logo {
+        width: 60px; /* Slightly smaller logo for better fit */
+        height: 60px;
+        margin-right: 0;
+        margin-bottom: 8px;
+        border-radius: 8px; /* Tighter radius for modern aesthetic */
+    }
+
+    .card-body {
+        padding: 12px 3px; /* Optimized horizontal padding */
+    }
+
+    .info-list li,
+    .course-list li {
+        flex-direction: row;
+        align-items: center;
+        padding: 8px 3px; /* Optimized padding for compact layout */
+        transition: background-color 0.2s ease; /* Smooth transition for tap feedback */
+    }
+
+    .search-sort-container {
+        flex-direction: column;
+        gap: 8px; /* Tighter gap for compact layout */
+        padding: 0 3px; /* 3px horizontal padding */
+    }
+
+    .search-input,
+    .sort-select {
+        width: calc(100% - 6px); /* Full width minus 3px left and right padding */
+        margin: 0 3px; /* 3px horizontal margin */
+        border-radius: 12px; /* More rounded corners for modern look */
+        border-width: 2px; /* Thinner border for sleeker appearance */
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        transition: box-shadow 0.2s ease; /* Smooth shadow transition */
+    }
+
+    .search-input:focus,
+    .sort-select:focus {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on focus */
+        outline: none; /* Remove default outline */
+    }
+    
+    /* Ensure course items have white background and black bold text when tapped */
+    .course-list li:focus,
+    .course-list li:active,
+    .course-list li:hover {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+        font-weight: bold !important;
+        border-radius: 8px; /* Rounded corners for tapped state */
+    }
+    
+    /* Add tap highlight color for mobile */
+    .course-list li {
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0.7);
+        touch-action: manipulation; /* Improve touch responsiveness */
+    }
+
+    /* Optimize accordion for mobile */
+    .accordion-header {
+        padding: 12px 3px; /* Optimized padding */
+        border-radius: 8px; /* Rounded corners for modern look */
+        transition: background-color 0.2s ease; /* Smooth tap feedback */
+    }
+
+    .accordion-header:active {
+        background-color: rgba(255, 255, 255, 0.9); /* Subtle feedback on tap */
+    }
+
+    .accordion-content {
+        padding: 0 3px 12px 3px; /* Optimized padding */
+        border-radius: 0 0 8px 8px; /* Rounded bottom corners */
+    }
+
+    /* Optimize touch interactions */
+    .course-list li,
+    .accordion-header {
+        touch-action: manipulation; /* Improve touch responsiveness */
+    }
+
+    /* Remove default focus outlines for cleaner mobile look */
+    .course-list li:focus,
+    .accordion-header:focus {
+        outline: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1400px;
+        padding: 0 20px; /* Reset to original padding on larger screens */
+    }
+
+    .glass-card {
+        max-width: 100%;
+    }
+}
 </style>
 <!-- End Education Section -->
 
