@@ -847,8 +847,9 @@
 }
 
 .section-title {
-    margin-bottom: 20px;
+  margin: 20px 0;
 }
+
 
 /* Make ALL text bold */
 h2, h3, h4, p, li, button, input, select, option {
@@ -1056,17 +1057,20 @@ mark {
     }
 
     .search-sort-container {
-        flex-direction: column;
-        gap: 8px; /* Tighter gap for compact layout */
-        padding: 0 3px; /* 3px horizontal padding */
-    }
+  flex-direction: column;
+  gap: 8px;
+  padding: 0;                     /* Removes all padding */
+           /* Rounded corners */
+}
+
+
 
     .search-input,
     .sort-select {
-        width: calc(100% - 6px); /* Full width minus 3px left and right padding */
+        width: calc(100% - 0px); /* Full width minus 3px left and right padding */
         margin: 0 3px; /* 3px horizontal margin */
-        border-radius: 12px; /* More rounded corners for modern look */
-        border-width: 2px; /* Thinner border for sleeker appearance */
+        border-radius: 4px; /* More rounded corners for modern look */
+        border-width: 4px; /* Thinner border for sleeker appearance */
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
         transition: box-shadow 0.2s ease; /* Smooth shadow transition */
     }
