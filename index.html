@@ -2954,7 +2954,232 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
     </style>
 
 <!-- End Contact Section -->
-  <!-- Vendor JS Files -->
+
+<!-- ======= Footer ======= -->
+<!-- ======= Footer ======= -->
+<!-- ======= Footer ======= -->
+<footer id="footer" aria-label="Site footer">
+  <div class="container">
+    <div class="footer-content" id="footerDefault">
+      <span class="footer-name"><strong>Labib Bin Shahed</strong></span>
+      <button class="search-toggle" aria-label="Open search" onclick="toggleSearch(true)">
+        <i class="bx bx-search"></i>
+      </button>
+    </div>
+
+    <form class="footer-search" id="footerSearch" role="search" aria-label="Site search" onsubmit="return searchSite(event)">
+      <input type="text" id="footerSearchInput" placeholder="Search site..." aria-label="Search input" />
+      <button type="submit" aria-label="Search"><i class="bx bx-search-alt"></i></button>
+      <button type="button" class="close-search" aria-label="Close search" onclick="toggleSearch(false)">
+        <i class="bx bx-x"></i>
+      </button>
+    </form>
+  </div>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
+    :root {
+      --primary-color: #4285F4;
+      --text-color: #000;
+      --hover-color: #000;
+      --fallback-bg: rgba(255, 255, 255, 0.05);
+    }
+
+    #footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 10px 0;
+      background: var(--fallback-bg);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      font-family: 'Bungee', sans-serif;
+      color: var(--text-color);
+      font-size: clamp(10px, 1.2vw, 13px);
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #footer .container {
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    .footer-name {
+      font-weight: 600;
+    }
+
+    .search-toggle {
+      background: none;
+      border: none;
+      color: var(--primary-color);
+      font-size: 20px;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .search-toggle:hover {
+      color: var(--hover-color);
+    }
+
+    .footer-search {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+    }
+
+    .footer-search.active {
+      display: flex;
+    }
+
+    .footer-search input {
+      border: none;
+      outline: none;
+      background: rgba(255, 255, 255, 0.6);
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      color: var(--text-color);
+      width: 160px;
+      backdrop-filter: blur(6px);
+    }
+
+    .footer-search button {
+      background: none;
+      border: none;
+      color: var(--primary-color);
+      font-size: 20px;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .footer-search button:hover {
+      color: var(--hover-color);
+    }
+
+    .close-search {
+      font-size: 22px;
+    }
+
+    .search-highlight {
+      background-color: yellow;
+      color: black;
+      font-weight: bold;
+      padding: 0 2px;
+      border-radius: 2px;
+    }
+
+    @media (max-width: 768px) {
+      .footer-content {
+        flex-direction: column;
+        gap: 6px;
+        text-align: center;
+      }
+
+      .footer-search input {
+        width: 120px;
+        font-size: 12px;
+      }
+
+      .footer-search button {
+        font-size: 18px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .search-toggle,
+      .footer-search button {
+        transition: none;
+        transform: none;
+      }
+    }
+  </style>
+
+  <script>
+    function toggleSearch(show) {
+      const defaultView = document.getElementById('footerDefault');
+      const searchView = document.getElementById('footerSearch');
+      if (show) {
+        defaultView.style.display = 'none';
+        searchView.classList.add('active');
+      } else {
+        defaultView.style.display = 'flex';
+        searchView.classList.remove('active');
+        document.getElementById('footerSearchInput').value = '';
+        document.querySelectorAll('.search-highlight').forEach(el => {
+          el.outerHTML = el.innerHTML;
+        });
+      }
+    }
+
+    function searchSite(event) {
+      event.preventDefault();
+      const query = document.getElementById('footerSearchInput').value.trim().toLowerCase();
+      if (!query) return;
+
+      document.querySelectorAll('.search-highlight').forEach(el => {
+        el.outerHTML = el.innerHTML;
+      });
+
+      const bodyTextNodes = getTextNodes(document.body);
+      let found = false;
+
+      bodyTextNodes.forEach(node => {
+        const text = node.nodeValue;
+        const index = text.toLowerCase().indexOf(query);
+        if (index !== -1) {
+          const span = document.createElement('span');
+          span.className = 'search-highlight';
+          span.textContent = text.substring(index, index + query.length);
+
+          const before = document.createTextNode(text.substring(0, index));
+          const after = document.createTextNode(text.substring(index + query.length));
+
+          const parent = node.parentNode;
+          parent.replaceChild(after, node);
+          parent.insertBefore(span, after);
+          parent.insertBefore(before, span);
+
+          found = true;
+        }
+      });
+
+      if (!found) alert('No matches found.');
+    }
+
+    function getTextNodes(element) {
+      const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, {
+        acceptNode: function(node) {
+          return node.parentNode.offsetParent !== null ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+        }
+      });
+      const nodes = [];
+      while (walker.nextNode()) {
+        nodes.push(walker.currentNode);
+      }
+      return nodes;
+    }
+  </script>
+</footer>
+
+
+
+<!-- Vendor JS Files -->
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
