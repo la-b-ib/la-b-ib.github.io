@@ -489,6 +489,7 @@
     /* Ensure all text is bold */
     strong, b {
       font-weight: bold !important;
+      
     }
   </style>
  
@@ -890,10 +891,14 @@
 }
 
 /* Make all text bold and justified */
-h2, h3, h4, p, li, button, input, select, option {
-    font-weight: bold !important;
-    
+
+h1, h2, h3, h4, h5, h6,
+p, li, button, input, select, option, td, th, label{
+  font-family: 'Bungee', sans-serif !important;
+  font-weight: bold !important;
 }
+
+
 
 
 /* Grid Layout */
@@ -3040,7 +3045,7 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
     .footer-search input {
       border: none;
       outline: none;
-      background: rgba(255, 255, 255, 0.6);
+      background: transparent;
       padding: 6px 12px;
       border-radius: 20px;
       font-size: 16px;
