@@ -534,6 +534,94 @@
       background: rgba(255, 255, 255, 0.05);
       border-radius: 8px;
     }
+
+    /* Badge container styling */
+.research-badges {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px; /* Controls space between badges */
+    justify-content: flex-start; /* Aligns badges to the left */
+    align-items: center; /* Maintains vertical alignment */
+    overflow-x: auto; /* Enables horizontal scrolling */
+    white-space: nowrap;
+    padding-bottom: 10px; /* Adds padding for smoother scrolling */
+}
+
+/* Badge styling */
+.research-badges .badge {
+    display: flex;
+    align-items: center;
+    background-color: #f7f9f9;
+    border-radius: 6px;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #333;
+    border-left: 5px solid currentColor; /* Uses the text color for the left border */
+    transition: border-left-color 0.2s ease; /* Smooth transition for tap effect */
+}
+
+/* Tap/click effect for sidebar color */
+.research-badges .badge:active,
+.research-badges .badge:focus {
+    border-left-color: #4285F4 !important; /* Force blue border on tap/click */
+}
+
+/* Badge logo styling */
+.research-badges .badge-logo {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+/* Badge text styling */
+.research-badges .badge-text {
+    font-weight: bold;
+    font-size: 14px;
+    color: inherit; /* Ensure text inherits badge's color */
+}
+
+/* Specific badge colors */
+.research-badges .badge.orcid {
+    color: #9d1620;
+}
+
+.research-badges .badge.researchgate {
+    color: #000000;
+}
+
+.research-badges .badge.googlescholar {
+    color: #4285f4;
+}
+
+.research-badges .badge.ieee {
+    color: #00629b;
+}
+
+/* Ensure text inherits badge color */
+.research-badges .badge.orcid .badge-text,
+.research-badges .badge.researchgate .badge-text,
+.research-badges .badge.googlescholar .badge-text,
+.research-badges .badge.ieee .badge-text {
+    color: inherit;
+}
+
+/* Mobile view: Ensure single row with horizontal scrolling */
+@media (max-width: 767.98px) {
+    .research-badges {
+        flex-wrap: nowrap !important; /* Prevent wrapping */
+        overflow-x: auto !important; /* Enable horizontal scrolling */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+        scrollbar-width: none; /* Hide scrollbar for Firefox */
+        padding: 0 15px; /* Match container padding */
+    }
+    .research-badges::-webkit-scrollbar {
+        display: none; /* Hide scrollbar for WebKit browsers */
+    }
+    .research-badges .badge {
+        flex: 0 0 auto; /* Prevent badges from shrinking or wrapping */
+        min-width: 120px; /* Ensure badges are wide enough for readability */
+    }
+}
     
     
     /* Mobile Responsiveness */
@@ -550,6 +638,8 @@
         height: 300px;
         object-fit: cover;
       }
+
+      
     }
     
     /* Ensure all text is bold */
@@ -557,57 +647,8 @@
       font-weight: bold !important;
       
     }
-    .badge-container {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 10px; /* Controls space between badges */
-    justify-content: flex-start; /* Aligns badges to the left */
-    align-items: center; /* Maintains vertical alignment */
-    overflow-x: auto;
-    white-space: nowrap;
-}
 
-        
-        .badge {
-    display: flex;
-    align-items: center;
-    background-color: #f7f9f9;
-    border-radius: 6px;
-    padding: 8px 12px;
-    text-decoration: none;
-    color: #333;
-    border-left: 5px solid currentColor; /* Uses the text color for the left border */
-}
-        
-        .badge-logo {
-            width: 20px;
-            height: 20px;
-            margin-right: 8px;
-        }
-        
-        .badge-text {
-            font-weight: bold;
-            font-size: 14px;
-        }
-        .badge.orcid {
-    color: #9d1620;
-}
-.badge.researchgate {
-    color: #000000;
-}
-.badge.googlescholar {
-    color: #4285f4;
-}
-.badge.ieee {
-    color: #00629b;
-}
-
-.badge.orcid .badge-text,
-.badge.researchgate .badge-text,
-.badge.googlescholar .badge-text,
-.badge.ieee .badge-text {
-    color: inherit; /* Ensure text inherits the badge's color */
-}
+    
 
 
 
