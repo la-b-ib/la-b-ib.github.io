@@ -1,194 +1,149 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-5BB8W2X');</script>
-  <!-- End Google Tag Manager -->
-  <link rel="icon" type="image/png" href="/favicon.png"/>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <meta http-equiv="Strict-Transport-Security" content="max-age=31536000">
-  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-
-  <meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp">
-  <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
-
-  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=()">
-  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
-  
-
-
-  
-
-  <link rel="preload" href="https://fonts.gstatic.com/s/materialicons/v140/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2" as="font" type="font/woff2" crossorigin>
-
-  <title>AURIX</title>
-  
-  <meta content="" name="descriptison">
-  <meta content="" name="keywords">
-  
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap">
-
- 
-  <link rel="preload" href="https://fonts.gstatic.com/s/materialicons/v140/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2" as="font" crossorigin>
-  
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/css/bootstrap.min.css" rel="stylesheet">
-
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/icofont/1.0.1/icofont.min.css" rel="stylesheet">
-
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"></noscript>
-
-  
-
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" rel="stylesheet">
-
-
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/venobox/2.1.8/venobox.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169007209-3"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-169007209-3');
-  </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/devtools-detect@latest/dist/devtools-detect.js"></script>
-  <script>
-    window.addEventListener('devtoolschange', function(e) {
-      if (e.detail.isOpen) {
-        // React: e.g., blur page or redirect
-        document.body.style.filter = 'blur(10px)'; // Visual deterrent
-        alert('Developer Tools detected. Closing for security.');
-        // Or: window.location.href = 'https://example.com/blocked';
-      }
-    });
-  </script>
-
-  
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-</head>
-<body>
-  
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5BB8W2X"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="header-tops">
-    <div class="container">
-
-      <h1>
-        <a href="index.html" style=" text-decoration: none; color: #000000; display: inline-block;">Labib Bin Shahed</a>
-      </h1>
-
-
-
-      <h2 style="color:#000000"><b>I'm</b> <span class="typing" style="color:#4285F4"></span></h2>
-     <nav class="nav-menu d-none d-lg-block" style="color: #4285F4;">
-    <ul>
-        <li class="active"><a href="#header"><span><b style="color: #000000;">Home</b></span></a></li>
-        <li><a href="#about"><span><b style="color: #000000;">About</b></span></a></li>
-        <li><a href="#education"><span><b style="color: #000000;">Education</b></span></a></li>
-        <li><a href="#certification"><span><b style="color: #000000;">Certification</b></span></a></li>
-        <li><a href="#research"><span><b style="color: #000000;">Research</b></span></a></li>
-        <li><a href="#experience"><span><b style="color: #000000;">Experience</b></span></a></li>
-        <li><a href="#portfolio"><span><b style="color: #000000;">Projects</b></span></a></li>
-        <li><a href="#skills"><span><b style="color: #000000;">Skills</b></span></a></li>
-        <li><a href="#blogs"><span><b style="color: #000000;">Blogs</b></span></a></li>
-        <li><a href="#contacts"><span><b style="color: #000000;">Contact</b></span></a></li>
-    </ul>
-</nav>
-
-
-      <div class="social-links">
-        <a href="https://github.com/la-b-ib" target="_blank" class="github" style="text-decoration: none;">
-            <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/social%20links%20icon/gh.PNG" alt="GitHub" width="45" height="45">
-        </a>
-        <a href="https://www.linkedin.com/in/la-b-ib/" target="_blank" class="linkedin" style="text-decoration: none;">
-            <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/social%20links%20icon/ln.PNG" alt="LinkedIn" width="45" height="45">
-        </a>
-        <a href="https://www.reddit.com/u/la-b-ib/s/cNt5KoLEdT" target="_blank" class="reddit" style="text-decoration: none;">
-            <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/social%20links%20icon/rdt.PNG" alt="Reddit" width="45" height="45">
-        </a>  
-      </div>
-
-
-
-
-    </div>
-</header>
-
-<style>
-
-/* Overlay to obscure content */
-  .screenshot-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.9);
-    z-index: 9999;
-    display: none;
-    color: white;
-    text-align: center;
-    font-size: 24px;
-    align-items: center;
-    justify-content: center;
-  }
-  .screenshot-overlay.active {
-    display: flex;
-  }
-  /* Optional: Blur content */
-  .blur-content {
-    filter: blur(10px);
-  }
-
-
-
-
-
-/* Override Bootstrap container for desktop view */
-@media (min-width: 992px) {
-  #header.header-tops {
-    width: auto !important;
-    max-width: none !important;
-  }
-  
-  #header.header-tops > .container {
-    width: auto !important;
-    max-width: none !important;
-    padding-left: 30px;
-    padding-right: 30px;
-  }
+/*--------------------------------------------------------------
+# Material Icons
+--------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+    font-family: "Open Sans", sans-serif;
+    color: #000000;
+    position: relative;
+    background: transparent;
+    font-size: 17px; /* Increased from default (typically 16px) */
 }
 
-/* Your existing navigation menu styles - unchanged */
+body::before {
+    content: "";
+    position: fixed;
+    background: #ffffff;
+    background-size: cover;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100vh;
+}
+
+
+@media (min-width: 1024px) {
+    body::before {
+        background-attachment: fixed;
+    }
+}
+
+a {
+    color: #4285F4;
+}
+
+a:hover {
+    color: #4285F4;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Raleway", sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+    transition: ease-in-out 0s;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    z-index: 997;
+    overflow-y: auto;
+}
+
+#header * {
+    transition: ease-in-out 0s;
+}
+
+#header h1 {
+    font-size: 42px;
+    margin-top: 0px;
+    margin-right: 15px;
+    padding: 0;
+    line-height: 1;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+}
+
+#header h1 a, #header h1 a:hover {
+    color: #000000;
+    line-height: 1;
+    display: inline-block;
+}
+
+#header h2 {
+    font-size: 24px;
+    margin-top: 20px;
+    color: #240072;
+}
+
+
+
+
+
+#header h2 span {
+    color:  #000000;
+    border-bottom: 5px solid #000000 ;
+    padding-bottom: 5px;
+}
+
+
+#header img {
+    padding: 0;
+    margin: 0;
+}
+
+#header .social-links {
+    margin-top: 40px;
+    display: flex;
+}
+
+#header .social-links a {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000000;
+    color: #ffffff;
+    line-height: 1;
+    margin-right: 8px;
+    border-radius: 100%;
+    width: 45px;
+    height: 45px;
+}
+
+#header .social-links a:hover {
+    background: #192a56;
+}
+
+@media (max-width: 992px) {
+    #header h1 {
+        font-size: 36px;
+    }
+    #header h2 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    #header .social-links {
+        margin-top: 15px;
+    }
+    #header .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Desktop Navigation */
 .nav-menu {
     margin-top: 35px;
 }
@@ -217,3471 +172,1378 @@
     content: "";
     position: absolute;
     width: 0;
-    height: 5px;
+    height: 2px;
     bottom: -4px;
     left: 0;
-    background: #000000; /* Soft blue transparency */
-   
+    background-color: #9e7f25;
     visibility: hidden;
     width: 0px;
-    transition: all 0.2s ease-in-out 0s;
-    border-radius: 2.5px;
+    transition: all 0.3s ease-in-out 0s;
 }
 
 .nav-menu a:hover:before, .nav-menu li:hover > a:before, .nav-menu .active > a:before {
     visibility: visible;
-    width: 30px;
+    width: 25px;
 }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
-    color: #006a4e;
+    color: #12d640;
     text-decoration: none;
 }
 
-@media (max-width: 768px) {
-    @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
-
-    body, h1, h2, h3, h4, h5, h6,
-    p, li, ul, 
-     strong, b {
-      font-family: 'Bungee', sans-serif !important;
-    }
-</style>
-
-
-<!-- ======= About Section ======= -->
-
-<section id="about" class="about">
-
-  <!-- ======= About Me ======= -->
-  <div class="about-me container">
-
-    <div class="section-title">
-      <h2><b>About</b></h2>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-4">
-        <img src="assets/img/profile.jpeg" class="img-fluid" alt="">
-      </div>
-      <div class="col-lg-8 pt-4 pt-lg-0 content">
-
-        <p style="text-align: justify;"><b>Focused and enthusiastic developer with a keen interest in software development and artificial intelligence. By comprehensive exposure
-          to the underlying concepts and applying them vividly to various projects, my love for these domains came into being.
-          I am a passionate individual who thrives to build and apply algorithms to solve real-world industry problems.</b></p>
-
-        <div class="row">
-          <div class="col-lg-6">
-            <ul style="list-style-type: none; padding-left: 0;">
-
-              <li style="display: flex; align-items: center; gap: 5px;">
-  <span class="material-icons" style="color: black; font-size: 1.5em; display: inline-flex; align-items: center; justify-content: center;">calendar_month</span>
-  <span style="display: flex; align-items: center;"><b><span style="color: #4284F4;">Birthday</span> : 18th January 2003
-
-</b></span>
-              </li>
-              
-              
-
-
-</b></span>
-              </li>
-
-
-
-              <li> <a href="https://drive.google.com/drive/folders/16fpvnxDVW_A6hbeYY5xGB2aEIVtMqqeU?usp=sharing"><img src="https://img.shields.io/badge/RESUME-CB3837?style=for-the-badge&logo=npm&logoColor=white" alt="npm" style="height: auto; width: auto;"></a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-6">
-            <ul>
-              
-              <li style="display: flex; align-items: center; gap: 5px;">
-  <span class="material-icons" style="color: black; font-size: 1.5em; display: inline-flex; align-items: center; justify-content: center;">mail</span>
-  <span style="display: flex; align-items: center;"><b><span style="color: #4284F4;">Email</span> : 
-<a href="mailto:labib.45x@gmail.com?subject=Inquiry%20from%20Website&body=Hello%20Labib,%0D%0A%0D%0AI%20have%20a%20question!" 
-   style="color: #000000; text-decoration: none;">
-    labib.45x@gmail.com
-</a>
-
-
-              
-            </ul>
-          </div>
-
-          <div class="col-lg-12 pt-4 pt-lg-0 content">
-            <h5 style="color: #4285f4; font-weight: 900;">
-  <span class="material-icons" style="color: #000000; vertical-align: middle; font-size: 2em; margin-right: 0px;">cruelty_free</span>
-  RESEARCH PROFILES
-</h5>
-
-
-
-            
-                <div class="research-badges">
-    
-
-                  <!-- ORCID Badge -->
-                  <a href="https://orcid.org/0009-0007-4656-8709" class="badge orcid" target="_blank">
-                      <img src="https://www.mendeley.com/favicon.ico" alt="ORCID" class="badge-logo">
-                      <span class="badge-text">ORCID</span>
-                  </a>
-
-                  <!-- IEEE Xplore Badge -->
-                  <a href="https://ieeexplore.ieee.org/author/398407024257618" class="badge ieee" target="_blank">
-                      <img src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/research%20badge/ieee.JPEG?raw=true" alt="IEEE Xplore" class="badge-logo">
-                      <span class="badge-text">IEEE Xplore</span>
-                  </a>
-
-                  <!-- Google Scholar Badge -->
-                  <a href="https://scholar.google.com/citations?hl=en&user=xg04A5kAAAAJ" class="badge googlescholar" target="_blank">
-                      <img src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/research%20badge/gs.PNG?raw=true" alt="Google Scholar" class="badge-logo">
-                      <span class="badge-text">Google Scholar</span>
-                  </a>
-
-                  <!-- ResearchGate Badge -->
-                  <a href="https://www.researchgate.net/profile/Labib-Bin-Shahed" class="badge researchgate" target="_blank">
-                      <img src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/research%20badge/rg.jpg?raw=true" alt="ResearchGate" class="badge-logo">
-                      <span class="badge-text">ResearchGate</span>
-                  </a>
-                </div>
-
-            
-
-                
-        
-        
-        
-    
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-  </div>
-
-  <!-- ======= Interests ======= -->
-  <div class="interests container">
-    <div class="section-title">
-      <h2 class="interest-heading"><b>Interests</b></h2>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-3 col-md-4 col-6 mt-4">
-        <div class="icon-box">
-          <i class="ri-global-line" style="color: #ffbb2c;"></i>
-          <h5 class="interest-title"><b>Server Side Request Forgery (SSRF)</b></h5>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-6 mt-4">
-        <div class="icon-box">
-          <i class="ri-database-2-line" style="color: #5578ff;"></i>
-          <h5 class="interest-title"><b>MACHINE LEARNING</b></h5>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-6 mt-4">
-        <div class="icon-box">
-          <i class="ri-camera-3-line" style="color: #e80368;"></i>
-          <h5 class="interest-title"><b>COMPUTER VISION</b></h5>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-6 mt-4">
-        <div class="icon-box">
-          <i class="ri-english-input" style="color: #1c7d32;"></i>
-          <h5 class="interest-title"><b>NATURAL LANGUAGE PROCESSING</b></h5>
-        </div>
-      </div>
-      
-      <div class="col-lg-3 col-md-4 col-6 mt-4">
-          <div class="icon-box">
-            <i class="ri-code-s-slash-fill" style="color: #28a745;"></i>
-            <h5 class="interest-title">SOFTWARE ENGINEERING</h5>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-6 mt-4">
-          <div class="icon-box">
-            <i class="ri-bar-chart-box-line" style="color: #f1081f;"></i>
-            <h5 class="interest-title"><b>COGNITIVE COMPUTING</b></h5>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-6 mt-4">
-          <div class="icon-box">
-            <i class="ri-file-list-3-line" style="color: #47aeff;"></i>
-            <h5 class="interest-title"><b>BACKTRACKING ALGORITHM</b></h5>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-6 mt-4">
-          <div class="icon-box">
-            <i class="ri-image-line" style="color: #ffc107;"></i>
-            <h5 class="interest-title"><b>IMAGE PROCESSING</b></h5>
-          </div>
-        </div>
-    </div>
-</div>
-
-<style>
-
-    .interest-heading,
-    .interest-title {
-        font-weight: bold;
-        text-align: left;
-        margin: 0;
-        padding: 0;
-    }
-    
-    .interest-heading {
-        font-size: 1.5rem; /* Larger for main heading */
-    }
-    
-    .interest-title {
-        font-size: 1rem; /* Standard size for items */
-    }
-    
-    .icon-box {
-        text-align: left;
-    }
-
-
-
-     /* Mobile view - 1 column */
-    @media (max-width: 767.98px) {
-        .interests.container .row > [class^="col-"] {
-            flex: 0 0 100%;
-            max-width: 100%;
-        }
-    }
-    
-    /* Ensure rows use full width within container padding */
-    .interests.container .row {
-        margin-left: -15px;
-        margin-right: -15px;
-    }
-    
-    .interests.container .row > [class^="col-"] {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-
-
-</style>
-  
-  <!-- ======= Contribution ======= -->
-  <div class="contribution container">
-
-    <div class="section-title">
-      <h2><b>Contribution</b></h2>
-    </div>
-    <div class="contribution-container">
-      <div class="contribution-badges">
-        <a href="https://octoprofile.vercel.app/user?id=la-b-ib"><img src="https://img.shields.io/badge/OctoProfile-Visit-2088FF?style=for-the-badge&logo=github" alt="OctoProfile"></a>
-        <a href="https://github.com/la-b-ib"><img src="https://komarev.com/ghpvc/?username=la-b-ib&label=Views&style=for-the-badge&color=2088FF" alt="Profile Views"></a>
-      </div>
-      <div class="contribution-graph">
-        <img src="https://github-readme-activity-graph.vercel.app/graph?username=la-b-ib&theme=github-dark-dimmed&area=true&hide_border=true&height=300&bg_color=ffffff&custom_title=Contribution+Activity&hide_title=false&line=4284f4&point=273c75&color=000000" 
-     alt="Contribution Graph">
-
-      </div>
-    </div>
-  </div>
-
-  
-</section>
-
-<style>
-
-
-
-
-
-
-    /* General Styles */
-    .contribution-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 15px;
-    }
-    
-    .contribution-badges img {
-      height: 28px;
-      width: auto;
-    }
-    
-    .contribution-container {
-    width: 100%;
-    margin: 0 auto;
-    background: #ffffff;
+/* Mobile Navigation */
+.mobile-nav-toggle {
+    position: fixed;
+    right: 12px;
+    top: 12px;
+    z-index: 9998;
+    background: 0;
+    border: 0;
+    width: 40px;
+    height: 40px;
     padding: 0;
-    border: 15px solid #f6f9f8; /* Adds border */
-    border-radius: 8px; /* Rounds corners */
+    margin: 0;
+    cursor: pointer;
 }
 
-    
-    .contribution-graph img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    
-    /* Interests Section */
-    .icon-box {
-      height: auto;
-      padding: 15px;
-      text-align: center;
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 8px;
-    }
-
-    /* Badge container styling */
-.research-badges {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 10px; /* Controls space between badges */
-    justify-content: flex-start; /* Aligns badges to the left */
-    align-items: center; /* Maintains vertical alignment */
-    overflow-x: auto; /* Enables horizontal scrolling */
-    white-space: nowrap;
-    padding-bottom: 10px; /* Adds padding for smoother scrolling */
-}
-
-/* Badge styling */
-.research-badges .badge {
-    display: flex;
-    align-items: center;
-    background-color: #f7f9f9;
-    border-radius: 6px;
-    padding: 8px 12px;
-    text-decoration: none;
-    color: #333;
-    border-left: 5px solid currentColor; /* Uses the text color for the left border */
-    transition: border-left-color 0.2s ease; /* Smooth transition for tap effect */
-}
-
-/* Tap/click effect for sidebar color */
-.research-badges .badge:active,
-.research-badges .badge:focus {
-    border-left-color: #4285F4 !important; /* Force blue border on tap/click */
-}
-
-/* Badge logo styling */
-.research-badges .badge-logo {
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
-}
-
-/* Badge text styling */
-.research-badges .badge-text {
-    font-weight: bold;
-    font-size: 14px;
-    color: inherit; /* Ensure text inherits badge's color */
-}
-
-/* Specific badge colors */
-.research-badges .badge.orcid {
-    color: #9d1620;
-}
-
-.research-badges .badge.researchgate {
+.mobile-nav-toggle i {
     color: #000000;
+    font-size: 26px;
+    display: block;
+    line-height: 1;
 }
 
-.research-badges .badge.googlescholar {
-    color: #4285f4;
-}
-
-.research-badges .badge.ieee {
-    color: #00629b;
-}
-
-/* Ensure text inherits badge color */
-.research-badges .badge.orcid .badge-text,
-.research-badges .badge.researchgate .badge-text,
-.research-badges .badge.googlescholar .badge-text,
-.research-badges .badge.ieee .badge-text {
-    color: inherit;
-}
-
-/* Mobile view: Ensure single row with horizontal scrolling */
-@media (max-width: 767.98px) {
-    .research-badges {
-        flex-wrap: nowrap !important; /* Prevent wrapping */
-        overflow-x: auto !important; /* Enable horizontal scrolling */
-        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-        scrollbar-width: none; /* Hide scrollbar for Firefox */
-        padding: 0 15px; /* Match container padding */
-    }
-    .research-badges::-webkit-scrollbar {
-        display: none; /* Hide scrollbar for WebKit browsers */
-    }
-    .research-badges .badge {
-        flex: 0 0 auto; /* Prevent badges from shrinking or wrapping */
-        min-width: 120px; /* Ensure badges are wide enough for readability */
-    }
-}
-    
-    
-    /* Mobile Responsiveness */
-    @media (max-width: 768px) {
-      .col-lg-4, .col-lg-8 {
-        width: 100%;
-      }
-      .content {
-        padding-top: 15px !important;
-      }
-      
-      /* Square graph for mobile */
-      .contribution-graph img {
-        height: 300px;
-        object-fit: cover;
-      }
-
-      
-    }
-    
-    /* Ensure all text is bold */
-    strong, b {
-      font-weight: bold !important;
-      
-    }
-
-    
-
-
-
-  </style>
- 
-<!-- ======= Education Section ======= -->
-
-<section id="education" class="education-section">
-    <div class="container">
-        <div class="section-title">
-            <h2>Education</h2>
-            <div class="title-underline"></div>
-        </div>
-
-        <div class="education-grid">
-            <div class="education-card glass-card">
-                <div class="card-header">
-                    <img src="assets/img/education/bu.png" class="edu-logo" alt="BRAC University Logo">
-                    <div class="education-info">
-                        
-                      <ul style="list-style: none; padding: 0; margin: 0;">
-                          <li style="display: flex; align-items: center; gap: 5px; margin-bottom: 10px; text-align: justify;">
-                            <span class="material-icons" style="color: black; font-size: 1.5em; display: inline-flex; align-items: center; justify-content: center;">school</span>
-                            <span style="display: flex; align-items: center;">
-                              <b><span style="color: #4284F4;">Degree</span> : B.Sc in Computer Science and Engineering</b>
-                            </span>
-                          </li>
-
-                          <li style="display: flex; align-items: center; gap: 5px; margin-bottom: 10px; text-align: justify;">
-                            <span class="material-icons" style="color: black; font-size: 1.5em; display: inline-flex; align-items: center; justify-content: center;">calendar_today</span>
-                            <span style="display: flex; align-items: center;">
-                              <b><span style="color: #4284F4;">Period</span> : January 2022 – Present</b>
-                            </span>
-                          </li>
-
-                          <li style="display: flex; align-items: center; gap: 5px; margin-bottom: 10px; text-align: justify;">
-                            <span class="material-icons" style="color: black; font-size: 1.5em; display: inline-flex; align-items: center; justify-content: center;">location_on</span>
-                            <span style="display: flex; align-items: center;">
-                              <b><span style="color: #4284F4;">Institution</span> : BRAC University | Kha 224, Bir Uttam Rafiqul Islam Ave, Dhaka 1212</b>
-                            </span>
-                          </li>
-
-                          <li style="display: flex; align-items: center; gap: 5px; text-align: justify;">
-                            <span class="material-icons" style="color: black; font-size: 1.5em; display: inline-flex; align-items: center; justify-content: center;">language</span>
-                            <span style="display: flex; align-items: center;">
-                              <b><span style="color: #4284F4;">Website</span> : 
-                                <a href="https://www.bracu.ac.bd/" target="_blank" rel="noopener noreferrer" style="color: #0077cc; text-decoration: none;">https://www.bracu.ac.bd/</a>
-                              </b>
-                            </span>
-                          </li>
-                        </ul>
-
-
-
-                    </div>
-                </div>
-                <div class="card-body">
-                    <div class="additional-info">
-                        <h5 style="color: #4285f4;"><b>Academic Details</b></h5>
-
-                        
-                        <ul class="info-list" style="list-style: none; padding: 0; margin: 0;">
-                            <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px; text-align: justify;">
-                              <span class="material-icons" style="font-size: 25px; color: #333;">school</span>
-                              <span>Current CGPA : 3.58/4.00</span>
-                            </li>
-
-                            <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px; text-align: justify;">
-                              <span class="material-icons" style="font-size: 25px; color: #333;">group</span>
-                              <span>Joined multiple university clubs and societies including BRACU Express (Journalist), IEEE Computer Society Bangladesh Chapter Secretariat (President), and BUEEC Main Organizing Committee (Director).</span>
-                            </li>
-
-                            <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px; text-align: justify;">
-                              <span class="material-icons" style="font-size: 25px; color: #333;">emoji_events</span>
-                              <span>2nd Place, National Hackathon 2023; Winner, Intra-University Coding Contest 2024</span>
-                            </li>
-
-                            <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px; text-align: justify;">
-                              <span class="material-icons" style="font-size: 25px; color: #333;">book</span>
-                              <span>Thesis: AI-Driven Healthcare Diagnostics (Ongoing, CSE400)</span>
-                            </li>
-
-                            <li style="display: flex; align-items: center; gap: 10px; text-align: justify;">
-                              <span class="material-icons" style="font-size: 25px; color: #333;">lightbulb</span>
-                              <span>Published Paper: "Blockchain in Project Management for Information Security, Transparency and Accountability" at the 2025 ICEIC in Osaka, Japan</span>
-                            </li>
-                          </ul>
-
-
-                    </div>
-                    
-                    <div class="coursework-section">
-
-                        <h5 style="color: #4284f4; padding-top: 25px;"><b>Relevant Coursework</b></h5>
-
-
-                        <div class="search-sort-container">
-                            <input type="text" id="course-search" placeholder="Search courses (e.g., CSE110, Algorithms, AI)..." class="search-input">
-                            <select id="sort-select" class="sort-select">
-                                <option value="">Sort by...</option>
-                                <option value="name-asc">Course Name (A-Z)</option>
-                                <option value="name-desc">Course Name (Z-A)</option>
-                                <option value="code-asc">Course Code (Ascending)</option>
-                                <option value="code-desc">Course Code (Descending)</option>
-                                <option value="credits-asc">Credits (Low to High)</option>
-                                <option value="credits-desc">Credits (High to Low)</option>
-                            </select>
-                        </div>
-                        <div class="accordion" id="course-accordion">
-                            <div class="accordion-item">
-                                <button class="accordion-header">Core Computer Science</button>
-                                <div class="accordion-content">
-                                    <ul class="course-list">
-                                        <li data-code="CSE101" data-name="Introduction to Computer Science" data-credits="3" data-tippy-content="Introduction to computer hardware, software, and programming principles. Covers basics of Python. Prerequisite: None" style="text-align: justify;">
-                                          <span class="material-icons" style="font-size: 30px;">computer</span> <strong>CSE101: Introduction to Computer Science (3 Credits)</strong>
-                                        </li>
-                                        <li data-code="CSE110" data-name="Programming Language I" data-credits="3" data-tippy-content="Introduction to programming with Python or Java. Covers variables, loops, functions. Prerequisite: None" style="text-align: justify;">
-                                          <span class="material-icons" style="font-size: 30px;">code</span> <strong>CSE110: Programming Language I (3 Credits)</strong>
-                                        </li>
-                                        <li data-code="CSE111" data-name="Programming Language II" data-credits="3" data-tippy-content="Advanced programming with object-oriented concepts in Java. Prerequisite: CSE110" style="text-align: justify;">
-                                          <span class="material-icons" style="font-size: 30px;">code</span> <strong>CSE111: Programming Language II (3 Credits)</strong>
-                                        </li>
-                                        <li data-code="CSE220" data-name="Data Structures" data-credits="3" data-tippy-content="Study of arrays, linked lists, stacks, queues, trees, graphs. Prerequisite: CSE111" style="text-align: justify;">
-                                          <span class="material-icons" style="font-size: 30px;">storage</span> <strong>CSE220: Data Structures (3 Credits)</strong>
-                                        </li>
-                                        <li data-code="CSE221" data-name="Algorithms" data-credits="3" data-tippy-content="Design and analysis of algorithms: sorting, searching, graph algorithms. Prerequisite: CSE220" style="text-align: justify;">
-                                          <span class="material-icons" style="font-size: 30px;">functions</span> <strong>CSE221: Algorithms (3 Credits)</strong>
-                                        </li>
-                                        <li data-code="CSE230" data-name="Discrete Mathematics" data-credits="3" data-tippy-content="Logic, sets, functions, graphs, trees, combinatorics. Prerequisite: None" style="text-align: justify;">
-                                          <span class="material-icons" style="font-size: 30px;">calculate</span> <strong>CSE230: Discrete Mathematics (3 Credits)</strong>
-                                        </li>
-                                        <li data-code="CSE260" data-name="Digital Logic Design" data-credits="3" data-tippy-content="Boolean algebra, logic gates, combinational/sequential circuits. Prerequisite: None" style="text-align: justify;">
-                                          <span class="material-icons" style="font-size: 30px;">developer_board</span> <strong>CSE260: Digital Logic Design (3 Credits)</strong>
-                                        </li>
-                                        <li data-code="CSE310" data-name="Object Oriented Programming" data-credits="3" data-tippy-content="OOP using Java, including classes, inheritance, polymorphism. Prerequisite: CSE111" style="text-align: justify;">
-                                          <span class="material-icons" style="font-size: 30px;">code</span> <strong>CSE310: Object Oriented Programming (3 Credits)</strong>
-                                        </li>
-                                        <li data-code="CSE340" data-name="Computer Architecture" data-credits="3" data-tippy-content="Processor design, memory systems, pipelining. Prerequisite: CSE260" style="text-align: justify;">
-                                          <span class="material-icons" style="font-size: 30px;">memory</span> <strong>CSE340: Computer Architecture (3 Credits)</strong>
-                                        </li>
-                                      </ul>
-
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <button class="accordion-header">Data and AI</button>
-                                <div class="accordion-content">
-                                    <ul class="course-list">
-                                        <li data-code="CSE330" data-name="Numerical Methods" data-credits="3" data-tippy-content="Numerical techniques for solving equations, integration, optimization. Prerequisite: MAT120" style="text-align: justify;">
-                                          <span class="material-icons" style="font-size: 30px;">functions</span> <strong>CSE330: Numerical Methods (3 Credits)</strong>
-                                        </li>
-                                        <li data-code="CSE370" data-name="Database Systems" data-credits="3" data-tippy-content="Relational databases, SQL, normalization. Prerequisite: CSE220" style="text-align: justify;">
-                                          <span class="material-icons" style="font-size: 30px;">storage</span> <strong>CSE370: Database Systems (3 Credits)</strong>
-                                        </li>
-                                        <li data-code="CSE422" data-name="Artificial Intelligence" data-credits="3" data-tippy-content="Search algorithms, knowledge representation, basic ML. Prerequisite: CSE221" style="text-align: justify;">
-                                          <span class="material-icons" style="font-size: 30px;">psychology</span> <strong>CSE422: Artificial Intelligence (3 Credits)</strong>
-                                        </li>
-                                        <li data-code="CSE423" data-name="Computer Graphics" data-credits="3" data-tippy-content="Rendering, 3D modeling, graphics algorithms. Prerequisite: CSE221" style="text-align: justify;">
-                                          <span class="material-icons" style="font-size: 30px;">brush</span> <strong>CSE423: Computer Graphics (3 Credits)</strong>
-                                        </li>
-                                        <li data-code="CSE428" data-name="Image Processing" data-credits="3" data-tippy-content="Image enhancement, filtering, compression techniques. Prerequisite: CSE422" style="text-align: justify;">
-                                          <span class="material-icons" style="font-size: 30px;">image</span> <strong>CSE428: Image Processing (3 Credits)</strong>
-                                        </li>
-                                        <li data-code="CSE429" data-name="Machine Learning" data-credits="3" data-tippy-content="Supervised/unsupervised learning, neural networks. Prerequisite: CSE422" style="text-align: justify;">
-                                          <span class="material-icons" style="font-size: 30px;">psychology</span> <strong>CSE429: Machine Learning (3 Credits)</strong>
-                                        </li>
-                                      </ul>
-
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <button class="accordion-header">Advanced Topics and Electives</button>
-                                <div class="accordion-content">
-                                    <ul class="course-list">
-                                        <li data-code="CSE250" data-name="Circuits and Electronics" data-credits="3" data-tippy-content="DC/AC circuits, amplifiers, filters. Prerequisite: PHY112" style="text-align: justify;">
-                                          <span class="material-icons" style="font-size: 30px;">bolt</span> <strong>CSE250: Circuits and Electronics (3 Credits)</strong>
-                                        </li>
-                                        <li data-code="CSE251" data-name="Electronic Devices and Circuits" data-credits="3" data-tippy-content="Semiconductors, diodes, transistors. Prerequisite: CSE250" style="text-align: justify;">
-                                          <span class="material-icons" style="font-size: 30px;">bolt</span> <strong>CSE251: Electronic Devices and Circuits (3 Credits)</strong>
-                                        </li>
-                                        <li data-code="CSE320" data-name="Data Communications" data-credits="3" data-tippy-content="Data transmission, modulation, multiplexing. Prerequisite: CSE260" style="text-align: justify;">
-                                          <span class="material-icons" style="font-size: 30px;">swap_horiz</span> <strong>CSE320: Data Communications (3 Credits)</strong>
-                                        </li>
-                                        <li data-code="CSE321" data-name="Operating Systems" data-credits="3" data-tippy-content="Processes, memory management, file systems. Prerequisite: CSE220" style="text-align: justify;">
-                                          <span class="material-icons" style="font-size: 30px;">dns</span> <strong>CSE321: Operating Systems (3 Credits)</strong>
-                                        </li>
-                                        <li data-code="CSE331" data-name="Automata and Computability" data-credits="3" data-tippy-content="Finite automata, Turing machines, complexity. Prerequisite: CSE230" style="text-align: justify;">
-                                          <span class="material-icons" style="font-size: 30px;">settings</span> <strong>CSE331: Automata and Computability (3 Credits)</strong>
-                                        </li>
-                                        <li data-code="CSE419" data-name="Competitive Programming" data-credits="3" data-tippy-content="Advanced algorithms for coding contests. Prerequisite: CSE221" style="text-align: justify;">
-                                          <span class="material-icons" style="font-size: 30px;">code</span> <strong>CSE419: Competitive Programming (3 Credits)</strong>
-                                        </li>
-                                        <li data-code="CSE420" data-name="Compiler Design" data-credits="3" data-tippy-content="Lexical analysis, parsing, code generation. Prerequisite: CSE331" style="text-align: justify;">
-                                          <span class="material-icons" style="font-size: 30px;">code</span> <strong>CSE420: Compiler Design (3 Credits)</strong>
-                                        </li>
-                                        <li data-code="CSE421" data-name="Computer Networks" data-credits="3" data-tippy-content="TCP/IP, routing, wireless networks. Prerequisite: CSE320" style="text-align: justify;">
-                                          <span class="material-icons" style="font-size: 30px;">dns</span> <strong>CSE421: Computer Networks (3 Credits)</strong>
-                                        </li>
-                                        <li data-code="CSE470" data-name="Software Engineering" data-credits="3" data-tippy-content="Software lifecycle, agile methodologies, design patterns. Prerequisite: CSE310" style="text-align: justify;">
-                                          <span class="material-icons" style="font-size: 30px;">engineering</span> <strong>CSE470: Software Engineering (3 Credits)</strong>
-                                        </li>
-                                        <li data-code="CSE400" data-name="Capstone Project/Thesis" data-credits="6" data-tippy-content="Independent research or project in a specialized area. Prerequisite: Advanced standing" style="text-align: justify;">
-                                          <span class="material-icons" style="font-size: 30px;">school</span> <strong>CSE400: Capstone Project/Thesis (6 Credits)</strong>
-                                        </li>
-                                      </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/GIF/edu.GIF" alt="Education GIF" class="education-gif" />
-
-    <script>
-        // Initialize plugins after all external libraries are loaded
-        window.addEventListener('load', () => {
-            // Initialize Accordion
-            if (typeof Accordion !== 'undefined') {
-                new Accordion('#course-accordion', {
-                    duration: 0, // No animation
-                    multiple: true
-                });
-            } else {
-                console.warn('Accordion library not loaded.');
-                // Fallback accordion functionality
-                document.querySelectorAll('.accordion-header').forEach(header => {
-                    header.addEventListener('click', () => {
-                        const item = header.parentElement;
-                        const content = item.querySelector('.accordion-content');
-                        
-                        // Toggle active class
-                        item.classList.toggle('active');
-                        
-                        // Toggle content display
-                        if (item.classList.contains('active')) {
-                            content.style.display = 'block';
-                        } else {
-                            content.style.display = 'none';
-                        }
-                    });
-                });
-            }
-
-            // Initialize Tippy tooltips
-            if (typeof tippy !== 'undefined') {
-                tippy('[data-tippy-content]', {
-                    placement: 'top',
-                    animation: false, // No animation
-                    theme: 'light'
-                });
-            } else {
-                console.warn('Tippy.js not loaded.');
-                // Fallback for tooltips
-                document.querySelectorAll('[data-tippy-content]').forEach(element => {
-                    element.addEventListener('mouseenter', function() {
-                        const tooltip = document.createElement('div');
-                        tooltip.className = 'fallback-tooltip';
-                        tooltip.textContent = this.getAttribute('data-tippy-content');
-                        tooltip.style.position = 'absolute';
-                        tooltip.style.background = 'transparent';              // Fully transparent background
-                        tooltip.style.backdropFilter = 'blur(10px)';           // Blurs background behind tooltip
-                        tooltip.style.webkitBackdropFilter = 'blur(10px)';     // Safari support
-
-                        tooltip.style.color = '#000';              // Black text
-                        tooltip.style.fontWeight = 'bold';
-
-                        tooltip.style.padding = '5px 5px'; 
-                        tooltip.style.borderRadius = '4px';
-                        tooltip.style.zIndex = '1000';
-                        tooltip.style.width = 'auto';              // Width adjusts to content
-                        
-                        document.body.appendChild(tooltip);
-                        
-                        const rect = this.getBoundingClientRect();
-                        tooltip.style.top = (rect.top - tooltip.offsetHeight - 5) + 'px';
-                        tooltip.style.left = (rect.left + rect.width/2 - tooltip.offsetWidth/2) + 'px';
-                        
-                        this._fallbackTooltip = tooltip;
-                    });
-                    
-                    element.addEventListener('mouseleave', function() {
-                        if (this._fallbackTooltip) {
-                            document.body.removeChild(this._fallbackTooltip);
-                            this._fallbackTooltip = null;
-                        }
-                    });
-                });
-            }
-
-            // Initialize Fuse.js for advanced fuzzy search
-            let courseItems = [];
-            
-            try {
-                courseItems = Array.from(document.querySelectorAll('.course-list li')).map(item => ({
-                    element: item,
-                    code: item.dataset.code,
-                    name: item.dataset.name,
-                    credits: parseInt(item.dataset.credits),
-                    description: item.dataset.tippyContent
-                }));
-            } catch (e) {
-                console.error('Error processing course items:', e);
-            }
-
-            if (typeof Fuse !== 'undefined' && courseItems.length > 0) {
-                const fuse = new Fuse(courseItems, {
-                    keys: [
-                        { name: 'code', weight: 0.4 },
-                        { name: 'name', weight: 0.4 },
-                        { name: 'description', weight: 0.2 }
-                    ],
-                    threshold: 0.3, // Fuzzy matching sensitivity
-                    ignoreLocation: true, // Match anywhere in text
-                    includeMatches: true // For highlighting
-                });
-
-                const searchInput = document.getElementById('course-search');
-                if (searchInput) {
-                    searchInput.addEventListener('input', (e) => {
-                        const searchTerm = e.target.value.trim();
-                        courseItems.forEach(item => item.element.style.display = 'none');
-                        
-                        if (!searchTerm) {
-                            courseItems.forEach(item => item.element.style.display = 'flex');
-                            return;
-                        }
-                        
-                        const result = fuse.search(searchTerm);
-                        result.forEach(res => {
-                            const item = res.item.element;
-                            item.style.display = 'flex';
-                            
-                            // Highlight matched terms
-                            const icon = item.querySelector('.material-icons').cloneNode(true);
-                            const text = item.textContent;
-                            
-                            // Reset content
-                            item.innerHTML = '';
-                            item.appendChild(icon);
-                            item.appendChild(document.createTextNode(' ' + text));
-                            
-                            res.matches.forEach(match => {
-                                const key = match.key;
-                                if (key === 'name' || key === 'code') {
-                                    const regex = new RegExp(`(${match.value})`, 'gi');
-                                    item.innerHTML = item.innerHTML.replace(regex, '<mark>$1</mark>');
-                                }
-                            });
-                        });
-                    });
-                }
-            } else {
-                console.warn('Fuse.js not loaded. Falling back to simple search.');
-                const searchInput = document.getElementById('course-search');
-                if (searchInput) {
-                    searchInput.addEventListener('input', (e) => {
-                        const searchTerm = e.target.value.toLowerCase().trim();
-                        courseItems.forEach(item => {
-                            const text = item.element.textContent.toLowerCase();
-                            item.element.style.display = text.includes(searchTerm) ? 'flex' : 'none';
-                        });
-                    });
-                }
-            }
-
-            // Advanced sorting
-            const sortSelect = document.getElementById('sort-select');
-            if (sortSelect) {
-                sortSelect.addEventListener('change', (e) => {
-                    const sortValue = e.target.value;
-                    if (!sortValue) return;
-
-                    document.querySelectorAll('.course-list').forEach(ul => {
-                        const items = Array.from(ul.querySelectorAll('li'));
-                        items.sort((a, b) => {
-                            if (sortValue.includes('name')) {
-                                const aVal = a.dataset.name;
-                                const bVal = b.dataset.name;
-                                return sortValue === 'name-asc' ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
-                            } else if (sortValue.includes('code')) {
-                                const aVal = a.dataset.code;
-                                const bVal = b.dataset.code;
-                                return sortValue === 'code-asc' ? aVal.localeCompare(bVal, undefined, {numeric: true}) : bVal.localeCompare(aVal, undefined, {numeric: true});
-                            } else {
-                                const aVal = parseInt(a.dataset.credits);
-                                const bVal = parseInt(b.dataset.credits);
-                                return sortValue === 'credits-asc' ? aVal - bVal : bVal - aVal;
-                            }
-                        });
-                        ul.innerHTML = '';
-                        items.forEach(item => ul.appendChild(item));
-                    });
-                });
-            }
-        });
-    </script>
-</section>
-
-<style>
-.container {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
-
-/* Make all text bold and justified */
-
-h1, h2, h3, h4, h5, h6,
-p, li, button, input, select, option, td, th, label {
-  font-family: 'Bungee', sans-serif !important;
-  font-weight: bold !important;
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    background: rgba(255, 255, 255, 0.15); /* Soft transparency */
+    backdrop-filter: blur(10px); /* Glassmorphism blur */
+    -webkit-backdrop-filter: blur(10px); /* Ensure support on Safari */
+    overflow: hidden auto;
+    transform: translateY(-100%);
+    will-change: transform;
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    overscroll-behavior: contain;
+    border-radius: 12px; /* Smooth rounded edges */
 }
 
 
+.mobile-nav-active .mobile-nav {
+    transform: translateY(0);
+}
 
-
-/* Grid Layout */
-.education-grid {
+.mobile-nav ul {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 32px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-/* Glassmorphism Card */
-.glass-card {
-    background: rgba(255, 255, 255, 0.6);
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 20px;
-    overflow: hidden;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.card-header {
-    display: flex;
-    align-items: center;
-    padding: 24px;
-    background: #F6F8F9; /* Solid color instead of gradient */
-    color: #333333; /* Dark text for better contrast */
-    box-sizing: border-box;
-}
-
-.edu-logo {
-    width: 130px;
-    height: 130px;
-    object-fit: contain;
-    margin-right: 24px;
-    background: #ffffff;
-    padding: 8px;
-    border-radius: 100px;
-}
-
-.education-period,
-.education-location {
-    margin: 4px 0;
-}
-
-.card-body {
-    padding: 24px;
-    box-sizing: border-box;
-}
-
-.info-list,
-.course-list {
+    gap: 2px;
+    padding: 60px 16px 16px;
+    margin: 0;
     list-style: none;
-    padding: 0 0 0 3px; /* top right bottom left */
-    margin: 0;
 }
 
-.info-list li,
-.course-list li {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 12px 0;
-    color: #333333;
-    border-bottom: 5px solid rgba(0, 0, 0, 0.05);
-    cursor: pointer;
-}
-
-.info-list li:last-child,
-.course-list li:last-child {
-    border-bottom: none;
-}
-
-/* Search and Sort Container */
-.search-sort-container {
-    display: flex;
-    gap: 16px;
-    margin-bottom: 20px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.search-input,
-.sort-select {
-    flex: 1;
-    padding: 12px;
-    border: 4px solid #4285F4;
-    border-radius: 8px;
-    box-sizing: border-box;
-}
-
-.search-input::placeholder {
-    color: #aaa;
-}
-
-mark {
-    background: #0071e340;
-    padding: 2px 4px;
-    border-radius: 4px;
-}
-
-/* Accordion Styles */
-.accordion-item {
-  border-top: 5px solid rgba(0, 0, 0, 0.05);
-  border-bottom: 5px solid rgba(0, 0, 0, 0.05);
-  border-left: none;
-  border-right: none;
-}
-
-
-.accordion-header {
-    width: 100%;
-    padding: 16px 0 16px 5px;
-    background: none;
-    border: none;
-    color: #000000;
-    text-align: left;
-    cursor: pointer;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.accordion-header::after {
-    content: 'expand_more';
-    font-family: 'Material Icons';
-    color: #1d1d1f;
-    transition: transform 0.3s ease;
-}
-
-.accordion-item.active .accordion-header::after {
-    transform: rotate(180deg);
-}
-
-.accordion-content {
-    padding: 0 0 16px 0;
-    display: none;
-}
-
-.accordion-item.active .accordion-content {
+.mobile-nav a {
+    color: #fff;
+    padding: 12px 16px; /* Reduced from 14px 16px */
+    font: 500 16px/1.5 "Poppins", sans-serif;
+    text-decoration: none;
     display: block;
-    background-color: #ffffff; /* white background */
-    color: #000000;            /* black text */
-    font-weight: bold;         /* all text bold */
+    transform: translateZ(0);
 }
 
-/* Course item focus/hover states */
-.course-list li:focus,
-.course-list li:active {
-    background-color: #ffffff !important;
-    color: #000000 !important;
+.mobile-nav a:active {
+    color: #000000;
 }
 
+.mobile-nav-overly,
+.mobile-nav *:before,
+.mobile-nav *:after {
+    display: none !important;
+}
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Desktop Navigation */
+/* MATERIAL ICONS FONT LOADING */
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: 
+      local('Material Icons'),
+      local('MaterialIcons-Regular'),
+      url(https://fonts.gstatic.com/s/materialicons/v140/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+  }
+  
+  /* MOBILE NAVIGATION ICONS */
+  .mobile-nav a {
+    display: flex !important;
+    align-items: center !important;
+    padding: 12px 20px !important; /* Reduced from 14px 20px */
+    position: relative !important;
+  }
+  
+  .mobile-nav a .material-icons.mobile-menu-icon {
+    /* Font Properties */
+    font-family: 'Material Icons' !important;
+    font-size: 30px !important; /* Increased from 24px */
+    font-weight: normal !important;
+    font-style: normal !important;
+    color: #4285F4 !important; /* Pure black */
+}
 
-/* Responsive */
-@media (max-width: 768px) {
     
+    /* Sizing & Spacing */
+    min-width: 26px !important;
+    width: 26px !important;
+    height: 26px !important;
+    line-height: 1 !important;
+    margin-right: 15px !important;
+    flex-shrink: 0 !important;
     
-    .container {
-        width: 100%;
-        padding: 0; /* 3px padding from left and right edges on mobile */
-        margin: 0; /* Remove margin to maximize screen usage */
-        box-sizing: border-box;
+    /* Color & Display */
+    color: #0dcd3c !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    
+    /* Rendering Optimizations */
+    -webkit-font-smoothing: antialiased !important;
+    text-rendering: optimizeLegibility !important;
+  }
+  
+  /* iOS SPECIFIC FIXES */
+  @supports (-webkit-touch-callout: none) {
+    .mobile-nav a .material-icons.mobile-menu-icon {
+      -webkit-text-stroke: 0.45px #0dcd3c !important;
+      text-shadow: 0 0 0.5px rgba(13, 205, 60, 0.7) !important;
     }
+  }
+  
+  /* ICON CONTENT - FIXED TO MATCH YOUR HTML (#portfolio instead of #projects) */
+  .mobile-nav a[href*="#header"] .material-icons.mobile-menu-icon::before { content: "home"; }
+  .mobile-nav a[href*="#about"] .material-icons.mobile-menu-icon::before { content: "person"; }
+  .mobile-nav a[href*="#education"] .material-icons.mobile-menu-icon::before { content: "school"; }
+  .mobile-nav a[href*="#certification"] .material-icons.mobile-menu-icon::before { content: "verified"; }
+  .mobile-nav a[href*="#research"] .material-icons.mobile-menu-icon::before { content: "science"; }
+  .mobile-nav a[href*="#experience"] .material-icons.mobile-menu-icon::before { content: "work_history"; }
+  .mobile-nav a[href*="#portfolio"] .material-icons.mobile-menu-icon::before { content: "api"; } /* Fixed from #projects to #portfolio */
+  .mobile-nav a[href*="#skills"] .material-icons.mobile-menu-icon::before { content: "skull"; }
+  .mobile-nav a[href*="#blogs"] .material-icons.mobile-menu-icon::before { content: "newsmode"; }
+  .mobile-nav a[href*="#contact"] .material-icons.mobile-menu-icon::before { content: "email"; }
+  
+  /* ACTIVE STATE */
+  .mobile-nav .active a .material-icons.mobile-menu-icon {
+    color: #0dcd3c !important;
+    transform: scale(1.05) !important;
+  }
+  
+  /* FALLBACK FOR WHEN ICONS DON'T LOAD */
+  .mobile-nav a i.mobile-menu-icon:empty:before {
+    content: attr(data-fallback);
+    font-family: initial !important;
+    font-size: 20px;
+  }
+  /* Header Top */
 
-    .glass-card {
-        border-radius: 2 px; /* Slightly smaller radius for modern look */
+
+/* Header Top */
+#header.header-top {
+    height: 90px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.2); /* Pure white with low opacity for glassmorphism */
+    backdrop-filter: blur(10px); /* Blur effect for frosted glass */
+    -webkit-backdrop-filter: blur(10px); /* Safari compatibility */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Subtle white border for depth */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for glassmorphism */
+}
+
+/* Fallback for browsers without backdrop-filter support */
+@supports not (backdrop-filter: blur(10px)) {
+    #header.header-top {
+        background: rgba(255, 255, 255, 0.5); /* Slightly more opaque fallback */
+    }
+}
+
+#header.header-top .social-links, #header.header-top h2 {
+    display: none;
+}
+
+#header.header-top h1 {
+    margin-right: auto;
+    font-size: 36px;
+}
+
+#header.header-top .container {
+    display: flex;
+    align-items: center;
+}
+
+#header.header-top .nav-menu {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    #header.header-top {
+        height: 60px;
+    }
+    #header.header-top h1 {
+        font-size: 26px;
+    }
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    top: 120px; /* Reduced from 140px */
+    bottom: 100%;
+    opacity: 0;
+    z-index: 2;
+    
+}
+
+section.section-show {
+    top: 70px;
+    bottom: auto;
+    opacity: 1;
+    padding-bottom: 0px;
+}
+
+section .container {
+    background: rgba(0, 0, 0, 0);
+    padding: 30px;
+}
+
+@media (max-width: 768px) {
+    section {
+        top: 20px; /* Reduced from 120px */
+    }
+    section.section-show {
+        top: 30px;
         
     }
-
-    .card-header {
-        padding: 12px 3px; /* Optimized horizontal padding */
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px; /* Improved spacing */
-        background: #F6F8F9; /* Subtle gradient for modern feel */
-    }
-
-    .edu-logo {
-    width: 100px; /* Slightly smaller logo for better fit */
-    height: 100px;
-    margin: 0 auto 8px auto; /* Center horizontally with bottom margin */
-    padding-top: 20px; /* Added top padding */
-    border: 4px solid transparent; /* Border width set, color effectively 'none' */
-    border-radius: 100px; /* Tighter radius for modern aesthetic */
-    display: block; /* Ensures margin auto centers the logo */
 }
 
-
-    .card-body {
-        padding: 12px 3px; /* Optimized horizontal padding */
-    }
-
-    .info-list li,
-    .course-list li {
-        flex-direction: row;
-        align-items: center;
-        padding: 8px 3px; /* Optimized padding for compact layout */
-        transition: background-color 0.2s ease; /* Smooth transition for tap feedback */
-    }
-
-    .search-sort-container {
-  flex-direction: column;
-  gap: 8px;
-  padding: 0;                     /* Removes all padding */
-           /* Rounded corners */
+.section-title h2 {
+    font-size: 14px;
+    font-weight: 700;
+    padding: 0;
+    line-height: 1px;
+    margin: 0 0 15px 0; /* Reduced from 20px */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #000000;
+    font-family: "Poppins", sans-serif;
 }
 
-
-
-    .search-input,
-    .sort-select {
-        width: calc(100% - 0px); /* Full width minus 3px left and right padding */
-        margin: 0 3px; /* 3px horizontal margin */
-        border-radius: 4px; /* More rounded corners for modern look */
-        border-width: 4px; /* Thinner border for sleeker appearance */
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-        transition: box-shadow 0.2s ease; /* Smooth shadow transition */
-    }
-
-    .search-input:focus,
-    .sort-select:focus {
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on focus */
-        outline: none; /* Remove default outline */
-    }
-    
-    /* Ensure course items have white background and black bold text when tapped */
-    .course-list li:focus,
-    .course-list li:active,
-    .course-list li:hover {
-        background-color: #ffffff !important;
-        color: #000000 !important;
-        font-weight: bold !important;
-        border-radius: 8px; /* Rounded corners for tapped state */
-    }
-    
-    /* Add tap highlight color for mobile */
-    .course-list li {
-        -webkit-tap-highlight-color: rgba(255, 255, 255, 0.7);
-        touch-action: manipulation; /* Improve touch responsiveness */
-    }
-
-    /* Optimize accordion for mobile */
-    .accordion-header {
-  padding: 12px 0; /* Top/Bottom: 12px, Left/Right: 0px */
-  border-radius: 8px;
-  transition: background-color 0.2s ease;
+.section-title h2::after {
+    content: "";
+    width: 120px;
+    height: 4px;
+    display: inline-block;
+    background: #000000;
+    margin: 4px 10px;
 }
 
-
-    .accordion-header:active {
-        background-color: rgba(255, 255, 255, 0.9); /* Subtle feedback on tap */
-    }
-
-    .accordion-content {
-        padding: 0 3px 12px 3px; /* Optimized padding */
-        border-radius: 0 0 8px 8px; /* Rounded bottom corners */
-    }
-
-    /* Optimize touch interactions */
-    .course-list li,
-    .accordion-header {
-        touch-action: manipulation; /* Improve touch responsiveness */
-    }
-
-    /* Remove default focus outlines for cleaner mobile look */
-    .course-list li:focus,
-    .accordion-header:focus {
-        outline: none;
-    }
+.section-title p {
+    margin: 0;
+    margin: -15px 0 10px 0; /* Reduced from 15px */
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+}
+section {
+    padding-bottom: 50px !important;
+}
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+.about-me .content h3 {
+    font-weight: 700;
+    font-size: 26px;
+    color: #1c7d32;
 }
 
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1400px;
-        padding: 0 20px; /* Reset to original padding on larger screens */
-    }
-
-    .glass-card {
-        max-width: 100%;
-    }
-
-   
+.about-me .content ul {
+    list-style: none;
+    padding: 0;
 }
 
-.education-gif {
-    display: none; /* Hidden by default for desktop view */
-    width: 100%; /* Full width */
-    height: auto; /* Maintain aspect ratio */
-    margin: 0; /* No margins */
-    padding: 0; /* Zero left and right padding */
+.about-me .content ul li {
+    padding-bottom: 10px;
 }
 
-@media (max-width: 768px) {
-    .education-gif {
-        display: block; /* Visible only in mobile view */
-        padding: 0; /* Zero left and right padding */
-    }
+.about-me .content ul i {
+    font-size: 20px;
+    padding-right: 2px;
+    color: #1c7d32;
 }
-</style>
-<!-- End Education Section -->
 
-    <!-- Start Certification Section -->
-
-    <section id="certification" class="services">
-        <div class="portfolio">
-            <div class="container">
-              <div class="section-title">
-                <h2><b>Certification</b></h2>
-              </div>
-          
-              <div class="row portfolio-container">
-                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/certification/tw.jpg" class="img-fluid" alt="Programmable Messaging and Voice Certificate">
-                    <div class="portfolio-info">
-                      <h4>Programmable Messaging and Voice</h4>
-                      <div class="portfolio-links">
-                        <a href="https://www.linkedin.com/learning/certificates/759119dcc46bdb4e63fb82dc49ed0ad4288a97d9031dd360fdb0686f65b0b398" target="_blank" title="Certificate"><img 
-  src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/certification/chain.png?raw=true" 
-  alt="Certificate Link Icon" 
-  style="width: 35px; height: 35px;"
->
-</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-          
-                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/certification/pmi.jpg" class="img-fluid" alt="Cybersecurity Foundations Certificate">
-                    <div class="portfolio-info">
-                      <h4>Cybersecurity Foundations</h4>
-                      <div class="portfolio-links">
-                        <a href="https://www.linkedin.com/learning/certificates/fe897b3437597f8b933ad2501b5de695916b026e0c841509df9545ecd7d83b0b?trk=share_certificate" target="_blank" title="Certificate"><img 
-  src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/certification/chain.png?raw=true" 
-  alt="Certificate Link Icon" 
-  style="width: 35px; height: 35px;"
->
-</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-          
-                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/certification/gh.jpg" class="img-fluid" alt="Career Essentials Certificate">
-                    <div class="portfolio-info">
-                      <h4>Career Essentials</h4>
-                      <div class="portfolio-links">
-                        <a href="https://www.linkedin.com/learning/certificates/e9fda53e1d56f77f2f78acaefd5fd9c9dfd3dce255ebd20be4d1cd3290629784" target="_blank" title="Certificate"><img 
-  src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/certification/chain.png?raw=true" 
-  alt="Certificate Link Icon" 
-  style="width: 35px; height: 35px;"
->
-</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-          
-                <div class="col-lg-4 col-md-6 portfolio-item filter-project">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/certification/ms.jpg" class="img-fluid" alt="Career Essentials in Cybersecurity Certificate">
-                    <div class="portfolio-info">
-                      <h4>Career Essentials in Cybersecurity</h4>
-                      <div class="portfolio-links">
-                        <a href="https://www.linkedin.com/learning/certificates/73e313f844327f6f6a86a0984c7c45ee6b9eee1a3e283db48bb370d908b57dec" target="_blank" title="Certificate"><img 
-  src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/certification/chain.png?raw=true" 
-  alt="Certificate Link Icon" 
-  style="width: 35px; height: 35px;"
->
-</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-          
-                <div class="col-lg-4 col-md-6 portfolio-item filter-project">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/certification/lt.jpg" class="img-fluid" alt="Test Automation Certificate">
-                    <div class="portfolio-info">
-                      <h4>Test Automation</h4>
-                      <div class="portfolio-links">
-                        <a href="https://www.linkedin.com/learning/certificates/243b5362e2fc213ce658d04d6c21856b9ab9628a3e81b375927773cd8618fd49" target="_blank" title="Certificate"><img 
-  src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/certification/chain.png?raw=true" 
-  alt="Certificate Link Icon" 
-  style="width: 35px; height: 35px;"
->
-</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-          
-                <div class="col-lg-4 col-md-6 portfolio-item filter-project">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/certification/li.jpg" class="img-fluid" alt="NumPy MatPlotlib and Linear Algebra Certificate">
-                    <div class="portfolio-info">
-                      <h4>NumPy MatPlotlib and Linear Algebra</h4>
-                      <div class="portfolio-links">
-                        <a href="https://www.linkedin.com/learning/certificates/246ffec626263c5d4a8bea2c310bcc0cd836100f89d7e87c605082f43004b053" target="_blank" title="Certificate"><img 
-  src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/certification/chain.png?raw=true" 
-  alt="Certificate Link Icon" 
-  style="width: 35px; height: 35px;"
->
-</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-          
-                <div class="col-lg-4 col-md-6 portfolio-item filter-project">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/certification/shrm.jpg" class="img-fluid" alt="Neuroscience for Effective L&D Certificate">
-                    <div class="portfolio-info">
-                      <h4>Neuroscience for Effective L&D</h4>
-                      <div class="portfolio-links">
-                        <a href="https://www.linkedin.com/learning/certificates/3719feeef2b7f6b1134ce2fb8887cad2d531b509b194f9ab82204ad2581b1cf3?trk=share_certificate" target="_blank" title="Certificate"><img 
-  src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/certification/chain.png?raw=true" 
-  alt="Certificate Link Icon" 
-  style="width: 35px; height: 35px;"
->
-</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-          
-                <div class="col-lg-4 col-md-6 portfolio-item filter-project">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/certification/hr.jpg" class="img-fluid" alt="Neuroscience for Effective L&D Certificate">
-                    <div class="portfolio-info">
-                      <h4>Neuroscience for Effective L&D</h4>
-                      <div class="portfolio-links">
-                        <a href="https://www.linkedin.com/learning/certificates/125c8879c94519f1a707ee5691ac5a6e5b5ca44002c3f532900f608765a2d2fa?trk=share_certificate" target="_blank" title="Certificate"><img 
-  src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/certification/chain.png?raw=true" 
-  alt="Certificate Link Icon" 
-  style="width: 35px; height: 35px;"
->
-</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-          
-                <div class="col-lg-4 col-md-6 portfolio-item filter-project">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/certification/bp.jpg" class="img-fluid" alt="Robotic Process Automation Certificate">
-                    <div class="portfolio-info">
-                      <h4>Robotic Process Automation</h4>
-                      <div class="portfolio-links">
-                        <a href="https://www.linkedin.com/learning/certificates/6f99e870b41beae081989894b502a48e94af71cf8806e54a994cad682d092c5f" target="_blank" title="Certificate"><img 
-  src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/certification/chain.png?raw=true" 
-  alt="Certificate Link Icon" 
-  style="width: 35px; height: 35px;"
->
-</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-
-              
-                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/certification/hrr.jpg" class="img-fluid" alt="Software Engineer Certificate">
-                    <div class="portfolio-info">
-                      <h4>Software Engineer Certificate</h4>
-                      <div class="portfolio-links">
-                        <a href="https://www.hackerrank.com/certificates/0185beaeedaa" target="_blank" title="Certificate"><img 
-  src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/certification/chain.png?raw=true" 
-  alt="Certificate Link Icon" 
-  style="width: 35px; height: 35px;"
->
-</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                    <div class="portfolio-wrap">
-                      <img src="assets/img/certification/ibm.jpg" class="img-fluid" alt="Data Fundamentals">
-                      <div class="portfolio-info">
-                        <h4>Data Fundamentals</h4>
-                        <div class="portfolio-links">
-                          <a href="https://www.credly.com/badges/7359f5bb-cbe8-4769-bc0f-b9689471563f/linked_in?t=t0wlvr" target="_blank" title="Certificate"><img 
-  src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/certification/chain.png?raw=true" 
-  alt="Certificate Link Icon" 
-  style="width: 35px; height: 35px;"
->
-</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                    <div class="portfolio-wrap">
-                      <img src="assets/img/certification/google.jpg" class="img-fluid" alt="Advanced Premium IT Admin Features">
-                      <div class="portfolio-info">
-                        <h4>Advanced Premium IT Admin Features</h4>
-                        <div class="portfolio-links">
-                          <a href="https://edu.exceedlms.com/student/award/4FWmuwj17zXK5i9YzCLFU6kf" target="_blank" title="Certificate"><img 
-  src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/certification/chain.png?raw=true" 
-  alt="Certificate Link Icon" 
-  style="width: 35px; height: 35px;"
->
-</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-          
-                <div class="col-lg-4 col-md-6 portfolio-item filter-project">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/certification/pd.jpg" class="img-fluid" alt="PES DAY 2024 Ambassador Certificate">
-                    <div class="portfolio-info">
-                      <h4>PES DAY 2024 Ambassador Certificate</h4>
-                      <div class="portfolio-links">
-                        <a href="https://drive.google.com/file/d/1TtB9GEhgxRlTVQ5Ha-w9MWNBN6oXl2Jb/view?usp=sharing" target="_blank" title="Certificate"><img 
-  src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/certification/chain.png?raw=true" 
-  alt="Certificate Link Icon" 
-  style="width: 35px; height: 35px;"
->
-</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-          
-                <div class="col-lg-4 col-md-6 portfolio-item filter-project">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/certification/icpe.jpg" class="img-fluid" alt="Conference on Energy & Power Engineering Certificate">
-                    <div class="portfolio-info">
-                      <h4>Conference on Energy & Power Engineering</h4>
-                      <div class="portfolio-links">
-                        <a href="https://drive.google.com/file/d/17SxPVFYELRmTnL-ottL5zVR29rsvGYBD/view" target="_blank" title="Certificate"><img 
-  src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/certification/chain.png?raw=true" 
-  alt="Certificate Link Icon" 
-  style="width: 35px; height: 35px;"
->
-</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-          
-                <div class="col-lg-4 col-md-6 portfolio-item filter-project">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/certification/nasba.jpg" class="img-fluid" alt="Cybersecurity Terminology Certificate">
-                    <div class="portfolio-info">
-                      <h4>Cybersecurity Terminology</h4>
-                      <div class="portfolio-links">
-                        <a href="https://www.linkedin.com/learning/certificates/e72b6f3475683106b11f92cc054a1f8d514ed33b6b8e6974f5b22d6f28ac2bdd?trk=share_certificat" target="_blank" title="Certificate"><img 
-  src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/certification/chain.png?raw=true" 
-  alt="Certificate Link Icon" 
-  style="width: 35px; height: 35px;"
->
-</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-project">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/certification/hp.jpg" class="img-fluid" alt="Data Science & Analytics">
-                    <div class="portfolio-info">
-                      <h4>Data Science & Analytics</h4>
-                      <div class="portfolio-links">
-                        <a href="https://www.life-global.org/certificate/98bb96cd-0f2b-4e49-9a12-1aa257e3fcc4" target="_blank" title="Certificate"><img 
-  src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/certification/chain.png?raw=true" 
-  alt="Certificate Link Icon" 
-  style="width: 35px; height: 35px;"
->
-</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-
-
-              </div>
-            </div>
-          </div>
-    </section>        
-  <!-- End Certification Section --> 
-    
-<!-- ======= Research Section ======= -->
-
-
-<!-- Start Research Section -->
-
-<!-- Start Research Section -->
-
-<section id="research" class="services">
-    <div class="container">
-        <div class="section-title">
-            <h2><b>Research</b></h2>
-        </div>
-
-        <div class="research-container">
-            <div class="research-item">
-              
-              <h5 style="color: #000000; font-weight: 900;">
-  <span class="material-icons" style="color: #000000; vertical-align: middle; font-size: 2em; margin-right: 0px;">psychology</span>
-  CONFERENCE PAPER
-</h5>
-
-
-                <!-- First Paper -->
-                <p style="color: rgb(0, 0, 0); text-align: justify; margin-bottom: 15px; font-weight: bold;">
-                    <a href="https://doi.org/10.1109/ICEIC64972.2025.10879668" target="_blank" style="color: rgb(0, 0, 0); font-weight: bold;">
-                        Blockchain in Project Management for Information Security, Transparency and Accountability
-                    </a>
-                </p>
-              
-                <div class="row" style="margin-bottom: 30px;">
-                    <div class="col-lg-6 col-md-12">
-                        <ul style="list-style-type: none; text-align: left; padding-left: 0; margin-bottom: 10px;">
-                            <li style="margin-bottom: 8px; font-weight: bold;">
-                                <a href="https://doi.org/10.1109/ICEIC64972.2025.10879668">
-                                    <img src="https://img.shields.io/badge/DOI-10.1109%2FICEIC64972.2025.10879668-orange?style=flat-square" alt="DOI" class="doi-badge">
-                                </a>
-                            </li>
-                            <li style="margin-bottom: 8px; font-weight: bold;">
-                                <span style="color:#4284F4;">Published in: </span> 
-                                <span style="color:#000000;">2025 International Conference on Electronics, Information, and Communication (ICEIC)</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-6 col-md-12">
-                        <ul style="list-style-type: none; text-align: left; padding-left: 0; margin-bottom: 0;">
-                            <li style="margin-bottom: 8px; font-weight: bold;">
-                                <span style="color:#4284F4;">Conference Location: </span> 
-                                <span style="color:#000000;">Osaka, Japan</span>
-                            </li>
-                            <li style="margin-bottom: 8px; font-weight: bold;">
-                                <span style="color:#4284F4;">Electronic ISBN: </span> 
-                                <span style="color:#000000;">979-8-3315-1075-6</span>
-                            </li>
-                            <li style="margin-bottom: 8px; font-weight: bold;">
-                                <span style="color:#4284F4;">Date of Conference: </span> 
-                                <span style="color:#000000;">19-22 January 2025</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Second Paper -->
-                <p style="color: white; text-align: justify; margin-bottom: 15px; font-weight: bold;">
-                    <a href="https://doi.org/10.1109/ICRPSET64863.2024.10955896" target="_blank" style="color: rgb(0, 0, 0); font-weight: bold;">
-                        Crop Prediction Using Machine Learning and IoT: A Comparative Analysis of Algorithms
-                    </a>
-                </p>
-                  
-                <div class="row">
-                    <div class="col-lg-6 col-md-12">
-                        <ul style="list-style-type: none; text-align: left; padding-left: 0; margin-bottom: 10px;">
-                            <li style="margin-bottom: 8px; font-weight: bold;">
-                                <a href="https://doi.org/10.1109/ICRPSET64863.2024.10955896">
-                                    <img src="https://img.shields.io/badge/DOI-10.1109%2FICRPSET64863.2024.1095589-orange?style=flat-square" alt="DOI" class="doi-badge">
-                                </a>
-                            </li>
-                            <li style="margin-bottom: 8px; font-weight: bold;">
-                                <span style="color:#4284F4;">Published in: </span> 
-                                <span style="color:#000000;">2024 International Conference on Recent Progresses in Science, Engineering and Technology (ICRPSET)</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-6 col-md-12">
-                        <ul style="list-style-type: none; text-align: left; padding-left: 0; margin-bottom: 0;">
-                            <li style="margin-bottom: 8px; font-weight: bold;">
-                                <span style="color:#4284F4;">Conference Location: </span> 
-                                <span style="color:#000000;">Rajshahi, BD</span>
-                            </li>
-                            <li style="margin-bottom: 8px; font-weight: bold;">
-                                <span style="color:#4284F4;">Electronic ISBN: </span> 
-                                <span style="color:#000000;">979-8-3315-0947-7</span>
-                            </li>
-                            <li style="margin-bottom: 8px; font-weight: bold;">
-                                <span style="color:#4284F4;">Date of Conference: </span> 
-                                <span style="color:#000000;">07-08 December 2024</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Research Profiles Section -->
-                <div class="research-profiles">
-
-                  <h5 style="color: #000000; font-weight: 900;">
-  <span class="material-icons" style="color: #000000; vertical-align: middle; font-size: 2em; margin-right: 0px;">cruelty_free</span>
-  RESEARCH PROFILES
-</h5>
-                    
-                    <div class="research-badges">
-                        <a href="https://orcid.org/0009-0007-4656-8709"><img src="https://img.shields.io/badge/ORCID-eb2f06?style=for-the-badge&logo=orcid&logoColor=white" alt="ORCID" class="profile-badge"></a>
-                        <a href="https://www.researchgate.net/profile/Labib-Bin-Shahed"><img src="https://img.shields.io/badge/ResearchGate-006266?style=for-the-badge&logo=researchgate&logoColor=white" alt="ResearchGate" class="profile-badge"></a>
-                        <a href="https://scholar.google.com/citations?hl=en&user=xg04A5kAAAAJ"><img src="https://img.shields.io/badge/Scholar-70a1ff?style=for-the-badge&logo=google-scholar&logoColor=white" alt="Google Scholar" class="profile-badge"></a>
-                        <a href="https://ieeexplore.ieee.org/author/398407024257618"><img src="https://img.shields.io/badge/Xplore-273c75?style=for-the-badge&logo=ieee&logoColor=white" alt="IEEE Xplore" class="profile-badge"></a>
-                        <a href="#"><img src="https://img.shields.io/badge/Semantic-ff793f?style=for-the-badge&logo=semanticscholar&logoColor=white" alt="Semantic Scholar" class="profile-badge"></a>
-                        <a href="#"><img src="https://img.shields.io/badge/Mendeley-9D1620?style=for-the-badge&logo=mendeley&logoColor=white" alt="Mendeley" class="profile-badge"></a>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <!-- Mobile-only Research Image -->
-        <div class="mobile-research-image" style="display: none;">
-            <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/research/rss.jpg" alt="Research" style="width: 100%; height: auto; margin-top: 20px;">
-        </div>
-    </div>
-</section>
-
-<style>
-  .research-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .research-item {
-    background: #ffffff; /* Solid white background */
-    border-radius: 8px;
-    padding: 20px;
-    border: 15px solid #f6f8f9; /* Adds a strong border */
-  }
-  
-  .research-item p {
-    text-align: justify;
-    margin-bottom: 15px;
-    font-weight: bold;
-  }
-  
-  .research-item ul {
+.about-me .content p:last-child {
     margin-bottom: 0;
-  }
+}
 
-  .research-profiles {
+/*--------------------------------------------------------------
+# Counts
+--------------------------------------------------------------*/
+.counts {
+    padding: 70px 0 60px;
+}
+
+.counts .count-box {
+    padding: 30px 30px 25px 30px;
     width: 100%;
-  }
-
-  .research-badges {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
-  .doi-badge {
-    height: 24px;
-    width: auto;
-  }
-
-  .profile-badge {
-    height: 25px;
-    width: auto;
-  }
-  
-  /* Mobile View */
-  @media (max-width: 768px) {
-    .research-item {
-      background: none;
-      padding: 0;
-      border-radius: 0;
-      border: none; /* Removes the 15px border */
-    }
-    
-    .mobile-research-image {
-  display: block !important;
-  padding: 0 !important; /* Removes all padding */
+    position: relative;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.08);
 }
 
-  }
+.counts .count-box i {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    color: #1c7d32;
+    border-radius: 50px;
+}
 
-  .research-item .row > div {
-    margin-bottom: 15px;
-  }
-  
-  .research-item .row > div:last-child {
-    margin-bottom: 0;
-  }
+.counts .count-box span {
+    font-size: 36px;
+    display: block;
+    font-weight: 600;
+    color: #fff;
+}
 
-  /* Ensure all text is bold */
-  .research-item strong,
-  .research-item span,
-  .research-item li {
-    font-weight: bold !important;
-  }
-</style>
-
-<!-- End Research Section -->
-
-  <!-- Start Experience Section -->
-  
-<section id="experience" class="services">
-    <div class="container">
-      <div class="section-title">
-        <h2><b>Experience</b></h2>
-        <div class="mobile-experience-image" style="display: none;">
-          <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/experience/experience.jpg" alt="Experience" style="width: 100%; border-radius: 8px; margin: 15px 0;">
-        </div>
-      </div>
-
-      <div class="experience-container">
-              
-        <div class="experience-item">
-
-          <h4 class="experience-title" style="color: #000000; font-weight: 900;">
-            <span class="material-icons" style="color: #000000; vertical-align: middle; font-size: 2em; margin-right: 0px;">
-    diversity_3
-            </span>
-            <a href="https://ieeecsbdc.org/about-secretariat" style="color: #000000 !important; text-decoration: none;">
-              <b>IEEE Computer Society Bangladesh Chapter Secretariat</b>
-            </a>
-          </h4>
-          
-          <p class="experience-meta" style="color: #4284F4;"><b>January 2025 - Present | President</b></p>
-
-          <ul class="experience-list" style="list-style-type: none; padding-left: 0;">
-    <li style="display: flex; align-items: center; gap: 12px;">
-  <span class="material-icons" style="color: black; font-size: 1em; display: inline-flex; align-items: center; justify-content: center;">label_important</span>
-  <span style="display: flex; align-items: center;"><b>Shape the Chapter's vision and set strategic goals that align with IEEE CS BDC Ex-Com directives.</b></span>
-    </li>
-
-    <li style="display: flex; align-items: center; gap: 12px;">
-  <span class="material-icons" style="color: black; font-size: 1em; display: inline-flex; align-items: center; justify-content: center;">label_important</span>
-  <span style="display: flex; align-items: center;"><b>Design, host, and measure impactful events to elevate computer science education and innovation.</b></span>
-    </li>
-
-     <li style="display: flex; align-items: center; gap: 12px;">
-  <span class="material-icons" style="color: black; font-size: 1em; display: inline-flex; align-items: center; justify-content: center;">label_important</span>
-  <span style="display: flex; align-items: center;"><b>Build strong partnerships with academics, industry leaders, and professional networks.</b></span>
-    </li>
-
-    <li style="display: flex; align-items: center; gap: 12px;">
-  <span class="material-icons" style="color: black; font-size: 1em; display: inline-flex; align-items: center; justify-content: center;">label_important</span>
-  <span style="display: flex; align-items: center;"><b>Manage resources, fund operations responsibly, and prioritize sustainability and branding.</b></span>
-    </li>
-
-    <li style="display: flex; align-items: center; gap: 12px;">
-  <span class="material-icons" style="color: black; font-size: 1em; display: inline-flex; align-items: center; justify-content: center;">label_important</span>
-  <span style="display: flex; align-items: center;"><b>Create pathways for skill-building, career growth, and recognition for members.</b></span>
-    </li>  
-          </ul>
-        </div>
-
-        <div class="experience-item">
-
-          <h4 class="experience-title" style="color: #000000; font-weight: 900;">
-            <span class="material-icons" style="color: #000000; vertical-align: middle; font-size: 2em; margin-right: 0px;">
-    apartment
-            </span>
-            <a href="https://bracuexpress.com/" style="color: #000000 !important; text-decoration: none;">
-              <b>BRACU Express</b>
-            </a>
-          </h4>
-          
-          <p class="experience-meta" style="color: #4284F4;"><b>April 2023 - January 2025 | Journalist</b></p>
-
-          <ul class="experience-list" style="list-style-type: none; padding-left: 0;">
-    <li style="display: flex; align-items: center; gap: 12px;">
-  <span class="material-icons" style="color: black; font-size: 1em; display: inline-flex; align-items: center; justify-content: center;">label_important</span>
-  <span style="display: flex; align-items: center;"><b>Led deep-dive research and expert interviews, delivering content that's both insightful and deadline-driven.
-</b></span>
-    </li>
-
-    <li style="display: flex; align-items: center; gap: 12px;">
-  <span class="material-icons" style="color: black; font-size: 1em; display: inline-flex; align-items: center; justify-content: center;">label_important</span>
-  <span style="display: flex; align-items: center;"><b>Boosted audience engagement by crafting visually striking multimedia elements, including photos and sleek graphic designs.</b></span>
-    </li>
-
-     <li style="display: flex; align-items: center; gap: 12px;">
-  <span class="material-icons" style="color: black; font-size: 1em; display: inline-flex; align-items: center; justify-content: center;">label_important</span>
-  <span style="display: flex; align-items: center;"><b>
-Created and published standout articles on trending topics capturing the attention of university readers via BRACU Express.</b></span>
-    </li>
-
-    <li style="display: flex; align-items: center; gap: 12px;">
-  <span class="material-icons" style="color: black; font-size: 1em; display: inline-flex; align-items: center; justify-content: center;">label_important</span>
-  <span style="display: flex; align-items: center;"><b>Partnered with the editorial team to finesse drafts, ensuring a steady stream of polished, buzzworthy publications—explore my <a href="https://bracuexpress.com/author/labib/" target="_blank" style="color: #4284F4;">portfolio</a> at BRACU Express.</b></span>
-    </li>
- 
-          </ul>
-        </div>
-
-        <div class="experience-item">
-
-          <h4 class="experience-title" style="color: #000000; font-weight: 900;">
-            <span class="material-icons" style="color: #000000; vertical-align: middle; font-size: 2em; margin-right: 0px;">
-    design_services
-            </span>
-            <a href="https://www.facebook.com/TachyonTs" style="color: #000000 !important; text-decoration: none;">
-              <b>Tachyon</b>
-            </a>
-          </h4>
-          
-          <p class="experience-meta" style="color: #4284F4;"><b>May 2023 - May 2024 | Science Content Writer</b></p>
-
-          <ul class="experience-list" style="list-style-type: none; padding-left: 0;">
-    <li style="display: flex; align-items: center; gap: 12px;">
-  <span class="material-icons" style="color: black; font-size: 1em; display: inline-flex; align-items: center; justify-content: center;">label_important</span>
-  <span style="display: flex; align-items: center;"><b>Analyzed scientific papers independently while partnering with editors to develop educational content aligned with Tachyon's goal of connecting research with public understanding.
-</b></span>
-    </li>
-
-    <li style="display: flex; align-items: center; gap: 12px;">
-  <span class="material-icons" style="color: black; font-size: 1em; display: inline-flex; align-items: center; justify-content: center;">label_important</span>
-  <span style="display: flex; align-items: center;"><b>Built expertise in science communication, research techniques, and content development while helping expand public interest in STEM topics.
-</b></span>
-    </li>
-
-     <li style="display: flex; align-items: center; gap: 12px;">
-  <span class="material-icons" style="color: black; font-size: 1em; display: inline-flex; align-items: center; justify-content: center;">label_important</span>
-  <span style="display: flex; align-items: center;"><b>
-Created engaging articles breaking down complex scientific ideas into accessible content on physics advances and environmental science.</b></span>
-    </li>
-
-    <li style="display: flex; align-items: center; gap: 12px;">
-  <span class="material-icons" style="color: black; font-size: 1em; display: inline-flex; align-items: center; justify-content: center;">label_important</span>
-  <span style="display: flex; align-items: center;"><b>Remotely contributed to Tachyon from Dhaka as a Science Content Writer (<span style="color: #4284F4;">ID: 202301003</span>), aiding this nonprofit's mission to boost science literacy and critical thinking in Bangladesh.
-</b></span>
-    </li>
- 
-          </ul>
-        </div>
-
-        <div class="experience-item">
-
-          <h4 class="experience-title" style="color: #000000; font-weight: 900;">
-            <span class="material-icons" style="color: #000000; vertical-align: middle; font-size: 2em; margin-right: 0px;">
-    flutter_dash
-            </span>
-            <a href="https://ieee-pes.org/about-pes/pes-day/" style="color: #000000 !important; text-decoration: none;">
-              <b>IEEE PES Day</b>
-            </a>
-          </h4>
-          
-          <p class="experience-meta" style="color: #4284F4;"><b>February 2024 - May 2024 | Ambassador</b></p>
-
-          <ul class="experience-list" style="list-style-type: none; padding-left: 0;">
-    <li style="display: flex; align-items: center; gap: 12px;">
-  <span class="material-icons" style="color: black; font-size: 1em; display: inline-flex; align-items: center; justify-content: center;">label_important</span>
-  <span style="display: flex; align-items: center;"><b>Nominated as IEEE PES Day 2024 Ambassador (<span style="color: #4284F4;">ID: PESDAY24-217</span>) to champion "Empowering Electric Mobility Innovation," promoting green transport solutions worldwide.
-
-</b></span>
-    </li>
-
-    <li style="display: flex; align-items: center; gap: 12px;">
-  <span class="material-icons" style="color: black; font-size: 1em; display: inline-flex; align-items: center; justify-content: center;">label_important</span>
-  <span style="display: flex; align-items: center;"><b>Networked with <span style="color: #4284F4;">700+</span> global ambassadors, building leadership skills and cross-cultural connections while advancing IEEE PES goals for energy innovation.
-
-</b></span>
-    </li>
-
-     <li style="display: flex; align-items: center; gap: 12px;">
-  <span class="material-icons" style="color: black; font-size: 1em; display: inline-flex; align-items: center; justify-content: center;">label_important</span>
-  <span style="display: flex; align-items: center;"><b>
-Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobility: Challenges and Opportunities"</span> on April 23, 2024, partnering with IEEE Power & Energy Society BRACU Chapter and featuring speakers from Team Crack Platoon and SAE teams from RUET.
-</b></span>
-    </li>
-
-    <li style="display: flex; align-items: center; gap: 12px;">
-  <span class="material-icons" style="color: black; font-size: 1em; display: inline-flex; align-items: center; justify-content: center;">label_important</span>
-  <span style="display: flex; align-items: center;"><b>Boosted awareness about sustainable mobility through digital and community initiatives during the global IEEE PES Day events (April 22–24, 2024).
-</b></span>
-    </li>
- 
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- Recommendation Section -->
-    
-    <div class="interests container">
-      <div class="section-title">
-        <h2 class="interest-heading"><b>Recommendation</b></h2>
-        <div class="mobile-recom-image" style="display: none; margin: 15px 0;">
-  <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/recommendation/rcom.JPG" 
-       alt="Recommendations" 
-       style="width: 100%; border-radius: 8px;">
-</div>
-      </div>
-      
-      <div class="recommendation-container">
-        <!-- Recommendation 3 -->
-        <div class="recommendation-item">
-          <div class="recommendation-header">
-            <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/recommendation/kmsu.jpg" alt="K M Shariat Ullah" class="recommendation-photo">
-            <div class="recommendation-info">
-              <h5 class="recommendation-name">K M Shariat Ullah</h5>
-              <p class="recommendation-title">Founder | Tachyon</p>
-              <a href="https://www.linkedin.com/in/kmshariat/" target="_blank" class="linkedin-link">
-                <i class="bi bi-linkedin"></i> LinkedIn
-              </a>
-            </div>
-          </div>
-          <div class="recommendation-content">
-           <p style="text-align:justify;">
-  <strong>Labib worked as a science content writer at Tachyon. He consistently delivered quality work, transforming complex scientific research into accessible content that actually gets read, something most science writers struggle with. He strikes the right balance, making sophisticated concepts understandable without dumbing them down. I confidently endorse Labib for his proven writing skills, scientific understanding, and his ability to produce content that serves its purpose effectively.</strong>
-</p>
-
-          </div>
-        </div>
-
-      <!-- Recommendation 3 -->
-        <div class="recommendation-item">
-          <div class="recommendation-header">
-            <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/recommendation/bb.jpg" alt="Branca Boson" class="recommendation-photo">
-            <div class="recommendation-info">
-              <h5 class="recommendation-name">Branca Boson</h5>
-              <p class="recommendation-title">Storyteller | Writer | Editor</p>
-              <a href="https://www.linkedin.com/in/brancaboson/" target="_blank" class="linkedin-link">
-                <i class="bi bi-linkedin"></i> LinkedIn
-              </a>
-            </div>
-          </div>
-          <div class="recommendation-content">
-           <p style="text-align:justify;">
-  <strong>Labib and I had a nice conversation that gave me a lot of precious insights about my professional strategy. He was very generous and friendly. I expect to always count on his helpful and wise point of view.</strong>
-</p>
-
-          </div>
-        </div>
-
-        <!-- Recommendation 4 -->
-        <div class="recommendation-item">
-          <div class="recommendation-header">
-            <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/recommendation/rai.jpg" alt="Rashedul Arefin" class="recommendation-photo">
-            <div class="recommendation-info">
-              <h5 class="recommendation-name">Rashedul Arefin</h5>
-              <p class="recommendation-title">Joint Secretary | IEEE CSBDC</p>
-              <a href="https://www.linkedin.com/in/ifty1011/" target="_blank" class="linkedin-link">
-                <i class="bi bi-linkedin"></i> LinkedIn
-              </a>
-            </div>
-          </div>
-          <div class="recommendation-content">
-
-            <p style="text-align: justify; font-weight: bold;">
-  It is with great pleasure that I recommend Labib Bin Shahed, with whom I've had the privilege of working for two years at IEEE CS BDC Secretariat. Labib is an experienced content writer whose work has significantly contributed to our organization's success. As my Vice President, he has demonstrated exceptional leadership, often taking charge in my absence and ensuring tasks are completed to perfection. Labib's ability to manage teams and persuade others makes him an invaluable asset to any project. I confidently endorse Labib for his dedication, proficiency, and outstanding leadership skills.
-</p>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="mobile-experience-gif" style="display: none; margin-top: 20px;">
-        <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/GIF/experience.gif" alt="Experience GIF" style="width: 100%; border-radius: 8px;">
-      </div>
-    </div>
-</section>
-
-<style>
-  /* Base Styles for All Devices */
-  .experience-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .experience-item {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
-    padding: 20px;
-  }
-  
-  .experience-title {
-    margin: 0 0 5px 0;
-    text-align: left;
-  }
-  
-  .experience-title a {
-    color: #10cf3e;
-    text-decoration: none;
-  }
-  
-  .experience-meta {
-    color: #10cf3e;
-    margin: 0 0 15px 0;
-    text-align: left;
-  }
-  
-  .experience-list {
-    list-style-type: none;
+.counts .count-box p {
     padding: 0;
     margin: 0;
-  }
-
-  .experience-list li {
-    margin-bottom: 12px;
-    display: flex;
-    align-items: flex-start;
-    line-height: 1.5;
-  }
-  
-  .experience-list li i {
-    color: #4284F4;
-    margin-right: 10px;
-    flex-shrink: 0;
-    margin-top: 3px;
-  }
-  
-  .experience-list li span {
-    display: inline;
-  }
-  
-  .experience-list li a {
-    color: #10cf3e;
-    text-decoration: none;
-  }
-  
-  .highlight-id {
-    color: #10cf3e;
-  }
-  
-  /* Desktop - Use Bootstrap */
-  @media (min-width: 992px) {
-    .experience-container {
-      display: block;
-      background: #ffffff;
-      padding: 20px;
-      border-radius: 8px;
-      border: 15px solid #f6f8f9;
-    }
-    
-    .experience-item {
-      width: 100%;
-      margin-bottom: 20px;
-    }
-    
-    /* Recommendation Desktop Styles */
-    .recommendation-container {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 25px;
-      margin-top: 20px;
-    }
-    
-    .recommendation-item {
-      background: #ffffff;
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-      border: 15px solid #f7f9f9;
-    }
-    
-    .recommendation-header {
-      display: flex;
-      align-items: center;
-      margin-bottom: 15px;
-    }
-    
-    .recommendation-photo {
-      width: 70px;
-      height: 70px;
-      border-radius: 10%;
-      object-fit: cover;
-      margin-right: 15px;
-    }
-    
-    .recommendation-info {
-      flex: 1;
-    }
-    
-    .recommendation-name {
-      font-weight: 800;
-      margin: 0;
-      color: #000000;
-      font-size: 1rem;
-    }
-    
-    .recommendation-title {
-      color: #666666;
-      margin: 4px 0;
-      font-size: 0.75rem;
-      line-height: 1.4;
-    }
-    
-    .linkedin-link {
-      color: #ffffff !important;
-      text-decoration: none;
-      font-size: 0.75rem;
-      display: inline-flex;
-      align-items: left;
-      font-weight: 800;
-      background-color: #4284F4;
-      padding: 4px 8px;
-      border-radius: 4px;
-    }
-    
-    .linkedin-link i {
-      margin-right: 5px;
-      font-size: 0.9rem;
-    }
-    
-    .recommendation-content {
-      color: #333333;
-      line-height: 1.5;
-      font-size: 0.92rem;
-    }
-  }
-  
-  /* Mobile Optimizations (under 992px) */
-  @media (max-width: 991px) {
-    /* Text justification for all text in mobile */
-    .experience-item,
-    .recommendation-content,
-    .experience-list li span {
-      text-align: justify;
-      text-align-last: left;
-    }
-    
-    .experience-item {
-      padding: 18px 0;
-      background: none !important;
-      border-radius: 0;
-      border-bottom: 3px solid rgba(0,0,0,0.1);
-      padding-bottom: 14px !important;
-    }
-    
-    .experience-list li {
-      margin-bottom: 14px;
-      line-height: 1.6;
-    }
-    
-    .experience-container {
-      gap: 25px;
-    }
-    
-    .experience-list li i {
-      margin-right: 8px;
-    }
-    
-    .mobile-experience-image,
-    .mobile-experience-gif {
-      display: block !important;
-    }
-    
-    /* Recommendation Mobile Styles - Specific changes only */
-    .recommendation-container {
-      display: flex;
-      flex-direction: column;
-      gap: 25px;
-    }
-    
-    .recommendation-item {
-    background: none !important; /* Remove background */
-    border: none !important; /* Remove border */
-    border-radius: 0; /* Remove border radius */
-    padding: 18px 0; /* Keep vertical padding, no left/right padding */
-    box-shadow: none !important; /* Remove shadow */
-    border-bottom: 3px solid rgba(0,0,0,0.1); /* Add bottom border for separation */
-    padding-bottom: 14px !important;
-  }
-    
-    .recommendation-header {
-      display: flex;
-      align-items: center;
-      margin-bottom: 15px;
-    }
-    
-     .recommendation-photo {
-    width: 70px !important;
-    height: 70px !important;
-    margin-bottom: 10px;
-    padding-left: 0; /* Remove left padding for photo */
-    padding-right: 8px; /* Remove right padding for photo */
-  }
-  
-    .recommendation-info {
-      flex: 1;
-    }
-    
-    .recommendation-name {
-      font-weight: 800;
-      margin: 0;
-      color: #000000;
-      font-size: 1rem;
-    }
-    
-    .recommendation-title {
-      color: #666666;
-      margin: 4px 0;
-      font-size: 0.75rem;
-      line-height: 1.4;
-    }
-
-    .recommendation-container {
-  gap: 15px !important;
-    }
-
-    .mobile-recom-image {
-  display: block !important;
-  margin: 15px 0;
-  }
-    
-    .linkedin-link {
-      color: #ffffff !important;
-      text-decoration: none;
-      font-size: 0.75rem;
-      display: inline-flex;
-      align-items: left;
-      font-weight: 800;
-      background-color: #4284F4;
-      padding: 4px 8px;
-      border-radius: 4px;
-    }
-    
-    .linkedin-link i {
-      margin-right: 5px;
-      font-size: 0.9rem;
-    }
-    
-    .recommendation-content {
-      color: #333333;
-      line-height: 1.5;
-      font-size: 0.92rem;
-      text-align: justify;
-      text-align-last: left;
-    }
-  }
-  
-  /* Small mobile devices */
-  @media (max-width: 480px) {
-    .experience-item {
-      padding: 16px 0;
-    }
-    
-    .experience-list li {
-      margin-bottom: 12px;
-      line-height: 1.5;
-    }
-    
-    .experience-title {
-      font-size: 1.1rem;
-    }
-    
-    .experience-meta {
-      font-size: 0.9rem;
-    }
-    
-    .recommendation-photo {
-      width: 70px;
-      height: 70px;
-    }
-  }
-</style>
-  <!-- End Experience Section -->
-  <!-- Start Project Section -->
-
-  <section id="portfolio" class="portfolio">
-    <div class="container">
-
-      <div class="section-title">
-        <h2><b>Projects</b></h2>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-12 d-flex justify-content-center">
-          <ul id="portfolio-flters">
-            <li data-filter="*" class="filter-active"><b>All</b></li>
-            <li data-filter=".filter-app"><b>Web-App</b></li>
-            <li data-filter=".filter-project"><b>Project</b></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="row portfolio-container">
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <center><h4><b>MoodScope</b></h4></center>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/MoodScope.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              
-              <div class="portfolio-links">
-                <a href="projects/MoodScope.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><img 
-  src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/certification/chain.png?raw=true" 
-  alt="Certificate Link Icon" 
-  style="width: 35px; height: 35px;"
->
-</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <center><h4><b>CostNest</b></h4></center>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/CostNest.jpeg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              
-              <div class="portfolio-links">
-                <a href="projects/CostNest.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><img 
-  src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/certification/chain.png?raw=true" 
-  alt="Certificate Link Icon" 
-  style="width: 35px; height: 35px;"
->
-</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <center><h4><b>LeafByte</b></h4></center>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/LeafByte.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              
-              <div class="portfolio-links">
-                <a href="projects/LeafByte.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><img 
-  src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/certification/chain.png?raw=true" 
-  alt="Certificate Link Icon" 
-  style="width: 35px; height: 35px;"
->
-</a>
-              </div>
-            </div>
-          </div>
-        </div>
-       
-        <div class="col-lg-4 col-md-6 portfolio-item filter-project">
-          <!-- <br> -->
-          <center><h4><b>VitaSort</b></h4></center>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/VitaSort.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4><b>VitaSort</b></h4>
-              <div class="portfolio-links">
-                <a href="projects/VitaSort.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><img 
-  src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/certification/chain.png?raw=true" 
-  alt="Certificate Link Icon" 
-  style="width: 35px; height: 35px;"
->
-</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-project">
-          <center><h4><b>LitGrid</b></h4></center>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/LitGrid.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <div class="portfolio-links">
-                <a href="projects/LitGrid.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><img 
-  src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/certification/chain.png?raw=true" 
-  alt="Certificate Link Icon" 
-  style="width: 35px; height: 35px;"
->
-</a>
-              </div>
-            </div>
-          </div>
-        </div>        
-        
-        <div class="col-lg-4 col-md-6 portfolio-item filter-project">
-          <!-- <br> -->
-          <center><h4><b>DuskProbe</b></h4></center>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/DuskProbe.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <div class="portfolio-links">
-                <a href="projects/DuskProbe.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><img 
-  src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/certification/chain.png?raw=true" 
-  alt="Certificate Link Icon" 
-  style="width: 35px; height: 35px;"
->
-</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-  <!-- End Project Section -->
-  <!-- Start Skills Section -->
-   
-<!-- Start Skills Section -->
-<section id="skills" class="skills-section">
-  <div class="container">
-    <div class="section-title">
-      <h2><strong>Skills</strong></h2>
-    </div>
-    
-    <!-- Mobile-only GIF (hidden on desktop) -->
-    <div class="mobile-gif-container d-block d-md-none">
-      <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/GIF/skills.GIF" 
-           alt="Skills GIF">
-    </div>
-    
-    <div class="row">
-      <div class="col-12">
-        
-        <!-- Programming Languages -->
-        <div class="skill-category">
-          <h4 style="color: black;"><strong>Programming Languages</strong></h4>
-          <div class="skill-icons">
-            <img src="https://www.vectorlogo.zone/logos/python/python-horizontal.svg" alt="Python" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/java/java-horizontal.svg" alt="Java" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/javascript/javascript-horizontal.svg" alt="JavaScript" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-ar21.svg" alt="TypeScript" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/golang/golang-ar21.svg" alt="Go" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/rust-lang/rust-lang-ar21.svg" alt="Rust" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/kotlinlang/kotlinlang-ar21.svg" alt="Kotlin" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/ruby-lang/ruby-lang-ar21.svg" alt="Ruby" loading="lazy">
-          </div>
-        </div>
-        
-        <!-- Web Development -->
-        <div class="skill-category">
-          <h4 style="color: black;"><strong>Web Development</strong></h4>
-          <div class="skill-icons">
-            <img src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-ar21.svg" alt="HTML5" loading="lazy">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS3" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/sass-lang/sass-lang-ar21.svg" alt="Sass" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/lesscss/lesscss-ar21.svg" alt="Less" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/reactjs/reactjs-ar21.svg" alt="React" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/vuejs/vuejs-ar21.svg" alt="Vue.js" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/angular/angular-ar21.svg" alt="Angular" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-ar21.svg" alt="Bootstrap" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-ar21.svg" alt="Tailwind CSS" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/graphql/graphql-ar21.svg" alt="GraphQL" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/apache_cordova/apache_cordova-ar21.svg" alt="Cordova" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/electronjs/electronjs-ar21.svg" alt="Electron" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/d3js/d3js-ar21.svg" alt="D3.js" loading="lazy">
-          </div>
-        </div>
-        
-        <!-- Backend & Databases -->
-        <div class="skill-category">
-          <h4 style="color: black;"><strong>Backend & Databases</strong></h4>
-          <div class="skill-icons">
-            <img src="https://www.vectorlogo.zone/logos/nodejs/nodejs-horizontal.svg" alt="Node.js" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/expressjs/expressjs-ar21.svg" alt="Express.js" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/djangoproject/djangoproject-ar21.svg" alt="Django" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/springio/springio-ar21.svg" alt="Spring" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/mysql/mysql-horizontal.svg" alt="MySQL" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/postgresql/postgresql-horizontal.svg" alt="PostgreSQL" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/mongodb/mongodb-ar21.svg" alt="MongoDB" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/redis/redis-ar21.svg" alt="Redis" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/firebase/firebase-ar21.svg" alt="Firebase" loading="lazy">
-          </div>
-        </div>
-        
-        <!-- Data Science & AI -->
-        <div class="skill-category">
-          <h4 style="color: black;"><strong>Data Science & AI</strong></h4>
-          <div class="skill-icons">
-            <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-ar21.svg" alt="TensorFlow" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-ar21.svg" alt="PyTorch" loading="lazy">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="Scikit-learn" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/numpy/numpy-ar21.svg" alt="NumPy" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/opencv/opencv-ar21.svg" alt="OpenCV" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/apache_spark/apache_spark-ar21.svg" alt="Spark" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/apache_hadoop/apache_hadoop-ar21.svg" alt="Hadoop" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/apache_kafka/apache_kafka-ar21.svg" alt="Kafka" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/r-project/r-project-ar21.svg" alt="R Language" loading="lazy">
-          </div>
-        </div>
-        
-        <!-- Cloud & DevOps -->
-        <div class="skill-category">
-          <h4 style="color: black;"><strong>Cloud & DevOps</strong></h4>
-          <div class="skill-icons">
-            <img src="https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-ar21.svg" alt="AWS" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-ar21.svg" alt="Google Cloud" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-ar21.svg" alt="Azure" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/docker/docker-ar21.svg" alt="Docker" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/kubernetes/kubernetes-ar21.svg" alt="Kubernetes" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/terraformio/terraformio-ar21.svg" alt="Terraform" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/ansible/ansible-ar21.svg" alt="Ansible" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/jenkins/jenkins-ar21.svg" alt="Jenkins" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/github/github-ar21.svg" alt="GitHub Actions" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/gitlab/gitlab-ar21.svg" alt="GitLab CI" loading="lazy">
-          </div>
-        </div>
-        
-        <!-- Operating Systems -->
-        <div class="skill-category">
-          <h4 style="color: black;"><strong>Operating Systems</strong></h4>
-          <div class="skill-icons">
-            <img src="https://www.vectorlogo.zone/logos/linux/linux-ar21.svg" alt="Linux" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/ubuntu/ubuntu-ar21.svg" alt="Ubuntu" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/debian/debian-ar21.svg" alt="Debian" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/centos/centos-ar21.svg" alt="CentOS" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/redhat/redhat-ar21.svg" alt="Red Hat" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/apple/apple-ar21.svg" alt="macOS" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/microsoft/microsoft-ar21.svg" alt="Windows" loading="lazy">
-          </div>
-        </div>
-        
-        <!-- Development Tools -->
-        <div class="skill-category">
-          <h4 style="color: black;"><strong>Development Tools</strong></h4>
-          <div class="skill-icons">
-            <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-ar21.svg" alt="Git" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/visualstudio_code/visualstudio_code-ar21.svg" alt="VS Code" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/jetbrains/jetbrains-ar21.svg" alt="JetBrains" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/jupyter/jupyter-ar21.svg" alt="Jupyter" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/npmjs/npmjs-ar21.svg" alt="npm" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/yarnpkg/yarnpkg-ar21.svg" alt="Yarn" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/heroku/heroku-ar21.svg" alt="Heroku" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/figma/figma-ar21.svg" alt="Figma" loading="lazy">
-          </div>
-        </div>
-        
-      </div>
-    </div>
-    
-  </div>
-   
-
-
-  <div class="interests container">
-    <div class="section-title">
-      <h2 class="interest-heading"><b>Statistics</b></h2>
-    </div>
-    
-    <!-- GitHub Trophies Section - Fixed Version -->
-    <div class="github-trophies" style="background-color: white; padding: 20px; border-radius: 8px; margin-bottom: 30px;">
-      <!-- Single responsive image that works for all devices -->
-      <div class="row justify-content-center">
-        <div class="col-12 text-center">
-          <img src="https://github-profile-trophy.vercel.app/?username=la-b-ib&theme=flat&no-frame=true&no-bg=true&margin-w=15&margin-h=15&row=2&column=4" 
-     alt="GitHub Trophies" 
-      loading="lazy"
-               style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
-        </div>
-      </div>
-    </div>
-    <!-- End GitHub Trophies Section -->
-
-    <!-- Mobile-only GIF (hidden on desktop) -->
-
-    <!-- Mobile-only Stats GIF (hidden on desktop) -->
-    <!-- Mobile-only Stats GIF (hidden on desktop) -->
-  <div class="mobile-gif-container d-block d-md-none">
-    <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/GIF/stats.gif" 
-       alt="Stats GIF" 
-       loading="lazy">
-  </div>
-
-
-    <!-- Contribution Graph Section -->
-
-    <div class="contribution-container">
-      <div class="contribution-badges">
-        <a href="https://octoprofile.vercel.app/user?id=la-b-ib"><img src="https://img.shields.io/badge/OctoProfile-Visit-2088FF?style=for-the-badge&logo=github" alt="OctoProfile"></a>
-        <a href="https://github.com/la-b-ib"><img src="https://komarev.com/ghpvc/?username=la-b-ib&label=Views&style=for-the-badge&color=2088FF" alt="Profile Views"></a>
-      </div>
-      <div class="contribution-graph">
-        <img src="https://github-readme-activity-graph.vercel.app/graph?username=la-b-ib&theme=github-dark-dimmed&area=true&hide_border=true&height=300&bg_color=ffffff&custom_title=Contribution+Activity&hide_title=false&line=4284f4&point=273c75&color=000000" 
-     alt="Contribution Graph">
-
-      </div>
-    </div>
-  </div>
-  </div>
-   <div class="interests container">
-    <div class="section-title">
-      <h2 class="interest-heading"><b>programming </b></h2>
-    </div>
-     <div class="badge-container">
-        <!-- LeetCode Badge -->
-        <a href="https://leetcode.com/u/la-b-ib/" class="badge leetcode" target="_blank">
-            <img src="https://leetcode.com/static/images/LeetCode_logo_rvs.png" alt="LeetCode" class="badge-logo">
-            <span class="badge-text">LeetCode</span>
-        </a>
-        
-        <!-- HackerRank Badge -->
-        <a href="https://www.hackerrank.com/profile/la_b_ib" class="badge hackerrank" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/HackerRank_Icon-1000px.png" alt="HackerRank" class="badge-logo">
-            <span class="badge-text">HackerRank</span>
-        </a>
-        
-        <!-- CodersRank Badge -->
-        <a href="https://profile.codersrank.io/user/la-b-ib" class="badge codersrank" target="_blank">
-            <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/dev%20badge/crrnk.png" alt="CodersRank" class="badge-logo">
-            <span class="badge-text">CodersRank</span>
-        </a>
-        
-        <!-- GitHub Badge -->
-        <a href="https://github.com/la-b-ib" class="badge github" target="_blank">
-            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="badge-logo">
-            <span class="badge-text">GitHub</span>
-        </a>
-    </div>
-    
-
-
-</section>
-
-<style>
-
- .badge-container {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 10px; /* Controls space between badges */
-    justify-content: flex-start; /* Aligns badges to the left */
-    align-items: center; /* Maintains vertical alignment */
-    overflow-x: auto;
-    white-space: nowrap;
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
 }
 
+/*--------------------------------------------------------------
+# Skills
+--------------------------------------------------------------*/
+.skills .progress {
+    height: 50px;
+    display: block;
+    background: none;
+}
 
-        
-  .badge {
+.skills .progress .skill {
+    padding: 0;
+    margin: 0 0 6px 0;
+    text-transform: uppercase;
+    display: block;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+}
+
+.skills .progress .skill .val {
+    float: right;
+    font-style: normal;
+}
+
+.skills .progress-bar-wrap {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.skills .progress-bar {
+    width: 1px;
+    height: 10px;
+    transition: .9s;
+    background-color: #1c7d32;
+}
+
+/*--------------------------------------------------------------
+# Interests
+--------------------------------------------------------------*/
+.interests .icon-box {
     display: flex;
     align-items: center;
-    background-color: #f7f9f9;
-    border-radius: 6px;
-    padding: 8px 12px;
-    text-decoration: none;
-    color: #333;
-    border-left: 5px solid currentColor; /* Uses the text color for the left border */
-  }
-        
-        .badge-logo {
-            width: 20px;
-            height: 20px;
-            margin-right: 8px;
-        }
-        
-        .badge-text {
-            font-weight: bold;
-            font-size: 14px;
-        }
-        
-        .leetcode {
-            color: #FFA116;
-        }
-        
-        .hackerrank {
-            color: #2EC866;
-        }
-        
-        .codersrank {
-            color: #67A4AC;
-        }
-        
-        .github {
-            color: #4078c0;
-        }
-
-        /* Hide scrollbar for Chrome, Safari and Opera */
-        .badge-container::-webkit-scrollbar {
-            display: none;
-        }
-        
-        /* Hide scrollbar for IE, Edge and Firefox */
-        .badge-container {
-            -ms-overflow-style: none;  /* IE and Edge */
-            scrollbar-width: none;  /* Firefox */
-        }
-
-
-
-
-  /* Mobile-First Styles (override Bootstrap only for mobile) */
-  @media (max-width: 767.98px) {
-    .skills-section .container {
-      padding-left: 5px;
-      padding-right: 5px;
-    }
-    
-    .mobile-gif-container {
-      width: 100vw;
-      position: relative;
-      left: 50%;
-      right: 50%;
-      margin-left: -50vw;
-      margin-right: -50vw;
-      overflow: hidden;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    
-    .mobile-gif-container img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    
-    .skill-category {
-      background: white;
-      padding: 15px 10px;
-      border-radius: 0;
-      margin: 0 5px 15px 5px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    
-    .skill-icons {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      justify-items: center;
-    }
-    
-    .skill-icons img {
-      width: 100%;
-      height: 60px;
-      object-fit: contain;
-      max-width: none !important;
-    }
-    
-    .skill-category h4 {
-      font-size: 1.2rem;
-      margin-bottom: 12px;
-    }
-    
-    /* GitHub Trophies mobile optimization */
-  
-  .github-trophies {
-    background: white;
-    padding: 10px 10px !important;
-    border-radius: 0 !important;
-    margin: 0 5px 15px 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    width: calc(100% - 10px);
-    overflow: hidden;
-  }
-    
-  .github-trophies img[src*="github-profile-trophy"] {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    transform: scale(1);
-  }
-
-  
-
-  
-
-  
-
-  
-  }
-
-  /* Desktop Styles (keep Bootstrap defaults) */
-  @media (min-width: 768px) {
-    .mobile-gif-container {
-      display: none !important;
-    }
-    
-    .skill-category {
-      background: #ffffff; /* Solid white */
-      padding: 20px;
-      border-radius: 8px;
-      border: 15px solid #f6f8f9; /* Border in the desired color */
-      margin-bottom: 20px;
-    }
-    
-    .skill-icons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      justify-content: flex-start;
-      align-items: center;
-    }
-    
-    .skill-icons img {
-      height: 65px;
-      width: auto;
-      max-width: 160px;
-      object-fit: contain;
-    }
-    
-    .skill-category h4 {
-      font-size: 1.3rem;
-      margin-bottom: 15px;
-    }
-    
-.github-trophies {
-    display: none !important; /* Hide GitHub Trophies on desktop */
-  }   
-  
-  
-.github-trophies {
-  width: 100%; /* Full width */
-  padding: 20px 0; /* Remove left/right padding */
-  margin: 0 auto; /* Centers content */
-  display: flex;
-  justify-content: space-evenly; /* Distributes trophies evenly */
-  flex-wrap: wrap; /* Allows wrapping */
-  border: 15px solid #f7f9f9; /* Adds border */
-}
-
-.github-trophies img {
-  flex: 1; /* Ensures even distribution */
-  max-width: calc(100% / 5 - 15px); /* Adjust dynamically */
-  min-width: 80px; /* Prevent excessive shrinking */
+    padding: 20px;
+    background: #ffffff;
+    border: 15px solid #f6f8f9;
+    border-radius: 10px; 
+    transition: ease-in-out 0.3s;
 }
 
 
-    
-
-.github-trophies .row {
-    width: 100%; /* Extend row to full width */
-  }
-
-  }
-</style>
-<!-- End Skills Section -->
-<!-- End Skills Section -->
-  <!-- Start Links section -->
-
-  <section id="links" class="services">
-    <div class="container">
-      <div class="section-title">
-        <h2>Resume & Links</h2>
-      </div>
-      <div class="row">
-        <div class="col-md-3 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-          <a href="https://drive.google.com/file/d/155WaKgoQctZrFN7UDNOmzXAYAUnCXmWr/view?usp=sharing" target="_blank"><div class="icon"><i class="icofont-page"></i></div></a>
-          <h4 class="title"><a href="https://drive.google.com/file/d/155WaKgoQctZrFN7UDNOmzXAYAUnCXmWr/view?usp=sharing" target="_blank">Resume</a></h4>
-          <p class="description" style="color:#fff;">The link contains downloadable resume</p>
-        </div>
-      </div>
-    </div>
-  </section> 
-  <!--End Links Section -->
-
-<!-- Start Blogs Section -->
-
-<section id="blogs" class="services">
-    <div class="container">
-        <div class="section-title" style="margin-bottom: 25px;">
-            <h2><b>Blogs</b></h2>
-        </div>
-        <div class="row">
-            <!-- BRACU Express -->
-            <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="100">
-                <div class="icon-box">
-  <div class="icon">
-    <span class="material-icons" style="font-size: 40px;">menu_book</span>
-  </div>
-  <h4 class="title">
-    <a href="https://bracuexpress.com/author/labib/" target="_blank" style="color: #4285F4;"><b>BRACU Express</b></a>
-
-  </h4>
-  <p class="description"><b>NEWS & STORIES</b></p>
-</div>
-
-            </div>
-
-            <!-- Newsletter -->
-            <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="300">
-                <div class="icon-box">
-  <div class="icon">
-    <span class="material-icons" style="font-size: 40px;">menu_book</span>
-  </div>
-  <h4 class="title">
-    <a href="https://www.linkedin.com/newsletters/tech-talk-7325845368900894722/" target="_blank" style="color: #4285F4; ""><b>NEWSLETTER</b></a>
-  </h4>
-  <p class="description"><b>Tech Talk</b></p>
-</div>
-
-            </div>
-        </div>
-    </div>
-</section>
-
-<style>
-    /* ===== COMMON STYLES (unchanged) ===== */
-#blogs .icon-box {
-    text-align: center;
-    padding: 30px;
-    background: #ffffff00;
-    border-radius: 8px;
-    border: 15px solid #f6f8f9; /* 15px solid border */
-    transition: all 0.2s ease-in-out;
-    height: 100%;
+.interests .icon-box i {
+    font-size: 30px;
+    padding-right: 10px;
+    line-height: 1;
 }
 
-   
-    #blogs .icon {
-        margin-bottom: 20px;
-
-    }
-    #blogs .icon i {
-    color: #4285F4;
-    font-size: 36px;
-    background-color: #f6f8f9; /* Set background color */
-    padding: 10px; /* Adjust for spacing inside */
-    border-radius: 10%; /* Optional: Makes it circular */
-}
-
-    #blogs .title a {
-        color: #000000;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 18px;
-        transition: color 0.3s;
-    }
-    #blogs .title a:hover {
-        color: #4285F4;
-    }
-    #blogs .description {
-        color: #000000;
-        margin-top: 15px;
-        font-size: 14px;
-        font-weight: bold;
-    }
-
-    /* ===== DESKTOP VIEW (EXACTLY ORIGINAL) ===== */
-    @media (min-width: 992px) {
-        #blogs .col-lg-4 {
-            flex: 0 0 33.333333%;
-            width: 33.333333%;
-        }
-        /* All other desktop styles remain untouched */
-    }
-
-    /* ===== MOBILE VIEW (2 ROWS - STACKED VERTICALLY) ===== */
-    @media (max-width: 991.98px) {
-        #blogs .row {
-            display: block !important;
-        }
-        
-        #blogs .col-lg-4,
-        #blogs .col-md-6,
-        #blogs .col-12 {
-            flex: 0 0 100% !important;
-            max-width: 100% !important;
-            margin-bottom: 15px;
-            padding: 0 !important;
-        }
-        
-        #blogs .icon-box {
-            padding: 30px !important; /* Maintain original padding */
-        }
-    }
-</style>
-
-  <!-- End Blogs Section -->
- <!-- Start Contact Section -->
-
-<section id="contacts" class="contact">
-  <div class="container">
-    <div class="section-title">
-  <h2><b>Contact</b></h2>
-  <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/GIF/contact/conhdr.jpg" alt="Contact Header" class="mobile-only contact-img">
-</div>
-    <div>
-      <p style="text-align: justify; font-weight: bold;">
-      <b>I'm hyped to crush it on AI, cybersecurity, sustainability, and career-shaping projects! Slide into my DMs, and let's spark game-changing, community-driven solutions that light up the world!</b>
-    </p>
-    </div>
-    
-    
-
- 
-     <div class="badge-container">
-        <!-- LeetCode Badge -->
-        <a href="https://leetcode.com/u/la-b-ib/" class="badge leetcode" target="_blank">
-            <img src="https://leetcode.com/static/images/LeetCode_logo_rvs.png" alt="LeetCode" class="badge-logo">
-            <span class="badge-text">LeetCode</span>
-        </a>
-        
-        <!-- HackerRank Badge -->
-        <a href="https://www.hackerrank.com/profile/la_b_ib" class="badge hackerrank" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/HackerRank_Icon-1000px.png" alt="HackerRank" class="badge-logo">
-            <span class="badge-text">HackerRank</span>
-        </a>
-        
-        <!-- CodersRank Badge -->
-        <a href="https://profile.codersrank.io/user/la-b-ib" class="badge codersrank" target="_blank">
-            <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/dev%20badge/crrnk.png" alt="CodersRank" class="badge-logo">
-            <span class="badge-text">CodersRank</span>
-        </a>
-        
-        <!-- GitHub Badge -->
-        <a href="https://github.com/la-b-ib" class="badge github" target="_blank">
-            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="badge-logo">
-            <span class="badge-text">GitHub</span>
-        </a>
-        
-        <!-- LinkedIn Badge -->
-        <a href="https://www.linkedin.com/in/la-b-ib/" class="badge linkedin" target="_blank">
-            <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/dev%20badge/linkedin.png" alt="LinkedIn" class="badge-logo">
-            <span class="badge-text">LinkedIn</span>
-        </a>
-        
-        <!-- Twitter Badge -->
-        <a href="https://x.com/la_b_ib_" class="badge twitter" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" alt="Twitter" class="badge-logo">
-            <span class="badge-text">Twitter</span>
-        </a>
-        
-        <!-- Email Badge -->
-        <a href="mailto:labib-x@protonmail.com?subject=Inquiry%20from%20Website&body=Hello%20Labib,%0D%0A%0D%0AI%20have%20a%20question!" class="badge email" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Email" class="badge-logo">
-            <span class="badge-text">Email</span>
-        </a>
-        
-        <!-- Reddit Badge -->
-        <a href="https://www.reddit.com/u/la-b-ib/s/VmELK9jJOC" class="badge reddit" target="_blank">
-            <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/dev%20badge/reddit.jpeg" alt="Reddit" class="badge-logo">
-            <span class="badge-text">Reddit</span>
-        </a>
-        
-    </div>
-     
-  </div>
-   
-
-    
-     
-</section>
-<style>
-
-  .mobile-only {
-    display: none;
-    width: 100%;
+.interests .icon-box h3 {
+    font-weight: 700;
+    margin: 0;
     padding: 0;
+    line-height: 1;
+    font-size: 16px;
+    color: #fff;
+}
+
+.interests .icon-box:hover {
+    background: rgba(66, 132, 244, 0.2); /* 65% transparency */
+    
+}
+
+
+
+
+/*--------------------------------------------------------------
+# Testimonials
+--------------------------------------------------------------*/
+.testimonials .testimonial-item {
+    box-sizing: content-box;
+    min-height: 320px;
+}
+
+.testimonials .testimonial-item .testimonial-img {
+    width: 90px;
+    border-radius: 50%;
+    margin: -40px 0 0 40px;
+    position: relative;
+    z-index: 2;
+    border: 6px solid rgba(255, 255, 255, 0.12);
+}
+
+.testimonials .testimonial-item h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0 5px 45px;
+    color: #fff;
+}
+
+.testimonials .testimonial-item h4 {
+    font-size: 14px;
+    color: #999;
+    margin: 0 0 0 45px;
+}
+
+.testimonials .testimonial-item .quote-icon-left, .testimonials .testimonial-item .quote-icon-right {
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 26px;
+}
+
+.testimonials .testimonial-item .quote-icon-left {
+    display: inline-block;
+    left: -5px;
+    position: relative;
+}
+
+.testimonials .testimonial-item .quote-icon-right {
+    display: inline-block;
+    right: -5px;
+    position: relative;
+    top: 10px;
+}
+
+.testimonials .testimonial-item p {
+    font-style: italic;
+    margin: 0 15px 0 15px;
+    padding: 20px 20px 60px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    position: relative;
+    border-radius: 6px;
+    position: relative;
+    z-index: 1;
+}
+
+.testimonials .owl-nav, .testimonials .owl-dots {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.testimonials .owl-dot {
+    display: inline-block;
+    margin: 0 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.testimonials .owl-dot.active {
+    background-color: #1c7d32 !important;
 }
 
 @media (max-width: 767px) {
-    .mobile-only {
-        display: block;
+    .testimonials {
+        margin: 30px 10px;
     }
-   
-}
-       .badge-container {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 10px; /* Controls space between badges */
-    justify-content: flex-start; /* Aligns badges to the left */
-    align-items: center; /* Maintains vertical alignment */
-    overflow-x: auto;
-    white-space: nowrap;
 }
 
-        
-        .badge {
+/*--------------------------------------------------------------
+# Resume
+--------------------------------------------------------------*/
+.resume .resume-title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.resume .resume-item {
+    padding: 0 0 20px 20px;
+    margin-top: -2px;
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+}
+
+.resume .resume-item h4 {
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    color: #1c7d32;
+    margin-bottom: 10px;
+}
+
+.resume .resume-item h5 {
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 5px 15px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.resume .resume-item ul {
+    padding-left: 20px;
+}
+
+.resume .resume-item ul li {
+    padding-bottom: 10px;
+}
+
+.resume .resume-item:last-child {
+    padding-bottom: 0;
+}
+
+.resume .resume-item::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50px;
+    left: -9px;
+    top: 0;
+    background: #9e7f25;
+    border: 2px solid #9e7f25;
+}
+
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+.services .icon-box {
+    text-align: center;
+    background: #09203a;
+    padding: 40px 40px;
+    transition: all ease-in-out 0.3s;
+    margin: 10px
+}
+
+.services .icon-box .icon {
+    margin: 0 auto;
+    width: 64px;
+    height: 64px;
+    background: #f6f8f9;
+    border-radius: 5px;
+    transition: all .3s ease-out 0s;
     display: flex;
     align-items: center;
-    background-color: #f7f9f9;
-    border-radius: 6px;
-    padding: 8px 12px;
-    text-decoration: none;
-    color: #333;
-    border-left: 5px solid currentColor; /* Uses the text color for the left border */
+    justify-content: center;
+    margin-bottom: 20px;
+    transform-style: preserve-3d;
 }
-        
-        .badge-logo {
-            width: 20px;
-            height: 20px;
-            margin-right: 8px;
-        }
-        
-        .badge-text {
-            font-weight: bold;
-            font-size: 14px;
-        }
-        
-        .leetcode {
-            color: #FFA116;
-        }
-        
-        .hackerrank {
-            color: #2EC866;
-        }
-        
-        .codersrank {
-            color: #67A4AC;
-        }
-        
-        .github {
-            color: #4078c0;
-        }
-        
-        .linkedin {
-            color: #0A66C2;
-        }
-        
-        .twitter {
-            color: #1DA1F2;
-        }
-        
-        .email {
-            color: #8B89CC;
-        }
-        
-        .reddit {
-            color: #FF5700;
-        }
 
-        /* Hide scrollbar for Chrome, Safari and Opera */
-        .badge-container::-webkit-scrollbar {
-            display: none;
-        }
-        
-        /* Hide scrollbar for IE, Edge and Firefox */
-        .badge-container {
-            -ms-overflow-style: none;  /* IE and Edge */
-            scrollbar-width: none;  /* Firefox */
-        }
-    </style>
+.services .icon-box .icon i {
+    color: #fff;
+    font-size: 28px;
+}
 
-<!-- End Contact Section -->
+.services .icon-box .icon::before {
+    position: absolute;
+    content: '';
+    left: -8px;
+    top: -8px;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 5px;
+    transition: all .3s ease-out 0s;
+    transform: translateZ(-1px);
+}
 
-<!-- ======= Footer ======= -->
+.services .icon-box h4 {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
 
-<link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+.services .icon-box h4 a {
+    color: #fff;
+}
 
-<footer id="footer" aria-label="Site footer">
-  <div class="container">
-    <!-- Default View -->
-    <div class="footer-content footer-row" id="footerDefault" onclick="toggleSearch(true)">
-      <span class="footer-name" id="footerText"><strong>Copyright © 2026. All rights reserved. Developed by Labib Bin Shahed.</strong></span>
-    </div>
+.services .icon-box p {
+    line-height: 24px;
+    font-size: 14px;
+    margin-bottom: 0;
+}
 
-    <!-- Search View -->
-    <div class="footer-content footer-row footer-search" id="footerSearch">
-      <input type="text" id="footerSearchInput" placeholder="Search site..." aria-label="Search input" inputmode="text" autocomplete="off" />
-    </div>
-  </div>
+.services .icon-box:hover {
+    background: #042e5f;
+    border-color: #f6f8f9;
+}
 
-  <style>
-  :root {
-    --primary-color: #000000;
-    --text-color: #000000;
-    --fallback-bg: rgba(255, 255, 255, 0.05);
-  }
+.services .icon-box:hover .icon {
+    background: #fff;
+}
 
-  #footer {
-    position: fixed;
-    bottom: 0;
+.services .icon-box:hover .icon i {
+    color: #f6f8f9;
+}
+
+.services .icon-box:hover .icon::before {
+    background: #4284f4;
+}
+
+.services .icon-box:hover h4 a, .services .icon-box:hover p {
+    color: #4284f4;
+}
+
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+.portfolio .portfolio-item {
+    margin-bottom: 30px;
+}
+
+.portfolio #portfolio-flters {
+    padding: 0;
+    margin: 0 auto 15px auto;
+    list-style: none;
+    text-align: center;
+    border-radius: 50px;
+    padding: 2px 15px;
+}
+
+.portfolio #portfolio-flters li {
+    cursor: pointer;
+    display: inline-block;
+    padding: 8px 16px 10px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #fff;
+    background: #000000;
+    margin: 0 3px 10px 3px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 4px;
+}
+
+.portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
+    background: #192a56;
+}
+
+.portfolio #portfolio-flters li:last-child {
+    margin-right: 0;
+}
+
+.portfolio .portfolio-wrap {
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    background: transparent
+}
+
+.portfolio .portfolio-wrap::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:transparent; /* Semi-transparent white */
+    border: 15px solid #f6f8f9;
+    border-radius: 0;
+    transition: all ease-in-out 0.3s;
+    z-index: 2;
+    opacity: 1;
+    
+}
+
+
+.portfolio .portfolio-wrap .portfolio-info {
+    opacity: 0;
+    position: absolute;
+    top: 0;
     left: 0;
     right: 0;
-    height: 45px;
-    background: var(--fallback-bg);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    font-family: 'Bungee', sans-serif;
-    color: var(--text-color);
-    font-size: 14px;
-    z-index: 1000;
+    bottom: 0;
+    text-align: center;
+    z-index: 3;
+    transition: all ease-in-out 0.3s;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
+    background: rgba(255, 255, 255, 0.2) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+}
 
-  #footer .container {
-    width: 100%;
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 20px;
-    height: 100%;
-  }
-
-  .footer-content {
-    width: 100%;
-    height: 100%;
-  }
-
-  .footer-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    height: 100%;
-    padding: 0 10px;
-  }
-
-  .footer-name {
-    font-weight: 600;
-    color: var(--primary-color);
-    cursor: pointer;
-    transition: color 0.3s ease;
-    font-size: 14px;
-  }
-
-  .footer-name:hover {
-    color: var(--text-color);
-  }
-
-  .footer-search {
-    display: none;
-  }
-
-  .footer-search.active {
-    display: flex;
-  }
-
-  .footer-search input {
-    border: none;
-    outline: none;
-    background: transparent;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 14px;
-    color: var(--text-color);
-    width: 160px;
-    backdrop-filter: blur(6px);
-  }
-
-  mark.search-highlight {
-    background-color: yellow;
-    color: black;
-    font-weight: bold;
-    padding: 0 2px;
-    border-radius: 2px;
-    font-size: 14px;
-  }
-
-  @media (max-width: 768px) {
-    .footer-row {
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
+@supports not (backdrop-filter: blur(10px)) {
+    .portfolio .portfolio-wrap .portfolio-info {
+        background: rgba(255, 255, 255, 0.5) !important;
     }
+}
 
-    .footer-search input {
-      width: 140px;
-      font-size: 14px;
-    }
-
-    #footerText strong {
-      content: "Copyright © 2026. All rights reserved.";
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .footer-name {
-      transition: none;
-    }
-  }
-</style>
-
-<script>
-  function toggleSearch(show) {
-    if (window.innerWidth <= 768) return; // Disable search toggle on mobile
-
-    const defaultView = document.getElementById('footerDefault');
-    const searchView = document.getElementById('footerSearch');
-    if (show) {
-      defaultView.style.display = 'none';
-      searchView.classList.add('active');
-      document.getElementById('footerSearchInput').focus();
-    }
-  }
-
-  document.getElementById('footerSearchInput').addEventListener('input', function () {
-    const query = this.value.trim();
-
-    if (query === '666') {
-      this.value = '';
-      document.getElementById('footerSearch').classList.remove('active');
-      document.getElementById('footerDefault').style.display = 'flex';
-      clearHighlights();
-      return;
-    }
-
-    clearHighlights();
-    if (query.length === 0) return;
-
-    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
-      acceptNode: function (node) {
-        const parent = node.parentNode;
-        const style = window.getComputedStyle(parent);
-        return (
-          parent.offsetParent !== null &&
-          style.visibility !== 'hidden' &&
-          style.display !== 'none'
-        ) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
-      }
-    });
-
-    while (walker.nextNode()) {
-      const node = walker.currentNode;
-      const text = node.nodeValue;
-      const index = text.toLowerCase().indexOf(query.toLowerCase());
-
-      if (index !== -1) {
-        const span = document.createElement('span');
-        const mark = document.createElement('mark');
-        mark.className = 'search-highlight';
-        mark.textContent = text.substring(index, index + query.length);
-
-        span.appendChild(document.createTextNode(text.substring(0, index)));
-        span.appendChild(mark);
-        span.appendChild(document.createTextNode(text.substring(index + query.length)));
-
-        node.parentNode.replaceChild(span, node);
-      }
-    }
-  });
-
-  function clearHighlights() {
-    document.querySelectorAll('mark.search-highlight').forEach(mark => {
-      const parent = mark.parentNode;
-      parent.replaceChild(document.createTextNode(mark.textContent), mark);
-      parent.normalize();
-    });
-
-    document.querySelectorAll('span').forEach(span => {
-      if (span.querySelector('mark.search-highlight')) {
-        const text = span.textContent;
-        const textNode = document.createTextNode(text);
-        span.parentNode.replaceChild(textNode, span);
-      }
-    });
-  }
-
-  // Mobile footer text override
-  window.addEventListener('DOMContentLoaded', () => {
-    const footerText = document.getElementById('footerText');
-    if (window.innerWidth <= 768) {
-      footerText.innerHTML = '<strong>Copyright © 2026. All rights reserved.</strong>';
-    }
-  });
-</script>
-</footer>
-
-
-
-
-
-
-
-
-
-<!-- Vendor JS Files -->
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/counterup2/1.0.7/index.min.js"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/venobox/2.1.8/venobox.min.js"></script>
-  
-  <script>
-  // Inject custom CSS for glassmorphism and wave spinner
-  const style1 = document.createElement('style');
-  style1.innerHTML = `
-    .vbox-overlay {
-      background: rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-    }
-
-    .vbox-container, .vbox-content {
-      background: transparent !important;
-      box-shadow: none !important;
-      border: none !important;
-      padding: 0 !important;
-      margin: 0 !important;
-    }
-
-    .venobox iframe {
-      background: transparent !important;
-      border: 0 !important;
-      padding: 0 !important;
-      margin: 0 !important;
-    }
-
+.portfolio .portfolio-wrap .portfolio-info::before {
+    display: block;
+    content: "";
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    top: 35px;
+    left: 35px;
+    border-top: 5px solid #ffffff;
+    border-left: 5px solid #fffefe;
+    transition: all 0.5s ease 0s;
+    z-index: 9994;
     
-  `;
-  document.head.appendChild(style1);
+}
 
-  // Initialize VenoBox with custom spinner and styling
-  document.addEventListener('DOMContentLoaded', function () {
-    $('.venobox').venobox({
-      bgcolor: 'white',
-      border: 'none',
-      framewidth: '100%',
-      frameheight: '90vh',
-      numeratio: true,
-      infinigall: true,
-      spinner: 'grid',
-      overlayColor: 'rgba(0, 0, 0, 0.3)',
-      closeBackground: 'transparent',
-      closeColor: '#4284F4',
-      onOpen: function () {
-        $('.vbox-spinner').html('<div class="wave"><div></div><div></div><div></div></div>');
-      },
-      onClose: function () {
-        $('.custom-close-btn').remove();
-      }
-    });
-  });
-</script>
+.portfolio .portfolio-wrap .portfolio-info::after {
+    display: block;
+    content: "";
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    bottom: 35px;
+    right: 35px;
+    border-bottom: 5px solid #ffffff;
+    border-right: 5px solid #ffffff;
+    transition: all 0.5s ease 0s;
+    z-index: 9994;
+}
+
+.portfolio .portfolio-wrap .portfolio-info h4 {
+    font-size: 20px;
+    color: #000000;
+    font-weight: 600;
+}
+
+.portfolio .portfolio-wrap .portfolio-info p {
+    color: #ffffff;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+}
+
+.portfolio .portfolio-wrap .portfolio-links {
+    text-align: center;
+    z-index: 4;
+}
+
+.portfolio .portfolio-wrap .portfolio-links a {
+    color: #fff;
+    margin: 0 2px;
+    font-size: 28px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.portfolio .portfolio-wrap .portfolio-links a:hover {
+    color: #4285f4;
+}
+
+.portfolio .portfolio-wrap:hover::before {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+}
+
+.portfolio .portfolio-wrap:hover .portfolio-info {
+    opacity: 1;
+}
+
+.portfolio .portfolio-wrap:hover .portfolio-info::before {
+    top: 15px;
+    left: 15px;
+}
+
+.portfolio .portfolio-wrap:hover .portfolio-info::after {
+    bottom: 15px;
+    right: 15px;
+}
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+.contact .info-box {
+    color: #444444;
+    padding: 20px;
+    width: 100%;
+    background: #ffffff; /* Pure solid white */
+    border: 15px solid #f6f8f9; /* Matching solid border */
+    border-radius: 8px; /* Slightly rounded corners */
+}
+
+
+
+.contact .info-box {
+    display: flex; /* Enables Flexbox */
+    justify-content: space-evenly; /* Ensures even spacing between icons */
+    align-items: center;
+}
+
+.contact .info-box i.bx {
+    font-size: 20px;
+    color: #ffffff;
+    border-radius: 20%;
+    padding: 18px;
+    background: rgb(0, 0, 0);
+    margin: 10px; /* Adjust as needed to fine-tune spacing */
+}
+
+
+.contact .info-box h3 {
+    font-size: 20px;
+    color: #4284F4;
+    font-weight: 700;
+    margin: 10px 0 8px 68px;
+}
+
+.contact .info-box p {
+    padding: 0;
+    color: #000000;
+    line-height: 24px;
+    font-size: 14px;
+    margin: 0 0 0 68px;
+}
+
+.contact .info-box .social-links {
+    margin: 5px 0 0 68px;
+    display: flex;
+}
+
+.contact .info-box .social-links a {
+    font-size: 23px;
+    display: inline-block;
+    color: #fff;
+    line-height: 1;
+    margin-right: 12px;
+    transition: 0.3s;
+}
+
+.contact .info-box .social-links a:hover {
+    color: #4285f4;
+}
 
 
 
 
+.contact .php-email-form {
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.08);
+}
 
+.contact .php-email-form .validate {
+    display: none;
+    color: red;
+    margin: 0 0 15px 0;
+    font-weight: 400;
+    font-size: 13px;
+}
 
+.contact .php-email-form .error-message {
+    display: none;
+    background: rgba(255, 255, 255, 0.08);
+    background: #ed3c0d;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+}
 
+.contact .php-email-form .sent-message {
+    display: none;
+    background: rgba(255, 255, 255, 0.08);
+    background: #1c7d32;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+}
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
-  <script type="text/javascript">
-    var typed = new Typed('.typing',{
-      strings: ["<b>Coder</b>", "<b>Developer</b>", "<b>AI Enthusiast</b>", "<b>Researcher</b>" ],
-      loop: true,
-      typeSpeed: 65,
-      backSpeed: 65
-    });
-  </script>
+.contact .php-email-form .loading {
+    display: none;
+    background: rgba(255, 255, 255, 0.08);
+    text-align: center;
+    padding: 15px;
+}
 
-  <script>
-  // Disable right-click context menu
-  document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-    // Optional: Show a warning (customize or remove)
-    alert('Right-click is disabled for security reasons.');
-  });
+.contact .php-email-form .loading:before {
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin: 0 10px -6px 0;
+    border: 3px solid #1c7d32;
+    border-top-color: #eee;
+    -webkit-animation: animate-loading 1s linear infinite;
+    animation: animate-loading 1s linear infinite;
+}
 
-  // Disable keyboard shortcuts for DevTools and source view
-  document.addEventListener('keydown', function(e) {
-    // F12
-    if (e.keyCode === 123) {
-      e.preventDefault();
-      return false;
+.contact .php-email-form input, .contact .php-email-form textarea {
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 0;
+    transition: 0.3s;
+    color: #fff;
+}
+
+.contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
+    background-color: rgba(255, 255, 255, 0.11);
+}
+
+.contact .php-email-form input::-webkit-input-placeholder, .contact .php-email-form textarea::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.3);
+    opacity: 1;
+}
+
+.contact .php-email-form input::-moz-placeholder, .contact .php-email-form textarea::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.3);
+    opacity: 1;
+}
+
+.contact .php-email-form input:-ms-input-placeholder, .contact .php-email-form textarea:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.3);
+    opacity: 1;
+}
+
+.contact .php-email-form input::-ms-input-placeholder, .contact .php-email-form textarea::-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.3);
+    opacity: 1;
+}
+
+.contact .php-email-form input::placeholder, .contact .php-email-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+    opacity: 1;
+}
+
+.contact .php-email-form input {
+    padding: 20px 15px;
+}
+
+.contact .php-email-form textarea {
+    padding: 12px 15px;
+}
+
+.contact .php-email-form button[type="submit"] {
+    background: #1c7d32;
+    border: 0;
+    padding: 10px 30px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 4px;
+}
+
+.contact .php-email-form button[type="submit"]:hover {
+    background: #15bb62;
+}
+
+@-webkit-keyframes animate-loading {
+    0% {
+        transform: rotate(0deg);
     }
-    // Ctrl+Shift+I (Inspect), Ctrl+Shift+J (Console), Ctrl+Shift+C (Elements)
-    if (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74 || e.keyCode === 67)) {
-      e.preventDefault();
-      return false;
+    100% {
+        transform: rotate(360deg);
     }
-    // Ctrl+U (View Source)
-    if (e.ctrlKey && e.keyCode === 85) {
-      e.preventDefault();
-      return false;
+}
+
+@keyframes animate-loading {
+    0% {
+        transform: rotate(0deg);
     }
-    // Mac equivalents: Cmd+Option+I/J/C/U
-    if (e.metaKey && e.altKey && (e.keyCode === 73 || e.keyCode === 74 || e.keyCode === 67 || e.keyCode === 85)) {
-      e.preventDefault();
-      return false;
+    100% {
+        transform: rotate(360deg);
     }
-    // Optional: Block Ctrl+S (Save Page)
-    if (e.keyCode === 83 && (e.ctrlKey || (navigator.platform.match('Mac') && e.metaKey))) {
-      e.preventDefault();
-      return false;
+}
+
+/*--------------------------------------------------------------
+# Credits
+--------------------------------------------------------------*/
+.credits {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    font-size: 13px;
+    color: #fff;
+    z-index: 1;
+}
+
+.credits a {
+    color: #1c7d32;
+    transition: 0.3s;
+}
+
+.credits a:hover {
+    color: #fff;
+}
+
+@media (max-width: 992px) {
+    .credits {
+        left: 50%;
+        right: 0;
+        transform: translateX(-50%);
     }
-  });
-</script>
+}
+
+/* Fix portfolio item background */
+.portfolio .portfolio-wrap {
+    background: transparent !important;
+}
+
+.portfolio .portfolio-wrap::before {
+    content: "";
+    background: rgba(246, 248, 249, 0) !important; /* Soft transparency for glass effect */
+    backdrop-filter: blur(0px); /* Glassmorphism blur */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    position: absolute;
+    inset: 0; /* Auto width and height */
+    transition: all ease-in-out 0.3s;
+    z-index: 2;
+    opacity: 1;
+}
 
 
-  <script>
-  // Disable right-click context menu
-  document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-    // Optional: Show a warning (customize or remove)
-    alert('Right-click is disabled for security reasons.');
-  });
+/* Prevent white flashes on scroll */
+html, body {
+    background: #ffffff !important; /* Pure white background */
+    
+    overscroll-behavior-y: contain;
+    -webkit-overflow-scrolling: touch;
+    box-sizing: border-box; /* Ensures border fits within the layout */
+}
 
-  // Disable keyboard shortcuts for DevTools and source view
-  document.addEventListener('keydown', function(e) {
-    // F12
-    if (e.keyCode === 123) {
-      e.preventDefault();
-      return false;
+
+
+
+/* Fix for iOS/Safari rendering */
+body::before {
+    height: 100% !important;
+    z-index: -1 !important;
+}
+
+/* Disable tap highlights */
+a, button, .portfolio-wrap {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Fix for venobox iframe container */
+.vbox-overlay {
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Glassmorphism blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Cross-browser support */
+}
+
+
+.vbox-container {
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+.vbox-content {
+    background: transparent !important;
+    border: none !important;
+}
+
+.venobox iframe {
+    background: transparent !important;
+    -webkit-backdrop-filter: blur(10px); /* Cross-browser support */;
+    backdrop-filter: none !important;
+    
+    border: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+
+.portfolio .portfolio-wrap::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: transparent !important;
+    border: 15px solid #f6f8f9;
+    border-radius: 0;
+    transition: all ease-in-out 0.3s;
+    z-index: 2;
+    opacity: 1;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+
+
+
+.portfolio .portfolio-info {
+    background: #ffffff !important;
+}
+
+/* Prevent white flashes during transitions */
+.vbox-overlay, .vbox-container {
+    transition: none !important;
+    animation: none !important;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Fix Google Material Close Button */
+.vbox-close {
+    display: block !important;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background: transparent !important;
+    border: none !important;
+    font-size: 32px !important;
+    color: #fff !important;
+    cursor: pointer;
+    z-index: 10000;
+    padding: 5px;
+    transition: all 0.3s;
+}
+
+.vbox-close:hover {
+    color: #d61212 !important;
+    transform: scale(1.1);
+}
+
+.vbox-close i {
+    font-family: 'Material Icons';
+    font-size: inherit !important;
+    color: inherit !important;
+}
+
+/* Custom gamepad close button for mobile */
+
+
+
+
+
+.vbox-overlay {
+   background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Glassmorphism blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Cross-browser support */
+    
+}
+
+
+/* Add this to ensure default buttons are visible */
+.vbox-close,
+.vbox-prev,
+.vbox-next {
+  display: block !important;
+}
+
+
+
+
+
+
+/* Custom styling for Venobox close, previous, and next buttons */
+/* Custom styling for Venobox close, previous, and next buttons */
+
+/* Custom Venobox Button Styling */
+.vbox-close, 
+.vbox-next, 
+.vbox-prev {
+  background: rgba(255, 255, 255, 0.2) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border-radius: 50% !important;
+  width: 40px !important;
+  height: 40px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: none !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Button icons */
+.vbox-close:before, 
+.vbox-next:before, 
+.vbox-prev:before {
+  color: #4284F4 !important;
+  font-weight: 900 !important;
+  font-size: 8px !important;
+  text-shadow: none !important;
+}
+
+
+
+/* Position adjustments */
+.vbox-close {
+  top: 20px !important;
+  right: 20px !important;
+}
+
+.vbox-next, 
+.vbox-prev {
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+}
+
+.vbox-prev {
+  left: 20px !important;
+}
+
+.vbox-next {
+  right: 20px !important;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .vbox-close, 
+  .vbox-next, 
+  .vbox-prev {
+    width: 35px !important;
+    height: 35px !important;
+  }
+  
+  .vbox-close:before, 
+  .vbox-next:before, 
+  .vbox-prev:before {
+    font-size: 18px !important;
+  }
+}
+
+
+@keyframes pulse {
+    0% { 
+        transform: scale(1); 
+        
     }
-    // Ctrl+Shift+I (Inspect), Ctrl+Shift+J (Console), Ctrl+Shift+C (Elements)
-    if (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74 || e.keyCode === 67)) {
-      e.preventDefault();
-      return false;
+    50% { 
+        transform: scale(1.1); 
+        
     }
-    // Ctrl+U (View Source)
-    if (e.ctrlKey && e.keyCode === 85) {
-      e.preventDefault();
-      return false;
+    100% { 
+        transform: scale(1); 
+        
     }
-    // Mac equivalents: Cmd+Option+I/J/C/U
-    if (e.metaKey && e.altKey && (e.keyCode === 73 || e.keyCode === 74 || e.keyCode === 67 || e.keyCode === 85)) {
-      e.preventDefault();
-      return false;
-    }
-    // Optional: Block Ctrl+S (Save Page)
-    if (e.keyCode === 83 && (e.ctrlKey || (navigator.platform.match('Mac') && e.metaKey))) {
-      e.preventDefault();
-      return false;
-    }
-  });
-</script>
-
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+}
 
 
 
-</html>
+
+
+
+
+
+
+/* Global scrollbar styling - hidden but functional */
+html {
+  overflow-y: scroll; /* Force scrollbar to prevent shifting */
+  scrollbar-width: none; /* Firefox - hide scrollbar */
+  scroll-behavior: smooth; /* Smooth scrolling for all devices */
+  overscroll-behavior: contain; /* Prevent overscroll bounce for better control */
+  touch-action: pan-y; /* Optimize touch scrolling on mobile */
+  -webkit-overflow-scrolling: touch; /* Enable momentum scrolling on iOS */
+}
+
+body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome/Safari/Opera */
+}
+
+/* Section scroll handling */
+section {
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+  overscroll-behavior: contain; /* Prevent overscroll bounce in sections */
+  touch-action: pan-y; /* Optimize touch scrolling on mobile */
+  -webkit-overflow-scrolling: touch; /* Enable momentum scrolling on iOS */
+}
+
+section::-webkit-scrollbar {
+  display: none; /* Chrome/Safari/Opera */
+}
+
+/* Iframe scroll handling */
+iframe {
+  scrollbar-width: none !important; /* Firefox - force hide scrollbar */
+  -ms-overflow-style: none !important; /* IE/Edge - force hide scrollbar */
+  overflow: -moz-scrollbars-none !important; /* Legacy Firefox support */
+  overscroll-behavior: contain; /* Prevent overscroll bounce in iframes */
+  touch-action: pan-y; /* Optimize touch scrolling on mobile */
+  -webkit-overflow-scrolling: touch; /* Enable momentum scrolling on iOS */
+}
+
+iframe::-webkit-scrollbar {
+  display: none !important; /* Chrome/Safari/Opera - force hide scrollbar */
+}
+
+/* Ensure proper scrolling container */
+.section-show {
+  height: calc(100vh - 70px);
+  overflow-y: auto;
+}
+
+/* Fix for header when scrolled */
+#header.header-top {
+  position: fixed;
+  width: 100%;
+  z-index: 9997;
+}
+
+/* Adjust section positioning to account for fixed header */
+section.section-show {
+  padding-top: 15px;
+  margin-top: 0;
+}
+
+/* Prevent flash of unstyled content */
+body.loaded {
+  visibility: visible;
+  opacity: 1;
+}
+
+
