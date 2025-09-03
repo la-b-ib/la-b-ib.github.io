@@ -3036,13 +3036,14 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
 <!-- End Contact Section -->
 
 <!-- ======= Footer ======= -->
+
 <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
 
 <footer id="footer" aria-label="Site footer">
   <div class="container">
     <!-- Default View -->
     <div class="footer-content footer-row" id="footerDefault" onclick="toggleSearch(true)">
-      <span class="footer-name"><strong>Copyright © 2026. All rights reserved. Developed by Labib Bin Shahed.</strong></span>
+      <span class="footer-name" id="footerText"><strong>Copyright © 2026. All rights reserved. Developed by Labib Bin Shahed.</strong></span>
     </div>
 
     <!-- Search View -->
@@ -3053,7 +3054,7 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
 
   <style>
   :root {
-    --primary-color: #000000; /* Changed from blue to black */
+    --primary-color: #000000;
     --text-color: #000000;
     --fallback-bg: rgba(255, 255, 255, 0.05);
   }
@@ -3069,7 +3070,7 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
     -webkit-backdrop-filter: blur(10px);
     font-family: 'Bungee', sans-serif;
     color: var(--text-color);
-    font-size: 14px; /* Unified text size */
+    font-size: 14px;
     z-index: 1000;
     display: flex;
     justify-content: center;
@@ -3103,7 +3104,7 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
     color: var(--primary-color);
     cursor: pointer;
     transition: color 0.3s ease;
-    font-size: 14px; /* Match footer font size */
+    font-size: 14px;
   }
 
   .footer-name:hover {
@@ -3124,7 +3125,7 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
     background: transparent;
     padding: 6px 12px;
     border-radius: 20px;
-    font-size: 14px; /* Match footer font size */
+    font-size: 14px;
     color: var(--text-color);
     width: 160px;
     backdrop-filter: blur(6px);
@@ -3136,7 +3137,7 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
     font-weight: bold;
     padding: 0 2px;
     border-radius: 2px;
-    font-size: 14px; /* Match footer font size */
+    font-size: 14px;
   }
 
   @media (max-width: 768px) {
@@ -3149,7 +3150,11 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
 
     .footer-search input {
       width: 140px;
-      font-size: 14px; /* Match footer font size */
+      font-size: 14px;
+    }
+
+    #footerText strong {
+      content: "Copyright © 2026. All rights reserved.";
     }
   }
 
@@ -3160,83 +3165,92 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
   }
 </style>
 
+<script>
+  function toggleSearch(show) {
+    if (window.innerWidth <= 768) return; // Disable search toggle on mobile
 
-  <script>
-    function toggleSearch(show) {
-      const defaultView = document.getElementById('footerDefault');
-      const searchView = document.getElementById('footerSearch');
-      if (show) {
-        defaultView.style.display = 'none';
-        searchView.classList.add('active');
-        document.getElementById('footerSearchInput').focus();
-      }
+    const defaultView = document.getElementById('footerDefault');
+    const searchView = document.getElementById('footerSearch');
+    if (show) {
+      defaultView.style.display = 'none';
+      searchView.classList.add('active');
+      document.getElementById('footerSearchInput').focus();
+    }
+  }
+
+  document.getElementById('footerSearchInput').addEventListener('input', function () {
+    const query = this.value.trim();
+
+    if (query === '666') {
+      this.value = '';
+      document.getElementById('footerSearch').classList.remove('active');
+      document.getElementById('footerDefault').style.display = 'flex';
+      clearHighlights();
+      return;
     }
 
-    document.getElementById('footerSearchInput').addEventListener('input', function () {
-      const query = this.value.trim();
+    clearHighlights();
+    if (query.length === 0) return;
 
-      // Close search if input is "666"
-      if (query === '666') {
-        this.value = '';
-        document.getElementById('footerSearch').classList.remove('active');
-        document.getElementById('footerDefault').style.display = 'flex';
-        clearHighlights();
-        return;
-      }
-
-      clearHighlights();
-
-      if (query.length === 0) return;
-
-      const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
-        acceptNode: function (node) {
-          const parent = node.parentNode;
-          const style = window.getComputedStyle(parent);
-          return (
-            parent.offsetParent !== null &&
-            style.visibility !== 'hidden' &&
-            style.display !== 'none'
-          ) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
-        }
-      });
-
-      while (walker.nextNode()) {
-        const node = walker.currentNode;
-        const text = node.nodeValue;
-        const index = text.toLowerCase().indexOf(query.toLowerCase());
-
-        if (index !== -1) {
-          const span = document.createElement('span');
-          const mark = document.createElement('mark');
-          mark.className = 'search-highlight';
-          mark.textContent = text.substring(index, index + query.length);
-
-          span.appendChild(document.createTextNode(text.substring(0, index)));
-          span.appendChild(mark);
-          span.appendChild(document.createTextNode(text.substring(index + query.length)));
-
-          node.parentNode.replaceChild(span, node);
-        }
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+      acceptNode: function (node) {
+        const parent = node.parentNode;
+        const style = window.getComputedStyle(parent);
+        return (
+          parent.offsetParent !== null &&
+          style.visibility !== 'hidden' &&
+          style.display !== 'none'
+        ) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
       }
     });
 
-    function clearHighlights() {
-      document.querySelectorAll('mark.search-highlight').forEach(mark => {
-        const parent = mark.parentNode;
-        parent.replaceChild(document.createTextNode(mark.textContent), mark);
-        parent.normalize();
-      });
+    while (walker.nextNode()) {
+      const node = walker.currentNode;
+      const text = node.nodeValue;
+      const index = text.toLowerCase().indexOf(query.toLowerCase());
 
-      document.querySelectorAll('span').forEach(span => {
-        if (span.querySelector('mark.search-highlight')) {
-          const text = span.textContent;
-          const textNode = document.createTextNode(text);
-          span.parentNode.replaceChild(textNode, span);
-        }
-      });
+      if (index !== -1) {
+        const span = document.createElement('span');
+        const mark = document.createElement('mark');
+        mark.className = 'search-highlight';
+        mark.textContent = text.substring(index, index + query.length);
+
+        span.appendChild(document.createTextNode(text.substring(0, index)));
+        span.appendChild(mark);
+        span.appendChild(document.createTextNode(text.substring(index + query.length)));
+
+        node.parentNode.replaceChild(span, node);
+      }
     }
-  </script>
+  });
+
+  function clearHighlights() {
+    document.querySelectorAll('mark.search-highlight').forEach(mark => {
+      const parent = mark.parentNode;
+      parent.replaceChild(document.createTextNode(mark.textContent), mark);
+      parent.normalize();
+    });
+
+    document.querySelectorAll('span').forEach(span => {
+      if (span.querySelector('mark.search-highlight')) {
+        const text = span.textContent;
+        const textNode = document.createTextNode(text);
+        span.parentNode.replaceChild(textNode, span);
+      }
+    });
+  }
+
+  // Mobile footer text override
+  window.addEventListener('DOMContentLoaded', () => {
+    const footerText = document.getElementById('footerText');
+    if (window.innerWidth <= 768) {
+      footerText.innerHTML = '<strong>Copyright © 2026. All rights reserved.</strong>';
+    }
+  });
+</script>
 </footer>
+
+
 
 
 
