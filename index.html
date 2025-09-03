@@ -314,21 +314,55 @@
   <span class="material-icons" style="color: #000000; vertical-align: middle; font-size: 2em; margin-right: 0px;">cruelty_free</span>
   RESEARCH PROFILES
 </h5>
-            <div class="research-badges">
-              <a href="https://orcid.org/0009-0007-4656-8709"><img src="https://img.shields.io/badge/ORCID-eb2f06?style=for-the-badge&logo=orcid&logoColor=white" alt="ORCID"></a>
-              <a href="https://www.researchgate.net/profile/Labib-Bin-Shahed"><img src="https://img.shields.io/badge/ResearchGate-006266?style=for-the-badge&logo=researchgate&logoColor=white" alt="ResearchGate"></a>
-              <a href="https://scholar.google.com/citations?hl=en&user=xg04A5kAAAAJ"><img src="https://img.shields.io/badge/Scholar-70a1ff?style=for-the-badge&logo=google-scholar&logoColor=white" alt="Google Scholar"></a>
-              <a href="https://ieeexplore.ieee.org/author/398407024257618"><img src="https://img.shields.io/badge/Xplore-273c75?style=for-the-badge&logo=ieee&logoColor=white" alt="IEEE Xplore"></a>
-              <a href="#"><img src="https://img.shields.io/badge/Semantic-ff793f?style=for-the-badge&logo=semanticscholar&logoColor=white" alt="Semantic Scholar"></a>
-              <a href="#"><img src="https://img.shields.io/badge/Mendeley-9D1620?style=for-the-badge&logo=mendeley&logoColor=white" alt="Mendeley"></a>
-            </div>
+
+
+
+            
+                <div class="research-badges">
+    
+
+                  <!-- ORCID Badge -->
+                  <a href="https://orcid.org/0009-0007-4656-8709" class="badge orcid" target="_blank">
+                      <img src="https://www.mendeley.com/favicon.ico" alt="ORCID" class="badge-logo">
+                      <span class="badge-text">ORCID</span>
+                  </a>
+
+                  <!-- IEEE Xplore Badge -->
+                  <a href="https://ieeexplore.ieee.org/author/398407024257618" class="badge ieee" target="_blank">
+                      <img src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/research%20badge/ieee.JPEG?raw=true" alt="IEEE Xplore" class="badge-logo">
+                      <span class="badge-text">IEEE Xplore</span>
+                  </a>
+
+                  <!-- Google Scholar Badge -->
+                  <a href="https://scholar.google.com/citations?hl=en&user=xg04A5kAAAAJ" class="badge googlescholar" target="_blank">
+                      <img src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/research%20badge/gs.PNG?raw=true" alt="Google Scholar" class="badge-logo">
+                      <span class="badge-text">Google Scholar</span>
+                  </a>
+
+                  <!-- ResearchGate Badge -->
+                  <a href="https://www.researchgate.net/profile/Labib-Bin-Shahed" class="badge researchgate" target="_blank">
+                      <img src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/research%20badge/rg.jpg?raw=true" alt="ResearchGate" class="badge-logo">
+                      <span class="badge-text">ResearchGate</span>
+                  </a>
+                </div>
+
+            
+
+                
+        
+        
+        
+    
+
           </div>
         </div>
       </div>
     </div>
 
+
+
   </div>
-  
+
   <!-- ======= Interests ======= -->
   <div class="interests container">
     <div class="section-title">
@@ -457,6 +491,12 @@
 </section>
 
 <style>
+
+
+
+
+
+
     /* General Styles */
     .contribution-badges {
       display: flex;
@@ -495,6 +535,7 @@
       border-radius: 8px;
     }
     
+    
     /* Mobile Responsiveness */
     @media (max-width: 768px) {
       .col-lg-4, .col-lg-8 {
@@ -516,6 +557,60 @@
       font-weight: bold !important;
       
     }
+    .badge-container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px; /* Controls space between badges */
+    justify-content: flex-start; /* Aligns badges to the left */
+    align-items: center; /* Maintains vertical alignment */
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+        
+        .badge {
+    display: flex;
+    align-items: center;
+    background-color: #f7f9f9;
+    border-radius: 6px;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #333;
+    border-left: 5px solid currentColor; /* Uses the text color for the left border */
+}
+        
+        .badge-logo {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+        }
+        
+        .badge-text {
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .badge.orcid {
+    color: #9d1620;
+}
+.badge.researchgate {
+    color: #000000;
+}
+.badge.googlescholar {
+    color: #4285f4;
+}
+.badge.ieee {
+    color: #00629b;
+}
+
+.badge.orcid .badge-text,
+.badge.researchgate .badge-text,
+.badge.googlescholar .badge-text,
+.badge.ieee .badge-text {
+    color: inherit; /* Ensure text inherits the badge's color */
+}
+
+
+
   </style>
  
 <!-- ======= Education Section ======= -->
@@ -1558,6 +1653,7 @@ mark {
                         <a href="#"><img src="https://img.shields.io/badge/Semantic-ff793f?style=for-the-badge&logo=semanticscholar&logoColor=white" alt="Semantic Scholar" class="profile-badge"></a>
                         <a href="#"><img src="https://img.shields.io/badge/Mendeley-9D1620?style=for-the-badge&logo=mendeley&logoColor=white" alt="Mendeley" class="profile-badge"></a>
                     </div>
+
                 </div>
             </div>
         </div>
