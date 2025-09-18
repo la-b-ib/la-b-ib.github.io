@@ -185,21 +185,21 @@ h1, h2, h3, h4, h5, h6 {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 60vw;
     height: 100vh;
     z-index: 9999;
     background: rgba(255, 255, 255, 0.15); /* Soft transparency */
     backdrop-filter: blur(10px); /* Glassmorphism blur */
     -webkit-backdrop-filter: blur(10px); /* Ensure support on Safari */
     overflow: hidden auto;
-    transform: translateY(-100%);
+    transform: translateX(-100%);
     will-change: transform;
     transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     overscroll-behavior: contain;
     border-radius: 12px; /* Smooth rounded edges */
 }
 .mobile-nav-active .mobile-nav {
-    transform: translateY(0);
+    transform: translateX(0);
 }
 .mobile-nav ul {
     display: grid;
@@ -216,9 +216,13 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
     display: block;
     transform: translateZ(0);
+    border-bottom: 4px solid rgba(255, 255, 255, 0.3);
 }
 .mobile-nav a:active {
     color: #000000;
+}
+.mobile-nav li:last-child a {
+    border-bottom: none;
 }
 .mobile-nav-overly,
 .mobile-nav *:before,
@@ -261,7 +265,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: 15px !important;
     flex-shrink: 0 !important;
     /* Color & Display */
-    color: #0dcd3c !important;
+    color: #4285F4 !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -272,8 +276,8 @@ h1, h2, h3, h4, h5, h6 {
   /* iOS SPECIFIC FIXES */
   @supports (-webkit-touch-callout: none) {
     .mobile-nav a .material-icons.mobile-menu-icon {
-      -webkit-text-stroke: 0.45px #0dcd3c !important;
-      text-shadow: 0 0 0.5px rgba(13, 205, 60, 0.7) !important;
+      -webkit-text-stroke: 0.45px #4285F4 !important;
+      text-shadow: 0 0 0.5px rgba(66, 133, 244, 0.7) !important;
     }
   }
   /* ICON CONTENT - FIXED TO MATCH YOUR HTML (#portfolio instead of #projects) */
@@ -289,7 +293,7 @@ h1, h2, h3, h4, h5, h6 {
   .mobile-nav a[href*="#contact"] .material-icons.mobile-menu-icon::before { content: "email"; }
   /* ACTIVE STATE */
   .mobile-nav .active a .material-icons.mobile-menu-icon {
-    color: #0dcd3c !important;
+    color: #4285F4 !important;
     transform: scale(1.05) !important;
   }
   /* FALLBACK FOR WHEN ICONS DON'T LOAD */
