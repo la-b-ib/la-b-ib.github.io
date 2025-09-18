@@ -92,7 +92,7 @@ $(document).ready(function() {
         .css({
           'font-family': 'Material Icons',
           'font-size': '20px',
-          'color': '#0dcd3c',
+          'color': '#4285F4',
           'margin-right': '6px'
         });
       
