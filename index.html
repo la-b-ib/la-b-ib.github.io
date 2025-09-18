@@ -16,7 +16,6 @@
   <meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp">
   <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
   <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=()">
-  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
   <!-- Open Graph Meta Tags (for Facebook, LinkedIn, Reddit, WhatsApp, Messenger, Gmail) -->
   <meta property="og:title" content="Developer Portfolio">
   <meta property="og:description" content="@la-b-ib: CSE student at BRACU | Web Developer | IEEE CSBDC President '25 | Open Source Contributor">
@@ -41,7 +40,7 @@
   <!-- Optional: Web app title for home screen -->
   <meta name="apple-mobile-web-app-title" content="PORTFOLIO">
   <!-- Optional: Enable standalone mode for a more app-like experience -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <!-- Optional: Customize status bar appearance -->
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <!-- Prevent caching to reduce image/text retention in browser -->
@@ -53,9 +52,10 @@
   <!-- Prevent indexing by search engines to limit content exposure -->
   <meta name="robots" content="noindex, nofollow">
   <!-- Mobile-specific: Disable default save options for iOS -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-touch-fullscreen" content="yes">
   <link rel="preload" href="https://fonts.gstatic.com/s/materialicons/v140/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/profile/about%20profile.JPEG" as="image">
   <title>la-b-ib</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
@@ -85,7 +85,6 @@
     gtag('js', new Date());
     gtag('config', 'UA-169007209-3');
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/devtools-detect@latest/dist/devtools-detect.js"></script>
   <script>
     window.addEventListener('devtoolschange', function(e) {
       if (e.detail.isOpen) {
@@ -96,7 +95,6 @@
       }
     });
   </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -126,16 +124,16 @@
 </nav>
       <div class="social-links">
         <a href="https://github.com/la-b-ib" target="_blank" class="github" style="text-decoration: none;">
-            <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/social%20links%20icon/gh.PNG" alt="GitHub" width="45" height="45">
+            <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/social%20links%20icon/gh.PNG" alt="GitHub" width="45" height="45">
         </a>
         <a href="https://www.linkedin.com/in/la-b-ib/" target="_blank" class="linkedin" style="text-decoration: none;">
-            <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/social%20links%20icon/ln.PNG" alt="LinkedIn" width="45" height="45">
+            <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/social%20links%20icon/ln.PNG" alt="LinkedIn" width="45" height="45">
         </a>
         <a href="https://www.reddit.com/u/la-b-ib/s/cNt5KoLEdT" target="_blank" class="reddit" style="text-decoration: none;">
-            <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/social%20links%20icon/rdt.PNG" alt="Reddit" width="45" height="45">
+            <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/social%20links%20icon/rdt.PNG" alt="Reddit" width="45" height="45">
         </a>
         <a href="https://x.com/la_b_ib_" target="_blank" class="twitter" style="text-decoration: none;">
-            <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/social%20links%20icon/twitter.png" alt="Twitter" width="45" height="45">
+            <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/social%20links%20icon/twitter.png" alt="Twitter" width="45" height="45">
         </a>
       </div>
     </div>
@@ -282,7 +280,7 @@ a {
     </div>
     <div class="row">
       <div class="col-lg-4">
-        <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/profile/about%20profile.JPEG" class="img-fluid" alt="">
+        <img loading="lazy" decoding="async" fetchpriority="high" src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/profile/about%20profile.JPEG" class="img-fluid" alt="">
       </div>
       <div class="col-lg-8 pt-4 pt-lg-0 content">
         <p style="text-align: justify;">
@@ -305,7 +303,7 @@ a {
               </li>
 </b></span>
               </li>
-              <li> <a href="https://drive.google.com/drive/folders/16fpvnxDVW_A6hbeYY5xGB2aEIVtMqqeU?usp=sharing"><img src="https://img.shields.io/badge/RESUME-CB3837?style=for-the-badge&amp;logo=npm&amp;logoColor=white" alt="npm" style="height: auto; width: auto;"></a></li>
+              <li> <a href="https://drive.google.com/drive/folders/16fpvnxDVW_A6hbeYY5xGB2aEIVtMqqeU?usp=sharing"><img loading="lazy" decoding="async" src="https://img.shields.io/badge/RESUME-CB3837?style=for-the-badge&amp;logo=npm&amp;logoColor=white" alt="npm" style="height: auto; width: auto;"></a></li>
             </ul>
           </div>
           <div class="col-lg-6">
@@ -327,22 +325,22 @@ a {
                 <div class="research-badges">
                   <!-- ORCID Badge -->
                   <a href="https://orcid.org/0009-0007-4656-8709" class="badge orcid" target="_blank">
-                      <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/research%20badge/laughing.png" alt="ORCID" class="badge-logo">
+                      <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/research%20badge/laughing.png" alt="ORCID" class="badge-logo">
                       <span class="badge-text">ORCID</span>
                   </a>
                   <!-- IEEE Xplore Badge -->
                   <a href="https://ieeexplore.ieee.org/author/398407024257618" class="badge ieee" target="_blank">
-                      <img src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/research%20badge/ieee.JPEG?raw=true" alt="IEEE Xplore" class="badge-logo">
+                      <img loading="lazy" decoding="async" src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/research%20badge/ieee.JPEG?raw=true" alt="IEEE Xplore" class="badge-logo">
                       <span class="badge-text">IEEE Xplore</span>
                   </a>
                   <!-- Google Scholar Badge -->
                   <a href="https://scholar.google.com/citations?hl=en&user=xg04A5kAAAAJ" class="badge googlescholar" target="_blank">
-                      <img src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/research%20badge/gs.PNG?raw=true" alt="Google Scholar" class="badge-logo">
+                      <img loading="lazy" decoding="async" src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/research%20badge/gs.PNG?raw=true" alt="Google Scholar" class="badge-logo">
                       <span class="badge-text">Google Scholar</span>
                   </a>
                   <!-- ResearchGate Badge -->
                   <a href="https://www.researchgate.net/profile/Labib-Bin-Shahed" class="badge researchgate" target="_blank">
-                      <img src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/research%20badge/rg.jpg?raw=true" alt="ResearchGate" class="badge-logo">
+                      <img loading="lazy" decoding="async" src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/research%20badge/rg.jpg?raw=true" alt="ResearchGate" class="badge-logo">
                       <span class="badge-text">ResearchGate</span>
                   </a>
                 </div>
@@ -448,11 +446,11 @@ a {
     </div>
     <div class="contribution-container">
       <div class="contribution-badges">
-        <a href="https://octoprofile.vercel.app/user?id=la-b-ib"><img src="https://img.shields.io/badge/OctoProfile-Visit-2088FF?style=for-the-badge&logo=github" alt="OctoProfile"></a>
-        <a href="https://github.com/la-b-ib"><img src="https://komarev.com/ghpvc/?username=la-b-ib&label=Views&style=for-the-badge&color=2088FF" alt="Profile Views"></a>
+        <a href="https://octoprofile.vercel.app/user?id=la-b-ib"><img loading="lazy" decoding="async" src="https://img.shields.io/badge/OctoProfile-Visit-2088FF?style=for-the-badge&logo=github" alt="OctoProfile"></a>
+        <a href="https://github.com/la-b-ib"><img loading="lazy" decoding="async" src="https://komarev.com/ghpvc/?username=la-b-ib&label=Views&style=for-the-badge&color=2088FF" alt="Profile Views"></a>
       </div>
       <div class="contribution-graph">
-        <img src="https://github-readme-activity-graph.vercel.app/graph?username=la-b-ib&theme=github-dark-dimmed&area=true&hide_border=true&height=300&bg_color=ffffff&custom_title=Contribution+Activity&hide_title=false&line=4284f4&point=273c75&color=000000" 
+        <img loading="lazy" decoding="async" src="https://github-readme-activity-graph.vercel.app/graph?username=la-b-ib&theme=github-dark-dimmed&area=true&hide_border=true&height=300&bg_color=ffffff&custom_title=Contribution+Activity&hide_title=false&line=4284f4&point=273c75&color=000000" 
      alt="Contribution Graph">
       </div>
     </div>
@@ -597,7 +595,7 @@ a {
         <div class="education-grid">
             <div class="education-card glass-card">
                 <div class="card-header">
-                    <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/education/bracu%20logo.png" class="edu-logo" alt="BRAC University Logo">
+                    <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/education/bracu%20logo.png" class="edu-logo" alt="BRAC University Logo">
                     <div class="education-info">
                       <ul style="list-style: none; padding: 0; margin: 0;">
                           <li style="display: flex; align-items: center; gap: 5px; margin-bottom: 10px; text-align: justify;">
@@ -772,7 +770,7 @@ a {
             </div>
         </div>
     </div>
-    <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/GIF/edu.GIF" alt="Education GIF" class="education-gif" />
+    <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/GIF/edu.GIF" alt="Education GIF" class="education-gif" />
     <script>
         // Initialize plugins after all external libraries are loaded
         window.addEventListener('load', () => {
@@ -816,9 +814,7 @@ a {
                         tooltip.className = 'fallback-tooltip';
                         tooltip.textContent = this.getAttribute('data-tippy-content');
                         tooltip.style.position = 'absolute';
-                        tooltip.style.background = 'transparent';              // Fully transparent background
-                        tooltip.style.backdropFilter = 'blur(10px)';           // Blurs background behind tooltip
-                        tooltip.style.webkitBackdropFilter = 'blur(10px)';     // Safari support
+                        tooltip.style.background = 'rgba(255, 255, 255, 0.9)';              // Semi-transparent white background
                         tooltip.style.color = '#000';              // Black text
                         tooltip.style.fontWeight = 'bold';
                         tooltip.style.padding = '5px 5px'; 
@@ -1212,11 +1208,11 @@ mark {
               <div class="row portfolio-container">
                 <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                   <div class="portfolio-wrap">
-                    <img src="assets/img/certification/tw.jpg" class="img-fluid" alt="Programmable Messaging and Voice Certificate">
+                    <img loading="lazy" decoding="async" src="assets/img/certification/tw.jpg" class="img-fluid" alt="Programmable Messaging and Voice Certificate">
                     <div class="portfolio-info">
                       <h4>Programmable Messaging and Voice</h4>
                       <div class="portfolio-links">
-                        <a href="https://www.linkedin.com/learning/certificates/759119dcc46bdb4e63fb82dc49ed0ad4288a97d9031dd360fdb0686f65b0b398" target="_blank" title="Certificate"><img 
+                        <a href="https://www.linkedin.com/learning/certificates/759119dcc46bdb4e63fb82dc49ed0ad4288a97d9031dd360fdb0686f65b0b398" target="_blank" title="Certificate"><img loading="lazy" decoding="async" 
   src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/certification/chain.png?raw=true" 
   alt="Certificate Link Icon" 
   style="width: 35px; height: 35px;"
@@ -1228,11 +1224,11 @@ mark {
                 </div>
                 <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                   <div class="portfolio-wrap">
-                    <img src="assets/img/certification/pmi.jpg" class="img-fluid" alt="Cybersecurity Foundations Certificate">
+                    <img loading="lazy" decoding="async" src="assets/img/certification/pmi.jpg" class="img-fluid" alt="Cybersecurity Foundations Certificate">
                     <div class="portfolio-info">
                       <h4>Cybersecurity Foundations</h4>
                       <div class="portfolio-links">
-                        <a href="https://www.linkedin.com/learning/certificates/fe897b3437597f8b933ad2501b5de695916b026e0c841509df9545ecd7d83b0b?trk=share_certificate" target="_blank" title="Certificate"><img 
+                        <a href="https://www.linkedin.com/learning/certificates/fe897b3437597f8b933ad2501b5de695916b026e0c841509df9545ecd7d83b0b?trk=share_certificate" target="_blank" title="Certificate"><img loading="lazy" decoding="async" 
   src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/certification/chain.png?raw=true" 
   alt="Certificate Link Icon" 
   style="width: 35px; height: 35px;"
@@ -1244,11 +1240,11 @@ mark {
                 </div>
                 <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                   <div class="portfolio-wrap">
-                    <img src="assets/img/certification/gh.jpg" class="img-fluid" alt="Career Essentials Certificate">
+                    <img loading="lazy" decoding="async" src="assets/img/certification/gh.jpg" class="img-fluid" alt="Career Essentials Certificate">
                     <div class="portfolio-info">
                       <h4>Career Essentials</h4>
                       <div class="portfolio-links">
-                        <a href="https://www.linkedin.com/learning/certificates/e9fda53e1d56f77f2f78acaefd5fd9c9dfd3dce255ebd20be4d1cd3290629784" target="_blank" title="Certificate"><img 
+                        <a href="https://www.linkedin.com/learning/certificates/e9fda53e1d56f77f2f78acaefd5fd9c9dfd3dce255ebd20be4d1cd3290629784" target="_blank" title="Certificate"><img loading="lazy" decoding="async" 
   src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/certification/chain.png?raw=true" 
   alt="Certificate Link Icon" 
   style="width: 35px; height: 35px;"
@@ -1260,11 +1256,11 @@ mark {
                 </div>
                 <div class="col-lg-4 col-md-6 portfolio-item filter-project">
                   <div class="portfolio-wrap">
-                    <img src="assets/img/certification/ms.jpg" class="img-fluid" alt="Career Essentials in Cybersecurity Certificate">
+                    <img loading="lazy" decoding="async" src="assets/img/certification/ms.jpg" class="img-fluid" alt="Career Essentials in Cybersecurity Certificate">
                     <div class="portfolio-info">
                       <h4>Career Essentials in Cybersecurity</h4>
                       <div class="portfolio-links">
-                        <a href="https://www.linkedin.com/learning/certificates/73e313f844327f6f6a86a0984c7c45ee6b9eee1a3e283db48bb370d908b57dec" target="_blank" title="Certificate"><img 
+                        <a href="https://www.linkedin.com/learning/certificates/73e313f844327f6f6a86a0984c7c45ee6b9eee1a3e283db48bb370d908b57dec" target="_blank" title="Certificate"><img loading="lazy" decoding="async" 
   src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/certification/chain.png?raw=true" 
   alt="Certificate Link Icon" 
   style="width: 35px; height: 35px;"
@@ -1276,11 +1272,11 @@ mark {
                 </div>
                 <div class="col-lg-4 col-md-6 portfolio-item filter-project">
                   <div class="portfolio-wrap">
-                    <img src="assets/img/certification/lt.jpg" class="img-fluid" alt="Test Automation Certificate">
+                    <img loading="lazy" decoding="async" src="assets/img/certification/lt.jpg" class="img-fluid" alt="Test Automation Certificate">
                     <div class="portfolio-info">
                       <h4>Test Automation</h4>
                       <div class="portfolio-links">
-                        <a href="https://www.linkedin.com/learning/certificates/243b5362e2fc213ce658d04d6c21856b9ab9628a3e81b375927773cd8618fd49" target="_blank" title="Certificate"><img 
+                        <a href="https://www.linkedin.com/learning/certificates/243b5362e2fc213ce658d04d6c21856b9ab9628a3e81b375927773cd8618fd49" target="_blank" title="Certificate"><img loading="lazy" decoding="async" 
   src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/certification/chain.png?raw=true" 
   alt="Certificate Link Icon" 
   style="width: 35px; height: 35px;"
@@ -1292,11 +1288,11 @@ mark {
                 </div>
                 <div class="col-lg-4 col-md-6 portfolio-item filter-project">
                   <div class="portfolio-wrap">
-                    <img src="assets/img/certification/li.jpg" class="img-fluid" alt="NumPy MatPlotlib and Linear Algebra Certificate">
+                    <img loading="lazy" decoding="async" src="assets/img/certification/li.jpg" class="img-fluid" alt="NumPy MatPlotlib and Linear Algebra Certificate">
                     <div class="portfolio-info">
                       <h4>NumPy MatPlotlib and Linear Algebra</h4>
                       <div class="portfolio-links">
-                        <a href="https://www.linkedin.com/learning/certificates/246ffec626263c5d4a8bea2c310bcc0cd836100f89d7e87c605082f43004b053" target="_blank" title="Certificate"><img 
+                        <a href="https://www.linkedin.com/learning/certificates/246ffec626263c5d4a8bea2c310bcc0cd836100f89d7e87c605082f43004b053" target="_blank" title="Certificate"><img loading="lazy" decoding="async" 
   src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/certification/chain.png?raw=true" 
   alt="Certificate Link Icon" 
   style="width: 35px; height: 35px;"
@@ -1308,11 +1304,11 @@ mark {
                 </div>
                 <div class="col-lg-4 col-md-6 portfolio-item filter-project">
                   <div class="portfolio-wrap">
-                    <img src="assets/img/certification/shrm.jpg" class="img-fluid" alt="Neuroscience for Effective L&D Certificate">
+                    <img loading="lazy" decoding="async" src="assets/img/certification/shrm.jpg" class="img-fluid" alt="Neuroscience for Effective L&D Certificate">
                     <div class="portfolio-info">
                       <h4>Neuroscience for Effective L&D</h4>
                       <div class="portfolio-links">
-                        <a href="https://www.linkedin.com/learning/certificates/3719feeef2b7f6b1134ce2fb8887cad2d531b509b194f9ab82204ad2581b1cf3?trk=share_certificate" target="_blank" title="Certificate"><img 
+                        <a href="https://www.linkedin.com/learning/certificates/3719feeef2b7f6b1134ce2fb8887cad2d531b509b194f9ab82204ad2581b1cf3?trk=share_certificate" target="_blank" title="Certificate"><img loading="lazy" decoding="async" 
   src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/certification/chain.png?raw=true" 
   alt="Certificate Link Icon" 
   style="width: 35px; height: 35px;"
@@ -1324,11 +1320,11 @@ mark {
                 </div>
                 <div class="col-lg-4 col-md-6 portfolio-item filter-project">
                   <div class="portfolio-wrap">
-                    <img src="assets/img/certification/hr.jpg" class="img-fluid" alt="Neuroscience for Effective L&D Certificate">
+                    <img loading="lazy" decoding="async" src="assets/img/certification/hr.jpg" class="img-fluid" alt="Neuroscience for Effective L&D Certificate">
                     <div class="portfolio-info">
                       <h4>Neuroscience for Effective L&D</h4>
                       <div class="portfolio-links">
-                        <a href="https://www.linkedin.com/learning/certificates/125c8879c94519f1a707ee5691ac5a6e5b5ca44002c3f532900f608765a2d2fa?trk=share_certificate" target="_blank" title="Certificate"><img 
+                        <a href="https://www.linkedin.com/learning/certificates/125c8879c94519f1a707ee5691ac5a6e5b5ca44002c3f532900f608765a2d2fa?trk=share_certificate" target="_blank" title="Certificate"><img loading="lazy" decoding="async" 
   src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/certification/chain.png?raw=true" 
   alt="Certificate Link Icon" 
   style="width: 35px; height: 35px;"
@@ -1340,11 +1336,11 @@ mark {
                 </div>
                 <div class="col-lg-4 col-md-6 portfolio-item filter-project">
                   <div class="portfolio-wrap">
-                    <img src="assets/img/certification/bp.jpg" class="img-fluid" alt="Robotic Process Automation Certificate">
+                    <img loading="lazy" decoding="async" src="assets/img/certification/bp.jpg" class="img-fluid" alt="Robotic Process Automation Certificate">
                     <div class="portfolio-info">
                       <h4>Robotic Process Automation</h4>
                       <div class="portfolio-links">
-                        <a href="https://www.linkedin.com/learning/certificates/6f99e870b41beae081989894b502a48e94af71cf8806e54a994cad682d092c5f" target="_blank" title="Certificate"><img 
+                        <a href="https://www.linkedin.com/learning/certificates/6f99e870b41beae081989894b502a48e94af71cf8806e54a994cad682d092c5f" target="_blank" title="Certificate"><img loading="lazy" decoding="async" 
   src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/certification/chain.png?raw=true" 
   alt="Certificate Link Icon" 
   style="width: 35px; height: 35px;"
@@ -1356,11 +1352,11 @@ mark {
                 </div>
                 <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                   <div class="portfolio-wrap">
-                    <img src="assets/img/certification/hrr.jpg" class="img-fluid" alt="Software Engineer Certificate">
+                    <img loading="lazy" decoding="async" src="assets/img/certification/hrr.jpg" class="img-fluid" alt="Software Engineer Certificate">
                     <div class="portfolio-info">
                       <h4>Software Engineer Certificate</h4>
                       <div class="portfolio-links">
-                        <a href="https://www.hackerrank.com/certificates/0185beaeedaa" target="_blank" title="Certificate"><img 
+                        <a href="https://www.hackerrank.com/certificates/0185beaeedaa" target="_blank" title="Certificate"><img loading="lazy" decoding="async" 
   src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/certification/chain.png?raw=true" 
   alt="Certificate Link Icon" 
   style="width: 35px; height: 35px;"
@@ -1372,11 +1368,11 @@ mark {
                 </div>
                 <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                     <div class="portfolio-wrap">
-                      <img src="assets/img/certification/ibm.jpg" class="img-fluid" alt="Data Fundamentals">
+                      <img loading="lazy" decoding="async" src="assets/img/certification/ibm.jpg" class="img-fluid" alt="Data Fundamentals">
                       <div class="portfolio-info">
                         <h4>Data Fundamentals</h4>
                         <div class="portfolio-links">
-                          <a href="https://www.credly.com/badges/7359f5bb-cbe8-4769-bc0f-b9689471563f/linked_in?t=t0wlvr" target="_blank" title="Certificate"><img 
+                          <a href="https://www.credly.com/badges/7359f5bb-cbe8-4769-bc0f-b9689471563f/linked_in?t=t0wlvr" target="_blank" title="Certificate"><img loading="lazy" decoding="async" 
   src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/certification/chain.png?raw=true" 
   alt="Certificate Link Icon" 
   style="width: 35px; height: 35px;"
@@ -1388,11 +1384,11 @@ mark {
                   </div>
                 <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                     <div class="portfolio-wrap">
-                      <img src="assets/img/certification/google.jpg" class="img-fluid" alt="Advanced Premium IT Admin Features">
+                      <img loading="lazy" decoding="async" src="assets/img/certification/google.jpg" class="img-fluid" alt="Advanced Premium IT Admin Features">
                       <div class="portfolio-info">
                         <h4>Advanced Premium IT Admin Features</h4>
                         <div class="portfolio-links">
-                          <a href="https://edu.exceedlms.com/student/award/4FWmuwj17zXK5i9YzCLFU6kf" target="_blank" title="Certificate"><img 
+                          <a href="https://edu.exceedlms.com/student/award/4FWmuwj17zXK5i9YzCLFU6kf" target="_blank" title="Certificate"><img loading="lazy" decoding="async" 
   src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/certification/chain.png?raw=true" 
   alt="Certificate Link Icon" 
   style="width: 35px; height: 35px;"
@@ -1404,11 +1400,11 @@ mark {
                   </div>
                 <div class="col-lg-4 col-md-6 portfolio-item filter-project">
                   <div class="portfolio-wrap">
-                    <img src="assets/img/certification/pd.jpg" class="img-fluid" alt="PES DAY 2024 Ambassador Certificate">
+                    <img loading="lazy" decoding="async" src="assets/img/certification/pd.jpg" class="img-fluid" alt="PES DAY 2024 Ambassador Certificate">
                     <div class="portfolio-info">
                       <h4>PES DAY 2024 Ambassador Certificate</h4>
                       <div class="portfolio-links">
-                        <a href="https://drive.google.com/file/d/1TtB9GEhgxRlTVQ5Ha-w9MWNBN6oXl2Jb/view?usp=sharing" target="_blank" title="Certificate"><img 
+                        <a href="https://drive.google.com/file/d/1TtB9GEhgxRlTVQ5Ha-w9MWNBN6oXl2Jb/view?usp=sharing" target="_blank" title="Certificate"><img loading="lazy" decoding="async" 
   src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/certification/chain.png?raw=true" 
   alt="Certificate Link Icon" 
   style="width: 35px; height: 35px;"
@@ -1420,11 +1416,11 @@ mark {
                 </div>
                 <div class="col-lg-4 col-md-6 portfolio-item filter-project">
                   <div class="portfolio-wrap">
-                    <img src="assets/img/certification/icpe.jpg" class="img-fluid" alt="Conference on Energy & Power Engineering Certificate">
+                    <img loading="lazy" decoding="async" src="assets/img/certification/icpe.jpg" class="img-fluid" alt="Conference on Energy & Power Engineering Certificate">
                     <div class="portfolio-info">
                       <h4>Conference on Energy & Power Engineering</h4>
                       <div class="portfolio-links">
-                        <a href="https://drive.google.com/file/d/17SxPVFYELRmTnL-ottL5zVR29rsvGYBD/view" target="_blank" title="Certificate"><img 
+                        <a href="https://drive.google.com/file/d/17SxPVFYELRmTnL-ottL5zVR29rsvGYBD/view" target="_blank" title="Certificate"><img loading="lazy" decoding="async" 
   src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/certification/chain.png?raw=true" 
   alt="Certificate Link Icon" 
   style="width: 35px; height: 35px;"
@@ -1436,11 +1432,11 @@ mark {
                 </div>
                 <div class="col-lg-4 col-md-6 portfolio-item filter-project">
                   <div class="portfolio-wrap">
-                    <img src="assets/img/certification/nasba.jpg" class="img-fluid" alt="Cybersecurity Terminology Certificate">
+                    <img loading="lazy" decoding="async" src="assets/img/certification/nasba.jpg" class="img-fluid" alt="Cybersecurity Terminology Certificate">
                     <div class="portfolio-info">
                       <h4>Cybersecurity Terminology</h4>
                       <div class="portfolio-links">
-                        <a href="https://www.linkedin.com/learning/certificates/e72b6f3475683106b11f92cc054a1f8d514ed33b6b8e6974f5b22d6f28ac2bdd?trk=share_certificat" target="_blank" title="Certificate"><img 
+                        <a href="https://www.linkedin.com/learning/certificates/e72b6f3475683106b11f92cc054a1f8d514ed33b6b8e6974f5b22d6f28ac2bdd?trk=share_certificat" target="_blank" title="Certificate"><img loading="lazy" decoding="async" 
   src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/certification/chain.png?raw=true" 
   alt="Certificate Link Icon" 
   style="width: 35px; height: 35px;"
@@ -1452,11 +1448,11 @@ mark {
                 </div>
                 <div class="col-lg-4 col-md-6 portfolio-item filter-project">
                   <div class="portfolio-wrap">
-                    <img src="assets/img/certification/hp.jpg" class="img-fluid" alt="Data Science & Analytics">
+                    <img loading="lazy" decoding="async" src="assets/img/certification/hp.jpg" class="img-fluid" alt="Data Science & Analytics">
                     <div class="portfolio-info">
                       <h4>Data Science & Analytics</h4>
                       <div class="portfolio-links">
-                        <a href="https://www.life-global.org/certificate/98bb96cd-0f2b-4e49-9a12-1aa257e3fcc4" target="_blank" title="Certificate"><img 
+                        <a href="https://www.life-global.org/certificate/98bb96cd-0f2b-4e49-9a12-1aa257e3fcc4" target="_blank" title="Certificate"><img loading="lazy" decoding="async" 
   src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/certification/chain.png?raw=true" 
   alt="Certificate Link Icon" 
   style="width: 35px; height: 35px;"
@@ -1497,7 +1493,7 @@ mark {
                             <li style="margin-bottom: 8px; font-weight: bold;">
                                 <a href="https://doi.org/10.1109/ICEIC64972.2025.10879668" 
    style="display: inline-flex; align-items: center; background-color: #f7f9f9; border-radius: 6px; padding: 8px 12px; text-decoration: none; color: #333; border-left: 5px solid #DB4437; font-weight: bold; font-size: 14px;">
-  <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/research/apple.png" 
+  <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/research/apple.png" 
        alt="DOI" 
        style="width: 20px; height: 20px; margin-right: 8px;">
   DOI: 10.1109/ICEIC64972.2025
@@ -1538,7 +1534,7 @@ mark {
                             <li style="margin-bottom: 8px; font-weight: bold;">
                                 <a href="https://doi.org/10.1109/ICRPSET64863.2024.10955896" 
    style="display: inline-flex; align-items: center; background-color: #f7f9f9; border-radius: 6px; padding: 8px 12px; text-decoration: none; color: #333; border-left: 5px solid #DB4437; font-weight: bold; font-size: 14px;">
-  <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/research/apple.png" 
+  <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/research/apple.png" 
        alt="DOI" 
        style="width: 20px; height: 20px; margin-right: 8px;">
   DOI : 10.1109/ICRPSET64863.20
@@ -1576,22 +1572,22 @@ mark {
                    <div class="research-badges">             
                   <!-- ORCID Badge -->
                   <a href="https://orcid.org/0009-0007-4656-8709" class="badge orcid" target="_blank">
-                      <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/research%20badge/laughing.png" alt="ORCID" class="badge-logo">
+                      <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/research%20badge/laughing.png" alt="ORCID" class="badge-logo">
                       <span class="badge-text">ORCID</span>
                   </a>
                   <!-- IEEE Xplore Badge -->
                   <a href="https://ieeexplore.ieee.org/author/398407024257618" class="badge ieee" target="_blank">
-                      <img src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/research%20badge/ieee.JPEG?raw=true" alt="IEEE Xplore" class="badge-logo">
+                      <img loading="lazy" decoding="async" src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/research%20badge/ieee.JPEG?raw=true" alt="IEEE Xplore" class="badge-logo">
                       <span class="badge-text">IEEE Xplore</span>
                   </a>
                   <!-- Google Scholar Badge -->
                   <a href="https://scholar.google.com/citations?hl=en&user=xg04A5kAAAAJ" class="badge googlescholar" target="_blank">
-                      <img src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/research%20badge/gs.PNG?raw=true" alt="Google Scholar" class="badge-logo">
+                      <img loading="lazy" decoding="async" src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/research%20badge/gs.PNG?raw=true" alt="Google Scholar" class="badge-logo">
                       <span class="badge-text">Google Scholar</span>
                   </a>
                   <!-- ResearchGate Badge -->
                   <a href="https://www.researchgate.net/profile/Labib-Bin-Shahed" class="badge researchgate" target="_blank">
-                      <img src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/research%20badge/rg.jpg?raw=true" alt="ResearchGate" class="badge-logo">
+                      <img loading="lazy" decoding="async" src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/research%20badge/rg.jpg?raw=true" alt="ResearchGate" class="badge-logo">
                       <span class="badge-text">ResearchGate</span>
                   </a>
                 </div>
@@ -1600,7 +1596,7 @@ mark {
         </div>
         <!-- Mobile-only Research Image -->
         <div class="mobile-research-image" style="display: none;">
-            <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/research/rss.jpg" alt="Research" style="width: 100%; height: auto; margin-top: 20px;">
+            <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/research/rss.jpg" alt="Research" style="width: 100%; height: auto; margin-top: 20px;">
         </div>
     </div>
 </section>
@@ -1675,7 +1671,7 @@ mark {
       <div class="section-title">
         <h2><b>Experience</b></h2>
         <div class="mobile-experience-image" style="display: none;">
-          <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/experience/experience.jpg" alt="Experience" style="width: 100%; border-radius: 8px; margin: 15px 0;">
+          <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/experience/experience.jpg" alt="Experience" style="width: 100%; border-radius: 8px; margin: 15px 0;">
         </div>
       </div>
       <div class="experience-container">
@@ -1817,7 +1813,7 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
       <div class="section-title">
         <h2 class="interest-heading"><b>Recommendation</b></h2>
         <div class="mobile-recom-image" style="display: none; margin: 15px 0;">
-  <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/recommendation/rcom.JPG" 
+  <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/recommendation/rcom.JPG" 
        alt="Recommendations" 
        style="width: 100%; border-radius: 8px;">
 </div>
@@ -1826,7 +1822,7 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
         <!-- Recommendation 3 -->
         <div class="recommendation-item">
           <div class="recommendation-header">
-            <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/recommendation/kmsu.jpg" alt="K M Shariat Ullah" class="recommendation-photo">
+            <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/recommendation/kmsu.jpg" alt="K M Shariat Ullah" class="recommendation-photo">
             <div class="recommendation-info">
               <h5 class="recommendation-name">K M Shariat Ullah</h5>
               <p class="recommendation-title">Founder | Tachyon</p>
@@ -1844,7 +1840,7 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
       <!-- Recommendation 3 -->
         <div class="recommendation-item">
           <div class="recommendation-header">
-            <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/recommendation/bb.jpg" alt="Branca Boson" class="recommendation-photo">
+            <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/recommendation/bb.jpg" alt="Branca Boson" class="recommendation-photo">
             <div class="recommendation-info">
               <h5 class="recommendation-name">Branca Boson</h5>
               <p class="recommendation-title">Storyteller | Writer | Editor</p>
@@ -1862,7 +1858,7 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
         <!-- Recommendation 4 -->
         <div class="recommendation-item">
           <div class="recommendation-header">
-            <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/recommendation/rai.jpg" alt="Rashedul Arefin" class="recommendation-photo">
+            <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/recommendation/rai.jpg" alt="Rashedul Arefin" class="recommendation-photo">
             <div class="recommendation-info">
               <h5 class="recommendation-name">Rashedul Arefin</h5>
               <p class="recommendation-title">Joint Secretary | IEEE CSBDC</p>
@@ -1879,7 +1875,7 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
         </div>
       </div>
       <div class="mobile-experience-gif" style="display: none; margin-top: 20px;">
-        <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/GIF/experience.gif" alt="Experience GIF" style="width: 100%; border-radius: 8px;">
+        <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/GIF/experience.gif" alt="Experience GIF" style="width: 100%; border-radius: 8px;">
       </div>
     </div>
 </section>
@@ -2156,11 +2152,11 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <center><h4><b>MoodScope</b></h4></center>
                   <div class="portfolio-wrap">
-                    <img src="assets/img/project/MoodScope.jpg" class="img-fluid" alt="">
+                    <img loading="lazy" decoding="async" src="assets/img/project/MoodScope.jpg" class="img-fluid" alt="">
                     <div class="portfolio-info">
                       <h4>Sentiment insights, instantly</h4>
                       <div class="portfolio-links">
-                        <a href="https://github.com/la-b-ib/MoodScope" target="_blank" title="Project"><img 
+                        <a href="https://github.com/la-b-ib/MoodScope" target="_blank" title="Project"><img loading="lazy" decoding="async" 
   src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/certification/chain.png?raw=true" 
   alt="" 
   style="width: 35px; height: 35px;">
@@ -2172,11 +2168,11 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
                 <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <center><h4><b>CostNest</b></h4></center>
                   <div class="portfolio-wrap">
-                    <img src="assets/img/project/CostNest.jpeg" class="img-fluid" alt="">
+                    <img loading="lazy" decoding="async" src="assets/img/project/CostNest.jpeg" class="img-fluid" alt="">
                     <div class="portfolio-info">
                       <h4>Precision Purchase Tracker</h4>
                       <div class="portfolio-links">
-                        <a href="https://github.com/la-b-ib/CostNest" target="_blank" title="Project"><img 
+                        <a href="https://github.com/la-b-ib/CostNest" target="_blank" title="Project"><img loading="lazy" decoding="async" 
   src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/certification/chain.png?raw=true" 
   alt="" 
   style="width: 35px; height: 35px;">
@@ -2188,11 +2184,11 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
                 <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <center><h4><b>LeafByte</b></h4></center>
                   <div class="portfolio-wrap">
-                    <img src="assets/img/project/LeafByte.jpg" class="img-fluid" alt="">
+                    <img loading="lazy" decoding="async" src="assets/img/project/LeafByte.jpg" class="img-fluid" alt="">
                     <div class="portfolio-info">
                       <h4>Carbon Conscious Companion</h4>
                       <div class="portfolio-links">
-                        <a href="https://github.com/la-b-ib/LeafByte" target="_blank" title="Project"><img 
+                        <a href="https://github.com/la-b-ib/LeafByte" target="_blank" title="Project"><img loading="lazy" decoding="async" 
   src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/certification/chain.png?raw=true" 
   alt="" 
   style="width: 35px; height: 35px;">
@@ -2204,11 +2200,11 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <center><h4><b>VitaSort</b></h4></center>
                   <div class="portfolio-wrap">
-                    <img src="assets/img/project/VitaSort.jpg" class="img-fluid" alt="">
+                    <img loading="lazy" decoding="async" src="assets/img/project/VitaSort.jpg" class="img-fluid" alt="">
                     <div class="portfolio-info">
                       <h4>Cognitive Career Catalyst</h4>
                       <div class="portfolio-links">
-                        <a href="https://github.com/la-b-ib/VitaSort" target="_blank" title="Project"><img 
+                        <a href="https://github.com/la-b-ib/VitaSort" target="_blank" title="Project"><img loading="lazy" decoding="async" 
   src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/certification/chain.png?raw=true" 
   alt="" 
   style="width: 35px; height: 35px;">
@@ -2220,11 +2216,11 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <center><h4><b>LitGrid</b></h4></center>
                   <div class="portfolio-wrap">
-                    <img src="assets/img/project/LitGrid.jpg" class="img-fluid" alt="">
+                    <img loading="lazy" decoding="async" src="assets/img/project/LitGrid.jpg" class="img-fluid" alt="">
                     <div class="portfolio-info">
                       <h4>Cloud Library Suite</h4>
                       <div class="portfolio-links">
-                        <a href="https://github.com/la-b-ib/LitGrid" target="_blank" title="Project"><img 
+                        <a href="https://github.com/la-b-ib/LitGrid" target="_blank" title="Project"><img loading="lazy" decoding="async" 
   src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/certification/chain.png?raw=true" 
   alt="" 
   style="width: 35px; height: 35px;">
@@ -2236,11 +2232,11 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <center><h4><b>DuskProbe</b></h4></center>
                   <div class="portfolio-wrap">
-                    <img src="assets/img/project/DuskProbe.jpg" class="img-fluid" alt="">
+                    <img loading="lazy" decoding="async" src="assets/img/project/DuskProbe.jpg" class="img-fluid" alt="">
                     <div class="portfolio-info">
                       <h4>Intelligent Vulnerability Detector</h4>
                       <div class="portfolio-links">
-                        <a href="https://github.com/la-b-ib/DuskProbe" target="_blank" title="Project"><img 
+                        <a href="https://github.com/la-b-ib/DuskProbe" target="_blank" title="Project"><img loading="lazy" decoding="async" 
   src="https://github.com/la-b-ib/la-b-ib.github.io/blob/main/assets/img/certification/chain.png?raw=true" 
   alt="" 
   style="width: 35px; height: 35px;">
@@ -2262,7 +2258,7 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
     </div>
     <!-- Mobile-only GIF (hidden on desktop) -->
     <div class="mobile-gif-container d-block d-md-none">
-      <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/GIF/skills.GIF" 
+      <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/GIF/skills.GIF" 
            alt="Skills GIF">
     </div>
     <div class="row">
@@ -2271,106 +2267,106 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
         <div class="skill-category">
           <h4 style="color: black;"><strong>Programming Languages</strong></h4>
           <div class="skill-icons">
-            <img src="https://www.vectorlogo.zone/logos/python/python-horizontal.svg" alt="Python" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/java/java-horizontal.svg" alt="Java" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/javascript/javascript-horizontal.svg" alt="JavaScript" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-ar21.svg" alt="TypeScript" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/golang/golang-ar21.svg" alt="Go" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/rust-lang/rust-lang-ar21.svg" alt="Rust" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/kotlinlang/kotlinlang-ar21.svg" alt="Kotlin" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/ruby-lang/ruby-lang-ar21.svg" alt="Ruby" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/python/python-horizontal.svg" alt="Python" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/java/java-horizontal.svg" alt="Java" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/javascript/javascript-horizontal.svg" alt="JavaScript" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-ar21.svg" alt="TypeScript" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/golang/golang-ar21.svg" alt="Go" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/rust-lang/rust-lang-ar21.svg" alt="Rust" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/kotlinlang/kotlinlang-ar21.svg" alt="Kotlin" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/ruby-lang/ruby-lang-ar21.svg" alt="Ruby" loading="lazy">
           </div>
         </div>
         <!-- Web Development -->
         <div class="skill-category">
           <h4 style="color: black;"><strong>Web Development</strong></h4>
           <div class="skill-icons">
-            <img src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-ar21.svg" alt="HTML5" loading="lazy">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS3" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/sass-lang/sass-lang-ar21.svg" alt="Sass" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/lesscss/lesscss-ar21.svg" alt="Less" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/reactjs/reactjs-ar21.svg" alt="React" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/vuejs/vuejs-ar21.svg" alt="Vue.js" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/angular/angular-ar21.svg" alt="Angular" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-ar21.svg" alt="Bootstrap" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-ar21.svg" alt="Tailwind CSS" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/graphql/graphql-ar21.svg" alt="GraphQL" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/apache_cordova/apache_cordova-ar21.svg" alt="Cordova" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/electronjs/electronjs-ar21.svg" alt="Electron" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/d3js/d3js-ar21.svg" alt="D3.js" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-ar21.svg" alt="HTML5" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS3" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/sass-lang/sass-lang-ar21.svg" alt="Sass" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/lesscss/lesscss-ar21.svg" alt="Less" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/reactjs/reactjs-ar21.svg" alt="React" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/vuejs/vuejs-ar21.svg" alt="Vue.js" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/angular/angular-ar21.svg" alt="Angular" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-ar21.svg" alt="Bootstrap" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-ar21.svg" alt="Tailwind CSS" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/graphql/graphql-ar21.svg" alt="GraphQL" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/apache_cordova/apache_cordova-ar21.svg" alt="Cordova" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/electronjs/electronjs-ar21.svg" alt="Electron" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/d3js/d3js-ar21.svg" alt="D3.js" loading="lazy">
           </div>
         </div>
         <!-- Backend & Databases -->
         <div class="skill-category">
           <h4 style="color: black;"><strong>Backend & Databases</strong></h4>
           <div class="skill-icons">
-            <img src="https://www.vectorlogo.zone/logos/nodejs/nodejs-horizontal.svg" alt="Node.js" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/expressjs/expressjs-ar21.svg" alt="Express.js" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/djangoproject/djangoproject-ar21.svg" alt="Django" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/springio/springio-ar21.svg" alt="Spring" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/mysql/mysql-horizontal.svg" alt="MySQL" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/postgresql/postgresql-horizontal.svg" alt="PostgreSQL" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/mongodb/mongodb-ar21.svg" alt="MongoDB" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/redis/redis-ar21.svg" alt="Redis" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/firebase/firebase-ar21.svg" alt="Firebase" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/nodejs/nodejs-horizontal.svg" alt="Node.js" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/expressjs/expressjs-ar21.svg" alt="Express.js" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/djangoproject/djangoproject-ar21.svg" alt="Django" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/springio/springio-ar21.svg" alt="Spring" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/mysql/mysql-horizontal.svg" alt="MySQL" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/postgresql/postgresql-horizontal.svg" alt="PostgreSQL" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/mongodb/mongodb-ar21.svg" alt="MongoDB" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/redis/redis-ar21.svg" alt="Redis" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/firebase/firebase-ar21.svg" alt="Firebase" loading="lazy">
           </div>
         </div>
         <!-- Data Science & AI -->
         <div class="skill-category">
           <h4 style="color: black;"><strong>Data Science & AI</strong></h4>
           <div class="skill-icons">
-            <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-ar21.svg" alt="TensorFlow" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-ar21.svg" alt="PyTorch" loading="lazy">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="Scikit-learn" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/numpy/numpy-ar21.svg" alt="NumPy" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/opencv/opencv-ar21.svg" alt="OpenCV" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/apache_spark/apache_spark-ar21.svg" alt="Spark" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/apache_hadoop/apache_hadoop-ar21.svg" alt="Hadoop" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/apache_kafka/apache_kafka-ar21.svg" alt="Kafka" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/r-project/r-project-ar21.svg" alt="R Language" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-ar21.svg" alt="TensorFlow" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/pytorch/pytorch-ar21.svg" alt="PyTorch" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="Scikit-learn" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/numpy/numpy-ar21.svg" alt="NumPy" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/opencv/opencv-ar21.svg" alt="OpenCV" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/apache_spark/apache_spark-ar21.svg" alt="Spark" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/apache_hadoop/apache_hadoop-ar21.svg" alt="Hadoop" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/apache_kafka/apache_kafka-ar21.svg" alt="Kafka" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/r-project/r-project-ar21.svg" alt="R Language" loading="lazy">
           </div>
         </div>
         <!-- Cloud & DevOps -->
         <div class="skill-category">
           <h4 style="color: black;"><strong>Cloud & DevOps</strong></h4>
           <div class="skill-icons">
-            <img src="https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-ar21.svg" alt="AWS" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-ar21.svg" alt="Google Cloud" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-ar21.svg" alt="Azure" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/docker/docker-ar21.svg" alt="Docker" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/kubernetes/kubernetes-ar21.svg" alt="Kubernetes" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/terraformio/terraformio-ar21.svg" alt="Terraform" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/ansible/ansible-ar21.svg" alt="Ansible" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/jenkins/jenkins-ar21.svg" alt="Jenkins" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/github/github-ar21.svg" alt="GitHub Actions" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/gitlab/gitlab-ar21.svg" alt="GitLab CI" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-ar21.svg" alt="AWS" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-ar21.svg" alt="Google Cloud" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-ar21.svg" alt="Azure" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/docker/docker-ar21.svg" alt="Docker" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/kubernetes/kubernetes-ar21.svg" alt="Kubernetes" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/terraformio/terraformio-ar21.svg" alt="Terraform" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/ansible/ansible-ar21.svg" alt="Ansible" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/jenkins/jenkins-ar21.svg" alt="Jenkins" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/github/github-ar21.svg" alt="GitHub Actions" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/gitlab/gitlab-ar21.svg" alt="GitLab CI" loading="lazy">
           </div>
         </div>
         <!-- Operating Systems -->
         <div class="skill-category">
           <h4 style="color: black;"><strong>Operating Systems</strong></h4>
           <div class="skill-icons">
-            <img src="https://www.vectorlogo.zone/logos/linux/linux-ar21.svg" alt="Linux" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/ubuntu/ubuntu-ar21.svg" alt="Ubuntu" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/debian/debian-ar21.svg" alt="Debian" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/centos/centos-ar21.svg" alt="CentOS" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/redhat/redhat-ar21.svg" alt="Red Hat" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/apple/apple-ar21.svg" alt="macOS" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/microsoft/microsoft-ar21.svg" alt="Windows" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/linux/linux-ar21.svg" alt="Linux" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/ubuntu/ubuntu-ar21.svg" alt="Ubuntu" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/debian/debian-ar21.svg" alt="Debian" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/centos/centos-ar21.svg" alt="CentOS" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/redhat/redhat-ar21.svg" alt="Red Hat" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/apple/apple-ar21.svg" alt="macOS" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/microsoft/microsoft-ar21.svg" alt="Windows" loading="lazy">
           </div>
         </div>
         <!-- Development Tools -->
         <div class="skill-category">
           <h4 style="color: black;"><strong>Development Tools</strong></h4>
           <div class="skill-icons">
-            <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-ar21.svg" alt="Git" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/visualstudio_code/visualstudio_code-ar21.svg" alt="VS Code" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/jetbrains/jetbrains-ar21.svg" alt="JetBrains" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/jupyter/jupyter-ar21.svg" alt="Jupyter" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/npmjs/npmjs-ar21.svg" alt="npm" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/yarnpkg/yarnpkg-ar21.svg" alt="Yarn" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/heroku/heroku-ar21.svg" alt="Heroku" loading="lazy">
-            <img src="https://www.vectorlogo.zone/logos/figma/figma-ar21.svg" alt="Figma" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/git-scm/git-scm-ar21.svg" alt="Git" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/visualstudio_code/visualstudio_code-ar21.svg" alt="VS Code" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/jetbrains/jetbrains-ar21.svg" alt="JetBrains" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/jupyter/jupyter-ar21.svg" alt="Jupyter" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/npmjs/npmjs-ar21.svg" alt="npm" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/yarnpkg/yarnpkg-ar21.svg" alt="Yarn" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/heroku/heroku-ar21.svg" alt="Heroku" loading="lazy">
+            <img loading="lazy" decoding="async" src="https://www.vectorlogo.zone/logos/figma/figma-ar21.svg" alt="Figma" loading="lazy">
           </div>
         </div>
       </div>
@@ -2385,7 +2381,7 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
       <!-- Single responsive image that works for all devices -->
       <div class="row justify-content-center">
         <div class="col-12 text-center">
-          <img src="https://github-profile-trophy.vercel.app/?username=la-b-ib&theme=flat&no-frame=true&no-bg=true&margin-w=15&margin-h=15&row=2&column=4" 
+          <img loading="lazy" decoding="async" src="https://github-profile-trophy.vercel.app/?username=la-b-ib&theme=flat&no-frame=true&no-bg=true&margin-w=15&margin-h=15&row=2&column=4" 
      alt="GitHub Trophies" 
       loading="lazy"
                style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
@@ -2397,18 +2393,18 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
     <!-- Mobile-only Stats GIF (hidden on desktop) -->
     <!-- Mobile-only Stats GIF (hidden on desktop) -->
   <div class="mobile-gif-container d-block d-md-none">
-    <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/GIF/stats.gif" 
+    <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/GIF/stats.gif" 
        alt="Stats GIF" 
        loading="lazy">
   </div>
     <!-- Contribution Graph Section -->
     <div class="contribution-container">
       <div class="contribution-badges">
-        <a href="https://octoprofile.vercel.app/user?id=la-b-ib"><img src="https://img.shields.io/badge/OctoProfile-Visit-2088FF?style=for-the-badge&logo=github" alt="OctoProfile"></a>
-        <a href="https://github.com/la-b-ib"><img src="https://komarev.com/ghpvc/?username=la-b-ib&label=Views&style=for-the-badge&color=2088FF" alt="Profile Views"></a>
+        <a href="https://octoprofile.vercel.app/user?id=la-b-ib"><img loading="lazy" decoding="async" src="https://img.shields.io/badge/OctoProfile-Visit-2088FF?style=for-the-badge&logo=github" alt="OctoProfile"></a>
+        <a href="https://github.com/la-b-ib"><img loading="lazy" decoding="async" src="https://komarev.com/ghpvc/?username=la-b-ib&label=Views&style=for-the-badge&color=2088FF" alt="Profile Views"></a>
       </div>
       <div class="contribution-graph">
-        <img src="https://github-readme-activity-graph.vercel.app/graph?username=la-b-ib&theme=github-dark-dimmed&area=true&hide_border=true&height=300&bg_color=ffffff&custom_title=Contribution+Activity&hide_title=false&line=4284f4&point=273c75&color=000000" 
+        <img loading="lazy" decoding="async" src="https://github-readme-activity-graph.vercel.app/graph?username=la-b-ib&theme=github-dark-dimmed&area=true&hide_border=true&height=300&bg_color=ffffff&custom_title=Contribution+Activity&hide_title=false&line=4284f4&point=273c75&color=000000" 
      alt="Contribution Graph">
       </div>
     </div>
@@ -2421,22 +2417,22 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
      <div class="badge-container">
         <!-- LeetCode Badge -->
         <a href="https://leetcode.com/u/la-b-ib/" class="badge leetcode" target="_blank">
-            <img src="https://leetcode.com/static/images/LeetCode_logo_rvs.png" alt="LeetCode" class="badge-logo">
+            <img loading="lazy" decoding="async" src="https://leetcode.com/static/images/LeetCode_logo_rvs.png" alt="LeetCode" class="badge-logo">
             <span class="badge-text">LeetCode</span>
         </a>
         <!-- HackerRank Badge -->
         <a href="https://www.hackerrank.com/profile/la_b_ib" class="badge hackerrank" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/HackerRank_Icon-1000px.png" alt="HackerRank" class="badge-logo">
+            <img loading="lazy" decoding="async" src="https://upload.wikimedia.org/wikipedia/commons/4/40/HackerRank_Icon-1000px.png" alt="HackerRank" class="badge-logo">
             <span class="badge-text">HackerRank</span>
         </a>
         <!-- CodersRank Badge -->
         <a href="https://profile.codersrank.io/user/la-b-ib" class="badge codersrank" target="_blank">
-            <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/dev%20badge/crrnk.png" alt="CodersRank" class="badge-logo">
+            <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/dev%20badge/crrnk.png" alt="CodersRank" class="badge-logo">
             <span class="badge-text">CodersRank</span>
         </a>
         <!-- GitHub Badge -->
         <a href="https://github.com/la-b-ib" class="badge github" target="_blank">
-            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="badge-logo">
+            <img loading="lazy" decoding="async" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="badge-logo">
             <span class="badge-text">GitHub</span>
         </a>
     </div>
@@ -2633,7 +2629,7 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
             <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="100">
                 <div class="icon-box">
                     <div class="icon">
-                        <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/blogs/books.gif" style="width: 110px; height: 110px;" />
+                        <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/blogs/books.gif" style="width: 110px; height: 110px;" />
                     </div>
                     <h4 class="title">
                         <a href="https://bracuexpress.com/author/labib/" target="_blank" style="color: #4285F4;"><b>BRACU Express</b></a>
@@ -2645,7 +2641,7 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
             <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="300">
                 <div class="icon-box">
                     <div class="icon">
-                        <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/blogs/books.gif" style="width: 110px; height: 110px;" />
+                        <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/blogs/books.gif" style="width: 110px; height: 110px;" />
                     </div>
                     <h4 class="title">
                         <a href="https://www.linkedin.com/newsletters/tech-talk-7325845368900894722/" target="_blank" style="color: #4285F4;"><b>NEWSLETTER</b></a>
@@ -2656,7 +2652,7 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
         </div>
         <!-- Mobile-only image -->
         <div class="mobile-blog-image">
-            <!--    <img src="" style="padding-top: 10px; width: 100%;" />     --> 
+            <!--    <img loading="lazy" decoding="async" src="" style="padding-top: 10px; width: 100%;" />     --> 
         </div>
     </div>
 </section>
@@ -2736,7 +2732,7 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
   <div class="container">
     <div class="section-title">
   <h2><b>Contact</b></h2>
-  <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/GIF/contact/conhdr.jpg" alt="Contact Header" class="mobile-only contact-img">
+  <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/GIF/contact/conhdr.jpg" alt="Contact Header" class="mobile-only contact-img">
 </div>
     <div>
       <p style="text-align: justify; font-weight: bold;">
@@ -2746,42 +2742,42 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
      <div class="badge-container">
         <!-- LeetCode Badge -->
         <a href="https://leetcode.com/u/la-b-ib/" class="badge leetcode" target="_blank">
-            <img src="https://leetcode.com/static/images/LeetCode_logo_rvs.png" alt="LeetCode" class="badge-logo">
+            <img loading="lazy" decoding="async" src="https://leetcode.com/static/images/LeetCode_logo_rvs.png" alt="LeetCode" class="badge-logo">
             <span class="badge-text">LeetCode</span>
         </a>
         <!-- HackerRank Badge -->
         <a href="https://www.hackerrank.com/profile/la_b_ib" class="badge hackerrank" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/HackerRank_Icon-1000px.png" alt="HackerRank" class="badge-logo">
+            <img loading="lazy" decoding="async" src="https://upload.wikimedia.org/wikipedia/commons/4/40/HackerRank_Icon-1000px.png" alt="HackerRank" class="badge-logo">
             <span class="badge-text">HackerRank</span>
         </a>
         <!-- CodersRank Badge -->
         <a href="https://profile.codersrank.io/user/la-b-ib" class="badge codersrank" target="_blank">
-            <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/dev%20badge/crrnk.png" alt="CodersRank" class="badge-logo">
+            <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/dev%20badge/crrnk.png" alt="CodersRank" class="badge-logo">
             <span class="badge-text">CodersRank</span>
         </a>
         <!-- GitHub Badge -->
         <a href="https://github.com/la-b-ib" class="badge github" target="_blank">
-            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="badge-logo">
+            <img loading="lazy" decoding="async" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="badge-logo">
             <span class="badge-text">GitHub</span>
         </a>
         <!-- LinkedIn Badge -->
         <a href="https://www.linkedin.com/in/la-b-ib/" class="badge linkedin" target="_blank">
-            <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/dev%20badge/linkedin.png" alt="LinkedIn" class="badge-logo">
+            <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/dev%20badge/linkedin.png" alt="LinkedIn" class="badge-logo">
             <span class="badge-text">LinkedIn</span>
         </a>
         <!-- Twitter Badge -->
         <a href="https://x.com/la_b_ib_" class="badge twitter" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" alt="Twitter" class="badge-logo">
+            <img loading="lazy" decoding="async" src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" alt="Twitter" class="badge-logo">
             <span class="badge-text">Twitter</span>
         </a>
         <!-- Email Badge -->
         <a href="mailto:labib-x@protonmail.com?subject=Inquiry%20from%20Website&body=Hello%20Labib,%0D%0A%0D%0AI%20have%20a%20question!" class="badge email" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Email" class="badge-logo">
+            <img loading="lazy" decoding="async" src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Email" class="badge-logo">
             <span class="badge-text">Email</span>
         </a>
         <!-- Reddit Badge -->
         <a href="https://www.reddit.com/u/la-b-ib/s/VmELK9jJOC" class="badge reddit" target="_blank">
-            <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/dev%20badge/reddit.jpeg" alt="Reddit" class="badge-logo">
+            <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/dev%20badge/reddit.jpeg" alt="Reddit" class="badge-logo">
             <span class="badge-text">Reddit</span>
         </a>
     </div>
@@ -3045,15 +3041,16 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
 </script>
 </footer>
 <!-- Vendor JS Files -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/counterup2/2.0.2/index.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/venobox/2.1.8/venobox.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/7.1.0/fuse.min.js"></script>
   <script>
   // Inject custom CSS for glassmorphism and wave spinner
   const style1 = document.createElement('style');
