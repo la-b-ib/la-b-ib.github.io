@@ -206,6 +206,16 @@ $(document).ready(function() {
         }
     });
 
+    // Prevent image downloads by disabling right-click, drag, and touch interactions on all devices
+    $('img').on('contextmenu dragstart touchstart', function(e) {
+        e.preventDefault();
+    });
+    $('a').on('dragstart', function(e) {
+        e.preventDefault();
+    });
+    $('img').attr('draggable', false);
+    $('a').attr('draggable', false);
+
     });
   
   })(jQuery);
