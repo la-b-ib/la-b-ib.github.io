@@ -716,6 +716,14 @@ section {
 .portfolio .portfolio-item {
     margin-bottom: 30px;
 }
+.portfolio .portfolio-item h4 {
+    margin-bottom: 15px;
+}
+@media (max-width: 767px) {
+    .portfolio .portfolio-item h4 {
+        margin-bottom: 15px;
+    }
+}
 .portfolio #portfolio-flters {
     padding: 0;
     margin: 0 auto 15px auto;
@@ -741,15 +749,19 @@ section {
 .portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
     background: #192a56;
 }
-.portfolio #portfolio-flters li:last-child {
-    margin-right: 0;
-}
 .portfolio .portfolio-wrap {
     transition: 0.3s;
     position: relative;
     overflow: hidden;
     z-index: 1;
-    background: transparent
+    background: transparent;
+    margin-bottom: 10px;
+}
+@media (max-width: 767px) {
+    .portfolio .portfolio-wrap {
+        margin-bottom: 15px;
+        padding-top: 10px;
+    }
 }
 .portfolio .portfolio-wrap::before {
     content: "";
