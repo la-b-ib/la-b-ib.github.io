@@ -93,7 +93,7 @@ $(document).ready(function() {
           'font-family': 'Material Icons',
           'font-size': '20px',
           'color': '#0dcd3c',
-          'margin-right': '10px'
+          'margin-right': '6px'
         });
       
       $this.prepend($icon);
@@ -106,6 +106,7 @@ $(document).ready(function() {
       }, 1000);
     }
   });
+      $mobile_nav.find('ul').append('<li><a href="#" class="mobile-nav-close"><i class="material-icons mobile-menu-icon">cancel</i> Close</a></li>');
       $('body').append($mobile_nav);
       $('body').prepend('<button type="button" class="mobile-nav-toggle d-lg-none"><i class="material-icons" style="font-size: 30px; color: black;">drag_indicator</i></button>');
       $('body').append('<div class="mobile-nav-overly"></div>');
@@ -114,6 +115,12 @@ $(document).ready(function() {
         $('body').toggleClass('mobile-nav-active');
         $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
         $('.mobile-nav-overly').toggle();
+      });
+  
+      $(document).on('click', '.mobile-nav-close', function(e) {
+        $('body').removeClass('mobile-nav-active');
+        $('.mobile-nav-toggle i').removeClass('icofont-close').addClass('icofont-navigation-menu');
+        $('.mobile-nav-overly').fadeOut();
       });
   
       $(document).click(function(e) {
