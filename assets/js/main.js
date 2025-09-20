@@ -164,21 +164,7 @@ $(document).ready(function() {
       }
     });
   
-    // Portfolio isotope
-    $(window).on('load', function() {
-      var portfolioIsotope = $('.portfolio-container').isotope({
-        itemSelector: '.portfolio-item',
-        layoutMode: 'fitRows'
-      });
-  
-      $('#portfolio-flters li').on('click', function() {
-        $("#portfolio-flters li").removeClass('filter-active');
-        $(this).addClass('filter-active');
-        portfolioIsotope.isotope({ filter: $(this).data('filter') });
-      });
-    });
-  
-     // Modified Venobox initialization with custom mobile close button
+    // Modified Venobox initialization with custom mobile close button
     $(document).ready(function() {
     $('.venobox').venobox({
         bgcolor: 'transparent', /* No background to avoid duplication */
