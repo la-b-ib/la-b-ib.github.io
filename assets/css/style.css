@@ -3,10 +3,20 @@
 --------------------------------------------------------------*/
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 /*--------------------------------------------------------------
+# Global Font Override - Ensure everything uses Bungee
+--------------------------------------------------------------*/
+* {
+    font-family: "Bungee", sans-serif !important;
+}
+/* Exception for Material Icons */
+.material-icons, [class*="material-icons"] {
+    font-family: 'Material Icons' !important;
+}
+/*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
 body {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Bungee", sans-serif;
     color: #000000;
     position: relative;
     background: transparent;
@@ -35,7 +45,7 @@ a:hover {
     text-decoration: none;
 }
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Raleway", sans-serif;
+    font-family: "Bungee", sans-serif;
 }
 /*--------------------------------------------------------------
 # Header
@@ -59,7 +69,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0;
     line-height: 1;
     font-weight: 700;
-    font-family: "Poppins", sans-serif;
+    font-family: "Bungee", sans-serif;
 }
 #header h1 a, #header h1 a:hover {
     color: #000000;
@@ -138,7 +148,7 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     color: #fff;
     font-size: 19px;
-    font-family: "Poppins", sans-serif;
+    font-family: "Bungee", sans-serif;
     font-weight: 400;
 }
 .nav-menu a:before {
@@ -161,6 +171,42 @@ h1, h2, h3, h4, h5, h6 {
     color: #12d640;
     text-decoration: none;
 }
+
+/*--------------------------------------------------------------
+# Desktop Header Optimization - Reduced Gaps and Font Sizes
+--------------------------------------------------------------*/
+@media (min-width: 993px) {
+    /* Reduce font sizes by 10% for desktop with !important to override inline styles */
+    #header.header-tops h1 {
+        font-size: 37.8px !important; /* 42px - 10% = 37.8px */
+    }
+    
+    #header.header-tops h2 {
+        font-size: 21.6px !important; /* 24px - 10% = 21.6px */
+        margin-top: 18px !important; /* 20px - 10% = 18px */
+    }
+    
+    #header.header-tops .nav-menu {
+        margin-top: 31.5px !important; /* 35px - 10% = 31.5px */
+    }
+    
+    #header.header-tops .nav-menu a {
+        font-size: 17.1px !important; /* 19px - 10% = 17.1px */
+    }
+    
+    #header.header-tops .social-links {
+        margin-top: 36px !important; /* 40px - 10% = 36px */
+    }
+    
+    #header.header-tops .social-links a {
+        font-size: 27px !important; /* 30px - 10% = 27px */
+    }
+    
+    #header.header-tops .nav-menu li + li {
+        margin-left: 27px !important; /* 30px - 10% = 27px */
+    }
+}
+
 /* Mobile Navigation */
 .mobile-nav-toggle {
     position: fixed;
@@ -212,7 +258,7 @@ h1, h2, h3, h4, h5, h6 {
 .mobile-nav a {
     color: #fff;
     padding: 12px 16px; /* Reduced from 14px 16px */
-    font: 500 16px/1.5 "Poppins", sans-serif;
+    font: 500 16px/1.5 "Bungee", sans-serif;
     text-decoration: none;
     display: block;
     transform: translateZ(0);
@@ -299,7 +345,7 @@ h1, h2, h3, h4, h5, h6 {
   /* FALLBACK FOR WHEN ICONS DON'T LOAD */
   .mobile-nav a i.mobile-menu-icon:empty:before {
     content: attr(data-fallback);
-    font-family: initial !important;
+    font-family: "Bungee", sans-serif !important;
     font-size: 20px;
   }
   /* Header Top */
@@ -383,7 +429,7 @@ section .container {
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #000000;
-    font-family: "Poppins", sans-serif;
+    font-family: "Bungee", sans-serif;
 }
 .section-title h2::after {
     content: "";
@@ -399,7 +445,7 @@ section .container {
     font-size: 36px;
     font-weight: 700;
     text-transform: uppercase;
-    font-family: "Poppins", sans-serif;
+    font-family: "Bungee", sans-serif;
     color: #fff;
 }
 section {
@@ -461,7 +507,7 @@ section {
 .counts .count-box p {
     padding: 0;
     margin: 0;
-    font-family: "Raleway", sans-serif;
+    font-family: "Bungee", sans-serif;
     font-size: 14px;
 }
 /*--------------------------------------------------------------
@@ -478,7 +524,7 @@ section {
     text-transform: uppercase;
     display: block;
     font-weight: 600;
-    font-family: "Poppins", sans-serif;
+    font-family: "Bungee", sans-serif;
     color: #fff;
 }
 .skills .progress .skill .val {
@@ -614,7 +660,7 @@ section {
     font-size: 18px;
     font-weight: 600;
     text-transform: uppercase;
-    font-family: "Poppins", sans-serif;
+    font-family: "Bungee", sans-serif;
     color: #1c7d32;
     margin-bottom: 10px;
 }
@@ -719,6 +765,8 @@ section {
 --------------------------------------------------------------*/
 .portfolio .portfolio-item {
     margin-bottom: 30px;
+    transform: translateZ(0); /* Hardware acceleration */
+    backface-visibility: hidden; /* Prevent flickering */
 }
 .portfolio .portfolio-item h4 {
     margin-bottom: 15px;
@@ -728,38 +776,15 @@ section {
         margin-bottom: 15px;
     }
 }
-.portfolio #portfolio-flters {
-    padding: 0;
-    margin: 0 auto 15px auto;
-    list-style: none;
-    text-align: center;
-    border-radius: 50px;
-    padding: 2px 15px;
-}
-.portfolio #portfolio-flters li {
-    cursor: pointer;
-    display: inline-block;
-    padding: 8px 16px 10px 16px;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 1;
-    text-transform: uppercase;
-    color: #fff;
-    background: #000000;
-    margin: 0 3px 10px 3px;
-    transition: all 0.3s ease-in-out;
-    border-radius: 4px;
-}
-.portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
-    background: #192a56;
-}
 .portfolio .portfolio-wrap {
-    transition: 0.3s;
+    transition: 0.2s; /* Faster transition for better performance */
     position: relative;
     overflow: hidden;
     z-index: 1;
     background: transparent;
     margin-bottom: 10px;
+    transform: translateZ(0); /* Hardware acceleration */
+    will-change: transform, opacity; /* Optimize for animations */
 }
 @media (max-width: 767px) {
     .portfolio .portfolio-wrap {
@@ -870,6 +895,39 @@ section {
 .portfolio .portfolio-wrap:hover .portfolio-info::after {
     bottom: 15px;
     right: 15px;
+}
+/*--------------------------------------------------------------
+# Certification
+--------------------------------------------------------------*/
+.certification-container .cert-item {
+    margin-bottom: 30px;
+}
+.certification-container .portfolio-wrap {
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    background: transparent;
+    margin-bottom: 10px;
+}
+/*--------------------------------------------------------------
+# Projects Container Optimization
+--------------------------------------------------------------*/
+.projects-container {
+    position: relative;
+}
+.projects-container .portfolio-item {
+    transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+    display: block; /* Ensure items are visible by default */
+}
+/* Ensure Isotope filtering works properly */
+.projects-container .portfolio-item.isotope-hidden {
+    pointer-events: none;
+    z-index: 1;
+}
+.projects-container .portfolio-item,
+.projects-container .portfolio-item.isotope-item {
+    z-index: 2;
 }
 /*--------------------------------------------------------------
 # Contact
