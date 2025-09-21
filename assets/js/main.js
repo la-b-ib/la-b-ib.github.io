@@ -139,16 +139,35 @@ $(document).ready(function() {
   
 
   
-    // Prevent image downloads by disabling right-click, drag, and touch interactions on all devices
-    $(function(){
-      try {
-        if (typeof $.fn.venobox === 'function' && $('.venobox').length) {
-          // Initialization skipped as Venobox library is not included by default
+    // Modified Venobox initialization with custom mobile close button
+    $(document).ready(function() {
+    $('.venobox').venobox({
+        bgcolor: 'transparent', /* No background to avoid duplication */
+        border: 'none', /* Remove border */
+        framewidth: '100%', 
+        frameheight: '90vh',
+        numeratio: true,
+        infinigall: true,
+        spinner: 'wave',
+        spinColor: '#4284F4',
+        overlayColor: 'rgba(0, 0, 0, 0.3)', /* Match CSS .vbox-overlay */
+        closeBackground: 'transparent',
+        closeColor: '#4284F4',
+        css: {
+            'background-color': 'rgba(255, 255, 255, 0.2)', /* Glassmorphic background */
+            'backdrop-filter': 'blur(10px)', /* Glass effect */
+            '-webkit-backdrop-filter': 'blur(10px)', /* Safari support */
+            'box-shadow': 'none', /* No shadow */
+            'border-radius': '0' /* No rounded corners */
+        },
+        
+        
+        onClose: function() {
+            $('.custom-close-btn').remove();
         }
-      } catch (e) {
-        // safely ignore
-      }
-    
+    });
+
+    // Prevent image downloads by disabling right-click, drag, and touch interactions on all devices
     $('img').on('contextmenu dragstart touchstart', function(e) {
         e.preventDefault();
     });
@@ -157,6 +176,7 @@ $(document).ready(function() {
     });
     $('img').attr('draggable', false);
     $('a').attr('draggable', false);
+
     });
   
   })(jQuery);
