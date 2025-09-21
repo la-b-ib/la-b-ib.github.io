@@ -99,16 +99,8 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #000000;
-    color: #ffffff;
     line-height: 1;
     margin-right: 8px;
-    border-radius: 100%;
-    width: 45px;
-    height: 45px;
-}
-#header .social-links a:hover {
-    background: #192a56;
 }
 @media (max-width: 992px) {
     #header h1 {
