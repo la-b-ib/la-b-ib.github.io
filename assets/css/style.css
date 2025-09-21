@@ -1,14 +1,26 @@
-/* Material Icons and Global Font Configuration */
+/*--------------------------------------------------------------
+# Material Icons
+--------------------------------------------------------------*/
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-* {font-family: "Bungee", sans-serif !important;}
-.material-icons, [class*="material-icons"] {font-family: 'Material Icons' !important;}
-/* Core Body Styles and Background */
+/*--------------------------------------------------------------
+# Global Font Override - Ensure everything uses Bungee
+--------------------------------------------------------------*/
+* {
+    font-family: "Bungee", sans-serif !important;
+}
+/* Exception for Material Icons */
+.material-icons, [class*="material-icons"] {
+    font-family: 'Material Icons' !important;
+}
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
 body {
     font-family: "Bungee", sans-serif;
     color: #000000;
     position: relative;
     background: transparent;
-    font-size: 17px;
+    font-size: 17px; /* Increased from default (typically 16px) */
 }
 body::before {
     content: "";
@@ -21,12 +33,23 @@ body::before {
     height: 100vh;
 }
 @media (min-width: 1024px) {
-    body::before {background-attachment: fixed;}
+    body::before {
+        background-attachment: fixed;
+    }
 }
-a {color: #4285F4;}
-a:hover {color: #4285F4; text-decoration: none;}
-h1, h2, h3, h4, h5, h6 {font-family: "Bungee", sans-serif;}
-/* Header Configuration */
+a {
+    color: #4285F4;
+}
+a:hover {
+    color: #4285F4;
+    text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Bungee", sans-serif;
+}
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
 #header {
     transition: ease-in-out 0s;
     position: relative;
@@ -36,7 +59,9 @@ h1, h2, h3, h4, h5, h6 {font-family: "Bungee", sans-serif;}
     z-index: 997;
     overflow-y: auto;
 }
-#header * {transition: ease-in-out 0s;}
+#header * {
+    transition: ease-in-out 0s;
+}
 #header h1 {
     font-size: 42px;
     margin-top: 0px;
@@ -57,11 +82,14 @@ h1, h2, h3, h4, h5, h6 {font-family: "Bungee", sans-serif;}
     color: #240072;
 }
 #header h2 span {
-    color: #000000;
-    border-bottom: 5px solid #000000;
+    color:  #000000;
+    border-bottom: 5px solid #000000 ;
     padding-bottom: 5px;
 }
-#header img {padding: 0; margin: 0;}
+#header img {
+    padding: 0;
+    margin: 0;
+}
 #header .social-links {
     margin-top: 40px;
     display: flex;
@@ -79,11 +107,20 @@ h1, h2, h3, h4, h5, h6 {font-family: "Bungee", sans-serif;}
     width: 45px;
     height: 45px;
 }
-#header .social-links a:hover {background: #192a56;}
+#header .social-links a:hover {
+    background: #192a56;
+}
 @media (max-width: 992px) {
-    #header h1 {font-size: 36px;}
-    #header h2 {font-size: 20px; line-height: 30px;}
-    #header .social-links {margin-top: 15px;}
+    #header h1 {
+        font-size: 36px;
+    }
+    #header h2 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    #header .social-links {
+        margin-top: 15px;
+    }
     #header .container {
         display: flex;
         flex-direction: column;
@@ -198,8 +235,8 @@ h1, h2, h3, h4, h5, h6 {font-family: "Bungee", sans-serif;}
     height: 100vh;
     z-index: 9999;
     background: rgba(255, 255, 255, 0.15); /* Soft transparency */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px); /* Glassmorphism blur */
+    -webkit-backdrop-filter: blur(10px); /* Ensure support on Safari */
     overflow: hidden auto;
     transform: translateX(-100%);
     will-change: transform;
@@ -321,7 +358,7 @@ h1, h2, h3, h4, h5, h6 {font-family: "Bungee", sans-serif;}
     right: 0;
     background: rgba(255, 255, 255, 0.2); /* Pure white with low opacity for glassmorphism */
     backdrop-filter: blur(10px); /* Blur effect for frosted glass */
-    -webkit-backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Safari compatibility */
     border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Subtle white border for depth */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for glassmorphism */
 }
@@ -437,47 +474,8 @@ section {
 .about-me .content p:last-child {
     margin-bottom: 0;
 }
-/* Utility classes for common inline styles */
-.icon-info {color: black; font-size: 1.5em; display: inline-flex; align-items: center; justify-content: center;}
-.icon-section {color: #000000; vertical-align: middle; font-size: 2em; margin-right: 0px;}
-.info-item {display: flex; align-items: center; gap: 5px; margin-bottom: 10px; text-align: justify;}
-.info-item-lg {display: flex; align-items: center; gap: 10px; margin-bottom: 10px; text-align: justify;}
-.clean-list {list-style-type: none; text-align: left; padding-left: 0; margin-bottom: 10px;}
-.brand-link {text-decoration: none; color: #000000; display: inline-block;}
-.research-text {color: rgb(0, 0, 0); text-align: justify; margin-bottom: 15px; font-weight: bold;}
-.research-link {color: rgb(0, 0, 0); font-weight: bold; text-decoration: none;}
 
-/* Removed unused counts section styles - not implemented in current design */
-/*--------------------------------------------------------------
-# Skills
---------------------------------------------------------------*/
-.skills .progress {
-    height: 50px;
-    display: block;
-    background: none;
-}
-.skills .progress .skill {
-    padding: 0;
-    margin: 0 0 6px 0;
-    text-transform: uppercase;
-    display: block;
-    font-weight: 600;
-    font-family: "Bungee", sans-serif;
-    color: #fff;
-}
-.skills .progress .skill .val {
-    float: right;
-    font-style: normal;
-}
-.skills .progress-bar-wrap {
-    background: rgba(255, 255, 255, 0.15);
-}
-.skills .progress-bar {
-    width: 1px;
-    height: 10px;
-    transition: .9s;
-    background-color: #1c7d32;
-}
+
 /*--------------------------------------------------------------
 # Interests
 --------------------------------------------------------------*/
@@ -505,69 +503,9 @@ section {
 }
 .interests .icon-box:hover {
     background: rgba(66, 132, 244, 0.2); /* 65% transparency */
-/* Removed unused testimonials section styles - not implemented in current design */
 }
-.testimonials .owl-dot.active {
-    background-color: #1c7d32 !important;
-}
-@media (max-width: 767px) {
-    .testimonials {
-        margin: 30px 10px;
-    }
-}
-/*--------------------------------------------------------------
-# Resume
---------------------------------------------------------------*/
-.resume .resume-title {
-    font-size: 26px;
-    font-weight: 700;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: #fff;
-}
-.resume .resume-item {
-    padding: 0 0 20px 20px;
-    margin-top: -2px;
-    border-left: 2px solid rgba(255, 255, 255, 0.2);
-    position: relative;
-}
-.resume .resume-item h4 {
-    line-height: 18px;
-    font-size: 18px;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-family: "Bungee", sans-serif;
-    color: #1c7d32;
-    margin-bottom: 10px;
-}
-.resume .resume-item h5 {
-    font-size: 16px;
-    background: rgba(255, 255, 255, 0.15);
-    padding: 5px 15px;
-    display: inline-block;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-.resume .resume-item ul {
-    padding-left: 20px;
-}
-.resume .resume-item ul li {
-    padding-bottom: 10px;
-}
-.resume .resume-item:last-child {
-    padding-bottom: 0;
-}
-.resume .resume-item::before {
-    content: "";
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    border-radius: 50px;
-    left: -9px;
-    top: 0;
-    background: #9e7f25;
-    border: 2px solid #9e7f25;
-}
+
+
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
@@ -967,31 +905,7 @@ section {
         transform: rotate(360deg);
     }
 }
-/*--------------------------------------------------------------
-# Credits
---------------------------------------------------------------*/
-.credits {
-    position: fixed;
-    right: 15px;
-    bottom: 15px;
-    font-size: 13px;
-    color: #fff;
-    z-index: 1;
-}
-.credits a {
-    color: #1c7d32;
-    transition: 0.3s;
-}
-.credits a:hover {
-    color: #fff;
-}
-@media (max-width: 992px) {
-    .credits {
-        left: 50%;
-        right: 0;
-        transform: translateX(-50%);
-    }
-}
+
 /* Fix portfolio item background */
 .portfolio .portfolio-wrap {
     background: transparent !important;
@@ -1000,7 +914,7 @@ section {
     content: "";
     background: rgba(246, 248, 249, 0) !important; /* Soft transparency for glass effect */
     backdrop-filter: blur(0px); /* Glassmorphism blur */
-    -webkit-backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
     position: absolute;
     inset: 0; /* Auto width and height */
     transition: all ease-in-out 0.3s;
@@ -1025,9 +939,9 @@ a, button, .portfolio-wrap {
 }
 /* Fix for venobox iframe container */
 .vbox-overlay {
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Glassmorphism blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Cross-browser support */
 }
 .vbox-container {
     background: transparent !important;
@@ -1040,7 +954,7 @@ a, button, .portfolio-wrap {
 }
 .venobox iframe {
     background: transparent !important;
-    -webkit-backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Cross-browser support */;
     backdrop-filter: none !important;
     border: 0 !important;
     padding: 0 !important;
@@ -1095,6 +1009,12 @@ a, button, .portfolio-wrap {
     font-family: 'Material Icons';
     font-size: inherit !important;
     color: inherit !important;
+}
+/* Custom gamepad close button for mobile */
+.vbox-overlay {
+   background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Glassmorphism blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Cross-browser support */
 }
 /* Add this to ensure default buttons are visible */
 .vbox-close,
