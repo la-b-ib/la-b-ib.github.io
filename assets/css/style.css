@@ -734,13 +734,8 @@ section {
     transition: transform 0.2s ease-out, opacity 0.2s ease-out;
     display: block; /* Ensure items are visible by default */
 }
-/* Ensure Isotope filtering works properly */
-.projects-container .portfolio-item.isotope-hidden {
-    pointer-events: none;
-    z-index: 1;
-}
-.projects-container .portfolio-item,
-.projects-container .portfolio-item.isotope-item {
+/* Removed Isotope-specific selectors (not used) */
+.projects-container .portfolio-item {
     z-index: 2;
 }
 /*--------------------------------------------------------------
@@ -759,14 +754,7 @@ section {
     justify-content: space-evenly; /* Ensures even spacing between icons */
     align-items: center;
 }
-.contact .info-box i.bx {
-    font-size: 20px;
-    color: #ffffff;
-    border-radius: 20%;
-    padding: 18px;
-    background: rgb(0, 0, 0);
-    margin: 10px; /* Adjust as needed to fine-tune spacing */
-}
+/* removed unused boxicons-specific contact icon styles */
 .contact .info-box h3 {
     font-size: 20px;
     color: #4284F4;
@@ -795,100 +783,7 @@ section {
 .contact .info-box .social-links a:hover {
     color: #4285f4;
 }
-.contact .php-email-form {
-    padding: 30px;
-    background: rgba(255, 255, 255, 0.08);
-}
-.contact .php-email-form .validate {
-    display: none;
-    color: red;
-    margin: 0 0 15px 0;
-    font-weight: 400;
-    font-size: 13px;
-}
-.contact .php-email-form .error-message {
-    display: none;
-    background: rgba(255, 255, 255, 0.08);
-    background: #ed3c0d;
-    text-align: center;
-    padding: 15px;
-    font-weight: 600;
-}
-.contact .php-email-form .sent-message {
-    display: none;
-    background: rgba(255, 255, 255, 0.08);
-    background: #1c7d32;
-    text-align: center;
-    padding: 15px;
-    font-weight: 600;
-}
-.contact .php-email-form .loading {
-    display: none;
-    background: rgba(255, 255, 255, 0.08);
-    text-align: center;
-    padding: 15px;
-}
-.contact .php-email-form .loading:before {
-    content: "";
-    display: inline-block;
-    border-radius: 50%;
-    width: 24px;
-    height: 24px;
-    margin: 0 10px -6px 0;
-    border: 3px solid #1c7d32;
-    border-top-color: #eee;
-    -webkit-animation: animate-loading 1s linear infinite;
-    animation: animate-loading 1s linear infinite;
-}
-.contact .php-email-form input, .contact .php-email-form textarea {
-    border-radius: 0;
-    box-shadow: none;
-    font-size: 14px;
-    background: rgba(255, 255, 255, 0.08);
-    border: 0;
-    transition: 0.3s;
-    color: #fff;
-}
-.contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
-    background-color: rgba(255, 255, 255, 0.11);
-}
-.contact .php-email-form input::-webkit-input-placeholder, .contact .php-email-form textarea::-webkit-input-placeholder {
-    color: rgba(255, 255, 255, 0.3);
-    opacity: 1;
-}
-.contact .php-email-form input::-moz-placeholder, .contact .php-email-form textarea::-moz-placeholder {
-    color: rgba(255, 255, 255, 0.3);
-    opacity: 1;
-}
-.contact .php-email-form input:-ms-input-placeholder, .contact .php-email-form textarea:-ms-input-placeholder {
-    color: rgba(255, 255, 255, 0.3);
-    opacity: 1;
-}
-.contact .php-email-form input::-ms-input-placeholder, .contact .php-email-form textarea::-ms-input-placeholder {
-    color: rgba(255, 255, 255, 0.3);
-    opacity: 1;
-}
-.contact .php-email-form input::placeholder, .contact .php-email-form textarea::placeholder {
-    color: rgba(255, 255, 255, 0.3);
-    opacity: 1;
-}
-.contact .php-email-form input {
-    padding: 20px 15px;
-}
-.contact .php-email-form textarea {
-    padding: 12px 15px;
-}
-.contact .php-email-form button[type="submit"] {
-    background: #1c7d32;
-    border: 0;
-    padding: 10px 30px;
-    color: #fff;
-    transition: 0.4s;
-    border-radius: 4px;
-}
-.contact .php-email-form button[type="submit"]:hover {
-    background: #15bb62;
-}
+/* removed unused contact form styles */
 @-webkit-keyframes animate-loading {
     0% {
         transform: rotate(0deg);
@@ -937,160 +832,7 @@ body::before {
 a, button, .portfolio-wrap {
     -webkit-tap-highlight-color: transparent;
 }
-/* Fix for venobox iframe container */
-.vbox-overlay {
-    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
-    backdrop-filter: blur(10px); /* Glassmorphism blur effect */
-    -webkit-backdrop-filter: blur(10px); /* Cross-browser support */
-}
-.vbox-container {
-    background: transparent !important;
-    box-shadow: none !important;
-    padding: 0 !important;
-}
-.vbox-content {
-    background: transparent !important;
-    border: none !important;
-}
-.venobox iframe {
-    background: transparent !important;
-    -webkit-backdrop-filter: blur(10px); /* Cross-browser support */;
-    backdrop-filter: none !important;
-    border: 0 !important;
-    padding: 0 !important;
-    margin: 0 !important;
-}
-.portfolio .portfolio-wrap::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: transparent !important;
-    border: 15px solid #f6f8f9;
-    border-radius: 0;
-    transition: all ease-in-out 0.3s;
-    z-index: 2;
-    opacity: 1;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-}
-.portfolio .portfolio-info {
-    background: #ffffff !important;
-}
-/* Prevent white flashes during transitions */
-.vbox-overlay, .vbox-container {
-    transition: none !important;
-    animation: none !important;
-}
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
-}
-/* Fix Google Material Close Button */
-.vbox-close {
-    display: block !important;
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    background: transparent !important;
-    border: none !important;
-    font-size: 32px !important;
-    color: #fff !important;
-    cursor: pointer;
-    z-index: 10000;
-    padding: 5px;
-    transition: all 0.3s;
-}
-.vbox-close:hover {
-    color: #d61212 !important;
-    transform: scale(1.1);
-}
-.vbox-close i {
-    font-family: 'Material Icons';
-    font-size: inherit !important;
-    color: inherit !important;
-}
-/* Custom gamepad close button for mobile */
-.vbox-overlay {
-   background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
-    backdrop-filter: blur(10px); /* Glassmorphism blur effect */
-    -webkit-backdrop-filter: blur(10px); /* Cross-browser support */
-}
-/* Add this to ensure default buttons are visible */
-.vbox-close,
-.vbox-prev,
-.vbox-next {
-  display: block !important;
-}
-/* Custom styling for Venobox close, previous, and next buttons */
-/* Custom styling for Venobox close, previous, and next buttons */
-/* Custom Venobox Button Styling */
-.vbox-close, 
-.vbox-next, 
-.vbox-prev {
-  background: rgba(255, 255, 255, 0.2) !important;
-  backdrop-filter: blur(10px) !important;
-  -webkit-backdrop-filter: blur(10px) !important;
-  border-radius: 50% !important;
-  width: 40px !important;
-  height: 40px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  border: none !important;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
-  transition: all 0.3s ease !important;
-}
-/* Button icons */
-.vbox-close:before, 
-.vbox-next:before, 
-.vbox-prev:before {
-  color: #4284F4 !important;
-  font-weight: 900 !important;
-  font-size: 8px !important;
-  text-shadow: none !important;
-}
-/* Position adjustments */
-.vbox-close {
-  top: 20px !important;
-  right: 20px !important;
-}
-.vbox-next, 
-.vbox-prev {
-  top: 50% !important;
-  transform: translateY(-50%) !important;
-}
-.vbox-prev {
-  left: 20px !important;
-}
-.vbox-next {
-  right: 20px !important;
-}
-/* Mobile responsive adjustments */
-@media (max-width: 768px) {
-  .vbox-close, 
-  .vbox-next, 
-  .vbox-prev {
-    width: 35px !important;
-    height: 35px !important;
-  }
-  .vbox-close:before, 
-  .vbox-next:before, 
-  .vbox-prev:before {
-    font-size: 18px !important;
-  }
-}
-@keyframes pulse {
-    0% { 
-        transform: scale(1); 
-    }
-    50% { 
-        transform: scale(1.1); 
-    }
-    100% { 
-        transform: scale(1); 
-    }
-}
+/* Removed Venobox-specific styles (not used) */
 /* Global scrollbar styling - hidden but functional */
 html {
   overflow-y: scroll; /* Force scrollbar to prevent shifting */
