@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
 
 
@@ -84,7 +83,10 @@ $(document).ready(function() {
       '#contact': {main: 'contact_mail', fallback: '✉️'}
     };
   
-    var iconData = Object.entries(iconMap).find(([key]) => href.includes(key))?.[1] || {};
+    var iconData = Object.entries(iconMap).find(function(entry) {
+      return href.includes(entry[0]);
+    });
+    iconData = iconData ? iconData[1] : {};
     
     if (iconData.main) {
       var $icon = $('<i>').addClass('material-icons mobile-menu-icon')
@@ -108,19 +110,19 @@ $(document).ready(function() {
   });
       $mobile_nav.find('ul').append('<li><a href="#" class="mobile-nav-close"><i class="material-icons mobile-menu-icon">cancel</i> Close</a></li>');
       $('body').append($mobile_nav);
-      $('body').prepend('<button type="button" class="mobile-nav-toggle d-lg-none"><i class="material-icons" style="font-size: 30px; color: black;">drag_indicator</i></button>');
-      $('body').append('<div class="mobile-nav-overly"></div>');
+      $('body').prepend('<button type="button" class="mobile-nav-toggle d-lg-none"><i class="material-icons" style="font-size: 30px; color: black;">menu</i></button>');
+      $('body').append('<div class="mobile-nav-overlay"></div>');
   
       $(document).on('click', '.mobile-nav-toggle', function(e) {
         $('body').toggleClass('mobile-nav-active');
-        $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
-        $('.mobile-nav-overly').toggle();
+        $('.mobile-nav-toggle i').toggleClass('menu close');
+        $('.mobile-nav-overlay').toggle();
       });
   
       $(document).on('click', '.mobile-nav-close', function(e) {
         $('body').removeClass('mobile-nav-active');
-        $('.mobile-nav-toggle i').removeClass('icofont-close').addClass('icofont-navigation-menu');
-        $('.mobile-nav-overly').fadeOut();
+        $('.mobile-nav-toggle i').removeClass('close').addClass('menu');
+        $('.mobile-nav-overlay').fadeOut();
       });
   
       $(document).click(function(e) {
@@ -128,8 +130,8 @@ $(document).ready(function() {
         if (!container.is(e.target) && container.has(e.target).length === 0) {
           if ($('body').hasClass('mobile-nav-active')) {
             $('body').removeClass('mobile-nav-active');
-            $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
-            $('.mobile-nav-overly').fadeOut();
+            $('.mobile-nav-toggle i').toggleClass('menu close');
+            $('.mobile-nav-overlay').fadeOut();
           }
         }
       });
@@ -140,11 +142,10 @@ $(document).ready(function() {
 
   
     // Modified Venobox initialization with custom mobile close button
-    $(document).ready(function() {
     $('.venobox').venobox({
         bgcolor: 'transparent', /* No background to avoid duplication */
         border: 'none', /* Remove border */
-        framewidth: '100%', 
+        framewidth: '100%',
         frameheight: '90vh',
         numeratio: true,
         infinigall: true,
@@ -160,15 +161,15 @@ $(document).ready(function() {
             'box-shadow': 'none', /* No shadow */
             'border-radius': '0' /* No rounded corners */
         },
-        
-        
+
+
         onClose: function() {
             $('.custom-close-btn').remove();
         }
     });
 
-    // Prevent image downloads by disabling right-click, drag, and touch interactions on all devices
-    $('img').on('contextmenu dragstart touchstart', function(e) {
+    // Prevent image downloads by disabling right-click and drag, but DO NOT block taps/clicks
+    $('img').on('contextmenu dragstart', function(e) {
         e.preventDefault();
     });
     $('a').on('dragstart', function(e) {
@@ -177,6 +178,24 @@ $(document).ready(function() {
     $('img').attr('draggable', false);
     $('a').attr('draggable', false);
 
+    // Make entire project tile tappable on mobile: click/tap anywhere on the image/overlay
+    // Navigates to the first link inside .portfolio-links
+    $(document).on('click touchend', '.portfolio .portfolio-wrap', function(e) {
+        // If user actually tapped/clicked a real link/button inside, let it work naturally
+        if ($(e.target).closest('a, button').length) return;
+
+        var $link = $(this).find('.portfolio-links a[href]')
+                            .filter(function(){ return this.href && this.href !== '#'; })
+                            .first();
+        if ($link.length) {
+            var url = $link.attr('href');
+            var target = $link.attr('target');
+            if (target === '_blank') {
+                window.open(url, '_blank');
+            } else {
+                window.location.href = url;
+            }
+        }
     });
   
   })(jQuery);
@@ -185,9 +204,13 @@ $(document).ready(function() {
 
 // Toggle description function for project cards
 function toggleDescription(element) {
+    if (!element || !element.previousElementSibling) {
+        return;
+    }
+
     const description = element.previousElementSibling;
     const isExpanded = description.classList.contains('expanded');
-    
+
     if (isExpanded) {
         description.classList.remove('expanded');
         element.textContent = 'see more';
