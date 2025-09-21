@@ -182,3 +182,17 @@ $(document).ready(function() {
   })(jQuery);
 
 });
+
+// Toggle description function for project cards
+function toggleDescription(element) {
+    const description = element.previousElementSibling;
+    const isExpanded = description.classList.contains('expanded');
+    
+    if (isExpanded) {
+        description.classList.remove('expanded');
+        element.textContent = 'see more';
+    } else {
+        description.classList.add('expanded');
+        element.textContent = 'see less';
+    }
+}
