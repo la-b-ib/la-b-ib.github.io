@@ -158,60 +158,6 @@ graph LR
 <hr>
 
 
-##  Architecture Overview
-
-### Core Components
-
-1. **Header Section** (`#header`)
-   - Personal branding and navigation
-   - Social media links
-   - Responsive design with mobile hamburger menu
-
-2. **About Section** (`#about`)
-   - Personal introduction and bio
-   - Professional highlights
-   - Interactive elements
-
-3. **Education Section** (`#education`)
-   - Academic background
-   - Course details with tooltips
-   - Interactive course listings
-
-4. **Certification Section** (`#certification`)
-   - Professional certifications
-   - LinkedIn Learning certificates
-   - Clickable chain.png icons for verification links
-
-5. **Research Section** (`#research`)
-   - Published papers and research work
-   - Academic contributions
-   - Research badges and achievements
-
-6. **Experience Section** (`#experience`)
-   - Work history and roles
-   - Professional achievements
-   - Timeline-based layout
-
-7. **Projects Section** (`#portfolio`)
-   - Showcase of development projects
-   - GitHub repository links
-   - Interactive project cards with hover effects
-
-8. **Skills Section** (`#skills`)
-   - Technical skills and competencies
-   - Programming languages
-   - Tools and frameworks
-   - Visual skill representations
-
-9. **Contact Section** (`#contact`)
-   - Contact information
-   - Social media integration
-   - Contact form (if implemented)
-
-
-<hr>
-
-
 ## Navigation System
 
 ```mermaid
@@ -250,7 +196,7 @@ flowchart LR
 
 <hr>
 
-## 📋 Section Details
+## Section Details
 
 ### Projects Portfolio
 - **MoodScope**: Sentiment analysis application (Jan 24 - Apr 24)
@@ -259,26 +205,30 @@ flowchart LR
 - **VitaSort**: Career matching platform (Jun 23 - Sep 23)
 - **LitGrid**: Cloud library management (Mar 23 - Jun 23)
 - **DuskProbe**: Vulnerability detection tool (Nov 23 - Apr 24)
+<hr>
 
 ### Certification Portfolio
 - Professional certifications from LinkedIn Learning
 - Microsoft, Google, IBM certifications
 - Cybersecurity and development certificates
 - Project management credentials
+<hr>
 
-## 🛠️ Technical Implementation
+## Technical Implementation
 
 ### CSS Architecture
 - **Mobile-First Design**: Responsive breakpoints starting from mobile
 - **CSS Grid & Flexbox**: Modern layout techniques
 - **Custom Properties**: CSS variables for consistency
 - **Performance Optimization**: Hardware acceleration and efficient selectors
+<hr>
 
 ### JavaScript Functionality
 - **jQuery-based**: DOM manipulation and event handling
 - **Mobile Touch Support**: Touch events and gesture handling
 - **Smooth Navigation**: Section-based single-page navigation
 - **Interactive Elements**: Hover effects and click handlers
+<hr>
 
 ## Setup Instructions
 
@@ -375,13 +325,13 @@ Make sure to update the `publish_dir` to the folder you want to serve (typically
 
 ---
 
-## Future Enhancements (Suggestions)
+## Future Enhancements
 
 - Add dark mode toggle using CSS variables and localStorage.
 - Integrate a blog section using markdown + static site generator (e.g., Eleventy).
 - Add animation triggers using IntersectionObserver for better performance.
 - Convert to PWA for offline access and mobile-friendly installability.
-
+<hr>
 
 
 ## Contributing Guidelines
@@ -418,6 +368,8 @@ We welcome contributions of all kinds! To maintain a high-quality codebase, plea
 6. **Open a Pull Request**
    - Go to your fork on GitHub and click "Compare & pull request".
    - Describe your changes thoroughly.
+
+<hr>
 
 ### Contribution Checklist
 
@@ -468,41 +420,47 @@ We welcome contributions of all kinds! To maintain a high-quality codebase, plea
   gtag('config', 'UA-XXXXXXXXX-X');
 </script>
 ```
+<hr>
 
-## 🎯 Key Features Implementation
+## Key Features Implementation
 
 ### Chain.png Link Functionality
 - **Desktop & Mobile Support**: Proper click/touch handling
 - **Z-index Management**: Ensures links are accessible
 - **Touch Targets**: 44px minimum for accessibility
 - **Visual Feedback**: Tap highlighting on mobile
+<hr>
 
 ### Glassmorphism Effects
 - **Backdrop Filters**: Modern blur effects
 - **Transparency**: RGBA colors with opacity
 - **Browser Fallbacks**: Support for older browsers
+<hr>
 
 ### Performance Optimizations
 - **Hardware Acceleration**: \`transform: translateZ(0)\`
 - **Will-Change**: Optimized for animations
 - **Preloading**: Critical resources preloaded
 - **CDN Delivery**: Fast asset loading
+<hr>
 
-## 📊 Performance Metrics
+##  Performance Metrics
 
 - **First Contentful Paint**: < 2.5s
 - **Largest Contentful Paint**: < 4.0s
 - **Cumulative Layout Shift**: < 0.1
 - **Mobile Performance Score**: 90+
 - **Desktop Performance Score**: 95+
+<hr>
 
-## 🔒 Security Features
+## Security Features
 
 - **Content Security Policy**: XSS protection
 - **Referrer Policy**: Privacy protection
 - **Transport Security**: HTTPS enforcement
 - **Permissions Policy**: Limited API access
 
+<hr>
 
 ## Project Documentation
 
@@ -514,6 +472,8 @@ We welcome contributions of all kinds! To maintain a high-quality codebase, plea
 [![Code of Conduct](https://img.shields.io/badge/Code_of_Conduct-Community_Standards-FF0000?style=for-the-badge&logo=opensourceinitiative)](CODE_OF_CONDUCT.md)
 
 </div>
+
+<hr>
 
 ## Contact Information
 
