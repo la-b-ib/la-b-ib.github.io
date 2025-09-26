@@ -1,33 +1,3 @@
-# 🍭 Lolypop - Personal Portfolio Website
-
-A modern, responsive, and developer-centric personal portfolio website built using HTML5, CSS3, JavaScript, and a variety of frontend libraries. The site showcases personal information, education, work experience, skills, projects, and certifications, all optimized for performance, interactivity, and accessibility.
-
-## 🌟 Features
-
-- **Responsive Design**: Fully responsive layout that works on desktop, tablet, and mobile devices
-- **Modern UI/UX**: Clean, professional design with glassmorphism effects
-- **Interactive Portfolio**: Project and certification galleries with hover effects
-- **Single Page Application**: Smooth section navigation with JavaScript
-- **Mobile Optimized**: Touch-friendly interface with proper tap targets
-- **Performance Optimized**: Hardware acceleration, optimized assets, and smooth animations
-- **Accessibility**: Proper ARIA labels, alt text, and keyboard navigation
-- **Cross-Browser Compatible**: Works on all modern browsers including Safari, Chrome, Firefox, Edge
-
-## 🎨 Design Highlights
-
-- **Glassmorphism UI**: Modern frosted glass effects with backdrop filters
-- **Custom Typography**: Bungee font family for unique branding
-- **Material Icons**: Google Material Icons for consistent iconography  
-- **Color Scheme**: Professional blue (#4285F4) and black theme
-- **Smooth Animations**: CSS transitions and transforms for enhanced UX
-
-## 📱 Mobile Features
-
-- **Touch Optimized**: 44px minimum touch targets following accessibility guidelines
-- **Mobile Navigation**: Collapsible hamburger menu with Material Icons
-- **Swipe Gestures**: Touch-friendly interactions
-- **Mobile-First CSS**: Responsive breakpoints and mobile-specific optimizations
-- **iOS/Safari Compatibility**: Webkit prefixes and iOS-specific fixes
 
 ## 🚀 Tech Stack
 
@@ -52,7 +22,7 @@ A modern, responsive, and developer-centric personal portfolio website built usi
 
 ## 📂 File Structure
 
-\`\`\`mermaid
+```mermaid
 graph TD
     A[🏠 Root Directory] --> B[📄 index.html]
     A --> C[📁 assets/]
@@ -129,7 +99,7 @@ graph TD
     style R fill:#e8f5e8
     style MM fill:#ffebee
     style K fill:#fff9c4
-\`\`\`
+```
 
 ## 🏗️ Architecture Overview
 
