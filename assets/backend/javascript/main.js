@@ -178,9 +178,9 @@ $(document).ready(function() {
     $('img').attr('draggable', false);
     $('a').attr('draggable', false);
 
-    // Make entire project tile tappable on mobile: click/tap anywhere on the image/overlay
+    // Make entire portfolio tile tappable on mobile for both project and certification sections
     // Navigates to the first link inside .portfolio-links
-    $(document).on('click touchend', '.portfolio .portfolio-wrap', function(e) {
+    $(document).on('click', '.portfolio .portfolio-wrap, .services .portfolio .portfolio-wrap', function(e) {
         // If user actually tapped/clicked a real link/button inside, let it work naturally
         if ($(e.target).closest('a, button').length) return;
 
@@ -190,6 +190,20 @@ $(document).ready(function() {
         if ($link.length) {
             var url = $link.attr('href');
             var target = $link.attr('target');
+            if (target === '_blank') {
+                window.open(url, '_blank');
+            } else {
+                window.location.href = url;
+            }
+        }
+    });
+
+    // Additional mobile-specific handler for direct chain.png clicks
+    $(document).on('click touchstart', '.portfolio-links a, .portfolio-links a img', function(e) {
+        e.stopPropagation();
+        var url = $(this).closest('a').attr('href');
+        var target = $(this).closest('a').attr('target');
+        if (url && url !== '#') {
             if (target === '_blank') {
                 window.open(url, '_blank');
             } else {
