@@ -1,9 +1,10 @@
-#  Portfolio Website
+#  Portfolio Website <a href=""><img align="left" width="150" height="150" src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/%20preview/gif/website.gif"></a>
 
 A modern, responsive, and developer-centric personal portfolio website built using HTML5, CSS3, JavaScript, and a variety of frontend libraries. The site showcases personal information, education, work experience, skills, projects, and certifications, all optimized for performance, interactivity, and accessibility.
 <hr>
 
-##  Features
+##  Features <a href=""><img align="right" width="150" height="150" src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/%20preview/gif/web-developer.gif"></a>
+
 
 - **Responsive Design**: Fully responsive layout that works on desktop, tablet, and mobile devices
 - **Modern UI/UX**: Clean, professional design with glassmorphism effects
