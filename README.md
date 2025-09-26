@@ -1,21 +1,34 @@
+# Personal Portfolio Website
 
-# AURIX
+A modern, responsive, and developer-centric personal portfolio website built using HTML5, CSS3, JavaScript, and a variety of frontend libraries. The site showcases personal information, education, work experience, skills, projects, and certifications, all optimized for performance, interactivity, and accessibility.
 
-A modern, responsive, and developer-centric personal portfolio website built using HTML5, CSS3, JavaScript, and a variety of frontend libraries. The site showcases personal information, education, work experience, skills, and projects, all optimized for performance, interactivity, and accessibility.
-- Live Demo: [https://la-b-ib.github.io](https://la-b-ib.github.io)  
+## 🌟 Features
 
----
+- **Responsive Design**: Fully responsive layout that works on desktop, tablet, and mobile devices
+- **Modern UI/UX**: Clean, professional design with glassmorphism effects
+- **Interactive Portfolio**: Project and certification galleries with hover effects
+- **Single Page Application**: Smooth section navigation with JavaScript
+- **Mobile Optimized**: Touch-friendly interface with proper tap targets
+- **Performance Optimized**: Hardware acceleration, optimized assets, and smooth animations
+- **Accessibility**: Proper ARIA labels, alt text, and keyboard navigation
+- **Cross-Browser Compatible**: Works on all modern browsers including Safari, Chrome, Firefox, Edge
 
-## Features
+## 🎨 Design Highlights
 
-- Responsive design using Bootstrap
-- Animated typing effect with Typed.js
-- Image galleries with Venobox
-- Scroll-triggered counters and animations
-- Project filtering with Isotope
-- Integrated contact form (PHP-based)
-- Organized file structure for scalability
-- GitHub Actions for automated deployment
+- **Glassmorphism UI**: Modern frosted glass effects with backdrop filters
+- **Custom Typography**: Bungee font family for unique branding
+- **Material Icons**: Google Material Icons for consistent iconography  
+- **Color Scheme**: Professional blue (#4285F4) and black theme
+- **Smooth Animations**: CSS transitions and transforms for enhanced UX
+
+## 📱 Mobile Features
+
+- **Touch Optimized**: 44px minimum touch targets following accessibility guidelines
+- **Mobile Navigation**: Collapsible hamburger menu with Material Icons
+- **Swipe Gestures**: Touch-friendly interactions
+- **Mobile-First CSS**: Responsive breakpoints and mobile-specific optimizations
+- **iOS/Safari Compatibility**: Webkit prefixes and iOS-specific fixes
+
 
 ---
 
