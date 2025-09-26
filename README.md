@@ -19,6 +19,20 @@ A modern, responsive, and developer-centric personal portfolio website built usi
 
 ---
 
+## Extention Preview
+
+<p align="left">
+  <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/%20preview/img/all%20device%20view/all-devices-white.png" width="100%" />
+<p align="left">
+
+<p align="left">
+  <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/%20preview/img/all%20device%20view/all-devices-white%20(1).png" width="100%" />
+<p align="left">
+  
+  <img src="https://raw.githubusercontent.com/la-b-ib/MoodScope/main/preview/img/desktop%20(2).png" width="49%" />
+  <img src="https://raw.githubusercontent.com/la-b-ib/MoodScope/main/preview/img/desktop%20(3).png" width="49%" />    
+</p>
+
 ## Technologies & Libraries
 
 - HTML5, CSS3, JavaScript
