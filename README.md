@@ -1,8 +1,9 @@
-# Personal Portfolio Website
+#  Portfolio Website
 
 A modern, responsive, and developer-centric personal portfolio website built using HTML5, CSS3, JavaScript, and a variety of frontend libraries. The site showcases personal information, education, work experience, skills, projects, and certifications, all optimized for performance, interactivity, and accessibility.
+<hr>
 
-## 🌟 Features
+##  Features
 
 - **Responsive Design**: Fully responsive layout that works on desktop, tablet, and mobile devices
 - **Modern UI/UX**: Clean, professional design with glassmorphism effects
@@ -13,15 +14,18 @@ A modern, responsive, and developer-centric personal portfolio website built usi
 - **Accessibility**: Proper ARIA labels, alt text, and keyboard navigation
 - **Cross-Browser Compatible**: Works on all modern browsers including Safari, Chrome, Firefox, Edge
 
-## 🎨 Design Highlights
+<hr>
+
+## Design Highlights
 
 - **Glassmorphism UI**: Modern frosted glass effects with backdrop filters
 - **Custom Typography**: Bungee font family for unique branding
 - **Material Icons**: Google Material Icons for consistent iconography  
-- **Color Scheme**: Professional blue (#4285F4) and black theme
 - **Smooth Animations**: CSS transitions and transforms for enhanced UX
 
-## 📱 Mobile Features
+<hr>
+
+## Mobile Features
 
 - **Touch Optimized**: 44px minimum touch targets following accessibility guidelines
 - **Mobile Navigation**: Collapsible hamburger menu with Material Icons
@@ -29,11 +33,9 @@ A modern, responsive, and developer-centric personal portfolio website built usi
 - **Mobile-First CSS**: Responsive breakpoints and mobile-specific optimizations
 - **iOS/Safari Compatibility**: Webkit prefixes and iOS-specific fixes
 
-
 ---
 
-## Website Preview (All Device)
-
+## Website Preview 
 <p align="left">
   <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/%20preview/img/all%20device%20view/all-devices-white.png" width="100%" />
 <p align="left">
@@ -46,13 +48,15 @@ A modern, responsive, and developer-centric personal portfolio website built usi
 <hr>
 
 
-## 🚀 Tech Stack
+## Tech Stack
 
 ### Frontend
 - **HTML5**: Semantic markup with proper structure
 - **CSS3**: Modern CSS with Flexbox, Grid, and advanced features
 - **JavaScript (jQuery)**: Interactive functionality and smooth animations
 - **Material Icons**: Google's Material Design icon system
+
+<hr>
 
 ### Libraries & CDN
 - **Bootstrap 5.3.7**: Responsive grid system and components
@@ -61,13 +65,17 @@ A modern, responsive, and developer-centric personal portfolio website built usi
 - **Boxicons 2.1.0**: Icon library for UI elements
 - **VenoBox 2.1.8**: Lightbox for image galleries
 
+<hr>
+
 ### Performance
 - **CDN Delivery**: Fast loading via CloudFlare CDN
 - **Lazy Loading**: Optimized image loading
 - **Hardware Acceleration**: GPU-accelerated animations
 - **Prefetch**: Critical resource preloading
 
-## 📂 File Structure
+<hr>
+
+##  File Structure
 
 ```mermaid
 graph LR
@@ -80,7 +88,7 @@ graph LR
     A --> H[📄 CONTRIBUTING.md]
     A --> I[📄 CODE_OF_CONDUCT.md]
     A --> J[📁 preview/]
-    A --> K[📄 lolypop.md]
+    
 
     C --> L[📁 backend/]
     C --> M[📁 GIF/]
@@ -147,10 +155,10 @@ graph LR
     style MM fill:#ffebee
     style K fill:#fff9c4
 ```
+<hr>
 
 
-
-## 🏗️ Architecture Overview
+##  Architecture Overview
 
 ### Core Components
 
@@ -201,7 +209,10 @@ graph LR
    - Contact form (if implemented)
 
 
-### Navigation System
+<hr>
+
+
+## Navigation System
 
 ```mermaid
 flowchart LR
@@ -236,6 +247,8 @@ flowchart LR
     style C fill:#e8f5e8
     style Q fill:#fff3e0
 ```
+
+<hr>
 
 ## 📋 Section Details
 
