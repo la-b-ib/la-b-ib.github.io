@@ -725,6 +725,31 @@ section {
     background: transparent;
     margin-bottom: 10px;
 }
+
+/* Ensure certification links work like project links */
+.services .portfolio .portfolio-wrap .portfolio-links {
+    text-align: center;
+    z-index: 4;
+}
+.services .portfolio .portfolio-wrap .portfolio-links a {
+    color: #fff;
+    margin: 0 2px;
+    font-size: 28px;
+    display: inline-block;
+    transition: 0.3s;
+    z-index: 10;
+    position: relative;
+    pointer-events: auto;
+}
+.services .portfolio .portfolio-wrap .portfolio-links a img {
+    pointer-events: auto;
+    cursor: pointer;
+    z-index: 10;
+    position: relative;
+}
+.services .portfolio .portfolio-wrap .portfolio-links a:hover {
+    color: #4285f4;
+}
 /*--------------------------------------------------------------
 # Projects Container Optimization
 --------------------------------------------------------------*/
@@ -934,9 +959,35 @@ body::before {
     height: 100% !important;
     z-index: -1 !important;
 }
-/* Disable tap highlights */
-a, button, .portfolio-wrap {
+/* Mobile-specific fixes for tap functionality */
+@media (max-width: 768px) {
+  /* Enable tap highlighting for links only */
+  a, button {
+    -webkit-tap-highlight-color: rgba(66, 133, 244, 0.3);
+  }
+  
+  /* Remove tap highlight for containers to prevent conflicts */
+  .portfolio-wrap, .cert-item {
     -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Ensure chain.png links are tappable */
+  .portfolio-links a, .portfolio-links a img {
+    -webkit-tap-highlight-color: rgba(66, 133, 244, 0.5) !important;
+    touch-action: manipulation !important;
+    cursor: pointer !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
+  /* Make chain icons larger on mobile for easier tapping */
+  .portfolio-links a img {
+    width: 40px !important;
+    height: 40px !important;
+  }
 }
 /* Fix for venobox iframe container */
 .vbox-overlay {
