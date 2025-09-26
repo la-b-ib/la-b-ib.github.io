@@ -26,10 +26,9 @@ A modern, responsive, and developer-centric personal portfolio website built usi
 <p align="left">
 
 <p align="left">
-  <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/%20preview/img/all%20device%20view/all-devices-white%20(1).png" width="100%" />
-<p align="left">
-<p align="left">
-  <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/%20preview/img/all%20device%20view/3-devices-white.png" width="100%" />
+  <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/%20preview/img/all%20device%20view/all-devices-white%20(1).png" width="49%" />
+   <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/%20preview/img/all%20device%20view/3-devices-white.png" width="49%" />
+
 <p align="left">
 
 <hr>
