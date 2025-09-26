@@ -680,6 +680,15 @@ section {
     font-size: 28px;
     display: inline-block;
     transition: 0.3s;
+    z-index: 10;
+    position: relative;
+    pointer-events: auto;
+}
+.portfolio .portfolio-wrap .portfolio-links a img {
+    pointer-events: auto;
+    cursor: pointer;
+    z-index: 10;
+    position: relative;
 }
 .portfolio .portfolio-wrap .portfolio-links a:hover {
     color: #4285f4;
