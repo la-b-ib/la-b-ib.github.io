@@ -26,29 +26,13 @@ A modern, responsive, and developer-centric personal portfolio website built usi
 <p align="left">
 
 <p align="left">
-  <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/%20preview/img/all%20device%20view/all-devices-white%20(1).png" width="49%" />
-   <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/%20preview/img/all%20device%20view/3-devices-white.png" width="49%" />
-
+  <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/%20preview/img/all%20device%20view/all-devices-white%20(1).png" width="100%" />
+   
 <p align="left">
 
 <hr>
 
-## Mobileview Preview
-<p align="left">
-  <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/%20preview/img/mobileview/mobile-white.png" width="24%" />
-   <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/%20preview/img/mobileview/mobile-white%20(1).png" width="24%" />
-    <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/%20preview/img/mobileview/mobile-white%20(2).png" width="24%" />
-     <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/%20preview/img/mobileview/mobile-white%20(3).png" width="24%" />
-</p>
 
-<hr>
-<p align="left">
-  <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/%20preview/img/mobileview/mobile-white%20(4).png" width="24%" />
-   <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/%20preview/img/mobileview/mobile-white%20(5).png" width="24%" />
-    <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/%20preview/img/mobileview/mobile-white%20(6).png" width="24%" />
-     <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/%20preview/img/mobileview/mobile-white%20(7).png" width="24%" />
-</p>
-<hr>
 
 ## Technologies & Libraries
 
