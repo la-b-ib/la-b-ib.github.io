@@ -281,16 +281,28 @@ a {
         <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/profile/about%20profile.JPEG" class="img-fluid" alt="">
       </div>
       <div class="col-lg-8 pt-4 pt-lg-0 content">
-        <p style="text-align: justify;">
-          <b>
-            Passionate <span style="color:#ea4335;">developer</span> with a strong interest in 
-            <span style="color:#ea4335;">web &amp; software</span> development. I thrive on applying 
-            <span style="color:#ea4335;">core concepts</span> to real-world projects, building intelligent solutions that tackle 
-            <span style="color:#ea4335;">industry</span> challenges. With hands-on experience across diverse tech stacks, I enjoy turning 
-            <span style="color:#ea4335;">complex</span> problems into elegant code. I'm constantly exploring new 
-            <span style="color:#ea4335;">tools</span>, <span style="color:#ea4335;">frameworks</span>, and <span style="color:#ea4335;">ideas</span> to stay ahead in a fast-evolving field.
-          </b>
-        </p>
+        <p id="intro-para" style="text-align:justify; font-size:16px; line-height:1.4em; max-height:4.2em; overflow:hidden; position:relative;">
+  <b>
+    Passionate <span style="color:#ea4335;">developer</span> with a strong interest in 
+    <span style="color:#ea4335;">web &amp; software</span> development. I thrive on applying 
+    <span style="color:#ea4335;">core concepts</span> to real-world projects, building intelligent solutions that tackle 
+    <span style="color:#ea4335;">industry</span> challenges. With hands-on experience across diverse tech stacks, I enjoy turning 
+    <span style="color:#ea4335;">complex</span> problems into elegant code. I'm constantly exploring new 
+    <span style="color:#ea4335;">tools</span>, <span style="color:#ea4335;">frameworks</span>, and <span style="color:#ea4335;">ideas</span> to stay ahead in a fast-evolving field.
+  </b>
+  <a href="javascript:void(0);" id="intro-toggle" onclick="
+    var box = document.getElementById('intro-para');
+    var link = document.getElementById('intro-toggle');
+    if (box.style.maxHeight === 'none') {
+      box.style.maxHeight = '4.2em';
+      link.innerText = 'See more';
+    } else {
+      box.style.maxHeight = 'none';
+      link.innerText = 'See less';
+    }
+  " style="color:#4285F4; font-weight:bold; text-decoration:none; position:absolute; bottom:0; right:0; background:white; padding-left:5px;">See more</a>
+</p>
+
         <div class="row">
           <div class="col-lg-6">
             <ul style="list-style-type: none; padding-left: 0;">
@@ -2334,6 +2346,28 @@ Led a key webinar <span style="color: #4284F4;">"Future Trends in Electric Mobil
                 <span style="color:black; font-size:16px;">LMS</span>
               </b>
             </h4>
+            <h4 id="litgrid-desc" style="color:black; font-size:16px; text-align:justify; line-height:1.4em; max-height:2.8em; overflow:hidden; position:relative;">
+  <span style="color:#ea4335;">Description :</span>
+  LitGrid is a Library Management System built with Python, utilizing Streamlit for an intuitive web-based interface and MySQL for efficient data storage. Designed to streamline library operations, it enables seamless management of books, members, publishers, and staff. Key features include adding and searching books by ISBN, author, or title, lending and returning books, and generating detailed reports. With its user-friendly design and scalable architecture, LitGrid stands out as a modern solution for libraries, surpassing traditional systems like Koha with its lightweight deployment and responsive interface.
+  <a href="javascript:void(0);" id="litgrid-toggle" onclick="
+    var box = document.getElementById('litgrid-desc');
+    var link = document.getElementById('litgrid-toggle');
+    if (box.style.maxHeight === 'none') {
+      box.style.maxHeight = '2.8em';
+      link.innerText = 'See more';
+    } else {
+      box.style.maxHeight = 'none';
+      link.innerText = 'See less';
+    }
+  " style="color:#4285F4; font-weight:bold; text-decoration:none; position:absolute; bottom:0; right:0; background:white; padding-left:5px;">See more</a>
+</h4>
+
+            <h4 style="color:black; font-size:16px; text-align:justify; display: flex; align-items: center;">
+              <span style="color:#ea4335; white-space: nowrap; margin-right: 10px;">Tech Stack :</span>
+                <marquee behavior="scroll" direction="left" scrollamount="4" style="flex: 1; color:black;">
+                  Python, Streamlit, MySQL, SQLAlchemy, Pandas, Matplotlib
+                </marquee>
+            </h4>   
           </left>
                   <div class="portfolio-wrap">
                     <img src="assets/img/project/LitGrid.jpg" class="img-fluid" alt="">
