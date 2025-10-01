@@ -1204,3 +1204,94 @@ body.loaded {
   visibility: visible;
   opacity: 1;
 }
+
+/* Style Research Profiles heading to match Birthday/Email format - All screen sizes */
+.about .about-me .content h5 {
+    display: none; /* Hide in mobile by default */
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #4285F4 !important;
+}
+
+.about .about-me .content h5 .material-icons {
+    font-size: 1.5em !important;
+    color: black !important;
+    margin-right: 0 !important;
+}
+
+/* Match about section image width to interest section box width in desktop view */
+@media (min-width: 992px) {
+    /* Show Research Profiles heading in desktop view */
+    .about .about-me .content h5 {
+        display: flex !important;
+    }
+    
+    /* Set about image column to 25% width (like col-lg-3) */
+    .about .about-me .col-lg-4 {
+        flex: 0 0 25% !important;
+        max-width: 25% !important;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    /* Set image to fill column width to match .icon-box with border */
+    .about .about-me .col-lg-4 img {
+        width: calc(100% - 15px);
+        max-width: calc(100% - 15px);
+        height: auto;
+        display: block;
+        margin: 0;
+    }
+    /* Tight gutter for about section */
+    section#about .about-me .row {
+        --bs-gutter-x: 10px !important;
+    }
+    /* Remove top padding from text column */
+    section#about .about-me .col-lg-8.pt-4.pt-lg-0 {
+        padding-top: 0 !important;
+    }
+    
+    /* Make text column fill remaining space */
+    .about .about-me .col-lg-8 {
+        flex: 1 !important;
+        max-width: none !important;
+    }
+}
+
+/* Universal badge styling for ALL sections (research, contact, skills) - Both mobile and desktop */
+body .research-badges .badge,
+body .badge-container .badge,
+body .skill-badges .badge {
+    height: 22px !important;
+    width: auto !important;
+    min-width: auto !important;
+    max-width: none !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 8px 12px !important;
+    box-sizing: border-box !important;
+    flex: 0 0 auto !important;
+}
+
+body .research-badges .badge-logo,
+body .badge-container .badge-logo,
+body .skill-badges .badge-logo {
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 18px !important;
+    min-height: 18px !important;
+    margin-right: 8px !important;
+    flex-shrink: 0 !important;
+}
+
+body .research-badges .badge-text,
+body .badge-container .badge-text,
+body .skill-badges .badge-text {
+    font-size: 14px !important;
+    font-weight: bold !important;
+    white-space: nowrap !important;
+    line-height: 1 !important;
+}
