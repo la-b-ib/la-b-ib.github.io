@@ -1295,3 +1295,19 @@ body .skill-badges .badge-text {
     white-space: nowrap !important;
     line-height: 1 !important;
 }
+
+/* Certification section: 4 items per row in desktop view */
+@media (min-width: 992px) {
+    #certification .portfolio-container > .col-lg-4,
+    .services .certification-container > .col-lg-4 {
+        flex: 0 0 25% !important;
+        max-width: 25% !important;
+    }
+    
+    /* Project section: 4 items per row in desktop view */
+    #portfolio .portfolio-container > .col-lg-4,
+    .portfolio .projects-container > .col-lg-4 {
+        flex: 0 0 25% !important;
+        max-width: 25% !important;
+    }
+}
