@@ -32,8 +32,9 @@
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
   <meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp">
   <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
-  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=()" ) <!-- Open Graph
-    Meta Tags (for Facebook, LinkedIn, Reddit, WhatsApp, Messenger, Gmail) -->
+  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=()">
+  
+  <!-- Open Graph Meta Tags (for Facebook, LinkedIn, Reddit, WhatsApp, Messenger, Gmail) -->
   <meta property="og:title" content="Developer Portfolio">
   <meta property="og:description"
     content="@la-b-ib: CSE student at BRACU | Web Developer | IEEE CSBDC President '25 | Open Source Contributor">
@@ -436,17 +437,7 @@
               <span style="color:#ea4335;">tools</span>, <span style="color:#ea4335;">frameworks</span>, and <span
                 style="color:#ea4335;">ideas</span> to stay ahead in a fast-evolving field.
             </b>
-            <a href="javascript:void(0);" id="intro-toggle" onclick="
-    var box = document.getElementById('intro-para');
-    var link = document.getElementById('intro-toggle');
-    if (box.style.maxHeight === 'none') {
-      box.style.maxHeight = '4.2em';
-      link.innerText = 'See more';
-    } else {
-      box.style.maxHeight = 'none';
-      link.innerText = 'See less';
-    }
-  " style="color:#4285F4; font-weight:bold; text-decoration:none; position:absolute; bottom:0; right:0; background:white; padding-left:5px;">See
+            <a href="javascript:void(0);" id="intro-toggle" onclick="toggleContent('intro-para', 'intro-toggle')" style="color:#4285F4; font-weight:bold; text-decoration:none; position:absolute; bottom:0; right:0; background:white; padding-left:5px;">See
               more</a>
           </p>
 
@@ -592,7 +583,7 @@
         /* Standard size for items */
       }
 
-      .icon-box {
+      .interests .icon-box {
         text-align: left;
       }
 
@@ -674,7 +665,7 @@
     }
 
     /* Interests Section */
-    .icon-box {
+    .contribution .icon-box {
       height: auto;
       padding: 15px;
       text-align: center;
@@ -4191,43 +4182,24 @@
       }
     });
   </script>
-  <script>
-    // Disable right-click context menu
-    document.addEventListener('contextmenu', function(e) {
-      e.preventDefault();
-      // Optional: Show a warning (customize or remove)
-      alert('Right-click is disabled for security reasons.');
-    });
-    // Disable keyboard shortcuts for DevTools and source view
-    document.addEventListener('keydown', function(e) {
-      // F12
-      if (e.keyCode === 123) {
-        e.preventDefault();
-        return false;
-      }
-      // Ctrl+Shift+I (Inspect), Ctrl+Shift+J (Console), Ctrl+Shift+C (Elements)
-      if (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74 || e.keyCode === 67)) {
-        e.preventDefault();
-        return false;
-      }
-      // Ctrl+U (View Source)
-      if (e.ctrlKey && e.keyCode === 85) {
-        e.preventDefault();
-        return false;
-      }
-      // Mac equivalents: Cmd+Option+I/J/C/U
-      if (e.metaKey && e.altKey && (e.keyCode === 73 || e.keyCode === 74 || e.keyCode === 67 || e.keyCode === 85)) {
-        e.preventDefault();
-        return false;
-      }
-      // Optional: Block Ctrl+S (Save Page)
-      if (e.keyCode === 83 && (e.ctrlKey || (navigator.platform.match('Mac') && e.metaKey))) {
-        e.preventDefault();
-        return false;
-      }
-    });
-  </script>
   <!-- Template Main JS File -->
   <script src="assets/backend/javascript/main.js"></script>
+  
+  <!-- Centralized Toggle Function -->
+  <script>
+    function toggleContent(paraId, toggleId, defaultHeight = '4.2em') {
+      var box = document.getElementById(paraId);
+      var link = document.getElementById(toggleId);
+      if (box && link) {
+        if (box.style.maxHeight === 'none') {
+          box.style.maxHeight = defaultHeight;
+          link.innerText = 'See more';
+        } else {
+          box.style.maxHeight = 'none';
+          link.innerText = 'See less';
+        }
+      }
+    }
+  </script>
 
 </html>
