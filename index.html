@@ -141,6 +141,10 @@
     </iframe>
   </noscript>
   <!-- End Google Tag Manager (noscript) -->
+  
+  <!-- ======= Connecting Dots Background Animation (Desktop Only) ======= -->
+  <canvas id="dotsCanvas" class="dots-background"></canvas>
+  
   <!-- ======= Header ======= -->
   <header id="header" class="header-tops">
     <div class="container">
@@ -4199,6 +4203,430 @@
           link.innerText = 'See less';
         }
       }
+    }
+  </script>
+
+  <script>
+    // Connecting Dots Animation for Desktop
+    const canvas = document.getElementById('dotsCanvas');
+    const ctx = canvas.getContext('2d');
+    
+    // Disable antialiasing for sharp, hard edges
+    ctx.imageSmoothingEnabled = false;
+    ctx.webkitImageSmoothingEnabled = false;
+    ctx.mozImageSmoothingEnabled = false;
+    ctx.msImageSmoothingEnabled = false;
+    ctx.oImageSmoothingEnabled = false;
+    
+    // Advanced mouse tracking
+    const mouse = {
+      x: -1000,
+      y: -1000,
+      prevX: -1000,
+      prevY: -1000,
+      velocityX: 0,
+      velocityY: 0,
+      radius: 120,
+      attractRadius: 200,
+      repelRadius: 80,
+      isMoving: false,
+      speed: 0,
+      trail: []
+    };
+    
+    // Run on all devices (desktop and mobile)
+    if (canvas) {
+      // Set canvas size
+      function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+      
+      resizeCanvas();
+      window.addEventListener('resize', resizeCanvas);
+      
+      // Advanced mouse event listeners
+      window.addEventListener('mousemove', (e) => {
+        mouse.prevX = mouse.x;
+        mouse.prevY = mouse.y;
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
+        
+        // Calculate mouse velocity and speed
+        mouse.velocityX = mouse.x - mouse.prevX;
+        mouse.velocityY = mouse.y - mouse.prevY;
+        mouse.speed = Math.sqrt(mouse.velocityX * mouse.velocityX + mouse.velocityY * mouse.velocityY);
+        mouse.isMoving = mouse.speed > 1;
+        
+        // Create mouse trail
+        mouse.trail.push({ x: mouse.x, y: mouse.y, age: 0 });
+        if (mouse.trail.length > 10) mouse.trail.shift();
+      });
+      
+      window.addEventListener('mouseleave', () => {
+        mouse.x = -1000;
+        mouse.y = -1000;
+        mouse.prevX = -1000;
+        mouse.prevY = -1000;
+        mouse.velocityX = 0;
+        mouse.velocityY = 0;
+        mouse.speed = 0;
+        mouse.isMoving = false;
+        mouse.trail = [];
+      });
+      
+      // Click event for particle explosion
+      window.addEventListener('click', (e) => {
+        const clickX = e.clientX;
+        const clickY = e.clientY;
+        particles.forEach(particle => {
+          const dx = particle.x - clickX;
+          const dy = particle.y - clickY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          if (distance < 150) {
+            const force = (150 - distance) / 150 * 3;
+            const angle = Math.atan2(dy, dx);
+            particle.dx += Math.cos(angle) * force;
+            particle.dy += Math.sin(angle) * force;
+          }
+        });
+      });
+      
+      // Particles configuration
+      const particles = [];
+      const particleCount = 358;
+      const minParticleCount = 200; // Always maintain at least 200 particles
+      const maxDistance = 140;
+      
+      // Colors array
+      const colors = ['#c23616', '#273c75', '#192a56', '#ff793f', '#3d3d3d', '#ff3838'];
+      
+      // Minimum distance constraint
+      const minDistance = 15;
+      
+      // Check if position maintains minimum distance from other particles
+      function checkMinimumDistance(x, y, excludeIndex = -1) {
+        for (let i = 0; i < particles.length; i++) {
+          if (i === excludeIndex) continue;
+          
+          const particle = particles[i];
+          if (particle) {
+            const dx = x - particle.x;
+            const dy = y - particle.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+            
+            if (distance < minDistance) {
+              return false; // Too close to another particle
+            }
+          }
+        }
+        return true; // Safe distance from all particles
+      }
+      
+      // Density control function
+      function checkDensity(x, y, excludeIndex = -1) {
+        let count = 0;
+        const gridSize = 100; // 100x100 pixel area
+        const halfGrid = gridSize / 2;
+        
+        for (let i = 0; i < particles.length; i++) {
+          if (i === excludeIndex) continue;
+          
+          const particle = particles[i];
+          if (particle && 
+              particle.x >= x - halfGrid && particle.x <= x + halfGrid &&
+              particle.y >= y - halfGrid && particle.y <= y + halfGrid) {
+            count++;
+          }
+        }
+        return count;
+      }
+      
+      // Find valid position with density constraint
+      function findValidPosition(excludeIndex = -1) {
+        let attempts = 0;
+        const maxAttempts = 100;
+        
+        while (attempts < maxAttempts) {
+          const x = Math.random() * canvas.width;
+          const y = Math.random() * canvas.height;
+          
+          if (checkDensity(x, y, excludeIndex) < 7 && checkMinimumDistance(x, y, excludeIndex)) {
+            return { x, y };
+          }
+          attempts++;
+        }
+        
+        // Fallback: return a random position if no valid position found
+        return {
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height
+        };
+      }
+      
+      // Find empty areas that need particles
+      function findEmptyAreas() {
+        const emptyAreas = [];
+        const gridSize = 100;
+        const cols = Math.ceil(canvas.width / gridSize);
+        const rows = Math.ceil(canvas.height / gridSize);
+        
+        for (let row = 0; row < rows; row++) {
+          for (let col = 0; col < cols; col++) {
+            const centerX = col * gridSize + gridSize / 2;
+            const centerY = row * gridSize + gridSize / 2;
+            
+            // Skip if area is outside canvas bounds
+            if (centerX > canvas.width || centerY > canvas.height) continue;
+            
+            if (checkDensity(centerX, centerY) === 0) {
+              emptyAreas.push({ x: centerX, y: centerY });
+            }
+          }
+        }
+        return emptyAreas;
+      }
+      
+      // Fill empty areas with particles
+      function fillEmptyAreas() {
+        const emptyAreas = findEmptyAreas();
+        
+        for (const area of emptyAreas) {
+          // Find the nearest particle to move into this empty area
+          let nearestParticle = null;
+          let minDistance = Infinity;
+          let nearestIndex = -1;
+          
+          for (let i = 0; i < particles.length; i++) {
+            const particle = particles[i];
+            const dx = particle.x - area.x;
+            const dy = particle.y - area.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+            
+            // Only consider particles in overcrowded areas (>4 particles in their area)
+            if (checkDensity(particle.x, particle.y, i) > 4 && distance < minDistance) {
+              minDistance = distance;
+              nearestParticle = particle;
+              nearestIndex = i;
+            }
+          }
+          
+          // Move the particle to the empty area
+          if (nearestParticle) {
+            nearestParticle.x = area.x + (Math.random() - 0.5) * 40; // Add some randomness within the area
+            nearestParticle.y = area.y + (Math.random() - 0.5) * 40;
+            
+            // Ensure it stays within canvas bounds
+            nearestParticle.x = Math.max(0, Math.min(canvas.width, nearestParticle.x));
+            nearestParticle.y = Math.max(0, Math.min(canvas.height, nearestParticle.y));
+          }
+        }
+      }
+      
+      // Ensure minimum particle count
+      function ensureMinimumParticles() {
+        const currentCount = particles.length;
+        
+        if (currentCount < minParticleCount) {
+          const particlesToAdd = minParticleCount - currentCount;
+          
+          for (let i = 0; i < particlesToAdd; i++) {
+            const sizeType = i % 3; // Distribute sizes equally
+            particles.push(new Particle(sizeType));
+          }
+        }
+      }
+      
+      // Particle class
+      class Particle {
+        constructor(sizeType = 0) {
+          const validPos = findValidPosition();
+          this.x = validPos.x;
+          this.y = validPos.y;
+          this.z = Math.random() * 100; // Depth for 3D effect
+          this.dx = (Math.random() - 0.5) * 0.8;
+          this.dy = (Math.random() - 0.5) * 0.8;
+          this.dz = (Math.random() - 0.5) * 0.3; // Z-axis movement
+          this.color = colors[Math.floor(Math.random() * colors.length)];
+          this.baseOpacity = Math.random() * 0.5 + 0.3;
+          
+          // Set particle size based on type (0=5px, 1=10px, 2=15px diameter)
+          this.sizeType = sizeType;
+          this.diameter = sizeType === 0 ? 5 : sizeType === 1 ? 10 : 15;
+          this.angle = Math.random() * Math.PI * 2; // For orbital movement
+          this.radius = Math.random() * 50 + 20; // Orbital radius
+          this.speed = Math.random() * 0.02 + 0.01; // Orbital speed
+        }
+        
+        update() {
+          // Store previous position
+          const prevX = this.x;
+          const prevY = this.y;
+          const prevZ = this.z;
+          
+          // Complex 3D-like movement patterns
+          this.angle += this.speed;
+          this.z += this.dz;
+          
+          // Orbital movement combined with linear movement
+          this.x += this.dx + Math.sin(this.angle) * 0.5;
+          this.y += this.dy + Math.cos(this.angle) * 0.5;
+          
+          // Wave-like movement for more complexity
+          this.x += Math.sin(Date.now() * 0.001 + this.x * 0.01) * 0.3;
+          this.y += Math.cos(Date.now() * 0.001 + this.y * 0.01) * 0.3;
+          
+          // Z-axis boundaries for depth
+          if (this.z <= 0 || this.z >= 100) this.dz *= -1;
+          
+          // Check collision with other particles
+          for (let other of particles) {
+            if (other === this) continue;
+            
+            const dx = this.x - other.x;
+            const dy = this.y - other.y;
+            const dz = this.z - other.z;
+            const distance = Math.sqrt(dx * dx + dy * dy + dz * dz);
+            
+            if (distance < 15) {
+              // Move back to previous position and reverse direction
+              this.x = prevX;
+              this.y = prevY;
+              this.z = prevZ;
+              this.dx *= -1;
+              this.dy *= -1;
+              this.dz *= -1;
+              break;
+            }
+          }
+          
+          // Add damping to prevent particles from moving too fast
+          this.dx *= 0.99;
+          this.dy *= 0.99;
+          
+          // Bounce off edges
+          if (this.x <= 0 || this.x >= canvas.width) this.dx *= -1;
+          if (this.y <= 0 || this.y >= canvas.height) this.dy *= -1;
+          
+          // Check density constraint - if too crowded, find new position
+          const currentIndex = particles.indexOf(this);
+          if (checkDensity(this.x, this.y, currentIndex) >= 7) {
+            const validPos = findValidPosition(currentIndex);
+            this.x = validPos.x;
+            this.y = validPos.y;
+          }
+        }
+        
+        draw() {
+          // Use fixed diameter sizes: 5px, 10px, or 15px
+          const radius = this.diameter / 2; // Convert diameter to radius
+          
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, radius, 0, Math.PI * 2);
+          ctx.fillStyle = this.color;
+          ctx.globalAlpha = 1.0; // 100% opacity
+          ctx.fill();
+          
+          // Remove glow effect to keep particles completely solid
+          
+          ctx.globalAlpha = 1;
+        }
+      }
+      
+      // Create particles in perfect grid pattern like graph paper
+      const gridSpacing = 50; // Distance between grid points (like graph paper squares)
+      const margin = 25;
+      
+      // Calculate how many particles fit in grid
+      const cols = Math.floor((canvas.width - 2 * margin) / gridSpacing) + 1;
+      const rows = Math.floor((canvas.height - 2 * margin) / gridSpacing) + 1;
+      
+      // Create particles at exact grid intersections with equal distribution of sizes
+      let sizeTypeCounter = 0;
+      for (let row = 0; row < rows; row++) {
+        for (let col = 0; col < cols; col++) {
+          if (particles.length >= particleCount) break;
+          
+          // Cycle through size types: 0 (5px), 1 (10px), 2 (15px)
+          const sizeType = sizeTypeCounter % 3;
+          const particle = new Particle(sizeType);
+          
+          // Position exactly at grid intersections
+          particle.x = margin + col * gridSpacing;
+          particle.y = margin + row * gridSpacing;
+          
+          // Ensure particles stay within canvas bounds
+          if (particle.x <= canvas.width - margin && particle.y <= canvas.height - margin) {
+            particles.push(particle);
+            sizeTypeCounter++;
+          }
+        }
+        if (particles.length >= particleCount) break;
+      }
+      
+      // Draw connections between nearby particles
+      function drawConnections() {
+        // Track connections count for each particle
+        const connectionCounts = new Array(particles.length).fill(0);
+        
+        for (let i = 0; i < particles.length; i++) {
+          // Skip if particle already has 4 connections
+          if (connectionCounts[i] >= 4) continue;
+          
+          for (let j = i + 1; j < particles.length; j++) {
+            // Skip if either particle already has 4 connections
+            if (connectionCounts[i] >= 4 || connectionCounts[j] >= 4) continue;
+            
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+            const dz = particles[i].z - particles[j].z;
+            const distance3D = Math.sqrt(dx * dx + dy * dy + dz * dz);
+            const distance2D = Math.sqrt(dx * dx + dy * dy);
+            
+            if (distance2D < maxDistance) {
+              ctx.beginPath();
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+              ctx.strokeStyle = '#4285F4'; // Blue color
+              ctx.lineWidth = 0.1; // Very very narrow lines
+              ctx.stroke();
+              
+              // Increment connection count for both particles
+              connectionCounts[i]++;
+              connectionCounts[j]++;
+            }
+          }
+        }
+      }
+      
+      // Animation loop
+      let frameCount = 0;
+      function animate() {
+        // Clear with white background
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        
+        particles.forEach(particle => {
+          particle.update();
+          particle.draw();
+        });
+        
+        drawConnections();
+        
+        // Fill empty areas every 300 frames (approximately every 5 seconds at 60fps)
+        frameCount++;
+        if (frameCount % 300 === 0) {
+          fillEmptyAreas();
+          ensureMinimumParticles();
+        }
+        
+        requestAnimationFrame(animate);
+      }
+      
+      // Log particle count for debugging
+      console.log('Particles created:', particles.length);
+      
+      animate();
     }
   </script>
 
