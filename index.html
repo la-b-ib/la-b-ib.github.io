@@ -3325,6 +3325,61 @@
           <span class="badge-text">Reddit</span>
         </a>
       </div>
+      
+      <!-- Google Maps Location (Mobile Only) -->
+      <div class="location-map mobile-only">
+        <h5 style="color: #4285F4; font-weight: 900;">
+                <span class="material-icons"
+                  style="color: #000000; vertical-align: middle; font-size: 2em; margin-right: 0px;">location_city</span>
+                Find me here!
+              </h5>
+        <div class="map-container">
+          <iframe
+            src="https://maps.google.com/maps?width=100%25&amp;height=250&amp;hl=en&amp;q=Gulshan,%20Dhaka,%20Bangladesh&amp;t=p&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+            width="100%"
+            height="250"
+            style="border:0; border-radius: 12px; background: #f0f0f0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Gulshan, Dhaka Location Map">
+          </iframe>
+        </div>
+      </div>
+      
+      <!-- Mailbox Form (Mobile Only) -->
+      <form class="mailbox-form mobile-only" id="contact-form">
+        <div class="form-group">
+          <label for="contact-name"><h5 style="color: #4285F4; font-weight: 900;">
+                <span class="material-icons"
+                  style="color: #000000; vertical-align: middle; font-size: 2em; margin-right: 0px;">attach_email</span>
+                Reach Out to Me!
+              </h5></label>
+          <label for="contact-name">Name</label>
+          <input type="text" id="contact-name" name="from_name" required autocomplete="name" placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+          <label for="contact-email">Email</label>
+          <input type="email" id="contact-email" name="from_email" required autocomplete="email" placeholder="yourname@domain.com">
+        </div>
+        <div class="form-group">
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" name="message" rows="4" required placeholder="Type your message here..."></textarea>
+        </div>
+        <button type="submit" class="form-submit" id="submit-btn">
+          <span class="btn-text">Submit</span>
+          <span class="btn-loading" style="display: none;">
+            <svg class="spinner" width="16" height="16" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="31.416" stroke-dashoffset="31.416">
+                <animate attributeName="stroke-dasharray" dur="2s" values="0 31.416;15.708 15.708;0 31.416" repeatCount="indefinite"/>
+                <animate attributeName="stroke-dashoffset" dur="2s" values="0;-15.708;-31.416" repeatCount="indefinite"/>
+              </circle>
+            </svg>
+            Sending...
+          </span>
+        </button>
+        <div class="form-status" id="form-status"></div>
+      </form>
     </div>
   </section>
   <style>
@@ -3339,6 +3394,25 @@
         display: block;
       }
     }
+
+    /* Location Map Styles */
+    .location-map {
+      margin: 20px 0;
+      padding: 0px;
+      background: transparent;
+      border-radius: 15px;
+    
+    }
+
+    .map-container {
+      width: 100%;
+      height: 250px;
+      border-radius: 12px;
+      overflow: hidden;
+      
+    }
+
+  
 
     .badge-container {
       display: flex;
@@ -3419,6 +3493,140 @@
       /* IE and Edge */
       scrollbar-width: none;
       /* Firefox */
+    }
+
+    /* Mailbox Form Styles */
+    .mailbox-form {
+      background: transparent;
+      
+      border-radius: 12px;
+      padding: 0px;
+      margin: 15px 0;
+      max-width: 100%;
+      display: none;
+    
+    }
+
+    @media (max-width: 767px) {
+      .mailbox-form {
+        display: block;
+      }
+    }
+
+    .mailbox-form .form-group {
+      margin-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .mailbox-form label {
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 6px;
+      color: #333;
+    }
+
+    .mailbox-form input,
+    .mailbox-form textarea {
+      font-size: 16px;
+      padding: 12px;
+      border: 3px solid #000000;
+      background-color: transparent;
+      border-radius: 8px;
+      outline: none;
+      transition: border-color 0.3s ease;
+      font-family: inherit;
+    }
+
+    .mailbox-form input:focus,
+    .mailbox-form textarea:focus {
+      border-color: #000000;
+    }
+
+    .mailbox-form input::placeholder,
+    .mailbox-form textarea::placeholder {
+      color: #000000;
+      opacity: 0.4;
+    }
+
+    .mailbox-form input::-webkit-input-placeholder,
+    .mailbox-form textarea::-webkit-input-placeholder {
+      color: #000000;
+    }
+
+    .mailbox-form input::-moz-placeholder,
+    .mailbox-form textarea::-moz-placeholder {
+      color: #000000;
+      opacity: 0.4;
+    }
+
+    .mailbox-form input:-ms-input-placeholder,
+    .mailbox-form textarea:-ms-input-placeholder {
+      color: #000000;
+    }
+
+    .mailbox-form textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .mailbox-form .form-submit {
+      background-color: #EA4335;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 14px 0;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+
+    .mailbox-form .form-submit:active {
+      transform: translateY(0);
+    }
+
+    .mailbox-form .form-submit:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .spinner {
+      animation: spin 1s linear infinite;
+      margin-right: 8px;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .form-status {
+      margin-top: 12px;
+      padding: 10px;
+      border-radius: 6px;
+      text-align: center;
+      font-weight: bold;
+      display: none;
+    }
+
+    .form-status.success {
+      background: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+      display: block;
+    }
+
+    .form-status.error {
+      background: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+      display: block;
     }
   </style>
   <!-- End Contact Section -->
@@ -4162,6 +4370,74 @@
       
       animate();
     }
+  </script>
+
+  <!-- EmailJS Library -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  
+  <!-- Contact Form Script -->
+  <script type="text/javascript">
+    // Initialize EmailJS
+    (function() {
+      emailjs.init({
+        publicKey: "WvxsJ0q2RXLqEgAH-", // Replace with your EmailJS public key
+      });
+    })();
+
+    // Contact form handler
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('contact-form');
+      const submitBtn = document.getElementById('submit-btn');
+      const btnText = submitBtn.querySelector('.btn-text');
+      const btnLoading = submitBtn.querySelector('.btn-loading');
+      const formStatus = document.getElementById('form-status');
+
+      if (form) {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          // Show loading state
+          submitBtn.disabled = true;
+          btnText.style.display = 'none';
+          btnLoading.style.display = 'inline-flex';
+          formStatus.style.display = 'none';
+          formStatus.className = 'form-status';
+
+          // Send email using EmailJS
+          emailjs.sendForm('service_3zyo4mb', 'template_gbbxjv2', form)
+            .then(function(response) {
+              // Reset button state
+              submitBtn.disabled = false;
+              btnText.style.display = 'inline';
+              btnLoading.style.display = 'none';
+              
+              // Show success message
+              formStatus.textContent = '✅ Message sent successfully! I\'ll get back to you soon.';
+              formStatus.className = 'form-status success';
+              
+              // Reset form
+              form.reset();
+              
+              // Hide success message after 5 seconds
+              setTimeout(() => {
+                formStatus.style.display = 'none';
+              }, 5000);
+            })
+            .catch(function(error) {
+              // Reset button state
+              submitBtn.disabled = false;
+              btnText.style.display = 'inline';
+              btnLoading.style.display = 'none';
+              
+              // Show error message
+              formStatus.textContent = '❌ Failed to send message. Please try again or use email directly.';
+              formStatus.className = 'form-status error';
+              
+              console.error('EmailJS error:', error);
+            });
+        });
+      }
+    });
   </script>
 
 </html>
