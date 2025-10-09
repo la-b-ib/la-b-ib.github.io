@@ -2156,8 +2156,6 @@
       .recommendation-item {
         background: none !important;
         /* Remove background */
-        border: none !important;
-        /* Remove border */
         border-radius: 0;
         /* Remove border radius */
         padding: 18px 0;
@@ -2167,6 +2165,9 @@
         border-bottom: 3px solid rgba(0, 0, 0, 0.1);
         /* Add bottom border for separation */
         padding-bottom: 14px !important;
+        border-top: none !important;
+        border-left: none !important;
+        border-right: none !important;
       }
 
       .recommendation-header {
@@ -2869,13 +2870,12 @@
         </div>
       </div>
       <!-- End GitHub Trophies Section -->
-      <!-- Mobile-only GIF (hidden on desktop) -->
-      <!-- Mobile-only Stats GIF (hidden on desktop) -->
-      <!-- Mobile-only Stats GIF (hidden on desktop) -->
-      <div class="mobile-gif-container d-block d-md-none">
-        <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/GIF/stats.gif" alt="Stats GIF"
-          loading="lazy">
+      
+      <!-- Mobile-only Flourish Radar Visualization -->
+      <div class="d-block d-md-none" style="padding: 0; margin-bottom: 20px; background: transparent; box-shadow: none;">
+        <div class="flourish-embed flourish-radar" data-src="visualisation/25556494"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/25556494/thumbnail" width="100%" alt="radar visualization" /></noscript></div>
       </div>
+      
       <!-- Contribution Graph Section -->
       <div class="contribution-container">
         <div class="contribution-badges">
@@ -2993,8 +2993,8 @@
     /* Mobile-First Styles (override Bootstrap only for mobile) */
     @media (max-width: 767.98px) {
       .skills-section .container {
-        padding-left: 5px;
-        padding-right: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
       }
 
       .mobile-gif-container {
@@ -3015,12 +3015,34 @@
         display: block;
       }
 
+      /* Remove unnecessary padding from section titles on mobile */
+      .interests.container {
+        padding-top: 0 !important;
+        margin-top: 0 !important;
+      }
+
+      .section-title {
+        padding: 0 !important;
+        margin-top: 0 !important;
+        margin-bottom: 10px !important;
+      }
+
+      .section-title h2 {
+        margin-bottom: 0 !important;
+      }
+
+      .interest-heading {
+        padding: 0 !important;
+        margin-top: 0 !important;
+        margin-bottom: 10px !important;
+      }
+
       .skill-category {
-        background: white;
-        padding: 15px 10px;
-        border-radius: 0;
-        margin: 0 5px 15px 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        background: transparent !important;
+        padding: 0 !important;
+        border-radius: 0 !important;
+        margin: 0 0 20px 0 !important;
+        box-shadow: none !important;
       }
 
       .skill-icons {
@@ -3044,13 +3066,30 @@
 
       /* GitHub Trophies mobile optimization */
       .github-trophies {
-        background: white;
-        padding: 10px 10px !important;
+        background: transparent !important;
+        padding: 0 !important;
         border-radius: 0 !important;
-        margin: 0 5px 15px 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        width: calc(100% - 10px);
+        margin: 0 0 20px 0 !important;
+        box-shadow: none !important;
+        width: 100% !important;
         overflow: hidden;
+      }
+
+      /* Radar chart mobile optimization - remove container styling */
+      .d-block.d-md-none[style*="padding"] {
+        padding: 0 !important;
+        margin-bottom: 20px !important;
+        box-shadow: none !important;
+        background: transparent !important;
+      }
+
+      /* Contribution container mobile optimization - remove container styling */
+      .contribution-container {
+        background: transparent !important;
+        padding: 0 !important;
+        border: none !important;
+        border-radius: 0 !important;
+        margin-bottom: 20px !important;
       }
 
       .github-trophies img[src*="github-profile-trophy"] {
@@ -3139,42 +3178,44 @@
   <!-- Start Blogs Section -->
   <section id="blogs" class="services">
     <div class="container">
-      <div class="section-title" style="margin-bottom: 25px;">
+      <div class="section-title">
         <h2><b>Blogs</b></h2>
       </div>
       <div class="row">
         <!-- BRACU Express -->
-        <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-lg-4 col-md-6 col-12">
           <div class="icon-box">
             <div class="icon">
-              <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/blogs/books.gif"
-                style="width: 110px; height: 110px;" />
+              <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/blogs/bracuexpress.jpeg"
+                style="width: 110px; height: 110px;" tabindex="-1" />
             </div>
-            <h4 class="title">
-              <a href="https://bracuexpress.com/author/labib/" target="_blank" style="color: #4285F4;"><b>BRACU
-                  Express</b></a>
-            </h4>
-            <p class="description"><b>NEWS & STORIES</b></p>
+            <div class="blog-content">
+              <h5 class="title">
+                <a href="https://bracuexpress.com/author/labib/" target="_blank" style="color: #4285F4;"><b>BRACU
+                    Express</b></a>
+              </h5>
+              <p class="description"><b>NEWS & STORIES</b></p>
+              <a href="https://bracuexpress.com/author/labib/" target="_blank" class="blog-button">Read Articles</a>
+            </div>
           </div>
         </div>
         <!-- Newsletter -->
-        <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="300">
+        <div class="col-lg-4 col-md-6 col-12">
           <div class="icon-box">
             <div class="icon">
-              <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/blogs/books.gif"
-                style="width: 110px; height: 110px;" />
+              <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/blogs/newsletter.png"
+                style="width: 110px; height: 110px;" tabindex="-1" />
             </div>
-            <h4 class="title">
-              <a href="https://www.linkedin.com/newsletters/tech-talk-7325845368900894722/" target="_blank"
-                style="color: #4285F4;"><b>NEWSLETTER</b></a>
-            </h4>
-            <p class="description"><b>Tech Talk</b></p>
+            <div class="blog-content">
+              <h6 class="title">
+                <a href="https://www.linkedin.com/newsletters/tech-talk-7325845368900894722/" target="_blank"
+                  style="color: #4285F4;"><b>NEWSLETTER</b></a>
+              </h6>
+              <p class="description"><b>Tech Talk</b></p>
+              <a href="https://www.linkedin.com/newsletters/tech-talk-7325845368900894722/" target="_blank" class="blog-button">Read Articles</a>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- Mobile-only image -->
-      <div class="mobile-blog-image">
-        <!--    <img src="" style="padding-top: 10px; width: 100%;" />     -->
       </div>
     </div>
   </section>
@@ -3186,7 +3227,6 @@
       background: #ffffff;
       border-radius: 8px;
       border: 15px solid #f6f8f9;
-      transition: all 0.2s ease-in-out;
       height: 100%;
     }
 
@@ -3207,7 +3247,6 @@
       text-decoration: none;
       font-weight: bold;
       font-size: 18px;
-      transition: color 0.3s;
     }
 
     #blogs .title a:hover {
@@ -3233,10 +3272,365 @@
       }
     }
 
-    /* ===== MOBILE VIEW (2 ROWS - STACKED VERTICALLY) ===== */
-    @media (max-width: 991.98px) {
+    /* ===== GLOBAL BLOG IMAGE STYLES (DESKTOP + MOBILE) ===== */
+    /* Nuclear option: Remove ALL possible blue backgrounds and focus rings */
+    #blogs *,
+    #blogs .icon,
+    #blogs .icon *,
+    #blogs .icon img,
+    #blogs .icon-box,
+    #blogs .icon-box *,
+    #blogs .col-lg-4,
+    #blogs .col-md-6,
+    #blogs .col-12 {
+      -webkit-tap-highlight-color: transparent !important;
+      -webkit-touch-callout: none !important;
+      -webkit-user-select: none !important;
+      -moz-user-select: none !important;
+      -ms-user-select: none !important;
+      user-select: none !important;
+      outline: none !important;
+      background: transparent !important;
+      /* Override Bootstrap 5 focus ring system */
+      --bs-focus-ring-width: 0 !important;
+      --bs-focus-ring-color: transparent !important;
+      --bs-focus-ring-opacity: 0 !important;
+      --bs-blue: transparent !important;
+    }
+
+    /* All possible interaction states */
+    #blogs *:focus,
+    #blogs *:active,
+    #blogs *:hover,
+    #blogs .icon:focus,
+    #blogs .icon:active,
+    #blogs .icon:hover,
+    #blogs .icon img:focus,
+    #blogs .icon img:active,
+    #blogs .icon img:hover,
+    #blogs .icon-box:focus,
+    #blogs .icon-box:active,
+    #blogs .icon-box:hover,
+    #blogs .col-lg-4:focus,
+    #blogs .col-md-6:focus,
+    #blogs .col-12:focus {
+      background: transparent !important;
+      background-color: transparent !important;
+      outline: none !important;
+      border: none !important;
+      box-shadow: none !important;
+      -webkit-tap-highlight-color: transparent !important;
+      --bs-focus-ring-width: 0 !important;
+      --bs-focus-ring-color: transparent !important;
+      --bs-focus-ring-opacity: 0 !important;
+    }
+
+    /* Override pseudo-elements that might create backgrounds, but preserve section title line */
+    #blogs .icon::before,
+    #blogs .icon::after,
+    #blogs .icon-box::before,
+    #blogs .icon-box::after,
+    #blogs .col-lg-4::before,
+    #blogs .col-lg-4::after,
+    #blogs .col-md-6::before,
+    #blogs .col-md-6::after,
+    #blogs .col-12::before,
+    #blogs .col-12::after {
+      display: none !important;
+      background: transparent !important;
+      background-color: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+    }
+
+    /* Preserve section title horizontal line design */
+    #blogs .section-title h2::after {
+      display: inline-block !important;
+      content: "" !important;
+      width: 120px !important;
+      height: 4px !important;
+      background: #000000 !important;
+      margin: 4px 10px !important;
+    }
+
+    /* ===== DESKTOP ONLY - DISABLE ALL HOVER EFFECTS ===== */
+    @media (min-width: 992px) {
+      /* COMPLETELY DISABLE .services .icon-box:hover with maximum specificity */
+      section#blogs.services .icon-box:hover,
+      section#blogs.services .icon-box:focus,
+      section#blogs.services .icon-box:active,
+      .services#blogs .icon-box:hover,
+      .services#blogs .icon-box:focus,
+      .services#blogs .icon-box:active {
+        background: transparent !important;
+        background-color: transparent !important;
+        border: none !important;
+        border-color: transparent !important;
+        border-width: 0 !important;
+        transform: none !important;
+        box-shadow: none !important;
+        transition: none !important;
+        animation: none !important;
+      }
+
+      /* COMPLETELY DISABLE .services .icon-box:hover .icon with maximum specificity */
+      section#blogs.services .icon-box:hover .icon,
+      section#blogs.services .icon-box:focus .icon,
+      section#blogs.services .icon-box:active .icon,
+      .services#blogs .icon-box:hover .icon,
+      .services#blogs .icon-box:focus .icon,
+      .services#blogs .icon-box:active .icon {
+        background: transparent !important;
+        background-color: transparent !important;
+        transform: none !important;
+      }
+
+      /* Override global .services .icon-box:hover .icon i rules */
+      section#blogs.services .icon-box:hover .icon i {
+        color: #fff !important;
+      }
+
+      /* Override global .services .icon-box:hover .icon::before rules */
+      section#blogs.services .icon-box:hover .icon::before {
+        background: transparent !important;
+        display: none !important;
+      }
+
+      /* Override global .services .icon-box:hover h4 a, .services .icon-box:hover p rules */
+      section#blogs.services .icon-box:hover h4 a,
+      section#blogs.services .icon-box:hover p,
+      section#blogs.services .icon-box:hover .title,
+      section#blogs.services .icon-box:hover .title a,
+      section#blogs.services .icon-box:hover h5.title a,
+      section#blogs.services .icon-box:hover h6.title a,
+      section#blogs.services .icon-box:hover .description {
+        color: inherit !important;
+      }
+
+      /* Keep original colors - no hover color changes */
+      #blogs .title a:hover,
+      #blogs h5.title a:hover,
+      #blogs h6.title a:hover {
+        color: #4285F4 !important;
+        text-decoration: none !important;
+      }
+
+      #blogs .description:hover {
+        color: #666666 !important;
+      }
+
+      #blogs .blog-button:hover {
+        background-color: #4284F4 !important;
+        color: #ffffff !important;
+        transform: none !important;
+        box-shadow: none !important;
+      }
+
+      /* Disable hover on images */
+      #blogs .icon img:hover {
+        background: transparent !important;
+        transform: none !important;
+        opacity: 1 !important;
+      }
+
+      /* Nuclear option: Disable ALL possible hover effects on blog containers */
+      section#blogs.services .col-lg-4,
+      section#blogs.services .col-md-6,
+      section#blogs.services .col-12,
+      section#blogs.services .col-lg-4:hover,
+      section#blogs.services .col-md-6:hover,
+      section#blogs.services .col-12:hover,
+      section#blogs .col-lg-4:hover,
+      section#blogs .col-md-6:hover,
+      section#blogs .col-12:hover,
+      #blogs .col-lg-4:hover,
+      #blogs .col-md-6:hover,
+      #blogs .col-12:hover {
+        background: transparent !important;
+        background-color: transparent !important;
+        border: none !important;
+        border-color: transparent !important;
+        border-width: 0 !important;
+        border-style: none !important;
+        box-shadow: none !important;
+        transform: none !important;
+        transition: none !important;
+        animation: none !important;
+        outline: none !important;
+        opacity: 1 !important;
+        filter: none !important;
+        scale: 1 !important;
+        cursor: default !important;
+      }
+
+      /* Override any Bootstrap focus/hover utilities */
+      section#blogs .col-lg-4.hover\\:bg-primary:hover,
+      section#blogs .col-md-6.hover\\:bg-primary:hover,
+      section#blogs .col-12.hover\\:bg-primary:hover,
+      section#blogs .col-lg-4:focus,
+      section#blogs .col-md-6:focus,
+      section#blogs .col-12:focus {
+        background: transparent !important;
+        background-color: transparent !important;
+        box-shadow: none !important;
+      }
+
+      /* Disable pointer events on containers to prevent hover */
+      section#blogs .col-lg-4,
+      section#blogs .col-md-6,
+      section#blogs .col-12 {
+        pointer-events: auto !important;
+      }
+
+      /* But allow pointer events on the content inside */
+      section#blogs .col-lg-4 *,
+      section#blogs .col-md-6 *,
+      section#blogs .col-12 * {
+        pointer-events: auto !important;
+      }
+
+      /* ULTIMATE OVERRIDE: Force no hover effects with every possible selector combination */
+      html body section#blogs.services .row .col-lg-4:hover,
+      html body section#blogs.services .row .col-md-6:hover,
+      html body section#blogs.services .row .col-12:hover,
+      html body section#blogs.services .row .col-lg-4:hover .icon-box,
+      html body section#blogs.services .row .col-md-6:hover .icon-box,
+      html body section#blogs.services .row .col-12:hover .icon-box,
+      html body section#blogs.services .container .row .col-lg-4:hover,
+      html body section#blogs.services .container .row .col-md-6:hover,
+      html body section#blogs.services .container .row .col-12:hover,
+      html body .services#blogs .icon-box:hover,
+      html body .services#blogs .row .col-lg-4:hover .icon-box,
+      html body .services#blogs .row .col-md-6:hover .icon-box,
+      html body .services#blogs .row .col-12:hover .icon-box {
+        background: transparent !important;
+        background-color: transparent !important;
+        border: none !important;
+        border-color: transparent !important;
+        box-shadow: none !important;
+        transform: none !important;
+        transition: none !important;
+        animation: none !important;
+        opacity: 1 !important;
+        filter: none !important;
+        transform: none !important;
+        transform-origin: center !important;
+        transform-style: flat !important;
+        scale: 1 !important;
+        translate: 0 0 !important;
+        rotate: 0deg !important;
+        will-change: auto !important;
+      }
+
+      /* PREVENT ALL MOVEMENT: Force static positioning and no transforms */
+      section#blogs *,
+      section#blogs .icon-box,
+      section#blogs .icon,
+      section#blogs .col-lg-4,
+      section#blogs .col-md-6,
+      section#blogs .col-12 {
+        transform: none !important;
+        transform-style: flat !important;
+        transition: none !important;
+        animation: none !important;
+        scale: 1 !important;
+        translate: 0 0 !important;
+        rotate: 0deg !important;
+        will-change: auto !important;
+        backface-visibility: visible !important;
+        perspective: none !important;
+      }
+
+      section#blogs *:hover,
+      section#blogs *:focus,
+      section#blogs *:active,
+      section#blogs .icon-box:hover,
+      section#blogs .icon:hover,
+      section#blogs .col-lg-4:hover,
+      section#blogs .col-md-6:hover,
+      section#blogs .col-12:hover {
+        transform: none !important;
+        transform-style: flat !important;
+        transition: none !important;
+        animation: none !important;
+        scale: 1 !important;
+        translate: 0 0 !important;
+        rotate: 0deg !important;
+        will-change: auto !important;
+      }
+
+      /* DESKTOP ONLY: Reduce image size by 25% and add padding */
+      section#blogs .icon img {
+        width: 82.5px !important;
+        height: 82.5px !important;
+        object-fit: contain !important;
+        aspect-ratio: 1 / 1 !important;
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+        box-sizing: border-box !important;
+      }
+
+      /* Override inline styles with maximum specificity for desktop */
+      section#blogs.services .icon img[style] {
+        width: 82.5px !important;
+        height: 82.5px !important;
+        object-fit: contain !important;
+        aspect-ratio: 1 / 1 !important;
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+        box-sizing: border-box !important;
+      }
+
+      /* DESKTOP ONLY: Read Articles button - black color, no underline */
+      section#blogs .blog-button {
+        color: #000000 !important;
+        text-decoration: none !important;
+        background: transparent !important;
+        background-color: transparent !important;
+      }
+
+      section#blogs .blog-button:hover {
+        color: #000000 !important;
+        text-decoration: none !important;
+        background: transparent !important;
+        background-color: transparent !important;
+      }
+
+      /* Specifically target the services class hover effects with maximum specificity */
+      section#blogs.services .icon-box:hover {
+        background: transparent !important;
+        background-color: transparent !important;
+        border: none !important;
+        border-color: transparent !important;
+        border-width: 0 !important;
+        border-style: none !important;
+      }
+
+      section#blogs.services .icon-box:hover .icon {
+        background: transparent !important;
+        background-color: transparent !important;
+        border: none !important;
+        border-color: transparent !important;
+        border-width: 0 !important;
+        border-style: none !important;
+      }
+
+      /* Override any possible border effects on all blog elements */
+      #blogs *:hover {
+        border: none !important;
+        border-color: transparent !important;
+        border-width: 0 !important;
+        border-style: none !important;
+        outline: none !important;
+      }
+    }
+
+    /* ===== MOBILE VIEW - MATCH RECOMMENDATION SECTION EXACTLY ===== */
+    @media (max-width: 991px) {
       #blogs .row {
-        display: block !important;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
       }
 
       #blogs .col-lg-4,
@@ -3244,12 +3638,274 @@
       #blogs .col-12 {
         flex: 0 0 100% !important;
         max-width: 100% !important;
-        margin-bottom: 15px;
+        margin-bottom: 14px !important;
         padding: 0 !important;
+        border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+        padding-bottom: 14px !important;
+        -webkit-tap-highlight-color: transparent !important;
+        -webkit-touch-callout: none !important;
+        -webkit-user-select: none !important;
+        -moz-user-select: none !important;
+        -ms-user-select: none !important;
+        user-select: none !important;
+        pointer-events: none !important;
+        outline: none !important;
+      }
+
+      #blogs .col-lg-4:last-child,
+      #blogs .col-md-6:last-child,
+      #blogs .col-12:last-child {
+        border-bottom: 3px solid rgba(0, 0, 0, 0.1) !important;
+        margin-bottom: 14px !important;
+        padding-bottom: 14px !important;
+        -webkit-tap-highlight-color: transparent !important;
+        -webkit-touch-callout: none !important;
+        -webkit-user-select: none !important;
+        -moz-user-select: none !important;
+        -ms-user-select: none !important;
+        user-select: none !important;
+        pointer-events: none !important;
+        outline: none !important;
       }
 
       #blogs .icon-box {
-        padding: 30px !important;
+        background: none !important;
+        border: none !important;
+        border-radius: 0;
+        padding: 18px 0 !important;
+        padding-left: 15px !important;
+        box-shadow: none !important;
+        display: flex !important;
+        align-items: center !important;
+        text-align: left !important;
+        margin: 0 !important;
+        transition: none !important;
+        animation: none !important;
+        pointer-events: auto !important;
+      }
+
+      /* Completely disable all interactive states for columns and icon-boxes */
+      #blogs .col-lg-4:hover,
+      #blogs .col-lg-4:active,
+      #blogs .col-lg-4:focus,
+      #blogs .col-md-6:hover,
+      #blogs .col-md-6:active,
+      #blogs .col-md-6:focus,
+      #blogs .col-12:hover,
+      #blogs .col-12:active,
+      #blogs .col-12:focus,
+      #blogs .icon-box:hover,
+      #blogs .icon-box:active,
+      #blogs .icon-box:focus {
+        background: none !important;
+        border-bottom: 3px solid rgba(0, 0, 0, 0.1) !important;
+        border-top: none !important;
+        border-left: none !important;
+        border-right: none !important;
+        box-shadow: none !important;
+        transform: none !important;
+        transition: none !important;
+        animation: none !important;
+        -webkit-tap-highlight-color: transparent !important;
+        outline: none !important;
+      }
+
+      /* Disable interactive states for last child elements too */
+      #blogs .col-lg-4:last-child:hover,
+      #blogs .col-lg-4:last-child:active,
+      #blogs .col-lg-4:last-child:focus,
+      #blogs .col-md-6:last-child:hover,
+      #blogs .col-md-6:last-child:active,
+      #blogs .col-md-6:last-child:focus,
+      #blogs .col-12:last-child:hover,
+      #blogs .col-12:last-child:active,
+      #blogs .col-12:last-child:focus {
+        background: none !important;
+        border-bottom: 3px solid rgba(0, 0, 0, 0.1) !important;
+        border-top: none !important;
+        border-left: none !important;
+        border-right: none !important;
+        box-shadow: none !important;
+        transform: none !important;
+        transition: none !important;
+        animation: none !important;
+        -webkit-tap-highlight-color: transparent !important;
+        outline: none !important;
+      }
+
+      /* Re-enable pointer events for clickable content */
+      #blogs .icon-box *,
+      #blogs .title a,
+      #blogs .blog-button,
+      #blogs .blog-content,
+      #blogs .blog-content * {
+        pointer-events: auto !important;
+        -webkit-tap-highlight-color: rgba(66, 133, 244, 0.2) !important;
+      }
+
+      /* Blog image container - match recommendation structure exactly */
+      #blogs .icon {
+        margin-right: 8px !important;
+        margin-bottom: 0 !important;
+        flex-shrink: 0 !important;
+        width: 77px !important;
+        height: 77px !important;
+        background: none !important;
+        border-radius: 0 !important;
+        justify-content: flex-start !important;
+        transform: none !important;
+        transform-style: flat !important;
+        transition: none !important;
+        display: block !important;
+        overflow: hidden !important;
+      }
+
+      #blogs .icon img {
+        width: 77px !important;
+        height: 77px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        object-fit: cover !important;
+        border-radius: 0 !important;
+        border: none !important;
+        box-shadow: none !important;
+        background: transparent !important;
+        display: block !important;
+        -webkit-tap-highlight-color: transparent !important;
+        -webkit-touch-callout: none !important;
+        -webkit-user-select: none !important;
+        -moz-user-select: none !important;
+        -ms-user-select: none !important;
+        user-select: none !important;
+        pointer-events: none !important;
+        outline: none !important;
+      }
+
+      /* Remove all possible blue backgrounds on tap/focus/active states */
+      #blogs .icon img:focus,
+      #blogs .icon img:active,
+      #blogs .icon img:hover,
+      #blogs .icon:focus,
+      #blogs .icon:active,
+      #blogs .icon:hover {
+        background: transparent !important;
+        outline: none !important;
+        border: none !important;
+        box-shadow: none !important;
+        -webkit-tap-highlight-color: transparent !important;
+      }
+
+      /* Override ALL existing hover/active/focus states with maximum specificity */
+      section#blogs.services .icon-box:hover,
+      section#blogs.services .icon-box:active,
+      section#blogs.services .icon-box:focus,
+      .services#blogs .icon-box:hover,
+      .services#blogs .icon-box:active,
+      .services#blogs .icon-box:focus,
+      html body .services#blogs .icon-box:hover,
+      html body .services#blogs .icon-box:active,
+      html body .services#blogs .icon-box:focus {
+        background: none !important;
+        border: none !important;
+        box-shadow: none !important;
+        transform: none !important;
+        transition: none !important;
+        animation: none !important;
+        -webkit-tap-highlight-color: transparent !important;
+        outline: none !important;
+      }
+
+      /* Override inline styles with maximum specificity */
+      section#blogs .services .icon-box .icon img[style] {
+        width: 77px !important;
+        height: 77px !important;
+      }
+
+      /* Blog info section - match recommendation-info exactly */
+      #blogs .blog-content {
+        flex: 1 !important;
+      }
+
+      /* Blog title styling - match recommendation name */
+      #blogs .title,
+      #blogs h5.title,
+      #blogs h6.title {
+        font-weight: 800 !important;
+        margin: 0 !important;
+        color: #000000 !important;
+        font-size: 1rem !important;
+        line-height: 1.2 !important;
+      }
+
+      #blogs .title a,
+      #blogs h5.title a,
+      #blogs h6.title a {
+        color: #000000 !important;
+        text-decoration: none !important;
+        font-weight: 800 !important;
+        font-size: 1rem !important;
+      }
+
+      #blogs .title a b,
+      #blogs h5.title a b,
+      #blogs h6.title a b {
+        font-weight: 800 !important;
+        font-size: 1rem !important;
+        color: #000000 !important;
+      }
+
+      /* Override inline color styles with maximum specificity */
+      section#blogs .services .icon-box .blog-content .title a[style] {
+        color: #000000 !important;
+      }
+
+      section#blogs .services .icon-box .blog-content h5.title a[style],
+      section#blogs .services .icon-box .blog-content h6.title a[style] {
+        color: #000000 !important;
+      }
+
+      /* Blog description - match recommendation title */
+      #blogs .description {
+        color: #666666 !important;
+        margin: 4px 0 !important;
+        font-size: 0.75rem !important;
+        line-height: 1.4 !important;
+        font-weight: normal !important;
+      }
+
+      /* Override bold tags in descriptions */
+      #blogs .description b {
+        font-weight: normal !important;
+      }
+
+      /* Blog button - match LinkedIn button exactly */
+      #blogs .blog-button {
+        color: #ffffff !important;
+        text-decoration: none !important;
+        font-size: 0.75rem !important;
+        display: inline-flex !important;
+        align-items: left !important;
+        font-weight: 800 !important;
+        background-color: #4284F4 !important;
+        padding: 4px 8px !important;
+        border-radius: 4px !important;
+        margin-top: 8px !important;
+        align-self: flex-start !important;
+      }
+
+      #blogs .blog-button:hover {
+        background-color: #4284F4 !important;
+        color: #ffffff !important;
+      }
+
+      /* Blog content section - appears below header */
+      #blogs .blog-description {
+        color: #333333 !important;
+        line-height: 1.5 !important;
+        font-size: 0.92rem !important;
+        text-align: justify !important;
+        text-align-last: left !important;
+        margin-top: 15px !important;
       }
 
       .mobile-blog-image {
