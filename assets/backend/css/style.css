@@ -1590,15 +1590,22 @@ body.loaded {
 body .research-badges .badge,
 body .badge-container .badge,
 body .skill-badges .badge {
-  height: 22px !important;
+  height: auto !important;
   width: auto !important;
   min-width: auto !important;
   max-width: none !important;
-  display: flex !important;
+  display: inline-flex !important;
   align-items: center !important;
+  background-color: #f7f9f9 !important;
+  border-radius: 6px !important;
   padding: 8px 12px !important;
+  text-decoration: none !important;
+  font-weight: bold !important;
+  font-size: 14px !important;
   box-sizing: border-box !important;
   flex: 0 0 auto !important;
+  border-left-width: 5px !important;
+  border-left-style: solid !important;
 }
 
 body .research-badges .badge-logo,
