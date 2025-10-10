@@ -1834,7 +1834,7 @@
       <div class="section-title">
         <h2 class="interest-heading"><b>Recommendation</b></h2>
         <div class="mobile-recom-image" style="display: none; margin: 15px 0;">
-          <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/recommendation/rcom.JPG"
+          <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/recommendation/recommendation.jpg"
             alt="Recommendations" style="width: 100%; border-radius: 8px;">
         </div>
       </div>
@@ -3224,6 +3224,11 @@
           </div>
         </div>
       </div>
+      <!-- Mobile-only Blog Image -->
+      <div class="mobile-blog-image" style="display: none; margin: 15px 0;">
+        <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/blogs/blog.png" 
+             alt="Blog GIF" style="width: 100%; border-radius: 8px;">
+      </div>
     </div>
   </section>
   <style>
@@ -3916,9 +3921,16 @@
       }
 
       .mobile-blog-image {
+        display: block !important;
+        margin: 15px 0;
+        padding: 0;
+      }
+
+      .mobile-blog-image img {
+        width: 100%;
+        height: auto;
         display: block;
-        padding-left: 0;
-        padding-right: 0;
+        border-radius: 8px;
       }
     }
   </style>
@@ -3928,7 +3940,7 @@
     <div class="container">
       <div class="section-title">
         <h2><b>Contact</b></h2>
-        <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/GIF/contact/conhdr.png"
+        <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/contact/conhdr.png"
           alt="Contact Header" class="mobile-only contact-img">
       </div>
       <div>
@@ -4043,6 +4055,11 @@
         </button>
         <div class="form-status" id="form-status"></div>
       </form>
+      <!-- Mobile-only Contact Image -->
+      <div class="mobile-contact-image" style="display: none; margin: 15px 0;">
+        <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/contact/contact.png" 
+             alt="Contact GIF" style="width: 100%; border-radius: 8px;">
+      </div>
     </div>
   </section>
   <style>
@@ -4055,6 +4072,23 @@
     @media (max-width: 767px) {
       .mobile-only {
         display: block;
+      }
+
+      .contact-img {
+        margin-top: 5px;
+      }
+
+      .mobile-contact-image {
+        display: block !important;
+        margin: 25px 0 15px 0;
+        padding: 0;
+      }
+
+      .mobile-contact-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
       }
     }
 
