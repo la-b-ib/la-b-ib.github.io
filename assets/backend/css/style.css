@@ -1657,8 +1657,8 @@ body .skill-badges .badge-text {
   z-index: 1;
   pointer-events: none;
   background: transparent;
-  filter: blur(20px);
-  -webkit-filter: blur(20px);
+  filter: blur(25px);
+  -webkit-filter: blur(25px);
 }
 
 
