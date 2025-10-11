@@ -657,6 +657,13 @@
       /* Rounds corners */
     }
 
+    /* Desktop only: Remove border from contribution activity container */
+    @media (min-width: 992px) {
+      .contribution-container {
+        border: none !important;
+      }
+    }
+
     .contribution-graph img {
       width: 100%;
       height: auto;
@@ -3190,9 +3197,9 @@
       <div class="section-title">
         <h2><b>Blogs</b></h2>
       </div>
-      <div class="row">
+      <div class="row blog-container">
         <!-- BRACU Express -->
-        <div class="col-lg-4 col-md-6 col-12">
+        <div class="col-blog col-md-6 col-12">
           <div class="icon-box">
             <div class="icon">
               <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/blogs/bracuexpress.jpeg"
@@ -3201,7 +3208,7 @@
             <div class="blog-content">
               <h5 class="title">
                 <a href="https://bracuexpress.com/author/labib/" target="_blank" style="color: #4285F4;"><b>BRACU
-                    Express</b></a>
+                    Expr</b></a>
               </h5>
               <p class="description"><b>NEWS & STORIES</b></p>
               <a href="https://bracuexpress.com/author/labib/" target="_blank" class="blog-button">Read Articles</a>
@@ -3209,7 +3216,7 @@
           </div>
         </div>
         <!-- Newsletter -->
-        <div class="col-lg-4 col-md-6 col-12">
+        <div class="col-blog col-md-6 col-12">
           <div class="icon-box">
             <div class="icon">
               <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/blogs/newsletter.png"
@@ -3225,7 +3232,59 @@
             </div>
           </div>
         </div>
+        <!-- DeV.to -->
+        <div class="col-blog col-md-6 col-12">
+          <div class="icon-box">
+            <div class="icon">
+              <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/blogs/dev%20blog.png"
+                style="width: 110px; height: 110px;" tabindex="-1" />
+            </div>
+            <div class="blog-content">
+              <h6 class="title">
+                <a href="https://dev.to/la-b-ib" target="_blank"
+                  style="color: #4285F4;"><b>Dev.to</b></a>
+              </h6>
+              <p class="description"><b>Dev Blogs</b></p>
+              <a href="https://dev.to/la-b-ib" target="_blank" class="blog-button">Read Articles</a>
+            </div>
+          </div>
+        </div>
+        <!-- Medium -->
+        <div class="col-blog col-md-6 col-12">
+          <div class="icon-box">
+            <div class="icon">
+              <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/blogs/Medium.png"
+                style="width: 110px; height: 110px;" tabindex="-1" />
+            </div>
+            <div class="blog-content">
+              <h6 class="title">
+                <a href="https://medium.com/@la-b-ib" target="_blank"
+                  style="color: #4285F4;"><b>Medium</b></a>
+              </h6>
+              <p class="description"><b>Tech Blogs</b></p>
+              <a href="https://medium.com/@la-b-ib" target="_blank" class="blog-button">Read Articles</a>
+            </div>
+          </div>
+        </div>
+        <!-- Wattpad -->
+        <div class="col-blog col-md-6 col-12">
+          <div class="icon-box">
+            <div class="icon">
+              <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/blogs/wattpad.png"
+                style="width: 110px; height: 110px;" tabindex="-1" />
+            </div>
+            <div class="blog-content">
+              <h6 class="title">
+                <a href="https://www.wattpad.com/user/la-b-ib-" target="_blank"
+                  style="color: #4285F4;"><b>Wattpad</b></a>
+              </h6>
+              <p class="description"><b>Fict & Stories</b></p>
+              <a href="https://www.wattpad.com/user/la-b-ib-" target="_blank" class="blog-button">Read Articles</a>
+            </div>
+          </div>
+        </div>
       </div>
+
       <!-- Mobile-only Blog Image -->
       <div class="mobile-blog-image" style="display: none; margin: 15px 0;">
         <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/blogs/blog.png" 
@@ -3257,14 +3316,14 @@
     }
 
     #blogs .title a {
-      color: #000000;
+      color: #4285F4 !important;
       text-decoration: none;
       font-weight: bold;
       font-size: 18px;
     }
 
     #blogs .title a:hover {
-      color: #4285F4;
+      color: #4285F4 !important;
     }
 
     #blogs .description {
@@ -3274,11 +3333,79 @@
       font-weight: bold;
     }
 
-    /* ===== DESKTOP VIEW (EXACTLY ORIGINAL) ===== */
+    /* ===== DESKTOP VIEW (5 ITEMS PER ROW) ===== */
     @media (min-width: 992px) {
-      #blogs .col-lg-4 {
-        flex: 0 0 33.333333%;
-        width: 33.333333%;
+      #blogs .col-blog {
+        flex: 0 0 20%;
+        width: 20%;
+      }
+
+      /* Match blog row padding with section title alignment - copy exact pattern from interests */
+      #blogs .blog-container {
+        margin-left: -15px !important;
+        margin-right: -15px !important;
+      }
+
+      #blogs .blog-container .col-blog {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+      }
+
+      /* Desktop only: Individual blog entry container styling with maximum specificity */
+      html body section#blogs.services .icon-box {
+        background: #ffffff !important;
+        background-color: #ffffff !important;
+        border: 15px solid #e8f0fe !important;
+        border-color: #e8f0fe !important;
+        border-width: 15px !important;
+        border-style: solid !important;
+        backdrop-filter: blur(15px) !important;
+        -webkit-backdrop-filter: blur(15px) !important;
+        box-sizing: border-box !important;
+        transform: none !important;
+        transition: none !important;
+        position: relative !important;
+        aspect-ratio: 1 / 1 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin: 0 !important;
+      }
+
+      /* Override ALL possible interaction states with maximum specificity */
+      html body section#blogs.services .icon-box:hover,
+      html body section#blogs.services .icon-box:active,
+      html body section#blogs.services .icon-box:focus,
+      html body section#blogs.services .icon-box:visited,
+      html body .services#blogs .icon-box:hover,
+      html body .services#blogs .icon-box:active,
+      html body .services#blogs .icon-box:focus {
+        background: #ffffff !important;
+        background-color: #ffffff !important;
+        border: 15px solid #e8f0fe !important;
+        border-color: #e8f0fe !important;
+        border-width: 15px !important;
+        border-style: solid !important;
+        transform: none !important;
+        transition: none !important;
+        position: relative !important;
+        box-sizing: border-box !important;
+        outline: none !important;
+        box-shadow: none !important;
+        aspect-ratio: 1 / 1 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+      }
+
+      /* Override the global border: none rules specifically for blogs */
+      html body section#blogs.services .icon-box,
+      html body section#blogs.services .icon-box:hover,
+      html body section#blogs.services .icon-box:active,
+      html body section#blogs.services .icon-box:focus {
+        border: 15px solid #e8f0fe !important;
       }
 
       .mobile-blog-image {
@@ -3294,7 +3421,7 @@
     #blogs .icon img,
     #blogs .icon-box,
     #blogs .icon-box *,
-    #blogs .col-lg-4,
+    #blogs .col-blog,
     #blogs .col-md-6,
     #blogs .col-12 {
       -webkit-tap-highlight-color: transparent !important;
@@ -3312,7 +3439,7 @@
       --bs-blue: transparent !important;
     }
 
-    /* All possible interaction states */
+    /* All possible interaction states - EXCEPT desktop icon-box which needs special treatment */
     #blogs *:focus,
     #blogs *:active,
     #blogs *:hover,
@@ -3322,10 +3449,7 @@
     #blogs .icon img:focus,
     #blogs .icon img:active,
     #blogs .icon img:hover,
-    #blogs .icon-box:focus,
-    #blogs .icon-box:active,
-    #blogs .icon-box:hover,
-    #blogs .col-lg-4:focus,
+    #blogs .col-blog:focus,
     #blogs .col-md-6:focus,
     #blogs .col-12:focus {
       background: transparent !important;
@@ -3339,13 +3463,27 @@
       --bs-focus-ring-opacity: 0 !important;
     }
 
+    /* Mobile/Tablet only: Apply border removal to icon-box */
+    @media (max-width: 991px) {
+      #blogs .icon-box:focus,
+      #blogs .icon-box:active,
+      #blogs .icon-box:hover {
+        background: transparent !important;
+        background-color: transparent !important;
+        outline: none !important;
+        border: none !important;
+        box-shadow: none !important;
+        -webkit-tap-highlight-color: transparent !important;
+      }
+    }
+
     /* Override pseudo-elements that might create backgrounds, but preserve section title line */
     #blogs .icon::before,
     #blogs .icon::after,
     #blogs .icon-box::before,
     #blogs .icon-box::after,
-    #blogs .col-lg-4::before,
-    #blogs .col-lg-4::after,
+    #blogs .col-blog::before,
+    #blogs .col-blog::after,
     #blogs .col-md-6::before,
     #blogs .col-md-6::after,
     #blogs .col-12::before,
@@ -3369,18 +3507,19 @@
 
     /* ===== DESKTOP ONLY - DISABLE ALL HOVER EFFECTS ===== */
     @media (min-width: 992px) {
-      /* COMPLETELY DISABLE .services .icon-box:hover with maximum specificity */
+      /* OVERRIDE: Keep white background and blue border for desktop blog containers */
       section#blogs.services .icon-box:hover,
       section#blogs.services .icon-box:focus,
       section#blogs.services .icon-box:active,
       .services#blogs .icon-box:hover,
       .services#blogs .icon-box:focus,
       .services#blogs .icon-box:active {
-        background: transparent !important;
-        background-color: transparent !important;
-        border: none !important;
-        border-color: transparent !important;
-        border-width: 0 !important;
+        background: #ffffff !important;
+        background-color: #ffffff !important;
+        border: 15px solid #e8f0fe !important;
+        border-color: #e8f0fe !important;
+        border-width: 15px !important;
+        border-style: solid !important;
         transform: none !important;
         box-shadow: none !important;
         transition: none !important;
@@ -3414,17 +3553,40 @@
       section#blogs.services .icon-box:hover h4 a,
       section#blogs.services .icon-box:hover p,
       section#blogs.services .icon-box:hover .title,
-      section#blogs.services .icon-box:hover .title a,
-      section#blogs.services .icon-box:hover h5.title a,
-      section#blogs.services .icon-box:hover h6.title a,
       section#blogs.services .icon-box:hover .description {
         color: inherit !important;
       }
 
-      /* Keep original colors - no hover color changes */
+      /* Keep title links blue always */
+      section#blogs.services .icon-box:hover .title a,
+      section#blogs.services .icon-box:hover h5.title a,
+      section#blogs.services .icon-box:hover h6.title a,
+      section#blogs.services .icon-box:active .title a,
+      section#blogs.services .icon-box:active h5.title a,
+      section#blogs.services .icon-box:active h6.title a,
+      section#blogs.services .icon-box:focus .title a,
+      section#blogs.services .icon-box:focus h5.title a,
+      section#blogs.services .icon-box:focus h6.title a {
+        color: #4285F4 !important;
+      }
+
+      /* Desktop only: Blog title colors - always blue, no color changes on interaction */
+      #blogs .title a,
+      #blogs h5.title a,
+      #blogs h6.title a {
+        color: #4285F4 !important;
+        text-decoration: none !important;
+      }
+
       #blogs .title a:hover,
       #blogs h5.title a:hover,
-      #blogs h6.title a:hover {
+      #blogs h6.title a:hover,
+      #blogs .title a:active,
+      #blogs h5.title a:active,
+      #blogs h6.title a:active,
+      #blogs .title a:focus,
+      #blogs h5.title a:focus,
+      #blogs h6.title a:focus {
         color: #4285F4 !important;
         text-decoration: none !important;
       }
@@ -3433,9 +3595,35 @@
         color: #666666 !important;
       }
 
-      #blogs .blog-button:hover {
-        background-color: #4284F4 !important;
-        color: #ffffff !important;
+      /* Desktop only: Make Read Articles text match paragraph styling */
+      #blogs .blog-button,
+      section#blogs .blog-button,
+      section#blogs.services .blog-button {
+        color: #000000 !important;
+        text-decoration: none !important;
+        background: transparent !important;
+        background-color: transparent !important;
+        border: none !important;
+        font-size: 14px !important;
+        font-weight: bold !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        font-family: inherit !important;
+      }
+
+      #blogs .blog-button:hover,
+      section#blogs .blog-button:hover,
+      section#blogs.services .blog-button:hover,
+      #blogs .blog-button:active,
+      section#blogs .blog-button:active,
+      section#blogs.services .blog-button:active,
+      #blogs .blog-button:focus,
+      section#blogs .blog-button:focus,
+      section#blogs.services .blog-button:focus {
+        color: #000000 !important;
+        text-decoration: none !important;
+        background: transparent !important;
+        background-color: transparent !important;
         transform: none !important;
         box-shadow: none !important;
       }
@@ -3448,16 +3636,16 @@
       }
 
       /* Nuclear option: Disable ALL possible hover effects on blog containers */
-      section#blogs.services .col-lg-4,
+      section#blogs.services .col-blog,
       section#blogs.services .col-md-6,
       section#blogs.services .col-12,
-      section#blogs.services .col-lg-4:hover,
+      section#blogs.services .col-blog:hover,
       section#blogs.services .col-md-6:hover,
       section#blogs.services .col-12:hover,
-      section#blogs .col-lg-4:hover,
+      section#blogs .col-blog:hover,
       section#blogs .col-md-6:hover,
       section#blogs .col-12:hover,
-      #blogs .col-lg-4:hover,
+      #blogs .col-blog:hover,
       #blogs .col-md-6:hover,
       #blogs .col-12:hover {
         background: transparent !important;
@@ -3478,10 +3666,10 @@
       }
 
       /* Override any Bootstrap focus/hover utilities */
-      section#blogs .col-lg-4.hover\\:bg-primary:hover,
+      section#blogs .col-blog.hover\\:bg-primary:hover,
       section#blogs .col-md-6.hover\\:bg-primary:hover,
       section#blogs .col-12.hover\\:bg-primary:hover,
-      section#blogs .col-lg-4:focus,
+      section#blogs .col-blog:focus,
       section#blogs .col-md-6:focus,
       section#blogs .col-12:focus {
         background: transparent !important;
@@ -3490,33 +3678,26 @@
       }
 
       /* Disable pointer events on containers to prevent hover */
-      section#blogs .col-lg-4,
+      section#blogs .col-blog,
       section#blogs .col-md-6,
       section#blogs .col-12 {
         pointer-events: auto !important;
       }
 
       /* But allow pointer events on the content inside */
-      section#blogs .col-lg-4 *,
+      section#blogs .col-blog *,
       section#blogs .col-md-6 *,
       section#blogs .col-12 * {
         pointer-events: auto !important;
       }
 
-      /* ULTIMATE OVERRIDE: Force no hover effects with every possible selector combination */
-      html body section#blogs.services .row .col-lg-4:hover,
+      /* ULTIMATE OVERRIDE: Keep white background and blue border for icon-box, transparent for columns */
+      html body section#blogs.services .row .col-blog:hover,
       html body section#blogs.services .row .col-md-6:hover,
       html body section#blogs.services .row .col-12:hover,
-      html body section#blogs.services .row .col-lg-4:hover .icon-box,
-      html body section#blogs.services .row .col-md-6:hover .icon-box,
-      html body section#blogs.services .row .col-12:hover .icon-box,
-      html body section#blogs.services .container .row .col-lg-4:hover,
+      html body section#blogs.services .container .row .col-blog:hover,
       html body section#blogs.services .container .row .col-md-6:hover,
-      html body section#blogs.services .container .row .col-12:hover,
-      html body .services#blogs .icon-box:hover,
-      html body .services#blogs .row .col-lg-4:hover .icon-box,
-      html body .services#blogs .row .col-md-6:hover .icon-box,
-      html body .services#blogs .row .col-12:hover .icon-box {
+      html body section#blogs.services .container .row .col-12:hover {
         background: transparent !important;
         background-color: transparent !important;
         border: none !important;
@@ -3527,20 +3708,46 @@
         animation: none !important;
         opacity: 1 !important;
         filter: none !important;
+      }
+
+      /* CRITICAL: Override for icon-box specifically - keep white background and blue border */
+      html body section#blogs.services .row .col-blog:hover .icon-box,
+      html body section#blogs.services .row .col-md-6:hover .icon-box,
+      html body section#blogs.services .row .col-12:hover .icon-box,
+      html body .services#blogs .icon-box:hover,
+      html body .services#blogs .row .col-blog:hover .icon-box,
+      html body .services#blogs .row .col-md-6:hover .icon-box,
+      html body .services#blogs .row .col-12:hover .icon-box {
+        background: #ffffff !important;
+        background-color: #ffffff !important;
+        border: 15px solid #e8f0fe !important;
+        border-color: #e8f0fe !important;
+        border-width: 15px !important;
+        border-style: solid !important;
+        box-shadow: none !important;
         transform: none !important;
+        transition: none !important;
+        animation: none !important;
+        opacity: 1 !important;
+        filter: none !important;
         transform-origin: center !important;
         transform-style: flat !important;
         scale: 1 !important;
         translate: 0 0 !important;
         rotate: 0deg !important;
         will-change: auto !important;
+        aspect-ratio: 1 / 1 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
       }
 
       /* PREVENT ALL MOVEMENT: Force static positioning and no transforms */
       section#blogs *,
       section#blogs .icon-box,
       section#blogs .icon,
-      section#blogs .col-lg-4,
+      section#blogs .col-blog,
       section#blogs .col-md-6,
       section#blogs .col-12 {
         transform: none !important;
@@ -3560,7 +3767,7 @@
       section#blogs *:active,
       section#blogs .icon-box:hover,
       section#blogs .icon:hover,
-      section#blogs .col-lg-4:hover,
+      section#blogs .col-blog:hover,
       section#blogs .col-md-6:hover,
       section#blogs .col-12:hover {
         transform: none !important;
@@ -3647,7 +3854,7 @@
         gap: 0;
       }
 
-      #blogs .col-lg-4,
+      #blogs .col-blog,
       #blogs .col-md-6,
       #blogs .col-12 {
         flex: 0 0 100% !important;
@@ -3666,7 +3873,7 @@
         outline: none !important;
       }
 
-      #blogs .col-lg-4:last-child,
+      #blogs .col-blog:last-child,
       #blogs .col-md-6:last-child,
       #blogs .col-12:last-child {
         border-bottom: 3px solid rgba(0, 0, 0, 0.1) !important;
@@ -3699,9 +3906,9 @@
       }
 
       /* Completely disable all interactive states for columns and icon-boxes */
-      #blogs .col-lg-4:hover,
-      #blogs .col-lg-4:active,
-      #blogs .col-lg-4:focus,
+      #blogs .col-blog:hover,
+      #blogs .col-blog:active,
+      #blogs .col-blog:focus,
       #blogs .col-md-6:hover,
       #blogs .col-md-6:active,
       #blogs .col-md-6:focus,
@@ -3725,9 +3932,9 @@
       }
 
       /* Disable interactive states for last child elements too */
-      #blogs .col-lg-4:last-child:hover,
-      #blogs .col-lg-4:last-child:active,
-      #blogs .col-lg-4:last-child:focus,
+      #blogs .col-blog:last-child:hover,
+      #blogs .col-blog:last-child:active,
+      #blogs .col-blog:last-child:focus,
       #blogs .col-md-6:last-child:hover,
       #blogs .col-md-6:last-child:active,
       #blogs .col-md-6:last-child:focus,
