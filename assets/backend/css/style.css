@@ -357,93 +357,31 @@ h6 {
   position: relative !important;
 }
 
-.mobile-nav a .material-icons.mobile-menu-icon {
-  /* Font Properties */
-  font-family: 'Material Icons' !important;
-  font-size: 30px !important;
-  /* Increased from 24px */
-  font-weight: normal !important;
-  font-style: normal !important;
-  color: #4285F4 !important;
-  /* Pure black */
+.mobile-nav a .mobile-menu-icon {
   /* Sizing & Spacing */
-  min-width: 26px !important;
-  width: 26px !important;
-  height: 26px !important;
-  line-height: 1 !important;
-  margin-right: 15px !important;
+  width: 24px !important;
+  height: 24px !important;
+  margin-right: 12px !important;
   flex-shrink: 0 !important;
-  /* Color & Display */
-  color: #4285F4 !important;
+  /* Display */
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  /* Rendering Optimizations */
-  -webkit-font-smoothing: antialiased !important;
-  text-rendering: optimizeLegibility !important;
-}
-
-/* iOS SPECIFIC FIXES */
-@supports (-webkit-touch-callout: none) {
-  .mobile-nav a .material-icons.mobile-menu-icon {
-    -webkit-text-stroke: 0.45px #4285F4 !important;
-    text-shadow: 0 0 0.5px rgba(66, 133, 244, 0.7) !important;
-  }
-}
-
-/* ICON CONTENT - FIXED TO MATCH YOUR HTML (#portfolio instead of #projects) */
-.mobile-nav a[href*="#header"] .material-icons.mobile-menu-icon::before {
-  content: "home";
-}
-
-.mobile-nav a[href*="#about"] .material-icons.mobile-menu-icon::before {
-  content: "person";
-}
-
-.mobile-nav a[href*="#education"] .material-icons.mobile-menu-icon::before {
-  content: "school";
-}
-
-.mobile-nav a[href*="#certification"] .material-icons.mobile-menu-icon::before {
-  content: "verified";
-}
-
-.mobile-nav a[href*="#research"] .material-icons.mobile-menu-icon::before {
-  content: "science";
-}
-
-.mobile-nav a[href*="#experience"] .material-icons.mobile-menu-icon::before {
-  content: "work_history";
-}
-
-.mobile-nav a[href*="#portfolio"] .material-icons.mobile-menu-icon::before {
-  content: "api";
-}
-
-/* Fixed from #projects to #portfolio */
-.mobile-nav a[href*="#skills"] .material-icons.mobile-menu-icon::before {
-  content: "skull";
-}
-
-.mobile-nav a[href*="#blogs"] .material-icons.mobile-menu-icon::before {
-  content: "newsmode";
-}
-
-.mobile-nav a[href*="#contact"] .material-icons.mobile-menu-icon::before {
-  content: "email";
+  vertical-align: middle !important;
+  /* Rendering */
+  object-fit: contain !important;
 }
 
 /* ACTIVE STATE */
-.mobile-nav .active a .material-icons.mobile-menu-icon {
-  color: #4285F4 !important;
-  transform: scale(1.05) !important;
+.mobile-nav .active a .mobile-menu-icon {
+  transform: scale(1.1) !important;
+  filter: brightness(1.1) !important;
 }
 
-/* FALLBACK FOR WHEN ICONS DON'T LOAD */
-.mobile-nav a i.mobile-menu-icon:empty:before {
-  content: attr(data-fallback);
-  font-family: "Bungee", sans-serif !important;
-  font-size: 20px;
+/* Hover effect for better UX */
+.mobile-nav a:hover .mobile-menu-icon {
+  transform: scale(1.05) !important;
+  transition: transform 0.2s ease !important;
 }
 
 /* Header Top */
