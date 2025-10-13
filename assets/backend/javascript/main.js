@@ -92,8 +92,8 @@ $(document).ready(function() {
             .attr('src', 'assets/img/navbar icon/' + iconFile[1])
             .attr('alt', iconFile[0].replace('#', ''))
             .css({
-              'width': '20px',
-              'height': '20px',
+              'width': '28.8px',
+              'height': '28.8px',
               'margin-right': '6px',
               'vertical-align': 'middle'
             });
@@ -102,7 +102,7 @@ $(document).ready(function() {
         }
       });
       $mobile_nav.find('ul').append(
-        '<li><a href="assets/resume/cv.pdf" download="Labib_Bin_Shahed_Resume.pdf" class="mobile-nav-resume"><img src="assets/img/navbar icon/resume.svg" alt="resume" class="mobile-menu-icon" style="width: 20px; height: 20px; margin-right: 6px; vertical-align: middle;"> Resume</a></li>'
+        '<li><a href="assets/resume/cv.pdf" download="Labib_Bin_Shahed_Resume.pdf" class="mobile-nav-resume"><img src="assets/img/navbar icon/resume.svg" alt="resume" class="mobile-menu-icon" style="width: 28.8px; height: 28.8px; margin-right: 6px; vertical-align: middle;"> Resume</a></li>'
         );
       $('body').append($mobile_nav);
       $('body').prepend(
