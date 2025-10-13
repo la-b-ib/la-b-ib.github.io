@@ -71,75 +71,38 @@ $(document).ready(function() {
         var href = $this.attr('href') || '';
 
         var iconMap = {
-          '#header': {
-            main: 'home',
-            fallback: '🏠'
-          },
-          '#about': {
-            main: 'person',
-            fallback: '👤'
-          },
-          '#education': {
-            main: 'school',
-            fallback: '🏫'
-          },
-          '#certification': {
-            main: 'verified',
-            fallback: '✅'
-          },
-          '#research': {
-            main: 'science',
-            fallback: '🔬'
-          },
-          '#experience': {
-            main: 'work_history',
-            fallback: '💼'
-          },
-          '#portfolio': {
-            main: 'api',
-            fallback: '💻'
-          }, // Note: using #portfolio to match your HTML
-          '#skills': {
-            main: 'schema',
-            fallback: '🛠️'
-          },
-          '#blogs': {
-            main: 'auto_stories',
-            fallback: '📰'
-          },
-          '#contact': {
-            main: 'contact_mail',
-            fallback: '✉️'
-          }
+          '#header': 'home.svg',
+          '#about': 'about.svg',
+          '#education': 'education.svg',
+          '#certification': 'certifications.svg',
+          '#research': 'research.svg',
+          '#experience': 'experience.svg',
+          '#portfolio': 'projects.svg',
+          '#skills': 'skills.svg',
+          '#blogs': 'blog.svg',
+          '#contact': 'contact.svg'
         };
 
-        var iconData = Object.entries(iconMap).find(function(entry) {
+        var iconFile = Object.entries(iconMap).find(function(entry) {
           return href.includes(entry[0]);
         });
-        iconData = iconData ? iconData[1] : {};
-
-        if (iconData.main) {
-          var $icon = $('<i>').addClass('material-icons mobile-menu-icon')
-            .text(iconData.main)
+        
+        if (iconFile) {
+          var $icon = $('<img>').addClass('mobile-menu-icon')
+            .attr('src', 'assets/img/navbar icon/' + iconFile[1])
+            .attr('alt', iconFile[0].replace('#', ''))
             .css({
-              'font-family': 'Material Icons',
-              'font-size': '20px',
-              'color': '#4285F4',
-              'margin-right': '6px'
+              'width': '20px',
+              'height': '20px',
+              'margin-right': '6px',
+              'vertical-align': 'middle'
             });
 
           $this.prepend($icon);
-
-          // Fallback if Material Icons don't load
-          setTimeout(() => {
-            if ($icon.width() === 0) {
-              $icon.replaceWith(iconData.fallback);
-            }
-          }, 1000);
         }
       });
       $mobile_nav.find('ul').append(
-        '<li><a href="#" class="mobile-nav-close"><i class="material-icons mobile-menu-icon">cancel</i> Close</a></li>'
+        '<li><a href="assets/resume/cv.pdf" download="Labib_Bin_Shahed_Resume.pdf" class="mobile-nav-resume"><img src="assets/img/navbar icon/resume.svg" alt="resume" class="mobile-menu-icon" style="width: 20px; height: 20px; margin-right: 6px; vertical-align: middle;"> Resume</a></li>'
         );
       $('body').append($mobile_nav);
       $('body').prepend(
@@ -153,10 +116,13 @@ $(document).ready(function() {
         $('.mobile-nav-overlay').toggle();
       });
 
-      $(document).on('click', '.mobile-nav-close', function(e) {
-        $('body').removeClass('mobile-nav-active');
-        $('.mobile-nav-toggle i').removeClass('close').addClass('drag_indicator');
-        $('.mobile-nav-overlay').fadeOut();
+      $(document).on('click', '.mobile-nav-resume', function(e) {
+        // Allow the download to proceed, then close the menu
+        setTimeout(function() {
+          $('body').removeClass('mobile-nav-active');
+          $('.mobile-nav-toggle i').removeClass('close').addClass('drag_indicator');
+          $('.mobile-nav-overlay').fadeOut();
+        }, 100);
       });
 
       $(document).click(function(e) {
