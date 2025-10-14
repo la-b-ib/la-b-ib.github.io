@@ -30,8 +30,6 @@
   <!-- Security Headers -->
   <meta http-equiv="Strict-Transport-Security" content="max-age=31536000">
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-  <meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp">
-  <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
   <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=()">
   
   <!-- Open Graph Meta Tags (for Facebook, LinkedIn, Reddit, WhatsApp, Messenger, Gmail) -->
@@ -106,6 +104,10 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/backend/css/style.css" rel="stylesheet">
+  
+  <!-- Monaco Editor -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/editor/editor.main.css">
+  
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169007209-3"></script>
   <script>
@@ -131,6 +133,9 @@
   </script>
   <!-- jQuery -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  
+  <!-- Typed.js Library -->
+  <script src="assets/backend/javascript/typed.min.js"></script>
 </head>
 
 <body>
@@ -2912,6 +2917,8 @@
       </div>
     </div>
     </div>
+
+
     <div class="interests container">
       <div class="section-title">
         <h2 class="interest-heading"><b>Developer Profiles </b></h2>
@@ -2977,6 +2984,105 @@
           <span class="badge-text">CodersRank</span>
         </a>
       </div>
+      
+      <!-- Start Live Code Playground (Inside Skills Section) -->
+      <div class="code-playground-wrapper" style="margin-top: 60px;">
+        <div class="section-title">
+          <h2><b>Code Playground</b></h2>
+        </div>
+        
+        <!-- Editor Tabs -->
+        <div class="editor-tabs">
+          <button class="tab-btn active" data-editor="html">
+            <i class="ri-html5-line"></i> HTML
+          </button>
+          <button class="tab-btn" data-editor="css">
+            <i class="ri-css3-line"></i> CSS
+          </button>
+          <button class="tab-btn" data-editor="javascript">
+            <i class="ri-javascript-line"></i> JavaScript
+          </button>
+          <button class="tab-btn" data-editor="examples">
+            <i class="ri-code-box-line"></i> Examples
+          </button>
+          <button class="run-btn" id="runCode">
+            <i class="ri-play-circle-fill"></i> Run Code
+          </button>
+        </div>
+          
+          <!-- Editors Container -->
+          <div class="editors-wrapper">
+            <!-- HTML Editor -->
+            <div class="editor-panel active" id="htmlEditorPanel">
+              <div class="editor-header">
+                <span>HTML</span>
+                <button class="copy-btn" data-editor="html" title="Copy Code">
+                  <i class="ri-file-copy-line"></i>
+                </button>
+              </div>
+              <div id="htmlEditor" class="code-editor"></div>
+            </div>
+            
+            <!-- CSS Editor -->
+            <div class="editor-panel" id="cssEditorPanel">
+              <div class="editor-header">
+                <span>CSS</span>
+                <button class="copy-btn" data-editor="css" title="Copy Code">
+                  <i class="ri-file-copy-line"></i>
+                </button>
+              </div>
+              <div id="cssEditor" class="code-editor"></div>
+            </div>
+            
+            <!-- JavaScript Editor -->
+            <div class="editor-panel" id="javascriptEditorPanel">
+              <div class="editor-header">
+                <span>JavaScript</span>
+                <button class="copy-btn" data-editor="javascript" title="Copy Code">
+                  <i class="ri-file-copy-line"></i>
+                </button>
+              </div>
+              <div id="javascriptEditor" class="code-editor"></div>
+            </div>
+            
+            <!-- Examples Panel -->
+            <div class="editor-panel" id="examplesEditorPanel">
+              <div class="editor-header">
+                <span>Try These Examples</span>
+              </div>
+              <div class="examples-content">
+                <button class="template-btn" data-template="card">
+                  <i class="ri-bank-card-line"></i> Interactive Card
+                </button>
+                <button class="template-btn" data-template="form">
+                  <i class="ri-file-list-3-line"></i> Modern Form
+                </button>
+                <button class="template-btn" data-template="counter">
+                  <i class="ri-number-1"></i> Counter App
+                </button>
+                <button class="template-btn" data-template="toggle">
+                  <i class="ri-toggle-line"></i> Dark Mode Toggle
+                </button>
+                <button class="template-btn" data-template="progress">
+                  <i class="ri-loader-line"></i> Progress Bar
+                </button>
+              </div>
+            </div>
+            
+            <!-- Output Preview -->
+            <div class="output-container">
+              <div class="output-header">
+                <span><i class="ri-eye-line"></i></span>
+                <button class="clear-btn" id="clearOutput" title="Refresh">
+                  <i class="ri-refresh-line"></i>
+                </button>
+              </div>
+              <iframe id="outputFrame" sandbox="allow-scripts allow-same-origin"></iframe>
+            </div>
+          </div>
+      </div>
+      <!-- End Live Code Playground -->
+      
   </section>
   <style>
     .badge-container {
@@ -4790,6 +4896,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/venobox/2.1.8/venobox.min.js"></script>
   <!-- QRCode.js Library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  
+  <!-- Monaco Editor Loader -->
+  <script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/loader.js"></script>
+  
   <script>
     // Inject custom CSS for glassmorphism and wave spinner
     const style1 = document.createElement('style');
@@ -4836,15 +4946,7 @@
       });
     });
   </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.min.js"></script>
-  <script type="text/javascript">
-    var typed = new Typed('.typing', {
-      strings: ["<b>Coder</b>", "<b>Developer</b>", "<b>AI Enthusiast</b>", "<b>Researcher</b>"],
-      loop: true,
-      typeSpeed: 65,
-      backSpeed: 65
-    });
-  </script>
+  
   <script>
     // Disable right-click context menu
     document.addEventListener('contextmenu', function(e) {
@@ -4883,6 +4985,30 @@
   </script>
   <!-- Template Main JS File -->
   <script src="assets/backend/javascript/main.js"></script>
+  
+  <!-- Typed.js Initialization (AFTER main.js) -->
+  <script type="text/javascript">
+    console.log('Starting Typed.js initialization...');
+    console.log('Typed library loaded:', typeof Typed);
+    console.log('Element exists:', document.querySelector('.typing'));
+    
+    // Initialize immediately since scripts are at the bottom
+    if (typeof Typed !== 'undefined') {
+      try {
+        var typed = new Typed('.typing', {
+          strings: ["<b>Coder</b>", "<b>Developer</b>", "<b>AI Enthusiast</b>", "<b>Researcher</b>"],
+          loop: true,
+          typeSpeed: 65,
+          backSpeed: 65
+        });
+        console.log('Typed.js initialized successfully:', typed);
+      } catch(e) {
+        console.error('Error initializing Typed.js:', e);
+      }
+    } else {
+      console.error('Typed.js library not loaded - typeof Typed:', typeof Typed);
+    }
+  </script>
   
   <!-- Centralized Toggle Function -->
   <script>
