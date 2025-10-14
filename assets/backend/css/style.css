@@ -1693,4 +1693,546 @@ body .skill-badges .badge-text {
   }
 }
 
+/*--------------------------------------------------------------
+# Live Code Playground Section - VS Code Exact Replica
+--------------------------------------------------------------*/
+.code-playground-wrapper {
+  margin-top: 60px;
+}
+
+.playground-container {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  overflow: hidden;
+  margin-top: 30px;
+  border: none;
+}
+
+/* Hide scrollbars but keep functionality */
+.code-editor::-webkit-scrollbar,
+.examples-content::-webkit-scrollbar,
+#outputFrame::-webkit-scrollbar {
+  display: none;
+}
+
+.code-editor,
+.examples-content,
+#outputFrame {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Hide Monaco Editor internal scrollbars */
+.monaco-scrollable-element > .scrollbar {
+  display: none !important;
+}
+
+.monaco-scrollable-element > .scrollbar.vertical,
+.monaco-scrollable-element > .scrollbar.horizontal {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+.monaco-editor .overflow-guard > .scrollbar {
+  display: none !important;
+}
+
+/* Hide all Monaco scrollbar components */
+.monaco-editor .scrollbar,
+.monaco-editor .vertical,
+.monaco-editor .horizontal,
+.monaco-scrollable-element .invisible {
+  display: none !important;
+}
+
+/* VS Code Title Bar */
+.editor-tabs {
+  display: flex;
+  background: #2d2d30;
+  padding: 0;
+  gap: 0;
+  flex-wrap: wrap;
+  align-items: center;
+  border-bottom: 1px solid #1e1e1e;
+  min-height: 35px;
+}
+
+.tab-btn {
+  background: transparent;
+  color: #969696;
+  border: none;
+  border-right: 1px solid #1e1e1e;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+  letter-spacing: 0;
+  height: 35px;
+}
+
+.tab-btn i {
+  font-size: 16px;
+}
+
+.tab-btn:hover {
+  background: #2a2d2e;
+  color: #fff;
+}
+
+.tab-btn.active {
+  background: #1e1e1e;
+  color: #fff;
+  border-bottom: 2px solid #007acc;
+}
+
+.run-btn {
+  background: #007acc;
+  color: white;
+  border: none;
+  padding: 6px 16px;
+  font-size: 13px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+  margin-right: 8px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+  border-radius: 2px;
+  height: 28px;
+}
+
+.run-btn:hover {
+  background: #005a9e;
+}
+
+.run-btn i {
+  font-size: 16px;
+}
+
+/* Editors Wrapper */
+.editors-wrapper {
+  position: relative;
+  background: transparent;
+  display: flex;
+  flex-direction: row;
+  height: 440px;
+}
+
+.editor-panel {
+  display: none;
+  position: relative;
+  flex: 1;
+  height: 100%;
+  background: transparent;
+}
+
+.editor-panel.active {
+  display: flex;
+  flex-direction: column;
+}
+
+.editor-header {
+  background: rgba(37, 37, 38, 0.95);
+  padding: 4px 12px;
+  color: #cccccc;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(30, 30, 30, 0.5);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+  font-size: 12px;
+  height: 22px;
+  flex-shrink: 0;
+  backdrop-filter: blur(10px);
+}
+
+.copy-btn {
+  background: transparent;
+  border: 1px solid #3c3c3c;
+  color: #cccccc;
+  padding: 2px 8px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+}
+
+.copy-btn:hover {
+  background: #3c3c3c;
+  color: #fff;
+}
+
+.code-editor {
+  width: 100%;
+  background: transparent;
+  flex: 1;
+  height: calc(100% - 22px);
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Reset Monaco Editor internal padding */
+.monaco-editor {
+  padding: 0 !important;
+}
+
+.monaco-editor .overflow-guard {
+  padding: 0 !important;
+}
+
+.monaco-editor .margin {
+  padding: 0 !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+  left: 0 !important;
+  width: auto !important;
+  min-width: 0 !important;
+}
+
+.monaco-editor .margin-view-overlays {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+  left: 0 !important;
+}
+
+.monaco-editor .line-numbers {
+  padding-left: 0 !important;
+  padding-right: 4px !important;
+  left: 0 !important;
+  margin-left: 0 !important;
+}
+
+.monaco-editor .glyph-margin {
+  display: none !important;
+  width: 0 !important;
+}
+
+.monaco-editor .decorationsOverviewRuler {
+  display: none !important;
+  width: 0 !important;
+}
+
+.monaco-editor .lines-content,
+.monaco-editor .view-lines {
+  padding: 0 !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+  left: 0 !important;
+}
+
+/* Output Container - Side by Side on Desktop */
+.output-container {
+  background: transparent;
+  border-left: 1px solid rgba(45, 45, 48, 0.3);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Examples Content */
+.examples-content {
+  background: transparent;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: calc(100% - 22px);
+  overflow-y: auto;
+}
+
+.examples-content .template-btn {
+  width: 100%;
+  justify-content: flex-start;
+  padding: 12px 16px;
+  background: #252526;
+  border: 1px solid #3c3c3c;
+  color: #cccccc;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+}
+
+.examples-content .template-btn:hover {
+  background: #2d2d30;
+  border-color: #007acc;
+  color: #fff;
+}
+
+.examples-content .template-btn i {
+  font-size: 18px;
+  color: #007acc;
+}
+
+.output-header {
+  background: rgba(37, 37, 38, 0.95);
+  padding: 4px 12px;
+  font-weight: 400;
+  color: #cccccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(30, 30, 30, 0.5);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+  font-size: 12px;
+  height: 22px;
+  flex-shrink: 0;
+  backdrop-filter: blur(10px);
+}
+
+.output-header i {
+  margin-right: 6px;
+  color: #cccccc;
+  font-size: 14px;
+}
+
+.clear-btn {
+  background: transparent;
+  border: none;
+  color: #cccccc;
+  padding: 2px 8px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+}
+
+.clear-btn:hover {
+  background: #3c3c3c;
+  color: #fff;
+}
+
+#outputFrame {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: transparent;
+  display: block;
+  flex: 1;
+  box-sizing: border-box;
+}
+
+/* Code Templates */
+.code-templates {
+  margin-top: 20px;
+  padding: 16px;
+  background: #252526;
+  border-radius: 6px;
+  border: 1px solid #2d2d30;
+}
+
+.code-templates h4 {
+  color: #cccccc !important;
+  margin: 0 0 12px 0 !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+}
+
+.template-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.template-btn {
+  background: #2d2d30;
+  border: 1px solid #3c3c3c;
+  color: #cccccc;
+  padding: 6px 12px;
+  border-radius: 2px;
+  font-size: 12px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+}
+
+.template-btn i {
+  font-size: 14px;
+}
+
+.template-btn:hover {
+  background: #3c3c3c;
+  color: #fff;
+  border-color: #007acc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Stack vertically on mobile: Code/Examples Box -> Preview Box */
+  .editors-wrapper {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .editor-panel {
+    height: auto;
+    width: 100%;
+    aspect-ratio: 4 / 2.54;
+    min-height: 254px;
+  }
+  
+  .editor-panel.active {
+    display: flex;
+  }
+  
+  /* Don't force examples panel to show on mobile */
+  #examplesEditorPanel {
+    order: 0;
+    display: none;
+  }
+  
+  #examplesEditorPanel.active {
+    display: flex !important;
+  }
+  
+  .output-container {
+    border-left: none;
+    border-top: 1px solid #2d2d30;
+    height: auto;
+    min-height: auto;
+    overflow: visible;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  
+  #outputFrame {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    border: none;
+    display: block;
+  }
+  
+  .code-editor {
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  
+  .code-editor {
+    height: calc(100% - 22px);
+  }
+  
+  #outputFrame {
+    height: auto;
+  }
+  
+  /* Hide Monaco Editor keyboard button icon on mobile, keep input functional */
+  .monaco-editor .iPadShowKeyboard {
+    display: none !important;
+  }
+  
+  /* Hide Monaco Editor hints/shortcuts/keyboard labels on mobile */
+  .monaco-editor .quick-input-widget,
+  .monaco-editor .parameter-hints-widget,
+  .monaco-editor .suggest-widget,
+  .monaco-editor .monaco-hover,
+  .monaco-editor .accessibilityHelpWidget,
+  .monaco-editor .context-view,
+  .monaco-editor .zone-widget,
+  .monaco-editor .monaco-aria-container,
+  .monaco-editor .suggest-widget .monaco-keybinding,
+  .monaco-editor .monaco-keybinding-key,
+  .monaco-editor .keybinding,
+  .monaco-editor .suggest-details .header .keybinding,
+  .monaco-action-label .keybinding {
+    display: none !important;
+  }
+  
+  .editor-tabs {
+    min-height: auto;
+    flex-wrap: wrap;
+    padding: 4px;
+  }
+  
+  .tab-btn {
+    padding: 8px 10px;
+    font-size: 11px;
+    height: auto;
+    flex: 1 1 auto;
+    min-width: 70px;
+  }
+  
+  .tab-btn i {
+    font-size: 14px;
+  }
+  
+  .run-btn {
+    width: 100%;
+    margin: 4px 0 0 0;
+    justify-content: center;
+    order: 10;
+    flex: 1 1 100%;
+  }
+  
+  .code-playground-wrapper {
+    margin-top: 40px !important;
+  }
+  
+  .playground-container {
+    border-radius: 4px;
+  }
+  
+  .editor-header {
+    font-size: 11px;
+  }
+  
+  .copy-btn,
+  .clear-btn {
+    font-size: 10px;
+    padding: 2px 6px;
+  }
+  
+  .examples-content {
+    padding: 12px 0;
+    gap: 8px;
+  }
+  
+  .examples-content .template-btn {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+  
+  .examples-content .template-btn i {
+    font-size: 16px;
+  }
+}
+
+
 
