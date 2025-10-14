@@ -352,16 +352,16 @@ h6 {
 .mobile-nav a {
   display: flex !important;
   align-items: center !important;
-  padding: 12px 20px !important;
-  /* Reduced from 14px 20px */
+  padding: 8px 20px !important;
+  /* Reduced padding to accommodate larger icons */
   position: relative !important;
 }
 
 .mobile-nav a .mobile-menu-icon {
   /* Sizing & Spacing */
-  width: 28.8px !important;
-  height: 28.8px !important;
-  margin-right: 12px !important;
+  width: 32px !important;
+  height: 32px !important;
+  margin-right: 10px !important;
   flex-shrink: 0 !important;
   /* Display */
   display: inline-flex !important;
@@ -384,6 +384,86 @@ h6 {
   transition: transform 0.2s ease !important;
 }
 
+/* QR Code Overlay Styling */
+.qr-code-overlay {
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  z-index: 9996 !important;
+  background: transparent !important;
+}
+
+.qr-code-container {
+  position: relative !important;
+  z-index: 9996 !important;
+}
+
+.qr-code-container h3,
+.qr-code-container p {
+  font-family: "Bungee", sans-serif !important;
+}
+
+.icon-btn {
+  transition: all 0.3s ease !important;
+}
+
+.icon-btn:hover {
+  transform: scale(1.1) !important;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3) !important;
+}
+
+.icon-btn:active {
+  transform: scale(0.95) !important;
+}
+
+.copy-link-btn:hover {
+  background: #f9ab00 !important;
+}
+
+.nfc-share-btn:hover {
+  background: #2d8e47 !important;
+}
+
+.qr-close-btn:hover {
+  background: #c5221f !important;
+}
+
+#qrcode {
+  display: inline-block;
+}
+
+#qrcode img {
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+  .qr-code-container {
+    padding: 20px !important;
+  }
+  
+  .qr-code-container h3 {
+    font-size: 18px !important;
+  }
+  
+  #qrcode {
+    max-width: 240px !important;
+  }
+  
+  #qrcode img {
+    width: 100% !important;
+    height: auto !important;
+  }
+  
+  .icon-btn {
+    width: 45px !important;
+    height: 45px !important;
+  }
+  
+  .icon-btn i {
+    font-size: 24px !important;
+  }
+}
+
 /* Header Top */
 /* Header Top */
 #header.header-top {
@@ -402,6 +482,7 @@ h6 {
   /* Subtle white border for depth */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   /* Soft shadow for glassmorphism */
+  z-index: 9997;
 }
 
 /* Fallback for browsers without backdrop-filter support */
