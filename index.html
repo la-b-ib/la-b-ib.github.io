@@ -2948,11 +2948,12 @@
         style="background-color: white; padding: 20px; border-radius: 8px; margin-bottom: 30px;">
         <!-- Single responsive image that works for all devices -->
         <div class="row justify-content-center">
-          <div class="col-12 text-center">
+          <div>
             <img
-              src="https://github-profile-trophy.vercel.app/?username=lucthienphong1120&column=4&row=2&margin-w=auto&margin-h=0&theme=flat&no-bg=true&no-frame=true&exclude=NewAccountTrophy"
+              src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/skills/trophies.png"
+              style ="width: 100%; height: auto;"
               alt="GitHub Trophies" loading="lazy"
-              style="max-width: 110%; height: auto; display: block; margin: 0 auto; transform: scale(1.1);">
+              
           </div>
         </div>
       </div>
@@ -3300,7 +3301,6 @@
         margin: 0 0 20px 0 !important;
         box-shadow: none !important;
         width: 100% !important;
-        overflow: hidden;
       }
 
       /* Radar chart mobile optimization - remove container styling */
@@ -3320,11 +3320,10 @@
         margin-bottom: 20px !important;
       }
 
-      .github-trophies img[src*="github-profile-trophy"] {
+      .github-trophies img[src*="trophies"] {
         width: 100%;
         height: auto;
-        object-fit: contain;
-        transform: scale(1);
+        max-width: 100%;
       }
     }
 
