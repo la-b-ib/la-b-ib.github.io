@@ -36,7 +36,6 @@ $(document).ready(function() {
 
           if ($('body').hasClass('mobile-nav-active')) {
             $('body').removeClass('mobile-nav-active');
-            $('.mobile-nav-toggle i').toggleClass('drag_indicator close');
             $('.mobile-nav-overly').fadeOut();
           }
 
@@ -113,7 +112,7 @@ $(document).ready(function() {
         );
       $('body').append($mobile_nav);
       $('body').prepend(
-        '<button type="button" class="mobile-nav-toggle d-lg-none"><i class="material-icons" style="font-size: 30px; color: black;">drag_indicator</i></button>'
+  '<button type="button" class="mobile-nav-toggle d-lg-none"><img src="assets/img/navbar icon/navbar navigation/open.svg" alt="Open Menu" class="nav-open-icon" style="width: 35px; height: 35px;"><img src="assets/img/navbar icon/navbar navigation/close.svg" alt="Close Menu" class="nav-close-icon" style="width: 35px; height: 35px;"></button>'
         );
       $('body').append('<div class="mobile-nav-overlay"></div>');
       
@@ -247,7 +246,6 @@ $(document).ready(function() {
 
       $(document).on('click', '.mobile-nav-toggle', function(e) {
         $('body').toggleClass('mobile-nav-active');
-        $('.mobile-nav-toggle i').toggleClass('drag_indicator close');
         $('.mobile-nav-overlay').toggle();
       });
 
@@ -255,7 +253,6 @@ $(document).ready(function() {
         // Allow the download to proceed, then close the menu
         setTimeout(function() {
           $('body').removeClass('mobile-nav-active');
-          $('.mobile-nav-toggle i').removeClass('close').addClass('drag_indicator');
           $('.mobile-nav-overlay').fadeOut();
         }, 100);
       });
@@ -265,7 +262,6 @@ $(document).ready(function() {
         e.preventDefault();
         $('.qr-code-overlay').css('display', 'flex');
         $('body').removeClass('mobile-nav-active');
-        $('.mobile-nav-toggle i').removeClass('close').addClass('drag_indicator');
         $('.mobile-nav-overlay').fadeOut();
       });
 
@@ -293,7 +289,6 @@ $(document).ready(function() {
         if (!container.is(e.target) && container.has(e.target).length === 0) {
           if ($('body').hasClass('mobile-nav-active')) {
             $('body').removeClass('mobile-nav-active');
-            $('.mobile-nav-toggle i').toggleClass('drag_indicator close');
             $('.mobile-nav-overlay').fadeOut();
           }
         }
