@@ -252,7 +252,7 @@ h6 {
 .mobile-nav-toggle {
   position: fixed;
   right: 12px;
-  top: 12px;
+  top: 5px;
   z-index: 9998;
   background: 0;
   border: 0;
@@ -261,13 +261,29 @@ h6 {
   padding: 0;
   margin: 0;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.mobile-nav-toggle i {
-  color: #000000;
-  font-size: 26px;
+.mobile-nav-toggle img {
   display: block;
-  line-height: 1;
+}
+
+.mobile-nav-toggle .nav-open-icon {
+  display: block;
+}
+
+.mobile-nav-toggle .nav-close-icon {
+  display: none;
+}
+
+body.mobile-nav-active .mobile-nav-toggle .nav-open-icon {
+  display: none;
+}
+
+body.mobile-nav-active .mobile-nav-toggle .nav-close-icon {
+  display: block;
 }
 
 .mobile-nav {
