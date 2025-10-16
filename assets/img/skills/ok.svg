@@ -1,0 +1,1621 @@
+
+    <svg
+      width="350"
+      height="470"
+      viewBox="0 0 350 470"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <defs>
+        <style type="text/css">
+  @font-face {
+    font-family: 'Bungee';
+    src: url('data:font/woff2;base64,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
+
+3nJ7AMAAA==') format('woff2');
+
+}
+
+text {
+
+font-family: 'Bungee';
+
+}
+
+</style>
+
+      </defs>
+      
+        <svg
+          x="0"
+          y="0"
+          width="110"
+          height="110"
+          viewBox="0 0 110 110"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            x="0.5"
+            y="0.5"
+            rx="4.5"
+            width="109"
+            height="109"
+            stroke="#e1e4e8"
+            fill="#FFF"
+            stroke-opacity="0"
+            fill-opacity="0"
+          />
+          
+  
+  
+  <defs>
+    <linearGradient id="SECRET" gradientTransform="rotate(45)">
+    
+    <stop offset="0%" stop-color="red"/>
+    <stop offset="50%" stop-color="fuchsia"/>
+    <stop offset="100%" stop-color="blue"/>
+    
+    </linearGradient>
+  </defs>
+  <svg x="28" y="20" width="100" height="100" viewBox="0 0 30 30" fill="url(#SECRET)" xmlns="http://www.w3.org/2000/svg">
+    
+    <path d="M7 10h2v4H7v-4z"/>
+    <path d="M10 11c0 .552-.895 1-2 1s-2-.448-2-1 .895-1 2-1 2 .448 2 1z"/>
+    <path fill-rule="evenodd" d="M12.5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm-6-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0z"/>
+    <path d="M3 1h10c-.495 3.467-.5 10-5 10S3.495 4.467 3 1zm0 15a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1H3zm2-1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1H5z"/>
+    <circle cx="8" cy="6" r="4" fill="#FFF" />
+    <text x="6" y="8" font-family="Bungee" font-size="7" fill="fuchsia">S</text>
+  
+  </svg>
+  
+          <text x="50%" y="18" text-anchor="middle" font-family="Bungee" font-weight="bold" font-size="11" fill="#000">AchieveSSSRank</text>
+          <text x="50%" y="85" text-anchor="middle" font-family="Bungee" font-weight="bold" font-size="8.5" fill="#666">SSS Rank Hacker</text>
+          <text x="50%" y="97" text-anchor="middle" font-family="Bungee" font-weight="bold" font-size="8.5" fill="#666">Have SSS Rank</text>
+          
+    <style>
+    @keyframes AchieveSSSRankRankAnimation {
+      from {
+        width: 0px;
+      }
+      to {
+        width: 80px;
+      }
+    }
+    #AchieveSSSRank-rank-progress{
+      animation: AchieveSSSRankRankAnimation 1s forwards ease-in-out;
+    }
+    </style>
+    <rect
+      x="15"
+      y="101"
+      rx="1"
+      width="80"
+      height="3.2"
+      opacity="0.3"
+      fill="#0366d6"
+    />
+    <rect
+      id="AchieveSSSRank-rank-progress"
+      x="15"
+      y="101"
+      rx="1"
+      height="3.2"
+      fill="#0366d6"
+    />
+  
+        </svg>
+        
+        <svg
+          x="120"
+          y="0"
+          width="110"
+          height="110"
+          viewBox="0 0 110 110"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            x="0.5"
+            y="0.5"
+            rx="4.5"
+            width="109"
+            height="109"
+            stroke="#e1e4e8"
+            fill="#FFF"
+            stroke-opacity="0"
+            fill-opacity="0"
+          />
+          
+  
+  
+  <defs>
+    <linearGradient id="SECRET" gradientTransform="rotate(45)">
+    
+    <stop offset="0%" stop-color="red"/>
+    <stop offset="50%" stop-color="fuchsia"/>
+    <stop offset="100%" stop-color="blue"/>
+    
+    </linearGradient>
+  </defs>
+  <svg x="28" y="20" width="100" height="100" viewBox="0 0 30 30" fill="url(#SECRET)" xmlns="http://www.w3.org/2000/svg">
+    
+    <path d="M7 10h2v4H7v-4z"/>
+    <path d="M10 11c0 .552-.895 1-2 1s-2-.448-2-1 .895-1 2-1 2 .448 2 1z"/>
+    <path fill-rule="evenodd" d="M12.5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm-6-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0z"/>
+    <path d="M3 1h10c-.495 3.467-.5 10-5 10S3.495 4.467 3 1zm0 15a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1H3zm2-1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1H5z"/>
+    <circle cx="8" cy="6" r="4" fill="#FFF" />
+    <text x="6" y="8" font-family="Bungee" font-size="7" fill="fuchsia">S</text>
+  
+  </svg>
+  
+          <text x="50%" y="18" text-anchor="middle" font-family="Bungee" font-weight="bold" font-size="11" fill="#000">MultiLanguage</text>
+          <text x="50%" y="85" text-anchor="middle" font-family="Bungee" font-weight="bold" font-size="8.5" fill="#666">Rainbow Lang User</text>
+          <text x="50%" y="97" text-anchor="middle" font-family="Bungee" font-weight="bold" font-size="8.5" fill="#666">25pt</text>
+          
+    <style>
+    @keyframes MultiLanguageRankAnimation {
+      from {
+        width: 0px;
+      }
+      to {
+        width: 80px;
+      }
+    }
+    #MultiLanguage-rank-progress{
+      animation: MultiLanguageRankAnimation 1s forwards ease-in-out;
+    }
+    </style>
+    <rect
+      x="15"
+      y="101"
+      rx="1"
+      width="80"
+      height="3.2"
+      opacity="0.3"
+      fill="#0366d6"
+    />
+    <rect
+      id="MultiLanguage-rank-progress"
+      x="15"
+      y="101"
+      rx="1"
+      height="3.2"
+      fill="#0366d6"
+    />
+  
+        </svg>
+        
+        <svg
+          x="240"
+          y="0"
+          width="110"
+          height="110"
+          viewBox="0 0 110 110"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            x="0.5"
+            y="0.5"
+            rx="4.5"
+            width="109"
+            height="109"
+            stroke="#e1e4e8"
+            fill="#FFF"
+            stroke-opacity="0"
+            fill-opacity="0"
+          />
+          
+  
+  
+  <defs>
+    <linearGradient id="SECRET" gradientTransform="rotate(45)">
+    
+    <stop offset="0%" stop-color="red"/>
+    <stop offset="50%" stop-color="fuchsia"/>
+    <stop offset="100%" stop-color="blue"/>
+    
+    </linearGradient>
+  </defs>
+  <svg x="28" y="20" width="100" height="100" viewBox="0 0 30 30" fill="url(#SECRET)" xmlns="http://www.w3.org/2000/svg">
+    
+    <path d="M7 10h2v4H7v-4z"/>
+    <path d="M10 11c0 .552-.895 1-2 1s-2-.448-2-1 .895-1 2-1 2 .448 2 1z"/>
+    <path fill-rule="evenodd" d="M12.5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm-6-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0z"/>
+    <path d="M3 1h10c-.495 3.467-.5 10-5 10S3.495 4.467 3 1zm0 15a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1H3zm2-1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1H5z"/>
+    <circle cx="8" cy="6" r="4" fill="#FFF" />
+    <text x="6" y="8" font-family="Bungee" font-size="7" fill="fuchsia">S</text>
+  
+  </svg>
+  
+          <text x="50%" y="18" text-anchor="middle" font-family="Bungee" font-weight="bold" font-size="11" fill="#000">LongTimeUser</text>
+          <text x="50%" y="85" text-anchor="middle" font-family="Bungee" font-weight="bold" font-size="8.5" fill="#666">Village Elder</text>
+          <text x="50%" y="97" text-anchor="middle" font-family="Bungee" font-weight="bold" font-size="8.5" fill="#666">4years</text>
+          
+    <style>
+    @keyframes LongTimeUserRankAnimation {
+      from {
+        width: 0px;
+      }
+      to {
+        width: 80px;
+      }
+    }
+    #LongTimeUser-rank-progress{
+      animation: LongTimeUserRankAnimation 1s forwards ease-in-out;
+    }
+    </style>
+    <rect
+      x="15"
+      y="101"
+      rx="1"
+      width="80"
+      height="3.2"
+      opacity="0.3"
+      fill="#0366d6"
+    />
+    <rect
+      id="LongTimeUser-rank-progress"
+      x="15"
+      y="101"
+      rx="1"
+      height="3.2"
+      fill="#0366d6"
+    />
+  
+        </svg>
+        
+        <svg
+          x="0"
+          y="120"
+          width="110"
+          height="110"
+          viewBox="0 0 110 110"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            x="0.5"
+            y="0.5"
+            rx="4.5"
+            width="109"
+            height="109"
+            stroke="#e1e4e8"
+            fill="#FFF"
+            stroke-opacity="0"
+            fill-opacity="0"
+          />
+          
+  
+  
+  <defs>
+    <linearGradient id="SECRET" gradientTransform="rotate(45)">
+    
+    <stop offset="0%" stop-color="red"/>
+    <stop offset="50%" stop-color="fuchsia"/>
+    <stop offset="100%" stop-color="blue"/>
+    
+    </linearGradient>
+  </defs>
+  <svg x="28" y="20" width="100" height="100" viewBox="0 0 30 30" fill="url(#SECRET)" xmlns="http://www.w3.org/2000/svg">
+    
+    <path d="M7 10h2v4H7v-4z"/>
+    <path d="M10 11c0 .552-.895 1-2 1s-2-.448-2-1 .895-1 2-1 2 .448 2 1z"/>
+    <path fill-rule="evenodd" d="M12.5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm-6-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0z"/>
+    <path d="M3 1h10c-.495 3.467-.5 10-5 10S3.495 4.467 3 1zm0 15a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1H3zm2-1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1H5z"/>
+    <circle cx="8" cy="6" r="4" fill="#FFF" />
+    <text x="6" y="8" font-family="Bungee" font-size="7" fill="fuchsia">S</text>
+  
+  </svg>
+  
+          <text x="50%" y="18" text-anchor="middle" font-family="Bungee" font-weight="bold" font-size="11" fill="#000">NewUser</text>
+          <text x="50%" y="85" text-anchor="middle" font-family="Bungee" font-weight="bold" font-size="8.5" fill="#666">Everything started...</text>
+          <text x="50%" y="97" text-anchor="middle" font-family="Bungee" font-weight="bold" font-size="8.5" fill="#666">After 2020</text>
+          
+    <style>
+    @keyframes NewUserRankAnimation {
+      from {
+        width: 0px;
+      }
+      to {
+        width: 80px;
+      }
+    }
+    #NewUser-rank-progress{
+      animation: NewUserRankAnimation 1s forwards ease-in-out;
+    }
+    </style>
+    <rect
+      x="15"
+      y="101"
+      rx="1"
+      width="80"
+      height="3.2"
+      opacity="0.3"
+      fill="#0366d6"
+    />
+    <rect
+      id="NewUser-rank-progress"
+      x="15"
+      y="101"
+      rx="1"
+      height="3.2"
+      fill="#0366d6"
+    />
+  
+        </svg>
+        
+        <svg
+          x="120"
+          y="120"
+          width="110"
+          height="110"
+          viewBox="0 0 110 110"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            x="0.5"
+            y="0.5"
+            rx="4.5"
+            width="109"
+            height="109"
+            stroke="#e1e4e8"
+            fill="#FFF"
+            stroke-opacity="0"
+            fill-opacity="0"
+          />
+          
+  
+  
+  <defs>
+    <linearGradient id="SECRET" gradientTransform="rotate(45)">
+    
+    <stop offset="0%" stop-color="red"/>
+    <stop offset="50%" stop-color="fuchsia"/>
+    <stop offset="100%" stop-color="blue"/>
+    
+    </linearGradient>
+  </defs>
+  <svg x="28" y="20" width="100" height="100" viewBox="0 0 30 30" fill="url(#SECRET)" xmlns="http://www.w3.org/2000/svg">
+    
+    <path d="M7 10h2v4H7v-4z"/>
+    <path d="M10 11c0 .552-.895 1-2 1s-2-.448-2-1 .895-1 2-1 2 .448 2 1z"/>
+    <path fill-rule="evenodd" d="M12.5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm-6-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0z"/>
+    <path d="M3 1h10c-.495 3.467-.5 10-5 10S3.495 4.467 3 1zm0 15a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1H3zm2-1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1H5z"/>
+    <circle cx="8" cy="6" r="4" fill="#FFF" />
+    <text x="6" y="8" font-family="Bungee" font-size="7" fill="fuchsia">S</text>
+  
+  </svg>
+  
+          <text x="50%" y="18" text-anchor="middle" font-family="Bungee" font-weight="bold" font-size="11" fill="#000">Organizations</text>
+          <text x="50%" y="85" text-anchor="middle" font-family="Bungee" font-weight="bold" font-size="8.5" fill="#666">Jack of all Trades</text>
+          <text x="50%" y="97" text-anchor="middle" font-family="Bungee" font-weight="bold" font-size="8.5" fill="#666">6pt</text>
+          
+    <style>
+    @keyframes OrganizationsRankAnimation {
+      from {
+        width: 0px;
+      }
+      to {
+        width: 80px;
+      }
+    }
+    #Organizations-rank-progress{
+      animation: OrganizationsRankAnimation 1s forwards ease-in-out;
+    }
+    </style>
+    <rect
+      x="15"
+      y="101"
+      rx="1"
+      width="80"
+      height="3.2"
+      opacity="0.3"
+      fill="#0366d6"
+    />
+    <rect
+      id="Organizations-rank-progress"
+      x="15"
+      y="101"
+      rx="1"
+      height="3.2"
+      fill="#0366d6"
+    />
+  
+        </svg>
+        
+        <svg
+          x="240"
+          y="120"
+          width="110"
+          height="110"
+          viewBox="0 0 110 110"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            x="0.5"
+            y="0.5"
+            rx="4.5"
+            width="109"
+            height="109"
+            stroke="#e1e4e8"
+            fill="#FFF"
+            stroke-opacity="0"
+            fill-opacity="0"
+          />
+          
+  <svg xmlns="http://www.w3.org/2000/svg" width="90pt" height="90pt" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+<metadata>
+Created by potrace 1.15, written by Peter Selinger 2001-2017
+</metadata>
+<g transform="translate(20.000000,60.000000) scale(0.00400000,-0.00400000)" fill="#009366" stroke="none">
+<path d="M200 5103 c0 -2 18 -40 41 -84 47 -95 62 -132 50 -125 -15 10 -18 -39 -6 -87 31 -121 265 -468 412 -608 124 -119 281 -222 383 -251 36 -10 49 -16 30 -13 -19 3 -78 12 -130 20 -117 17 -353 35 -477 35 l-93 0 53 -82 c72 -112 72 -112 59 -104 -18 11 -26 -41 -13 -84 25 -84 261 -376 404 -502 95 -83 222 -168 304 -205 98 -43 194 -73 242 -74 l46 -1 -45 -8 c-25 -5 -124 -21 -220 -36 -96 -15 -177 -29 -180 -31 -2 -2 0 -7 5 -11 27 -19 138 -144 123 -139 -18 6 -28 -10 -28 -47 0 -38 53 -108 141 -187 349 -313 631 -450 939 -453 63 0 131 2 150 7 19 4 -35 -17 -120 -46 -236 -82 -310 -110 -310 -117 0 -3 29 -28 65 -54 55 -40 102 -84 67 -62 -13 8 -32 -24 -32 -54 0 -99 486 -361 790 -426 125 -27 327 -25 444 4 113 28 261 98 309 145 39 40 56 92 38 124 -8 17 -4 24 29 49 22 16 40 32 40 36 0 4 -26 40 -58 80 -162 203 -368 328 -608 369 -89 15 -368 6 -474 -15 -131 -26 -147 -26 -59 -3 51 13 102 34 122 50 38 29 61 84 51 123 -5 18 1 26 25 39 17 8 31 19 31 23 0 4 -16 38 -35 75 -163 317 -424 501 -781 548 -113 15 -127 19 -91 30 51 14 84 58 89 118 1 20 9 33 20 37 23 7 23 6 -12 114 -108 329 -305 534 -640 662 -41 15 -59 25 -40 21 19 -5 82 -8 140 -8 81 0 113 4 142 18 39 20 73 76 65 107 -3 12 2 20 14 23 23 6 23 21 4 124 -61 320 -249 568 -544 718 -157 79 -394 147 -666 190 -88 13 -170 26 -182 29 -13 2 -23 2 -23 -1z"/>
+<path d="M12550 5099 c-232 -36 -334 -55 -445 -84 -484 -122 -761 -346 -880 -712 -26 -79 -57 -242 -48 -255 2 -5 14 -8 26 -9 12 0 16 -3 10 -6 -17 -6 -16 -38 2 -72 25 -49 75 -66 200 -66 61 0 124 4 140 8 17 5 -13 -9 -66 -31 -136 -55 -250 -126 -341 -211 -128 -120 -217 -263 -272 -439 -32 -101 -32 -110 -3 -122 12 -5 17 -9 11 -9 -8 -1 -9 -12 -5 -34 15 -66 41 -95 94 -107 31 -7 31 -7 7 -12 -14 -3 -72 -13 -130 -22 -322 -51 -553 -206 -714 -479 -25 -42 -52 -92 -60 -111 -14 -33 -14 -33 23 -54 20 -12 31 -22 26 -22 -15 0 -17 -39 -4 -78 14 -42 76 -88 130 -97 22 -4 39 -9 36 -11 -2 -2 -55 3 -118 12 -154 22 -395 15 -494 -13 -216 -62 -391 -184 -545 -380 l-41 -52 40 -32 c34 -27 39 -35 30 -51 -17 -33 -1 -85 38 -125 48 -47 196 -117 309 -145 117 -29 319 -31 444 -4 300 64 790 328 790 425 0 29 -18 63 -31 56 -5 -4 -9 -4 -9 -2 0 3 34 29 75 59 41 29 75 56 75 59 0 3 -21 13 -47 22 -349 120 -422 146 -388 140 59 -12 241 -8 310 6 208 43 437 158 636 322 241 199 314 293 265 342 -13 12 -6 24 51 86 36 40 64 73 62 75 -4 2 -107 20 -359 60 -70 12 -77 14 -39 15 48 1 144 31 241 74 139 62 318 202 451 352 104 117 225 279 249 333 21 47 21 99 0 94 -16 -3 -10 9 58 116 l50 77 -72 3 c-91 4 -362 -14 -488 -33 -179 -26 -179 -26 -116 -9 93 26 244 120 365 230 193 174 467 605 443 696 -2 10 -8 15 -13 12 -12 -7 3 30 51 126 23 45 40 85 38 89 -2 4 -23 4 -48 0z m-933 -1185 c-3 -3 -12 -4 -19 -1 -8 3 -5 6 6 6 11 1 17 -2 13 -5z m-1290 -1860 c-3 -3 -12 -4 -19 -1 -8 3 -5 6 6 6 11 1 17 -2 13 -5z m40 -10 c-3 -3 -12 -4 -19 -1 -8 3 -5 6 6 6 11 1 17 -2 13 -5z"/>
+<path d="M10242 4632 c-46 -140 -92 -319 -118 -457 -18 -94 -28 -519 -12 -509 4 3 5 -8 2 -25 -8 -40 21 -179 58 -274 75 -195 297 -437 400 -437 57 0 124 70 177 185 53 112 67 224 65 510 -1 120 -5 166 -23 233 -66 252 -206 515 -423 795 -39 51 -74 95 -77 99 -4 4 -26 -50 -49 -120z"/>
+<path d="M2407 4612 c-305 -408 -443 -757 -422 -1067 3 -55 8 -140 10 -190 5 -113 30 -204 83 -293 44 -74 88 -118 128 -128 102 -26 339 218 422 433 34 87 67 235 58 258 -3 9 -1 39 5 68 5 28 10 117 10 197 1 155 -15 284 -57 455 -33 137 -117 405 -126 405 -5 0 -55 -62 -111 -138z"/>
+<path d="M2970 3839 c-189 -385 -254 -632 -248 -941 2 -86 6 -151 10 -145 5 7 5 -2 2 -19 -19 -98 77 -354 181 -487 76 -96 141 -120 210 -77 70 43 195 240 239 375 20 63 46 197 40 207 -3 4 0 54 6 111 26 257 -51 553 -240 922 -42 83 -87 165 -98 184 l-21 35 -81 -165z"/>
+<path d="M9711 3929 c-124 -219 -230 -466 -276 -642 -39 -151 -47 -234 -41 -426 7 -237 39 -357 136 -517 136 -225 233 -251 355 -97 94 121 171 313 181 453 2 36 8 111 13 167 26 288 -56 600 -266 1017 l-60 120 -42 -75z"/>
+<path d="M3645 3278 c-2 -7 -14 -78 -27 -158 -19 -123 -22 -188 -23 -430 -2 -309 7 -401 50 -555 66 -232 204 -430 388 -552 120 -80 189 -70 245 34 36 69 74 205 78 283 1 30 5 109 9 175 9 135 -1 213 -41 339 -66 208 -198 406 -429 645 -147 152 -244 237 -250 219z"/>
+<path d="M8994 3143 c-289 -284 -435 -492 -514 -732 -32 -100 -55 -261 -45 -330 3 -25 8 -91 10 -146 7 -168 66 -347 129 -387 77 -48 196 11 347 170 94 98 156 199 205 331 37 99 67 234 59 262 -4 11 -2 19 5 19 8 0 10 8 7 21 -3 11 1 77 10 147 10 89 13 172 9 277 -7 191 -48 515 -65 515 -3 0 -74 -66 -157 -147z"/>
+<path d="M4501 2358 c52 -129 69 -179 59 -173 -6 4 -10 -12 -10 -42 0 -78 115 -313 252 -514 215 -317 529 -509 832 -509 124 0 166 27 180 112 1 11 8 23 15 27 10 7 11 27 2 98 -66 545 -401 836 -1164 1012 -97 23 -179 41 -182 41 -3 0 5 -24 16 -52z"/>
+<path d="M8159 2375 c-609 -138 -940 -344 -1096 -683 -59 -127 -110 -377 -88 -429 5 -10 10 -29 12 -42 13 -75 59 -101 179 -101 316 0 625 196 854 543 110 165 222 395 228 465 3 40 2 53 -7 48 -11 -7 -3 15 53 153 28 68 31 81 19 80 -5 0 -74 -16 -154 -34z"/>
+<path d="M4032 1479 c-193 -25 -435 -124 -667 -274 -108 -69 -314 -218 -315 -226 0 -4 28 -16 63 -29 66 -24 92 -40 65 -40 -10 0 -19 -12 -23 -30 -14 -65 45 -105 226 -154 572 -155 982 -93 1270 194 75 74 101 131 81 174 -9 21 -6 31 29 77 21 29 39 55 39 58 0 3 -25 24 -55 46 -229 167 -469 236 -713 204z"/>
+<path d="M8513 1476 c-155 -30 -317 -101 -446 -196 l-67 -50 40 -54 c37 -49 40 -56 29 -80 -21 -46 4 -101 80 -176 288 -287 698 -349 1270 -194 180 49 240 89 226 153 -3 16 -14 31 -23 33 -9 2 18 18 61 35 l79 30 -126 92 c-304 223 -550 347 -780 395 -113 23 -257 28 -343 12z"/>
+<path d="M6324 1249 c-48 -14 -120 -83 -139 -134 -13 -34 -16 -60 -11 -112 4 -37 6 -84 6 -103 -2 -95 62 -193 145 -220 138 -46 285 52 292 195 1 28 8 71 14 97 10 37 10 60 0 101 -31 139 -167 217 -307 176z"/>
+<path d="M5255 1054 c-276 -46 -587 -227 -935 -541 l-54 -50 74 -23 c41 -13 67 -25 58 -27 -23 -6 -34 -48 -20 -78 16 -35 75 -61 188 -84 568 -115 968 -37 1250 243 69 69 110 130 114 171 5 42 0 66 -12 59 -12 -8 -12 -7 39 73 18 29 33 56 33 62 0 15 -49 46 -147 95 -207 104 -386 135 -588 100z"/>
+<path d="M7249 1054 c-42 -7 -109 -25 -150 -40 -76 -27 -226 -101 -267 -133 l-24 -18 41 -66 c22 -37 36 -67 31 -67 -18 0 -11 -80 11 -121 11 -22 53 -73 92 -113 279 -282 682 -361 1251 -245 113 23 172 49 188 84 14 30 3 72 -20 77 -9 3 18 15 61 29 l78 24 -93 81 c-362 313 -622 460 -902 509 -106 18 -194 18 -297 -1z"/>
+</g>
+</svg>
+  <svg x="7" y="35" width="65" height="65" viewBox="0 0 30 30" fill="#FAD200" xmlns="http://www.w3.org/2000/svg">
+      
+    <path d="M7 10h2v4H7v-4z"/>
+    <path d="M10 11c0 .552-.895 1-2 1s-2-.448-2-1 .895-1 2-1 2 .448 2 1z"/>
+    <path fill-rule="evenodd" d="M12.5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm-6-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0z"/>
+    <path d="M3 1h10c-.495 3.467-.5 10-5 10S3.495 4.467 3 1zm0 15a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1H3zm2-1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1H5z"/>
+    <circle cx="8" cy="6" r="4" fill="#FFF" />
+    <text x="6" y="8" font-family="Bungee" font-size="7" fill="#886000">S</text>
+  
+    </svg><svg x="68" y="35" width="65" height="65" viewBox="0 0 30 30" fill="#FAD200" xmlns="http://www.w3.org/2000/svg">
+      
+    <path d="M7 10h2v4H7v-4z"/>
+    <path d="M10 11c0 .552-.895 1-2 1s-2-.448-2-1 .895-1 2-1 2 .448 2 1z"/>
+    <path fill-rule="evenodd" d="M12.5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm-6-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0z"/>
+    <path d="M3 1h10c-.495 3.467-.5 10-5 10S3.495 4.467 3 1zm0 15a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1H3zm2-1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1H5z"/>
+    <circle cx="8" cy="6" r="4" fill="#FFF" />
+    <text x="6" y="8" font-family="Bungee" font-size="7" fill="#886000">S</text>
+  
+    </svg>
+  <defs>
+    <linearGradient id="SSS" gradientTransform="rotate(45)">
+    
+    <stop offset="0%" stop-color="#FAD200"/>
+    <stop offset="70%" stop-color="#FAD200"/>
+    <stop offset="100%" stop-color="#C8A090"/>
+    
+    </linearGradient>
+  </defs>
+  <svg x="28" y="20" width="100" height="100" viewBox="0 0 30 30" fill="url(#SSS)" xmlns="http://www.w3.org/2000/svg">
+    
+    <path d="M7 10h2v4H7v-4z"/>
+    <path d="M10 11c0 .552-.895 1-2 1s-2-.448-2-1 .895-1 2-1 2 .448 2 1z"/>
+    <path fill-rule="evenodd" d="M12.5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm-6-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0z"/>
+    <path d="M3 1h10c-.495 3.467-.5 10-5 10S3.495 4.467 3 1zm0 15a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1H3zm2-1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1H5z"/>
+    <circle cx="8" cy="6" r="4" fill="#FFF" />
+    <text x="6" y="8" font-family="Bungee" font-size="7" fill="#886000">S</text>
+  
+  </svg>
+  
+          <text x="50%" y="18" text-anchor="middle" font-family="Bungee" font-weight="bold" font-size="11" fill="#000">Stars</text>
+          <text x="50%" y="85" text-anchor="middle" font-family="Bungee" font-weight="bold" font-size="8.5" fill="#666">Super Stargazer</text>
+          <text x="50%" y="97" text-anchor="middle" font-family="Bungee" font-weight="bold" font-size="8.5" fill="#666">1.6kpt</text>
+          
+    <style>
+    @keyframes StarsRankAnimation {
+      from {
+        width: 0px;
+      }
+      to {
+        width: 80px;
+      }
+    }
+    #Stars-rank-progress{
+      animation: StarsRankAnimation 1s forwards ease-in-out;
+    }
+    </style>
+    <rect
+      x="15"
+      y="101"
+      rx="1"
+      width="80"
+      height="3.2"
+      opacity="0.3"
+      fill="#0366d6"
+    />
+    <rect
+      id="Stars-rank-progress"
+      x="15"
+      y="101"
+      rx="1"
+      height="3.2"
+      fill="#0366d6"
+    />
+  
+        </svg>
+        
+        <svg
+          x="0"
+          y="240"
+          width="110"
+          height="110"
+          viewBox="0 0 110 110"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            x="0.5"
+            y="0.5"
+            rx="4.5"
+            width="109"
+            height="109"
+            stroke="#e1e4e8"
+            fill="#FFF"
+            stroke-opacity="0"
+            fill-opacity="0"
+          />
+          
+  <svg xmlns="http://www.w3.org/2000/svg" width="90pt" height="90pt" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+<metadata>
+Created by potrace 1.15, written by Peter Selinger 2001-2017
+</metadata>
+<g transform="translate(20.000000,60.000000) scale(0.00400000,-0.00400000)" fill="#009366" stroke="none">
+<path d="M200 5103 c0 -2 18 -40 41 -84 47 -95 62 -132 50 -125 -15 10 -18 -39 -6 -87 31 -121 265 -468 412 -608 124 -119 281 -222 383 -251 36 -10 49 -16 30 -13 -19 3 -78 12 -130 20 -117 17 -353 35 -477 35 l-93 0 53 -82 c72 -112 72 -112 59 -104 -18 11 -26 -41 -13 -84 25 -84 261 -376 404 -502 95 -83 222 -168 304 -205 98 -43 194 -73 242 -74 l46 -1 -45 -8 c-25 -5 -124 -21 -220 -36 -96 -15 -177 -29 -180 -31 -2 -2 0 -7 5 -11 27 -19 138 -144 123 -139 -18 6 -28 -10 -28 -47 0 -38 53 -108 141 -187 349 -313 631 -450 939 -453 63 0 131 2 150 7 19 4 -35 -17 -120 -46 -236 -82 -310 -110 -310 -117 0 -3 29 -28 65 -54 55 -40 102 -84 67 -62 -13 8 -32 -24 -32 -54 0 -99 486 -361 790 -426 125 -27 327 -25 444 4 113 28 261 98 309 145 39 40 56 92 38 124 -8 17 -4 24 29 49 22 16 40 32 40 36 0 4 -26 40 -58 80 -162 203 -368 328 -608 369 -89 15 -368 6 -474 -15 -131 -26 -147 -26 -59 -3 51 13 102 34 122 50 38 29 61 84 51 123 -5 18 1 26 25 39 17 8 31 19 31 23 0 4 -16 38 -35 75 -163 317 -424 501 -781 548 -113 15 -127 19 -91 30 51 14 84 58 89 118 1 20 9 33 20 37 23 7 23 6 -12 114 -108 329 -305 534 -640 662 -41 15 -59 25 -40 21 19 -5 82 -8 140 -8 81 0 113 4 142 18 39 20 73 76 65 107 -3 12 2 20 14 23 23 6 23 21 4 124 -61 320 -249 568 -544 718 -157 79 -394 147 -666 190 -88 13 -170 26 -182 29 -13 2 -23 2 -23 -1z"/>
+<path d="M12550 5099 c-232 -36 -334 -55 -445 -84 -484 -122 -761 -346 -880 -712 -26 -79 -57 -242 -48 -255 2 -5 14 -8 26 -9 12 0 16 -3 10 -6 -17 -6 -16 -38 2 -72 25 -49 75 -66 200 -66 61 0 124 4 140 8 17 5 -13 -9 -66 -31 -136 -55 -250 -126 -341 -211 -128 -120 -217 -263 -272 -439 -32 -101 -32 -110 -3 -122 12 -5 17 -9 11 -9 -8 -1 -9 -12 -5 -34 15 -66 41 -95 94 -107 31 -7 31 -7 7 -12 -14 -3 -72 -13 -130 -22 -322 -51 -553 -206 -714 -479 -25 -42 -52 -92 -60 -111 -14 -33 -14 -33 23 -54 20 -12 31 -22 26 -22 -15 0 -17 -39 -4 -78 14 -42 76 -88 130 -97 22 -4 39 -9 36 -11 -2 -2 -55 3 -118 12 -154 22 -395 15 -494 -13 -216 -62 -391 -184 -545 -380 l-41 -52 40 -32 c34 -27 39 -35 30 -51 -17 -33 -1 -85 38 -125 48 -47 196 -117 309 -145 117 -29 319 -31 444 -4 300 64 790 328 790 425 0 29 -18 63 -31 56 -5 -4 -9 -4 -9 -2 0 3 34 29 75 59 41 29 75 56 75 59 0 3 -21 13 -47 22 -349 120 -422 146 -388 140 59 -12 241 -8 310 6 208 43 437 158 636 322 241 199 314 293 265 342 -13 12 -6 24 51 86 36 40 64 73 62 75 -4 2 -107 20 -359 60 -70 12 -77 14 -39 15 48 1 144 31 241 74 139 62 318 202 451 352 104 117 225 279 249 333 21 47 21 99 0 94 -16 -3 -10 9 58 116 l50 77 -72 3 c-91 4 -362 -14 -488 -33 -179 -26 -179 -26 -116 -9 93 26 244 120 365 230 193 174 467 605 443 696 -2 10 -8 15 -13 12 -12 -7 3 30 51 126 23 45 40 85 38 89 -2 4 -23 4 -48 0z m-933 -1185 c-3 -3 -12 -4 -19 -1 -8 3 -5 6 6 6 11 1 17 -2 13 -5z m-1290 -1860 c-3 -3 -12 -4 -19 -1 -8 3 -5 6 6 6 11 1 17 -2 13 -5z m40 -10 c-3 -3 -12 -4 -19 -1 -8 3 -5 6 6 6 11 1 17 -2 13 -5z"/>
+<path d="M10242 4632 c-46 -140 -92 -319 -118 -457 -18 -94 -28 -519 -12 -509 4 3 5 -8 2 -25 -8 -40 21 -179 58 -274 75 -195 297 -437 400 -437 57 0 124 70 177 185 53 112 67 224 65 510 -1 120 -5 166 -23 233 -66 252 -206 515 -423 795 -39 51 -74 95 -77 99 -4 4 -26 -50 -49 -120z"/>
+<path d="M2407 4612 c-305 -408 -443 -757 -422 -1067 3 -55 8 -140 10 -190 5 -113 30 -204 83 -293 44 -74 88 -118 128 -128 102 -26 339 218 422 433 34 87 67 235 58 258 -3 9 -1 39 5 68 5 28 10 117 10 197 1 155 -15 284 -57 455 -33 137 -117 405 -126 405 -5 0 -55 -62 -111 -138z"/>
+<path d="M2970 3839 c-189 -385 -254 -632 -248 -941 2 -86 6 -151 10 -145 5 7 5 -2 2 -19 -19 -98 77 -354 181 -487 76 -96 141 -120 210 -77 70 43 195 240 239 375 20 63 46 197 40 207 -3 4 0 54 6 111 26 257 -51 553 -240 922 -42 83 -87 165 -98 184 l-21 35 -81 -165z"/>
+<path d="M9711 3929 c-124 -219 -230 -466 -276 -642 -39 -151 -47 -234 -41 -426 7 -237 39 -357 136 -517 136 -225 233 -251 355 -97 94 121 171 313 181 453 2 36 8 111 13 167 26 288 -56 600 -266 1017 l-60 120 -42 -75z"/>
+<path d="M3645 3278 c-2 -7 -14 -78 -27 -158 -19 -123 -22 -188 -23 -430 -2 -309 7 -401 50 -555 66 -232 204 -430 388 -552 120 -80 189 -70 245 34 36 69 74 205 78 283 1 30 5 109 9 175 9 135 -1 213 -41 339 -66 208 -198 406 -429 645 -147 152 -244 237 -250 219z"/>
+<path d="M8994 3143 c-289 -284 -435 -492 -514 -732 -32 -100 -55 -261 -45 -330 3 -25 8 -91 10 -146 7 -168 66 -347 129 -387 77 -48 196 11 347 170 94 98 156 199 205 331 37 99 67 234 59 262 -4 11 -2 19 5 19 8 0 10 8 7 21 -3 11 1 77 10 147 10 89 13 172 9 277 -7 191 -48 515 -65 515 -3 0 -74 -66 -157 -147z"/>
+<path d="M4501 2358 c52 -129 69 -179 59 -173 -6 4 -10 -12 -10 -42 0 -78 115 -313 252 -514 215 -317 529 -509 832 -509 124 0 166 27 180 112 1 11 8 23 15 27 10 7 11 27 2 98 -66 545 -401 836 -1164 1012 -97 23 -179 41 -182 41 -3 0 5 -24 16 -52z"/>
+<path d="M8159 2375 c-609 -138 -940 -344 -1096 -683 -59 -127 -110 -377 -88 -429 5 -10 10 -29 12 -42 13 -75 59 -101 179 -101 316 0 625 196 854 543 110 165 222 395 228 465 3 40 2 53 -7 48 -11 -7 -3 15 53 153 28 68 31 81 19 80 -5 0 -74 -16 -154 -34z"/>
+<path d="M4032 1479 c-193 -25 -435 -124 -667 -274 -108 -69 -314 -218 -315 -226 0 -4 28 -16 63 -29 66 -24 92 -40 65 -40 -10 0 -19 -12 -23 -30 -14 -65 45 -105 226 -154 572 -155 982 -93 1270 194 75 74 101 131 81 174 -9 21 -6 31 29 77 21 29 39 55 39 58 0 3 -25 24 -55 46 -229 167 -469 236 -713 204z"/>
+<path d="M8513 1476 c-155 -30 -317 -101 -446 -196 l-67 -50 40 -54 c37 -49 40 -56 29 -80 -21 -46 4 -101 80 -176 288 -287 698 -349 1270 -194 180 49 240 89 226 153 -3 16 -14 31 -23 33 -9 2 18 18 61 35 l79 30 -126 92 c-304 223 -550 347 -780 395 -113 23 -257 28 -343 12z"/>
+<path d="M6324 1249 c-48 -14 -120 -83 -139 -134 -13 -34 -16 -60 -11 -112 4 -37 6 -84 6 -103 -2 -95 62 -193 145 -220 138 -46 285 52 292 195 1 28 8 71 14 97 10 37 10 60 0 101 -31 139 -167 217 -307 176z"/>
+<path d="M5255 1054 c-276 -46 -587 -227 -935 -541 l-54 -50 74 -23 c41 -13 67 -25 58 -27 -23 -6 -34 -48 -20 -78 16 -35 75 -61 188 -84 568 -115 968 -37 1250 243 69 69 110 130 114 171 5 42 0 66 -12 59 -12 -8 -12 -7 39 73 18 29 33 56 33 62 0 15 -49 46 -147 95 -207 104 -386 135 -588 100z"/>
+<path d="M7249 1054 c-42 -7 -109 -25 -150 -40 -76 -27 -226 -101 -267 -133 l-24 -18 41 -66 c22 -37 36 -67 31 -67 -18 0 -11 -80 11 -121 11 -22 53 -73 92 -113 279 -282 682 -361 1251 -245 113 23 172 49 188 84 14 30 3 72 -20 77 -9 3 18 15 61 29 l78 24 -93 81 c-362 313 -622 460 -902 509 -106 18 -194 18 -297 -1z"/>
+</g>
+</svg>
+  <svg x="7" y="35" width="65" height="65" viewBox="0 0 30 30" fill="#FAD200" xmlns="http://www.w3.org/2000/svg">
+      
+    <path d="M7 10h2v4H7v-4z"/>
+    <path d="M10 11c0 .552-.895 1-2 1s-2-.448-2-1 .895-1 2-1 2 .448 2 1z"/>
+    <path fill-rule="evenodd" d="M12.5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm-6-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0z"/>
+    <path d="M3 1h10c-.495 3.467-.5 10-5 10S3.495 4.467 3 1zm0 15a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1H3zm2-1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1H5z"/>
+    <circle cx="8" cy="6" r="4" fill="#FFF" />
+    <text x="6" y="8" font-family="Bungee" font-size="7" fill="#886000">S</text>
+  
+    </svg><svg x="68" y="35" width="65" height="65" viewBox="0 0 30 30" fill="#FAD200" xmlns="http://www.w3.org/2000/svg">
+      
+    <path d="M7 10h2v4H7v-4z"/>
+    <path d="M10 11c0 .552-.895 1-2 1s-2-.448-2-1 .895-1 2-1 2 .448 2 1z"/>
+    <path fill-rule="evenodd" d="M12.5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm-6-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0z"/>
+    <path d="M3 1h10c-.495 3.467-.5 10-5 10S3.495 4.467 3 1zm0 15a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1H3zm2-1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1H5z"/>
+    <circle cx="8" cy="6" r="4" fill="#FFF" />
+    <text x="6" y="8" font-family="Bungee" font-size="7" fill="#886000">S</text>
+  
+    </svg>
+  <defs>
+    <linearGradient id="SSS" gradientTransform="rotate(45)">
+    
+    <stop offset="0%" stop-color="#FAD200"/>
+    <stop offset="70%" stop-color="#FAD200"/>
+    <stop offset="100%" stop-color="#C8A090"/>
+    
+    </linearGradient>
+  </defs>
+  <svg x="28" y="20" width="100" height="100" viewBox="0 0 30 30" fill="url(#SSS)" xmlns="http://www.w3.org/2000/svg">
+    
+    <path d="M7 10h2v4H7v-4z"/>
+    <path d="M10 11c0 .552-.895 1-2 1s-2-.448-2-1 .895-1 2-1 2 .448 2 1z"/>
+    <path fill-rule="evenodd" d="M12.5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm-6-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0z"/>
+    <path d="M3 1h10c-.495 3.467-.5 10-5 10S3.495 4.467 3 1zm0 15a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1H3zm2-1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1H5z"/>
+    <circle cx="8" cy="6" r="4" fill="#FFF" />
+    <text x="6" y="8" font-family="Bungee" font-size="7" fill="#886000">S</text>
+  
+  </svg>
+  
+          <text x="50%" y="18" text-anchor="middle" font-family="Bungee" font-weight="bold" font-size="11" fill="#000">Repositories</text>
+          <text x="50%" y="85" text-anchor="middle" font-family="Bungee" font-weight="bold" font-size="8.5" fill="#666">God Repo Creator</text>
+          <text x="50%" y="97" text-anchor="middle" font-family="Bungee" font-weight="bold" font-size="8.5" fill="#666">125pt</text>
+          
+    <style>
+    @keyframes RepositoriesRankAnimation {
+      from {
+        width: 0px;
+      }
+      to {
+        width: 80px;
+      }
+    }
+    #Repositories-rank-progress{
+      animation: RepositoriesRankAnimation 1s forwards ease-in-out;
+    }
+    </style>
+    <rect
+      x="15"
+      y="101"
+      rx="1"
+      width="80"
+      height="3.2"
+      opacity="0.3"
+      fill="#0366d6"
+    />
+    <rect
+      id="Repositories-rank-progress"
+      x="15"
+      y="101"
+      rx="1"
+      height="3.2"
+      fill="#0366d6"
+    />
+  
+        </svg>
+        
+        <svg
+          x="120"
+          y="240"
+          width="110"
+          height="110"
+          viewBox="0 0 110 110"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            x="0.5"
+            y="0.5"
+            rx="4.5"
+            width="109"
+            height="109"
+            stroke="#e1e4e8"
+            fill="#FFF"
+            stroke-opacity="0"
+            fill-opacity="0"
+          />
+          
+  <svg xmlns="http://www.w3.org/2000/svg" width="90pt" height="90pt" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+<metadata>
+Created by potrace 1.15, written by Peter Selinger 2001-2017
+</metadata>
+<g transform="translate(20.000000,60.000000) scale(0.00400000,-0.00400000)" fill="#009366" stroke="none">
+<path d="M200 5103 c0 -2 18 -40 41 -84 47 -95 62 -132 50 -125 -15 10 -18 -39 -6 -87 31 -121 265 -468 412 -608 124 -119 281 -222 383 -251 36 -10 49 -16 30 -13 -19 3 -78 12 -130 20 -117 17 -353 35 -477 35 l-93 0 53 -82 c72 -112 72 -112 59 -104 -18 11 -26 -41 -13 -84 25 -84 261 -376 404 -502 95 -83 222 -168 304 -205 98 -43 194 -73 242 -74 l46 -1 -45 -8 c-25 -5 -124 -21 -220 -36 -96 -15 -177 -29 -180 -31 -2 -2 0 -7 5 -11 27 -19 138 -144 123 -139 -18 6 -28 -10 -28 -47 0 -38 53 -108 141 -187 349 -313 631 -450 939 -453 63 0 131 2 150 7 19 4 -35 -17 -120 -46 -236 -82 -310 -110 -310 -117 0 -3 29 -28 65 -54 55 -40 102 -84 67 -62 -13 8 -32 -24 -32 -54 0 -99 486 -361 790 -426 125 -27 327 -25 444 4 113 28 261 98 309 145 39 40 56 92 38 124 -8 17 -4 24 29 49 22 16 40 32 40 36 0 4 -26 40 -58 80 -162 203 -368 328 -608 369 -89 15 -368 6 -474 -15 -131 -26 -147 -26 -59 -3 51 13 102 34 122 50 38 29 61 84 51 123 -5 18 1 26 25 39 17 8 31 19 31 23 0 4 -16 38 -35 75 -163 317 -424 501 -781 548 -113 15 -127 19 -91 30 51 14 84 58 89 118 1 20 9 33 20 37 23 7 23 6 -12 114 -108 329 -305 534 -640 662 -41 15 -59 25 -40 21 19 -5 82 -8 140 -8 81 0 113 4 142 18 39 20 73 76 65 107 -3 12 2 20 14 23 23 6 23 21 4 124 -61 320 -249 568 -544 718 -157 79 -394 147 -666 190 -88 13 -170 26 -182 29 -13 2 -23 2 -23 -1z"/>
+<path d="M12550 5099 c-232 -36 -334 -55 -445 -84 -484 -122 -761 -346 -880 -712 -26 -79 -57 -242 -48 -255 2 -5 14 -8 26 -9 12 0 16 -3 10 -6 -17 -6 -16 -38 2 -72 25 -49 75 -66 200 -66 61 0 124 4 140 8 17 5 -13 -9 -66 -31 -136 -55 -250 -126 -341 -211 -128 -120 -217 -263 -272 -439 -32 -101 -32 -110 -3 -122 12 -5 17 -9 11 -9 -8 -1 -9 -12 -5 -34 15 -66 41 -95 94 -107 31 -7 31 -7 7 -12 -14 -3 -72 -13 -130 -22 -322 -51 -553 -206 -714 -479 -25 -42 -52 -92 -60 -111 -14 -33 -14 -33 23 -54 20 -12 31 -22 26 -22 -15 0 -17 -39 -4 -78 14 -42 76 -88 130 -97 22 -4 39 -9 36 -11 -2 -2 -55 3 -118 12 -154 22 -395 15 -494 -13 -216 -62 -391 -184 -545 -380 l-41 -52 40 -32 c34 -27 39 -35 30 -51 -17 -33 -1 -85 38 -125 48 -47 196 -117 309 -145 117 -29 319 -31 444 -4 300 64 790 328 790 425 0 29 -18 63 -31 56 -5 -4 -9 -4 -9 -2 0 3 34 29 75 59 41 29 75 56 75 59 0 3 -21 13 -47 22 -349 120 -422 146 -388 140 59 -12 241 -8 310 6 208 43 437 158 636 322 241 199 314 293 265 342 -13 12 -6 24 51 86 36 40 64 73 62 75 -4 2 -107 20 -359 60 -70 12 -77 14 -39 15 48 1 144 31 241 74 139 62 318 202 451 352 104 117 225 279 249 333 21 47 21 99 0 94 -16 -3 -10 9 58 116 l50 77 -72 3 c-91 4 -362 -14 -488 -33 -179 -26 -179 -26 -116 -9 93 26 244 120 365 230 193 174 467 605 443 696 -2 10 -8 15 -13 12 -12 -7 3 30 51 126 23 45 40 85 38 89 -2 4 -23 4 -48 0z m-933 -1185 c-3 -3 -12 -4 -19 -1 -8 3 -5 6 6 6 11 1 17 -2 13 -5z m-1290 -1860 c-3 -3 -12 -4 -19 -1 -8 3 -5 6 6 6 11 1 17 -2 13 -5z m40 -10 c-3 -3 -12 -4 -19 -1 -8 3 -5 6 6 6 11 1 17 -2 13 -5z"/>
+<path d="M10242 4632 c-46 -140 -92 -319 -118 -457 -18 -94 -28 -519 -12 -509 4 3 5 -8 2 -25 -8 -40 21 -179 58 -274 75 -195 297 -437 400 -437 57 0 124 70 177 185 53 112 67 224 65 510 -1 120 -5 166 -23 233 -66 252 -206 515 -423 795 -39 51 -74 95 -77 99 -4 4 -26 -50 -49 -120z"/>
+<path d="M2407 4612 c-305 -408 -443 -757 -422 -1067 3 -55 8 -140 10 -190 5 -113 30 -204 83 -293 44 -74 88 -118 128 -128 102 -26 339 218 422 433 34 87 67 235 58 258 -3 9 -1 39 5 68 5 28 10 117 10 197 1 155 -15 284 -57 455 -33 137 -117 405 -126 405 -5 0 -55 -62 -111 -138z"/>
+<path d="M2970 3839 c-189 -385 -254 -632 -248 -941 2 -86 6 -151 10 -145 5 7 5 -2 2 -19 -19 -98 77 -354 181 -487 76 -96 141 -120 210 -77 70 43 195 240 239 375 20 63 46 197 40 207 -3 4 0 54 6 111 26 257 -51 553 -240 922 -42 83 -87 165 -98 184 l-21 35 -81 -165z"/>
+<path d="M9711 3929 c-124 -219 -230 -466 -276 -642 -39 -151 -47 -234 -41 -426 7 -237 39 -357 136 -517 136 -225 233 -251 355 -97 94 121 171 313 181 453 2 36 8 111 13 167 26 288 -56 600 -266 1017 l-60 120 -42 -75z"/>
+<path d="M3645 3278 c-2 -7 -14 -78 -27 -158 -19 -123 -22 -188 -23 -430 -2 -309 7 -401 50 -555 66 -232 204 -430 388 -552 120 -80 189 -70 245 34 36 69 74 205 78 283 1 30 5 109 9 175 9 135 -1 213 -41 339 -66 208 -198 406 -429 645 -147 152 -244 237 -250 219z"/>
+<path d="M8994 3143 c-289 -284 -435 -492 -514 -732 -32 -100 -55 -261 -45 -330 3 -25 8 -91 10 -146 7 -168 66 -347 129 -387 77 -48 196 11 347 170 94 98 156 199 205 331 37 99 67 234 59 262 -4 11 -2 19 5 19 8 0 10 8 7 21 -3 11 1 77 10 147 10 89 13 172 9 277 -7 191 -48 515 -65 515 -3 0 -74 -66 -157 -147z"/>
+<path d="M4501 2358 c52 -129 69 -179 59 -173 -6 4 -10 -12 -10 -42 0 -78 115 -313 252 -514 215 -317 529 -509 832 -509 124 0 166 27 180 112 1 11 8 23 15 27 10 7 11 27 2 98 -66 545 -401 836 -1164 1012 -97 23 -179 41 -182 41 -3 0 5 -24 16 -52z"/>
+<path d="M8159 2375 c-609 -138 -940 -344 -1096 -683 -59 -127 -110 -377 -88 -429 5 -10 10 -29 12 -42 13 -75 59 -101 179 -101 316 0 625 196 854 543 110 165 222 395 228 465 3 40 2 53 -7 48 -11 -7 -3 15 53 153 28 68 31 81 19 80 -5 0 -74 -16 -154 -34z"/>
+<path d="M4032 1479 c-193 -25 -435 -124 -667 -274 -108 -69 -314 -218 -315 -226 0 -4 28 -16 63 -29 66 -24 92 -40 65 -40 -10 0 -19 -12 -23 -30 -14 -65 45 -105 226 -154 572 -155 982 -93 1270 194 75 74 101 131 81 174 -9 21 -6 31 29 77 21 29 39 55 39 58 0 3 -25 24 -55 46 -229 167 -469 236 -713 204z"/>
+<path d="M8513 1476 c-155 -30 -317 -101 -446 -196 l-67 -50 40 -54 c37 -49 40 -56 29 -80 -21 -46 4 -101 80 -176 288 -287 698 -349 1270 -194 180 49 240 89 226 153 -3 16 -14 31 -23 33 -9 2 18 18 61 35 l79 30 -126 92 c-304 223 -550 347 -780 395 -113 23 -257 28 -343 12z"/>
+<path d="M6324 1249 c-48 -14 -120 -83 -139 -134 -13 -34 -16 -60 -11 -112 4 -37 6 -84 6 -103 -2 -95 62 -193 145 -220 138 -46 285 52 292 195 1 28 8 71 14 97 10 37 10 60 0 101 -31 139 -167 217 -307 176z"/>
+<path d="M5255 1054 c-276 -46 -587 -227 -935 -541 l-54 -50 74 -23 c41 -13 67 -25 58 -27 -23 -6 -34 -48 -20 -78 16 -35 75 -61 188 -84 568 -115 968 -37 1250 243 69 69 110 130 114 171 5 42 0 66 -12 59 -12 -8 -12 -7 39 73 18 29 33 56 33 62 0 15 -49 46 -147 95 -207 104 -386 135 -588 100z"/>
+<path d="M7249 1054 c-42 -7 -109 -25 -150 -40 -76 -27 -226 -101 -267 -133 l-24 -18 41 -66 c22 -37 36 -67 31 -67 -18 0 -11 -80 11 -121 11 -22 53 -73 92 -113 279 -282 682 -361 1251 -245 113 23 172 49 188 84 14 30 3 72 -20 77 -9 3 18 15 61 29 l78 24 -93 81 c-362 313 -622 460 -902 509 -106 18 -194 18 -297 -1z"/>
+</g>
+</svg>
+  
+  <defs>
+    <linearGradient id="S" gradientTransform="rotate(45)">
+    
+    <stop offset="0%" stop-color="#FAD200"/>
+    <stop offset="70%" stop-color="#FAD200"/>
+    <stop offset="100%" stop-color="#C8A090"/>
+    
+    </linearGradient>
+  </defs>
+  <svg x="28" y="20" width="100" height="100" viewBox="0 0 30 30" fill="url(#S)" xmlns="http://www.w3.org/2000/svg">
+    
+    <path d="M7 10h2v4H7v-4z"/>
+    <path d="M10 11c0 .552-.895 1-2 1s-2-.448-2-1 .895-1 2-1 2 .448 2 1z"/>
+    <path fill-rule="evenodd" d="M12.5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm-6-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0z"/>
+    <path d="M3 1h10c-.495 3.467-.5 10-5 10S3.495 4.467 3 1zm0 15a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1H3zm2-1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1H5z"/>
+    <circle cx="8" cy="6" r="4" fill="#FFF" />
+    <text x="6" y="8" font-family="Bungee" font-size="7" fill="#886000">S</text>
+  
+  </svg>
+  
+          <text x="50%" y="18" text-anchor="middle" font-family="Bungee" font-weight="bold" font-size="11" fill="#000">Followers</text>
+          <text x="50%" y="85" text-anchor="middle" font-family="Bungee" font-weight="bold" font-size="8.5" fill="#666">Hyper Celebrity</text>
+          <text x="50%" y="97" text-anchor="middle" font-family="Bungee" font-weight="bold" font-size="8.5" fill="#666">334pt</text>
+          
+    <style>
+    @keyframes FollowersRankAnimation {
+      from {
+        width: 0px;
+      }
+      to {
+        width: 35.733333333333334px;
+      }
+    }
+    #Followers-rank-progress{
+      animation: FollowersRankAnimation 1s forwards ease-in-out;
+    }
+    </style>
+    <rect
+      x="15"
+      y="101"
+      rx="1"
+      width="80"
+      height="3.2"
+      opacity="0.3"
+      fill="#0366d6"
+    />
+    <rect
+      id="Followers-rank-progress"
+      x="15"
+      y="101"
+      rx="1"
+      height="3.2"
+      fill="#0366d6"
+    />
+  
+        </svg>
+        
+        <svg
+          x="240"
+          y="240"
+          width="110"
+          height="110"
+          viewBox="0 0 110 110"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            x="0.5"
+            y="0.5"
+            rx="4.5"
+            width="109"
+            height="109"
+            stroke="#e1e4e8"
+            fill="#FFF"
+            stroke-opacity="0"
+            fill-opacity="0"
+          />
+          
+  <svg xmlns="http://www.w3.org/2000/svg" width="90pt" height="90pt" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+<metadata>
+Created by potrace 1.15, written by Peter Selinger 2001-2017
+</metadata>
+<g transform="translate(20.000000,60.000000) scale(0.00400000,-0.00400000)" fill="#009366" stroke="none">
+<path d="M200 5103 c0 -2 18 -40 41 -84 47 -95 62 -132 50 -125 -15 10 -18 -39 -6 -87 31 -121 265 -468 412 -608 124 -119 281 -222 383 -251 36 -10 49 -16 30 -13 -19 3 -78 12 -130 20 -117 17 -353 35 -477 35 l-93 0 53 -82 c72 -112 72 -112 59 -104 -18 11 -26 -41 -13 -84 25 -84 261 -376 404 -502 95 -83 222 -168 304 -205 98 -43 194 -73 242 -74 l46 -1 -45 -8 c-25 -5 -124 -21 -220 -36 -96 -15 -177 -29 -180 -31 -2 -2 0 -7 5 -11 27 -19 138 -144 123 -139 -18 6 -28 -10 -28 -47 0 -38 53 -108 141 -187 349 -313 631 -450 939 -453 63 0 131 2 150 7 19 4 -35 -17 -120 -46 -236 -82 -310 -110 -310 -117 0 -3 29 -28 65 -54 55 -40 102 -84 67 -62 -13 8 -32 -24 -32 -54 0 -99 486 -361 790 -426 125 -27 327 -25 444 4 113 28 261 98 309 145 39 40 56 92 38 124 -8 17 -4 24 29 49 22 16 40 32 40 36 0 4 -26 40 -58 80 -162 203 -368 328 -608 369 -89 15 -368 6 -474 -15 -131 -26 -147 -26 -59 -3 51 13 102 34 122 50 38 29 61 84 51 123 -5 18 1 26 25 39 17 8 31 19 31 23 0 4 -16 38 -35 75 -163 317 -424 501 -781 548 -113 15 -127 19 -91 30 51 14 84 58 89 118 1 20 9 33 20 37 23 7 23 6 -12 114 -108 329 -305 534 -640 662 -41 15 -59 25 -40 21 19 -5 82 -8 140 -8 81 0 113 4 142 18 39 20 73 76 65 107 -3 12 2 20 14 23 23 6 23 21 4 124 -61 320 -249 568 -544 718 -157 79 -394 147 -666 190 -88 13 -170 26 -182 29 -13 2 -23 2 -23 -1z"/>
+<path d="M12550 5099 c-232 -36 -334 -55 -445 -84 -484 -122 -761 -346 -880 -712 -26 -79 -57 -242 -48 -255 2 -5 14 -8 26 -9 12 0 16 -3 10 -6 -17 -6 -16 -38 2 -72 25 -49 75 -66 200 -66 61 0 124 4 140 8 17 5 -13 -9 -66 -31 -136 -55 -250 -126 -341 -211 -128 -120 -217 -263 -272 -439 -32 -101 -32 -110 -3 -122 12 -5 17 -9 11 -9 -8 -1 -9 -12 -5 -34 15 -66 41 -95 94 -107 31 -7 31 -7 7 -12 -14 -3 -72 -13 -130 -22 -322 -51 -553 -206 -714 -479 -25 -42 -52 -92 -60 -111 -14 -33 -14 -33 23 -54 20 -12 31 -22 26 -22 -15 0 -17 -39 -4 -78 14 -42 76 -88 130 -97 22 -4 39 -9 36 -11 -2 -2 -55 3 -118 12 -154 22 -395 15 -494 -13 -216 -62 -391 -184 -545 -380 l-41 -52 40 -32 c34 -27 39 -35 30 -51 -17 -33 -1 -85 38 -125 48 -47 196 -117 309 -145 117 -29 319 -31 444 -4 300 64 790 328 790 425 0 29 -18 63 -31 56 -5 -4 -9 -4 -9 -2 0 3 34 29 75 59 41 29 75 56 75 59 0 3 -21 13 -47 22 -349 120 -422 146 -388 140 59 -12 241 -8 310 6 208 43 437 158 636 322 241 199 314 293 265 342 -13 12 -6 24 51 86 36 40 64 73 62 75 -4 2 -107 20 -359 60 -70 12 -77 14 -39 15 48 1 144 31 241 74 139 62 318 202 451 352 104 117 225 279 249 333 21 47 21 99 0 94 -16 -3 -10 9 58 116 l50 77 -72 3 c-91 4 -362 -14 -488 -33 -179 -26 -179 -26 -116 -9 93 26 244 120 365 230 193 174 467 605 443 696 -2 10 -8 15 -13 12 -12 -7 3 30 51 126 23 45 40 85 38 89 -2 4 -23 4 -48 0z m-933 -1185 c-3 -3 -12 -4 -19 -1 -8 3 -5 6 6 6 11 1 17 -2 13 -5z m-1290 -1860 c-3 -3 -12 -4 -19 -1 -8 3 -5 6 6 6 11 1 17 -2 13 -5z m40 -10 c-3 -3 -12 -4 -19 -1 -8 3 -5 6 6 6 11 1 17 -2 13 -5z"/>
+<path d="M10242 4632 c-46 -140 -92 -319 -118 -457 -18 -94 -28 -519 -12 -509 4 3 5 -8 2 -25 -8 -40 21 -179 58 -274 75 -195 297 -437 400 -437 57 0 124 70 177 185 53 112 67 224 65 510 -1 120 -5 166 -23 233 -66 252 -206 515 -423 795 -39 51 -74 95 -77 99 -4 4 -26 -50 -49 -120z"/>
+<path d="M2407 4612 c-305 -408 -443 -757 -422 -1067 3 -55 8 -140 10 -190 5 -113 30 -204 83 -293 44 -74 88 -118 128 -128 102 -26 339 218 422 433 34 87 67 235 58 258 -3 9 -1 39 5 68 5 28 10 117 10 197 1 155 -15 284 -57 455 -33 137 -117 405 -126 405 -5 0 -55 -62 -111 -138z"/>
+<path d="M2970 3839 c-189 -385 -254 -632 -248 -941 2 -86 6 -151 10 -145 5 7 5 -2 2 -19 -19 -98 77 -354 181 -487 76 -96 141 -120 210 -77 70 43 195 240 239 375 20 63 46 197 40 207 -3 4 0 54 6 111 26 257 -51 553 -240 922 -42 83 -87 165 -98 184 l-21 35 -81 -165z"/>
+<path d="M9711 3929 c-124 -219 -230 -466 -276 -642 -39 -151 -47 -234 -41 -426 7 -237 39 -357 136 -517 136 -225 233 -251 355 -97 94 121 171 313 181 453 2 36 8 111 13 167 26 288 -56 600 -266 1017 l-60 120 -42 -75z"/>
+<path d="M3645 3278 c-2 -7 -14 -78 -27 -158 -19 -123 -22 -188 -23 -430 -2 -309 7 -401 50 -555 66 -232 204 -430 388 -552 120 -80 189 -70 245 34 36 69 74 205 78 283 1 30 5 109 9 175 9 135 -1 213 -41 339 -66 208 -198 406 -429 645 -147 152 -244 237 -250 219z"/>
+<path d="M8994 3143 c-289 -284 -435 -492 -514 -732 -32 -100 -55 -261 -45 -330 3 -25 8 -91 10 -146 7 -168 66 -347 129 -387 77 -48 196 11 347 170 94 98 156 199 205 331 37 99 67 234 59 262 -4 11 -2 19 5 19 8 0 10 8 7 21 -3 11 1 77 10 147 10 89 13 172 9 277 -7 191 -48 515 -65 515 -3 0 -74 -66 -157 -147z"/>
+<path d="M4501 2358 c52 -129 69 -179 59 -173 -6 4 -10 -12 -10 -42 0 -78 115 -313 252 -514 215 -317 529 -509 832 -509 124 0 166 27 180 112 1 11 8 23 15 27 10 7 11 27 2 98 -66 545 -401 836 -1164 1012 -97 23 -179 41 -182 41 -3 0 5 -24 16 -52z"/>
+<path d="M8159 2375 c-609 -138 -940 -344 -1096 -683 -59 -127 -110 -377 -88 -429 5 -10 10 -29 12 -42 13 -75 59 -101 179 -101 316 0 625 196 854 543 110 165 222 395 228 465 3 40 2 53 -7 48 -11 -7 -3 15 53 153 28 68 31 81 19 80 -5 0 -74 -16 -154 -34z"/>
+<path d="M4032 1479 c-193 -25 -435 -124 -667 -274 -108 -69 -314 -218 -315 -226 0 -4 28 -16 63 -29 66 -24 92 -40 65 -40 -10 0 -19 -12 -23 -30 -14 -65 45 -105 226 -154 572 -155 982 -93 1270 194 75 74 101 131 81 174 -9 21 -6 31 29 77 21 29 39 55 39 58 0 3 -25 24 -55 46 -229 167 -469 236 -713 204z"/>
+<path d="M8513 1476 c-155 -30 -317 -101 -446 -196 l-67 -50 40 -54 c37 -49 40 -56 29 -80 -21 -46 4 -101 80 -176 288 -287 698 -349 1270 -194 180 49 240 89 226 153 -3 16 -14 31 -23 33 -9 2 18 18 61 35 l79 30 -126 92 c-304 223 -550 347 -780 395 -113 23 -257 28 -343 12z"/>
+<path d="M6324 1249 c-48 -14 -120 -83 -139 -134 -13 -34 -16 -60 -11 -112 4 -37 6 -84 6 -103 -2 -95 62 -193 145 -220 138 -46 285 52 292 195 1 28 8 71 14 97 10 37 10 60 0 101 -31 139 -167 217 -307 176z"/>
+<path d="M5255 1054 c-276 -46 -587 -227 -935 -541 l-54 -50 74 -23 c41 -13 67 -25 58 -27 -23 -6 -34 -48 -20 -78 16 -35 75 -61 188 -84 568 -115 968 -37 1250 243 69 69 110 130 114 171 5 42 0 66 -12 59 -12 -8 -12 -7 39 73 18 29 33 56 33 62 0 15 -49 46 -147 95 -207 104 -386 135 -588 100z"/>
+<path d="M7249 1054 c-42 -7 -109 -25 -150 -40 -76 -27 -226 -101 -267 -133 l-24 -18 41 -66 c22 -37 36 -67 31 -67 -18 0 -11 -80 11 -121 11 -22 53 -73 92 -113 279 -282 682 -361 1251 -245 113 23 172 49 188 84 14 30 3 72 -20 77 -9 3 18 15 61 29 l78 24 -93 81 c-362 313 -622 460 -902 509 -106 18 -194 18 -297 -1z"/>
+</g>
+</svg>
+  <svg x="7" y="35" width="65" height="65" viewBox="0 0 30 30" fill="#B0B0B0" xmlns="http://www.w3.org/2000/svg">
+      
+    <path d="M7 10h2v4H7v-4z"/>
+    <path d="M10 11c0 .552-.895 1-2 1s-2-.448-2-1 .895-1 2-1 2 .448 2 1z"/>
+    <path fill-rule="evenodd" d="M12.5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm-6-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0z"/>
+    <path d="M3 1h10c-.495 3.467-.5 10-5 10S3.495 4.467 3 1zm0 15a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1H3zm2-1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1H5z"/>
+    <circle cx="8" cy="6" r="4" fill="#FFF" />
+    <text x="6" y="8" font-family="Bungee" font-size="7" fill="#505050">A</text>
+  
+    </svg><svg x="68" y="35" width="65" height="65" viewBox="0 0 30 30" fill="#B0B0B0" xmlns="http://www.w3.org/2000/svg">
+      
+    <path d="M7 10h2v4H7v-4z"/>
+    <path d="M10 11c0 .552-.895 1-2 1s-2-.448-2-1 .895-1 2-1 2 .448 2 1z"/>
+    <path fill-rule="evenodd" d="M12.5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm-6-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0z"/>
+    <path d="M3 1h10c-.495 3.467-.5 10-5 10S3.495 4.467 3 1zm0 15a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1H3zm2-1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1H5z"/>
+    <circle cx="8" cy="6" r="4" fill="#FFF" />
+    <text x="6" y="8" font-family="Bungee" font-size="7" fill="#505050">A</text>
+  
+    </svg>
+  <defs>
+    <linearGradient id="AAA" gradientTransform="rotate(45)">
+    
+    <stop offset="0%" stop-color="#B0B0B0"/>
+    <stop offset="70%" stop-color="#B0B0B0"/>
+    <stop offset="100%" stop-color="#9090C0"/>
+    
+    </linearGradient>
+  </defs>
+  <svg x="28" y="20" width="100" height="100" viewBox="0 0 30 30" fill="url(#AAA)" xmlns="http://www.w3.org/2000/svg">
+    
+    <path d="M7 10h2v4H7v-4z"/>
+    <path d="M10 11c0 .552-.895 1-2 1s-2-.448-2-1 .895-1 2-1 2 .448 2 1z"/>
+    <path fill-rule="evenodd" d="M12.5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm-6-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0z"/>
+    <path d="M3 1h10c-.495 3.467-.5 10-5 10S3.495 4.467 3 1zm0 15a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1H3zm2-1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1H5z"/>
+    <circle cx="8" cy="6" r="4" fill="#FFF" />
+    <text x="6" y="8" font-family="Bungee" font-size="7" fill="#505050">A</text>
+  
+  </svg>
+  
+          <text x="50%" y="18" text-anchor="middle" font-family="Bungee" font-weight="bold" font-size="11" fill="#000">Commits</text>
+          <text x="50%" y="85" text-anchor="middle" font-family="Bungee" font-weight="bold" font-size="8.5" fill="#666">Ultra Committer</text>
+          <text x="50%" y="97" text-anchor="middle" font-family="Bungee" font-weight="bold" font-size="8.5" fill="#666">629pt</text>
+          
+    <style>
+    @keyframes CommitsRankAnimation {
+      from {
+        width: 0px;
+      }
+      to {
+        width: 51.6px;
+      }
+    }
+    #Commits-rank-progress{
+      animation: CommitsRankAnimation 1s forwards ease-in-out;
+    }
+    </style>
+    <rect
+      x="15"
+      y="101"
+      rx="1"
+      width="80"
+      height="3.2"
+      opacity="0.3"
+      fill="#0366d6"
+    />
+    <rect
+      id="Commits-rank-progress"
+      x="15"
+      y="101"
+      rx="1"
+      height="3.2"
+      fill="#0366d6"
+    />
+  
+        </svg>
+        
+        <svg
+          x="0"
+          y="360"
+          width="110"
+          height="110"
+          viewBox="0 0 110 110"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            x="0.5"
+            y="0.5"
+            rx="4.5"
+            width="109"
+            height="109"
+            stroke="#e1e4e8"
+            fill="#FFF"
+            stroke-opacity="0"
+            fill-opacity="0"
+          />
+          
+  <svg xmlns="http://www.w3.org/2000/svg" width="90pt" height="90pt" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+<metadata>
+Created by potrace 1.15, written by Peter Selinger 2001-2017
+</metadata>
+<g transform="translate(20.000000,60.000000) scale(0.00400000,-0.00400000)" fill="#009366" stroke="none">
+<path d="M200 5103 c0 -2 18 -40 41 -84 47 -95 62 -132 50 -125 -15 10 -18 -39 -6 -87 31 -121 265 -468 412 -608 124 -119 281 -222 383 -251 36 -10 49 -16 30 -13 -19 3 -78 12 -130 20 -117 17 -353 35 -477 35 l-93 0 53 -82 c72 -112 72 -112 59 -104 -18 11 -26 -41 -13 -84 25 -84 261 -376 404 -502 95 -83 222 -168 304 -205 98 -43 194 -73 242 -74 l46 -1 -45 -8 c-25 -5 -124 -21 -220 -36 -96 -15 -177 -29 -180 -31 -2 -2 0 -7 5 -11 27 -19 138 -144 123 -139 -18 6 -28 -10 -28 -47 0 -38 53 -108 141 -187 349 -313 631 -450 939 -453 63 0 131 2 150 7 19 4 -35 -17 -120 -46 -236 -82 -310 -110 -310 -117 0 -3 29 -28 65 -54 55 -40 102 -84 67 -62 -13 8 -32 -24 -32 -54 0 -99 486 -361 790 -426 125 -27 327 -25 444 4 113 28 261 98 309 145 39 40 56 92 38 124 -8 17 -4 24 29 49 22 16 40 32 40 36 0 4 -26 40 -58 80 -162 203 -368 328 -608 369 -89 15 -368 6 -474 -15 -131 -26 -147 -26 -59 -3 51 13 102 34 122 50 38 29 61 84 51 123 -5 18 1 26 25 39 17 8 31 19 31 23 0 4 -16 38 -35 75 -163 317 -424 501 -781 548 -113 15 -127 19 -91 30 51 14 84 58 89 118 1 20 9 33 20 37 23 7 23 6 -12 114 -108 329 -305 534 -640 662 -41 15 -59 25 -40 21 19 -5 82 -8 140 -8 81 0 113 4 142 18 39 20 73 76 65 107 -3 12 2 20 14 23 23 6 23 21 4 124 -61 320 -249 568 -544 718 -157 79 -394 147 -666 190 -88 13 -170 26 -182 29 -13 2 -23 2 -23 -1z"/>
+<path d="M12550 5099 c-232 -36 -334 -55 -445 -84 -484 -122 -761 -346 -880 -712 -26 -79 -57 -242 -48 -255 2 -5 14 -8 26 -9 12 0 16 -3 10 -6 -17 -6 -16 -38 2 -72 25 -49 75 -66 200 -66 61 0 124 4 140 8 17 5 -13 -9 -66 -31 -136 -55 -250 -126 -341 -211 -128 -120 -217 -263 -272 -439 -32 -101 -32 -110 -3 -122 12 -5 17 -9 11 -9 -8 -1 -9 -12 -5 -34 15 -66 41 -95 94 -107 31 -7 31 -7 7 -12 -14 -3 -72 -13 -130 -22 -322 -51 -553 -206 -714 -479 -25 -42 -52 -92 -60 -111 -14 -33 -14 -33 23 -54 20 -12 31 -22 26 -22 -15 0 -17 -39 -4 -78 14 -42 76 -88 130 -97 22 -4 39 -9 36 -11 -2 -2 -55 3 -118 12 -154 22 -395 15 -494 -13 -216 -62 -391 -184 -545 -380 l-41 -52 40 -32 c34 -27 39 -35 30 -51 -17 -33 -1 -85 38 -125 48 -47 196 -117 309 -145 117 -29 319 -31 444 -4 300 64 790 328 790 425 0 29 -18 63 -31 56 -5 -4 -9 -4 -9 -2 0 3 34 29 75 59 41 29 75 56 75 59 0 3 -21 13 -47 22 -349 120 -422 146 -388 140 59 -12 241 -8 310 6 208 43 437 158 636 322 241 199 314 293 265 342 -13 12 -6 24 51 86 36 40 64 73 62 75 -4 2 -107 20 -359 60 -70 12 -77 14 -39 15 48 1 144 31 241 74 139 62 318 202 451 352 104 117 225 279 249 333 21 47 21 99 0 94 -16 -3 -10 9 58 116 l50 77 -72 3 c-91 4 -362 -14 -488 -33 -179 -26 -179 -26 -116 -9 93 26 244 120 365 230 193 174 467 605 443 696 -2 10 -8 15 -13 12 -12 -7 3 30 51 126 23 45 40 85 38 89 -2 4 -23 4 -48 0z m-933 -1185 c-3 -3 -12 -4 -19 -1 -8 3 -5 6 6 6 11 1 17 -2 13 -5z m-1290 -1860 c-3 -3 -12 -4 -19 -1 -8 3 -5 6 6 6 11 1 17 -2 13 -5z m40 -10 c-3 -3 -12 -4 -19 -1 -8 3 -5 6 6 6 11 1 17 -2 13 -5z"/>
+<path d="M10242 4632 c-46 -140 -92 -319 -118 -457 -18 -94 -28 -519 -12 -509 4 3 5 -8 2 -25 -8 -40 21 -179 58 -274 75 -195 297 -437 400 -437 57 0 124 70 177 185 53 112 67 224 65 510 -1 120 -5 166 -23 233 -66 252 -206 515 -423 795 -39 51 -74 95 -77 99 -4 4 -26 -50 -49 -120z"/>
+<path d="M2407 4612 c-305 -408 -443 -757 -422 -1067 3 -55 8 -140 10 -190 5 -113 30 -204 83 -293 44 -74 88 -118 128 -128 102 -26 339 218 422 433 34 87 67 235 58 258 -3 9 -1 39 5 68 5 28 10 117 10 197 1 155 -15 284 -57 455 -33 137 -117 405 -126 405 -5 0 -55 -62 -111 -138z"/>
+<path d="M2970 3839 c-189 -385 -254 -632 -248 -941 2 -86 6 -151 10 -145 5 7 5 -2 2 -19 -19 -98 77 -354 181 -487 76 -96 141 -120 210 -77 70 43 195 240 239 375 20 63 46 197 40 207 -3 4 0 54 6 111 26 257 -51 553 -240 922 -42 83 -87 165 -98 184 l-21 35 -81 -165z"/>
+<path d="M9711 3929 c-124 -219 -230 -466 -276 -642 -39 -151 -47 -234 -41 -426 7 -237 39 -357 136 -517 136 -225 233 -251 355 -97 94 121 171 313 181 453 2 36 8 111 13 167 26 288 -56 600 -266 1017 l-60 120 -42 -75z"/>
+<path d="M3645 3278 c-2 -7 -14 -78 -27 -158 -19 -123 -22 -188 -23 -430 -2 -309 7 -401 50 -555 66 -232 204 -430 388 -552 120 -80 189 -70 245 34 36 69 74 205 78 283 1 30 5 109 9 175 9 135 -1 213 -41 339 -66 208 -198 406 -429 645 -147 152 -244 237 -250 219z"/>
+<path d="M8994 3143 c-289 -284 -435 -492 -514 -732 -32 -100 -55 -261 -45 -330 3 -25 8 -91 10 -146 7 -168 66 -347 129 -387 77 -48 196 11 347 170 94 98 156 199 205 331 37 99 67 234 59 262 -4 11 -2 19 5 19 8 0 10 8 7 21 -3 11 1 77 10 147 10 89 13 172 9 277 -7 191 -48 515 -65 515 -3 0 -74 -66 -157 -147z"/>
+<path d="M4501 2358 c52 -129 69 -179 59 -173 -6 4 -10 -12 -10 -42 0 -78 115 -313 252 -514 215 -317 529 -509 832 -509 124 0 166 27 180 112 1 11 8 23 15 27 10 7 11 27 2 98 -66 545 -401 836 -1164 1012 -97 23 -179 41 -182 41 -3 0 5 -24 16 -52z"/>
+<path d="M8159 2375 c-609 -138 -940 -344 -1096 -683 -59 -127 -110 -377 -88 -429 5 -10 10 -29 12 -42 13 -75 59 -101 179 -101 316 0 625 196 854 543 110 165 222 395 228 465 3 40 2 53 -7 48 -11 -7 -3 15 53 153 28 68 31 81 19 80 -5 0 -74 -16 -154 -34z"/>
+<path d="M4032 1479 c-193 -25 -435 -124 -667 -274 -108 -69 -314 -218 -315 -226 0 -4 28 -16 63 -29 66 -24 92 -40 65 -40 -10 0 -19 -12 -23 -30 -14 -65 45 -105 226 -154 572 -155 982 -93 1270 194 75 74 101 131 81 174 -9 21 -6 31 29 77 21 29 39 55 39 58 0 3 -25 24 -55 46 -229 167 -469 236 -713 204z"/>
+<path d="M8513 1476 c-155 -30 -317 -101 -446 -196 l-67 -50 40 -54 c37 -49 40 -56 29 -80 -21 -46 4 -101 80 -176 288 -287 698 -349 1270 -194 180 49 240 89 226 153 -3 16 -14 31 -23 33 -9 2 18 18 61 35 l79 30 -126 92 c-304 223 -550 347 -780 395 -113 23 -257 28 -343 12z"/>
+<path d="M6324 1249 c-48 -14 -120 -83 -139 -134 -13 -34 -16 -60 -11 -112 4 -37 6 -84 6 -103 -2 -95 62 -193 145 -220 138 -46 285 52 292 195 1 28 8 71 14 97 10 37 10 60 0 101 -31 139 -167 217 -307 176z"/>
+<path d="M5255 1054 c-276 -46 -587 -227 -935 -541 l-54 -50 74 -23 c41 -13 67 -25 58 -27 -23 -6 -34 -48 -20 -78 16 -35 75 -61 188 -84 568 -115 968 -37 1250 243 69 69 110 130 114 171 5 42 0 66 -12 59 -12 -8 -12 -7 39 73 18 29 33 56 33 62 0 15 -49 46 -147 95 -207 104 -386 135 -588 100z"/>
+<path d="M7249 1054 c-42 -7 -109 -25 -150 -40 -76 -27 -226 -101 -267 -133 l-24 -18 41 -66 c22 -37 36 -67 31 -67 -18 0 -11 -80 11 -121 11 -22 53 -73 92 -113 279 -282 682 -361 1251 -245 113 23 172 49 188 84 14 30 3 72 -20 77 -9 3 18 15 61 29 l78 24 -93 81 c-362 313 -622 460 -902 509 -106 18 -194 18 -297 -1z"/>
+</g>
+</svg>
+  <svg x="7" y="35" width="65" height="65" viewBox="0 0 30 30" fill="#B0B0B0" xmlns="http://www.w3.org/2000/svg">
+      
+    <path d="M7 10h2v4H7v-4z"/>
+    <path d="M10 11c0 .552-.895 1-2 1s-2-.448-2-1 .895-1 2-1 2 .448 2 1z"/>
+    <path fill-rule="evenodd" d="M12.5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm-6-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0z"/>
+    <path d="M3 1h10c-.495 3.467-.5 10-5 10S3.495 4.467 3 1zm0 15a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1H3zm2-1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1H5z"/>
+    <circle cx="8" cy="6" r="4" fill="#FFF" />
+    <text x="6" y="8" font-family="Bungee" font-size="7" fill="#505050">A</text>
+  
+    </svg><svg x="68" y="35" width="65" height="65" viewBox="0 0 30 30" fill="#B0B0B0" xmlns="http://www.w3.org/2000/svg">
+      
+    <path d="M7 10h2v4H7v-4z"/>
+    <path d="M10 11c0 .552-.895 1-2 1s-2-.448-2-1 .895-1 2-1 2 .448 2 1z"/>
+    <path fill-rule="evenodd" d="M12.5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm-6-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0z"/>
+    <path d="M3 1h10c-.495 3.467-.5 10-5 10S3.495 4.467 3 1zm0 15a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1H3zm2-1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1H5z"/>
+    <circle cx="8" cy="6" r="4" fill="#FFF" />
+    <text x="6" y="8" font-family="Bungee" font-size="7" fill="#505050">A</text>
+  
+    </svg>
+  <defs>
+    <linearGradient id="AAA" gradientTransform="rotate(45)">
+    
+    <stop offset="0%" stop-color="#B0B0B0"/>
+    <stop offset="70%" stop-color="#B0B0B0"/>
+    <stop offset="100%" stop-color="#9090C0"/>
+    
+    </linearGradient>
+  </defs>
+  <svg x="28" y="20" width="100" height="100" viewBox="0 0 30 30" fill="url(#AAA)" xmlns="http://www.w3.org/2000/svg">
+    
+    <path d="M7 10h2v4H7v-4z"/>
+    <path d="M10 11c0 .552-.895 1-2 1s-2-.448-2-1 .895-1 2-1 2 .448 2 1z"/>
+    <path fill-rule="evenodd" d="M12.5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm-6-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0z"/>
+    <path d="M3 1h10c-.495 3.467-.5 10-5 10S3.495 4.467 3 1zm0 15a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1H3zm2-1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1H5z"/>
+    <circle cx="8" cy="6" r="4" fill="#FFF" />
+    <text x="6" y="8" font-family="Bungee" font-size="7" fill="#505050">A</text>
+  
+  </svg>
+  
+          <text x="50%" y="18" text-anchor="middle" font-family="Bungee" font-weight="bold" font-size="11" fill="#000">PullRequest</text>
+          <text x="50%" y="85" text-anchor="middle" font-family="Bungee" font-weight="bold" font-size="8.5" fill="#666">Ultra Puller</text>
+          <text x="50%" y="97" text-anchor="middle" font-family="Bungee" font-weight="bold" font-size="8.5" fill="#666">58pt</text>
+          
+    <style>
+    @keyframes PullRequestRankAnimation {
+      from {
+        width: 0px;
+      }
+      to {
+        width: 12.8px;
+      }
+    }
+    #PullRequest-rank-progress{
+      animation: PullRequestRankAnimation 1s forwards ease-in-out;
+    }
+    </style>
+    <rect
+      x="15"
+      y="101"
+      rx="1"
+      width="80"
+      height="3.2"
+      opacity="0.3"
+      fill="#0366d6"
+    />
+    <rect
+      id="PullRequest-rank-progress"
+      x="15"
+      y="101"
+      rx="1"
+      height="3.2"
+      fill="#0366d6"
+    />
+  
+        </svg>
+        
+        <svg
+          x="120"
+          y="360"
+          width="110"
+          height="110"
+          viewBox="0 0 110 110"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            x="0.5"
+            y="0.5"
+            rx="4.5"
+            width="109"
+            height="109"
+            stroke="#e1e4e8"
+            fill="#FFF"
+            stroke-opacity="0"
+            fill-opacity="0"
+          />
+          
+  <svg xmlns="http://www.w3.org/2000/svg" width="90pt" height="90pt" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+<metadata>
+Created by potrace 1.15, written by Peter Selinger 2001-2017
+</metadata>
+<g transform="translate(20.000000,60.000000) scale(0.00400000,-0.00400000)" fill="#009366" stroke="none">
+<path d="M200 5103 c0 -2 18 -40 41 -84 47 -95 62 -132 50 -125 -15 10 -18 -39 -6 -87 31 -121 265 -468 412 -608 124 -119 281 -222 383 -251 36 -10 49 -16 30 -13 -19 3 -78 12 -130 20 -117 17 -353 35 -477 35 l-93 0 53 -82 c72 -112 72 -112 59 -104 -18 11 -26 -41 -13 -84 25 -84 261 -376 404 -502 95 -83 222 -168 304 -205 98 -43 194 -73 242 -74 l46 -1 -45 -8 c-25 -5 -124 -21 -220 -36 -96 -15 -177 -29 -180 -31 -2 -2 0 -7 5 -11 27 -19 138 -144 123 -139 -18 6 -28 -10 -28 -47 0 -38 53 -108 141 -187 349 -313 631 -450 939 -453 63 0 131 2 150 7 19 4 -35 -17 -120 -46 -236 -82 -310 -110 -310 -117 0 -3 29 -28 65 -54 55 -40 102 -84 67 -62 -13 8 -32 -24 -32 -54 0 -99 486 -361 790 -426 125 -27 327 -25 444 4 113 28 261 98 309 145 39 40 56 92 38 124 -8 17 -4 24 29 49 22 16 40 32 40 36 0 4 -26 40 -58 80 -162 203 -368 328 -608 369 -89 15 -368 6 -474 -15 -131 -26 -147 -26 -59 -3 51 13 102 34 122 50 38 29 61 84 51 123 -5 18 1 26 25 39 17 8 31 19 31 23 0 4 -16 38 -35 75 -163 317 -424 501 -781 548 -113 15 -127 19 -91 30 51 14 84 58 89 118 1 20 9 33 20 37 23 7 23 6 -12 114 -108 329 -305 534 -640 662 -41 15 -59 25 -40 21 19 -5 82 -8 140 -8 81 0 113 4 142 18 39 20 73 76 65 107 -3 12 2 20 14 23 23 6 23 21 4 124 -61 320 -249 568 -544 718 -157 79 -394 147 -666 190 -88 13 -170 26 -182 29 -13 2 -23 2 -23 -1z"/>
+<path d="M12550 5099 c-232 -36 -334 -55 -445 -84 -484 -122 -761 -346 -880 -712 -26 -79 -57 -242 -48 -255 2 -5 14 -8 26 -9 12 0 16 -3 10 -6 -17 -6 -16 -38 2 -72 25 -49 75 -66 200 -66 61 0 124 4 140 8 17 5 -13 -9 -66 -31 -136 -55 -250 -126 -341 -211 -128 -120 -217 -263 -272 -439 -32 -101 -32 -110 -3 -122 12 -5 17 -9 11 -9 -8 -1 -9 -12 -5 -34 15 -66 41 -95 94 -107 31 -7 31 -7 7 -12 -14 -3 -72 -13 -130 -22 -322 -51 -553 -206 -714 -479 -25 -42 -52 -92 -60 -111 -14 -33 -14 -33 23 -54 20 -12 31 -22 26 -22 -15 0 -17 -39 -4 -78 14 -42 76 -88 130 -97 22 -4 39 -9 36 -11 -2 -2 -55 3 -118 12 -154 22 -395 15 -494 -13 -216 -62 -391 -184 -545 -380 l-41 -52 40 -32 c34 -27 39 -35 30 -51 -17 -33 -1 -85 38 -125 48 -47 196 -117 309 -145 117 -29 319 -31 444 -4 300 64 790 328 790 425 0 29 -18 63 -31 56 -5 -4 -9 -4 -9 -2 0 3 34 29 75 59 41 29 75 56 75 59 0 3 -21 13 -47 22 -349 120 -422 146 -388 140 59 -12 241 -8 310 6 208 43 437 158 636 322 241 199 314 293 265 342 -13 12 -6 24 51 86 36 40 64 73 62 75 -4 2 -107 20 -359 60 -70 12 -77 14 -39 15 48 1 144 31 241 74 139 62 318 202 451 352 104 117 225 279 249 333 21 47 21 99 0 94 -16 -3 -10 9 58 116 l50 77 -72 3 c-91 4 -362 -14 -488 -33 -179 -26 -179 -26 -116 -9 93 26 244 120 365 230 193 174 467 605 443 696 -2 10 -8 15 -13 12 -12 -7 3 30 51 126 23 45 40 85 38 89 -2 4 -23 4 -48 0z m-933 -1185 c-3 -3 -12 -4 -19 -1 -8 3 -5 6 6 6 11 1 17 -2 13 -5z m-1290 -1860 c-3 -3 -12 -4 -19 -1 -8 3 -5 6 6 6 11 1 17 -2 13 -5z m40 -10 c-3 -3 -12 -4 -19 -1 -8 3 -5 6 6 6 11 1 17 -2 13 -5z"/>
+<path d="M10242 4632 c-46 -140 -92 -319 -118 -457 -18 -94 -28 -519 -12 -509 4 3 5 -8 2 -25 -8 -40 21 -179 58 -274 75 -195 297 -437 400 -437 57 0 124 70 177 185 53 112 67 224 65 510 -1 120 -5 166 -23 233 -66 252 -206 515 -423 795 -39 51 -74 95 -77 99 -4 4 -26 -50 -49 -120z"/>
+<path d="M2407 4612 c-305 -408 -443 -757 -422 -1067 3 -55 8 -140 10 -190 5 -113 30 -204 83 -293 44 -74 88 -118 128 -128 102 -26 339 218 422 433 34 87 67 235 58 258 -3 9 -1 39 5 68 5 28 10 117 10 197 1 155 -15 284 -57 455 -33 137 -117 405 -126 405 -5 0 -55 -62 -111 -138z"/>
+<path d="M2970 3839 c-189 -385 -254 -632 -248 -941 2 -86 6 -151 10 -145 5 7 5 -2 2 -19 -19 -98 77 -354 181 -487 76 -96 141 -120 210 -77 70 43 195 240 239 375 20 63 46 197 40 207 -3 4 0 54 6 111 26 257 -51 553 -240 922 -42 83 -87 165 -98 184 l-21 35 -81 -165z"/>
+<path d="M9711 3929 c-124 -219 -230 -466 -276 -642 -39 -151 -47 -234 -41 -426 7 -237 39 -357 136 -517 136 -225 233 -251 355 -97 94 121 171 313 181 453 2 36 8 111 13 167 26 288 -56 600 -266 1017 l-60 120 -42 -75z"/>
+<path d="M3645 3278 c-2 -7 -14 -78 -27 -158 -19 -123 -22 -188 -23 -430 -2 -309 7 -401 50 -555 66 -232 204 -430 388 -552 120 -80 189 -70 245 34 36 69 74 205 78 283 1 30 5 109 9 175 9 135 -1 213 -41 339 -66 208 -198 406 -429 645 -147 152 -244 237 -250 219z"/>
+<path d="M8994 3143 c-289 -284 -435 -492 -514 -732 -32 -100 -55 -261 -45 -330 3 -25 8 -91 10 -146 7 -168 66 -347 129 -387 77 -48 196 11 347 170 94 98 156 199 205 331 37 99 67 234 59 262 -4 11 -2 19 5 19 8 0 10 8 7 21 -3 11 1 77 10 147 10 89 13 172 9 277 -7 191 -48 515 -65 515 -3 0 -74 -66 -157 -147z"/>
+<path d="M4501 2358 c52 -129 69 -179 59 -173 -6 4 -10 -12 -10 -42 0 -78 115 -313 252 -514 215 -317 529 -509 832 -509 124 0 166 27 180 112 1 11 8 23 15 27 10 7 11 27 2 98 -66 545 -401 836 -1164 1012 -97 23 -179 41 -182 41 -3 0 5 -24 16 -52z"/>
+<path d="M8159 2375 c-609 -138 -940 -344 -1096 -683 -59 -127 -110 -377 -88 -429 5 -10 10 -29 12 -42 13 -75 59 -101 179 -101 316 0 625 196 854 543 110 165 222 395 228 465 3 40 2 53 -7 48 -11 -7 -3 15 53 153 28 68 31 81 19 80 -5 0 -74 -16 -154 -34z"/>
+<path d="M4032 1479 c-193 -25 -435 -124 -667 -274 -108 -69 -314 -218 -315 -226 0 -4 28 -16 63 -29 66 -24 92 -40 65 -40 -10 0 -19 -12 -23 -30 -14 -65 45 -105 226 -154 572 -155 982 -93 1270 194 75 74 101 131 81 174 -9 21 -6 31 29 77 21 29 39 55 39 58 0 3 -25 24 -55 46 -229 167 -469 236 -713 204z"/>
+<path d="M8513 1476 c-155 -30 -317 -101 -446 -196 l-67 -50 40 -54 c37 -49 40 -56 29 -80 -21 -46 4 -101 80 -176 288 -287 698 -349 1270 -194 180 49 240 89 226 153 -3 16 -14 31 -23 33 -9 2 18 18 61 35 l79 30 -126 92 c-304 223 -550 347 -780 395 -113 23 -257 28 -343 12z"/>
+<path d="M6324 1249 c-48 -14 -120 -83 -139 -134 -13 -34 -16 -60 -11 -112 4 -37 6 -84 6 -103 -2 -95 62 -193 145 -220 138 -46 285 52 292 195 1 28 8 71 14 97 10 37 10 60 0 101 -31 139 -167 217 -307 176z"/>
+<path d="M5255 1054 c-276 -46 -587 -227 -935 -541 l-54 -50 74 -23 c41 -13 67 -25 58 -27 -23 -6 -34 -48 -20 -78 16 -35 75 -61 188 -84 568 -115 968 -37 1250 243 69 69 110 130 114 171 5 42 0 66 -12 59 -12 -8 -12 -7 39 73 18 29 33 56 33 62 0 15 -49 46 -147 95 -207 104 -386 135 -588 100z"/>
+<path d="M7249 1054 c-42 -7 -109 -25 -150 -40 -76 -27 -226 -101 -267 -133 l-24 -18 41 -66 c22 -37 36 -67 31 -67 -18 0 -11 -80 11 -121 11 -22 53 -73 92 -113 279 -282 682 -361 1251 -245 113 23 172 49 188 84 14 30 3 72 -20 77 -9 3 18 15 61 29 l78 24 -93 81 c-362 313 -622 460 -902 509 -106 18 -194 18 -297 -1z"/>
+</g>
+</svg>
+  
+  <defs>
+    <linearGradient id="A" gradientTransform="rotate(45)">
+    
+    <stop offset="0%" stop-color="#B0B0B0"/>
+    <stop offset="70%" stop-color="#B0B0B0"/>
+    <stop offset="100%" stop-color="#9090C0"/>
+    
+    </linearGradient>
+  </defs>
+  <svg x="28" y="20" width="100" height="100" viewBox="0 0 30 30" fill="url(#A)" xmlns="http://www.w3.org/2000/svg">
+    
+    <path d="M7 10h2v4H7v-4z"/>
+    <path d="M10 11c0 .552-.895 1-2 1s-2-.448-2-1 .895-1 2-1 2 .448 2 1z"/>
+    <path fill-rule="evenodd" d="M12.5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm-6-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0z"/>
+    <path d="M3 1h10c-.495 3.467-.5 10-5 10S3.495 4.467 3 1zm0 15a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1H3zm2-1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1H5z"/>
+    <circle cx="8" cy="6" r="4" fill="#FFF" />
+    <text x="6" y="8" font-family="Bungee" font-size="7" fill="#505050">A</text>
+  
+  </svg>
+  
+          <text x="50%" y="18" text-anchor="middle" font-family="Bungee" font-weight="bold" font-size="11" fill="#000">Issues</text>
+          <text x="50%" y="85" text-anchor="middle" font-family="Bungee" font-weight="bold" font-size="8.5" fill="#666">High Issuer</text>
+          <text x="50%" y="97" text-anchor="middle" font-family="Bungee" font-weight="bold" font-size="8.5" fill="#666">18pt</text>
+          
+    <style>
+    @keyframes IssuesRankAnimation {
+      from {
+        width: 0px;
+      }
+      to {
+        width: 64px;
+      }
+    }
+    #Issues-rank-progress{
+      animation: IssuesRankAnimation 1s forwards ease-in-out;
+    }
+    </style>
+    <rect
+      x="15"
+      y="101"
+      rx="1"
+      width="80"
+      height="3.2"
+      opacity="0.3"
+      fill="#0366d6"
+    />
+    <rect
+      id="Issues-rank-progress"
+      x="15"
+      y="101"
+      rx="1"
+      height="3.2"
+      fill="#0366d6"
+    />
+  
+        </svg>
+        
+        <svg
+          x="240"
+          y="360"
+          width="110"
+          height="110"
+          viewBox="0 0 110 110"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            x="0.5"
+            y="0.5"
+            rx="4.5"
+            width="109"
+            height="109"
+            stroke="#e1e4e8"
+            fill="#FFF"
+            stroke-opacity="0"
+            fill-opacity="0"
+          />
+          
+  
+  
+  <defs>
+    <linearGradient id="?" gradientTransform="rotate(45)">
+    
+      <stop offset="0%" stop-color="#777"/>
+      <stop offset="50%" stop-color="#777"/>
+      <stop offset="100%" stop-color="#333"/>
+  
+    </linearGradient>
+  </defs>
+  <svg x="28" y="20" width="100" height="100" viewBox="0 0 30 30" fill="url(#?)" xmlns="http://www.w3.org/2000/svg">
+    
+    <path d="M7 10h2v4H7v-4z"/>
+    <path d="M10 11c0 .552-.895 1-2 1s-2-.448-2-1 .895-1 2-1 2 .448 2 1z"/>
+    <path fill-rule="evenodd" d="M12.5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm-6-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0z"/>
+    <path d="M3 1h10c-.495 3.467-.5 10-5 10S3.495 4.467 3 1zm0 15a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1H3zm2-1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1H5z"/>
+    <circle cx="8" cy="6" r="4" fill="#FFF" />
+    <text x="6" y="8" font-family="Bungee" font-size="7" fill="#333">?</text>
+  
+  </svg>
+  
+          <text x="50%" y="18" text-anchor="middle" font-family="Bungee" font-weight="bold" font-size="11" fill="#000">AncientUser</text>
+          <text x="50%" y="85" text-anchor="middle" font-family="Bungee" font-weight="bold" font-size="8.5" fill="#666">Unknown</text>
+          <text x="50%" y="97" text-anchor="middle" font-family="Bungee" font-weight="bold" font-size="8.5" fill="#666">Before 2010</text>
+          
+    <style>
+    @keyframes AncientUserRankAnimation {
+      from {
+        width: 0px;
+      }
+      to {
+        width: 0px;
+      }
+    }
+    #AncientUser-rank-progress{
+      animation: AncientUserRankAnimation 1s forwards ease-in-out;
+    }
+    </style>
+    <rect
+      x="15"
+      y="101"
+      rx="1"
+      width="80"
+      height="3.2"
+      opacity="0.3"
+      fill="#0366d6"
+    />
+    <rect
+      id="AncientUser-rank-progress"
+      x="15"
+      y="101"
+      rx="1"
+      height="3.2"
+      fill="#0366d6"
+    />
+  
+        </svg>
+        
+    </svg>
