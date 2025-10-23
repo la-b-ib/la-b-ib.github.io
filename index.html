@@ -3418,11 +3418,10 @@
             </div>
             <div class="blog-content">
               <h5 class="title">
-                <a href="https://bracuexpress.com/author/labib/" target="_blank" style="color: #4285F4;"><b>BRACU
-                    Expr</b></a>
+                <a href="https://bracuexpress.com/author/labib/" target="_blank" style="color: #4285F4;"><b>BE</b></a>
               </h5>
-              <p class="description"><b>NEWS & STORIES</b></p>
-              <a href="https://bracuexpress.com/author/labib/" target="_blank" class="blog-button">Read Articles</a>
+              <p class="description"><b>NEWS</b></p>
+              <a href="https://bracuexpress.com/author/labib/" target="_blank" class="blog-button">Read</a>
             </div>
           </div>
         </div>
@@ -3436,10 +3435,10 @@
             <div class="blog-content">
               <h6 class="title">
                 <a href="https://www.linkedin.com/newsletters/tech-talk-7325845368900894722/" target="_blank"
-                  style="color: #4285F4;"><b>NEWSLETTER</b></a>
+                  style="color: #4285F4;"><b>TT</b></a>
               </h6>
               <p class="description"><b>Tech Talk</b></p>
-              <a href="https://www.linkedin.com/newsletters/tech-talk-7325845368900894722/" target="_blank" class="blog-button">Read Articles</a>
+              <a href="https://www.linkedin.com/newsletters/tech-talk-7325845368900894722/" target="_blank" class="blog-button">Read</a>
             </div>
           </div>
         </div>
@@ -3456,7 +3455,7 @@
                   style="color: #4285F4;"><b>Dev.to</b></a>
               </h6>
               <p class="description"><b>Dev Blogs</b></p>
-              <a href="https://dev.to/la-b-ib" target="_blank" class="blog-button">Read Articles</a>
+              <a href="https://dev.to/la-b-ib" target="_blank" class="blog-button">Read</a>
             </div>
           </div>
         </div>
@@ -3473,24 +3472,7 @@
                   style="color: #4285F4;"><b>Medium</b></a>
               </h6>
               <p class="description"><b>Tech Blogs</b></p>
-              <a href="https://medium.com/@la-b-ib" target="_blank" class="blog-button">Read Articles</a>
-            </div>
-          </div>
-        </div>
-        <!-- Wattpad -->
-        <div class="col-blog col-md-6 col-12">
-          <div class="icon-box">
-            <div class="icon">
-              <img src="https://raw.githubusercontent.com/la-b-ib/la-b-ib.github.io/main/assets/img/blogs/wattpad.png"
-                style="width: 110px; height: 110px;" tabindex="-1" />
-            </div>
-            <div class="blog-content">
-              <h6 class="title">
-                <a href="https://www.wattpad.com/user/la-b-ib-" target="_blank"
-                  style="color: #4285F4;"><b>Wattpad</b></a>
-              </h6>
-              <p class="description"><b>Fict & Stories</b></p>
-              <a href="https://www.wattpad.com/user/la-b-ib-" target="_blank" class="blog-button">Read Articles</a>
+              <a href="https://medium.com/@la-b-ib" target="_blank" class="blog-button">Read</a>
             </div>
           </div>
         </div>
@@ -3544,11 +3526,11 @@
       font-weight: bold;
     }
 
-    /* ===== DESKTOP VIEW (5 ITEMS PER ROW) ===== */
+    /* ===== DESKTOP VIEW (4 ITEMS PER ROW) ===== */
     @media (min-width: 992px) {
       #blogs .col-blog {
-        flex: 0 0 20%;
-        width: 20%;
+        flex: 0 0 25%;
+        width: 25%;
       }
 
       /* Match blog row padding with section title alignment - copy exact pattern from interests */
@@ -3559,6 +3541,11 @@
 
       #blogs .blog-container .col-blog {
         padding-left: 15px !important;
+        padding-right: 15px !important;
+      }
+
+      #blogs .section-title {
+        padding-left: 0px !important;
         padding-right: 15px !important;
       }
 
@@ -4061,19 +4048,26 @@
     @media (max-width: 991px) {
       #blogs .row {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
         gap: 0;
+      }
+
+      #blogs .section-title {
+        padding-left: 7px !important;
+        padding-right: 7px !important;
       }
 
       #blogs .col-blog,
       #blogs .col-md-6,
       #blogs .col-12 {
-        flex: 0 0 100% !important;
-        max-width: 100% !important;
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
         margin-bottom: 14px !important;
-        padding: 0 !important;
+        padding: 0 7px !important;
         border-bottom: 3px solid rgba(0, 0, 0, 0.1);
-        padding-bottom: 14px !important;
+        padding-bottom: 0px !important;
+        padding-top: 0px !important;
         -webkit-tap-highlight-color: transparent !important;
         -webkit-touch-callout: none !important;
         -webkit-user-select: none !important;
@@ -4088,8 +4082,11 @@
       #blogs .col-md-6:last-child,
       #blogs .col-12:last-child {
         border-bottom: 3px solid rgba(0, 0, 0, 0.1) !important;
-        margin-bottom: 14px !important;
-        padding-bottom: 14px !important;
+        
+
+
+        margin-bottom: 0px !important;
+        padding-bottom: 0px !important;
         -webkit-tap-highlight-color: transparent !important;
         -webkit-touch-callout: none !important;
         -webkit-user-select: none !important;
@@ -4098,6 +4095,43 @@
         user-select: none !important;
         pointer-events: none !important;
         outline: none !important;
+      }
+
+      /* Remove border and margin from the last two items (2nd row) */
+      #blogs .col-blog:nth-last-child(1),
+      #blogs .col-blog:nth-last-child(2),
+      #blogs .col-md-6:nth-last-child(1),
+      #blogs .col-md-6:nth-last-child(2),
+      #blogs .col-12:nth-last-child(1),
+      #blogs .col-12:nth-last-child(2) {
+        border-bottom: none !important;
+        margin-bottom: 0px !important;
+        padding-bottom: 0px !important;
+      }
+
+      /* Ensure no borders on hover for the last two items (2nd row) */
+      #blogs .col-blog:nth-last-child(1):hover,
+      #blogs .col-blog:nth-last-child(2):hover,
+      #blogs .col-blog:nth-last-child(1):active,
+      #blogs .col-blog:nth-last-child(2):active,
+      #blogs .col-blog:nth-last-child(1):focus,
+      #blogs .col-blog:nth-last-child(2):focus,
+      #blogs .col-md-6:nth-last-child(1):hover,
+      #blogs .col-md-6:nth-last-child(2):hover,
+      #blogs .col-md-6:nth-last-child(1):active,
+      #blogs .col-md-6:nth-last-child(2):active,
+      #blogs .col-md-6:nth-last-child(1):focus,
+      #blogs .col-md-6:nth-last-child(2):focus,
+      #blogs .col-12:nth-last-child(1):hover,
+      #blogs .col-12:nth-last-child(2):hover,
+      #blogs .col-12:nth-last-child(1):active,
+      #blogs .col-12:nth-last-child(2):active,
+      #blogs .col-12:nth-last-child(1):focus,
+      #blogs .col-12:nth-last-child(2):focus {
+        border-bottom: none !important;
+        border-top: none !important;
+        border-left: none !important;
+        border-right: none !important;
       }
 
       #blogs .icon-box {
@@ -4131,6 +4165,7 @@
       #blogs .icon-box:focus {
         background: none !important;
         border-bottom: 3px solid rgba(0, 0, 0, 0.1) !important;
+        
         border-top: none !important;
         border-left: none !important;
         border-right: none !important;
@@ -4154,6 +4189,7 @@
       #blogs .col-12:last-child:focus {
         background: none !important;
         border-bottom: 3px solid rgba(0, 0, 0, 0.1) !important;
+        
         border-top: none !important;
         border-left: none !important;
         border-right: none !important;
